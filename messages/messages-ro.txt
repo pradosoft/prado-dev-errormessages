@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Romanian (ro).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application poate fi setat o singură dată.
+prado_component_unknown						= Tip de componentă necunoscut '{0}'. Cauza poate fi următoarea eroare de parsare din fișierul clasei {0}: {1}
+prado_using_invalid							= '{0}' nu este un spațiu de nume valid pentru utilizare. Asigurați-vă că este adăugat '.*' dacă doriți să folosiți un spațiu de nume care se referă la un director.
+prado_alias_redefined						= Aliasul '{0}' nu poate fi redefinit.
+prado_alias_invalid							= Aliasul '{0}' se referă la o cale invalidă '{1}'. Doar directoarele existente pot primi un alias.
+prado_aliasname_invalid						= Aliasul '{0}' conține caracterul invalid '.'.
+
+component_property_undefined				= Proprietatea componentei '{0}.{1}' nu este definită.
+component_property_readonly					= Proprietatea componentei '{0}.{1}' este doar pentru citire.
+component_event_undefined					= Evenimentul componentei '{0}.{1}' nu este definit.
+component_method_undefined					= Metoda componentei '{0}.{1}' nu este definită.
+component_eventhandler_invalid				= Evenimentul componentei '{0}.{1}' este atașat cu un handler de eveniment invalid '{2}'.
+component_expression_invalid				= Componenta '{0}' evaluează o expresie invalidă '{1}' : {2}.
+component_statements_invalid				= Componenta '{0}' evaluează instrucțiuni PHP invalide '{1}' : {2}.
+component_class_behavior_defined			= Componenta '{0}' are deja un comportament de clasă '{1}'.
+component_not_a_behavior					= Componenta '{0}' adăugată ca comportament nu este un TBaseBehavior.
+object_not_a_component						= Obiectul '{0}' adăugat ca comportament nu este un TComponent.
+component_no_tcomponent_class_behaviors		= TComponent nu poate avea comportamente de clasă atașate, din cauza recursivității.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors nu se pot atașa la mai mulți proprietari.  Transmiteți un șir sau un tablou cu clasa IBehavior și proprietățile de instanțiat pentru fiecare proprietar.
+
+propertyvalue_enumvalue_invalid				= Valoarea '{0}' nu este o valoare de enumerare validă ({1}).
+propertyvalue_invalid_hex_color				= Valoarea '{0}' nu este o valoare de culoare hexazecimală validă.  De exemplu: "#112233"
+propertyvalue_invalid_array_literal			= Valoarea '{0}' nu este un literal de tablou valid.
+propertyvalue_array_too_deep				= Literalul de tablou are mai mult de {0} niveluri de imbricare.
+
+eventhandler_lost_weak_ref					= TEventHandler nu poate invoca handlerul de eveniment deoarece referința WeakReference către obiectul apelabil a fost pierdută.
+eventhandler_no_set_handler					= TEventHandler nu poate seta handlerul de eveniment, indexul "{0}".
+eventhandler_bad_offset						= TEventHandler nu are offsetul "{0}".
+
+eventparam_readonly							= {0} este doar pentru citire.
+eventparam_readonly_set						= {0} nu poate modifica ReadOnly după ce a fost setat.
+eventparam_readonly_not_self				= {0} ReadOnly poate fi setat doar intern.
+
+list_index_invalid							= Indexul '{0}' este în afara intervalului.
+list_item_inexistent						= Elementul nu a fost găsit în listă.
+list_data_not_iterable						= Datele trebuie să fie fie un tablou, fie un obiect care implementează interfața Traversable.
+list_readonly								= {0} este doar pentru citire.
+list_readonly_set							= {0} nu poate modifica Read-Only după ce a fost deja setat.
+prioritylist_index_invalid					= Indexul '{0}' din '{1}' la prioritatea '{2}' este în afara intervalului.
+prioritytrait_no_set_default_priority		= Prioritatea implicită poate fi setată o singură dată sau doar de către obiectul însuși.
+prioritytrait_no_set_precision				= Precizia poate fi setată o singură dată sau doar de către obiectul însuși.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid poate fi setat o singură dată sau doar de către obiectul însuși.
+
+map_addition_disallowed						= Elementul nou nu poate fi adăugat în hartă.
+map_item_unremovable						= Elementul nu poate fi eliminat din hartă.
+map_data_not_iterable						= Datele trebuie să fie fie un tablou, fie un obiect care implementează interfața Traversable.
+map_readonly								= {0} este doar pentru citire.
+map_readonly_set							= {0} nu poate modifica Read-Only după ce a fost deja setat.
+
+tnull_clone_disallowed						= Singletonul TNull nu poate fi clonat. Folosiți TNull::null() în loc.
+
+weakcallablecollection_callable_required	= TWeakCallableCollection acceptă doar callable-uri.
+
+arraysubscription_no_change					= TArraySubscription.{0} nu poate fi modificat după abonare.
+arraysubscription_no_null_key				= TArraySubscription nu se poate abona la o cheie null a unui obiect ArrayAccess.
+arraysubscription_index_invalid				= TArraySubscription este în modul listă (isAssociative = false), dar cheia '{0}' nu este validă (număr de elemente: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array nu poate fi setat direct.
+eventsubscription_no_change					= TEventSubscription.{0} nu poate fi modificat după abonare.
+
+application_includefile_invalid				= Nu s-a găsit configurația aplicației {0}. Asigurați-vă că este în format de spațiu de nume și că fișierul se termină cu ".xml" sau ".php".
+application_basepath_invalid				= Calea de bază a aplicației '{0}' nu există sau nu este un director.
+application_runtimepath_invalid				= Calea de rulare a aplicației '{0}' nu există sau nu poate fi scrisă de procesul serverului Web.
+application_service_class_not_found			= Clasa de serviciu '{0}' nu există.
+application_service_class_not_service		= Clasa de serviciu '{0}' nu implementează IService.
+application_service_class_required			= registerService necesită un nume de clasă sau un tablou serviceConfig pentru serviciul '{0}'.
+application_service_default_unregister		= Serviciul de pagini implicit '{0}' nu poate fi dezînregistrat.
+service_csrf_token_invalid					= Serviciul '{0}' necesită un token CSRF valid.
+application_moduleid_duplicated				= ID-ul de modul al aplicației '{0}' nu este unic.
+application_runtimepath_failed				= Nu s-a putut crea calea de rulare '{0}'. Asigurați-vă că directorul părinte există și poate fi scris de procesul Web.
+application_module_required_dep_missing		= Modulul '{0}' are o dependență obligatorie de modulul '{1}', care nu este înregistrat în aplicație.
+application_module_dependency_cycle			= S-a detectat un ciclu de dependențe între următoarele module: {0}.
+application_module_dependency_self_reference	= Modulul '{0}' se declară pe sine ca dependență, ceea ce nu este niciodată valid.
+
+appconfig_aliaspath_invalid					= Configurația aplicației <alias id="{0}"> folosește o cale de fișier invalidă "{1}".
+appconfig_alias_invalid						= Elementul <alias> din configurația aplicației trebuie să aibă un atribut "id" și un atribut "path".
+appconfig_alias_redefined					= Configurația aplicației <alias id="{0}"> nu poate fi redefinită.
+appconfig_using_invalid						= Elementul <using> din configurația aplicației trebuie să aibă un atribut "namespace".
+appconfig_moduleid_required					= Elementul <module> din configurația aplicației trebuie să aibă un atribut "id".
+appconfig_moduletype_required				= Configurația aplicației <module id="{0}"> trebuie să aibă un atribut "class".
+appconfig_moduletype_inapplicable			= Configurația aplicației <module id="{0}"> nu poate avea atributul "class".
+appconfig_serviceid_required				= Elementul <service> din configurația aplicației trebuie să aibă un atribut "id".
+appconfig_servicetype_required				= Configurația aplicației <service id="{0}"> trebuie să aibă un atribut "class".
+appconfig_parameterid_required				= Elementul <parameter> din configurația aplicației trebuie să aibă un atribut "id".
+appconfig_includefile_required				= Elementul <include> din configurația aplicației trebuie să aibă un atribut "file".
+appconfig_paths_invalid						= Elementul <paths> din configurația aplicației nu poate conține elementul <{0}>.
+appconfig_modules_invalid					= Elementul <modules> din configurația aplicației nu poate conține elementul <{0}>.
+appconfig_services_invalid					= Elementul <services> din configurația aplicației nu poate conține elementul <{0}>.
+appconfig_parameters_invalid				= Elementul <parameters> din configurația aplicației nu poate conține elementul <{0}>.
+appconfig_tag_invalid						= Configurația aplicației nu poate conține elementul <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey nu poate fi gol.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey nu poate fi gol.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey nu poate fi gol.
+securitymanager_mcryptextension_required	= Extensia PHP Mcrypt este necesară pentru a folosi funcția de criptare a TSecurityManager.
+securitymanager_mcryptextension_initfailed	= TSecurityManager nu a reușit să inițializeze modulul mcrypt.
+
+uri_format_invalid							= '{0}' nu este un URI valid.
+
+httprequest_browscap_required				= THttpRequest necesită configurarea directivei browscap în php.ini.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator poate conține un singur caracter.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' nu indică un modul existent.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' trebuie să indice un modul care extinde TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie este false, ceea ce necesită un modul de sesiune.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection acceptă doar obiecte THttpCookie.
+
+httpresponse_file_inexistent				= THttpResponse nu poate trimite fișierul '{0}'. Fișierul nu există.
+httpresponse_responsedata_method_unavailable	= THttpResponse: metoda '{0}' nu poate fi folosită fără un adaptor corespunzător care să o implementeze.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' nu indică un modul existent.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' trebuie să indice un modul care extinde THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager poate conține doar THttpHeader sau clasele sale derivate.
+httpheadersmanager_headerclass_missing		= Intrării <headerclass> din THttpHeadersManager îi lipsește atributul obligatoriu 'name' sau 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID nu poate fi modificat după pornirea sesiunii.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName nu poate fi modificat după pornirea sesiunii.
+httpsession_sessionname_invalid				= THttpSession.SessionName trebuie să conțină doar caractere alfanumerice.
+httpsession_savepath_unchangeable			= THttpSession.SavePath nu poate fi modificat după pornirea sesiunii.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' este invalid.
+httpsession_storage_unchangeable			= THttpSession.Storage nu poate fi modificat după pornirea sesiunii.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode nu poate fi modificat după pornirea sesiunii.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart nu poate fi modificat după inițializarea modulului de sesiune.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability nu poate fi modificat după pornirea sesiunii.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability trebuie să fie un întreg între 0 și 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID nu poate fi modificat după pornirea sesiunii.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID nu poate fi setat când THttpSession.CookieMode este setat la Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout nu poate fi modificat după pornirea sesiunii.
+httpsession_handler_invalid					= THttpSessionHandler acceptă doar un obiect THttpSession ca parametru al constructorului
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' este invalid. Asigurați-vă că este în format de spațiu de nume și indică un director în care procesul serverului Web poate scrie.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath nu poate fi modificat după inițializarea modulului.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl nu poate fi modificat după inițializarea modulului.
+assetmanager_filepath_invalid				= TAssetManager publică un fișier invalid '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager publică un fișier tar cu suma de control invalidă '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager publică un fișier tar invalid '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager nu a reușit să extragă fișierul tar '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager copiază un director invalid '{0}'.
+
+cache_primary_duplicated					= Este permis cel mult un modul de cache primar. {0} încearcă să se înregistreze ca un alt cache primar.
+psrcache_backing_cache_required				= TPsrCache.BackingCacheId sau TPsrCache.BackingCache este obligatoriu.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' nu se referă la un modul al aplicației.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' trebuie să se refere la un modul care implementează Psr\SimpleCache\CacheInterface sau Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' este un adaptor PSR al acestui TPsrCache; ar citi și ar scrie înapoi în același cache.
+psrcachebacking_cache_required				= {0} necesită un cache de suport. Setați {0}.BackingCacheId, {0}.BackingCache sau un cache primar al aplicației.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' nu se referă la un modul al aplicației.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' trebuie să se refere la un modul Prado\Caching\ICache.
+psrcachebacking_key_invalid					= Cheia de cache {0} trebuie să fie un șir nevid fără caracterele rezervate {}()/\@: dar s-a primit '{1}'.
+sqlitecache_extension_required				= TSqliteCache necesită extensia PHP SQLite.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile este obligatoriu.
+sqlitecache_connection_failed				= Conexiunea la baza de date TSqliteCache a eșuat. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache nu a reușit să creeze baza de date pentru cache. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile nu poate fi modificat după inițializarea modulului.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile este invalid. Asigurați-vă că este într-un format corect de spațiu de nume.
+
+dbcache_unavailable							= TDbCache necesită extensia PHP PDO.
+
+etcdcache_transport_required				= TEtcdCache necesită extensia PHP cURL sau allow_url_fopen.
+
+memcache_extension_required					= TMemCache necesită extensia PHP memcache.
+memcache_connection_failed					= TMemCache nu a reușit să se conecteze la serverul memcache {0}:{1}.
+memcache_not_initialized					= Opțiunile nu pot fi setate pe TMemCache înainte de inițializarea modulului.
+
+apccache_extension_required					= TAPCCache necesită extensia PHP APC.
+apccache_extension_not_enabled				= TAPCCache necesită apc.enabled = 1 în php.ini pentru a funcționa.
+apccache_extension_not_enabled_cli			= TAPCCache necesită apc.enable_cli = 1 în php.ini pentru a funcționa cu PHP din linia de comandă.
+
+cachesize_item_exceeds_maximum_size			= Elementul de cache are {0} octeți, ceea ce depășește valoarea MaximumSize configurată de {1} octeți.
+
+filecache_directory_required				= TFileCache.Directory este obligatoriu.
+filecache_directory_create_failed			= TFileCache nu poate crea directorul de cache '{0}'.
+filecache_directory_not_writable			= Directorul de cache TFileCache '{0}' nu poate fi scris.
+filecache_hash_token_identity				= TFileCache.hashToken trebuie să transforme datele de intrare; implementarea din subclasă a returnat tokenul nemodificat.
+filecache_hash_token_path_separator			= TFileCache.hashToken nu trebuie să returneze o valoare care conține un separator de cale ("/" sau "\"); implementarea din subclasă a returnat un hash nesigur.
+
+memorycache_backing_file_directory_not_found	= Directorul TMemoryCache.BackingFile nu există pentru calea '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' este invalid. Valorile valide sunt 'PHP' și 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' este invalid. Valorile valide sunt 'None', 'Base64' și 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' este invalid. Trebuie să fie ID-ul unui modul TSecurityManager sau o instanță TSecurityManager.
+serializingcache_json_encode_failed			= TSerializingCache nu a reușit să codifice valoarea în JSON: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} nu se referă la un director valid.
+cachedependencylist_cachedependency_required	= Doar obiectele care implementează ICacheDependency pot fi adăugate în TCacheDependencyList.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' este invalid. Asigurați-vă că este în format de spațiu de nume și indică un director valid care conține fișierele șablon de eroare.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' nu este un director valid.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage nu poate fi modificat după inițializarea serviciului.
+pageservice_basepath_unchangeable			= TPageService.BasePath nu poate fi modificat după inițializarea serviciului.
+pageservice_pageclass_invalid				= Clasa de pagină {0} este invalidă. Trebuie să fie TPage sau să extindă TPage.
+pageservice_includefile_invalid				= Nu s-a găsit configurația serviciului de pagini {0}. Asigurați-vă că este în format de spațiu de nume și că fișierul se termină cu ".xml" sau ".php".
+
+pageserviceconf_file_invalid				= Nu s-a putut deschide fișierul de configurare al directorului de pagini '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> folosește o cale de fișier invalidă "{1}" în fișierul de configurare al directorului de pagini '{2}'.
+pageserviceconf_alias_invalid				= Elementul <alias> trebuie să aibă un atribut "id" și un atribut "path" în fișierul de configurare al directorului de pagini '{0}'.
+pageserviceconf_using_invalid				= Elementul <using> trebuie să aibă un atribut "namespace" în fișierul de configurare al directorului de pagini '{0}'.
+pageserviceconf_module_invalid				= Elementul <module> trebuie să aibă un atribut "id" în fișierul de configurare al directorului de pagini '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> trebuie să aibă un atribut "class" în fișierul de configurare al directorului de pagini '{1}'.
+pageserviceconf_parameter_invalid			= Elementul <parameter> trebuie să aibă un atribut "id" în fișierul de configurare al directorului de pagini '{0}'.
+pageserviceconf_page_invalid				= Elementul <page> trebuie să aibă un atribut "id" în fișierul de configurare al directorului de pagini '{0}'.
+pageserviceconf_includefile_required		= Elementul <include> din configurația paginii trebuie să aibă un atribut "file".
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" nu poate fi schimbat (în "{1}") după atașarea comportamentului.
+basebehavior_sync_no_owner					= TBaseBehavior "{0}" nu are proprietar și nu poate sincroniza handlerele de evenimente pe o componentă fără proprietari.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" nu poate sincroniza handlerele de evenimente pe un obiect care nu este proprietarul său.
+behavior_has_owner							= TBehavior "{0}" se poate atașa doar la un singur proprietar.
+behavior_bad_attach_component				= TBehavior "{0}" se poate atașa doar la un TComponent.
+behavior_detach_without_owner				= TBehavior "{0}" nu poate fi detașat fără un proprietar.
+behavior_detach_wrong_owner					= TBehavior "{0}" nu se poate detașa de un obiect care nu este proprietarul său.
+behavior_property_unchangeable				= {1}.{0} nu poate fi modificat după atașarea comportamentului.
+behavior_requires_owner						= {1}.{0} necesită un proprietar.
+classbehavior_owner_attach_once				= TClassBehavior "{0}" poate fi atașat la un proprietar o singură dată.  Handlerele nu ar fi unice.
+classbehavior_bad_attach_component			= TClassBehavior "{0}" se poate atașa doar la un TComponent.
+classbehavior_detach_without_owner			= TClassBehavior "{0}" nu poate fi detașat fără un proprietar.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" nu se poate detașa de un obiect care nu este proprietarul său.
+
+callchain_bad_dynamic_event					= TCallChain.{0} a fost declanșat, dar se aștepta {1}.
+
+behaviormodule_behavior_as_array_required	= Elementul php <behavior> trebuie să fie un tablou.
+behaviormodule_behaviorname_required		= <behavior> trebuie să conțină un atribut 'name' pentru atașarea comportamentului.
+behaviormodule_behaviorclass_required		= <behavior> trebuie să conțină un atribut 'class' care definește clasa comportamentului.
+behaviormodule_attachto_class_required		= <behavior> trebuie să aibă un atribut 'attachto' sau 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= <behavior> trebuie să aibă fie atributul 'attachto', fie 'attachtoclass', nu pe amândouă.
+behaviormodule_behaviorowner_required		= Obiectul attachto '{0}' al <behavior> nu a fost găsit.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors nu poate fi setat la tipul invalid '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader trebuie să aibă un nume de comportament (Behavior Name).
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader trebuie să aibă o clasă de comportament (Behavior Class).
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader trebuie să aibă un atribut 'attachto' sau 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader trebuie să aibă un singur atribut 'attachto' sau 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' necesită un ID de modul.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' nu a fost găsit.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader nu a găsit modulul '{0}' pentru atașarea comportamentelor.
+
+evaluationfilter_statements_denied			= Componenta '{0}' nu poate evalua instrucțiunile PHP '{1}' deoarece TEvaluationFilterBehavior.AllowStatements este false.
+evaluationfilter_code_denied				= Componenta '{0}' nu poate evalua '{1}' deoarece TEvaluationFilterBehavior nu permite '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior necesită un callable pentru construire.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior necesită un callable pentru construire.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior trebuie să aibă un atribut Parameter.
+parameterizebehavior_no_property			= TParameterizeBehavior trebuie să aibă un atribut Property.
+parameterizebehavior_owner_get_only_property	= Proprietarul TParameterizeBehavior are proprietatea '{0}', dar aceasta este doar pentru citire.
+parameterizebehavior_owner_has_no_property	= Proprietarul TParameterizeBehavior nu are proprietatea '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior nu poate goli Parameter după atașare.
+
+processhelper_no_forking					= Bifurcarea proceselor (fork) nu este suportată.
+processhelper_no_signals					= Semnalele de proces nu pot fi trimise pe Windows.
+
+serializableclosure_no_decrypter			= TSerializableClosure nu poate decripta un payload de closure criptat fără un decriptor configurat.
+serializableclosure_decrypt_failed			= TSerializableClosure nu a reușit să decripteze un payload de closure criptat; payload-ul poate fi alterat sau cheia poate să se fi schimbat.
+
+appsignals_no_change						= TApplicationSignals::{0} nu poate fi modificat după atașare.
+appsignals_not_a_dispatcher					= '{0}' nu este un TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' nu este un PID valid.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} nu poate fi modificat după atașare.
+
+initialized_property_unchangeable			= {1}.{0} nu poate fi setat deoarece este deja inițializat.
+initialized_requires_initialization			= {1}.{0} necesită inițializare înainte de procesare.
+
+template_closingtag_unexpected				= S-a găsit un tag de închidere neașteptat '{0}'.
+template_closingtag_expected				= Se aștepta tagul de închidere '{0}', dar s-a găsit '{1}'.
+template_directive_nonunique				= Directiva '<%@ ... %>' trebuie să apară la începutul șablonului și poate apărea cel mult o dată.
+template_comments_forbidden					= Comentariile de șablon nu sunt permise în interiorul tagurilor de proprietate.
+template_matching_unexpected				= Potrivire neașteptată.
+template_property_unknown					= {0} nu are o proprietate numită '{1}'.
+template_event_unknown						= {0} nu are un eveniment numit '{1}'.
+template_property_readonly					= {0} are proprietatea '{1}' doar pentru citire.
+template_event_forbidden					= {0} este o componentă care nu este control. Niciun handler nu poate fi atașat la evenimentul său '{1}' într-un șablon.
+template_databind_forbidden					= {0} este o componentă care nu este control. Expresiile nu pot fi legate de proprietatea sa '{1}'.
+template_component_required					= '{0}' nu este o componentă. Doar componentele pot apărea într-un șablon.
+template_format_invalid						= Sintaxă de șablon invalidă: {0}
+template_property_duplicated				= Proprietatea {0} este configurată de două sau mai multe ori.
+template_eventhandler_invalid				= {0}.{1} acceptă doar un șir static.
+template_controlid_invalid					= {0}.ID acceptă doar un șir de text static.
+template_controlskinid_invalid				= {0}.SkinID acceptă doar un șir de text static.
+template_content_unexpected					= S-a întâlnit conținut neașteptat la instanțierea șablonului: {0}.
+template_include_invalid					= Includere de șablon invalidă. Asigurați-vă că {0} este un spațiu de nume valid care indică un fișier șablon existent cu extensia .tpl.
+template_tag_unexpected						= Inițializarea proprietății {0} conține un tip de tag necunoscut {1}.
+
+xmldocument_file_read_failed				= TXmlDocument nu poate citi fișierul '{0}'.
+xmldocument_file_write_failed				= TXmlDocument nu poate scrie fișierul '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList acceptă doar obiecte TXmlElement.
+
+xmlelement_null_tag							= Numele tagului TXmlElement nu poate fi null.
+xmlelement_empty_tag						= Numele tagului TXmlElement nu poate fi un șir gol.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action acceptă doar valorile 'allow' sau 'deny'.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb acceptă doar valorile 'get' sau 'post'.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection acceptă doar obiecte TAuthorizationRule.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' nu este un fișier valid.
+usermanager_userfile_unchangeable			= TUserManager.UserFile nu poate fi modificat. Modulul de utilizatori a fost deja inițializat.
+
+integritymanager_entry_invalid				= Intrarea de integritate TIntegrityManager pentru URL-ul '{0}' necesită un url și un hash nevide.
+integritymanager_algorithm_invalid			= Algoritmul TIntegrityManager '{0}' nu este suportat; folosiți unul dintre: {1}.
+integritymanager_file_unreadable			= TIntegrityManager nu poate citi fișierul '{0}' pentru a-i calcula integritatea.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' nu este un fișier valid.
+integritymanager_integrityfile_unchangeable	= {1}.{0} nu poate fi modificat. Modulul de integritate a fost deja inițializat.
+
+javascript_script_integrity_required		= Nu este înregistrată nicio integritate Subresource Integrity pentru scriptul remote '{0}', dar integritatea este obligatorie.
+
+authmanager_usermanager_required			= TAuthManager.UserManager trebuie să primească o valoare.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' nu se referă la ID-ul unui modul al aplicației.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' nu se referă la un modul de aplicație TUserManager valid.
+authmanager_session_required				= TAuthManager necesită un modul de sesiune al aplicației.
+
+permissions_events_invalid					= TPermissionEvent.Event nu poate fi setat la valoarea invalidă '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules nu poate fi setat la valoarea invalidă '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' nu se referă la ID-ul unui modul al aplicației.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' nu se referă la un modul de aplicație TDbParameterModule valid.
+permissions_init_once						= TPermissionsManager.init poate fi inițializat o singură dată.
+permissions_duplicate_permission			= Permisiunea TPermissionsManager '{0}' este deja înregistrată.
+permissions_role_children_invalid			= Rolul '{0}' din configurația TPermissionsManager are copii invalizi '{1}'.
+permissions_rule_invalid					= Regula de permisiune '{0}' din configurația TPermissionsManager are proprietăți care nu sunt un tablou.
+permissions_rules_require_name				= Regulile TPermissionsManager trebuie să aibă o proprietate "name" a permisiunii.
+permissions_role_rule_nested				= Rolul '{0}' din configurația TPermissionsManager conține un <permissionrule>. Regulile de permisiune sunt copii direcți ai elementului de configurare a permisiunilor.
+permissions_rule_class_invalid				= Clasa regulii de permisiune TPermissionsManager '{0}' este un spațiu de nume de director, nu o clasă.
+permissions_children_invalid				= Copiii TPermissionsManager.*RoleChildren trebuie să fie un șir sau un tablou, dar sunt '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' nu este un fișier valid.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' nu este un alias de cale valid. Asigurați-vă că ați definit acest alias în configurație și că indică un director valid.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' nu este un director valid.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath nu poate fi modificat după inițializarea modulului.
+thememanager_theme_invalid					= Numele temei TThemeManager '{0}' trebuie să fie numele unui singur director.
+
+theme_baseurl_required						= TThemeManager.BasePath este obligatoriu. Implicit, se presupune un director numit 'themes' în directorul care conține scriptul de intrare al aplicației.
+theme_path_inexistent						= Calea temei '{0}' nu există.
+theme_control_nested						= Skin-ul pentru tipul de control '{0}' din tema '{1}' nu poate fi în interiorul altui skin.
+theme_skinid_duplicated						= SkinID '{0}.{1}' este duplicat în tema '{2}'.
+theme_databind_forbidden					= Databind nu poate fi folosit în tema '{0}' pentru skin-ul de control '{1}.{2}' la proprietatea '{3}'.
+theme_property_readonly						= Skin-ul se aplică unei proprietăți de control doar pentru citire '{0}.{1}'.
+theme_property_undefined					= Skin-ul se aplică unei proprietăți de control inexistente '{0}.{1}'.
+theme_tag_unexpected						= Inițializarea proprietății {0} conține un tip de tag necunoscut {1}.
+
+control_object_reregistered					= S-a găsit ID-ul de obiect duplicat '{0}'.
+control_id_invalid							= {0}.ID '{1}' este invalid. Sunt permise doar caractere alfanumerice și liniuța de subliniere. Primul caracter trebuie să fie o literă sau liniuța de subliniere.
+control_skinid_unchangeable					= {0}.SkinID nu poate fi modificat după ce un skin a fost aplicat controlului sau după ce controalele copil au fost create.
+control_enabletheming_unchangeable			= {0}.EnableTheming nu poate fi modificat după ce controalele copil au fost create.
+control_stylesheet_applied					= Skin-ul StyleSheet a fost deja aplicat pentru {0}.
+control_id_nonunique						= {0}.ID '{1}' nu este unic între toate controalele din același container de nume.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' nu poate fi negativ.
+
+templatecontrol_mastercontrol_invalid		= Controlul master trebuie să fie de tipul TTemplateControl sau o clasă derivată.
+templatecontrol_mastercontrol_required		= Controlul '{0}' necesită un control master, deoarece controlul folosește TContent.
+templatecontrol_contentid_duplicated		= ID-ul TContent '{0}' este duplicat.
+templatecontrol_placeholderid_duplicated	= ID-ul TContentPlaceHolder '{0}' este duplicat.
+templatecontrol_directive_invalid			= {0}.{1} acceptă doar un șir de text static printr-o directivă de șablon.
+templatecontrol_placeholder_inexistent		= TContent '{0}' nu are un TContentPlaceHolder corespunzător.
+
+page_form_duplicated						= O pagină poate conține cel mult un TForm. Folosiți taguri HTML form obișnuite pentru celelalte formulare.
+page_isvalid_unknown						= TPage.IsValid nu a fost încă evaluat.
+page_postbackcontrol_invalid				= Nu s-a putut determina controlul de postback '{0}'.
+page_control_outofform						= {0} '{1}' trebuie să fie inclus într-un TForm.
+page_head_duplicated						= O pagină poate conține cel mult un THead.
+page_head_required							= Un control THead este necesar în șablonul paginii pentru a reda CSS și js în secțiunea head a HTML-ului.
+page_statepersister_invalid					= Persistorul stării paginii trebuie să implementeze interfața IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Nume de bibliotecă de scripturi Prado necunoscut '{0}'.
+csmanager_pradoscript_notloaded				= Biblioteca de scripturi Prado cu numele '{0}' nu a fost încă încărcată.
+csmanager_pradostyle_invalid				= Nume de bibliotecă de stiluri Prado necunoscut '{0}'.
+csmanager_invalid_packages					= Pachete necunoscute '{1}' pentru pachetele javascript definite în '{0}'. Pachetele valide sunt '{2}'.
+
+httpclient_transport_error					= Eroare de transport a clientului HTTP (cod {0}): {1}
+httpclient_http_error						= Răspuns de eroare HTTP cu starea {0}.
+httpclient_transport_required				= Nu este disponibil niciun transport HTTP: extensia cURL nu este încărcată și allow_url_fopen este dezactivat.
+
+restclient_invalid_header					= Antetul TRestClient '{0}' are un nume invalid sau o valoare care conține CR/LF.
+restclient_basicauth_username_colon			= Numele de utilizator Basic-auth din TRestClient nu poate conține două puncte (separatorul de credențiale din RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder trebuie să aibă un ID.
+
+content_id_required							= TContent trebuie să aibă un ID.
+
+controlcollection_control_required			= TControlList acceptă doar șiruri sau obiecte TControl.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' este invalid. Trebuie să fie un singur caracter.
+webcontrol_dir_invalid						= {0}.Dir '{1}' este invalid. Valorile permise sunt 'ltr', 'rtl' și 'auto'.
+webcontrol_style_invalid					= {0}.Style acceptă doar o valoare de tip șir.
+
+listcontrol_selection_invalid				= {0} are o selecție invalidă, setată înainte de efectuarea legării datelor.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex are o valoare invalidă {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue are o valoare invalidă '{1}'.
+listcontrol_expression_invalid				= {0} evaluează o expresie invalidă '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} nu suportă selecția multiplă.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' nu a fost găsit.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' nu a fost găsit.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' nu a fost găsit.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' nu a fost găsit.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' nu poate fi negativ.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' nu poate fi negativ.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' trebuie să fie între 0 și RenderFilterDepth {1} al controlului de filtrare.
+
+hiddenfield_focus_unsupported				= THiddenField nu suportă setarea focalizării pe intrare.
+hiddenfield_theming_unsupported				= THiddenField nu suportă tematizarea.
+hiddenfield_skinid_unsupported				= THiddenField nu suportă skin de control.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' nu se referă la un control buton existent.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding trebuie să fie un întreg mai mare sau egal cu -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing trebuie să fie un întreg mai mare sau egal cu -1.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History trebuie să fie un întreg mai mare decât 0.
+
+listitemcollection_item_invalid				= TListItemCollection acceptă doar șiruri sau obiecte TListItem.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices este doar pentru citire.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack este doar pentru citire.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex este doar pentru citire.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices este doar pentru citire.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue este doar pentru citire.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices este doar pentru citire.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' nu există.
+logrouter_routeclass_required				= Atributul Class este obligatoriu în configurația <route>.
+logrouter_routetype_required				= Ruta de jurnalizare trebuie să fie o instanță a TLogRoute sau a unei clase derivate.
+
+dblogroute_connectionid_invalid				= TDbLogRoute nu poate crea conexiunea la baza de date cu ID-ul '{0}'.
+dblogroute_insert_failed					= TDbLogRoute nu poate insera jurnalul în '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' nu este valid
+dblogroute_table_nonexistent				= Tabela TDbLogRoute '{0}' nu există și trebuie creată.
+dblogroute_order_invalid					= Ordinea TDbLogRoute '{0}' trebuie să enumere coloane, fiecare urmată opțional de ASC sau DESC.
+dblogroute_limit_invalid					= Limita TDbLogRoute '{0}' trebuie să fie un număr de rânduri, 'count OFFSET offset' sau 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' trebuie să fie un director în format de spațiu de nume și trebuie să poată fi scris de procesul serverului Web.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize trebuie să fie mai mare decât 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles trebuie să fie mai mare decât 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom nu poate fi gol.
+emaillogroute_mail_failed					= TEmailLogRoute nu a reușit să trimită jurnalul către '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags nu sunt valide, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility nu este valid, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger este obligatoriu.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' nu este un ID de modul sau un nume de clasă al unui Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger nu poate fi un TPsrLogger; ar jurnaliza înapoi în același TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns nu poate fi mai mic decât 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate este gol sau conține o cale de ID de control invalidă.
+basevalidator_validatable_required			= {0}.ControlToValidate trebuie să indice un control care implementează interfața IValidatable.
+basevalidator_forcontrol_unsupported		= {0}.ForControl nu este suportat.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare conține o cale de ID de control invalidă.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate trebuie să indice un control TFileUpload.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate conține o cale de ID TListControl invalidă, "{1}" este un {2}.
+
+repeater_template_required					= TRepeater.{0} necesită o instanță de șablon care implementează interfața ITemplate.
+repeater_itemtype_unknown					= Tip de element repeater necunoscut {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection acceptă doar obiecte care sunt instanțe ale TControl sau ale claselor sale descendente.
+
+datalist_template_required					= TDataList.{0} necesită o instanță de șablon care implementează interfața ITemplate.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection acceptă doar obiecte TDataListItem.
+
+datagrid_template_required					= TDataGrid.{0} necesită o instanță de șablon care implementează interfața ITemplate.
+templatecolumn_template_required			= TTemplateColumn.{0} necesită o instanță de șablon care implementează interfața ITemplate.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex nu poate fi mai mic decât 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize trebuie să fie mai mare decât 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount nu poate fi mai mic decât 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection acceptă doar obiecte TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection acceptă doar obiecte TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount trebuie să fie mai mare decât 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor încearcă să evalueze valoarea unui câmp din date invalide. Asigurați-vă că datele sunt un tablou, un TMap, un TList sau un obiect care conține câmpul specificat '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor încearcă să evalueze valoarea unui câmp necunoscut '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection acceptă doar obiecte TTableRow.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection acceptă doar obiecte TTableColumn.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection acceptă doar obiecte TTableColumnGroup.
+tablecolumn_span_invalid					= TTableColumn Span trebuie să fie 1 sau mai mare; s-a primit {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection acceptă doar obiecte TTableCell.
+
+multiview_view_required						= TMultiView acceptă doar TView ca copil.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex are un index invalid '{0}'.
+multiview_view_inexistent					= TMultiView nu găsește vizualizarea specificată.
+multiview_viewid_invalid					= TMultiView nu găsește vizualizarea '{0}' la care să comute.
+
+viewcollection_view_required				= TViewCollection acceptă doar TView ca element.
+
+view_visible_readonly						= TView.Visible este doar pentru citire. Folosiți TView.Active pentru a comuta vizibilitatea.
+
+wizard_step_invalid							= Pasul de activat nu a fost găsit în colecția de pași ai asistentului.
+wizard_command_invalid						= Comandă de navigare a asistentului invalidă '{0}'.
+
+table_tablesection_outoforder				= Secțiunile tabelei TTable trebuie să fie în ordinea: Header, Body și Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType este doar pentru citire.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection acceptă doar obiecte TWizardStep sau ale claselor sale derivate.
+
+texthighlighter_stylesheet_invalid			= Nu s-a găsit fișierul de stiluri pentru TTextHighlighter.
+
+hotspotcollection_hotspot_required			= THotSpotCollection acceptă doar instanțe ale THotSpot sau ale claselor sale derivate.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode este doar pentru citire.
+htmlarea_tarfile_invalid					= THtmlArea nu poate localiza fișierul tar TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile nu poate fi modificat deoarece modulul este deja inițializat.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' este invalid. Asigurați-vă că este în format de spațiu de nume și că extensia fișierului este '.xml' sau '.php'.
+parametermodule_parameterid_required		= Elementul Parameter trebuie să aibă atributul 'id'.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' este invalid. Sunt permise doar caractere alfanumerice și liniuța de subliniere. Primul caracter trebuie să fie o literă sau liniuța de subliniere.
+datagridcolumn_expression_invalid			= {0} evaluează o expresie invalidă '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID este setat cu un ID de modul de cache invalid {0}. Fie modulul nu există, fie nu implementează interfața ICache.
+outputcache_duration_invalid				= {0}.Duration trebuie să fie un întreg nu mai mic decât 0.
+
+stack_data_not_iterable						= TStack poate prelua date doar dintr-un tablou sau dintr-un obiect traversabil.
+stack_empty									= TStack este gol.
+
+queue_data_not_iterable						= TQueue poate prelua date doar dintr-un tablou sau dintr-un obiect traversabil.
+queue_empty									= TQueue este gol.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount trebuie să fie un întreg nu mai mic decât 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex este în afara intervalului.
+pager_pagecount_invalid						= TPager.PageCount nu poate fi mai mic decât 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} trebuie să fie o cale de ID validă care indică un control derivat din TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize trebuie să fie un întreg nu mai mic decât 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount trebuie să fie un întreg nu mai mic decât 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex este în afara intervalului.
+databoundcontrol_datasource_invalid			= {0}.DataSource nu este valid.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' nu se referă la un control existent.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' trebuie să se refere la un control care implementează IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' nu denumește o vizualizare a sursei de date.
+
+datasourcecontrol_focus_unsupported			= {0} nu suportă Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} nu suportă EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} nu suportă SkinID.
+datasourcecontrol_visible_unsupported		= {0} nu suportă Visible.
+datasourceview_insert_unsupported			= {0} nu suportă inserarea.
+datasourceview_update_unsupported			= {0} nu suportă actualizarea.
+datasourceview_delete_unsupported			= {0} nu suportă ștergerea.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource necesită o sursă de date de tip tablou, IDataSource sau Traversable.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView necesită o sursă de date null, tablou sau Traversable.
+
+clientscript_invalid_file_position			= Poziție de fișier invalidă '{1}' pentru controlul TClientScript '{0}'; trebuie să fie 'Head', 'Here' sau 'Begin'.
+clientscript_invalid_package_path			= PackagePath invalid '{0}' pentru controlul TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' nu suportă AutoPostBack.
+globalization_cache_path_failed				= Nu s-a putut crea calea pentru cache-ul mesajelor de traducere '{0}'. Asigurați-vă că directorul părinte există și poate fi scris de procesul Web.
+globalization_source_path_failed			= Nu s-a putut crea calea pentru mesajele de traducere '{0}'. Asigurați-vă că directorul părinte există și poate fi scris de procesul Web.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' nu indică un modul TDataSourceConfig valid.
+messagesource_connectionid_required			= ConnectionID din MessageSource_Database.source este obligatoriu.
+
+callback_not_support_no_priority_state_update	= Cererea callback nu suportă actualizarea stării paginii fără prioritate.
+callback_invalid_callback_options			= '{1}' nu este un control TCallbackOptions valid pentru controlul Callback '{0}'.
+callback_invalid_clientside_options			= Proprietatea ClientSide a Callback trebuie să fie fie un șir reprezentând ID-ul unui control TCallbackOptions, fie o instanță a TCallbackClientSideOptions.
+callback_invalid_handler					= Handler de callback invalid; controlul {0} trebuie să implementeze ICallbackEventHandler.
+callback_invalid_target						= Țintă de callback invalidă; nu există niciun control cu ID-ul {0}.
+
+callback_interval_be_positive				= Intervalul pentru TCallbackTimer "{0}" trebuie să fie strict mai mare decât zero secunde.
+callback_decay_be_not_negative				= Rata de atenuare pentru TCallbackTimer "{0}" nu poate fi negativă.
+
+callback_no_autopostback					= Controlul "{0}" nu poate activa AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform necesită extensia XSL a PHP.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' este invalid.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' este invalid.
+xmltransform_transform_required				= Pentru TXmlTransform trebuie setată fie proprietatea TransformContent, fie TransformPath.
+
+ttriggeredcallback_invalid_controlid		= Proprietatea ControlID pentru '{0}' nu poate fi goală.
+tactivecustomvalidator_clientfunction_unsupported	= {0} nu suportă funcția de validare pe partea de client.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' nu identifică un modul TDataSourceConfig valid.
+dbproperties_property_required				= {1}.{0} este o proprietate obligatorie.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' nu este un identificator SQL valid.
+
+dbconnection_open_failed					= TDbConnection nu a reușit să stabilească conexiunea la baza de date: {0}
+dbconnection_connection_inactive			= TDbConnection este inactivă.
+dbconnection_unsupported_driver_charset		= Driverul de bază de date '{0}' nu suportă setarea setului de caractere.
+dbconnection_charset_unchangeable			= Driverul de bază de date '{0}' nu poate schimba setul de caractere după deschidere. Setul de caractere este un parametru DSN.
+
+dbcommand_prepare_failed					= TDbCommand nu a reușit să pregătească instrucțiunea SQL "{1}": {0}
+dbcommand_execute_failed					= TDbCommand nu a reușit să execute instrucțiunea SQL "{1}": {0}
+dbcommand_query_failed						= TDbCommand nu a reușit să execute interogarea SQL "{1}": {0}
+dbcommand_column_empty						= TDbCommand a returnat un rezultat gol și nu a putut obține valoarea scalară.
+dbdatareader_rewind_invalid					= TDbDataReader este un flux doar înainte. Poate fi parcurs o singură dată.
+dbtransaction_transaction_inactive			= TDbTransaction este inactivă.
+
+dbcommandbuilder_value_must_not_be_null		= Proprietatea {0} nu poate fi null, conform definiției coloanei '{2}' din tabela '{1}'.
+
+dbcommon_invalid_table_name					= Tabela de bază de date '{0}' nu a fost găsită. Mesaj de eroare: {1}.
+dbcommon_invalid_identifier_name			= Nume de identificator de bază de date invalid '{0}'; vedeți {1} pentru detalii.
+dbtableinfo_invalid_column_name				= Nume de coloană invalid '{0}' pentru tabela de bază de date '{1}'.
+dbmetadata_invalid_table_view				= Nume de tabelă/vizualizare invalid '{0}' sau tabela/vizualizarea '{0}' nu conține definiții de coloane/câmpuri accesibile.
+dbmetadata_requires_php_version				= Versiunea PHP {1} sau mai nouă este necesară pentru utilizarea bazei de date {0}.
+
+dbtablegateway_invalid_criteria				= Obiect de criterii invalid; trebuie să fie un șir sau o instanță a TSqlCriteria.
+dbtablegateway_no_primary_key_found			= Tabela '{0}' nu conține niciun câmp de cheie primară.
+dbtablegateway_missing_pk_values			= Lipsesc valorile cheii primare la formarea IN(key1, key2, ...) pentru tabela '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Numărul de valori ale cheii compuse nu se potrivește la formarea IN( (key1, key2, ..), (key3, key4, ..)) pentru tabela '{0}'.
+dbtablegateway_mismatch_args_exception		= Metoda finder a TTableGateway '{0}' așteaptă {1} parametri, dar a găsit doar {2} parametri.
+dbtablegateway_mismatch_column_name			= În metoda dinamică __call() '{0}' nu s-au găsit coloane corespunzătoare; coloanele valide pentru tabela '{2}' sunt '{1}'.
+dbtablegateway_invalid_table_info			= Tabela trebuie să fie un șir sau o instanță a TDbTableInfo.
+
+resource_not_a_resource						= Se aștepta o resursă PHP deschisă, dar s-a primit '{0}'.
+processfork_failed							= Nu s-a putut bifurca (fork) procesul.
+liveprocessfork_readonly_receiver			= Datele TLiveProcessFork sunt doar pentru citire pe partea receptoare; doar partea emițătoare le modifică.
+stream_open_failed							= Nu s-a putut deschide fluxul '{0}' în modul '{1}': {2}
+binarystream_unexpected_eof					= Sfârșit de flux neașteptat: erau necesari {0} octeți, dar s-au citit doar {1}.
+binarystream_short_write					= Scriere incompletă: trebuiau scriși {0} octeți, dar au fost acceptați doar {1}.
+streamresourcewrapper_unusable_stream		= Fluxul nu poate fi nici citit, nici scris și nu poate fi expus ca resursă.
+streamfilter_already_registered				= Filtrul de flux '{0}' este deja înregistrat.
+streamfilter_registration_failed			= Nu s-a putut înregistra filtrul de flux '{0}' pentru clasa '{1}'.
+streamwrapper_already_registered			= Protocolul de wrapper de flux '{0}' este deja înregistrat.
+streamwrapper_registration_failed			= Nu s-a putut înregistra protocolul de wrapper de flux '{0}' pentru clasa '{1}'.
+reservedspace_invalid						= Un spațiu rezervat necesită un offset nenegativ și o lungime pozitivă; s-au primit offsetul '{0}' și lungimea '{1}'.
+reservedspace_access_denied					= Operația se suprapune cu spațiul rezervat de la offsetul '{0}'.
+multipartstream_element_invalid				= Un element TMultipartStream necesită 'name' și 'contents'.
+builtincompressor_extension_required		= Compresorul '{0}' necesită extensia PHP '{1}'.
+builtincompressor_compress_failed			= Compresorul '{0}' nu a reușit să comprime datele.
+builtincompressor_decompress_failed			= Compresorul '{0}' nu a reușit să decomprime datele; acestea pot fi corupte sau într-un alt format.
+compression_method_unknown					= Metoda de compresie '{0}' este necunoscută sau extensia sa nu este disponibilă.
+compression_none_available					= Nicio metodă de compresie nu este disponibilă în această instalare PHP.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' nu este o codificare de conținut cunoscută. Codificările cunoscute sunt: {1}.
+compression_xz_unsupported					= xz/LZMA nu are extensie PHP; instalați belisoful/prado-compression pentru un codec xz nativ sau CLI.
+clicompressor_command_missing				= Compresorul '{0}' necesită una dintre aceste comenzi de sistem în PATH: '{1}'.
+clicompressor_process_failed				= Compresorul '{0}' nu a putut porni comanda '{1}'.
+clicompressor_command_failed				= Comanda '{1}' a compresorului '{0}' s-a încheiat cu codul {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule necesită un Endpoint sau un Port pozitiv pentru a compune unul.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' este invalid. Trebuie să fie TSocketServer sau o subclasă.
+socketservermodule_scheme_not_stream		= TSocketServerModule nu poate accepta conexiuni pe schema fără conexiune '{0}'. Folosiți o schemă de flux, cum ar fi tcp, tls, ssl sau unix.
+
+bitreader_invalid_bits						= Nu se pot citi {0} biți; numărul trebuie să fie între 0 și lățimea întregului pe platformă.
+bitreader_64bit_php_required				= Citirea a {0} biți necesită o versiune PHP pe 64 de biți.
+bitreader_invalid_float_bits				= Nu se poate citi un float pe {0} biți; sunt suportați doar 8, 16, 32 sau 64 de biți.
+bitwriter_invalid_bits						= Nu se pot scrie {0} biți; numărul trebuie să fie între 0 și lățimea întregului pe platformă.
+bitwriter_64bit_php_required				= Scrierea a {0} biți necesită o versiune PHP pe 64 de biți.
+bitwriter_invalid_float_bits				= Nu se poate scrie un float pe {0} biți; sunt suportați doar 8, 16, 32 sau 64 de biți.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' nu există. Notă: trebuie specificat în format de spațiu de nume, iar extensia fișierului trebuie să fie '.xml' sau '.php'.
+soapservice_server_invalid					= Clasa de server SOAP TSoapService '{0}' este invalidă. Trebuie să fie TSoapServer sau o subclasă.
+soapservice_serverid_required				= Elementul <soap> trebuie să aibă atributul 'id'.
+soapservice_serverid_duplicated				= ID-ul serverului SOAP '{0}' este duplicat.
+soapserver_id_invalid						= ID de server SOAP invalid '{0}'. Nu trebuie să se termine cu '.wsdl'.
+soapserver_provider_invalid					= Clasa de furnizor TSoapServer '{0}' nu a putut fi rezolvată.
+soapserver_version_invalid					= Versiune SOAP invalidă '{0}'. Trebuie să fie fie '1.1', fie '1.2'.
+soapserver_wsdlstyle_invalid				= Stil WSDL invalid '{0}'. Trebuie să fie fie 'rpc', fie 'document'.
+soapserver_wsdlstyle_unsupported			= Stilul WSDL '{0}' necesită pradosoft/prado-wsdlgenerator 1.2 sau mai nou. Generatorul instalat produce doar 'rpc'.
+
+jsonservice_id_required						= TJsonService necesită atributul 'id' în elementele sale JSON.
+jsonservice_response_type_invalid			= Clasa JSON {0} este invalidă. Trebuie să fie TJsonResponse sau să extindă TJsonResponse.
+jsonservice_class_required					= TJsonService necesită atributul 'class' în elementele sale JSON.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass este obligatoriu.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' nu este o clasă de utilizator validă. Clasa trebuie să extindă TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' nu indică un modul TDataSourceConfig valid.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID este obligatoriu.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' nu indică un modul TDataSourceConfig valid.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID este obligatoriu.
+
+feedservice_id_required						= TFeedService necesită atributul 'id' în elementele sale feed.
+feedservice_feedtype_invalid				= Clasa de feed '{0}' trebuie să implementeze interfața IFeedContentProvider.
+feedservice_class_required					= TFeedService necesită atributul 'class' în elementele sale feed.
+
+tabviewcollection_tabview_required			= TTabPanel acceptă doar TTabView ca copil.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID are un ID invalid '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex are un index invalid '{0}'.
+tabpanel_view_inexistent					= TTabPanel nu găsește vizualizarea specificată.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID este obligatoriu.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' indică un modul inexistent.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' indică un modul care nu implementează interfața ICache.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping poate conține doar TUrlMappingPattern sau clasele sale derivate.
+urlmapping_global_required					= TUrlMapping trebuie configurat ca modul global.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' nu este un fișier.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' trebuie să indice un fișier XML în format de spațiu de nume.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter este obligatoriu pentru modelul '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl nu poate fi gol.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' este invalid.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme trebuie să fie un întreg între {0} și {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize trebuie să fie un întreg între {0} și {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength trebuie să fie un întreg între {0} și {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength trebuie să fie un întreg între {0} și {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet trebuie să fie un șir format din cel puțin 2 caractere.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey este necunoscut. Asigurați-vă că directorul de resurse (assets) poate fi scris de procesul serverului Web.
+captcha_gd2_required						= TCaptcha necesită extensia PHP GD2.
+captcha_imagettftext_required				= TCaptcha necesită extensia PHP GD2 cu suport pentru fonturi TrueType.
+captcha_imagepng_required					= TCaptcha necesită extensia PHP GD2 cu suport pentru formatul de imagine PNG.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl trebuie să indice un control TCaptcha existent.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} trebuie să indice un control TCaptcha existent.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} trebuie să indice un control TCaptcha existent.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey este necunoscut. Pentru a folosi reCAPTCHA trebuie să obțineți o cheie API.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey este necunoscut. Pentru a folosi reCAPTCHA trebuie să obțineți o cheie API.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate trebuie să fie o instanță a TReCaptcha.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' trebuie să conțină doar litere, cifre, '_' și '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity trebuie să fie un întreg între {0} și {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' trebuie să indice un control TProofOfWork.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' nu este o clasă de utilizator validă. Clasa trebuie să extindă TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' nu indică un modul de cache valid.
+cachepagestatepersister_cache_required		= TCachePageStatePersister necesită încărcarea unui modul de cache.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' nu indică un modul de cache valid.
+cachemoduleid_cache_required				= {0} necesită un modul de cache. Configurați un cache primar sau setați {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout trebuie să fie un întreg nu mai mic decât zero.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' nu este o expresie PHP validă: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule nu găsește tabela de bază de date '{0}' pentru stocarea parametrilor.
+dbparametermodule_get_no_blank_key			= TDbParameterModule nu poate citi o cheie goală.
+dbparametermodule_set_no_blank_key			= TDbParameterModule nu poate seta o valoare pentru o cheie goală.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' nu indică un modul TDataSourceConfig valid.
+dbparametermodule_serializer_not_callable	= Serializer din TDbParameterModule nu este un callable.
+
+clockawaretrait_invalid_clock_class			= Clasa de ceas '{0}' trebuie să implementeze Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock este fixat pe UTC; folosiți TTimezoneClock pentru alt fus orar.
+
+processcrontask_no_command					= TProcessCronTask '{0}' nu are nicio comandă (Command) de rulat.
+processcrontask_launch_failed				= TProcessCronTask nu a reușit să lanseze procesul: '{0}'.
+processcrontask_write_failed				= TProcessCronTask nu a putut scrie fișierul pid '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' nu are niciun closure de rulat.
+closurecrontask_closure_required			= TClosureCronTask necesită un Closure.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' nu este un TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' nu a putut decripta payload-ul closure-ului său.
+cronmethodtask_no_module					= TCronMethodTask nu a găsit modulul '{0}'.
+cron_usermanager_nonexistent				= TCronModule nu a găsit UserManager cu numele '{0}'.
+cron_usermanager_invalid					= UserManager '{0}' al TCronModule nu este un TUserManager.
+cron_task_as_array_required					= Sarcina din configurația TCronModule nu este un tablou.
+cron_duplicate_task_name					= Sarcinile TCronModule trebuie să aibă nume unice.
+cron_schedule_required						= Sarcina cron trebuie să aibă o programare.
+cron_task_required							= Sarcina cron trebuie să aibă o sarcină de executat.
+cron_not_a_crontask							= Sarcina cron '{0}' nu este un TCronTask.
+cron_additional_tasks_invalid				= '{0}' nu este o sarcină cron suplimentară validă.
+crontask_no_module							= TCronTask nu a găsit modulul '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask nu a găsit modulul specificat '{0}'.
+dbcron_invalid_name							= TDbCronManager: numele sarcinii '{0}' este invalid.
+dbcron_conflicting_task_names				= Sarcinile cron din configurație intră în conflict cu sarcinile cron din baza de date '{0}'.
+dbcron_table_nonexistent					= Tabela de bază de date TDbCronManager nu există.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' nu este un TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler nu a putut parsa elementul de programare '{0}'
+
+rational_bad_offset							= "{0}" nu este un accesor de proprietate valid al TRational.
+
+bithelper_bad_fp_format						= TBitHelper nu poate lucra cu '{0}' biți de exponent, '{1}' biți de mantisă și '{2}' deplasare de exponent într-un mediu PHP pe {3} biți.
+bithelper_invalid_color_in					= TBitHelper trebuie să aibă cel puțin un bit de intrare (In Bit).  S-a primit '{0}'.
+bithelper_invalid_color_out					= TBitHelper trebuie să aibă cel puțin un bit de ieșire (Out Bit). S-a primit '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper nu poate oglindi '{0}' biți într-un mediu PHP pe {1} biți.
+
+ar_data_invalid								= {0}.copyFrom() acceptă ca parametru doar un obiect sau un tablou.
+ar_save_invalid								= Instanța {0} nu poate fi salvată deoarece este fie ștearsă, fie într-o stare necunoscută.
+ar_delete_invalid							= Instanța {0} nu poate fi ștearsă deoarece este fie o înregistrare nouă, fie o înregistrare deja ștearsă.
+
+dbmetadata_invalid_database_driver			= Driverul '{0}' nu este suportat. Instalați driverul PRADO corespunzător, dacă este disponibil.
+dbmetadata_not_meta_data					= Se aștepta clasa de driver {1}, dar s-a primit clasa {0}.
+dbmetadata_tableinfo_class_invalid			= Clasa de informații de tabelă TDbMetaData '{0}' este un spațiu de nume de director, nu o clasă.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' este invalid. Asigurați-vă că indică un modul de aplicație valid.
+distributeddatasource_child_required		= {0} necesită cel puțin un element copil '{1}'.
+masterslavedbconnection_connection_exists	= Conexiunea {0}.{1} există deja.
+masterslavedbconnection_interface_required	= {0}.{1} necesită o instanță care implementează interfața {2}.
+slavedbconnection_requires_master			= {0} necesită un {1}.
+
+response_status_reason_missing				= HTTP 1.1 necesită un motiv pentru codurile de stare extinse
+response_status_reason_badchars				= Pentru antetul HTTP 1.1, tokenul status-reason nu poate conține caracterele CR sau LF
+
+activefileupload_temppath_invalid			= Calea TActiveFileUpload TempPath '{0}' nu există sau nu poate fi scrisă de procesul serverului Web.
+
+tactivetablecell_control_outoftable			= {0} '{1}' trebuie să fie inclus într-un control TTableRow.
+tactivetablecell_control_notincollection	= {0} '{1}' nu este membru al TTableCellCollection din controlul TTableRow părinte.
+
+tactivetablerow_control_outoftable			= {0} '{1}' trebuie să fie inclus într-un control TTable.
+tactivetablerow_control_notincollection		= {0} '{1}' nu este membru al TTableRowCollection din controlul TTable părinte.
+
+juioptions_option_invalid					= '{1}' nu este o opțiune validă pentru controlul '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' nu este un control de legendă valid pentru TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID are un ID invalid '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex are un index invalid '{0}'.
+accordion_view_inexistent					= TAccordion nu găsește vizualizarea specificată.
+
+dot_bad_size								= TDot Size trebuie să fie un întreg pozitiv, dar este '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth trebuie să fie un număr urmat opțional de % sau de o unitate de lungime CSS, dar este '{0}'
+
+juidatepicker_settextmode_unsupported		= TextMode al TJuiDatePicker nu poate fi schimbat.
+
+control_adapter_not_active					= Proprietatea BaseActiveControl a fost apelată pe un control care nu este activ.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' trebuie să fie copil direct al unui control TFigure.
+summary_requires_details_parent				= TSummary '{0}' trebuie să fie copil direct al unui control TDetails.
+
+gravatar_bad_default						= Valoarea proprietății TGravatar DefaultImageStyle '{0}' nu este suportată
+gravatar_bad_size							= TGravatar Size nu este în intervalul [1 .. 512], ci este '{0}'
+
+progress_value_invalid						= TProgress Value trebuie să fie 0 sau mai mare; s-a primit {0}.
+progress_max_invalid						= TProgress Max trebuie să fie mai mare decât 0; s-a primit {0}.
+
+time_invalid_datetime						= TTime DateTime trebuie să fie un DateTimeInterface, DateInterval, șir sau valoare numerică; s-a primit {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' nu este un nume de constantă TTimeFormat sau un model de dată și oră ICU.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' nu poate conține '{1}': controalele active, de postback și de validare nu funcționează în interiorul conținutului de șablon inert. Folosiți marcaj simplu cu substituenți {{...}} sau setați ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() trebuie să returneze un tablou.
+
+htmlpurifier_source_path_failed				= Nu s-a putut crea calea pentru cache-ul html purifier '{0}'. Asigurați-vă că directorul părinte există și poate fi scris de procesul Web.

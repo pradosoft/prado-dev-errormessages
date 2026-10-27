@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Greek (el).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Το Prado.Application μπορεί να οριστεί μόνο μία φορά.
+prado_component_unknown						= Άγνωστος τύπος συστατικού '{0}'. Αυτό μπορεί να προκλήθηκε από το ακόλουθο σφάλμα ανάλυσης στο αρχείο της κλάσης {0}: {1}
+prado_using_invalid							= Το '{0}' δεν είναι έγκυρος χώρος ονομάτων προς χρήση. Βεβαιωθείτε ότι έχει προσαρτηθεί το '.*' αν θέλετε να χρησιμοποιήσετε χώρο ονομάτων που αναφέρεται σε κατάλογο.
+prado_alias_redefined						= Το ψευδώνυμο '{0}' δεν μπορεί να επαναπροσδιοριστεί.
+prado_alias_invalid							= Το ψευδώνυμο '{0}' αναφέρεται σε μη έγκυρη διαδρομή '{1}'. Μόνο υπάρχοντες κατάλογοι μπορούν να λάβουν ψευδώνυμο.
+prado_aliasname_invalid						= Το ψευδώνυμο '{0}' περιέχει τον μη έγκυρο χαρακτήρα '.'.
+
+component_property_undefined				= Η ιδιότητα συστατικού '{0}.{1}' δεν έχει οριστεί.
+component_property_readonly					= Η ιδιότητα συστατικού '{0}.{1}' είναι μόνο για ανάγνωση.
+component_event_undefined					= Το συμβάν συστατικού '{0}.{1}' δεν έχει οριστεί.
+component_method_undefined					= Η μέθοδος συστατικού '{0}.{1}' δεν έχει οριστεί.
+component_eventhandler_invalid				= Στο συμβάν συστατικού '{0}.{1}' έχει προσαρτηθεί μη έγκυρος χειριστής συμβάντος '{2}'.
+component_expression_invalid				= Το συστατικό '{0}' αξιολογεί μη έγκυρη έκφραση '{1}' : {2}.
+component_statements_invalid				= Το συστατικό '{0}' αξιολογεί μη έγκυρες εντολές PHP '{1}' : {2}.
+component_class_behavior_defined			= Το συστατικό '{0}' έχει ήδη συμπεριφορά κλάσης '{1}'.
+component_not_a_behavior					= Το συστατικό '{0}' που προστίθεται ως συμπεριφορά δεν είναι TBaseBehavior.
+object_not_a_component						= Το αντικείμενο '{0}' που προστίθεται ως συμπεριφορά δεν είναι TComponent.
+component_no_tcomponent_class_behaviors		= Το TComponent δεν μπορεί να έχει προσαρτημένες συμπεριφορές κλάσης λόγω αναδρομής.
+component_tbehavior_cannot_attach_as_class_behavior	= Τα IBehaviors δεν μπορούν να προσαρτηθούν σε πολλούς κατόχους. Δώστε μια συμβολοσειρά ή έναν πίνακα με την κλάση IBehavior και τις ιδιότητες για δημιουργία στιγμιοτύπου σε κάθε κάτοχο.
+
+propertyvalue_enumvalue_invalid				= Η τιμή '{0}' δεν είναι έγκυρη τιμή απαρίθμησης ({1}).
+propertyvalue_invalid_hex_color				= Η τιμή '{0}' δεν είναι έγκυρη δεκαεξαδική τιμή χρώματος. π.χ. "#112233"
+propertyvalue_invalid_array_literal			= Η τιμή '{0}' δεν είναι έγκυρη κυριολεκτική τιμή πίνακα.
+propertyvalue_array_too_deep				= Η κυριολεκτική τιμή πίνακα έχει ένθεση βαθύτερη από {0} επίπεδα.
+
+eventhandler_lost_weak_ref					= Το TEventHandler δεν μπορεί να καλέσει τον χειριστή συμβάντος επειδή το WeakReference του callable αντικειμένου χάθηκε.
+eventhandler_no_set_handler					= Το TEventHandler δεν μπορεί να ορίσει τον χειριστή συμβάντος, δείκτης "{0}".
+eventhandler_bad_offset						= Το TEventHandler δεν έχει μετατόπιση "{0}".
+
+eventparam_readonly							= Το {0} είναι μόνο για ανάγνωση.
+eventparam_readonly_set						= Το {0} δεν μπορεί να αλλάξει το ReadOnly αφού έχει οριστεί.
+eventparam_readonly_not_self				= Το ReadOnly του {0} μπορεί να οριστεί μόνο εσωτερικά.
+
+list_index_invalid							= Ο δείκτης '{0}' είναι εκτός ορίων.
+list_item_inexistent						= Το στοιχείο δεν βρέθηκε στη λίστα.
+list_data_not_iterable						= Τα δεδομένα πρέπει να είναι είτε πίνακας είτε αντικείμενο που υλοποιεί τη διεπαφή Traversable.
+list_readonly								= Το {0} είναι μόνο για ανάγνωση.
+list_readonly_set							= Το {0} δεν μπορεί να αλλάξει το Read-Only αφού έχει ήδη οριστεί.
+prioritylist_index_invalid					= Ο δείκτης '{0}' του '{1}' στην προτεραιότητα '{2}' είναι εκτός ορίων.
+prioritytrait_no_set_default_priority		= Η προεπιλεγμένη προτεραιότητα μπορεί να οριστεί μόνο μία φορά ή από το ίδιο το αντικείμενο.
+prioritytrait_no_set_precision				= Η ακρίβεια μπορεί να οριστεί μόνο μία φορά ή από το ίδιο το αντικείμενο.
+weak_no_set_discard_invalid					= Το '{0}'.DiscardInvalid μπορεί να οριστεί μόνο μία φορά ή από το ίδιο το αντικείμενο.
+
+map_addition_disallowed						= Το νέο στοιχείο δεν μπορεί να προστεθεί στον χάρτη.
+map_item_unremovable						= Το στοιχείο δεν μπορεί να αφαιρεθεί από τον χάρτη.
+map_data_not_iterable						= Τα δεδομένα πρέπει να είναι είτε πίνακας είτε αντικείμενο που υλοποιεί τη διεπαφή Traversable.
+map_readonly								= Το {0} είναι μόνο για ανάγνωση.
+map_readonly_set							= Το {0} δεν μπορεί να αλλάξει το Read-Only αφού έχει ήδη οριστεί.
+
+tnull_clone_disallowed						= Το singleton TNull δεν μπορεί να κλωνοποιηθεί. Χρησιμοποιήστε το TNull::null() αντ' αυτού.
+
+weakcallablecollection_callable_required	= Το TWeakCallableCollection δέχεται μόνο callables.
+
+arraysubscription_no_change					= Το TArraySubscription.{0} δεν μπορεί να αλλάξει μετά την εγγραφή.
+arraysubscription_no_null_key				= Το TArraySubscription δεν μπορεί να εγγραφεί σε κλειδί null σε αντικείμενο ArrayAccess.
+arraysubscription_index_invalid				= Το TArraySubscription είναι σε λειτουργία λίστας (isAssociative = false) αλλά το κλειδί '{0}' δεν είναι έγκυρο (πλήθος: {1}).
+eventsubscription_no_setcollection			= Το TEventSubscription.Array δεν μπορεί να οριστεί απευθείας.
+eventsubscription_no_change					= Το TEventSubscription.{0} δεν μπορεί να αλλάξει μετά την εγγραφή.
+
+application_includefile_invalid				= Δεν είναι δυνατή η εύρεση της διαμόρφωσης εφαρμογής {0}. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και ότι το αρχείο τελειώνει σε ".xml" ή ".php".
+application_basepath_invalid				= Η βασική διαδρομή της εφαρμογής '{0}' δεν υπάρχει ή δεν είναι κατάλογος.
+application_runtimepath_invalid				= Η διαδρομή χρόνου εκτέλεσης της εφαρμογής '{0}' δεν υπάρχει ή δεν είναι εγγράψιμη από τη διεργασία του διακομιστή Web.
+application_service_class_not_found			= Η κλάση υπηρεσίας '{0}' δεν υπάρχει.
+application_service_class_not_service		= Η κλάση υπηρεσίας '{0}' δεν υλοποιεί το IService.
+application_service_class_required			= Η registerService απαιτεί όνομα κλάσης ή πίνακα serviceConfig για την υπηρεσία '{0}'.
+application_service_default_unregister		= Η προεπιλεγμένη υπηρεσία σελίδας '{0}' δεν μπορεί να απεγγραφεί.
+service_csrf_token_invalid					= Η υπηρεσία '{0}' απαιτεί έγκυρο διακριτικό CSRF.
+application_moduleid_duplicated				= Το ID αρθρώματος εφαρμογής '{0}' δεν είναι μοναδικό.
+application_runtimepath_failed				= Δεν είναι δυνατή η δημιουργία της διαδρομής χρόνου εκτέλεσης '{0}'. Βεβαιωθείτε ότι ο γονικός κατάλογος υπάρχει και είναι εγγράψιμος από τη διεργασία Web.
+application_module_required_dep_missing		= Το άρθρωμα '{0}' έχει απαιτούμενη εξάρτηση από το άρθρωμα '{1}', το οποίο δεν είναι καταχωρισμένο στην εφαρμογή.
+application_module_dependency_cycle			= Εντοπίστηκε κύκλος εξαρτήσεων μεταξύ των ακόλουθων αρθρωμάτων: {0}.
+application_module_dependency_self_reference	= Το άρθρωμα '{0}' δηλώνει τον εαυτό του ως εξάρτηση, κάτι που δεν είναι ποτέ έγκυρο.
+
+appconfig_aliaspath_invalid					= Η διαμόρφωση εφαρμογής <alias id="{0}"> χρησιμοποιεί μη έγκυρη διαδρομή αρχείου "{1}".
+appconfig_alias_invalid						= Το στοιχείο <alias> της διαμόρφωσης εφαρμογής πρέπει να έχει χαρακτηριστικό "id" και χαρακτηριστικό "path".
+appconfig_alias_redefined					= Η διαμόρφωση εφαρμογής <alias id="{0}"> δεν μπορεί να επαναπροσδιοριστεί.
+appconfig_using_invalid						= Το στοιχείο <using> της διαμόρφωσης εφαρμογής πρέπει να έχει χαρακτηριστικό "namespace".
+appconfig_moduleid_required					= Το στοιχείο <module> της διαμόρφωσης εφαρμογής πρέπει να έχει χαρακτηριστικό "id".
+appconfig_moduletype_required				= Η διαμόρφωση εφαρμογής <module id="{0}"> πρέπει να έχει χαρακτηριστικό "class".
+appconfig_moduletype_inapplicable			= Η διαμόρφωση εφαρμογής <module id="{0}"> δεν μπορεί να έχει το χαρακτηριστικό "class".
+appconfig_serviceid_required				= Το στοιχείο <service> της διαμόρφωσης εφαρμογής πρέπει να έχει χαρακτηριστικό "id".
+appconfig_servicetype_required				= Η διαμόρφωση εφαρμογής <service id="{0}"> πρέπει να έχει χαρακτηριστικό "class".
+appconfig_parameterid_required				= Το στοιχείο <parameter> της διαμόρφωσης εφαρμογής πρέπει να έχει χαρακτηριστικό "id".
+appconfig_includefile_required				= Το στοιχείο <include> της διαμόρφωσης εφαρμογής πρέπει να έχει χαρακτηριστικό "file".
+appconfig_paths_invalid						= Το <paths> της διαμόρφωσης εφαρμογής δεν μπορεί να περιέχει το στοιχείο <{0}>.
+appconfig_modules_invalid					= Το <modules> της διαμόρφωσης εφαρμογής δεν μπορεί να περιέχει το στοιχείο <{0}>.
+appconfig_services_invalid					= Το <services> της διαμόρφωσης εφαρμογής δεν μπορεί να περιέχει το στοιχείο <{0}>.
+appconfig_parameters_invalid				= Το <parameters> της διαμόρφωσης εφαρμογής δεν μπορεί να περιέχει το στοιχείο <{0}>.
+appconfig_tag_invalid						= Η διαμόρφωση εφαρμογής δεν μπορεί να περιέχει το στοιχείο <{0}>.
+
+securitymanager_validationkey_invalid		= Το TSecurityManager.ValidationKey δεν πρέπει να είναι κενό.
+securitymanager_cookievalidationkey_invalid	= Το TSecurityManager.CookieValidationKey δεν πρέπει να είναι κενό.
+securitymanager_encryptionkey_invalid		= Το TSecurityManager.EncryptionKey δεν πρέπει να είναι κενό.
+securitymanager_mcryptextension_required	= Η επέκταση PHP Mcrypt απαιτείται για τη χρήση της λειτουργίας κρυπτογράφησης του TSecurityManager.
+securitymanager_mcryptextension_initfailed	= Το TSecurityManager απέτυχε να αρχικοποιήσει το άρθρωμα mcrypt.
+
+uri_format_invalid							= Το '{0}' δεν είναι έγκυρο URI.
+
+httprequest_browscap_required				= Το THttpRequest απαιτεί να έχει ρυθμιστεί η οδηγία browscap στο php.ini.
+httprequest_separator_invalid				= Το THttpRequest.UrlParamSeparator μπορεί να περιέχει μόνο έναν χαρακτήρα.
+httprequest_urlmanager_inexist				= Το THttpRequest.UrlManager '{0}' δεν δείχνει σε υπάρχον άρθρωμα.
+httprequest_urlmanager_invalid				= Το THttpRequest.UrlManager '{0}' πρέπει να δείχνει σε άρθρωμα που επεκτείνει το TUrlManager.
+httprequest_csrf_session_required			= Το THttpRequest.EnableCsrfCookie είναι false, κάτι που απαιτεί άρθρωμα συνεδρίας.
+
+httpcookiecollection_httpcookie_required	= Το THttpCookieCollection δέχεται μόνο αντικείμενα THttpCookie.
+
+httpresponse_file_inexistent				= Το THttpResponse δεν μπορεί να αποστείλει το αρχείο '{0}'. Το αρχείο δεν υπάρχει.
+httpresponse_responsedata_method_unavailable	= THttpResponse: η μέθοδος '{0}' δεν μπορεί να χρησιμοποιηθεί χωρίς κατάλληλο προσαρμογέα που την υλοποιεί.
+httpresponse_headersmanager_inexist			= Το THttpResponse.HeadersManager '{0}' δεν δείχνει σε υπάρχον άρθρωμα.
+httpresponse_headersmanager_invalid			= Το THttpResponse.HeadersManager '{0}' πρέπει να δείχνει σε άρθρωμα που επεκτείνει το THttpHeadersManager.
+
+httpheadersmanager_header_required			= Το THttpHeadersManager μπορεί να περιέχει μόνο THttpHeader ή θυγατρικές του κλάσεις.
+httpheadersmanager_headerclass_missing		= Από την καταχώριση <headerclass> του THttpHeadersManager λείπει το απαιτούμενο χαρακτηριστικό 'name' ή 'class'.
+
+httpsession_sessionid_unchangeable			= Το THttpSession.SessionID δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_sessionname_unchangeable		= Το THttpSession.SessionName δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_sessionname_invalid				= Το THttpSession.SessionName πρέπει να περιέχει μόνο αλφαριθμητικούς χαρακτήρες.
+httpsession_savepath_unchangeable			= Το THttpSession.SavePath δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_savepath_invalid				= Το THttpSession.SavePath '{0}' δεν είναι έγκυρο.
+httpsession_storage_unchangeable			= Το THttpSession.Storage δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_cookiemode_unchangeable			= Το THttpSession.CookieMode δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_autostart_unchangeable			= Το THttpSession.AutoStart δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση του αρθρώματος συνεδρίας.
+httpsession_gcprobability_unchangeable		= Το THttpSession.GCProbability δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_gcprobability_invalid			= Το THttpSession.GCProbability πρέπει να είναι ακέραιος μεταξύ 0 και 100.
+httpsession_transid_unchangeable			= Το THttpSession.UseTransparentSessionID δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_transid_cookieonly				= Το THttpSession.UseTransparentSessionID δεν μπορεί να οριστεί όταν το THttpSession.CookieMode έχει την τιμή Only.
+httpsession_maxlifetime_unchangeable		= Το THttpSession.Timeout δεν μπορεί να τροποποιηθεί μετά την έναρξη της συνεδρίας.
+httpsession_handler_invalid					= Το THttpSessionHandler δέχεται μόνο αντικείμενο THttpSession ως παράμετρο κατασκευαστή
+
+assetmanager_basepath_invalid				= Το TAssetManager.BasePath '{0}' δεν είναι έγκυρο. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και δείχνει σε κατάλογο εγγράψιμο από τη διεργασία του διακομιστή Web.
+assetmanager_basepath_unchangeable			= Το TAssetManager.BasePath δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση του αρθρώματος.
+assetmanager_baseurl_unchangeable			= Το TAssetManager.BaseUrl δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση του αρθρώματος.
+assetmanager_filepath_invalid				= Το TAssetManager δημοσιεύει μη έγκυρο αρχείο '{0}'.
+assetmanager_tarchecksum_invalid			= Το TAssetManager δημοσιεύει αρχείο tar με μη έγκυρο άθροισμα ελέγχου '{0}'.
+assetmanager_tarfile_invalid				= Το TAssetManager δημοσιεύει μη έγκυρο αρχείο tar '{0}'.
+assetmanager_tarfile_extract_failed			= Το TAssetManager απέτυχε να αποσυμπιέσει το αρχείο tar '{0}'.
+assetmanager_source_directory_invalid		= Το TAssetManager αντιγράφει μη έγκυρο κατάλογο '{0}'.
+
+cache_primary_duplicated					= Επιτρέπεται το πολύ ένα πρωτεύον άρθρωμα προσωρινής μνήμης. Το {0} προσπαθεί να καταχωριστεί ως δεύτερο πρωτεύον άρθρωμα προσωρινής μνήμης.
+psrcache_backing_cache_required				= Απαιτείται το TPsrCache.BackingCacheId ή το TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= Το TPsrCache.BackingCacheId '{0}' δεν αναφέρεται σε άρθρωμα της εφαρμογής.
+psrcache_invalid_backing_cache_type			= Το TPsrCache.BackingCacheId '{0}' πρέπει να αναφέρεται σε άρθρωμα που υλοποιεί το Psr\SimpleCache\CacheInterface ή το Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= Το TPsrCache.BackingCache '{0}' είναι προσαρμογέας PSR αυτού του TPsrCache· θα διάβαζε και θα έγραφε πίσω στην ίδια προσωρινή μνήμη.
+psrcachebacking_cache_required				= Το {0} απαιτεί υποκείμενη προσωρινή μνήμη. Ορίστε το {0}.BackingCacheId, το {0}.BackingCache ή μια πρωτεύουσα προσωρινή μνήμη εφαρμογής.
+psrcachebacking_cache_not_found				= Το {0}.BackingCacheId '{1}' δεν αναφέρεται σε άρθρωμα της εφαρμογής.
+psrcachebacking_invalid_cache_type			= Το {0}.BackingCacheId '{1}' πρέπει να αναφέρεται σε άρθρωμα Prado\Caching\ICache.
+psrcachebacking_key_invalid					= Το κλειδί προσωρινής μνήμης του {0} πρέπει να είναι μη κενή συμβολοσειρά χωρίς τους δεσμευμένους χαρακτήρες {}()/\@: αλλά δόθηκε '{1}'.
+sqlitecache_extension_required				= Το TSqliteCache απαιτεί την επέκταση PHP SQLite.
+sqlitecache_dbfile_required					= Το TSqliteCache.DbFile απαιτείται.
+sqlitecache_connection_failed				= Η σύνδεση με τη βάση δεδομένων του TSqliteCache απέτυχε. {0}.
+sqlitecache_table_creation_failed			= Το TSqliteCache απέτυχε να δημιουργήσει τη βάση δεδομένων προσωρινής μνήμης. {0}.
+sqlitecache_dbfile_unchangeable				= Το TSqliteCache.DbFile δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση του αρθρώματος.
+sqlitecache_dbfile_invalid					= Το TSqliteCache.DbFile δεν είναι έγκυρο. Βεβαιωθείτε ότι είναι σε σωστή μορφή χώρου ονομάτων.
+
+dbcache_unavailable							= Το TDbCache απαιτεί την επέκταση PHP PDO.
+
+etcdcache_transport_required				= Το TEtcdCache απαιτεί την επέκταση PHP cURL ή το allow_url_fopen.
+
+memcache_extension_required					= Το TMemCache απαιτεί την επέκταση PHP memcache.
+memcache_connection_failed					= Το TMemCache απέτυχε να συνδεθεί με τον διακομιστή memcache {0}:{1}.
+memcache_not_initialized					= Οι επιλογές δεν μπορούν να οριστούν στο TMemCache πριν από την αρχικοποίηση του αρθρώματος.
+
+apccache_extension_required					= Το TAPCCache απαιτεί την επέκταση PHP APC.
+apccache_extension_not_enabled				= Το TAPCCache χρειάζεται apc.enabled = 1 στο php.ini για να λειτουργήσει.
+apccache_extension_not_enabled_cli			= Το TAPCCache χρειάζεται apc.enable_cli = 1 στο php.ini για να λειτουργήσει με την PHP από τη γραμμή εντολών.
+
+cachesize_item_exceeds_maximum_size			= Το στοιχείο προσωρινής μνήμης έχει μέγεθος {0} byte, το οποίο υπερβαίνει το ρυθμισμένο MaximumSize των {1} byte.
+
+filecache_directory_required				= Το TFileCache.Directory απαιτείται.
+filecache_directory_create_failed			= Το TFileCache δεν μπορεί να δημιουργήσει τον κατάλογο προσωρινής μνήμης '{0}'.
+filecache_directory_not_writable			= Ο κατάλογος προσωρινής μνήμης '{0}' του TFileCache δεν είναι εγγράψιμος.
+filecache_hash_token_identity				= Το TFileCache.hashToken πρέπει να μετασχηματίζει την είσοδό του· η υλοποίηση της υποκλάσης επέστρεψε το διακριτικό αμετάβλητο.
+filecache_hash_token_path_separator			= Το TFileCache.hashToken δεν πρέπει να επιστρέφει τιμή που περιέχει διαχωριστικό διαδρομής ("/" ή "\")· η υλοποίηση της υποκλάσης επέστρεψε μη ασφαλή κατακερματισμό.
+
+memorycache_backing_file_directory_not_found	= Ο κατάλογος του TMemoryCache.BackingFile δεν υπάρχει για τη διαδρομή '{0}'.
+
+serializingcache_type_invalid				= Το TSerializingCache.SerializationType '{0}' δεν είναι έγκυρο. Έγκυρες τιμές είναι 'PHP' και 'JSON'.
+serializingcache_encoding_invalid			= Το TSerializingCache.Encoding '{0}' δεν είναι έγκυρο. Έγκυρες τιμές είναι 'None', 'Base64' και 'Hex'.
+serializingcache_securitymanager_invalid	= Το TSerializingCache.SecurityManager '{0}' δεν είναι έγκυρο. Πρέπει να είναι ID αρθρώματος TSecurityManager ή στιγμιότυπο TSecurityManager.
+serializingcache_json_encode_failed			= Το TSerializingCache απέτυχε να κωδικοποιήσει την τιμή σε JSON: {0}.
+directorycachedependency_directory_invalid	= Το TDirectoryCacheDependency.Directory {0} δεν αναφέρεται σε έγκυρο κατάλογο.
+cachedependencylist_cachedependency_required	= Μόνο αντικείμενα που υλοποιούν το ICacheDependency μπορούν να προστεθούν στο TCacheDependencyList.
+
+errorhandler_errortemplatepath_invalid		= Το TErrorHandler.ErrorTemplatePath '{0}' δεν είναι έγκυρο. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και δείχνει σε έγκυρο κατάλογο που περιέχει αρχεία προτύπων σφαλμάτων.
+
+pageservice_basepath_invalid				= Το TPageService.BasePath '{0}' δεν είναι έγκυρος κατάλογος.
+pageservice_defaultpage_unchangeable		= Το TPageService.DefaultPage δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση της υπηρεσίας.
+pageservice_basepath_unchangeable			= Το TPageService.BasePath δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση της υπηρεσίας.
+pageservice_pageclass_invalid				= Η κλάση σελίδας {0} δεν είναι έγκυρη. Πρέπει να είναι TPage ή να επεκτείνει το TPage.
+pageservice_includefile_invalid				= Δεν είναι δυνατή η εύρεση της διαμόρφωσης υπηρεσίας σελίδας {0}. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και ότι το αρχείο τελειώνει σε ".xml" ή ".php".
+
+pageserviceconf_file_invalid				= Δεν είναι δυνατό το άνοιγμα του αρχείου διαμόρφωσης καταλόγου σελίδων '{0}'.
+pageserviceconf_aliaspath_invalid			= Το <alias id="{0}"> χρησιμοποιεί μη έγκυρη διαδρομή αρχείου "{1}" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{2}'.
+pageserviceconf_alias_invalid				= Το στοιχείο <alias> πρέπει να έχει χαρακτηριστικό "id" και χαρακτηριστικό "path" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{0}'.
+pageserviceconf_using_invalid				= Το στοιχείο <using> πρέπει να έχει χαρακτηριστικό "namespace" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{0}'.
+pageserviceconf_module_invalid				= Το στοιχείο <module> πρέπει να έχει χαρακτηριστικό "id" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{0}'.
+pageserviceconf_moduletype_required			= Το <module id="{0}"> πρέπει να έχει χαρακτηριστικό "class" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{1}'.
+pageserviceconf_parameter_invalid			= Το στοιχείο <parameter> πρέπει να έχει χαρακτηριστικό "id" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{0}'.
+pageserviceconf_page_invalid				= Το στοιχείο <page> πρέπει να έχει χαρακτηριστικό "id" στο αρχείο διαμόρφωσης καταλόγου σελίδων '{0}'.
+pageserviceconf_includefile_required		= Το στοιχείο <include> της διαμόρφωσης σελίδας πρέπει να έχει χαρακτηριστικό "file".
+
+basebehavior_cannot_setname_with_owner		= Το TBaseBehavior.Name "{0}" δεν μπορεί να αλλάξει (σε "{1}") μετά την προσάρτηση της συμπεριφοράς.
+basebehavior_sync_no_owner					= Το TBaseBehavior "{0}" δεν έχει κάτοχο και δεν μπορεί να συγχρονίσει χειριστές συμβάντων σε συστατικό χωρίς κατόχους.
+basebehavior_sync_not_owner					= Το TBaseBehavior "{0}" δεν μπορεί να συγχρονίσει χειριστές συμβάντων σε αντικείμενο που δεν είναι ο κάτοχος.
+behavior_has_owner							= Το TBehavior "{0}" μπορεί να προσαρτηθεί μόνο σε έναν κάτοχο.
+behavior_bad_attach_component				= Το TBehavior "{0}" μπορεί να προσαρτηθεί μόνο σε TComponent.
+behavior_detach_without_owner				= Το TBehavior "{0}" δεν μπορεί να αποσυνδεθεί χωρίς κάτοχο.
+behavior_detach_wrong_owner					= Το TBehavior "{0}" δεν μπορεί να αποσυνδεθεί από αντικείμενο που δεν είναι ο κάτοχός του.
+behavior_property_unchangeable				= Το {1}.{0} δεν μπορεί να τροποποιηθεί μετά την προσάρτηση της συμπεριφοράς.
+behavior_requires_owner						= Το {1}.{0} απαιτεί κάτοχο.
+classbehavior_owner_attach_once				= Το TClassBehavior "{0}" μπορεί να προσαρτηθεί σε έναν κάτοχο μόνο μία φορά. Οι χειριστές δεν θα ήταν μοναδικοί.
+classbehavior_bad_attach_component			= Το TClassBehavior "{0}" μπορεί να προσαρτηθεί μόνο σε TComponent.
+classbehavior_detach_without_owner			= Το TClassBehavior "{0}" δεν μπορεί να αποσυνδεθεί χωρίς κάτοχο.
+classbehavior_detach_wrong_owner			= Το TClassBehavior "{0}" δεν μπορεί να αποσυνδεθεί από αντικείμενο που δεν είναι ο κάτοχός του.
+
+callchain_bad_dynamic_event					= Το TCallChain.{0} ενεργοποιήθηκε αλλά αναμενόταν το {1}.
+
+behaviormodule_behavior_as_array_required	= Το <behavior> σε php πρέπει να είναι πίνακας.
+behaviormodule_behaviorname_required		= Το <behavior> πρέπει να περιέχει χαρακτηριστικό 'name' για την προσάρτηση της συμπεριφοράς.
+behaviormodule_behaviorclass_required		= Το <behavior> πρέπει να περιέχει χαρακτηριστικό 'class' που ορίζει την κλάση της συμπεριφοράς.
+behaviormodule_attachto_class_required		= Το <behavior> πρέπει να έχει χαρακτηριστικό 'attachto' ή 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= Το <behavior> πρέπει να έχει είτε το χαρακτηριστικό 'attachto' είτε το 'attachtoclass', όχι και τα δύο.
+behaviormodule_behaviorowner_required		= Το αντικείμενο attachto '{0}' του <behavior> δεν βρέθηκε.
+behaviormodule_additional_behaviors_invalid	= Το TBehaviorModule.AdditionalBehaviors δεν μπορεί να οριστεί σε μη έγκυρο τύπο '{0}'
+
+behaviorparameterloader_no_behavior_name	= Το TBehaviorParameterLoader πρέπει να έχει Behavior Name.
+behaviorparameterloader_no_behavior_class	= Το TBehaviorParameterLoader πρέπει να έχει Behavior Class.
+behaviorparameterloader_attachto_class_required	= Το TBehaviorParameterLoader πρέπει να έχει χαρακτηριστικό 'attachto' ή 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= Το TBehaviorParameterLoader πρέπει να έχει μόνο ένα από τα χαρακτηριστικά 'attachto' ή 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= Το attachto 'module:' του TBehaviorParameterLoader απαιτεί ID αρθρώματος.
+behaviorparameterloader_behaviorowner_required	= Το attachto '{0}' του TBehaviorParameterLoader δεν βρέθηκε.
+behaviorparameterloader_behaviormodule_not_found	= Το TBehaviorParameterLoader δεν βρήκε το άρθρωμα '{0}' για την προσάρτηση συμπεριφορών.
+
+evaluationfilter_statements_denied			= Το συστατικό '{0}' δεν μπορεί να αξιολογήσει τις εντολές PHP '{1}' επειδή το TEvaluationFilterBehavior.AllowStatements είναι false.
+evaluationfilter_code_denied				= Το συστατικό '{0}' δεν μπορεί να αξιολογήσει το '{1}' επειδή το TEvaluationFilterBehavior δεν επιτρέπει το '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= Το TMapLazyLoadBehavior πρέπει να έχει callable για να κατασκευαστεί.
+maproutebehavior_handler_not_callable		= Το TMapRouteBehavior πρέπει να έχει callable για να κατασκευαστεί.
+
+parameterizebehavior_no_parameter			= Το TParameterizeBehavior πρέπει να έχει χαρακτηριστικό Parameter.
+parameterizebehavior_no_property			= Το TParameterizeBehavior πρέπει να έχει χαρακτηριστικό Property.
+parameterizebehavior_owner_get_only_property	= Ο κάτοχος του TParameterizeBehavior έχει την ιδιότητα '{0}' αλλά είναι μόνο για ανάγνωση.
+parameterizebehavior_owner_has_no_property	= Ο κάτοχος του TParameterizeBehavior δεν έχει ιδιότητα '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= Το TParameterizeBehavior δεν μπορεί να αδειάσει το Parameter μετά την προσάρτηση.
+
+processhelper_no_forking					= Η διακλάδωση διεργασιών (fork) δεν υποστηρίζεται.
+processhelper_no_signals					= Τα σήματα διεργασιών δεν μπορούν να αποσταλούν σε Windows.
+
+serializableclosure_no_decrypter			= Το TSerializableClosure δεν μπορεί να αποκρυπτογραφήσει κρυπτογραφημένο φορτίο closure χωρίς ρυθμισμένο αποκρυπτογράφο.
+serializableclosure_decrypt_failed			= Το TSerializableClosure απέτυχε να αποκρυπτογραφήσει κρυπτογραφημένο φορτίο closure· το φορτίο μπορεί να έχει παραποιηθεί ή το κλειδί μπορεί να έχει αλλάξει.
+
+appsignals_no_change						= Το TApplicationSignals::{0} δεν μπορεί να αλλάξει μετά την προσάρτηση.
+appsignals_not_a_dispatcher					= Το '{0}' δεν είναι TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= Το '{0}' δεν είναι έγκυρο PID.
+signalsdispatcher_no_change					= Το TSignalsDispatcher::{0} δεν μπορεί να αλλάξει μετά την προσάρτηση.
+
+initialized_property_unchangeable			= Το {1}.{0} δεν μπορεί να οριστεί επειδή έχει ήδη αρχικοποιηθεί.
+initialized_requires_initialization			= Το {1}.{0} απαιτεί αρχικοποίηση πριν από την επεξεργασία.
+
+template_closingtag_unexpected				= Βρέθηκε μη αναμενόμενη ετικέτα κλεισίματος '{0}'.
+template_closingtag_expected				= Αναμενόταν ετικέτα κλεισίματος '{0}', βρέθηκε '{1}'.
+template_directive_nonunique				= Η οδηγία '<%@ ... %>' πρέπει να εμφανίζεται στην αρχή του προτύπου και μπορεί να εμφανίζεται το πολύ μία φορά.
+template_comments_forbidden					= Τα σχόλια προτύπου δεν επιτρέπονται μέσα σε ετικέτες ιδιοτήτων.
+template_matching_unexpected				= Μη αναμενόμενη αντιστοίχιση.
+template_property_unknown					= Το {0} δεν έχει ιδιότητα με όνομα '{1}'.
+template_event_unknown						= Το {0} δεν έχει συμβάν με όνομα '{1}'.
+template_property_readonly					= Το {0} έχει ιδιότητα μόνο για ανάγνωση '{1}'.
+template_event_forbidden					= Το {0} είναι συστατικό που δεν είναι στοιχείο ελέγχου. Δεν μπορεί να προσαρτηθεί χειριστής στο συμβάν του '{1}' σε πρότυπο.
+template_databind_forbidden					= Το {0} είναι συστατικό που δεν είναι στοιχείο ελέγχου. Δεν μπορούν να δεσμευτούν εκφράσεις στην ιδιότητά του '{1}'.
+template_component_required					= Το '{0}' δεν είναι συστατικό. Μόνο συστατικά μπορούν να εμφανίζονται σε πρότυπο.
+template_format_invalid						= Μη έγκυρη σύνταξη προτύπου: {0}
+template_property_duplicated				= Η ιδιότητα {0} έχει διαμορφωθεί δύο ή περισσότερες φορές.
+template_eventhandler_invalid				= Το {0}.{1} δέχεται μόνο στατική συμβολοσειρά.
+template_controlid_invalid					= Το {0}.ID δέχεται μόνο στατική συμβολοσειρά κειμένου.
+template_controlskinid_invalid				= Το {0}.SkinID δέχεται μόνο στατική συμβολοσειρά κειμένου.
+template_content_unexpected					= Βρέθηκε μη αναμενόμενο περιεχόμενο κατά τη δημιουργία στιγμιοτύπου του προτύπου: {0}.
+template_include_invalid					= Μη έγκυρη συμπερίληψη προτύπου. Βεβαιωθείτε ότι το {0} είναι έγκυρος χώρος ονομάτων που δείχνει σε υπάρχον αρχείο προτύπου με επέκταση .tpl.
+template_tag_unexpected						= Η αρχικοποίηση της ιδιότητας {0} περιέχει άγνωστο τύπο ετικέτας {1}.
+
+xmldocument_file_read_failed				= Το TXmlDocument δεν μπορεί να διαβάσει το αρχείο '{0}'.
+xmldocument_file_write_failed				= Το TXmlDocument δεν μπορεί να γράψει το αρχείο '{0}'.
+
+xmlelementlist_xmlelement_required			= Το TXmlElementList δέχεται μόνο αντικείμενα TXmlElement.
+
+xmlelement_null_tag							= Το όνομα ετικέτας του TXmlElement δεν μπορεί να είναι null.
+xmlelement_empty_tag						= Το όνομα ετικέτας του TXmlElement δεν μπορεί να είναι κενή συμβολοσειρά.
+
+authorizationrule_action_invalid			= Το TAuthorizationRule.Action δέχεται μόνο την τιμή 'allow' ή 'deny'.
+authorizationrule_verb_invalid				= Το TAuthorizationRule.Verb δέχεται μόνο την τιμή 'get' ή 'post'.
+
+authorizationrulecollection_authorizationrule_required	= Το TAuthorizationRuleCollection δέχεται μόνο αντικείμενα TAuthorizationRule.
+
+usermanager_userfile_invalid				= Το TUserManager.UserFile '{0}' δεν είναι έγκυρο αρχείο.
+usermanager_userfile_unchangeable			= Το TUserManager.UserFile δεν μπορεί να τροποποιηθεί. Το άρθρωμα χρηστών έχει ήδη αρχικοποιηθεί.
+
+integritymanager_entry_invalid				= Η καταχώριση ακεραιότητας του TIntegrityManager για το URL '{0}' απαιτεί μη κενό url και hash.
+integritymanager_algorithm_invalid			= Ο αλγόριθμος '{0}' του TIntegrityManager δεν υποστηρίζεται· χρησιμοποιήστε έναν από τους: {1}.
+integritymanager_file_unreadable			= Το TIntegrityManager δεν μπορεί να διαβάσει το αρχείο '{0}' για τον υπολογισμό της ακεραιότητάς του.
+integritymanager_integrityfile_invalid		= Το TIntegrityManager.IntegrityFile '{0}' δεν είναι έγκυρο αρχείο.
+integritymanager_integrityfile_unchangeable	= Το {1}.{0} δεν μπορεί να τροποποιηθεί. Το άρθρωμα ακεραιότητας έχει ήδη αρχικοποιηθεί.
+
+javascript_script_integrity_required		= Δεν έχει καταχωριστεί Subresource Integrity για το απομακρυσμένο script '{0}', αλλά η ακεραιότητα απαιτείται.
+
+authmanager_usermanager_required			= Το TAuthManager.UserManager πρέπει να έχει τιμή.
+authmanager_usermanager_inexistent			= Το TAuthManager.UserManager '{0}' δεν αναφέρεται σε ID αρθρώματος εφαρμογής.
+authmanager_usermanager_invalid				= Το TAuthManager.UserManager '{0}' δεν αναφέρεται σε έγκυρο άρθρωμα εφαρμογής TUserManager.
+authmanager_session_required				= Το TAuthManager απαιτεί άρθρωμα συνεδρίας της εφαρμογής.
+
+permissions_events_invalid					= Το TPermissionEvent.Event δεν μπορεί να οριστεί στη μη έγκυρη τιμή '{0}'.
+permissions_rules_invalid					= Το TPermissionEvent.Rules δεν μπορεί να οριστεί στη μη έγκυρη τιμή '{0}'.
+permissions_dbparameter_nonexistent			= Το TPermissionsManager.DbParameter '{0}' δεν αναφέρεται σε ID αρθρώματος εφαρμογής.
+permissions_dbparameter_invalid				= Το TPermissionsManager.DbParameter '{0}' δεν αναφέρεται σε έγκυρο άρθρωμα εφαρμογής TDbParameterModule.
+permissions_init_once						= Το TPermissionsManager.init μπορεί να αρχικοποιηθεί μόνο μία φορά.
+permissions_duplicate_permission			= Το δικαίωμα '{0}' του TPermissionsManager έχει ήδη καταχωριστεί.
+permissions_role_children_invalid			= Ο ρόλος '{0}' της διαμόρφωσης του TPermissionsManager έχει μη έγκυρα θυγατρικά '{1}'.
+permissions_rule_invalid					= Ο κανόνας δικαιωμάτων '{0}' της διαμόρφωσης του TPermissionsManager έχει ιδιότητες που δεν είναι πίνακας.
+permissions_rules_require_name				= Οι κανόνες του TPermissionsManager πρέπει να έχουν ιδιότητα "name" δικαιώματος.
+permissions_role_rule_nested				= Ο ρόλος '{0}' της διαμόρφωσης του TPermissionsManager περιέχει <permissionrule>. Οι κανόνες δικαιωμάτων είναι άμεσα θυγατρικά του στοιχείου διαμόρφωσης permissions.
+permissions_rule_class_invalid				= Η κλάση κανόνα δικαιωμάτων '{0}' του TPermissionsManager είναι χώρος ονομάτων καταλόγου, όχι κλάση.
+permissions_children_invalid				= Τα θυγατρικά του TPermissionsManager.*RoleChildren πρέπει να είναι συμβολοσειρά ή πίνακας αλλά είναι '{0}'.
+permissions_permissionfile_invalid			= Το TPermissionsManager.PermissionFile '{0}' δεν είναι έγκυρο αρχείο.
+
+thememanager_basepath_invalid				= Το TThemeManager.BasePath '{0}' δεν είναι έγκυρο ψευδώνυμο διαδρομής. Βεβαιωθείτε ότι έχετε ορίσει αυτό το ψευδώνυμο στη διαμόρφωση και ότι δείχνει σε έγκυρο κατάλογο.
+thememanager_basepath_invalid2				= Το TThemeManager.BasePath '{0}' δεν είναι έγκυρος κατάλογος.
+thememanager_basepath_unchangeable			= Το TThemeManager.BasePath δεν μπορεί να τροποποιηθεί μετά την αρχικοποίηση του αρθρώματος.
+thememanager_theme_invalid					= Το όνομα θέματος '{0}' του TThemeManager πρέπει να είναι όνομα ενός μόνο καταλόγου.
+
+theme_baseurl_required						= Το TThemeManager.BasePath απαιτείται. Από προεπιλογή, θεωρείται ένας κατάλογος με όνομα 'themes' κάτω από τον κατάλογο που περιέχει το script εισόδου της εφαρμογής.
+theme_path_inexistent						= Η διαδρομή θέματος '{0}' δεν υπάρχει.
+theme_control_nested						= Το skin για τον τύπο στοιχείου ελέγχου '{0}' στο θέμα '{1}' δεν μπορεί να βρίσκεται μέσα σε άλλο skin.
+theme_skinid_duplicated						= Το SkinID '{0}.{1}' είναι διπλότυπο στο θέμα '{2}'.
+theme_databind_forbidden					= Η δέσμευση δεδομένων δεν μπορεί να χρησιμοποιηθεί στο θέμα '{0}' για το skin στοιχείου ελέγχου '{1}.{2}' στην ιδιότητα '{3}'.
+theme_property_readonly						= Το skin εφαρμόζεται σε ιδιότητα στοιχείου ελέγχου μόνο για ανάγνωση '{0}.{1}'.
+theme_property_undefined					= Το skin εφαρμόζεται σε ανύπαρκτη ιδιότητα στοιχείου ελέγχου '{0}.{1}'.
+theme_tag_unexpected						= Η αρχικοποίηση της ιδιότητας {0} περιέχει άγνωστο τύπο ετικέτας {1}.
+
+control_object_reregistered					= Βρέθηκε διπλότυπο ID αντικειμένου '{0}'.
+control_id_invalid							= Το {0}.ID '{1}' δεν είναι έγκυρο. Επιτρέπονται μόνο αλφαριθμητικοί χαρακτήρες και κάτω παύλα. Ο πρώτος χαρακτήρας πρέπει να είναι γράμμα ή κάτω παύλα.
+control_skinid_unchangeable					= Το {0}.SkinID δεν μπορεί να τροποποιηθεί μετά την εφαρμογή skin στο στοιχείο ελέγχου ή τη δημιουργία των θυγατρικών στοιχείων ελέγχου.
+control_enabletheming_unchangeable			= Το {0}.EnableTheming δεν μπορεί να τροποποιηθεί μετά τη δημιουργία των θυγατρικών στοιχείων ελέγχου.
+control_stylesheet_applied					= Το skin StyleSheet έχει ήδη εφαρμοστεί στο {0}.
+control_id_nonunique						= Το {0}.ID '{1}' δεν είναι μοναδικό μεταξύ όλων των στοιχείων ελέγχου στον ίδιο περιέκτη ονοματοδοσίας.
+control_renderfilterdepth_invalid			= Το {0}.RenderFilterDepth '{1}' δεν πρέπει να είναι αρνητικό.
+
+templatecontrol_mastercontrol_invalid		= Το κύριο στοιχείο ελέγχου πρέπει να είναι τύπου TTemplateControl ή θυγατρικής κλάσης.
+templatecontrol_mastercontrol_required		= Το στοιχείο ελέγχου '{0}' απαιτεί κύριο στοιχείο ελέγχου επειδή χρησιμοποιεί TContent.
+templatecontrol_contentid_duplicated		= Το ID TContent '{0}' είναι διπλότυπο.
+templatecontrol_placeholderid_duplicated	= Το ID TContentPlaceHolder '{0}' είναι διπλότυπο.
+templatecontrol_directive_invalid			= Το {0}.{1} δέχεται μόνο στατική συμβολοσειρά κειμένου μέσω οδηγίας προτύπου.
+templatecontrol_placeholder_inexistent		= Το TContent '{0}' δεν έχει αντίστοιχο TContentPlaceHolder.
+
+page_form_duplicated						= Μια σελίδα μπορεί να περιέχει το πολύ ένα TForm. Χρησιμοποιήστε κανονικές ετικέτες form της HTML για τις υπόλοιπες φόρμες.
+page_isvalid_unknown						= Το TPage.IsValid δεν έχει αξιολογηθεί ακόμη.
+page_postbackcontrol_invalid				= Δεν είναι δυνατός ο προσδιορισμός του στοιχείου ελέγχου postback '{0}'.
+page_control_outofform						= Το {0} '{1}' πρέπει να περικλείεται σε TForm.
+page_head_duplicated						= Μια σελίδα μπορεί να περιέχει το πολύ ένα THead.
+page_head_required							= Απαιτείται στοιχείο ελέγχου THead στο πρότυπο της σελίδας για την απόδοση CSS και js στην ενότητα head της HTML.
+page_statepersister_invalid					= Ο διατηρητής κατάστασης σελίδας πρέπει να υλοποιεί τη διεπαφή IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Άγνωστο όνομα βιβλιοθήκης script του Prado '{0}'.
+csmanager_pradoscript_notloaded				= Η βιβλιοθήκη script του Prado με όνομα '{0}' δεν έχει φορτωθεί ακόμη.
+csmanager_pradostyle_invalid				= Άγνωστο όνομα βιβλιοθήκης στυλ του Prado '{0}'.
+csmanager_invalid_packages					= Άγνωστα πακέτα '{1}' για τα πακέτα javascript που ορίζονται στο '{0}'. Έγκυρα πακέτα είναι '{2}'.
+
+httpclient_transport_error					= Σφάλμα μεταφοράς του HTTP client (κωδικός {0}): {1}
+httpclient_http_error						= Απόκριση σφάλματος HTTP με κατάσταση {0}.
+httpclient_transport_required				= Δεν υπάρχει διαθέσιμη μεταφορά HTTP: η επέκταση cURL δεν είναι φορτωμένη και το allow_url_fopen είναι ανενεργό.
+
+restclient_invalid_header					= Η κεφαλίδα '{0}' του TRestClient έχει μη έγκυρο όνομα ή τιμή που περιέχει CR/LF.
+restclient_basicauth_username_colon			= Το όνομα χρήστη Basic-auth του TRestClient δεν πρέπει να περιέχει άνω-κάτω τελεία (διαχωριστικό διαπιστευτηρίων κατά RFC 7617).
+
+contentplaceholder_id_required				= Το TContentPlaceHolder πρέπει να έχει ID.
+
+content_id_required							= Το TContent πρέπει να έχει ID.
+
+controlcollection_control_required			= Το TControlList δέχεται μόνο συμβολοσειρές ή αντικείμενα TControl.
+
+webcontrol_accesskey_invalid				= Το {0}.AccessKey '{1}' δεν είναι έγκυρο. Πρέπει να είναι ένας μόνο χαρακτήρας.
+webcontrol_dir_invalid						= Το {0}.Dir '{1}' δεν είναι έγκυρο. Επιτρεπόμενες τιμές είναι 'ltr', 'rtl' και 'auto'.
+webcontrol_style_invalid					= Το {0}.Style δέχεται μόνο τιμή συμβολοσειράς.
+
+listcontrol_selection_invalid				= Το {0} έχει μη έγκυρη επιλογή που ορίστηκε πριν από τη δέσμευση δεδομένων.
+listcontrol_selectedindex_invalid			= Το {0}.SelectedIndex έχει μη έγκυρη τιμή {1}.
+listcontrol_selectedvalue_invalid			= Το {0}.SelectedValue έχει μη έγκυρη τιμή '{1}'.
+listcontrol_expression_invalid				= Το {0} αξιολογεί μη έγκυρη έκφραση '{1}' : {2}
+listcontrol_multiselect_unsupported			= Το {0} δεν υποστηρίζει πολλαπλή επιλογή.
+
+label_associatedcontrol_invalid				= Το TLabel.AssociatedControl '{0}' δεν βρέθηκε.
+
+textbox_suggestionlist_invalid				= Το TTextBox.SuggestionList '{0}' δεν βρέθηκε.
+
+output_forcontrol_invalid					= Το TOutput.ForControl '{0}' δεν βρέθηκε.
+
+baseterm_targetcontrol_invalid				= Το {0}.TargetControl '{1}' δεν βρέθηκε.
+baseterm_marklimit_invalid					= Το {0}.MarkLimit '{1}' δεν πρέπει να είναι αρνητικό.
+baseterm_depthlimit_invalid					= Το {0}.DepthLimit '{1}' δεν πρέπει να είναι αρνητικό.
+renderfilterparameter_depthlimit_invalid	= Το TRenderFilterParameter.DepthLimit '{0}' πρέπει να είναι από 0 έως το RenderFilterDepth {1} του στοιχείου ελέγχου φιλτραρίσματος.
+
+hiddenfield_focus_unsupported				= Το THiddenField δεν υποστηρίζει τον ορισμό εστίασης εισόδου.
+hiddenfield_theming_unsupported				= Το THiddenField δεν υποστηρίζει θέματα.
+hiddenfield_skinid_unsupported				= Το THiddenField δεν υποστηρίζει skin στοιχείου ελέγχου.
+
+panel_defaultbutton_invalid					= Το TPanel.DefaultButton '{0}' δεν αναφέρεται σε υπάρχον στοιχείο ελέγχου κουμπιού.
+
+tablestyle_cellpadding_invalid				= Το TTableStyle.CellPadding πρέπει να είναι ακέραιος μεγαλύτερος ή ίσος του -1.
+tablestyle_cellspacing_invalid				= Το TTableStyle.CellSpacing πρέπει να είναι ακέραιος μεγαλύτερος ή ίσος του -1.
+
+sessionpagestatepersister_historysize_invalid	= Το TSessionPageStatePersister.History πρέπει να είναι ακέραιος μεγαλύτερος του 0.
+
+listitemcollection_item_invalid				= Το TListItemCollection δέχεται μόνο συμβολοσειρές ή αντικείμενα TListItem.
+
+dropdownlist_selectedindices_unsupported	= Το TDropDownList.SelectedIndices είναι μόνο για ανάγνωση.
+
+bulletedlist_autopostback_unsupported		= Το TBulletedList.AutoPostBack είναι μόνο για ανάγνωση.
+bulletedlist_selectedindex_unsupported		= Το TBulletedList.SelectedIndex είναι μόνο για ανάγνωση.
+bulletedlist_selectedindices_unsupported	= Το TBulletedList.SelectedIndices είναι μόνο για ανάγνωση.
+bulletedlist_selectedvalue_unsupported		= Το TBulletedList.SelectedValue είναι μόνο για ανάγνωση.
+
+radiobuttonlist_selectedindices_unsupported	= Το TRadioButtonList.SelectedIndices είναι μόνο για ανάγνωση.
+
+logrouter_configfile_invalid				= Το TLogRouter.ConfigFile '{0}' δεν υπάρχει.
+logrouter_routeclass_required				= Το χαρακτηριστικό class απαιτείται στη διαμόρφωση <route>.
+logrouter_routetype_required				= Η διαδρομή καταγραφής πρέπει να είναι στιγμιότυπο του TLogRoute ή παράγωγης κλάσης του.
+
+dblogroute_connectionid_invalid				= Το TDbLogRoute δεν μπορεί να δημιουργήσει τη σύνδεση βάσης δεδομένων με ID '{0}'.
+dblogroute_insert_failed					= Το TDbLogRoute δεν μπορεί να εισαγάγει την καταγραφή στον πίνακα '{0}'.
+dblogroute_bad_retain_period				= Το TDbLogRoute.RetainPeriod '{0}' δεν είναι έγκυρο
+dblogroute_table_nonexistent				= Ο πίνακας '{0}' του TDbLogRoute δεν υπάρχει και πρέπει να δημιουργηθεί.
+dblogroute_order_invalid					= Η διάταξη '{0}' του TDbLogRoute πρέπει να παραθέτει στήλες, καθεμία προαιρετικά ακολουθούμενη από ASC ή DESC.
+dblogroute_limit_invalid					= Το όριο '{0}' του TDbLogRoute πρέπει να είναι πλήθος γραμμών, 'count OFFSET offset' ή 'offset, count'.
+
+filelogroute_logpath_invalid				= Το TFileLogRoute.LogPath '{0}' πρέπει να είναι κατάλογος σε μορφή χώρου ονομάτων και εγγράψιμος από τη διεργασία του διακομιστή Web.
+filelogroute_maxfilesize_invalid			= Το TFileLogRoute.MaxFileSize πρέπει να είναι μεγαλύτερο του 0.
+filelogroute_maxlogfiles_invalid			= Το TFileLogRoute.MaxLogFiles πρέπει να είναι μεγαλύτερο του 0.
+
+emaillogroute_sentfrom_required				= Το TEmailLogRoute.SentFrom δεν μπορεί να είναι κενό.
+emaillogroute_mail_failed					= Το TEmailLogRoute απέτυχε να αποστείλει την καταγραφή στο '{0}'.
+
+syslogroute_bad_flags						= Το TSysLogRoute.SysLogFlags δεν είναι έγκυρο, '{0}'.
+syslogroute_bad_facility					= Το TSysLogRoute.Facility δεν είναι έγκυρο, '{0}'.
+
+psrlogroute_logger_required					= Το TPsrLogRoute.Logger απαιτείται.
+psrlogroute_logger_invalid					= Το TPsrLogRoute.Logger '{0}' δεν είναι ID αρθρώματος ή όνομα κλάσης Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= Το TPsrLogRoute.Logger δεν μπορεί να είναι TPsrLogger· θα κατέγραφε πίσω στον ίδιο TLogger.
+
+repeatinfo_repeatcolumns_invalid			= Το TRepeatInfo.RepeatColumns δεν πρέπει να είναι μικρότερο του 0.
+
+basevalidator_controltovalidate_invalid		= Το {0}.ControlToValidate είναι κενό ή περιέχει μη έγκυρη διαδρομή ID στοιχείου ελέγχου.
+basevalidator_validatable_required			= Το {0}.ControlToValidate πρέπει να δείχνει σε στοιχείο ελέγχου που υλοποιεί τη διεπαφή IValidatable.
+basevalidator_forcontrol_unsupported		= Το {0}.ForControl δεν υποστηρίζεται.
+
+comparevalidator_controltocompare_invalid	= Το TCompareValidator.ControlToCompare περιέχει μη έγκυρη διαδρομή ID στοιχείου ελέγχου.
+
+filevalidator_fileupload_required			= Το {0}.ControlToValidate πρέπει να δείχνει σε στοιχείο ελέγχου TFileUpload.
+
+listcontrolvalidator_invalid_control		= Το {0}.ControlToValidate περιέχει μη έγκυρη διαδρομή ID TListControl, το "{1}" είναι {2}.
+
+repeater_template_required					= Το TRepeater.{0} απαιτεί στιγμιότυπο προτύπου που υλοποιεί τη διεπαφή ITemplate.
+repeater_itemtype_unknown					= Άγνωστος τύπος στοιχείου repeater {0}.
+repeateritemcollection_item_invalid			= Το TRepeaterItemCollection δέχεται μόνο αντικείμενα που είναι στιγμιότυπα του TControl ή απογόνων κλάσεών του.
+
+datalist_template_required					= Το TDataList.{0} απαιτεί στιγμιότυπο προτύπου που υλοποιεί τη διεπαφή ITemplate.
+datalistitemcollection_datalistitem_required	= Το TDataListItemCollection δέχεται μόνο αντικείμενα TDataListItem.
+
+datagrid_template_required					= Το TDataGrid.{0} απαιτεί στιγμιότυπο προτύπου που υλοποιεί τη διεπαφή ITemplate.
+templatecolumn_template_required			= Το TTemplateColumn.{0} απαιτεί στιγμιότυπο προτύπου που υλοποιεί τη διεπαφή ITemplate.
+datagrid_currentpageindex_invalid			= Το TDataGrid.CurrentPageIndex δεν πρέπει να είναι μικρότερο του 0.
+datagrid_pagesize_invalid					= Το TDataGrid.PageSize πρέπει να είναι μεγαλύτερο του 0.
+datagrid_virtualitemcount_invalid			= Το TDataGrid.VirtualItemCount δεν πρέπει να είναι μικρότερο του 0.
+datagriditemcollection_datagriditem_required	= Το TDataGridItemCollection δέχεται μόνο αντικείμενα TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= Το TDataGridColumnCollection δέχεται μόνο αντικείμενα TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= Το TDataGridPagerStyle.PageButtonCount πρέπει να είναι μεγαλύτερο του 0.
+
+datafieldaccessor_data_invalid				= Το TDataFieldAccessor προσπαθεί να αξιολογήσει τιμή πεδίου μη έγκυρων δεδομένων. Βεβαιωθείτε ότι τα δεδομένα είναι πίνακας, TMap, TList ή αντικείμενο που περιέχει το καθορισμένο πεδίο '{0}'.
+datafieldaccessor_datafield_invalid			= Το TDataFieldAccessor προσπαθεί να αξιολογήσει τιμή δεδομένων άγνωστου πεδίου '{0}': {1}.
+
+tablerowcollection_tablerow_required		= Το TTableRowCollection δέχεται μόνο αντικείμενα TTableRow.
+tablecolumncollection_tablecolumn_required	= Το TTableColumnCollection δέχεται μόνο αντικείμενα TTableColumn.
+tablecolumngroupcollection_group_required	= Το TTableColumnGroupCollection δέχεται μόνο αντικείμενα TTableColumnGroup.
+tablecolumn_span_invalid					= Το Span του TTableColumn πρέπει να είναι 1 ή μεγαλύτερο· δόθηκε {0}.
+
+tablecellcollection_tablerow_required		= Το TTableCellCollection δέχεται μόνο αντικείμενα TTableCell.
+
+multiview_view_required						= Το TMultiView δέχεται μόνο TView ως θυγατρικό.
+multiview_activeviewindex_invalid			= Το TMultiView.ActiveViewIndex έχει μη έγκυρο δείκτη '{0}'.
+multiview_view_inexistent					= Το TMultiView δεν μπορεί να βρει την καθορισμένη προβολή.
+multiview_viewid_invalid					= Το TMultiView δεν μπορεί να βρει την προβολή '{0}' για μετάβαση.
+
+viewcollection_view_required				= Το TViewCollection δέχεται μόνο TView ως στοιχείο του.
+
+view_visible_readonly						= Το TView.Visible είναι μόνο για ανάγνωση. Χρησιμοποιήστε το TView.Active για εναλλαγή της ορατότητάς του.
+
+wizard_step_invalid							= Το βήμα προς ενεργοποίηση δεν βρέθηκε στη συλλογή βημάτων του οδηγού.
+wizard_command_invalid						= Μη έγκυρη εντολή πλοήγησης οδηγού '{0}'.
+
+table_tablesection_outoforder				= Οι ενότητες του πίνακα TTable πρέπει να είναι με τη σειρά: Header, Body και Footer.
+
+completewizardstep_steptype_readonly		= Το TCompleteWizardStep.StepType είναι μόνο για ανάγνωση.
+
+wizardstepcollection_wizardstep_required	= Το TWizardStepCollection δέχεται μόνο αντικείμενα TWizardStep ή παράγωγων κλάσεών του.
+
+texthighlighter_stylesheet_invalid			= Δεν είναι δυνατή η εύρεση του αρχείου φύλλου στυλ για το TTextHighlighter.
+
+hotspotcollection_hotspot_required			= Το THotSpotCollection δέχεται μόνο στιγμιότυπα του THotSpot ή παράγωγων κλάσεών του.
+
+htmlarea_textmode_readonly					= Το THtmlArea.TextMode είναι μόνο για ανάγνωση.
+htmlarea_tarfile_invalid					= Το THtmlArea δεν μπορεί να εντοπίσει το αρχείο tar του TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= Το TParameterModule.ParameterFile δεν μπορεί να αλλάξει επειδή το άρθρωμα έχει ήδη αρχικοποιηθεί.
+parametermodule_parameterfile_invalid		= Το TParameterModule.ParameterFile '{0}' δεν είναι έγκυρο. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και ότι η επέκταση του αρχείου είναι '.xml' ή '.php'.
+parametermodule_parameterid_required		= Το στοιχείο Parameter πρέπει να έχει χαρακτηριστικό 'id'.
+
+datagridcolumn_id_invalid					= Το {0}.ID '{1}' δεν είναι έγκυρο. Επιτρέπονται μόνο αλφαριθμητικοί χαρακτήρες και κάτω παύλα. Ο πρώτος χαρακτήρας πρέπει να είναι γράμμα ή κάτω παύλα.
+datagridcolumn_expression_invalid			= Το {0} αξιολογεί μη έγκυρη έκφραση '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= Το TOutputCache.CacheModuleID έχει οριστεί σε μη έγκυρο ID αρθρώματος προσωρινής μνήμης {0}. Είτε το άρθρωμα δεν υπάρχει είτε δεν υλοποιεί τη διεπαφή ICache.
+outputcache_duration_invalid				= Το {0}.Duration πρέπει να είναι ακέραιος όχι μικρότερος του 0.
+
+stack_data_not_iterable						= Το TStack μπορεί να λάβει δεδομένα μόνο από πίνακα ή αντικείμενο Traversable.
+stack_empty									= Το TStack είναι κενό.
+
+queue_data_not_iterable						= Το TQueue μπορεί να λάβει δεδομένα μόνο από πίνακα ή αντικείμενο Traversable.
+queue_empty									= Το TQueue είναι κενό.
+
+pager_pagebuttoncount_invalid				= Το TPager.PageButtonCount πρέπει να είναι ακέραιος όχι μικρότερος του 1.
+pager_currentpageindex_invalid				= Το TPager.CurrentPageIndex είναι εκτός ορίων.
+pager_pagecount_invalid						= Το TPager.PageCount δεν μπορεί να είναι μικρότερο του 0.
+pager_controltopaginate_invalid				= Το TPager.ControlToPaginate {0} πρέπει να είναι έγκυρη διαδρομή ID που δείχνει σε στοιχείο ελέγχου παράγωγο του TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= Το {0}.PageSize πρέπει να είναι ακέραιος όχι μικρότερος του 1.
+databoundcontrol_virtualitemcount_invalid	= Το {0}.VirtualItemCount πρέπει να είναι ακέραιος όχι μικρότερος του 0.
+databoundcontrol_currentpageindex_invalid	= Το {0}.CurrentPageIndex είναι εκτός ορίων.
+databoundcontrol_datasource_invalid			= Το {0}.DataSource δεν είναι έγκυρο.
+databoundcontrol_datasourceid_inexistent	= Το DataSourceID '{0}' δεν αναφέρεται σε υπάρχον στοιχείο ελέγχου.
+databoundcontrol_datasourceid_invalid		= Το DataSourceID '{0}' πρέπει να αναφέρεται σε στοιχείο ελέγχου που υλοποιεί το IDataSource.
+databoundcontrol_datamember_invalid			= Το DataMember '{0}' δεν ονομάζει προβολή της προέλευσης δεδομένων.
+
+datasourcecontrol_focus_unsupported			= Το {0} δεν υποστηρίζει Focus.
+datasourcecontrol_enabletheming_unsupported	= Το {0} δεν υποστηρίζει EnableTheming.
+datasourcecontrol_skinid_unsupported		= Το {0} δεν υποστηρίζει SkinID.
+datasourcecontrol_visible_unsupported		= Το {0} δεν υποστηρίζει Visible.
+datasourceview_insert_unsupported			= Το {0} δεν υποστηρίζει εισαγωγή.
+datasourceview_update_unsupported			= Το {0} δεν υποστηρίζει ενημέρωση.
+datasourceview_delete_unsupported			= Το {0} δεν υποστηρίζει διαγραφή.
+readonlydatasource_datasource_invalid		= Το TReadOnlyDataSource απαιτεί προέλευση δεδομένων πίνακα, IDataSource ή Traversable.
+readonlydatasourceview_datasource_invalid	= Το TReadOnlyDataSourceView απαιτεί προέλευση δεδομένων null, πίνακα ή Traversable.
+
+clientscript_invalid_file_position			= Μη έγκυρη θέση αρχείου '{1}' για το στοιχείο ελέγχου TClientScript '{0}', πρέπει να είναι 'Head', 'Here' ή 'Begin'.
+clientscript_invalid_package_path			= Μη έγκυρο PackagePath '{0}' για το στοιχείο ελέγχου TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= Το '{0}' δεν υποστηρίζει AutoPostBack.
+globalization_cache_path_failed				= Δεν είναι δυνατή η δημιουργία της διαδρομής προσωρινής μνήμης μηνυμάτων μετάφρασης '{0}'. Βεβαιωθείτε ότι ο γονικός κατάλογος υπάρχει και είναι εγγράψιμος από τη διεργασία Web.
+globalization_source_path_failed			= Δεν είναι δυνατή η δημιουργία της διαδρομής μηνυμάτων μετάφρασης '{0}'. Βεβαιωθείτε ότι ο γονικός κατάλογος υπάρχει και είναι εγγράψιμος από τη διεργασία Web.
+messagesource_connectionid_invalid			= Το MessageSource_Database.source '{0}' δεν δείχνει σε έγκυρο άρθρωμα TDataSourceConfig.
+messagesource_connectionid_required			= Το ConnectionID στο MessageSource_Database.source απαιτείται.
+
+callback_not_support_no_priority_state_update	= Η αίτηση επανάκλησης δεν υποστηρίζει ενημέρωση κατάστασης σελίδας χωρίς προτεραιότητα.
+callback_invalid_callback_options			= Το '{1}' δεν είναι έγκυρο στοιχείο ελέγχου TCallbackOptions για το στοιχείο ελέγχου επανάκλησης '{0}'.
+callback_invalid_clientside_options			= Η ιδιότητα ClientSide της επανάκλησης πρέπει να είναι είτε συμβολοσειρά που είναι το ID ενός στοιχείου ελέγχου TCallbackOptions είτε στιγμιότυπο TCallbackClientSideOptions.
+callback_invalid_handler					= Μη έγκυρος χειριστής επανάκλησης, το στοιχείο ελέγχου {0} πρέπει να υλοποιεί το ICallbackEventHandler.
+callback_invalid_target						= Μη έγκυρος στόχος επανάκλησης, δεν υπάρχει στοιχείο ελέγχου με ID {0}.
+
+callback_interval_be_positive				= Το Interval του TCallbackTimer "{0}" πρέπει να είναι αυστηρά μεγαλύτερο από μηδέν δευτερόλεπτα.
+callback_decay_be_not_negative				= Ο ρυθμός απόσβεσης (Decay) του TCallbackTimer "{0}" δεν πρέπει να είναι αρνητικός.
+
+callback_no_autopostback					= Το στοιχείο ελέγχου "{0}" δεν μπορεί να ενεργοποιήσει το AutoPostBack.
+
+xmltransform_xslextension_required			= Το TXmlTransform απαιτεί την επέκταση XSL της PHP.
+xmltransform_transformpath_invalid			= Το TXmlTransform.TransformPath '{0}' δεν είναι έγκυρο.
+xmltransform_documentpath_invalid			= Το TXmlTransform.DocumentPath '{0}' δεν είναι έγκυρο.
+xmltransform_transform_required				= Είτε η ιδιότητα TransformContent είτε η TransformPath πρέπει να οριστεί για το TXmlTransform.
+
+ttriggeredcallback_invalid_controlid		= Η ιδιότητα ControlID του '{0}' δεν πρέπει να είναι κενή.
+tactivecustomvalidator_clientfunction_unsupported	= Το {0} δεν υποστηρίζει συνάρτηση επικύρωσης στην πλευρά του client.
+
+dbproperties_connectionid_invalid			= Το {1}.ConnectionID '{0}' δεν προσδιορίζει έγκυρο άρθρωμα TDataSourceConfig.
+dbproperties_property_required				= Το {1}.{0} είναι απαιτούμενη ιδιότητα.
+dbproperties_identifier_invalid				= Το {1}.{0} '{2}' δεν είναι έγκυρο αναγνωριστικό SQL.
+
+dbconnection_open_failed					= Το TDbConnection απέτυχε να εγκαθιδρύσει σύνδεση με τη βάση δεδομένων: {0}
+dbconnection_connection_inactive			= Το TDbConnection είναι ανενεργό.
+dbconnection_unsupported_driver_charset		= Ο οδηγός βάσης δεδομένων '{0}' δεν υποστηρίζει τον ορισμό συνόλου χαρακτήρων.
+dbconnection_charset_unchangeable			= Ο οδηγός βάσης δεδομένων '{0}' δεν μπορεί να αλλάξει το σύνολο χαρακτήρων μετά το άνοιγμα. Το σύνολο χαρακτήρων είναι παράμετρος του DSN.
+
+dbcommand_prepare_failed					= Το TDbCommand απέτυχε να προετοιμάσει την εντολή SQL "{1}": {0}
+dbcommand_execute_failed					= Το TDbCommand απέτυχε να εκτελέσει την εντολή SQL "{1}": {0}
+dbcommand_query_failed						= Το TDbCommand απέτυχε να εκτελέσει το ερώτημα SQL "{1}": {0}
+dbcommand_column_empty						= Το TDbCommand επέστρεψε κενό αποτέλεσμα και δεν μπόρεσε να λάβει τη βαθμωτή τιμή.
+dbdatareader_rewind_invalid					= Το TDbDataReader είναι ροή μόνο προς τα εμπρός. Μπορεί να διασχιστεί μόνο μία φορά.
+dbtransaction_transaction_inactive			= Το TDbTransaction είναι ανενεργό.
+
+dbcommandbuilder_value_must_not_be_null		= Η ιδιότητα {0} δεν πρέπει να είναι null, όπως ορίζεται από τη στήλη '{2}' στον πίνακα '{1}'.
+
+dbcommon_invalid_table_name					= Ο πίνακας βάσης δεδομένων '{0}' δεν βρέθηκε. Μήνυμα σφάλματος: {1}.
+dbcommon_invalid_identifier_name			= Μη έγκυρο όνομα αναγνωριστικού βάσης δεδομένων '{0}', δείτε το {1} για λεπτομέρειες.
+dbtableinfo_invalid_column_name				= Μη έγκυρο όνομα στήλης '{0}' για τον πίνακα βάσης δεδομένων '{1}'.
+dbmetadata_invalid_table_view				= Μη έγκυρο όνομα πίνακα/προβολής '{0}', ή ο πίνακας/προβολή '{0}' δεν περιέχει προσβάσιμους ορισμούς στηλών/πεδίων.
+dbmetadata_requires_php_version				= Απαιτείται PHP έκδοσης {1} ή νεότερης για τη χρήση της βάσης δεδομένων {0}.
+
+dbtablegateway_invalid_criteria				= Μη έγκυρο αντικείμενο κριτηρίων, πρέπει να είναι συμβολοσειρά ή στιγμιότυπο TSqlCriteria.
+dbtablegateway_no_primary_key_found			= Ο πίνακας '{0}' δεν περιέχει πεδία πρωτεύοντος κλειδιού.
+dbtablegateway_missing_pk_values			= Λείπουν τιμές πρωτεύοντος κλειδιού στη σύνθεση του IN(key1, key2, ...) για τον πίνακα '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Ασυμφωνία πλήθους τιμών σύνθετου κλειδιού στη σύνθεση του IN( (key1, key2, ..), (key3, key4, ..)) για τον πίνακα '{0}'.
+dbtablegateway_mismatch_args_exception		= Η μέθοδος εύρεσης '{0}' του TTableGateway αναμένει {1} παραμέτρους αλλά βρέθηκαν μόνο {2} παράμετροι.
+dbtablegateway_mismatch_column_name			= Στη δυναμική μέθοδο __call() '{0}' δεν βρέθηκαν αντίστοιχες στήλες· οι έγκυρες στήλες για τον πίνακα '{2}' είναι '{1}'.
+dbtablegateway_invalid_table_info			= Ο πίνακας πρέπει να είναι συμβολοσειρά ή στιγμιότυπο TDbTableInfo.
+
+resource_not_a_resource						= Αναμενόταν ανοικτός πόρος PHP αλλά δόθηκε '{0}'.
+processfork_failed							= Δεν είναι δυνατή η διακλάδωση (fork) της διεργασίας.
+liveprocessfork_readonly_receiver			= Τα δεδομένα του TLiveProcessFork είναι μόνο για ανάγνωση στην πλευρά λήψης· μόνο η πλευρά αποστολής τα τροποποιεί.
+stream_open_failed							= Δεν είναι δυνατό το άνοιγμα της ροής '{0}' με λειτουργία '{1}': {2}
+binarystream_unexpected_eof					= Μη αναμενόμενο τέλος ροής: χρειάζονταν {0} byte αλλά διαβάστηκαν μόνο {1}.
+binarystream_short_write					= Ελλιπής εγγραφή: επρόκειτο να γραφτούν {0} byte αλλά έγιναν δεκτά μόνο {1}.
+streamresourcewrapper_unusable_stream		= Η ροή δεν είναι ούτε αναγνώσιμη ούτε εγγράψιμη και δεν μπορεί να εκτεθεί ως πόρος.
+streamfilter_already_registered				= Το φίλτρο ροής '{0}' είναι ήδη καταχωρισμένο.
+streamfilter_registration_failed			= Δεν είναι δυνατή η καταχώριση του φίλτρου ροής '{0}' για την κλάση '{1}'.
+streamwrapper_already_registered			= Το πρωτόκολλο περιτυλίγματος ροής '{0}' είναι ήδη καταχωρισμένο.
+streamwrapper_registration_failed			= Δεν είναι δυνατή η καταχώριση του πρωτοκόλλου περιτυλίγματος ροής '{0}' για την κλάση '{1}'.
+reservedspace_invalid						= Ένας δεσμευμένος χώρος απαιτεί μη αρνητική μετατόπιση και θετικό μήκος· δόθηκαν μετατόπιση '{0}' και μήκος '{1}'.
+reservedspace_access_denied					= Η λειτουργία επικαλύπτει τον δεσμευμένο χώρο στη μετατόπιση '{0}'.
+multipartstream_element_invalid				= Ένα στοιχείο TMultipartStream απαιτεί 'name' και 'contents'.
+builtincompressor_extension_required		= Ο συμπιεστής '{0}' απαιτεί την επέκταση PHP '{1}'.
+builtincompressor_compress_failed			= Ο συμπιεστής '{0}' απέτυχε να συμπιέσει τα δεδομένα.
+builtincompressor_decompress_failed			= Ο συμπιεστής '{0}' απέτυχε να αποσυμπιέσει τα δεδομένα· μπορεί να είναι κατεστραμμένα ή σε άλλη μορφή.
+compression_method_unknown					= Η μέθοδος συμπίεσης '{0}' είναι άγνωστη ή η επέκτασή της δεν είναι διαθέσιμη.
+compression_none_available					= Δεν υπάρχει διαθέσιμη μέθοδος συμπίεσης σε αυτήν την εγκατάσταση PHP.
+compressionconfig_method_unknown			= Το TCompressionConfig.Method '{0}' δεν είναι γνωστή κωδικοποίηση περιεχομένου. Οι γνωστές κωδικοποιήσεις είναι: {1}.
+compression_xz_unsupported					= Το xz/LZMA δεν έχει επέκταση PHP· εγκαταστήστε το belisoful/prado-compression για κωδικοποιητή xz εγγενή ή μέσω CLI.
+clicompressor_command_missing				= Ο συμπιεστής '{0}' απαιτεί μία από αυτές τις εντολές συστήματος στο PATH: '{1}'.
+clicompressor_process_failed				= Ο συμπιεστής '{0}' δεν μπόρεσε να εκκινήσει την εντολή '{1}'.
+clicompressor_command_failed				= Η εντολή '{1}' του συμπιεστή '{0}' τερμάτισε με κωδικό {2}: {3}
+
+socketservermodule_endpoint_required		= Το TSocketServerModule απαιτεί Endpoint ή θετικό Port για να συνθέσει ένα.
+socketservermodule_serverclass_invalid		= Το ServerClass '{0}' του TSocketServerModule δεν είναι έγκυρο. Πρέπει να είναι TSocketServer ή υποκλάση του.
+socketservermodule_scheme_not_stream		= Το TSocketServerModule δεν μπορεί να δεχθεί συνδέσεις στο σχήμα χωρίς σύνδεση '{0}'. Χρησιμοποιήστε σχήμα ροής όπως tcp, tls, ssl ή unix.
+
+bitreader_invalid_bits						= Δεν είναι δυνατή η ανάγνωση {0} bit· το πλήθος πρέπει να είναι μεταξύ 0 και του πλάτους ακεραίου της πλατφόρμας.
+bitreader_64bit_php_required				= Η ανάγνωση {0} bit απαιτεί έκδοση PHP 64-bit.
+bitreader_invalid_float_bits				= Δεν είναι δυνατή η ανάγνωση αριθμού κινητής υποδιαστολής {0} bit· υποστηρίζονται μόνο 8, 16, 32 ή 64 bit.
+bitwriter_invalid_bits						= Δεν είναι δυνατή η εγγραφή {0} bit· το πλήθος πρέπει να είναι μεταξύ 0 και του πλάτους ακεραίου της πλατφόρμας.
+bitwriter_64bit_php_required				= Η εγγραφή {0} bit απαιτεί έκδοση PHP 64-bit.
+bitwriter_invalid_float_bits				= Δεν είναι δυνατή η εγγραφή αριθμού κινητής υποδιαστολής {0} bit· υποστηρίζονται μόνο 8, 16, 32 ή 64 bit.
+
+soapservice_configfile_invalid				= Το TSoapService.ConfigFile '{0}' δεν υπάρχει. Σημείωση: πρέπει να καθορίζεται σε μορφή χώρου ονομάτων και η επέκταση του αρχείου πρέπει να είναι '.xml' ή '.php'.
+soapservice_server_invalid					= Η κλάση διακομιστή SOAP '{0}' του TSoapService δεν είναι έγκυρη. Πρέπει να είναι TSoapServer ή υποκλάση του.
+soapservice_serverid_required				= Το στοιχείο <soap> πρέπει να έχει χαρακτηριστικό 'id'.
+soapservice_serverid_duplicated				= Το ID διακομιστή SOAP '{0}' είναι διπλότυπο.
+soapserver_id_invalid						= Μη έγκυρο ID διακομιστή SOAP '{0}'. Δεν πρέπει να τελειώνει σε '.wsdl'.
+soapserver_provider_invalid					= Η κλάση παρόχου '{0}' του TSoapServer δεν μπόρεσε να επιλυθεί.
+soapserver_version_invalid					= Μη έγκυρη έκδοση SOAP '{0}'. Πρέπει να είναι είτε '1.1' είτε '1.2'.
+soapserver_wsdlstyle_invalid				= Μη έγκυρο στυλ WSDL '{0}'. Πρέπει να είναι είτε 'rpc' είτε 'document'.
+soapserver_wsdlstyle_unsupported			= Το στυλ WSDL '{0}' χρειάζεται pradosoft/prado-wsdlgenerator 1.2 ή νεότερο. Ο εγκατεστημένος δημιουργός παράγει μόνο 'rpc'.
+
+jsonservice_id_required						= Το TJsonService απαιτεί χαρακτηριστικό 'id' στα στοιχεία JSON του.
+jsonservice_response_type_invalid			= Η κλάση JSON {0} δεν είναι έγκυρη. Πρέπει να είναι TJsonResponse ή να επεκτείνει το TJsonResponse.
+jsonservice_class_required					= Το TJsonService απαιτεί χαρακτηριστικό 'class' στα στοιχεία JSON του.
+
+dbusermanager_userclass_required			= Το TDbUserManager.UserClass απαιτείται.
+dbusermanager_userclass_invalid				= Το TDbUserManager.UserClass '{0}' δεν είναι έγκυρη κλάση χρήστη. Η κλάση πρέπει να επεκτείνει το TDbUser.
+dbusermanager_connectionid_invalid			= Το TDbUserManager.ConnectionID '{0}' δεν δείχνει σε έγκυρο άρθρωμα TDataSourceConfig.
+dbusermanager_connectionid_required			= Το TDbUserManager.ConnectionID απαιτείται.
+
+dbpluginmodule_connectionid_invalid			= Το TDbPluginModule.ConnectionID '{0}' δεν δείχνει σε έγκυρο άρθρωμα TDataSourceConfig.
+dbpluginmodule_connectionid_required		= Το TDbPluginModule.ConnectionID απαιτείται.
+
+feedservice_id_required						= Το TFeedService απαιτεί χαρακτηριστικό 'id' στα στοιχεία feed του.
+feedservice_feedtype_invalid				= Η κλάση feed '{0}' πρέπει να υλοποιεί τη διεπαφή IFeedContentProvider.
+feedservice_class_required					= Το TFeedService απαιτεί χαρακτηριστικό 'class' στα στοιχεία feed του.
+
+tabviewcollection_tabview_required			= Το TTabPanel δέχεται μόνο TTabView ως θυγατρικό.
+tabpanel_activeviewid_invalid				= Το TTabPanel.ActiveViewID έχει μη έγκυρο ID '{0}'.
+tabpanel_activeviewindex_invalid			= Το TTabPanel.ActiveViewIndex έχει μη έγκυρο δείκτη '{0}'.
+tabpanel_view_inexistent					= Το TTabPanel δεν μπορεί να βρει την καθορισμένη προβολή.
+
+cachesession_cachemoduleid_required			= Το TCacheHttpSession.CacheModuleID απαιτείται.
+cachesession_cachemodule_inexistent			= Το TCacheHttpSession.CacheModuleID '{0}' δείχνει σε ανύπαρκτο άρθρωμα.
+cachesession_cachemodule_invalid			= Το TCacheHttpSession.CacheModuleID '{0}' δείχνει σε άρθρωμα που δεν υλοποιεί τη διεπαφή ICache.
+
+urlmapping_urlmappingpattern_required		= Το TUrlMapping μπορεί να περιέχει μόνο TUrlMappingPattern ή θυγατρικές του κλάσεις.
+urlmapping_global_required					= Το TUrlMapping πρέπει να διαμορφωθεί ως καθολικό άρθρωμα.
+urlmapping_configfile_inexistent			= Το TUrlMapping.ConfigFile '{0}' δεν είναι αρχείο.
+urlmapping_configfile_invalid				= Το TUrlMapping.ConfigFile '{0}' πρέπει να δείχνει σε αρχείο XML σε μορφή χώρου ονομάτων.
+
+urlmappingpattern_serviceparameter_required	= Το TUrlMappingPattern.ServiceParameter απαιτείται για το μοτίβο '{0}'.
+
+keyboard_forcontrol_required				= Το TKeyboard.ForControl δεν μπορεί να είναι κενό.
+keyboard_forcontrol_invalid					= Το TKeyboard.ForControl '{0}' δεν είναι έγκυρο.
+
+captcha_tokenimagetheme_invalid				= Το TCaptcha.TokenImageTheme πρέπει να είναι ακέραιος μεταξύ {0} και {1}.
+captcha_tokenfontsize_invalid				= Το TCaptcha.TokenFontSize πρέπει να είναι ακέραιος μεταξύ {0} και {1}.
+captcha_mintokenlength_invalid				= Το TCaptcha.MinTokenLength πρέπει να είναι ακέραιος μεταξύ {0} και {1}.
+captcha_maxtokenlength_invalid				= Το TCaptcha.MaxTokenLength πρέπει να είναι ακέραιος μεταξύ {0} και {1}.
+captcha_tokenalphabet_invalid				= Το TCaptcha.TokenAlphabet πρέπει να είναι συμβολοσειρά τουλάχιστον 2 χαρακτήρων.
+captcha_privatekey_unknown					= Το TCaptcha.PrivateKey είναι άγνωστο. Βεβαιωθείτε ότι ο κατάλογος assets είναι εγγράψιμος από τη διεργασία του διακομιστή Web.
+captcha_gd2_required						= Το TCaptcha απαιτεί την επέκταση PHP GD2.
+captcha_imagettftext_required				= Το TCaptcha απαιτεί την επέκταση PHP GD2 με υποστήριξη γραμματοσειρών TrueType.
+captcha_imagepng_required					= Το TCaptcha απαιτεί την επέκταση PHP GD2 με υποστήριξη της μορφής εικόνας PNG.
+
+captchavalidator_captchacontrol_required	= Το TCaptchaValidator.CaptchaControl πρέπει να δείχνει σε υπάρχον στοιχείο ελέγχου TCaptcha.
+captchavalidator_captchacontrol_inexistent	= Το TCaptchaValidator.CaptchaControl {0} πρέπει να δείχνει σε υπάρχον στοιχείο ελέγχου TCaptcha.
+captchavalidator_captchacontrol_invalid		= Το TCaptchaValidator.CaptchaControl {0} πρέπει να δείχνει σε υπάρχον στοιχείο ελέγχου TCaptcha.
+
+recaptcha_privatekey_unknown				= Το TReCaptcha.PrivateKey είναι άγνωστο. Για να χρησιμοποιήσετε το reCAPTCHA πρέπει να αποκτήσετε κλειδί API.
+recaptcha_publickey_unknown					= Το TReCaptcha.PublicKey είναι άγνωστο. Για να χρησιμοποιήσετε το reCAPTCHA πρέπει να αποκτήσετε κλειδί API.
+
+recaptchavalidator_captchacontrol_invalid	= Το TReCaptchaValidator.ControlToValidate πρέπει να είναι στιγμιότυπο TReCaptcha.
+
+formguard_honeypotname_invalid				= Το TFormGuard.HoneypotName '{0}' πρέπει να περιέχει μόνο γράμματα, ψηφία, '_' και '-'.
+proofofwork_complexity_invalid				= Το TProofOfWork.Complexity πρέπει να είναι ακέραιος μεταξύ {0} και {1}.
+proofofworkvalidator_control_invalid		= Το TProofOfWorkValidator.ControlToValidate '{0}' πρέπει να δείχνει σε στοιχείο ελέγχου TProofOfWork.
+
+slider_handle_class_invalid					= Το TSlider.HandleClass '{0}' δεν είναι έγκυρη κλάση χρήστη. Η κλάση πρέπει να επεκτείνει το TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= Το TCachePageStatePersister.CacheModuleID '{0}' δεν δείχνει σε έγκυρο άρθρωμα προσωρινής μνήμης.
+cachepagestatepersister_cache_required		= Το TCachePageStatePersister απαιτεί να έχει φορτωθεί άρθρωμα προσωρινής μνήμης.
+cachemoduleid_invalid						= Το {0}.CacheModuleID '{1}' δεν δείχνει σε έγκυρο άρθρωμα προσωρινής μνήμης.
+cachemoduleid_cache_required				= Το {0} απαιτεί άρθρωμα προσωρινής μνήμης. Διαμορφώστε μια πρωτεύουσα προσωρινή μνήμη ή ορίστε το {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= Το TCachePageStatePersister.Timeout πρέπει να είναι ακέραιος όχι μικρότερος του μηδενός.
+
+conditional_condition_invalid				= Το TConditional.Condition '{0}' δεν είναι έγκυρη έκφραση PHP: {1}
+
+dbparametermodule_table_nonexistent			= Το TDbParameterModule δεν μπορεί να βρει τον πίνακα βάσης δεδομένων '{0}' για την αποθήκευση δεδομένων παραμέτρων.
+dbparametermodule_get_no_blank_key			= Το TDbParameterModule δεν μπορεί να λάβει κενό κλειδί.
+dbparametermodule_set_no_blank_key			= Το TDbParameterModule δεν μπορεί να ορίσει τιμή σε κενό κλειδί.
+dbparametermodule_connectionid_invalid		= Το TDbParameterModule.ConnectionID '{0}' δεν δείχνει σε έγκυρο άρθρωμα TDataSourceConfig.
+dbparametermodule_serializer_not_callable	= Ο Serializer του TDbParameterModule δεν είναι callable.
+
+clockawaretrait_invalid_clock_class			= Η κλάση ρολογιού '{0}' πρέπει να υλοποιεί το Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= Το TUTCClock είναι σταθερά σε UTC· χρησιμοποιήστε το TTimezoneClock για άλλη ζώνη ώρας.
+
+processcrontask_no_command					= Το TProcessCronTask '{0}' δεν έχει Command για εκτέλεση.
+processcrontask_launch_failed				= Το TProcessCronTask απέτυχε να εκκινήσει τη διεργασία: '{0}'.
+processcrontask_write_failed				= Το TProcessCronTask δεν μπόρεσε να γράψει το αρχείο pid '{0}'.
+closurecrontask_no_closure					= Το TClosureCronTask '{0}' δεν έχει closure για εκτέλεση.
+closurecrontask_closure_required			= Το TClosureCronTask απαιτεί Closure.
+closurecrontask_invalid_securitymanager		= Το SecurityManagerID '{0}' του TClosureCronTask δεν είναι TSecurityManager.
+closurecrontask_decrypt_failed				= Το TClosureCronTask '{0}' δεν μπόρεσε να αποκρυπτογραφήσει το φορτίο closure του.
+cronmethodtask_no_module					= Το TCronMethodTask δεν μπόρεσε να βρει το άρθρωμα '{0}'.
+cron_usermanager_nonexistent				= Το TCronModule δεν μπόρεσε να βρει τον UserManager με όνομα '{0}'.
+cron_usermanager_invalid					= Ο UserManager '{0}' του TCronModule δεν είναι TUserManager.
+cron_task_as_array_required					= Η εργασία διαμόρφωσης του TCronModule δεν ήταν πίνακας.
+cron_duplicate_task_name					= Το TCronModule πρέπει να έχει εργασίες με μοναδικά ονόματα.
+cron_schedule_required						= Η εργασία Cron πρέπει να έχει χρονοδιάγραμμα.
+cron_task_required							= Η εργασία Cron πρέπει να έχει task.
+cron_not_a_crontask							= Η εργασία Cron '{0}' δεν είναι TCronTask.
+cron_additional_tasks_invalid				= Το '{0}' δεν είναι έγκυρη πρόσθετη εργασία cron.
+crontask_no_module							= Το TCronTask δεν μπόρεσε να βρει το άρθρωμα '{0}'.
+
+dbcronclean_moduleid_is_null				= Το TDbCronCleanLogTask δεν μπόρεσε να βρει το καθορισμένο άρθρωμα '{0}'.
+dbcron_invalid_name							= Το όνομα εργασίας '{0}' του TDbCronManager δεν είναι έγκυρο.
+dbcron_conflicting_task_names				= Οι εργασίες cron της διαμόρφωσης συγκρούονται με τις εργασίες cron της βάσης δεδομένων '{0}'.
+dbcron_table_nonexistent					= Ο πίνακας βάσης δεδομένων του TDbCronManager δεν υπάρχει.
+dbcron_connectionid_invalid					= Το TDbCronManager.ConnectionID '{0}' δεν είναι TDataSourceConfig.
+
+timescheduler_invalid_string				= Το TTimeScheduler δεν μπόρεσε να αναλύσει το στοιχείο χρονοδιαγράμματος '{0}'
+
+rational_bad_offset							= Το "{0}" δεν είναι έγκυρος προσπελαστής ιδιότητας του TRational.
+
+bithelper_bad_fp_format						= Το TBitHelper δεν μπορεί να λειτουργήσει με '{0}' bit εκθέτη, '{1}' bit mantissa, '{2}' πόλωση εκθέτη, σε περιβάλλον PHP {3} bit.
+bithelper_invalid_color_in					= Το TBitHelper πρέπει να έχει τουλάχιστον ένα In Bit. Δόθηκε '{0}'.
+bithelper_invalid_color_out					= Το TBitHelper πρέπει να έχει τουλάχιστον ένα Out Bit. Δόθηκε '{0}'.
+bithelper_bad_mirror_bits					= Το TBitHelper δεν μπορεί να κατοπτρίσει '{0}' bit σε περιβάλλον PHP {1} bit.
+
+ar_data_invalid								= Το {0}.copyFrom() δέχεται μόνο αντικείμενο ή πίνακα ως παράμετρο.
+ar_save_invalid								= Το στιγμιότυπο {0} δεν μπορεί να αποθηκευτεί επειδή είτε έχει διαγραφεί είτε είναι σε άγνωστη κατάσταση.
+ar_delete_invalid							= Το στιγμιότυπο {0} δεν μπορεί να διαγραφεί επειδή είτε είναι νέα εγγραφή είτε εγγραφή που έχει ήδη διαγραφεί.
+
+dbmetadata_invalid_database_driver			= Ο οδηγός '{0}' δεν υποστηρίζεται. Εγκαταστήστε τον οδηγό PRADO του, αν είναι διαθέσιμος.
+dbmetadata_not_meta_data					= Αναμενόταν κλάση οδηγού {1} αλλά δόθηκε η κλάση {0}.
+dbmetadata_tableinfo_class_invalid			= Η κλάση πληροφοριών πίνακα '{0}' του TDbMetaData είναι χώρος ονομάτων καταλόγου, όχι κλάση.
+
+datasource_dbconnection_invalid				= Το TDataSourceConfig.DbConnection '{0}' δεν είναι έγκυρο. Βεβαιωθείτε ότι δείχνει σε έγκυρο άρθρωμα εφαρμογής.
+distributeddatasource_child_required		= Το {0} απαιτεί τουλάχιστον ένα θυγατρικό στοιχείο '{1}'.
+masterslavedbconnection_connection_exists	= Η σύνδεση {0}.{1} υπάρχει ήδη.
+masterslavedbconnection_interface_required	= Το {0}.{1} απαιτεί στιγμιότυπο που υλοποιεί τη διεπαφή {2}.
+slavedbconnection_requires_master			= Το {0} απαιτεί ένα {1}.
+
+response_status_reason_missing				= Το HTTP 1.1 χρειάζεται αιτιολογία για εκτεταμένους κωδικούς κατάστασης
+response_status_reason_badchars				= Για κεφαλίδα HTTP 1.1, το διακριτικό status-reason δεν πρέπει να περιέχει τα διακριτικά CR ή LF
+
+activefileupload_temppath_invalid			= Η διαδρομή TempPath '{0}' του TActiveFileUpload δεν υπάρχει ή δεν είναι εγγράψιμη από τη διεργασία του διακομιστή Web.
+
+tactivetablecell_control_outoftable			= Το {0} '{1}' πρέπει να περικλείεται σε στοιχείο ελέγχου TTableRow.
+tactivetablecell_control_notincollection	= Το {0} '{1}' δεν είναι μέλος της TTableCellCollection του γονικού στοιχείου ελέγχου TTableRow.
+
+tactivetablerow_control_outoftable			= Το {0} '{1}' πρέπει να περικλείεται σε στοιχείο ελέγχου TTable.
+tactivetablerow_control_notincollection		= Το {0} '{1}' δεν είναι μέλος της TTableRowCollection του γονικού στοιχείου ελέγχου TTable.
+
+juioptions_option_invalid					= Το '{1}' δεν είναι έγκυρη επιλογή για το στοιχείο ελέγχου '{0}'.
+
+ratinglist_invalid_caption_id				= Το '{0}' δεν είναι έγκυρο στοιχείο ελέγχου λεζάντας για το TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= Το TAccordion.ActiveViewID έχει μη έγκυρο ID '{0}'.
+accordion_activeviewindex_invalid			= Το TAccordion.ActiveViewIndex έχει μη έγκυρο δείκτη '{0}'.
+accordion_view_inexistent					= Το TAccordion δεν μπορεί να βρει την καθορισμένη προβολή.
+
+dot_bad_size								= Το Size του TDot πρέπει να είναι θετικός ακέραιος αλλά είναι '{0}'
+dot_bad_border_width						= Το FlatBorderWidth του TDot πρέπει να είναι αριθμός με προαιρετικό % ή μονάδα μήκους CSS αλλά είναι '{0}'
+
+juidatepicker_settextmode_unsupported		= Το TextMode του TJuiDatePicker δεν μπορεί να αλλάξει.
+
+control_adapter_not_active					= Κλήθηκε ιδιότητα του BaseActiveControl σε μη ενεργό στοιχείο ελέγχου.
+
+figcaption_requires_figure_parent			= Το TFigureCaption '{0}' πρέπει να είναι άμεσο θυγατρικό στοιχείου ελέγχου TFigure.
+summary_requires_details_parent				= Το TSummary '{0}' πρέπει να είναι άμεσο θυγατρικό στοιχείου ελέγχου TDetails.
+
+gravatar_bad_default						= Η τιμή '{0}' της ιδιότητας DefaultImageStyle του TGravatar δεν υποστηρίζεται
+gravatar_bad_size							= Το Size του TGravatar δεν είναι μεταξύ [1 .. 512] αλλά είναι '{0}'
+
+progress_value_invalid						= Το Value του TProgress πρέπει να είναι 0 ή μεγαλύτερο· δόθηκε {0}.
+progress_max_invalid						= Το Max του TProgress πρέπει να είναι μεγαλύτερο του 0· δόθηκε {0}.
+
+time_invalid_datetime						= Το DateTime του TTime πρέπει να είναι DateTimeInterface, DateInterval, συμβολοσειρά ή αριθμητική τιμή· δόθηκε {0}.
+time_invalid_text_format					= Το TextFormat '{0}' του TTime δεν είναι όνομα σταθεράς TTimeFormat ούτε μοτίβο ημερομηνίας/ώρας ICU.
+
+webtemplate_invalid_child					= Το TWebTemplate '{0}' δεν μπορεί να περιέχει '{1}': τα active, postback και validator στοιχεία ελέγχου δεν λειτουργούν μέσα σε αδρανές περιεχόμενο προτύπου. Χρησιμοποιήστε απλή σήμανση με σύμβολα κράτησης θέσης {{...}}, ή ορίστε ValidateContent="false".
+
+vardumper_not_array							= Η __debuginfo() πρέπει να επιστρέφει πίνακα.
+
+htmlpurifier_source_path_failed				= Δεν είναι δυνατή η δημιουργία της διαδρομής προσωρινής μνήμης του html purifier '{0}'. Βεβαιωθείτε ότι ο γονικός κατάλογος υπάρχει και είναι εγγράψιμος από τη διεργασία Web.

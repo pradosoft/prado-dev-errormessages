@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Italian (it).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application può essere impostato una sola volta.
+prado_component_unknown						= Tipo di componente '{0}' sconosciuto. La causa può essere il seguente errore di analisi nel file della classe {0}: {1}
+prado_using_invalid							= '{0}' non è un namespace valido. Assicurarsi di aggiungere '.*' in coda se si vuole usare un namespace che fa riferimento a una directory.
+prado_alias_redefined						= L'alias '{0}' non può essere ridefinito.
+prado_alias_invalid							= L'alias '{0}' fa riferimento a un percorso non valido '{1}'. Solo le directory esistenti possono avere un alias.
+prado_aliasname_invalid						= L'alias '{0}' contiene il carattere non valido '.'.
+
+component_property_undefined				= La proprietà del componente '{0}.{1}' non è definita.
+component_property_readonly					= La proprietà del componente '{0}.{1}' è di sola lettura.
+component_event_undefined					= L'evento del componente '{0}.{1}' non è definito.
+component_method_undefined					= Il metodo del componente '{0}.{1}' non è definito.
+component_eventhandler_invalid				= All'evento del componente '{0}.{1}' è associato un gestore di eventi non valido '{2}'.
+component_expression_invalid				= Il componente '{0}' sta valutando un'espressione non valida '{1}' : {2}.
+component_statements_invalid				= Il componente '{0}' sta valutando istruzioni PHP non valide '{1}' : {2}.
+component_class_behavior_defined			= Il componente '{0}' ha già un behavior di classe '{1}'.
+component_not_a_behavior					= Il componente '{0}' aggiunto come behavior non è un TBaseBehavior.
+object_not_a_component						= L'oggetto '{0}' aggiunto come behavior non è un TComponent.
+component_no_tcomponent_class_behaviors		= TComponent non può avere behavior di classe collegati a causa della ricorsione.
+component_tbehavior_cannot_attach_as_class_behavior	= Gli IBehaviors non possono collegarsi a più proprietari. Passare una stringa oppure un array con la classe IBehavior e le proprietà da istanziare su ciascun proprietario.
+
+propertyvalue_enumvalue_invalid				= Il valore '{0}' non è un valore di enumerazione valido ({1}).
+propertyvalue_invalid_hex_color				= Il valore '{0}' non è un colore esadecimale valido, ad es. "#112233".
+propertyvalue_invalid_array_literal			= Il valore '{0}' non è un letterale di array valido.
+propertyvalue_array_too_deep				= Il letterale di array è annidato oltre {0} livelli.
+
+eventhandler_lost_weak_ref					= TEventHandler non può invocare il gestore di eventi perché il WeakReference all'oggetto callable è andato perduto.
+eventhandler_no_set_handler					= TEventHandler non può impostare il gestore di eventi, indice "{0}".
+eventhandler_bad_offset						= TEventHandler non ha l'offset "{0}".
+
+eventparam_readonly							= {0} è di sola lettura.
+eventparam_readonly_set						= {0} non può modificare ReadOnly una volta impostato.
+eventparam_readonly_not_self				= {0} ReadOnly può essere impostato solo internamente.
+
+list_index_invalid							= L'indice '{0}' è fuori intervallo.
+list_item_inexistent						= L'elemento non è presente nella lista.
+list_data_not_iterable						= I dati devono essere un array o un oggetto che implementa l'interfaccia Traversable.
+list_readonly								= {0} è di sola lettura.
+list_readonly_set							= {0} non può modificare Read-Only una volta impostato.
+prioritylist_index_invalid					= L'indice '{0}' di '{1}' alla priorità '{2}' è fuori intervallo.
+prioritytrait_no_set_default_priority		= La priorità predefinita può essere impostata una sola volta oppure dall'oggetto stesso.
+prioritytrait_no_set_precision				= La precisione può essere impostata una sola volta oppure dall'oggetto stesso.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid può essere impostato una sola volta oppure dall'oggetto stesso.
+
+map_addition_disallowed						= Il nuovo elemento non può essere aggiunto alla mappa.
+map_item_unremovable						= L'elemento non può essere rimosso dalla mappa.
+map_data_not_iterable						= I dati devono essere un array o un oggetto che implementa l'interfaccia Traversable.
+map_readonly								= {0} è di sola lettura.
+map_readonly_set							= {0} non può modificare Read-Only una volta impostato.
+
+tnull_clone_disallowed						= Il singleton TNull non può essere clonato. Usare TNull::null() al suo posto.
+
+weakcallablecollection_callable_required	= TWeakCallableCollection accetta solo callable.
+
+arraysubscription_no_change					= TArraySubscription.{0} non può essere modificato dopo la sottoscrizione.
+arraysubscription_no_null_key				= TArraySubscription non può sottoscrivere una chiave null su un oggetto ArrayAccess.
+arraysubscription_index_invalid				= TArraySubscription è in modalità List (isAssociative = false) ma la chiave '{0}' non è valida (conteggio: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array non può essere impostato direttamente.
+eventsubscription_no_change					= TEventSubscription.{0} non può essere modificato dopo la sottoscrizione.
+
+application_includefile_invalid				= Impossibile trovare la configurazione dell'applicazione {0}. Assicurarsi che sia in formato namespace e che il file termini con ".xml" o ".php".
+application_basepath_invalid				= Il percorso base dell'applicazione '{0}' non esiste o non è una directory.
+application_runtimepath_invalid				= Il percorso runtime dell'applicazione '{0}' non esiste o non è scrivibile dal processo del server Web.
+application_service_class_not_found			= La classe di servizio '{0}' non esiste.
+application_service_class_not_service		= La classe di servizio '{0}' non implementa IService.
+application_service_class_required			= registerService richiede un nome di classe o un array serviceConfig per il servizio '{0}'.
+application_service_default_unregister		= Il servizio pagina predefinito '{0}' non può essere rimosso dalla registrazione.
+service_csrf_token_invalid					= Il servizio '{0}' richiede un token CSRF valido.
+application_moduleid_duplicated				= L'ID del modulo dell'applicazione '{0}' non è univoco.
+application_runtimepath_failed				= Impossibile creare il percorso runtime '{0}'. Assicurarsi che la directory padre esista e sia scrivibile dal processo Web.
+application_module_required_dep_missing		= Il modulo '{0}' ha una dipendenza obbligatoria dal modulo '{1}', che non è registrato nell'applicazione.
+application_module_dependency_cycle			= È stato rilevato un ciclo di dipendenze tra i seguenti moduli: {0}.
+application_module_dependency_self_reference	= Il modulo '{0}' dichiara se stesso come dipendenza, il che non è mai valido.
+
+appconfig_aliaspath_invalid					= La configurazione dell'applicazione <alias id="{0}"> usa un percorso file non valido "{1}".
+appconfig_alias_invalid						= L'elemento <alias> della configurazione dell'applicazione deve avere un attributo "id" e un attributo "path".
+appconfig_alias_redefined					= La configurazione dell'applicazione <alias id="{0}"> non può essere ridefinita.
+appconfig_using_invalid						= L'elemento <using> della configurazione dell'applicazione deve avere un attributo "namespace".
+appconfig_moduleid_required					= L'elemento <module> della configurazione dell'applicazione deve avere un attributo "id".
+appconfig_moduletype_required				= La configurazione dell'applicazione <module id="{0}"> deve avere un attributo "class".
+appconfig_moduletype_inapplicable			= La configurazione dell'applicazione <module id="{0}"> non può avere l'attributo "class".
+appconfig_serviceid_required				= L'elemento <service> della configurazione dell'applicazione deve avere un attributo "id".
+appconfig_servicetype_required				= La configurazione dell'applicazione <service id="{0}"> deve avere un attributo "class".
+appconfig_parameterid_required				= L'elemento <parameter> della configurazione dell'applicazione deve avere un attributo "id".
+appconfig_includefile_required				= L'elemento <include> della configurazione dell'applicazione deve avere un attributo "file".
+appconfig_paths_invalid						= L'elemento <paths> della configurazione dell'applicazione non può contenere l'elemento <{0}>.
+appconfig_modules_invalid					= L'elemento <modules> della configurazione dell'applicazione non può contenere l'elemento <{0}>.
+appconfig_services_invalid					= L'elemento <services> della configurazione dell'applicazione non può contenere l'elemento <{0}>.
+appconfig_parameters_invalid				= L'elemento <parameters> della configurazione dell'applicazione non può contenere l'elemento <{0}>.
+appconfig_tag_invalid						= La configurazione dell'applicazione non può contenere l'elemento <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey non può essere vuota.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey non può essere vuota.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey non può essere vuota.
+securitymanager_mcryptextension_required	= L'estensione PHP Mcrypt è necessaria per usare la funzionalità di cifratura di TSecurityManager.
+securitymanager_mcryptextension_initfailed	= TSecurityManager non è riuscito a inizializzare il modulo mcrypt.
+
+uri_format_invalid							= '{0}' non è un URI valido.
+
+httprequest_browscap_required				= THttpRequest richiede che la direttiva browscap sia configurata in php.ini.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator può contenere un solo carattere.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' non punta a un modulo esistente.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' deve puntare a un modulo che estende TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie è false, il che richiede un modulo di sessione.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection accetta solo oggetti THttpCookie.
+
+httpresponse_file_inexistent				= THttpResponse non può inviare il file '{0}'. Il file non esiste.
+httpresponse_responsedata_method_unavailable	= THttpResponse: il metodo '{0}' non può essere usato senza un adattatore adeguato che lo implementi.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' non punta a un modulo esistente.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' deve puntare a un modulo che estende THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager può contenere solo THttpHeader o sue classi derivate.
+httpheadersmanager_headerclass_missing		= Nella voce <headerclass> di THttpHeadersManager manca l'attributo obbligatorio 'name' o 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID non può essere modificato dopo l'avvio della sessione.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName non può essere modificato dopo l'avvio della sessione.
+httpsession_sessionname_invalid				= THttpSession.SessionName deve contenere solo caratteri alfanumerici.
+httpsession_savepath_unchangeable			= THttpSession.SavePath non può essere modificato dopo l'avvio della sessione.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' non è valido.
+httpsession_storage_unchangeable			= THttpSession.Storage non può essere modificato dopo l'avvio della sessione.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode non può essere modificato dopo l'avvio della sessione.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart non può essere modificato dopo l'inizializzazione del modulo di sessione.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability non può essere modificato dopo l'avvio della sessione.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability deve essere un intero compreso tra 0 e 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID non può essere modificato dopo l'avvio della sessione.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID non può essere impostato quando THttpSession.CookieMode è impostato su Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout non può essere modificato dopo l'avvio della sessione.
+httpsession_handler_invalid					= THttpSessionHandler accetta solo un oggetto THttpSession come parametro del costruttore
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' non è valido. Assicurarsi che sia in formato namespace e che punti a una directory scrivibile dal processo del server Web.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath non può essere modificato dopo l'inizializzazione del modulo.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl non può essere modificato dopo l'inizializzazione del modulo.
+assetmanager_filepath_invalid				= TAssetManager sta pubblicando un file non valido '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager sta pubblicando un file tar con checksum non valido '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager sta pubblicando un file tar non valido '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager non è riuscito a estrarre il file tar '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager sta copiando una directory non valida '{0}'.
+
+cache_primary_duplicated					= È consentito al massimo un modulo di cache primario. {0} sta tentando di registrarsi come ulteriore cache primaria.
+psrcache_backing_cache_required				= È richiesto TPsrCache.BackingCacheId oppure TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' non fa riferimento a un modulo dell'applicazione.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' deve fare riferimento a un modulo che implementa Psr\SimpleCache\CacheInterface o Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' è un adattatore PSR di questo TPsrCache; leggerebbe e scriverebbe nella stessa cache.
+psrcachebacking_cache_required				= {0} richiede una cache di supporto. Impostare {0}.BackingCacheId, {0}.BackingCache oppure una cache primaria dell'applicazione.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' non fa riferimento a un modulo dell'applicazione.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' deve fare riferimento a un modulo Prado\Caching\ICache.
+psrcachebacking_key_invalid					= La chiave di cache di {0} deve essere una stringa non vuota senza i caratteri riservati {}()/\@: ma è stato fornito '{1}'.
+sqlitecache_extension_required				= TSqliteCache richiede l'estensione PHP SQLite.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile è obbligatorio.
+sqlitecache_connection_failed				= Connessione al database di TSqliteCache non riuscita. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache non è riuscito a creare il database della cache. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile non può essere modificato dopo l'inizializzazione del modulo.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile non è valido. Assicurarsi che sia in un formato namespace corretto.
+
+dbcache_unavailable							= TDbCache richiede l'estensione PHP PDO.
+
+etcdcache_transport_required				= TEtcdCache richiede l'estensione PHP cURL oppure allow_url_fopen.
+
+memcache_extension_required					= TMemCache richiede l'estensione PHP memcache.
+memcache_connection_failed					= TMemCache non è riuscito a connettersi al server memcache {0}:{1}.
+memcache_not_initialized					= Le opzioni di TMemCache non possono essere impostate prima dell'inizializzazione del modulo.
+
+apccache_extension_required					= TAPCCache richiede l'estensione PHP APC.
+apccache_extension_not_enabled				= TAPCCache richiede apc.enabled = 1 in php.ini per funzionare.
+apccache_extension_not_enabled_cli			= TAPCCache richiede apc.enable_cli = 1 in php.ini per funzionare con PHP da riga di comando.
+
+cachesize_item_exceeds_maximum_size			= L'elemento di cache è di {0} byte e supera il MaximumSize configurato di {1} byte.
+
+filecache_directory_required				= TFileCache.Directory è obbligatoria.
+filecache_directory_create_failed			= TFileCache non può creare la directory di cache '{0}'.
+filecache_directory_not_writable			= La directory di cache di TFileCache '{0}' non è scrivibile.
+filecache_hash_token_identity				= TFileCache.hashToken deve trasformare il proprio input; l'implementazione della sottoclasse ha restituito il token inalterato.
+filecache_hash_token_path_separator			= TFileCache.hashToken non deve restituire un valore contenente un separatore di percorso ("/" o "\"); l'implementazione della sottoclasse ha restituito un hash non sicuro.
+
+memorycache_backing_file_directory_not_found	= La directory di TMemoryCache.BackingFile non esiste per il percorso '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' non è valido. I valori validi sono 'PHP' e 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' non è valido. I valori validi sono 'None', 'Base64' e 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' non è valido. Deve essere l'ID di un modulo TSecurityManager o un'istanza di TSecurityManager.
+serializingcache_json_encode_failed			= TSerializingCache non è riuscito a codificare il valore in JSON: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} non fa riferimento a una directory valida.
+cachedependencylist_cachedependency_required	= Solo gli oggetti che implementano ICacheDependency possono essere aggiunti a TCacheDependencyList.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' non è valido. Assicurarsi che sia in formato namespace e che punti a una directory valida contenente i file dei template di errore.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' non è una directory valida.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage non può essere modificata dopo l'inizializzazione del servizio.
+pageservice_basepath_unchangeable			= TPageService.BasePath non può essere modificato dopo l'inizializzazione del servizio.
+pageservice_pageclass_invalid				= La classe di pagina {0} non è valida. Deve essere TPage o estendere TPage.
+pageservice_includefile_invalid				= Impossibile trovare la configurazione del servizio pagina {0}. Assicurarsi che sia in formato namespace e che il file termini con ".xml" o ".php".
+
+pageserviceconf_file_invalid				= Impossibile aprire il file di configurazione della directory di pagine '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> usa un percorso file non valido "{1}" nel file di configurazione della directory di pagine '{2}'.
+pageserviceconf_alias_invalid				= L'elemento <alias> deve avere un attributo "id" e un attributo "path" nel file di configurazione della directory di pagine '{0}'.
+pageserviceconf_using_invalid				= L'elemento <using> deve avere un attributo "namespace" nel file di configurazione della directory di pagine '{0}'.
+pageserviceconf_module_invalid				= L'elemento <module> deve avere un attributo "id" nel file di configurazione della directory di pagine '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> deve avere un attributo "class" nel file di configurazione della directory di pagine '{1}'.
+pageserviceconf_parameter_invalid			= L'elemento <parameter> deve avere un attributo "id" nel file di configurazione della directory di pagine '{0}'.
+pageserviceconf_page_invalid				= L'elemento <page> deve avere un attributo "id" nel file di configurazione della directory di pagine '{0}'.
+pageserviceconf_includefile_required		= L'elemento <include> della configurazione di pagina deve avere un attributo "file".
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" non può essere modificato (in "{1}") dopo che il behavior è stato collegato.
+basebehavior_sync_no_owner					= Il TBaseBehavior "{0}" non ha un proprietario e non può sincronizzare i gestori di eventi su un componente senza proprietari.
+basebehavior_sync_not_owner					= Il TBaseBehavior "{0}" non può sincronizzare i gestori di eventi su un oggetto che non è il proprietario.
+behavior_has_owner							= Il TBehavior "{0}" può collegarsi a un solo proprietario.
+behavior_bad_attach_component				= Il TBehavior "{0}" può collegarsi solo a un TComponent.
+behavior_detach_without_owner				= Il TBehavior "{0}" non può essere scollegato senza un proprietario.
+behavior_detach_wrong_owner					= Il TBehavior "{0}" non può scollegarsi da un oggetto che non è il suo proprietario.
+behavior_property_unchangeable				= {1}.{0} non può essere modificato dopo che il behavior è stato collegato.
+behavior_requires_owner						= {1}.{0} richiede un proprietario.
+classbehavior_owner_attach_once				= Il TClassBehavior "{0}" può essere collegato a un proprietario una sola volta. I gestori non sarebbero univoci.
+classbehavior_bad_attach_component			= Il TClassBehavior "{0}" può collegarsi solo a un TComponent.
+classbehavior_detach_without_owner			= Il TClassBehavior "{0}" non può essere scollegato senza un proprietario.
+classbehavior_detach_wrong_owner			= Il TClassBehavior "{0}" non può scollegarsi da un oggetto che non è il suo proprietario.
+
+callchain_bad_dynamic_event					= È stato sollevato TCallChain.{0} ma era atteso {1}.
+
+behaviormodule_behavior_as_array_required	= L'elemento php <behavior> deve essere un array.
+behaviormodule_behaviorname_required		= <behavior> deve contenere un attributo 'name' per collegare il behavior.
+behaviormodule_behaviorclass_required		= <behavior> deve contenere un attributo 'class' che definisce la classe del behavior.
+behaviormodule_attachto_class_required		= <behavior> deve avere un attributo 'attachto' o 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= <behavior> deve avere l'attributo 'attachto' oppure 'attachtoclass', non entrambi.
+behaviormodule_behaviorowner_required		= L'oggetto attachto '{0}' di <behavior> non è stato trovato.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors non può essere impostato al tipo non valido '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader deve avere un Behavior Name.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader deve avere una Behavior Class.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader deve avere un attributo 'attachto' o 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader deve avere un solo attributo tra 'attachto' e 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' richiede l'ID di un modulo.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' non è stato trovato.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader non ha trovato il modulo '{0}' a cui collegare i behavior.
+
+evaluationfilter_statements_denied			= Il componente '{0}' non può valutare le istruzioni PHP '{1}' perché TEvaluationFilterBehavior.AllowStatements è false.
+evaluationfilter_code_denied				= Il componente '{0}' non può valutare '{1}' perché TEvaluationFilterBehavior non consente '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior richiede un callable per essere costruito.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior richiede un callable per essere costruito.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior deve avere un attributo Parameter.
+parameterizebehavior_no_property			= TParameterizeBehavior deve avere un attributo Property.
+parameterizebehavior_owner_get_only_property	= Il proprietario di TParameterizeBehavior ha la Property '{0}' ma è di sola lettura.
+parameterizebehavior_owner_has_no_property	= Il proprietario di TParameterizeBehavior non ha la Property '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior non può svuotare Parameter dopo essere stato collegato.
+
+processhelper_no_forking					= Il fork dei processi non è supportato.
+processhelper_no_signals					= I segnali ai processi non possono essere inviati su Windows.
+
+serializableclosure_no_decrypter			= TSerializableClosure non può decifrare un payload di closure cifrato senza un decifratore configurato.
+serializableclosure_decrypt_failed			= TSerializableClosure non è riuscito a decifrare un payload di closure cifrato; il payload potrebbe essere stato manomesso o la chiave potrebbe essere cambiata.
+
+appsignals_no_change						= TApplicationSignals::{0} non può essere modificato dopo il collegamento.
+appsignals_not_a_dispatcher					= '{0}' non è un TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' non è un PID valido.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} non può essere modificato dopo il collegamento.
+
+initialized_property_unchangeable			= {1}.{0} non può essere impostato perché è già inizializzato.
+initialized_requires_initialization			= {1}.{0} richiede l'inizializzazione prima dell'elaborazione.
+
+template_closingtag_unexpected				= Trovato un tag di chiusura inatteso '{0}'.
+template_closingtag_expected				= Era atteso il tag di chiusura '{0}', trovato '{1}'.
+template_directive_nonunique				= La direttiva '<%@ ... %>' deve comparire all'inizio del template e può comparire al massimo una volta.
+template_comments_forbidden					= I commenti del template non sono consentiti all'interno dei tag di proprietà.
+template_matching_unexpected				= Corrispondenza inattesa.
+template_property_unknown					= {0} non ha una proprietà denominata '{1}'.
+template_event_unknown						= {0} non ha un evento denominato '{1}'.
+template_property_readonly					= {0} ha una proprietà di sola lettura '{1}'.
+template_event_forbidden					= {0} è un componente non controllo. Nessun gestore può essere associato al suo evento '{1}' in un template.
+template_databind_forbidden					= {0} è un componente non controllo. Non è possibile associare espressioni alla sua proprietà '{1}'.
+template_component_required					= '{0}' non è un componente. Solo i componenti possono comparire in un template.
+template_format_invalid						= Sintassi del template non valida: {0}
+template_property_duplicated				= La proprietà {0} è configurata due o più volte.
+template_eventhandler_invalid				= {0}.{1} accetta solo una stringa statica.
+template_controlid_invalid					= {0}.ID accetta solo una stringa di testo statica.
+template_controlskinid_invalid				= {0}.SkinID accetta solo una stringa di testo statica.
+template_content_unexpected					= Contenuto inatteso durante l'istanziazione del template: {0}.
+template_include_invalid					= Inclusione di template non valida. Assicurarsi che {0} sia un namespace valido che punta a un file di template esistente con estensione .tpl.
+template_tag_unexpected						= L'inizializzazione della proprietà {0} contiene un tipo di tag sconosciuto {1}.
+
+xmldocument_file_read_failed				= TXmlDocument non riesce a leggere il file '{0}'.
+xmldocument_file_write_failed				= TXmlDocument non riesce a scrivere il file '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList accetta solo oggetti TXmlElement.
+
+xmlelement_null_tag							= Il Tag Name di TXmlElement non può essere null.
+xmlelement_empty_tag						= Il Tag Name di TXmlElement non può essere una stringa vuota.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action accetta solo 'allow' o 'deny' come valore.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb accetta solo 'get' o 'post' come valore.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection accetta solo oggetti TAuthorizationRule.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' non è un file valido.
+usermanager_userfile_unchangeable			= TUserManager.UserFile non può essere modificato. Il modulo utenti è già stato inizializzato.
+
+integritymanager_entry_invalid				= La voce di integrità di TIntegrityManager per l'URL '{0}' richiede un url e un hash non vuoti.
+integritymanager_algorithm_invalid			= L'algoritmo '{0}' di TIntegrityManager non è supportato; usare uno tra: {1}.
+integritymanager_file_unreadable			= TIntegrityManager non può leggere il file '{0}' per calcolarne l'integrità.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' non è un file valido.
+integritymanager_integrityfile_unchangeable	= {1}.{0} non può essere modificato. Il modulo di integrità è già stato inizializzato.
+
+javascript_script_integrity_required		= Nessuna Subresource Integrity è registrata per lo script remoto '{0}', ma l'integrità è obbligatoria.
+
+authmanager_usermanager_required			= A TAuthManager.UserManager deve essere assegnato un valore.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' non fa riferimento all'ID di un modulo dell'applicazione.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' non fa riferimento a un modulo dell'applicazione TUserManager valido.
+authmanager_session_required				= TAuthManager richiede un modulo di sessione dell'applicazione.
+
+permissions_events_invalid					= TPermissionEvent.Event non può essere impostato al valore non valido '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules non può essere impostato al valore non valido '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' non fa riferimento all'ID di un modulo dell'applicazione.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' non fa riferimento a un modulo dell'applicazione TDbParameterModule valido.
+permissions_init_once						= TPermissionsManager.init può essere inizializzato una sola volta.
+permissions_duplicate_permission			= Il permesso '{0}' di TPermissionsManager è già registrato.
+permissions_role_children_invalid			= Il ruolo '{0}' della configurazione di TPermissionsManager ha figli non validi '{1}'.
+permissions_rule_invalid					= La regola di permesso '{0}' della configurazione di TPermissionsManager ha proprietà che non sono un array.
+permissions_rules_require_name				= Le regole di TPermissionsManager devono avere una proprietà "name" del permesso.
+permissions_role_rule_nested				= Il ruolo '{0}' della configurazione di TPermissionsManager contiene un <permissionrule>. Le regole di permesso sono figli diretti dell'elemento di configurazione dei permessi.
+permissions_rule_class_invalid				= La classe della regola di permesso '{0}' di TPermissionsManager è un namespace di directory, non una classe.
+permissions_children_invalid				= I figli di TPermissionsManager.*RoleChildren devono essere una stringa o un array, ma sono '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' non è un file valido.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' non è un alias di percorso valido. Assicurarsi di aver definito questo alias nella configurazione e che punti a una directory valida.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' non è una directory valida.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath non può essere modificato dopo l'inizializzazione del modulo.
+thememanager_theme_invalid					= Il nome del tema '{0}' di TThemeManager deve essere il nome di una singola directory.
+
+theme_baseurl_required						= TThemeManager.BasePath è obbligatorio. Per impostazione predefinita si assume una directory denominata 'themes' nella directory che contiene lo script di ingresso dell'applicazione.
+theme_path_inexistent						= Il percorso del tema '{0}' non esiste.
+theme_control_nested						= La skin per il tipo di controllo '{0}' nel tema '{1}' non può trovarsi all'interno di un'altra skin.
+theme_skinid_duplicated						= Lo SkinID '{0}.{1}' è duplicato nel tema '{2}'.
+theme_databind_forbidden					= Il databind non può essere usato nel tema '{0}' per la skin del controllo '{1}.{2}' sulla proprietà '{3}'.
+theme_property_readonly						= La skin viene applicata a una proprietà di sola lettura del controllo '{0}.{1}'.
+theme_property_undefined					= La skin viene applicata a una proprietà inesistente del controllo '{0}.{1}'.
+theme_tag_unexpected						= L'inizializzazione della proprietà {0} contiene un tipo di tag sconosciuto {1}.
+
+control_object_reregistered					= Trovato un ID oggetto duplicato '{0}'.
+control_id_invalid							= {0}.ID '{1}' non è valido. Sono consentiti solo caratteri alfanumerici e trattino basso. Il primo carattere deve essere una lettera o un trattino basso.
+control_skinid_unchangeable					= {0}.SkinID non può essere modificato dopo che una skin è stata applicata al controllo o dopo la creazione dei controlli figli.
+control_enabletheming_unchangeable			= {0}.EnableTheming non può essere modificato dopo la creazione dei controlli figli.
+control_stylesheet_applied					= La skin StyleSheet è già stata applicata a {0}.
+control_id_nonunique						= {0}.ID '{1}' non è univoco tra tutti i controlli dello stesso contenitore di denominazione.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' non deve essere negativo.
+
+templatecontrol_mastercontrol_invalid		= Il controllo master deve essere di tipo TTemplateControl o di una classe derivata.
+templatecontrol_mastercontrol_required		= Il controllo '{0}' richiede un controllo master perché usa TContent.
+templatecontrol_contentid_duplicated		= L'ID di TContent '{0}' è duplicato.
+templatecontrol_placeholderid_duplicated	= L'ID di TContentPlaceHolder '{0}' è duplicato.
+templatecontrol_directive_invalid			= {0}.{1} accetta solo una stringa di testo statica tramite una direttiva di template.
+templatecontrol_placeholder_inexistent		= TContent '{0}' non ha un TContentPlaceHolder corrispondente.
+
+page_form_duplicated						= Una pagina può contenere al massimo un TForm. Usare i normali tag form HTML per i form rimanenti.
+page_isvalid_unknown						= TPage.IsValid non è ancora stato valutato.
+page_postbackcontrol_invalid				= Impossibile determinare il controllo di postback '{0}'.
+page_control_outofform						= {0} '{1}' deve essere racchiuso in un TForm.
+page_head_duplicated						= Una pagina può contenere al massimo un THead.
+page_head_required							= Nel template della pagina è necessario un controllo THead per rendere CSS e js nella sezione head dell'HTML.
+page_statepersister_invalid					= Il persister dello stato della pagina deve implementare l'interfaccia IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Nome della libreria di script Prado '{0}' sconosciuto.
+csmanager_pradoscript_notloaded				= La libreria di script Prado '{0}' non è ancora stata caricata.
+csmanager_pradostyle_invalid				= Nome della libreria di stili Prado '{0}' sconosciuto.
+csmanager_invalid_packages					= Pacchetti sconosciuti '{1}' tra i pacchetti javascript definiti in '{0}'. I pacchetti validi sono '{2}'.
+
+httpclient_transport_error					= Errore di trasporto del client HTTP (codice {0}): {1}
+httpclient_http_error						= Risposta di errore HTTP con stato {0}.
+httpclient_transport_required				= Nessun trasporto HTTP disponibile: l'estensione cURL non è caricata e allow_url_fopen è disattivato.
+
+restclient_invalid_header					= L'intestazione '{0}' di TRestClient ha un nome non valido o un valore contenente CR/LF.
+restclient_basicauth_username_colon			= Il nome utente Basic-auth di TRestClient non deve contenere due punti (separatore delle credenziali secondo RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder deve avere un ID.
+
+content_id_required							= TContent deve avere un ID.
+
+controlcollection_control_required			= TControlList accetta solo stringhe o oggetti TControl.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' non è valido. Deve essere un solo carattere.
+webcontrol_dir_invalid						= {0}.Dir '{1}' non è valido. I valori consentiti sono 'ltr', 'rtl' e 'auto'.
+webcontrol_style_invalid					= {0}.Style accetta solo un valore stringa.
+
+listcontrol_selection_invalid				= {0} ha una selezione non valida impostata prima dell'esecuzione del databinding.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex ha un valore non valido {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue ha un valore non valido '{1}'.
+listcontrol_expression_invalid				= {0} sta valutando un'espressione non valida '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} non supporta la selezione multipla.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' non è stato trovato.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' non è stato trovato.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' non è stato trovato.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' non è stato trovato.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' non deve essere negativo.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' non deve essere negativo.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' deve essere compreso tra 0 e il RenderFilterDepth {1} del controllo filtrante.
+
+hiddenfield_focus_unsupported				= THiddenField non supporta l'impostazione del focus di input.
+hiddenfield_theming_unsupported				= THiddenField non supporta i temi.
+hiddenfield_skinid_unsupported				= THiddenField non supporta le skin di controllo.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' non fa riferimento a un controllo pulsante esistente.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding deve essere un intero maggiore o uguale a -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing deve essere un intero maggiore o uguale a -1.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History deve essere un intero maggiore di 0.
+
+listitemcollection_item_invalid				= TListItemCollection accetta solo stringhe o oggetti TListItem.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices è di sola lettura.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack è di sola lettura.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex è di sola lettura.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices è di sola lettura.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue è di sola lettura.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices è di sola lettura.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' non esiste.
+logrouter_routeclass_required				= L'attributo class è obbligatorio nella configurazione <route>.
+logrouter_routetype_required				= La route di log deve essere un'istanza di TLogRoute o di una sua classe derivata.
+
+dblogroute_connectionid_invalid				= TDbLogRoute non riesce a creare la connessione al database con ID '{0}'.
+dblogroute_insert_failed					= TDbLogRoute non riesce a inserire il log in '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' non è valido
+dblogroute_table_nonexistent				= La tabella '{0}' di TDbLogRoute non esiste e deve essere creata.
+dblogroute_order_invalid					= L'ordinamento '{0}' di TDbLogRoute deve elencare colonne, ciascuna seguita opzionalmente da ASC o DESC.
+dblogroute_limit_invalid					= Il limite '{0}' di TDbLogRoute deve essere un numero di righe, 'count OFFSET offset' oppure 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' deve essere una directory in formato namespace e deve essere scrivibile dal processo del server Web.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize deve essere maggiore di 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles deve essere maggiore di 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom non può essere vuoto.
+emaillogroute_mail_failed					= TEmailLogRoute non è riuscito a inviare il log a '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags non è valido, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility non è valido, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger è obbligatorio.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' non è l'ID di un modulo né il nome di una classe Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger non può essere un TPsrLogger; registrerebbe i log nello stesso TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns non deve essere minore di 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate è vuoto o contiene un percorso ID di controllo non valido.
+basevalidator_validatable_required			= {0}.ControlToValidate deve puntare a un controllo che implementa l'interfaccia IValidatable.
+basevalidator_forcontrol_unsupported		= {0}.ForControl non è supportato.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare contiene un percorso ID di controllo non valido.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate deve puntare a un controllo TFileUpload.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate contiene un percorso ID TListControl non valido, "{1}" è un {2}.
+
+repeater_template_required					= TRepeater.{0} richiede un'istanza di template che implementa l'interfaccia ITemplate.
+repeater_itemtype_unknown					= Tipo di elemento del repeater {0} sconosciuto.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection accetta solo oggetti che sono istanze di TControl o di una sua classe discendente.
+
+datalist_template_required					= TDataList.{0} richiede un'istanza di template che implementa l'interfaccia ITemplate.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection accetta solo oggetti TDataListItem.
+
+datagrid_template_required					= TDataGrid.{0} richiede un'istanza di template che implementa l'interfaccia ITemplate.
+templatecolumn_template_required			= TTemplateColumn.{0} richiede un'istanza di template che implementa l'interfaccia ITemplate.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex non deve essere minore di 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize deve essere maggiore di 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount non deve essere minore di 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection accetta solo oggetti TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection accetta solo oggetti TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount deve essere maggiore di 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor sta tentando di valutare il valore di un campo su dati non validi. Assicurarsi che i dati siano un array, una TMap, una TList o un oggetto che contiene il campo specificato '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor sta tentando di valutare il valore del campo sconosciuto '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection accetta solo oggetti TTableRow.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection accetta solo oggetti TTableColumn.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection accetta solo oggetti TTableColumnGroup.
+tablecolumn_span_invalid					= TTableColumn Span deve essere 1 o maggiore; fornito {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection accetta solo oggetti TTableCell.
+
+multiview_view_required						= TMultiView accetta solo TView come figli.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex ha un indice non valido '{0}'.
+multiview_view_inexistent					= TMultiView non trova la vista specificata.
+multiview_viewid_invalid					= TMultiView non trova la vista '{0}' a cui passare.
+
+viewcollection_view_required				= TViewCollection accetta solo TView come elementi.
+
+view_visible_readonly						= TView.Visible è di sola lettura. Usare TView.Active per cambiarne la visibilità.
+
+wizard_step_invalid							= Il passo da attivare non è presente nella collezione dei passi del wizard.
+wizard_command_invalid						= Comando di navigazione del wizard non valido '{0}'.
+
+table_tablesection_outoforder				= Le sezioni della tabella TTable devono essere nell'ordine: Header, Body e Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType è di sola lettura.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection accetta solo oggetti TWizardStep o di sue classi derivate.
+
+texthighlighter_stylesheet_invalid			= Impossibile trovare il file del foglio di stile per TTextHighlighter.
+
+hotspotcollection_hotspot_required			= THotSpotCollection accetta solo istanze di THotSpot o di sue classi derivate.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode è di sola lettura.
+htmlarea_tarfile_invalid					= THtmlArea non riesce a individuare il file tar di TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile non è modificabile perché il modulo è già inizializzato.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' non è valido. Assicurarsi che sia in formato namespace e che l'estensione del file sia '.xml' o '.php'.
+parametermodule_parameterid_required		= L'elemento Parameter deve avere l'attributo 'id'.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' non è valido. Sono consentiti solo caratteri alfanumerici e trattino basso. Il primo carattere deve essere una lettera o un trattino basso.
+datagridcolumn_expression_invalid			= {0} sta valutando un'espressione non valida '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID è impostato con un ID di modulo cache non valido {0}. Il modulo non esiste oppure non implementa l'interfaccia ICache.
+outputcache_duration_invalid				= {0}.Duration deve essere un intero non minore di 0.
+
+stack_data_not_iterable						= TStack può prelevare dati solo da un array o da un oggetto traversabile.
+stack_empty									= TStack è vuoto.
+
+queue_data_not_iterable						= TQueue può prelevare dati solo da un array o da un oggetto traversabile.
+queue_empty									= TQueue è vuota.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount deve essere un intero non minore di 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex è fuori intervallo.
+pager_pagecount_invalid						= TPager.PageCount non può essere minore di 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} deve essere un percorso ID valido che punta a un controllo derivato da TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize deve essere un intero non minore di 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount deve essere un intero non minore di 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex è fuori intervallo.
+databoundcontrol_datasource_invalid			= {0}.DataSource non è valido.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' non fa riferimento a un controllo esistente.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' deve fare riferimento a un controllo che implementa IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' non indica una vista dell'origine dati.
+
+datasourcecontrol_focus_unsupported			= {0} non supporta Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} non supporta EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} non supporta SkinID.
+datasourcecontrol_visible_unsupported		= {0} non supporta Visible.
+datasourceview_insert_unsupported			= {0} non supporta l'inserimento.
+datasourceview_update_unsupported			= {0} non supporta l'aggiornamento.
+datasourceview_delete_unsupported			= {0} non supporta l'eliminazione.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource richiede un array, un IDataSource o un'origine dati Traversable.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView richiede null, un array o un'origine dati Traversable.
+
+clientscript_invalid_file_position			= Posizione del file '{1}' non valida per il controllo TClientScript '{0}', deve essere 'Head', 'Here' o 'Begin'.
+clientscript_invalid_package_path			= PackagePath '{0}' non valido per il controllo TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' non supporta AutoPostBack.
+globalization_cache_path_failed				= Impossibile creare il percorso della cache dei messaggi di traduzione '{0}'. Assicurarsi che la directory padre esista e sia scrivibile dal processo Web.
+globalization_source_path_failed			= Impossibile creare il percorso dei messaggi di traduzione '{0}'. Assicurarsi che la directory padre esista e sia scrivibile dal processo Web.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' non punta a un modulo TDataSourceConfig valido.
+messagesource_connectionid_required			= ConnectionID in MessageSource_Database.source è obbligatorio.
+
+callback_not_support_no_priority_state_update	= La richiesta di callback non supporta l'aggiornamento dello stato di pagina senza priorità.
+callback_invalid_callback_options			= '{1}' non è un controllo TCallbackOptions valido per il controllo Callback '{0}'.
+callback_invalid_clientside_options			= La proprietà ClientSide del Callback deve essere una stringa con l'ID di un controllo TCallbackOptions oppure un'istanza di TCallbackClientSideOptions.
+callback_invalid_handler					= Gestore di callback non valido, il controllo {0} deve implementare ICallbackEventHandler.
+callback_invalid_target						= Destinazione del callback non valida, nessun controllo con ID {0}.
+
+callback_interval_be_positive				= L'Interval di TCallbackTimer "{0}" deve essere strettamente maggiore di zero secondi.
+callback_decay_be_not_negative				= Il tasso di Decay di TCallbackTimer "{0}" non deve essere negativo.
+
+callback_no_autopostback					= Il controllo "{0}" non può abilitare AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform richiede l'estensione XSL di PHP.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' non è valido.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' non è valido.
+xmltransform_transform_required				= Per TXmlTransform deve essere impostata la proprietà TransformContent oppure TransformPath.
+
+ttriggeredcallback_invalid_controlid		= La proprietà ControlID di '{0}' non deve essere vuota.
+tactivecustomvalidator_clientfunction_unsupported	= {0} non supporta la funzione di validazione lato client.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' non identifica un modulo TDataSourceConfig valido.
+dbproperties_property_required				= {1}.{0} è una proprietà obbligatoria.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' non è un identificatore SQL valido.
+
+dbconnection_open_failed					= TDbConnection non è riuscito a stabilire la connessione al DB: {0}
+dbconnection_connection_inactive			= TDbConnection non è attiva.
+dbconnection_unsupported_driver_charset		= Il driver di database '{0}' non supporta l'impostazione del charset.
+dbconnection_charset_unchangeable			= Il driver di database '{0}' non può cambiare il charset dopo l'apertura. Il charset è un parametro del DSN.
+
+dbcommand_prepare_failed					= TDbCommand non è riuscito a preparare l'istruzione SQL "{1}": {0}
+dbcommand_execute_failed					= TDbCommand non è riuscito a eseguire l'istruzione SQL "{1}": {0}
+dbcommand_query_failed						= TDbCommand non è riuscito a eseguire la query SQL "{1}": {0}
+dbcommand_column_empty						= TDbCommand ha restituito un risultato vuoto e non ha potuto ottenere lo scalare.
+dbdatareader_rewind_invalid					= TDbDataReader è uno stream a sola lettura in avanti. Può essere attraversato una sola volta.
+dbtransaction_transaction_inactive			= TDbTransaction non è attiva.
+
+dbcommandbuilder_value_must_not_be_null		= La proprietà {0} non deve essere null come definito dalla colonna '{2}' della tabella '{1}'.
+
+dbcommon_invalid_table_name					= Tabella di database '{0}' non trovata. Messaggio di errore: {1}.
+dbcommon_invalid_identifier_name			= Nome di identificatore di database non valido '{0}', vedere {1} per i dettagli.
+dbtableinfo_invalid_column_name				= Nome di colonna '{0}' non valido per la tabella di database '{1}'.
+dbmetadata_invalid_table_view				= Nome di tabella/vista '{0}' non valido, oppure la tabella/vista '{0}' non contiene definizioni di colonne/campi accessibili.
+dbmetadata_requires_php_version				= Per usare il database {0} è richiesta la versione PHP {1} o successiva.
+
+dbtablegateway_invalid_criteria				= Oggetto criteri non valido, deve essere una stringa o un'istanza di TSqlCriteria.
+dbtablegateway_no_primary_key_found			= La tabella '{0}' non contiene campi di chiave primaria.
+dbtablegateway_missing_pk_values			= Valori di chiave primaria mancanti nella composizione di IN(key1, key2, ...) per la tabella '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Numero di valori della chiave composita non corrispondente nella composizione di IN( (key1, key2, ..), (key3, key4, ..)) per la tabella '{0}'.
+dbtablegateway_mismatch_args_exception		= Il metodo finder '{0}' di TTableGateway attende {1} parametri ma ne ha trovati solo {2}.
+dbtablegateway_mismatch_column_name			= Nel metodo dinamico __call() '{0}' non è stata trovata alcuna colonna corrispondente; le colonne valide per la tabella '{2}' sono '{1}'.
+dbtablegateway_invalid_table_info			= La tabella deve essere una stringa o un'istanza di TDbTableInfo.
+
+resource_not_a_resource						= Era attesa una risorsa PHP aperta ma è stato ricevuto '{0}'.
+processfork_failed							= Impossibile eseguire il fork del processo.
+liveprocessfork_readonly_receiver			= I dati di TLiveProcessFork sono di sola lettura sul lato ricevente; solo il lato mittente li modifica.
+stream_open_failed							= Impossibile aprire lo stream '{0}' in modalità '{1}': {2}
+binarystream_unexpected_eof					= Fine dello stream inattesa: erano necessari {0} byte ma ne sono stati letti solo {1}.
+binarystream_short_write					= Scrittura incompleta: dovevano essere scritti {0} byte ma ne sono stati accettati solo {1}.
+streamresourcewrapper_unusable_stream		= Lo stream non è né leggibile né scrivibile e non può essere esposto come risorsa.
+streamfilter_already_registered				= Il filtro di stream '{0}' è già registrato.
+streamfilter_registration_failed			= Impossibile registrare il filtro di stream '{0}' per la classe '{1}'.
+streamwrapper_already_registered			= Il protocollo del wrapper di stream '{0}' è già registrato.
+streamwrapper_registration_failed			= Impossibile registrare il protocollo del wrapper di stream '{0}' per la classe '{1}'.
+reservedspace_invalid						= Uno spazio riservato richiede un offset non negativo e una lunghezza positiva; sono stati forniti offset '{0}' e lunghezza '{1}'.
+reservedspace_access_denied					= L'operazione si sovrappone allo spazio riservato all'offset '{0}'.
+multipartstream_element_invalid				= Un elemento di TMultipartStream richiede un 'name' e un 'contents'.
+builtincompressor_extension_required		= Il compressore '{0}' richiede l'estensione PHP '{1}'.
+builtincompressor_compress_failed			= Il compressore '{0}' non è riuscito a comprimere i dati.
+builtincompressor_decompress_failed			= Il compressore '{0}' non è riuscito a decomprimere i dati; potrebbero essere danneggiati o in un altro formato.
+compression_method_unknown					= Il metodo di compressione '{0}' è sconosciuto oppure la sua estensione non è disponibile.
+compression_none_available					= Nessun metodo di compressione è disponibile in questa installazione di PHP.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' non è una codifica del contenuto nota. Le codifiche note sono: {1}.
+compression_xz_unsupported					= xz/LZMA non ha un'estensione PHP; installare belisoful/prado-compression per un codec xz nativo o da CLI.
+clicompressor_command_missing				= Il compressore '{0}' richiede uno di questi comandi di sistema nel PATH: '{1}'.
+clicompressor_process_failed				= Il compressore '{0}' non è riuscito ad avviare il comando '{1}'.
+clicompressor_command_failed				= Il comando '{1}' del compressore '{0}' è terminato con codice {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule richiede un Endpoint, oppure una Port positiva per comporne uno.
+socketservermodule_serverclass_invalid		= La ServerClass '{0}' di TSocketServerModule non è valida. Deve essere TSocketServer o una sua sottoclasse.
+socketservermodule_scheme_not_stream		= TSocketServerModule non può accettare connessioni sullo schema senza connessione '{0}'. Usare uno schema a stream come tcp, tls, ssl o unix.
+
+bitreader_invalid_bits						= Impossibile leggere {0} bit; il numero deve essere compreso tra 0 e la larghezza dell'intero della piattaforma.
+bitreader_64bit_php_required				= La lettura di {0} bit richiede una build PHP a 64 bit.
+bitreader_invalid_float_bits				= Impossibile leggere un float a {0} bit; sono supportati solo 8, 16, 32 o 64 bit.
+bitwriter_invalid_bits						= Impossibile scrivere {0} bit; il numero deve essere compreso tra 0 e la larghezza dell'intero della piattaforma.
+bitwriter_64bit_php_required				= La scrittura di {0} bit richiede una build PHP a 64 bit.
+bitwriter_invalid_float_bits				= Impossibile scrivere un float a {0} bit; sono supportati solo 8, 16, 32 o 64 bit.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' non esiste. Deve essere specificato in formato namespace e l'estensione del file deve essere '.xml' o '.php'.
+soapservice_server_invalid					= La classe del server SOAP '{0}' di TSoapService non è valida. Deve essere TSoapServer o una sua sottoclasse.
+soapservice_serverid_required				= L'elemento <soap> deve avere l'attributo 'id'.
+soapservice_serverid_duplicated				= L'ID del server SOAP '{0}' è duplicato.
+soapserver_id_invalid						= ID del server SOAP '{0}' non valido. Non deve terminare con '.wsdl'.
+soapserver_provider_invalid					= La classe provider '{0}' di TSoapServer non può essere risolta.
+soapserver_version_invalid					= Versione SOAP '{0}' non valida. Deve essere '1.1' oppure '1.2'.
+soapserver_wsdlstyle_invalid				= Stile WSDL '{0}' non valido. Deve essere 'rpc' oppure 'document'.
+soapserver_wsdlstyle_unsupported			= Lo stile WSDL '{0}' richiede pradosoft/prado-wsdlgenerator 1.2 o successivo. Il generatore installato produce solo 'rpc'.
+
+jsonservice_id_required						= TJsonService richiede l'attributo 'id' nei suoi elementi JSON.
+jsonservice_response_type_invalid			= La classe JSON {0} non è valida. Deve essere TJsonResponse o estendere TJsonResponse.
+jsonservice_class_required					= TJsonService richiede l'attributo 'class' nei suoi elementi JSON.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass è obbligatoria.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' non è una classe utente valida. La classe deve estendere TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' non punta a un modulo TDataSourceConfig valido.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID è obbligatorio.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' non punta a un modulo TDataSourceConfig valido.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID è obbligatorio.
+
+feedservice_id_required						= TFeedService richiede l'attributo 'id' nei suoi elementi feed.
+feedservice_feedtype_invalid				= La classe feed '{0}' deve implementare l'interfaccia IFeedContentProvider.
+feedservice_class_required					= TFeedService richiede l'attributo 'class' nei suoi elementi feed.
+
+tabviewcollection_tabview_required			= TTabPanel accetta solo TTabView come figli.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID ha un ID non valido '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex ha un indice non valido '{0}'.
+tabpanel_view_inexistent					= TTabPanel non trova la vista specificata.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID è obbligatorio.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' punta a un modulo inesistente.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' punta a un modulo che non implementa l'interfaccia ICache.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping può contenere solo TUrlMappingPattern o sue classi derivate.
+urlmapping_global_required					= TUrlMapping deve essere configurato come modulo globale.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' non è un file.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' deve puntare a un file XML in formato namespace.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter è obbligatorio per il pattern '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl non può essere vuoto.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' non è valido.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme deve essere un intero compreso tra {0} e {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize deve essere un intero compreso tra {0} e {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength deve essere un intero compreso tra {0} e {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength deve essere un intero compreso tra {0} e {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet deve essere una stringa di almeno 2 caratteri.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey è sconosciuta. Assicurarsi che la directory degli asset sia scrivibile dal processo del server Web.
+captcha_gd2_required						= TCaptcha richiede l'estensione PHP GD2.
+captcha_imagettftext_required				= TCaptcha richiede l'estensione PHP GD2 con supporto per i font TrueType.
+captcha_imagepng_required					= TCaptcha richiede l'estensione PHP GD2 con supporto per il formato immagine PNG.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl deve puntare a un controllo TCaptcha esistente.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} deve puntare a un controllo TCaptcha esistente.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} deve puntare a un controllo TCaptcha esistente.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey è sconosciuta. Per usare reCAPTCHA è necessario ottenere una chiave API.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey è sconosciuta. Per usare reCAPTCHA è necessario ottenere una chiave API.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate deve essere un'istanza di TReCaptcha.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' deve contenere solo lettere, cifre, '_' e '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity deve essere un intero compreso tra {0} e {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' deve puntare a un controllo TProofOfWork.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' non è una classe utente valida. La classe deve estendere TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' non punta a un modulo cache valido.
+cachepagestatepersister_cache_required		= TCachePageStatePersister richiede che sia caricato un modulo cache.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' non punta a un modulo cache valido.
+cachemoduleid_cache_required				= {0} richiede un modulo cache. Configurare una cache primaria oppure impostare {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout deve essere un intero non minore di zero.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' non è un'espressione PHP valida: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule non trova la tabella DB '{0}' in cui memorizzare i dati dei parametri.
+dbparametermodule_get_no_blank_key			= TDbParameterModule non può leggere una chiave vuota.
+dbparametermodule_set_no_blank_key			= TDbParameterModule non può impostare un valore su una chiave vuota.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' non punta a un modulo TDataSourceConfig valido.
+dbparametermodule_serializer_not_callable	= Il Serializer di TDbParameterModule non è un callable.
+
+clockawaretrait_invalid_clock_class			= La classe clock '{0}' deve implementare Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock è fissato su UTC; usare TTimezoneClock per un altro fuso orario.
+
+processcrontask_no_command					= TProcessCronTask '{0}' non ha un Command da eseguire.
+processcrontask_launch_failed				= TProcessCronTask non è riuscito ad avviare il processo: '{0}'.
+processcrontask_write_failed				= TProcessCronTask non è riuscito a scrivere il file pid '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' non ha una closure da eseguire.
+closurecrontask_closure_required			= TClosureCronTask richiede una Closure.
+closurecrontask_invalid_securitymanager		= Il SecurityManagerID '{0}' di TClosureCronTask non è un TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' non è riuscito a decifrare il payload della sua closure.
+cronmethodtask_no_module					= TCronMethodTask non ha trovato il modulo '{0}'.
+cron_usermanager_nonexistent				= TCronModule non ha trovato lo UserManager con nome '{0}'.
+cron_usermanager_invalid					= Lo UserManager '{0}' di TCronModule non è un TUserManager.
+cron_task_as_array_required					= Il job di task nella configurazione di TCronModule non è un array.
+cron_duplicate_task_name					= I job di task di TCronModule devono avere nomi univoci.
+cron_schedule_required						= Il Cron Task deve avere una pianificazione.
+cron_task_required							= Il Cron Task deve avere un task.
+cron_not_a_crontask							= Il Cron Task '{0}' non è un TCronTask.
+cron_additional_tasks_invalid				= '{0}' non è un task cron aggiuntivo valido.
+crontask_no_module							= TCronTask non ha trovato il modulo '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask non ha trovato il modulo specificato '{0}'.
+dbcron_invalid_name							= TDbCronManager: il nome del task '{0}' non è valido.
+dbcron_conflicting_task_names				= I task cron della configurazione sono in conflitto con i task cron del DB '{0}'.
+dbcron_table_nonexistent					= La tabella di database di TDbCronManager non esiste.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' non è un TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler non è riuscito ad analizzare l'elemento di pianificazione '{0}'
+
+rational_bad_offset							= "{0}" non è un accessore di proprietà valido di TRational.
+
+bithelper_bad_fp_format						= TBitHelper non può operare con '{0}' bit di esponente, '{1}' bit di mantissa e '{2}' di bias dell'esponente in un ambiente PHP a {3} bit.
+bithelper_invalid_color_in					= TBitHelper deve avere almeno un In Bit. È stato fornito '{0}'.
+bithelper_invalid_color_out					= TBitHelper deve avere almeno un Out Bit. È stato fornito '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper non può specchiare '{0}' bit in un ambiente PHP a {1} bit.
+
+ar_data_invalid								= {0}.copyFrom() accetta come parametro solo un oggetto o un array.
+ar_save_invalid								= L'istanza di {0} non può essere salvata perché è stata eliminata o si trova in uno stato sconosciuto.
+ar_delete_invalid							= L'istanza di {0} non può essere eliminata perché è un nuovo record o un record già eliminato.
+
+dbmetadata_invalid_database_driver			= Il driver '{0}' non è supportato. Installare il relativo driver PRADO, se disponibile.
+dbmetadata_not_meta_data					= Era attesa la classe driver {1} ma è stata ricevuta la classe {0}.
+dbmetadata_tableinfo_class_invalid			= La classe di informazioni sulla tabella '{0}' di TDbMetaData è un namespace di directory, non una classe.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' non è valido. Assicurarsi che punti a un modulo dell'applicazione valido.
+distributeddatasource_child_required		= {0} richiede almeno un elemento figlio '{1}'.
+masterslavedbconnection_connection_exists	= La connessione {0}.{1} esiste già.
+masterslavedbconnection_interface_required	= {0}.{1} richiede un'istanza che implementa l'interfaccia {2}.
+slavedbconnection_requires_master			= {0} richiede un {1}.
+
+response_status_reason_missing				= HTTP 1.1 richiede una reason per i codici di stato estesi
+response_status_reason_badchars				= Per l'intestazione HTTP 1.1, il token status-reason non deve contenere i token CR o LF
+
+activefileupload_temppath_invalid			= Il percorso TempPath '{0}' di TActiveFileUpload non esiste o non è scrivibile dal processo del server Web.
+
+tactivetablecell_control_outoftable			= {0} '{1}' deve essere racchiuso in un controllo TTableRow.
+tactivetablecell_control_notincollection	= {0} '{1}' non è membro della TTableCellCollection del controllo TTableRow padre.
+
+tactivetablerow_control_outoftable			= {0} '{1}' deve essere racchiuso in un controllo TTable.
+tactivetablerow_control_notincollection		= {0} '{1}' non è membro della TTableRowCollection del controllo TTable padre.
+
+juioptions_option_invalid					= '{1}' non è un'opzione valida per il controllo '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' non è un controllo didascalia valido per TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID ha un ID non valido '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex ha un indice non valido '{0}'.
+accordion_view_inexistent					= TAccordion non trova la vista specificata.
+
+dot_bad_size								= TDot Size deve essere un intero positivo ma è '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth deve essere un numero con un % o un'unità di lunghezza CSS opzionale ma è '{0}'
+
+juidatepicker_settextmode_unsupported		= Il TextMode di TJuiDatePicker non può essere modificato.
+
+control_adapter_not_active					= Proprietà di BaseActiveControl chiamata su un controllo non attivo.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' deve essere figlio diretto di un controllo TFigure.
+summary_requires_details_parent				= TSummary '{0}' deve essere figlio diretto di un controllo TDetails.
+
+gravatar_bad_default						= Il valore '{0}' della proprietà DefaultImageStyle di TGravatar non è supportato
+gravatar_bad_size							= TGravatar Size non è compreso in [1 .. 512] ma è '{0}'
+
+progress_value_invalid						= TProgress Value deve essere 0 o maggiore; fornito {0}.
+progress_max_invalid						= TProgress Max deve essere maggiore di 0; fornito {0}.
+
+time_invalid_datetime						= TTime DateTime deve essere un DateTimeInterface, un DateInterval, una stringa o un valore numerico; fornito {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' non è il nome di una costante TTimeFormat né un pattern datetime ICU.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' non può contenere '{1}': i controlli attivi, di postback e di validazione non funzionano all'interno di contenuto template inerte. Usare markup semplice con segnaposto {{...}}, oppure impostare ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() deve restituire un array.
+
+htmlpurifier_source_path_failed				= Impossibile creare il percorso della cache di html purifier '{0}'. Assicurarsi che la directory padre esista e sia scrivibile dal processo Web.

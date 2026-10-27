@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Chinese (Simplified) (zh).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application 只能被设置一次。
+prado_component_unknown						= 未知组件类型“{0}”。这可能是由 {0} 类文件中的如下解析错误引起的：{1}
+prado_using_invalid							= “{0}”不是一个合法的命名空间。如果命名空间指向一个目录，请确认其以“.*”结尾。
+prado_alias_redefined						= 别名“{0}”不能被重新定义。
+prado_alias_invalid							= 别名“{0}”指向的路径“{1}”无效。只有已存在的目录才能被定义为别名。
+prado_aliasname_invalid						= 别名“{0}”包含非法字符“.”。
+
+component_property_undefined				= 组件属性“{0}.{1}”未定义。
+component_property_readonly					= 组件属性“{0}.{1}”是只读的。
+component_event_undefined					= 组件事件“{0}.{1}”未定义。
+component_method_undefined					= 组件方法“{0}.{1}”未定义。
+component_eventhandler_invalid				= 组件事件“{0}.{1}”所绑定的事件处理函数“{2}”无效。
+component_expression_invalid				= 组件“{0}”执行了一个无效的表达式“{1}”：{2}。
+component_statements_invalid				= 组件“{0}”执行了一段无效的 PHP 代码“{1}”：{2}。
+component_class_behavior_defined			= 组件“{0}”已经拥有名为“{1}”的类行为。
+component_not_a_behavior					= 作为行为添加到组件“{0}”的对象不是 TBaseBehavior。
+object_not_a_component						= 作为行为添加的对象“{0}”不是 TComponent。
+component_no_tcomponent_class_behaviors		= 由于会产生递归，TComponent 不能附加类行为。
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors 不能附加到多个所有者。请传入字符串或由 IBehavior 类名及属性组成的数组，以便在每个所有者上分别实例化。
+
+propertyvalue_enumvalue_invalid				= 值“{0}”不是一个合法的枚举值（{1}）。
+propertyvalue_invalid_hex_color				= 值“{0}”不是一个合法的十六进制颜色值。例如："#112233"
+propertyvalue_invalid_array_literal			= 值“{0}”不是一个合法的数组字面量。
+propertyvalue_array_too_deep				= 数组字面量的嵌套深度超过了 {0} 层。
+
+eventhandler_lost_weak_ref					= TEventHandler 无法调用事件处理函数，因为可调用对象的 WeakReference 已丢失。
+eventhandler_no_set_handler					= TEventHandler 无法设置索引为“{0}”的事件处理函数。
+eventhandler_bad_offset						= TEventHandler 不存在偏移量“{0}”。
+
+eventparam_readonly							= {0} 是只读的。
+eventparam_readonly_set						= {0} 的 ReadOnly 一经设置便不能再更改。
+eventparam_readonly_not_self				= {0} 的 ReadOnly 只能在内部设置。
+
+list_index_invalid							= 索引“{0}”越界。
+list_item_inexistent						= 无法在列表中找到该项目。
+list_data_not_iterable						= 数据必须是一个数组或是一个实现 Traversable 接口的对象。
+list_readonly								= {0} 是只读的。
+list_readonly_set							= {0} 的只读状态一经设置便不能再更改。
+prioritylist_index_invalid					= “{1}”在优先级“{2}”下的索引“{0}”越界。
+prioritytrait_no_set_default_priority		= 默认优先级只能设置一次，或只能由对象自身设置。
+prioritytrait_no_set_precision				= 精度只能设置一次，或只能由对象自身设置。
+weak_no_set_discard_invalid					= “{0}”.DiscardInvalid 只能设置一次，或只能由对象自身设置。
+
+map_addition_disallowed						= 无法向映射中添加新项目。
+map_item_unremovable						= 无法从映射中删除该项目。
+map_data_not_iterable						= 数据必须是一个数组或是一个实现 Traversable 接口的对象。
+map_readonly								= {0} 是只读的。
+map_readonly_set							= {0} 的只读状态一经设置便不能再更改。
+
+tnull_clone_disallowed						= TNull 单例不能被克隆。请改用 TNull::null()。
+
+weakcallablecollection_callable_required	= TWeakCallableCollection 只能接受可调用对象。
+
+arraysubscription_no_change					= TArraySubscription.{0} 在订阅之后不能再更改。
+arraysubscription_no_null_key				= TArraySubscription 不能订阅 ArrayAccess 对象上的 null 键。
+arraysubscription_index_invalid				= TArraySubscription 处于列表模式（isAssociative = false），但键“{0}”无效（数量：{1}）。
+eventsubscription_no_setcollection			= TEventSubscription.Array 不能被直接设置。
+eventsubscription_no_change					= TEventSubscription.{0} 在订阅之后不能再更改。
+
+application_includefile_invalid				= 无法找到应用配置文件 {0}。请确认它以命名空间格式指定，并且文件以“.xml”或“.php”结尾。
+application_basepath_invalid				= 应用基础路径“{0}”不存在或不是一个目录。
+application_runtimepath_invalid				= 应用运行时路径“{0}”不存在，或 Web 服务器进程无法写入该目录。
+application_service_class_not_found			= 服务类“{0}”不存在。
+application_service_class_not_service		= 服务类“{0}”没有实现 IService。
+application_service_class_required			= registerService 需要为服务“{0}”提供类名或 serviceConfig 数组。
+application_service_default_unregister		= 默认页面服务“{0}”不能被注销。
+service_csrf_token_invalid					= 服务“{0}”需要一个有效的 CSRF 令牌。
+application_moduleid_duplicated				= 应用模块 ID“{0}”不唯一。
+application_runtimepath_failed				= 无法创建运行时路径“{0}”。请确认父目录存在，并且可被 Web 进程写入。
+application_module_required_dep_missing		= 模块“{0}”对模块“{1}”有必需的依赖，但后者未在应用中注册。
+application_module_dependency_cycle			= 在以下模块之间检测到依赖循环：{0}。
+application_module_dependency_self_reference	= 模块“{0}”将自身声明为依赖，这是不允许的。
+
+appconfig_aliaspath_invalid					= 应用配置 <alias id="{0}"> 使用了一个无效的文件路径“{1}”。
+appconfig_alias_invalid						= 应用配置 <alias> 元素必须同时具有“id”属性和“path”属性。
+appconfig_alias_redefined					= 应用配置 <alias id="{0}"> 不能被重新定义。
+appconfig_using_invalid						= 应用配置 <using> 元素必须具有“namespace”属性。
+appconfig_moduleid_required					= 应用配置 <module> 元素必须具有“id”属性。
+appconfig_moduletype_required				= 应用配置 <module id="{0}"> 必须具有“class”属性。
+appconfig_moduletype_inapplicable			= 应用配置 <module id="{0}"> 不能具有“class”属性。
+appconfig_serviceid_required				= 应用配置 <service> 元素必须具有“id”属性。
+appconfig_servicetype_required				= 应用配置 <service id="{0}"> 必须具有“class”属性。
+appconfig_parameterid_required				= 应用配置 <parameter> 元素必须具有“id”属性。
+appconfig_includefile_required				= 应用配置 <include> 元素必须具有“file”属性。
+appconfig_paths_invalid						= 应用配置 <paths> 不能包含 <{0}> 元素。
+appconfig_modules_invalid					= 应用配置 <modules> 不能包含 <{0}> 元素。
+appconfig_services_invalid					= 应用配置 <services> 不能包含 <{0}> 元素。
+appconfig_parameters_invalid				= 应用配置 <parameters> 不能包含 <{0}> 元素。
+appconfig_tag_invalid						= 应用配置不能包含 <{0}> 元素。
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey 不能为空。
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey 不能为空。
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey 不能为空。
+securitymanager_mcryptextension_required	= 使用 TSecurityManager 的加密功能需要 Mcrypt PHP 扩展。
+securitymanager_mcryptextension_initfailed	= TSecurityManager 初始化 mcrypt 模块失败。
+
+uri_format_invalid							= “{0}”不是一个合法的 URI。
+
+httprequest_browscap_required				= THttpRequest 需要在 php.ini 中配置 browscap 指令。
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator 只能包含一个字符。
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager“{0}”所指的模块不存在。
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager“{0}”所指的模块必须继承自 TUrlManager。
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie 为 false，此时需要一个会话模块。
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection 只能接受 THttpCookie 对象。
+
+httpresponse_file_inexistent				= THttpResponse 无法发送文件“{0}”。该文件不存在。
+httpresponse_responsedata_method_unavailable	= THttpResponse：方法“{0}”必须由实现了它的适配器提供，否则无法使用。
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager“{0}”所指的模块不存在。
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager“{0}”所指的模块必须继承自 THttpHeadersManager。
+
+httpheadersmanager_header_required			= THttpHeadersManager 只能包含 THttpHeader 或其子类。
+httpheadersmanager_headerclass_missing		= THttpHeadersManager 的 <headerclass> 条目缺少必需的“name”或“class”属性。
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID 在会话启动后不能再修改。
+httpsession_sessionname_unchangeable		= THttpSession.SessionName 在会话启动后不能再修改。
+httpsession_sessionname_invalid				= THttpSession.SessionName 只能包含字母和数字字符。
+httpsession_savepath_unchangeable			= THttpSession.SavePath 在会话启动后不能再修改。
+httpsession_savepath_invalid				= THttpSession.SavePath“{0}”无效。
+httpsession_storage_unchangeable			= THttpSession.Storage 在会话启动后不能再修改。
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode 在会话启动后不能再修改。
+httpsession_autostart_unchangeable			= THttpSession.AutoStart 在会话模块初始化后不能再修改。
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability 在会话启动后不能再修改。
+httpsession_gcprobability_invalid			= THttpSession.GCProbability 必须是 0 到 100 之间的整数。
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID 在会话启动后不能再修改。
+httpsession_transid_cookieonly				= 当 THttpSession.CookieMode 设置为 Only 时，不能设置 THttpSession.UseTransparentSessionID。
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout 在会话启动后不能再修改。
+httpsession_handler_invalid					= THttpSessionHandler 的构造函数参数只能接受 THttpSession 对象
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath“{0}”无效。请确认它以命名空间格式指定，并且指向一个可被 Web 服务器进程写入的目录。
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath 在模块初始化后不能再修改。
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl 在模块初始化后不能再修改。
+assetmanager_filepath_invalid				= TAssetManager 正在发布一个无效的文件“{0}”。
+assetmanager_tarchecksum_invalid			= TAssetManager 正在发布一个校验和“{0}”无效的 tar 文件。
+assetmanager_tarfile_invalid				= TAssetManager 正在发布一个无效的 tar 文件“{0}”。
+assetmanager_tarfile_extract_failed			= TAssetManager 解压 tar 文件“{0}”失败。
+assetmanager_source_directory_invalid		= TAssetManager 正在复制一个无效的目录“{0}”。
+
+cache_primary_duplicated					= 最多只允许一个主缓存模块。{0} 正试图注册为另一个主缓存。
+psrcache_backing_cache_required				= 必须设置 TPsrCache.BackingCacheId 或 TPsrCache.BackingCache。
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId“{0}”没有指向任何应用模块。
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId“{0}”必须指向一个实现 Psr\SimpleCache\CacheInterface 或 Psr\Cache\CacheItemPoolInterface 的模块。
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache“{0}”是此 TPsrCache 的 PSR 适配器；它会读写回同一个缓存。
+psrcachebacking_cache_required				= {0} 需要一个后备缓存。请设置 {0}.BackingCacheId、{0}.BackingCache，或配置一个应用主缓存。
+psrcachebacking_cache_not_found				= {0}.BackingCacheId“{1}”没有指向任何应用模块。
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId“{1}”必须指向一个 Prado\Caching\ICache 模块。
+psrcachebacking_key_invalid					= {0} 的缓存键必须是不包含保留字符 {}()/\@: 的非空字符串，但给定的是“{1}”。
+sqlitecache_extension_required				= TSqliteCache 需要 SQLite PHP 扩展。
+sqlitecache_dbfile_required					= 必须设置 TSqliteCache.DbFile。
+sqlitecache_connection_failed				= TSqliteCache 连接数据库失败。{0}。
+sqlitecache_table_creation_failed			= TSqliteCache 创建缓存数据库失败。{0}。
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile 在模块初始化后不能再修改。
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile 无效。请确认它以正确的命名空间格式指定。
+
+dbcache_unavailable							= TDbCache 需要 PDO PHP 扩展。
+
+etcdcache_transport_required				= TEtcdCache 需要 cURL PHP 扩展或启用 allow_url_fopen。
+
+memcache_extension_required					= TMemCache 需要 memcache PHP 扩展。
+memcache_connection_failed					= TMemCache 连接 memcache 服务器 {0}:{1} 失败。
+memcache_not_initialized					= 在模块初始化之前不能设置 TMemCache 的选项。
+
+apccache_extension_required					= TAPCCache 需要 APC PHP 扩展。
+apccache_extension_not_enabled				= TAPCCache 需要在 php.ini 中设置 apc.enabled = 1 才能工作。
+apccache_extension_not_enabled_cli			= TAPCCache 需要在 php.ini 中设置 apc.enable_cli = 1 才能在 PHP 命令行下工作。
+
+cachesize_item_exceeds_maximum_size			= 缓存项大小为 {0} 字节，超过了配置的 MaximumSize（{1} 字节）。
+
+filecache_directory_required				= 必须设置 TFileCache.Directory。
+filecache_directory_create_failed			= TFileCache 无法创建缓存目录“{0}”。
+filecache_directory_not_writable			= TFileCache 缓存目录“{0}”不可写。
+filecache_hash_token_identity				= TFileCache.hashToken 必须对其输入进行转换；子类实现原样返回了令牌。
+filecache_hash_token_path_separator			= TFileCache.hashToken 不能返回包含路径分隔符（"/" 或 "\"）的值；子类实现返回了不安全的哈希。
+
+memorycache_backing_file_directory_not_found	= TMemoryCache.BackingFile 路径“{0}”所在的目录不存在。
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType“{0}”无效。有效值为“PHP”和“JSON”。
+serializingcache_encoding_invalid			= TSerializingCache.Encoding“{0}”无效。有效值为“None”、“Base64”和“Hex”。
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager“{0}”无效。它必须是 TSecurityManager 模块 ID 或 TSecurityManager 实例。
+serializingcache_json_encode_failed			= TSerializingCache 对该值进行 JSON 编码失败：{0}。
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} 没有指向一个有效的目录。
+cachedependencylist_cachedependency_required	= 只有实现 ICacheDependency 的对象才能被添加到 TCacheDependencyList 中。
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath“{0}”无效。请确认它以命名空间格式指定，并且指向一个包含错误模板文件的有效目录。
+
+pageservice_basepath_invalid				= TPageService.BasePath“{0}”不是一个有效的目录。
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage 在服务初始化后不能再修改。
+pageservice_basepath_unchangeable			= TPageService.BasePath 在服务初始化后不能再修改。
+pageservice_pageclass_invalid				= 页面类 {0} 无效。它必须是 TPage 或继承自 TPage。
+pageservice_includefile_invalid				= 无法找到页面服务配置 {0}。请确认它以命名空间格式指定，并且文件以“.xml”或“.php”结尾。
+
+pageserviceconf_file_invalid				= 无法打开页面目录配置文件“{0}”。
+pageserviceconf_aliaspath_invalid			= 页面目录配置文件“{2}”中的 <alias id="{0}"> 使用了一个无效的文件路径“{1}”。
+pageserviceconf_alias_invalid				= 页面目录配置文件“{0}”中的 <alias> 元素必须同时具有“id”属性和“path”属性。
+pageserviceconf_using_invalid				= 页面目录配置文件“{0}”中的 <using> 元素必须具有“namespace”属性。
+pageserviceconf_module_invalid				= 页面目录配置文件“{0}”中的 <module> 元素必须具有“id”属性。
+pageserviceconf_moduletype_required			= 页面目录配置文件“{1}”中的 <module id="{0}"> 必须具有“class”属性。
+pageserviceconf_parameter_invalid			= 页面目录配置文件“{0}”中的 <parameter> 元素必须具有“id”属性。
+pageserviceconf_page_invalid				= 页面目录配置文件“{0}”中的 <page> 元素必须具有“id”属性。
+pageserviceconf_includefile_required		= 页面配置 <include> 元素必须具有“file”属性。
+
+basebehavior_cannot_setname_with_owner		= 行为附加之后，TBaseBehavior.Name“{0}”不能再更改（为“{1}”）。
+basebehavior_sync_no_owner					= TBaseBehavior“{0}”没有所有者，无法在没有所有者的组件上同步事件处理函数。
+basebehavior_sync_not_owner					= TBaseBehavior“{0}”不能在非其所有者的对象上同步事件处理函数。
+behavior_has_owner							= TBehavior“{0}”只能附加到一个所有者。
+behavior_bad_attach_component				= TBehavior“{0}”只能附加到 TComponent。
+behavior_detach_without_owner				= TBehavior“{0}”没有所有者，无法分离。
+behavior_detach_wrong_owner					= TBehavior“{0}”不能从非其所有者的对象上分离。
+behavior_property_unchangeable				= {1}.{0} 在行为附加后不能再修改。
+behavior_requires_owner						= {1}.{0} 需要一个所有者。
+classbehavior_owner_attach_once				= TClassBehavior“{0}”只能附加到同一所有者一次。否则处理函数将不唯一。
+classbehavior_bad_attach_component			= TClassBehavior“{0}”只能附加到 TComponent。
+classbehavior_detach_without_owner			= TClassBehavior“{0}”没有所有者，无法分离。
+classbehavior_detach_wrong_owner			= TClassBehavior“{0}”不能从非其所有者的对象上分离。
+
+callchain_bad_dynamic_event					= 触发了 TCallChain.{0}，但期望的是 {1}。
+
+behaviormodule_behavior_as_array_required	= php 形式的 <behavior> 必须是一个数组。
+behaviormodule_behaviorname_required		= <behavior> 必须包含用于附加行为的“name”属性。
+behaviormodule_behaviorclass_required		= <behavior> 必须包含用于定义行为类的“class”属性。
+behaviormodule_attachto_class_required		= <behavior> 必须具有“attachto”或“attachtoclass”属性。
+behaviormodule_attachto_and_class_only_one	= <behavior> 只能具有“attachto”或“attachtoclass”属性中的一个，不能同时具有两者。
+behaviormodule_behaviorowner_required		= 找不到 <behavior> attachto“{0}”所指的对象。
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors 不能设置为无效类型“{0}”
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader 必须具有行为名称（Behavior Name）。
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader 必须具有行为类（Behavior Class）。
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader 必须具有“attachto”或“attachtoclass”属性。
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader 只能具有“attachto”或“attachtoclass”属性中的一个。
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader 的 attachto“module:”需要一个模块 ID。
+behaviorparameterloader_behaviorowner_required	= 找不到 TBehaviorParameterLoader 的 attachto“{0}”所指的对象。
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader 找不到用于附加行为的模块“{0}”。
+
+evaluationfilter_statements_denied			= 组件“{0}”不能执行 PHP 代码“{1}”，因为 TEvaluationFilterBehavior.AllowStatements 为 false。
+evaluationfilter_code_denied				= 组件“{0}”不能执行“{1}”，因为 TEvaluationFilterBehavior 不允许“{2}”。
+
+maplazyloadbehavior_handler_not_callable	= 构造 TMapLazyLoadBehavior 必须提供一个可调用对象。
+maproutebehavior_handler_not_callable		= 构造 TMapRouteBehavior 必须提供一个可调用对象。
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior 必须具有 Parameter 属性。
+parameterizebehavior_no_property			= TParameterizeBehavior 必须具有 Property 属性。
+parameterizebehavior_owner_get_only_property	= TParameterizeBehavior 的所有者具有属性“{0}”，但该属性是只读的。
+parameterizebehavior_owner_has_no_property	= TParameterizeBehavior 的所有者没有属性“{0}”。
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior 在附加之后不能将 Parameter 置空。
+
+processhelper_no_forking					= 不支持进程分叉（fork）。
+processhelper_no_signals					= 在 Windows 上无法发送进程信号。
+
+serializableclosure_no_decrypter			= 未配置解密器，TSerializableClosure 无法解密已加密的闭包载荷。
+serializableclosure_decrypt_failed			= TSerializableClosure 解密已加密的闭包载荷失败；载荷可能已被篡改，或密钥已更改。
+
+appsignals_no_change						= TApplicationSignals::{0} 在附加之后不能再更改。
+appsignals_not_a_dispatcher					= “{0}”不是一个 TSignalsDispatcher。
+
+signalsdispatcher_bad_pid					= “{0}”不是一个有效的 PID。
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} 在附加之后不能再更改。
+
+initialized_property_unchangeable			= {1}.{0} 已经初始化，不能再设置。
+initialized_requires_initialization			= {1}.{0} 在处理之前需要先初始化。
+
+template_closingtag_unexpected				= 发现了意外的结束标签“{0}”。
+template_closingtag_expected				= 期望结束标签“{0}”，但发现的是“{1}”。
+template_directive_nonunique				= 指令“<%@ ... %>”必须出现在模板开头，并且最多只能出现一次。
+template_comments_forbidden					= 属性标签内不允许使用模板注释。
+template_matching_unexpected				= 意外的匹配。
+template_property_unknown					= {0} 没有名为“{1}”的属性。
+template_event_unknown						= {0} 没有名为“{1}”的事件。
+template_property_readonly					= {0} 的属性“{1}”是只读的。
+template_event_forbidden					= {0} 是非控件组件。在模板中不能为其事件“{1}”附加处理函数。
+template_databind_forbidden					= {0} 是非控件组件。不能将表达式绑定到其属性“{1}”。
+template_component_required					= “{0}”不是一个组件。模板中只能出现组件。
+template_format_invalid						= 模板语法无效：{0}
+template_property_duplicated				= 属性 {0} 被配置了两次或更多次。
+template_eventhandler_invalid				= {0}.{1} 只能接受静态字符串。
+template_controlid_invalid					= {0}.ID 只能接受静态文本字符串。
+template_controlskinid_invalid				= {0}.SkinID 只能接受静态文本字符串。
+template_content_unexpected					= 实例化模板时遇到意外的内容：{0}。
+template_include_invalid					= 模板包含无效。请确认 {0} 是一个有效的命名空间，并且指向一个扩展名为 .tpl 的已存在的模板文件。
+template_tag_unexpected						= 属性 {0} 的初始化内容包含未知的标签类型 {1}。
+
+xmldocument_file_read_failed				= TXmlDocument 无法读取文件“{0}”。
+xmldocument_file_write_failed				= TXmlDocument 无法写入文件“{0}”。
+
+xmlelementlist_xmlelement_required			= TXmlElementList 只能接受 TXmlElement 对象。
+
+xmlelement_null_tag							= TXmlElement 的标签名不能为 null。
+xmlelement_empty_tag						= TXmlElement 的标签名不能为空字符串。
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action 的值只能是“allow”或“deny”。
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb 的值只能是“get”或“post”。
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection 只能接受 TAuthorizationRule 对象。
+
+usermanager_userfile_invalid				= TUserManager.UserFile“{0}”不是一个有效的文件。
+usermanager_userfile_unchangeable			= TUserManager.UserFile 不能修改。用户模块已经初始化完毕。
+
+integritymanager_entry_invalid				= TIntegrityManager 中 URL“{0}”的完整性条目需要非空的 url 和 hash。
+integritymanager_algorithm_invalid			= TIntegrityManager 不支持算法“{0}”；请使用以下算法之一：{1}。
+integritymanager_file_unreadable			= TIntegrityManager 无法读取文件“{0}”以计算其完整性。
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile“{0}”不是一个有效的文件。
+integritymanager_integrityfile_unchangeable	= {1}.{0} 不能修改。完整性模块已经初始化完毕。
+
+javascript_script_integrity_required		= 远程脚本“{0}”没有注册子资源完整性（Subresource Integrity），但完整性校验是必需的。
+
+authmanager_usermanager_required			= 必须为 TAuthManager.UserManager 指定一个值。
+authmanager_usermanager_inexistent			= TAuthManager.UserManager“{0}”没有指向任何应用模块的 ID。
+authmanager_usermanager_invalid				= TAuthManager.UserManager“{0}”没有指向一个有效的 TUserManager 应用模块。
+authmanager_session_required				= TAuthManager 需要一个会话应用模块。
+
+permissions_events_invalid					= TPermissionEvent.Event 不能设置为无效值“{0}”。
+permissions_rules_invalid					= TPermissionEvent.Rules 不能设置为无效值“{0}”。
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter“{0}”没有指向任何应用模块的 ID。
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter“{0}”没有指向一个有效的 TDbParameterModule 应用模块。
+permissions_init_once						= TPermissionsManager.init 只能初始化一次。
+permissions_duplicate_permission			= TPermissionsManager 权限“{0}”已经注册。
+permissions_role_children_invalid			= TPermissionsManager 配置中的角色“{0}”具有无效的子项“{1}”。
+permissions_rule_invalid					= TPermissionsManager 配置中的权限规则“{0}”的属性不是数组。
+permissions_rules_require_name				= TPermissionsManager 的规则必须具有权限“name”属性。
+permissions_role_rule_nested				= TPermissionsManager 配置中的角色“{0}”包含 <permissionrule>。权限规则必须是 permissions 配置元素的直接子元素。
+permissions_rule_class_invalid				= TPermissionsManager 权限规则类“{0}”是一个目录命名空间，而不是类。
+permissions_children_invalid				= TPermissionsManager.*RoleChildren 的子项必须是字符串或数组，但实际为“{0}”。
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile“{0}”不是一个有效的文件。
+
+thememanager_basepath_invalid				= TThemeManager.BasePath“{0}”不是一个有效的路径别名。请确认已在配置中定义了该别名，并且它指向一个有效的目录。
+thememanager_basepath_invalid2				= TThemeManager.BasePath“{0}”不是一个有效的目录。
+thememanager_basepath_unchangeable			= TThemeManager.BasePath 在模块初始化后不能再修改。
+thememanager_theme_invalid					= TThemeManager 主题名称“{0}”必须是单个目录名。
+
+theme_baseurl_required						= 必须设置 TThemeManager.BasePath。默认情况下，假定为应用入口脚本所在目录下名为“themes”的目录。
+theme_path_inexistent						= 主题路径“{0}”不存在。
+theme_control_nested						= 主题“{1}”中控件类型“{0}”的皮肤不能嵌套在另一个皮肤内。
+theme_skinid_duplicated						= 主题“{2}”中的 SkinID“{0}.{1}”重复。
+theme_databind_forbidden					= 主题“{0}”中的控件皮肤“{1}.{2}”不能对属性“{3}”使用数据绑定。
+theme_property_readonly						= 皮肤正被应用到只读的控件属性“{0}.{1}”。
+theme_property_undefined					= 皮肤正被应用到不存在的控件属性“{0}.{1}”。
+theme_tag_unexpected						= 属性 {0} 的初始化内容包含未知的标签类型 {1}。
+
+control_object_reregistered					= 发现重复的对象 ID“{0}”。
+control_id_invalid							= {0}.ID“{1}”无效。只允许使用字母、数字和下划线字符，并且第一个字符必须是字母或下划线。
+control_skinid_unchangeable					= {0}.SkinID 在控件已应用皮肤或子控件已创建之后不能再修改。
+control_enabletheming_unchangeable			= {0}.EnableTheming 在子控件已创建之后不能再修改。
+control_stylesheet_applied					= StyleSheet 皮肤已经应用到 {0}。
+control_id_nonunique						= {0}.ID“{1}”在同一命名容器下的所有控件中不唯一。
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth“{1}”不能为负数。
+
+templatecontrol_mastercontrol_invalid		= 母版控件必须是 TTemplateControl 类型或其子类。
+templatecontrol_mastercontrol_required		= 控件“{0}”使用了 TContent，因此需要一个母版控件。
+templatecontrol_contentid_duplicated		= TContent ID“{0}”重复。
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder ID“{0}”重复。
+templatecontrol_directive_invalid			= {0}.{1} 通过模板指令设置时只能接受静态文本字符串。
+templatecontrol_placeholder_inexistent		= TContent“{0}”没有匹配的 TContentPlaceHolder。
+
+page_form_duplicated						= 一个页面最多只能包含一个 TForm。其余表单请使用普通的 HTML form 标签。
+page_isvalid_unknown						= TPage.IsValid 尚未被求值。
+page_postbackcontrol_invalid				= 无法确定回发控件“{0}”。
+page_control_outofform						= {0}“{1}”必须包含在 TForm 之内。
+page_head_duplicated						= 一个页面最多只能包含一个 THead。
+page_head_required							= 页面模板中需要一个 THead 控件，以便在 HTML head 部分渲染 CSS 和 js。
+page_statepersister_invalid					= 页面状态持久化器必须实现 IPageStatePersister 接口。
+
+csmanager_pradoscript_invalid				= 未知的 Prado 脚本库名称“{0}”。
+csmanager_pradoscript_notloaded				= Prado 脚本库“{0}”尚未加载。
+csmanager_pradostyle_invalid				= 未知的 Prado 样式库名称“{0}”。
+csmanager_invalid_packages					= “{0}”中定义的 javascript 包含有未知的包“{1}”。有效的包为“{2}”。
+
+httpclient_transport_error					= HTTP 客户端传输错误（代码 {0}）：{1}
+httpclient_http_error						= HTTP 错误响应，状态码为 {0}。
+httpclient_transport_required				= 没有可用的 HTTP 传输：cURL 扩展未加载，并且 allow_url_fopen 已关闭。
+
+restclient_invalid_header					= TRestClient 头“{0}”的名称无效，或其值包含 CR/LF。
+restclient_basicauth_username_colon			= TRestClient 的 Basic 认证用户名不能包含冒号（RFC 7617 中的凭据分隔符）。
+
+contentplaceholder_id_required				= TContentPlaceHolder 必须具有 ID。
+
+content_id_required							= TContent 必须具有 ID。
+
+controlcollection_control_required			= TControlList 只能接受字符串或 TControl 对象。
+
+webcontrol_accesskey_invalid				= {0}.AccessKey“{1}”无效。它必须是单个字符。
+webcontrol_dir_invalid						= {0}.Dir“{1}”无效。允许的值为“ltr”、“rtl”和“auto”。
+webcontrol_style_invalid					= {0}.Style 只能接受字符串值。
+
+listcontrol_selection_invalid				= {0} 在执行数据绑定之前设置了无效的选中项。
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex 的值 {1} 无效。
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue 的值“{1}”无效。
+listcontrol_expression_invalid				= {0} 执行了一个无效的表达式“{1}”：{2}
+listcontrol_multiselect_unsupported			= {0} 不支持多选。
+
+label_associatedcontrol_invalid				= 找不到 TLabel.AssociatedControl“{0}”。
+
+textbox_suggestionlist_invalid				= 找不到 TTextBox.SuggestionList“{0}”。
+
+output_forcontrol_invalid					= 找不到 TOutput.ForControl“{0}”。
+
+baseterm_targetcontrol_invalid				= 找不到 {0}.TargetControl“{1}”。
+baseterm_marklimit_invalid					= {0}.MarkLimit“{1}”不能为负数。
+baseterm_depthlimit_invalid					= {0}.DepthLimit“{1}”不能为负数。
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit“{0}”必须在 0 到过滤控件的 RenderFilterDepth {1} 之间。
+
+hiddenfield_focus_unsupported				= THiddenField 不支持设置输入焦点。
+hiddenfield_theming_unsupported				= THiddenField 不支持主题。
+hiddenfield_skinid_unsupported				= THiddenField 不支持控件皮肤。
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton“{0}”没有指向一个已存在的按钮控件。
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding 必须是大于或等于 -1 的整数。
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing 必须是大于或等于 -1 的整数。
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History 必须是大于 0 的整数。
+
+listitemcollection_item_invalid				= TListItemCollection 只能接受字符串或 TListItem 对象。
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices 是只读的。
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack 是只读的。
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex 是只读的。
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices 是只读的。
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue 是只读的。
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices 是只读的。
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile“{0}”不存在。
+logrouter_routeclass_required				= <route> 配置中必须具有 class 属性。
+logrouter_routetype_required				= 日志路由必须是 TLogRoute 或其派生类的实例。
+
+dblogroute_connectionid_invalid				= TDbLogRoute 无法创建数据库连接 ID“{0}”。
+dblogroute_insert_failed					= TDbLogRoute 无法将日志插入到“{0}”中。
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod“{0}”无效
+dblogroute_table_nonexistent				= TDbLogRoute 表“{0}”不存在，必须先创建。
+dblogroute_order_invalid					= TDbLogRoute 排序“{0}”必须列出列名，每个列名后可选跟 ASC 或 DESC。
+dblogroute_limit_invalid					= TDbLogRoute 限制“{0}”必须是行数、“count OFFSET offset”或“offset, count”。
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath“{0}”必须是以命名空间格式指定的目录，并且可被 Web 服务器进程写入。
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize 必须大于 0。
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles 必须大于 0。
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom 不能为空。
+emaillogroute_mail_failed					= TEmailLogRoute 向“{0}”发送日志失败。
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags 无效：“{0}”。
+syslogroute_bad_facility					= TSysLogRoute.Facility 无效：“{0}”。
+
+psrlogroute_logger_required					= 必须设置 TPsrLogRoute.Logger。
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger“{0}”不是 Psr\Log\LoggerInterface 的模块 ID 或类名。
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger 不能是 TPsrLogger；它会把日志写回同一个 TLogger。
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns 不能小于 0。
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate 为空或包含无效的控件 ID 路径。
+basevalidator_validatable_required			= {0}.ControlToValidate 必须指向一个实现 IValidatable 接口的控件。
+basevalidator_forcontrol_unsupported		= 不支持 {0}.ForControl。
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare 包含无效的控件 ID 路径。
+
+filevalidator_fileupload_required			= {0}.ControlToValidate 必须指向一个 TFileUpload 控件。
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate 包含无效的 TListControl ID 路径，“{1}”是一个 {2}。
+
+repeater_template_required					= TRepeater.{0} 需要一个实现 ITemplate 接口的模板实例。
+repeater_itemtype_unknown					= 未知的 repeater 项类型 {0}。
+repeateritemcollection_item_invalid			= TRepeaterItemCollection 只能接受 TControl 或其派生类的实例对象。
+
+datalist_template_required					= TDataList.{0} 需要一个实现 ITemplate 接口的模板实例。
+datalistitemcollection_datalistitem_required	= TDataListItemCollection 只能接受 TDataListItem 对象。
+
+datagrid_template_required					= TDataGrid.{0} 需要一个实现 ITemplate 接口的模板实例。
+templatecolumn_template_required			= TTemplateColumn.{0} 需要一个实现 ITemplate 接口的模板实例。
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex 不能小于 0。
+datagrid_pagesize_invalid					= TDataGrid.PageSize 必须大于 0。
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount 不能小于 0。
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection 只能接受 TDataGridItem 对象。
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection 只能接受 TDataGridColumn 对象。
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount 必须大于 0。
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor 正在对无效的数据求取字段值。请确认数据是数组、TMap、TList 或包含指定字段“{0}”的对象。
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor 正在求取未知字段“{0}”的数据值：{1}。
+
+tablerowcollection_tablerow_required		= TTableRowCollection 只能接受 TTableRow 对象。
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection 只能接受 TTableColumn 对象。
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection 只能接受 TTableColumnGroup 对象。
+tablecolumn_span_invalid					= TTableColumn 的 Span 必须大于或等于 1；给定的是 {0}。
+
+tablecellcollection_tablerow_required		= TTableCellCollection 只能接受 TTableCell 对象。
+
+multiview_view_required						= TMultiView 只能接受 TView 作为子控件。
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex 的索引“{0}”无效。
+multiview_view_inexistent					= TMultiView 找不到指定的视图。
+multiview_viewid_invalid					= TMultiView 找不到要切换到的视图“{0}”。
+
+viewcollection_view_required				= TViewCollection 只能接受 TView 作为其元素。
+
+view_visible_readonly						= TView.Visible 是只读的。请使用 TView.Active 切换其可见性。
+
+wizard_step_invalid							= 在向导步骤集合中找不到要激活的步骤。
+wizard_command_invalid						= 无效的向导导航命令“{0}”。
+
+table_tablesection_outoforder				= TTable 的表格区段必须按以下顺序排列：Header、Body、Footer。
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType 是只读的。
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection 只能接受 TWizardStep 或其派生类的对象。
+
+texthighlighter_stylesheet_invalid			= 找不到 TTextHighlighter 的样式表文件。
+
+hotspotcollection_hotspot_required			= THotSpotCollection 只能接受 THotSpot 或其派生类的实例。
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode 是只读的。
+htmlarea_tarfile_invalid					= THtmlArea 找不到 TinyMCE 的 tar 文件。
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile 不能更改，因为该模块已经初始化完毕。
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile“{0}”无效。请确认它以命名空间格式指定，并且文件扩展名为“.xml”或“.php”。
+parametermodule_parameterid_required		= Parameter 元素必须具有“id”属性。
+
+datagridcolumn_id_invalid					= {0}.ID“{1}”无效。只允许使用字母、数字和下划线字符，并且第一个字符必须是字母或下划线。
+datagridcolumn_expression_invalid			= {0} 执行了一个无效的表达式“{1}”：{2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID 被设置为无效的缓存模块 ID {0}。该模块不存在，或没有实现 ICache 接口。
+outputcache_duration_invalid				= {0}.Duration 必须是不小于 0 的整数。
+
+stack_data_not_iterable						= TStack 只能从数组或可遍历对象中获取数据。
+stack_empty									= TStack 为空。
+
+queue_data_not_iterable						= TQueue 只能从数组或可遍历对象中获取数据。
+queue_empty									= TQueue 为空。
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount 必须是不小于 1 的整数。
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex 越界。
+pager_pagecount_invalid						= TPager.PageCount 不能小于 0。
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} 必须是指向 TDataBoundControl 派生控件的有效 ID 路径。
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize 必须是不小于 1 的整数。
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount 必须是不小于 0 的整数。
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex 越界。
+databoundcontrol_datasource_invalid			= {0}.DataSource 无效。
+databoundcontrol_datasourceid_inexistent	= DataSourceID“{0}”没有指向一个已存在的控件。
+databoundcontrol_datasourceid_invalid		= DataSourceID“{0}”必须指向一个实现 IDataSource 的控件。
+databoundcontrol_datamember_invalid			= DataMember“{0}”不是数据源中任何视图的名称。
+
+datasourcecontrol_focus_unsupported			= {0} 不支持 Focus。
+datasourcecontrol_enabletheming_unsupported	= {0} 不支持 EnableTheming。
+datasourcecontrol_skinid_unsupported		= {0} 不支持 SkinID。
+datasourcecontrol_visible_unsupported		= {0} 不支持 Visible。
+datasourceview_insert_unsupported			= {0} 不支持插入。
+datasourceview_update_unsupported			= {0} 不支持更新。
+datasourceview_delete_unsupported			= {0} 不支持删除。
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource 需要一个数组、IDataSource 或 Traversable 数据源。
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView 需要 null、数组或 Traversable 数据源。
+
+clientscript_invalid_file_position			= TClientScript 控件“{0}”的文件位置“{1}”无效，必须是“Head”、“Here”或“Begin”。
+clientscript_invalid_package_path			= TClientScript 控件“{1}”的 PackagePath“{0}”无效。
+
+tdatepicker_autopostback_unsupported		= “{0}”不支持 AutoPostBack。
+globalization_cache_path_failed				= 无法创建翻译消息缓存路径“{0}”。请确认父目录存在，并且可被 Web 进程写入。
+globalization_source_path_failed			= 无法创建翻译消息路径“{0}”。请确认父目录存在，并且可被 Web 进程写入。
+messagesource_connectionid_invalid			= MessageSource_Database.source“{0}”没有指向一个有效的 TDataSourceConfig 模块。
+messagesource_connectionid_required			= 必须在 MessageSource_Database.source 中指定 ConnectionID。
+
+callback_not_support_no_priority_state_update	= 回调请求不支持无优先级的页面状态更新。
+callback_invalid_callback_options			= “{1}”不是回调控件“{0}”的有效 TCallbackOptions 控件。
+callback_invalid_clientside_options			= 回调的 ClientSide 属性必须是 TCallbackOptions 控件 ID 的字符串，或 TCallbackClientSideOptions 的实例。
+callback_invalid_handler					= 回调处理器无效，控件 {0} 必须实现 ICallbackEventHandler。
+callback_invalid_target						= 回调目标无效，不存在 ID 为 {0} 的控件。
+
+callback_interval_be_positive				= TCallbackTimer“{0}”的 Interval 必须严格大于零秒。
+callback_decay_be_not_negative				= TCallbackTimer“{0}”的衰减率不能为负数。
+
+callback_no_autopostback					= 控件“{0}”不能启用 AutoPostBack。
+
+xmltransform_xslextension_required			= TXmlTransform 需要 PHP 的 XSL 扩展。
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath“{0}”无效。
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath“{0}”无效。
+xmltransform_transform_required				= TXmlTransform 必须设置 TransformContent 或 TransformPath 属性之一。
+
+ttriggeredcallback_invalid_controlid		= “{0}”的 ControlID 属性不能为空。
+tactivecustomvalidator_clientfunction_unsupported	= {0} 不支持客户端验证函数。
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID“{0}”没有标识一个有效的 TDataSourceConfig 模块。
+dbproperties_property_required				= {1}.{0} 是必需的属性。
+dbproperties_identifier_invalid				= {1}.{0}“{2}”不是一个有效的 SQL 标识符。
+
+dbconnection_open_failed					= TDbConnection 建立数据库连接失败：{0}
+dbconnection_connection_inactive			= TDbConnection 未激活。
+dbconnection_unsupported_driver_charset		= 数据库驱动“{0}”不支持设置字符集。
+dbconnection_charset_unchangeable			= 数据库驱动“{0}”在打开连接后不能更改字符集。字符集是 DSN 参数。
+
+dbcommand_prepare_failed					= TDbCommand 预处理 SQL 语句 "{1}" 失败：{0}
+dbcommand_execute_failed					= TDbCommand 执行 SQL 语句 "{1}" 失败：{0}
+dbcommand_query_failed						= TDbCommand 执行查询 SQL "{1}" 失败：{0}
+dbcommand_column_empty						= TDbCommand 返回了空结果，无法获取标量值。
+dbdatareader_rewind_invalid					= TDbDataReader 是只能向前读取的流，只能遍历一次。
+dbtransaction_transaction_inactive			= TDbTransaction 未激活。
+
+dbcommandbuilder_value_must_not_be_null		= 根据表“{1}”中列“{2}”的定义，属性 {0} 不能为 null。
+
+dbcommon_invalid_table_name					= 找不到数据库表“{0}”。错误信息：{1}。
+dbcommon_invalid_identifier_name			= 数据库标识符名称“{0}”无效，详情请参阅 {1}。
+dbtableinfo_invalid_column_name				= 数据库表“{1}”的列名“{0}”无效。
+dbmetadata_invalid_table_view				= 表/视图名称“{0}”无效，或者表/视图“{0}”不包含任何可访问的列/字段定义。
+dbmetadata_requires_php_version				= 使用 {0} 数据库需要 PHP {1} 或更高版本。
+
+dbtablegateway_invalid_criteria				= 条件对象无效，必须是字符串或 TSqlCriteria 的实例。
+dbtablegateway_no_primary_key_found			= 表“{0}”不包含任何主键字段。
+dbtablegateway_missing_pk_values			= 为表“{0}”构造 IN(key1, key2, ...) 时缺少主键值。
+dbtablegateway_pk_value_count_mismatch		= 为表“{0}”构造 IN( (key1, key2, ..), (key3, key4, ..)) 时复合键的值数量不匹配。
+dbtablegateway_mismatch_args_exception		= TTableGateway 查找方法“{0}”需要 {1} 个参数，但只找到 {2} 个参数。
+dbtablegateway_mismatch_column_name			= 在动态 __call() 方法“{0}”中找不到匹配的列，表“{2}”的有效列为“{1}”。
+dbtablegateway_invalid_table_info			= Table 必须是字符串或 TDbTableInfo 的实例。
+
+resource_not_a_resource						= 期望一个已打开的 PHP 资源，但得到的是“{0}”。
+processfork_failed							= 无法分叉（fork）进程。
+liveprocessfork_readonly_receiver			= TLiveProcessFork 的数据在接收端是只读的；只有发送端可以修改它。
+stream_open_failed							= 无法以模式“{1}”打开流“{0}”：{2}
+binarystream_unexpected_eof					= 流意外结束：需要 {0} 字节，但只读取了 {1} 字节。
+binarystream_short_write					= 写入不完整：需要写入 {0} 字节，但只接受了 {1} 字节。
+streamresourcewrapper_unusable_stream		= 该流既不可读也不可写，无法作为资源暴露。
+streamfilter_already_registered				= 流过滤器“{0}”已经注册。
+streamfilter_registration_failed			= 无法为类“{1}”注册流过滤器“{0}”。
+streamwrapper_already_registered			= 流包装器协议“{0}”已经注册。
+streamwrapper_registration_failed			= 无法为类“{1}”注册流包装器协议“{0}”。
+reservedspace_invalid						= 保留空间需要非负的偏移量和正的长度；给定的偏移量为“{0}”，长度为“{1}”。
+reservedspace_access_denied					= 该操作与偏移量“{0}”处的保留空间重叠。
+multipartstream_element_invalid				= TMultipartStream 元素需要“name”和“contents”。
+builtincompressor_extension_required		= “{0}”压缩器需要“{1}”PHP 扩展。
+builtincompressor_compress_failed			= “{0}”压缩器压缩数据失败。
+builtincompressor_decompress_failed			= “{0}”压缩器解压数据失败；数据可能已损坏或采用了其他格式。
+compression_method_unknown					= 压缩方法“{0}”未知，或其扩展不可用。
+compression_none_available					= 此 PHP 安装中没有可用的压缩方法。
+compressionconfig_method_unknown			= TCompressionConfig.Method“{0}”不是已知的内容编码。已知的编码为：{1}。
+compression_xz_unsupported					= xz/LZMA 没有 PHP 扩展；请安装 belisoful/prado-compression 以获得原生或命令行的 xz 编解码器。
+clicompressor_command_missing				= “{0}”压缩器需要 PATH 中存在以下系统命令之一：“{1}”。
+clicompressor_process_failed				= “{0}”压缩器无法启动“{1}”命令。
+clicompressor_command_failed				= “{0}”压缩器的命令“{1}”以代码 {2} 退出：{3}
+
+socketservermodule_endpoint_required		= TSocketServerModule 需要一个 Endpoint，或一个正的 Port 以组成 Endpoint。
+socketservermodule_serverclass_invalid		= TSocketServerModule 的 ServerClass“{0}”无效。它必须是 TSocketServer 或其子类。
+socketservermodule_scheme_not_stream		= TSocketServerModule 无法在无连接的协议“{0}”上接受连接。请使用 tcp、tls、ssl 或 unix 等流式协议。
+
+bitreader_invalid_bits						= 无法读取 {0} 位；位数必须在 0 和平台整数宽度之间。
+bitreader_64bit_php_required				= 读取 {0} 位需要 64 位的 PHP 构建。
+bitreader_invalid_float_bits				= 无法读取 {0} 位浮点数；只支持 8、16、32 或 64 位。
+bitwriter_invalid_bits						= 无法写入 {0} 位；位数必须在 0 和平台整数宽度之间。
+bitwriter_64bit_php_required				= 写入 {0} 位需要 64 位的 PHP 构建。
+bitwriter_invalid_float_bits				= 无法写入 {0} 位浮点数；只支持 8、16、32 或 64 位。
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile“{0}”不存在。注意，它必须以命名空间格式指定，并且文件扩展名必须是“.xml”或“.php”。
+soapservice_server_invalid					= TSoapService 的 SOAP 服务器类“{0}”无效。它必须是 TSoapServer 或其子类。
+soapservice_serverid_required				= <soap> 元素必须具有“id”属性。
+soapservice_serverid_duplicated				= SOAP 服务器 ID“{0}”重复。
+soapserver_id_invalid						= SOAP 服务器 ID“{0}”无效。它不能以“.wsdl”结尾。
+soapserver_provider_invalid					= 无法解析 TSoapServer 的提供者类“{0}”。
+soapserver_version_invalid					= SOAP 版本“{0}”无效。它必须是“1.1”或“1.2”。
+soapserver_wsdlstyle_invalid				= WSDL 风格“{0}”无效。它必须是“rpc”或“document”。
+soapserver_wsdlstyle_unsupported			= WSDL 风格“{0}”需要 pradosoft/prado-wsdlgenerator 1.2 或更高版本。已安装的生成器只能生成“rpc”。
+
+jsonservice_id_required						= TJsonService 的 JSON 元素中必须具有“id”属性。
+jsonservice_response_type_invalid			= JSON 类 {0} 无效。它必须是 TJsonResponse 或继承自 TJsonResponse。
+jsonservice_class_required					= TJsonService 的 JSON 元素中必须具有“class”属性。
+
+dbusermanager_userclass_required			= 必须设置 TDbUserManager.UserClass。
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass“{0}”不是一个有效的用户类。该类必须继承自 TDbUser。
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID“{0}”没有指向一个有效的 TDataSourceConfig 模块。
+dbusermanager_connectionid_required			= 必须设置 TDbUserManager.ConnectionID。
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID“{0}”没有指向一个有效的 TDataSourceConfig 模块。
+dbpluginmodule_connectionid_required		= 必须设置 TDbPluginModule.ConnectionID。
+
+feedservice_id_required						= TFeedService 的 feed 元素中必须具有“id”属性。
+feedservice_feedtype_invalid				= feed 类“{0}”必须实现 IFeedContentProvider 接口。
+feedservice_class_required					= TFeedService 的 feed 元素中必须具有“class”属性。
+
+tabviewcollection_tabview_required			= TTabPanel 只能接受 TTabView 作为子控件。
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID 的 ID“{0}”无效。
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex 的索引“{0}”无效。
+tabpanel_view_inexistent					= TTabPanel 找不到指定的视图。
+
+cachesession_cachemoduleid_required			= 必须设置 TCacheHttpSession.CacheModuleID。
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID“{0}”指向一个不存在的模块。
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID“{0}”指向的模块没有实现 ICache 接口。
+
+urlmapping_urlmappingpattern_required		= TUrlMapping 只能包含 TUrlMappingPattern 或其子类。
+urlmapping_global_required					= TUrlMapping 必须配置为全局模块。
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile“{0}”不是一个文件。
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile“{0}”必须以命名空间格式指向一个 XML 文件。
+
+urlmappingpattern_serviceparameter_required	= 模式“{0}”必须设置 TUrlMappingPattern.ServiceParameter。
+
+keyboard_forcontrol_required				= TKeyboard.ForControl 不能为空。
+keyboard_forcontrol_invalid					= TKeyboard.ForControl“{0}”无效。
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme 必须是 {0} 到 {1} 之间的整数。
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize 必须是 {0} 到 {1} 之间的整数。
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength 必须是 {0} 到 {1} 之间的整数。
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength 必须是 {0} 到 {1} 之间的整数。
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet 必须是至少包含 2 个字符的字符串。
+captcha_privatekey_unknown					= TCaptcha.PrivateKey 未知。请确认 assets 目录可被 Web 服务器进程写入。
+captcha_gd2_required						= TCaptcha 需要 PHP GD2 扩展。
+captcha_imagettftext_required				= TCaptcha 需要支持 TrueType 字体的 PHP GD2 扩展。
+captcha_imagepng_required					= TCaptcha 需要支持 PNG 图像格式的 PHP GD2 扩展。
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl 必须指向一个已存在的 TCaptcha 控件。
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} 必须指向一个已存在的 TCaptcha 控件。
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 必须指向一个已存在的 TCaptcha 控件。
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey 未知。要使用 reCAPTCHA，必须先获取 API 密钥。
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey 未知。要使用 reCAPTCHA，必须先获取 API 密钥。
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate 必须是 TReCaptcha 的实例。
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName“{0}”只能包含字母、数字、“_”和“-”。
+proofofwork_complexity_invalid				= TProofOfWork.Complexity 必须是 {0} 到 {1} 之间的整数。
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate“{0}”必须指向一个 TProofOfWork 控件。
+
+slider_handle_class_invalid					= TSlider.HandleClass“{0}”不是一个有效的用户类。该类必须继承自 TSliderHandle。
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID“{0}”没有指向一个有效的缓存模块。
+cachepagestatepersister_cache_required		= TCachePageStatePersister 需要加载一个缓存模块。
+cachemoduleid_invalid						= {0}.CacheModuleID“{1}”没有指向一个有效的缓存模块。
+cachemoduleid_cache_required				= {0} 需要一个缓存模块。请配置一个主缓存，或设置 {0}.CacheModuleID。
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout 必须是不小于零的整数。
+
+conditional_condition_invalid				= TConditional.Condition“{0}”不是一个有效的 PHP 表达式：{1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule 找不到用于存储参数数据的数据库表“{0}”。
+dbparametermodule_get_no_blank_key			= TDbParameterModule 不能获取空键。
+dbparametermodule_set_no_blank_key			= TDbParameterModule 不能为空键设置值。
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID“{0}”没有指向一个有效的 TDataSourceConfig 模块。
+dbparametermodule_serializer_not_callable	= TDbParameterModule 的 Serializer 不是可调用对象。
+
+clockawaretrait_invalid_clock_class			= 时钟类“{0}”必须实现 Prado\Util\Clock\IClock。
+utcclock_timezone_fixed						= TUTCClock 固定为 UTC；其他时区请使用 TTimezoneClock。
+
+processcrontask_no_command					= TProcessCronTask“{0}”没有可运行的 Command。
+processcrontask_launch_failed				= TProcessCronTask 启动进程失败：“{0}”。
+processcrontask_write_failed				= TProcessCronTask 无法写入 pid 文件“{0}”。
+closurecrontask_no_closure					= TClosureCronTask“{0}”没有可运行的闭包。
+closurecrontask_closure_required			= TClosureCronTask 需要一个 Closure。
+closurecrontask_invalid_securitymanager		= TClosureCronTask 的 SecurityManagerID“{0}”不是一个 TSecurityManager。
+closurecrontask_decrypt_failed				= TClosureCronTask“{0}”无法解密其闭包载荷。
+cronmethodtask_no_module					= TCronMethodTask 找不到模块“{0}”。
+cron_usermanager_nonexistent				= TCronModule 找不到名为“{0}”的 UserManager。
+cron_usermanager_invalid					= TCronModule 的 UserManager“{0}”不是一个 TUserManager。
+cron_task_as_array_required					= TCronModule 配置中的任务作业不是数组。
+cron_duplicate_task_name					= TCronModule 的任务作业必须具有唯一的名称。
+cron_schedule_required						= Cron 任务必须具有调度计划。
+cron_task_required							= Cron 任务必须具有任务。
+cron_not_a_crontask							= Cron 任务“{0}”不是一个 TCronTask。
+cron_additional_tasks_invalid				= “{0}”不是一个有效的附加 cron 任务。
+crontask_no_module							= TCronTask 找不到模块“{0}”。
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask 找不到指定的模块“{0}”。
+dbcron_invalid_name							= TDbCronManager 的任务名称“{0}”无效。
+dbcron_conflicting_task_names				= 配置中的 cron 任务与数据库中的 cron 任务“{0}”冲突。
+dbcron_table_nonexistent					= TDbCronManager 的数据库表不存在。
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID“{0}”不是一个 TDataSourceConfig。
+
+timescheduler_invalid_string				= TTimeScheduler 无法解析调度元素“{0}”
+
+rational_bad_offset							= “{0}”不是 TRational 的有效属性访问器。
+
+bithelper_bad_fp_format						= TBitHelper 无法在 {3} 位 PHP 环境中处理“{0}”位指数、“{1}”位尾数、“{2}”指数偏移。
+bithelper_invalid_color_in					= TBitHelper 必须至少有一个输入位（In Bit）。给定的是“{0}”。
+bithelper_invalid_color_out					= TBitHelper 必须至少有一个输出位（Out Bit）。给定的是“{0}”。
+bithelper_bad_mirror_bits					= TBitHelper 无法在 {1} 位 PHP 环境中镜像“{0}”位。
+
+ar_data_invalid								= {0}.copyFrom() 只能接受对象或数组作为参数。
+ar_save_invalid								= {0} 实例无法保存，因为它已被删除或处于未知状态。
+ar_delete_invalid							= {0} 实例无法删除，因为它是新记录或已被删除的记录。
+
+dbmetadata_invalid_database_driver			= 不支持驱动“{0}”。如有可用的 PRADO 驱动，请安装。
+dbmetadata_not_meta_data					= 期望驱动类 {1}，但得到的是类 {0}。
+dbmetadata_tableinfo_class_invalid			= TDbMetaData 表信息类“{0}”是一个目录命名空间，而不是类。
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection“{0}”无效。请确认它指向一个有效的应用模块。
+distributeddatasource_child_required		= {0} 至少需要一个“{1}”子元素。
+masterslavedbconnection_connection_exists	= {0}.{1} 连接已经存在。
+masterslavedbconnection_interface_required	= {0}.{1} 需要一个实现 {2} 接口的实例。
+slavedbconnection_requires_master			= {0} 需要一个 {1}。
+
+response_status_reason_missing				= HTTP 1.1 的扩展状态码需要原因短语
+response_status_reason_badchars				= 在 HTTP 1.1 头中，状态原因短语不能包含 CR 或 LF 字符
+
+activefileupload_temppath_invalid			= TActiveFileUpload 的 TempPath 路径“{0}”不存在，或 Web 服务器进程无法写入。
+
+tactivetablecell_control_outoftable			= {0}“{1}”必须包含在 TTableRow 控件之内。
+tactivetablecell_control_notincollection	= {0}“{1}”不是父 TTableRow 控件的 TTableCellCollection 的成员。
+
+tactivetablerow_control_outoftable			= {0}“{1}”必须包含在 TTable 控件之内。
+tactivetablerow_control_notincollection		= {0}“{1}”不是父 TTable 控件的 TTableRowCollection 的成员。
+
+juioptions_option_invalid					= “{1}”不是控件“{0}”的有效选项。
+
+ratinglist_invalid_caption_id				= “{0}”不是 TRatingList“{0}”的有效标题控件。
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID 的 ID“{0}”无效。
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex 的索引“{0}”无效。
+accordion_view_inexistent					= TAccordion 找不到指定的视图。
+
+dot_bad_size								= TDot 的 Size 必须是正整数，但实际为“{0}”
+dot_bad_border_width						= TDot 的 FlatBorderWidth 必须是数字，可选带 % 或 CSS 长度单位，但实际为“{0}”
+
+juidatepicker_settextmode_unsupported		= TJuiDatePicker 的 TextMode 不能更改。
+
+control_adapter_not_active					= 在非活动控件上调用了 BaseActiveControl 属性。
+
+figcaption_requires_figure_parent			= TFigureCaption“{0}”必须是 TFigure 控件的直接子控件。
+summary_requires_details_parent				= TSummary“{0}”必须是 TDetails 控件的直接子控件。
+
+gravatar_bad_default						= 不支持 TGravatar 的 DefaultImageStyle 属性值“{0}”
+gravatar_bad_size							= TGravatar 的 Size 不在 [1 .. 512] 范围内，实际为“{0}”
+
+progress_value_invalid						= TProgress 的 Value 必须大于或等于 0；给定的是 {0}。
+progress_max_invalid						= TProgress 的 Max 必须大于 0；给定的是 {0}。
+
+time_invalid_datetime						= TTime 的 DateTime 必须是 DateTimeInterface、DateInterval、字符串或数值；给定的是 {0}。
+time_invalid_text_format					= TTime 的 TextFormat“{0}”不是 TTimeFormat 常量名或 ICU 日期时间模式。
+
+webtemplate_invalid_child					= TWebTemplate“{0}”不能包含“{1}”：活动控件、回发控件和验证器控件在惰性模板内容中无法工作。请使用带 {{...}} 占位符的纯标记，或设置 ValidateContent="false"。
+
+vardumper_not_array							= __debuginfo() 必须返回一个数组。
+
+htmlpurifier_source_path_failed				= 无法创建 html purifier 缓存路径“{0}”。请确认父目录存在，并且可被 Web 进程写入。

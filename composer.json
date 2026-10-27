@@ -1,0 +1,66 @@
+{
+	"name": "pradosoft/prado-dev-errormessages",
+	"type": "prado4-extension",
+	"description": "Translations of the developer-facing exception messages of the PRADO PHP Framework",
+	"keywords": ["prado", "framework", "i18n", "translation", "exceptions", "error messages"],
+	"homepage": "https://github.com/pradosoft/prado-dev-errormessages",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Fabio Bas",
+			"email": "ctrlaltca@gmail.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Brad Anderson",
+			"email": "belisoful@icloud.com",
+			"role": "Developer",
+			"homepage": "https://github.com/belisoful"
+		}
+	],
+	"autoload-dev": {
+		"psr-4": {
+			"Prado\\Test\\Unit\\": "vendor/pradosoft/prado/tests/unit/",
+			"Prado\\Test\\Unit\\DevErrorMessages\\": "tests/unit/"
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
+	"require": {
+		"php": ">=8.2.0"
+	},
+	"conflict": {
+		"pradosoft/prado": "<4.4"
+	},
+	"require-dev": {
+		"pradosoft/prado": "dev-master",
+		"phpunit/phpunit": "^10",
+		"friendsofphp/php-cs-fixer": "^3.94",
+		"phpstan/phpstan": "^2.1"
+	},
+	"config": {
+		"platform": {
+			"php": "8.2"
+		}
+	},
+	"scripts": {
+		"fix": "vendor/bin/php-cs-fixer fix",
+		"stan": "vendor/bin/phpstan analyse --memory-limit=512M",
+		"test": "vendor/bin/phpunit --testsuite unit",
+		"fulltest": [
+			"find tests -name '*.php' | xargs php -l",
+			"vendor/bin/php-cs-fixer fix --dry-run",
+			"@stan",
+			"@test"
+		]
+	},
+	"extra": {
+		"prado": {
+			"error-messages": "messages/messages.txt"
+		}
+	}
+}

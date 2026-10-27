@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Turkish (tr).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application yalnızca bir kez ayarlanabilir.
+prado_component_unknown						= Bilinmeyen bileşen türü '{0}'. Bunun nedeni {0} sınıf dosyasındaki şu ayrıştırma hatası olabilir: {1}
+prado_using_invalid							= '{0}' kullanılabilecek geçerli bir ad alanı değil. Bir dizine karşılık gelen bir ad alanı kullanmak istiyorsanız sonuna '.*' eklendiğinden emin olun.
+prado_alias_redefined						= '{0}' takma adı yeniden tanımlanamaz.
+prado_alias_invalid							= '{0}' takma adı geçersiz bir yola ('{1}') karşılık geliyor. Yalnızca var olan dizinlere takma ad verilebilir.
+prado_aliasname_invalid						= '{0}' takma adı geçersiz '.' karakterini içeriyor.
+
+component_property_undefined				= '{0}.{1}' bileşen özelliği tanımlı değil.
+component_property_readonly					= '{0}.{1}' bileşen özelliği salt okunurdur.
+component_event_undefined					= '{0}.{1}' bileşen olayı tanımlı değil.
+component_method_undefined					= '{0}.{1}' bileşen yöntemi tanımlı değil.
+component_eventhandler_invalid				= '{0}.{1}' bileşen olayına geçersiz bir olay işleyicisi ('{2}') bağlanmış.
+component_expression_invalid				= '{0}' bileşeni geçersiz bir ifade ('{1}') değerlendiriyor: {2}.
+component_statements_invalid				= '{0}' bileşeni geçersiz PHP deyimleri ('{1}') değerlendiriyor: {2}.
+component_class_behavior_defined			= '{0}' bileşeni zaten '{1}' adlı bir sınıf davranışına sahip.
+component_not_a_behavior					= Davranış olarak eklenen '{0}' bileşeni bir TBaseBehavior değil.
+object_not_a_component						= Davranış olarak eklenen '{0}' nesnesi bir TComponent değil.
+component_no_tcomponent_class_behaviors		= Özyineleme nedeniyle TComponent sınıfına sınıf davranışları bağlanamaz.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors birden fazla sahibe bağlanamaz. Her sahipte örneklenmek üzere bir dize ya da IBehavior sınıfı ve özelliklerinden oluşan bir dizi geçirin.
+
+propertyvalue_enumvalue_invalid				= '{0}' değeri geçerli bir numaralandırma değeri değil ({1}).
+propertyvalue_invalid_hex_color				= '{0}' değeri geçerli bir onaltılık renk değeri değil. Örn. "#112233"
+propertyvalue_invalid_array_literal			= '{0}' değeri geçerli bir dizi sabiti değil.
+propertyvalue_array_too_deep				= Dizi sabiti {0} düzeyden daha derine iç içe geçiyor.
+
+eventhandler_lost_weak_ref					= Çağrılabilir nesnenin WeakReference'ı kaybolduğu için TEventHandler olay işleyicisini çağıramıyor.
+eventhandler_no_set_handler					= TEventHandler olay işleyicisini ayarlayamıyor, dizin "{0}".
+eventhandler_bad_offset						= TEventHandler "{0}" konumuna sahip değil.
+
+eventparam_readonly							= {0} salt okunurdur.
+eventparam_readonly_set						= {0} bir kez ayarlandıktan sonra ReadOnly değiştirilemez.
+eventparam_readonly_not_self				= {0} ReadOnly yalnızca içeriden ayarlanabilir.
+
+list_index_invalid							= '{0}' dizini aralık dışında.
+list_item_inexistent						= Öğe listede bulunamadı.
+list_data_not_iterable						= Veri bir dizi ya da Traversable arayüzünü uygulayan bir nesne olmalıdır.
+list_readonly								= {0} salt okunurdur.
+list_readonly_set							= {0} bir kez ayarlandıktan sonra Read-Only değiştirilemez.
+prioritylist_index_invalid					= '{2}' önceliğindeki '{1}' için '{0}' dizini aralık dışında.
+prioritytrait_no_set_default_priority		= Varsayılan Öncelik yalnızca bir kez ya da nesnenin kendisi tarafından ayarlanabilir.
+prioritytrait_no_set_precision				= Duyarlık yalnızca bir kez ya da nesnenin kendisi tarafından ayarlanabilir.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid yalnızca bir kez ya da nesnenin kendisi tarafından ayarlanabilir.
+
+map_addition_disallowed						= Yeni öğe eşlemeye eklenemez.
+map_item_unremovable						= Öğe eşlemeden kaldırılamaz.
+map_data_not_iterable						= Veri bir dizi ya da Traversable arayüzünü uygulayan bir nesne olmalıdır.
+map_readonly								= {0} salt okunurdur.
+map_readonly_set							= {0} bir kez ayarlandıktan sonra Read-Only değiştirilemez.
+
+tnull_clone_disallowed						= TNull tekil nesnesi klonlanamaz. Bunun yerine TNull::null() kullanın.
+
+weakcallablecollection_callable_required	= TWeakCallableCollection yalnızca çağrılabilir değerleri kabul eder.
+
+arraysubscription_no_change					= TArraySubscription.{0} abone olunduktan sonra değiştirilemez.
+arraysubscription_no_null_key				= TArraySubscription bir ArrayAccess nesnesinde null anahtara abone olamaz.
+arraysubscription_index_invalid				= TArraySubscription Liste modunda (isAssociative = false) ancak '{0}' anahtarı geçerli değil (sayı: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array doğrudan ayarlanamaz.
+eventsubscription_no_change					= TEventSubscription.{0} abone olunduktan sonra değiştirilemez.
+
+application_includefile_invalid				= {0} uygulama yapılandırması bulunamadı. Ad alanı biçiminde olduğundan ve dosyanın ".xml" ya da ".php" ile bittiğinden emin olun.
+application_basepath_invalid				= '{0}' uygulama temel yolu yok ya da bir dizin değil.
+application_runtimepath_invalid				= '{0}' uygulama çalışma zamanı yolu yok ya da web sunucusu süreci tarafından yazılabilir değil.
+application_service_class_not_found			= '{0}' hizmet sınıfı yok.
+application_service_class_not_service		= '{0}' hizmet sınıfı IService arayüzünü uygulamıyor.
+application_service_class_required			= registerService, '{0}' hizmeti için bir sınıf adı ya da bir serviceConfig dizisi gerektirir.
+application_service_default_unregister		= Varsayılan sayfa hizmeti '{0}' kayıttan kaldırılamaz.
+service_csrf_token_invalid					= '{0}' hizmeti geçerli bir CSRF belirteci gerektirir.
+application_moduleid_duplicated				= '{0}' uygulama modülü kimliği benzersiz değil.
+application_runtimepath_failed				= '{0}' çalışma zamanı yolu oluşturulamadı. Üst dizinin var olduğundan ve web süreci tarafından yazılabilir olduğundan emin olun.
+application_module_required_dep_missing		= '{0}' modülü, uygulamaya kayıtlı olmayan '{1}' modülüne zorunlu bir bağımlılığa sahip.
+application_module_dependency_cycle			= Şu modüller arasında bir bağımlılık döngüsü saptandı: {0}.
+application_module_dependency_self_reference	= '{0}' modülü kendisini bağımlılık olarak bildiriyor; bu hiçbir zaman geçerli değildir.
+
+appconfig_aliaspath_invalid					= Uygulama yapılandırmasındaki <alias id="{0}"> geçersiz bir dosya yolu ("{1}") kullanıyor.
+appconfig_alias_invalid						= Uygulama yapılandırmasındaki <alias> öğesi bir "id" ve bir "path" özniteliğine sahip olmalıdır.
+appconfig_alias_redefined					= Uygulama yapılandırmasındaki <alias id="{0}"> yeniden tanımlanamaz.
+appconfig_using_invalid						= Uygulama yapılandırmasındaki <using> öğesi bir "namespace" özniteliğine sahip olmalıdır.
+appconfig_moduleid_required					= Uygulama yapılandırmasındaki <module> öğesi bir "id" özniteliğine sahip olmalıdır.
+appconfig_moduletype_required				= Uygulama yapılandırmasındaki <module id="{0}"> bir "class" özniteliğine sahip olmalıdır.
+appconfig_moduletype_inapplicable			= Uygulama yapılandırmasındaki <module id="{0}"> "class" özniteliğine sahip olamaz.
+appconfig_serviceid_required				= Uygulama yapılandırmasındaki <service> öğesi bir "id" özniteliğine sahip olmalıdır.
+appconfig_servicetype_required				= Uygulama yapılandırmasındaki <service id="{0}"> bir "class" özniteliğine sahip olmalıdır.
+appconfig_parameterid_required				= Uygulama yapılandırmasındaki <parameter> öğesi bir "id" özniteliğine sahip olmalıdır.
+appconfig_includefile_required				= Uygulama yapılandırmasındaki <include> öğesi bir "file" özniteliğine sahip olmalıdır.
+appconfig_paths_invalid						= Uygulama yapılandırmasındaki <paths> öğesi <{0}> öğesini içeremez.
+appconfig_modules_invalid					= Uygulama yapılandırmasındaki <modules> öğesi <{0}> öğesini içeremez.
+appconfig_services_invalid					= Uygulama yapılandırmasındaki <services> öğesi <{0}> öğesini içeremez.
+appconfig_parameters_invalid				= Uygulama yapılandırmasındaki <parameters> öğesi <{0}> öğesini içeremez.
+appconfig_tag_invalid						= Uygulama yapılandırması <{0}> öğesini içeremez.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey boş olamaz.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey boş olamaz.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey boş olamaz.
+securitymanager_mcryptextension_required	= TSecurityManager'ın şifreleme özelliğini kullanmak için Mcrypt PHP eklentisi gerekir.
+securitymanager_mcryptextension_initfailed	= TSecurityManager mcrypt modülünü başlatamadı.
+
+uri_format_invalid							= '{0}' geçerli bir URI değil.
+
+httprequest_browscap_required				= THttpRequest, php.ini içinde browscap yönergesinin yapılandırılmış olmasını gerektirir.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator yalnızca tek bir karakter içerebilir.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' var olan bir modüle işaret etmiyor.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' TUrlManager sınıfından türeyen bir modüle işaret etmelidir.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie false olarak ayarlanmış; bu bir oturum modülü gerektirir.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection yalnızca THttpCookie nesnelerini kabul eder.
+
+httpresponse_file_inexistent				= THttpResponse '{0}' dosyasını gönderemiyor. Dosya yok.
+httpresponse_responsedata_method_unavailable	= THttpResponse: '{0}' yöntemi, onu uygulayan uygun bir bağdaştırıcı olmadan kullanılamaz.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' var olan bir modüle işaret etmiyor.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' THttpHeadersManager sınıfından türeyen bir modüle işaret etmelidir.
+
+httpheadersmanager_header_required			= THttpHeadersManager yalnızca THttpHeader ya da alt sınıflarını içerebilir.
+httpheadersmanager_headerclass_missing		= THttpHeadersManager <headerclass> girdisinde zorunlu 'name' ya da 'class' özniteliği eksik.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID oturum başlatıldıktan sonra değiştirilemez.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName oturum başlatıldıktan sonra değiştirilemez.
+httpsession_sessionname_invalid				= THttpSession.SessionName yalnızca alfasayısal karakterler içermelidir.
+httpsession_savepath_unchangeable			= THttpSession.SavePath oturum başlatıldıktan sonra değiştirilemez.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' geçersiz.
+httpsession_storage_unchangeable			= THttpSession.Storage oturum başlatıldıktan sonra değiştirilemez.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode oturum başlatıldıktan sonra değiştirilemez.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart oturum modülü başlatıldıktan sonra değiştirilemez.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability oturum başlatıldıktan sonra değiştirilemez.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability 0 ile 100 arasında bir tamsayı olmalıdır.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID oturum başlatıldıktan sonra değiştirilemez.
+httpsession_transid_cookieonly				= THttpSession.CookieMode Only olarak ayarlandığında THttpSession.UseTransparentSessionID ayarlanamaz.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout oturum başlatıldıktan sonra değiştirilemez.
+httpsession_handler_invalid					= THttpSessionHandler kurucu parametresi olarak yalnızca bir THttpSession nesnesi kabul eder
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' geçersiz. Ad alanı biçiminde olduğundan ve web sunucusu süreci tarafından yazılabilir bir dizine işaret ettiğinden emin olun.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath modül başlatıldıktan sonra değiştirilemez.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl modül başlatıldıktan sonra değiştirilemez.
+assetmanager_filepath_invalid				= TAssetManager geçersiz bir dosya ('{0}') yayımlıyor.
+assetmanager_tarchecksum_invalid			= TAssetManager sağlama toplamı geçersiz ('{0}') bir tar dosyası yayımlıyor.
+assetmanager_tarfile_invalid				= TAssetManager geçersiz bir tar dosyası ('{0}') yayımlıyor.
+assetmanager_tarfile_extract_failed			= TAssetManager '{0}' tar dosyasını açamadı.
+assetmanager_source_directory_invalid		= TAssetManager geçersiz bir dizini ('{0}') kopyalıyor.
+
+cache_primary_duplicated					= En fazla bir birincil önbellek modülüne izin verilir. {0} başka bir birincil önbellek olarak kaydolmaya çalışıyor.
+psrcache_backing_cache_required				= TPsrCache.BackingCacheId ya da TPsrCache.BackingCache gereklidir.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' bir uygulama modülüne karşılık gelmiyor.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' Psr\SimpleCache\CacheInterface ya da Psr\Cache\CacheItemPoolInterface arayüzünü uygulayan bir modüle karşılık gelmelidir.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' bu TPsrCache'in bir PSR bağdaştırıcısıdır; aynı önbelleğe geri okuma ve yazma yapardı.
+psrcachebacking_cache_required				= {0} bir destek önbelleği gerektirir. {0}.BackingCacheId, {0}.BackingCache ya da birincil bir uygulama önbelleği ayarlayın.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' bir uygulama modülüne karşılık gelmiyor.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' bir Prado\Caching\ICache modülüne karşılık gelmelidir.
+psrcachebacking_key_invalid					= {0} önbellek anahtarı, ayrılmış {}()/\@: karakterlerini içermeyen boş olmayan bir dize olmalıdır; ancak '{1}' verildi.
+sqlitecache_extension_required				= TSqliteCache SQLite PHP eklentisini gerektirir.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile gereklidir.
+sqlitecache_connection_failed				= TSqliteCache veritabanı bağlantısı başarısız oldu. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache önbellek veritabanını oluşturamadı. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile modül başlatıldıktan sonra değiştirilemez.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile geçersiz. Uygun bir ad alanı biçiminde olduğundan emin olun.
+
+dbcache_unavailable							= TDbCache PDO PHP eklentisini gerektirir.
+
+etcdcache_transport_required				= TEtcdCache cURL PHP eklentisini ya da allow_url_fopen ayarını gerektirir.
+
+memcache_extension_required					= TMemCache memcache PHP eklentisini gerektirir.
+memcache_connection_failed					= TMemCache {0}:{1} memcache sunucusuna bağlanamadı.
+memcache_not_initialized					= Modül başlatılmadan önce TMemCache üzerinde seçenekler ayarlanamaz.
+
+apccache_extension_required					= TAPCCache APC PHP eklentisini gerektirir.
+apccache_extension_not_enabled				= TAPCCache çalışmak için php.ini içinde apc.enabled = 1 ayarını gerektirir.
+apccache_extension_not_enabled_cli			= TAPCCache komut satırından PHP ile çalışmak için php.ini içinde apc.enable_cli = 1 ayarını gerektirir.
+
+cachesize_item_exceeds_maximum_size			= Önbellek öğesi {0} bayt; bu, yapılandırılmış {1} baytlık MaximumSize değerini aşıyor.
+
+filecache_directory_required				= TFileCache.Directory gereklidir.
+filecache_directory_create_failed			= TFileCache '{0}' önbellek dizinini oluşturamıyor.
+filecache_directory_not_writable			= TFileCache önbellek dizini '{0}' yazılabilir değil.
+filecache_hash_token_identity				= TFileCache.hashToken girdisini dönüştürmelidir; alt sınıf uygulaması belirteci değiştirmeden döndürdü.
+filecache_hash_token_path_separator			= TFileCache.hashToken yol ayırıcısı ("/" ya da "\") içeren bir değer döndürmemelidir; alt sınıf uygulaması güvenli olmayan bir karma döndürdü.
+
+memorycache_backing_file_directory_not_found	= TMemoryCache.BackingFile dizini '{0}' yolu için mevcut değil.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' geçersiz. Geçerli değerler 'PHP' ve 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' geçersiz. Geçerli değerler 'None', 'Base64' ve 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' geçersiz. Bir TSecurityManager modül kimliği ya da bir TSecurityManager örneği olmalıdır.
+serializingcache_json_encode_failed			= TSerializingCache değeri JSON olarak kodlayamadı: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} geçerli bir dizine karşılık gelmiyor.
+cachedependencylist_cachedependency_required	= TCacheDependencyList içine yalnızca ICacheDependency arayüzünü uygulayan nesneler eklenebilir.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' geçersiz. Ad alanı biçiminde olduğundan ve hata şablonu dosyalarını içeren geçerli bir dizine işaret ettiğinden emin olun.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' geçerli bir dizin değil.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage hizmet başlatıldıktan sonra değiştirilemez.
+pageservice_basepath_unchangeable			= TPageService.BasePath hizmet başlatıldıktan sonra değiştirilemez.
+pageservice_pageclass_invalid				= {0} sayfa sınıfı geçersiz. TPage olmalı ya da TPage sınıfından türemelidir.
+pageservice_includefile_invalid				= {0} sayfa hizmeti yapılandırması bulunamadı. Ad alanı biçiminde olduğundan ve dosyanın ".xml" ya da ".php" ile bittiğinden emin olun.
+
+pageserviceconf_file_invalid				= '{0}' sayfa dizini yapılandırma dosyası açılamadı.
+pageserviceconf_aliaspath_invalid			= '{2}' sayfa dizini yapılandırma dosyasındaki <alias id="{0}"> geçersiz bir dosya yolu ("{1}") kullanıyor.
+pageserviceconf_alias_invalid				= '{0}' sayfa dizini yapılandırma dosyasındaki <alias> öğesi bir "id" ve bir "path" özniteliğine sahip olmalıdır.
+pageserviceconf_using_invalid				= '{0}' sayfa dizini yapılandırma dosyasındaki <using> öğesi bir "namespace" özniteliğine sahip olmalıdır.
+pageserviceconf_module_invalid				= '{0}' sayfa dizini yapılandırma dosyasındaki <module> öğesi bir "id" özniteliğine sahip olmalıdır.
+pageserviceconf_moduletype_required			= '{1}' sayfa dizini yapılandırma dosyasındaki <module id="{0}"> bir "class" özniteliğine sahip olmalıdır.
+pageserviceconf_parameter_invalid			= '{0}' sayfa dizini yapılandırma dosyasındaki <parameter> öğesi bir "id" özniteliğine sahip olmalıdır.
+pageserviceconf_page_invalid				= '{0}' sayfa dizini yapılandırma dosyasındaki <page> öğesi bir "id" özniteliğine sahip olmalıdır.
+pageserviceconf_includefile_required		= Sayfa yapılandırmasındaki <include> öğesi bir "file" özniteliğine sahip olmalıdır.
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" davranış bağlandıktan sonra ("{1}" olarak) değiştirilemez.
+basebehavior_sync_no_owner					= "{0}" TBaseBehavior nesnesinin sahibi yok ve sahipsiz bir bileşen üzerinde olay işleyicilerini eşitleyemez.
+basebehavior_sync_not_owner					= "{0}" TBaseBehavior nesnesi, sahibi olmayan bir nesne üzerinde olay işleyicilerini eşitleyemez.
+behavior_has_owner							= "{0}" TBehavior nesnesi yalnızca tek bir sahibe bağlanabilir.
+behavior_bad_attach_component				= "{0}" TBehavior nesnesi yalnızca bir TComponent nesnesine bağlanabilir.
+behavior_detach_without_owner				= "{0}" TBehavior nesnesi sahibi olmadan ayrılamaz.
+behavior_detach_wrong_owner					= "{0}" TBehavior nesnesi sahibi olmayan bir nesneden ayrılamaz.
+behavior_property_unchangeable				= {1}.{0} davranış bağlandıktan sonra değiştirilemez.
+behavior_requires_owner						= {1}.{0} bir sahip gerektirir.
+classbehavior_owner_attach_once				= "{0}" TClassBehavior nesnesi bir sahibe yalnızca bir kez bağlanabilir. İşleyiciler benzersiz olmazdı.
+classbehavior_bad_attach_component			= "{0}" TClassBehavior nesnesi yalnızca bir TComponent nesnesine bağlanabilir.
+classbehavior_detach_without_owner			= "{0}" TClassBehavior nesnesi sahibi olmadan ayrılamaz.
+classbehavior_detach_wrong_owner			= "{0}" TClassBehavior nesnesi sahibi olmayan bir nesneden ayrılamaz.
+
+callchain_bad_dynamic_event					= TCallChain.{0} tetiklendi ancak {1} bekleniyordu.
+
+behaviormodule_behavior_as_array_required	= php <behavior> bir dizi olmalıdır.
+behaviormodule_behaviorname_required		= <behavior>, davranışı bağlamak için bir 'name' özniteliği içermelidir.
+behaviormodule_behaviorclass_required		= <behavior>, davranış sınıfını tanımlayan bir 'class' özniteliği içermelidir.
+behaviormodule_attachto_class_required		= <behavior> bir 'attachto' ya da 'attachtoclass' özniteliğine sahip olmalıdır.
+behaviormodule_attachto_and_class_only_one	= <behavior> 'attachto' ya da 'attachtoclass' özniteliklerinden yalnızca birine sahip olmalıdır, ikisine birden değil.
+behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' nesnesi bulunamadı.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors geçersiz '{0}' türüne ayarlanamaz
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader bir Davranış Adına sahip olmalıdır.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader bir Davranış Sınıfına sahip olmalıdır.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader bir 'attachto' ya da 'attachtoclass' özniteliğine sahip olmalıdır.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader 'attachto' ya da 'attachtoclass' özniteliklerinden yalnızca birine sahip olmalıdır.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' bir modül kimliği gerektirir.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' bulunamadı.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader davranışları bağlamak için '{0}' modülünü bulamadı.
+
+evaluationfilter_statements_denied			= TEvaluationFilterBehavior.AllowStatements false olduğundan '{0}' bileşeni '{1}' PHP deyimlerini değerlendiremez.
+evaluationfilter_code_denied				= TEvaluationFilterBehavior '{2}' kullanımına izin vermediğinden '{0}' bileşeni '{1}' ifadesini değerlendiremez.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior oluşturulmak için çağrılabilir bir değer gerektirir.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior oluşturulmak için çağrılabilir bir değer gerektirir.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior bir Parameter özniteliğine sahip olmalıdır.
+parameterizebehavior_no_property			= TParameterizeBehavior bir Property özniteliğine sahip olmalıdır.
+parameterizebehavior_owner_get_only_property	= TParameterizeBehavior sahibi '{0}' özelliğine sahip ancak bu özellik salt okunur.
+parameterizebehavior_owner_has_no_property	= TParameterizeBehavior sahibinin '{0}' özelliği yok.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior bağlandıktan sonra Parameter değerini boşaltamaz.
+
+processhelper_no_forking					= Süreç çatallama desteklenmiyor.
+processhelper_no_signals					= Windows üzerinde süreç sinyalleri gönderilemez.
+
+serializableclosure_no_decrypter			= TSerializableClosure yapılandırılmış bir şifre çözücü olmadan şifrelenmiş bir closure yükünün şifresini çözemez.
+serializableclosure_decrypt_failed			= TSerializableClosure şifrelenmiş closure yükünün şifresini çözemedi; yük değiştirilmiş ya da anahtar değişmiş olabilir.
+
+appsignals_no_change						= TApplicationSignals::{0} bağlandıktan sonra değiştirilemez.
+appsignals_not_a_dispatcher					= '{0}' bir TSignalsDispatcher değil.
+
+signalsdispatcher_bad_pid					= '{0}' geçerli bir PID değil.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} bağlandıktan sonra değiştirilemez.
+
+initialized_property_unchangeable			= {1}.{0} zaten başlatıldığı için ayarlanamaz.
+initialized_requires_initialization			= {1}.{0} işlenmeden önce başlatılmayı gerektirir.
+
+template_closingtag_unexpected				= Beklenmeyen kapanış etiketi '{0}' bulundu.
+template_closingtag_expected				= '{0}' kapanış etiketi bekleniyordu, '{1}' bulundu.
+template_directive_nonunique				= '<%@ ... %>' yönergesi şablonun başında yer almalı ve en fazla bir kez görünebilir.
+template_comments_forbidden					= Özellik etiketleri içinde şablon açıklamalarına izin verilmez.
+template_matching_unexpected				= Beklenmeyen eşleşme.
+template_property_unknown					= {0} nesnesinin '{1}' adlı bir özelliği yok.
+template_event_unknown						= {0} nesnesinin '{1}' adlı bir olayı yok.
+template_property_readonly					= {0} nesnesinin '{1}' özelliği salt okunurdur.
+template_event_forbidden					= {0} denetim olmayan bir bileşendir. Şablonda '{1}' olayına işleyici bağlanamaz.
+template_databind_forbidden					= {0} denetim olmayan bir bileşendir. '{1}' özelliğine ifade bağlanamaz.
+template_component_required					= '{0}' bir bileşen değil. Şablonda yalnızca bileşenler yer alabilir.
+template_format_invalid						= Geçersiz şablon sözdizimi: {0}
+template_property_duplicated				= {0} özelliği iki ya da daha fazla kez yapılandırılmış.
+template_eventhandler_invalid				= {0}.{1} yalnızca statik bir dize kabul eder.
+template_controlid_invalid					= {0}.ID yalnızca statik bir metin dizesi kabul eder.
+template_controlskinid_invalid				= {0}.SkinID yalnızca statik bir metin dizesi kabul eder.
+template_content_unexpected					= Şablon örneklenirken beklenmeyen içerikle karşılaşıldı: {0}.
+template_include_invalid					= Geçersiz şablon ekleme. {0} değerinin, uzantısı .tpl olan var olan bir şablon dosyasına işaret eden geçerli bir ad alanı olduğundan emin olun.
+template_tag_unexpected						= {0} özelliğinin ilklendirmesi bilinmeyen bir etiket türü ({1}) içeriyor.
+
+xmldocument_file_read_failed				= TXmlDocument '{0}' dosyasını okuyamıyor.
+xmldocument_file_write_failed				= TXmlDocument '{0}' dosyasına yazamıyor.
+
+xmlelementlist_xmlelement_required			= TXmlElementList yalnızca TXmlElement nesnelerini kabul eder.
+
+xmlelement_null_tag							= TXmlElement Etiket Adı null olamaz.
+xmlelement_empty_tag						= TXmlElement Etiket Adı boş bir dize olamaz.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action yalnızca 'allow' ya da 'deny' değerini alabilir.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb yalnızca 'get' ya da 'post' değerini alabilir.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection yalnızca TAuthorizationRule nesnelerini kabul eder.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' geçerli bir dosya değil.
+usermanager_userfile_unchangeable			= TUserManager.UserFile değiştirilemez. Kullanıcı modülü zaten başlatılmış.
+
+integritymanager_entry_invalid				= '{0}' URL'si için TIntegrityManager bütünlük girdisi boş olmayan bir url ve hash gerektirir.
+integritymanager_algorithm_invalid			= TIntegrityManager '{0}' algoritmasını desteklemiyor; şunlardan birini kullanın: {1}.
+integritymanager_file_unreadable			= TIntegrityManager bütünlüğünü hesaplamak için '{0}' dosyasını okuyamıyor.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' geçerli bir dosya değil.
+integritymanager_integrityfile_unchangeable	= {1}.{0} değiştirilemez. Bütünlük modülü zaten başlatılmış.
+
+javascript_script_integrity_required		= Uzak '{0}' betiği için kayıtlı bir Subresource Integrity yok, ancak bütünlük zorunlu.
+
+authmanager_usermanager_required			= TAuthManager.UserManager için bir değer atanmalıdır.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' bir uygulama modülünün kimliğine karşılık gelmiyor.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' geçerli bir TUserManager uygulama modülüne karşılık gelmiyor.
+authmanager_session_required				= TAuthManager bir oturum uygulama modülü gerektirir.
+
+permissions_events_invalid					= TPermissionEvent.Event geçersiz bir değere ('{0}') ayarlanamaz.
+permissions_rules_invalid					= TPermissionEvent.Rules geçersiz bir değere ('{0}') ayarlanamaz.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' bir uygulama modülünün kimliğine karşılık gelmiyor.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' geçerli bir TDbParameterModule uygulama modülüne karşılık gelmiyor.
+permissions_init_once						= TPermissionsManager.init yalnızca bir kez başlatılabilir.
+permissions_duplicate_permission			= TPermissionsManager '{0}' izni zaten kayıtlı.
+permissions_role_children_invalid			= TPermissionsManager yapılandırmasındaki '{0}' rolü geçersiz alt öğelere ('{1}') sahip.
+permissions_rule_invalid					= TPermissionsManager yapılandırmasındaki '{0}' izin kuralının özellikleri bir dizi değil.
+permissions_rules_require_name				= TPermissionsManager kuralları bir izin "name" özelliğine sahip olmalıdır.
+permissions_role_rule_nested				= TPermissionsManager yapılandırmasındaki '{0}' rolü bir <permissionrule> içeriyor. İzin kuralları, izinler yapılandırma öğesinin doğrudan alt öğeleridir.
+permissions_rule_class_invalid				= TPermissionsManager izin kuralı sınıfı '{0}' bir sınıf değil, bir dizin ad alanı.
+permissions_children_invalid				= TPermissionsManager.*RoleChildren alt öğeleri bir dize ya da dizi olmalıdır, ancak '{0}' verildi.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' geçerli bir dosya değil.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' geçerli bir yol takma adı değil. Bu takma adı yapılandırmada tanımladığınızdan ve geçerli bir dizine işaret ettiğinden emin olun.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' geçerli bir dizin değil.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath modül başlatıldıktan sonra değiştirilemez.
+thememanager_theme_invalid					= TThemeManager tema adı '{0}' tek bir dizin adı olmalıdır.
+
+theme_baseurl_required						= TThemeManager.BasePath gereklidir. Varsayılan olarak, uygulama giriş betiğini içeren dizinin altındaki 'themes' adlı dizin kabul edilir.
+theme_path_inexistent						= '{0}' tema yolu yok.
+theme_control_nested						= '{1}' temasındaki '{0}' denetim türüne ait dış görünüm başka bir dış görünümün içinde yer alamaz.
+theme_skinid_duplicated						= '{2}' temasında SkinID '{0}.{1}' yinelenmiş.
+theme_databind_forbidden					= '{0}' temasında '{1}.{2}' denetim dış görünümünün '{3}' özelliği için veri bağlama kullanılamaz.
+theme_property_readonly						= Dış görünüm, salt okunur bir denetim özelliğine ('{0}.{1}') uygulanıyor.
+theme_property_undefined					= Dış görünüm, var olmayan bir denetim özelliğine ('{0}.{1}') uygulanıyor.
+theme_tag_unexpected						= {0} özelliğinin ilklendirmesi bilinmeyen bir etiket türü ({1}) içeriyor.
+
+control_object_reregistered					= Yinelenen nesne kimliği '{0}' bulundu.
+control_id_invalid							= {0}.ID '{1}' geçersiz. Yalnızca alfasayısal karakterlere ve alt çizgiye izin verilir. İlk karakter bir harf ya da alt çizgi olmalıdır.
+control_skinid_unchangeable					= {0}.SkinID, denetime bir dış görünüm uygulandıktan ya da alt denetimler oluşturulduktan sonra değiştirilemez.
+control_enabletheming_unchangeable			= {0}.EnableTheming alt denetimler oluşturulduktan sonra değiştirilemez.
+control_stylesheet_applied					= StyleSheet dış görünümü {0} nesnesine zaten uygulanmış.
+control_id_nonunique						= {0}.ID '{1}' aynı adlandırma kapsayıcısı altındaki tüm denetimler arasında benzersiz değil.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' negatif olmamalıdır.
+
+templatecontrol_mastercontrol_invalid		= Ana denetim TTemplateControl türünde ya da bir alt sınıfı olmalıdır.
+templatecontrol_mastercontrol_required		= '{0}' denetimi TContent kullandığı için bir ana denetim gerektirir.
+templatecontrol_contentid_duplicated		= TContent kimliği '{0}' yinelenmiş.
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder kimliği '{0}' yinelenmiş.
+templatecontrol_directive_invalid			= {0}.{1} bir şablon yönergesi aracılığıyla yalnızca statik bir metin dizesi kabul eder.
+templatecontrol_placeholder_inexistent		= TContent '{0}' için eşleşen bir TContentPlaceHolder yok.
+
+page_form_duplicated						= Bir sayfa en fazla bir TForm içerebilir. Diğer formlar için normal HTML form etiketlerini kullanın.
+page_isvalid_unknown						= TPage.IsValid henüz değerlendirilmedi.
+page_postbackcontrol_invalid				= '{0}' geri gönderim denetimi belirlenemedi.
+page_control_outofform						= {0} '{1}' bir TForm içinde yer almalıdır.
+page_head_duplicated						= Bir sayfa en fazla bir THead içerebilir.
+page_head_required							= CSS ve js dosyalarının HTML head bölümünde işlenebilmesi için sayfa şablonunda bir THead denetimi gerekir.
+page_statepersister_invalid					= Sayfa durumu kalıcılaştırıcısı IPageStatePersister arayüzünü uygulamalıdır.
+
+csmanager_pradoscript_invalid				= Bilinmeyen Prado betik kitaplığı adı '{0}'.
+csmanager_pradoscript_notloaded				= '{0}' Prado betik kitaplığı henüz yüklenmedi.
+csmanager_pradostyle_invalid				= Bilinmeyen Prado stil kitaplığı adı '{0}'.
+csmanager_invalid_packages					= '{0}' içinde tanımlanan javascript paketleri için bilinmeyen paketler '{1}'. Geçerli paketler: '{2}'.
+
+httpclient_transport_error					= HTTP istemcisi aktarım hatası (kod {0}): {1}
+httpclient_http_error						= {0} durum koduyla HTTP hata yanıtı.
+httpclient_transport_required				= Kullanılabilir HTTP aktarımı yok: cURL eklentisi yüklü değil ve allow_url_fopen kapalı.
+
+restclient_invalid_header					= TRestClient '{0}' üstbilgisinin adı geçersiz ya da değeri CR/LF içeriyor.
+restclient_basicauth_username_colon			= TRestClient Basic kimlik doğrulaması kullanıcı adı iki nokta üst üste içermemelidir (RFC 7617 kimlik bilgisi ayırıcısı).
+
+contentplaceholder_id_required				= TContentPlaceHolder bir ID değerine sahip olmalıdır.
+
+content_id_required							= TContent bir ID değerine sahip olmalıdır.
+
+controlcollection_control_required			= TControlList yalnızca dizeleri ya da TControl nesnelerini kabul eder.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' geçersiz. Yalnızca tek bir karakter olmalıdır.
+webcontrol_dir_invalid						= {0}.Dir '{1}' geçersiz. İzin verilen değerler 'ltr', 'rtl' ve 'auto'.
+webcontrol_style_invalid					= {0}.Style yalnızca dize değeri alabilir.
+
+listcontrol_selection_invalid				= {0} veri bağlama yapılmadan önce ayarlanmış geçersiz bir seçime sahip.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex geçersiz bir değere ({1}) sahip.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue geçersiz bir değere ('{1}') sahip.
+listcontrol_expression_invalid				= {0} geçersiz bir ifade ('{1}') değerlendiriyor: {2}
+listcontrol_multiselect_unsupported			= {0} çoklu seçimi desteklemiyor.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' bulunamadı.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' bulunamadı.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' bulunamadı.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' bulunamadı.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' negatif olmamalıdır.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' negatif olmamalıdır.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' 0 ile filtreleyen denetimin RenderFilterDepth değeri ({1}) arasında olmalıdır.
+
+hiddenfield_focus_unsupported				= THiddenField giriş odağı ayarlamayı desteklemiyor.
+hiddenfield_theming_unsupported				= THiddenField temalandırmayı desteklemiyor.
+hiddenfield_skinid_unsupported				= THiddenField denetim dış görünümünü desteklemiyor.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' var olan bir düğme denetimine karşılık gelmiyor.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding -1 ya da daha büyük bir tamsayı olmalıdır.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing -1 ya da daha büyük bir tamsayı olmalıdır.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History 0'dan büyük bir tamsayı olmalıdır.
+
+listitemcollection_item_invalid				= TListItemCollection yalnızca dizeleri ya da TListItem nesnelerini kabul eder.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices salt okunurdur.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack salt okunurdur.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex salt okunurdur.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices salt okunurdur.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue salt okunurdur.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices salt okunurdur.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' yok.
+logrouter_routeclass_required				= <route> yapılandırmasında class özniteliği zorunludur.
+logrouter_routetype_required				= Günlük rotası TLogRoute ya da ondan türeyen bir sınıfın örneği olmalıdır.
+
+dblogroute_connectionid_invalid				= TDbLogRoute '{0}' veritabanı bağlantı kimliğini oluşturamıyor.
+dblogroute_insert_failed					= TDbLogRoute günlüğü '{0}' içine ekleyemiyor.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' geçerli değil
+dblogroute_table_nonexistent				= TDbLogRoute '{0}' tablosu yok ve oluşturulmalıdır.
+dblogroute_order_invalid					= TDbLogRoute sıralaması '{0}' sütunları listelemelidir; her sütunu isteğe bağlı olarak ASC ya da DESC izleyebilir.
+dblogroute_limit_invalid					= TDbLogRoute sınırı '{0}' bir satır sayısı, 'count OFFSET offset' ya da 'offset, count' olmalıdır.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' ad alanı biçiminde bir dizin olmalı ve web sunucusu süreci tarafından yazılabilir olmalıdır.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize 0'dan büyük olmalıdır.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles 0'dan büyük olmalıdır.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom boş olamaz.
+emaillogroute_mail_failed					= TEmailLogRoute günlüğü '{0}' adresine gönderemedi.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags geçerli değil, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility geçerli değil, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger gereklidir.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' bir Psr\Log\LoggerInterface modül kimliği ya da sınıf adı değil.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger bir TPsrLogger olamaz; aynı TLogger içine geri günlük yazardı.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns 0'dan küçük olmamalıdır.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate boş ya da geçersiz bir denetim kimliği yolu içeriyor.
+basevalidator_validatable_required			= {0}.ControlToValidate, IValidatable arayüzünü uygulayan bir denetime işaret etmelidir.
+basevalidator_forcontrol_unsupported		= {0}.ForControl desteklenmiyor.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare geçersiz bir denetim kimliği yolu içeriyor.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate bir TFileUpload denetimine işaret etmelidir.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate geçersiz bir TListControl kimliği yolu içeriyor; "{1}" bir {2}.
+
+repeater_template_required					= TRepeater.{0}, ITemplate arayüzünü uygulayan bir şablon örneği gerektirir.
+repeater_itemtype_unknown					= Bilinmeyen yineleyici öğe türü {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection yalnızca TControl ya da ondan türeyen sınıfların örneği olan nesneleri kabul eder.
+
+datalist_template_required					= TDataList.{0}, ITemplate arayüzünü uygulayan bir şablon örneği gerektirir.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection yalnızca TDataListItem nesnelerini kabul eder.
+
+datagrid_template_required					= TDataGrid.{0}, ITemplate arayüzünü uygulayan bir şablon örneği gerektirir.
+templatecolumn_template_required			= TTemplateColumn.{0}, ITemplate arayüzünü uygulayan bir şablon örneği gerektirir.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex 0'dan küçük olmamalıdır.
+datagrid_pagesize_invalid					= TDataGrid.PageSize 0'dan büyük olmalıdır.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount 0'dan küçük olmamalıdır.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection yalnızca TDataGridItem nesnelerini kabul eder.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection yalnızca TDataGridColumn nesnelerini kabul eder.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount 0'dan büyük olmalıdır.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor geçersiz bir verinin alan değerini değerlendirmeye çalışıyor. Verinin, belirtilen '{0}' alanını içeren bir dizi, TMap, TList ya da nesne olduğundan emin olun.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor bilinmeyen bir alanın ('{0}') veri değerini değerlendirmeye çalışıyor: {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection yalnızca TTableRow nesnelerini kabul eder.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection yalnızca TTableColumn nesnelerini kabul eder.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection yalnızca TTableColumnGroup nesnelerini kabul eder.
+tablecolumn_span_invalid					= TTableColumn Span 1 ya da daha büyük olmalıdır; {0} verildi.
+
+tablecellcollection_tablerow_required		= TTableCellCollection yalnızca TTableCell nesnelerini kabul eder.
+
+multiview_view_required						= TMultiView alt öğe olarak yalnızca TView kabul eder.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex geçersiz bir dizine ('{0}') sahip.
+multiview_view_inexistent					= TMultiView belirtilen görünümü bulamıyor.
+multiview_viewid_invalid					= TMultiView geçiş yapılacak '{0}' görünümünü bulamıyor.
+
+viewcollection_view_required				= TViewCollection öğe olarak yalnızca TView kabul eder.
+
+view_visible_readonly						= TView.Visible salt okunurdur. Görünürlüğü değiştirmek için TView.Active kullanın.
+
+wizard_step_invalid							= Etkinleştirilecek adım sihirbaz adım koleksiyonunda bulunamadı.
+wizard_command_invalid						= Geçersiz sihirbaz gezinme komutu '{0}'.
+
+table_tablesection_outoforder				= TTable tablo bölümleri şu sırada olmalıdır: Header, Body ve Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType salt okunurdur.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection yalnızca TWizardStep ya da ondan türeyen sınıfların nesnelerini kabul eder.
+
+texthighlighter_stylesheet_invalid			= TTextHighlighter için stil sayfası dosyası bulunamadı.
+
+hotspotcollection_hotspot_required			= THotSpotCollection yalnızca THotSpot ya da ondan türeyen sınıfların örneklerini kabul eder.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode salt okunurdur.
+htmlarea_tarfile_invalid					= THtmlArea TinyMCE tar dosyasını bulamıyor.
+
+parametermodule_parameterfile_unchangeable	= Modül zaten başlatılmış olduğu için TParameterModule.ParameterFile değiştirilemez.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' geçersiz. Ad alanı biçiminde olduğundan ve dosya uzantısının '.xml' ya da '.php' olduğundan emin olun.
+parametermodule_parameterid_required		= Parameter öğesi 'id' özniteliğine sahip olmalıdır.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' geçersiz. Yalnızca alfasayısal karakterlere ve alt çizgiye izin verilir. İlk karakter bir harf ya da alt çizgi olmalıdır.
+datagridcolumn_expression_invalid			= {0} geçersiz bir ifade ('{1}') değerlendiriyor: {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID geçersiz bir önbellek modülü kimliğine ({0}) ayarlanmış. Modül ya yok ya da ICache arayüzünü uygulamıyor.
+outputcache_duration_invalid				= {0}.Duration 0'dan küçük olmayan bir tamsayı olmalıdır.
+
+stack_data_not_iterable						= TStack yalnızca bir diziden ya da dolaşılabilir bir nesneden veri alabilir.
+stack_empty									= TStack boş.
+
+queue_data_not_iterable						= TQueue yalnızca bir diziden ya da dolaşılabilir bir nesneden veri alabilir.
+queue_empty									= TQueue boş.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount 1'den küçük olmayan bir tamsayı olmalıdır.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex aralık dışında.
+pager_pagecount_invalid						= TPager.PageCount 0'dan küçük olamaz.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0}, TDataBoundControl sınıfından türeyen bir denetime işaret eden geçerli bir kimlik yolu olmalıdır.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize 1'den küçük olmayan bir tamsayı olmalıdır.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount 0'dan küçük olmayan bir tamsayı olmalıdır.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex aralık dışında.
+databoundcontrol_datasource_invalid			= {0}.DataSource geçerli değil.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' var olan bir denetime karşılık gelmiyor.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' IDataSource arayüzünü uygulayan bir denetime karşılık gelmelidir.
+databoundcontrol_datamember_invalid			= DataMember '{0}' veri kaynağının bir görünümünü adlandırmıyor.
+
+datasourcecontrol_focus_unsupported			= {0} Focus özelliğini desteklemiyor.
+datasourcecontrol_enabletheming_unsupported	= {0} EnableTheming özelliğini desteklemiyor.
+datasourcecontrol_skinid_unsupported		= {0} SkinID özelliğini desteklemiyor.
+datasourcecontrol_visible_unsupported		= {0} Visible özelliğini desteklemiyor.
+datasourceview_insert_unsupported			= {0} ekleme işlemini desteklemiyor.
+datasourceview_update_unsupported			= {0} güncelleme işlemini desteklemiyor.
+datasourceview_delete_unsupported			= {0} silme işlemini desteklemiyor.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource bir dizi, bir IDataSource ya da Traversable bir veri kaynağı gerektirir.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView null, bir dizi ya da Traversable bir veri kaynağı gerektirir.
+
+clientscript_invalid_file_position			= '{0}' TClientScript denetimi için dosya konumu '{1}' geçersiz; 'Head', 'Here' ya da 'Begin' olmalıdır.
+clientscript_invalid_package_path			= '{1}' TClientScript denetimi için PackagePath '{0}' geçersiz.
+
+tdatepicker_autopostback_unsupported		= '{0}' AutoPostBack özelliğini desteklemiyor.
+globalization_cache_path_failed				= '{0}' çeviri iletisi önbellek yolu oluşturulamadı. Üst dizinin var olduğundan ve web süreci tarafından yazılabilir olduğundan emin olun.
+globalization_source_path_failed			= '{0}' çeviri iletisi yolu oluşturulamadı. Üst dizinin var olduğundan ve web süreci tarafından yazılabilir olduğundan emin olun.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' geçerli bir TDataSourceConfig modülüne işaret etmiyor.
+messagesource_connectionid_required			= MessageSource_Database.source içinde ConnectionID gereklidir.
+
+callback_not_support_no_priority_state_update	= Geri çağrı isteği öncelik verilmemiş sayfa durumu güncellemesini desteklemiyor.
+callback_invalid_callback_options			= '{1}', '{0}' geri çağrı denetimi için geçerli bir TCallbackOptions denetimi değil.
+callback_invalid_clientside_options			= Geri çağrı ClientSide özelliği, bir TCallbackOptions denetiminin kimliğini taşıyan bir dize ya da bir TCallbackClientSideOptions örneği olmalıdır.
+callback_invalid_handler					= Geçersiz geri çağrı işleyicisi; {0} denetimi ICallbackEventHandler arayüzünü uygulamalıdır.
+callback_invalid_target						= Geçersiz geri çağrı hedefi; {0} kimliğine sahip bir denetim yok.
+
+callback_interval_be_positive				= "{0}" TCallbackTimer için Interval sıfır saniyeden kesinlikle büyük olmalıdır.
+callback_decay_be_not_negative				= "{0}" TCallbackTimer için azalma oranı negatif olmamalıdır.
+
+callback_no_autopostback					= "{0}" denetimi AutoPostBack özelliğini etkinleştiremez.
+
+xmltransform_xslextension_required			= TXmlTransform PHP XSL eklentisini gerektirir.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' geçersiz.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' geçersiz.
+xmltransform_transform_required				= TXmlTransform için TransformContent ya da TransformPath özelliğinden biri ayarlanmalıdır.
+
+ttriggeredcallback_invalid_controlid		= '{0}' için ControlID özelliği boş olmamalıdır.
+tactivecustomvalidator_clientfunction_unsupported	= {0} istemci tarafı doğrulayıcı işlevini desteklemiyor.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' geçerli bir TDataSourceConfig modülünü tanımlamıyor.
+dbproperties_property_required				= {1}.{0} zorunlu bir özelliktir.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' geçerli bir SQL tanımlayıcısı değil.
+
+dbconnection_open_failed					= TDbConnection veritabanı bağlantısı kuramadı: {0}
+dbconnection_connection_inactive			= TDbConnection etkin değil.
+dbconnection_unsupported_driver_charset		= '{0}' veritabanı sürücüsü karakter kümesi ayarlamayı desteklemiyor.
+dbconnection_charset_unchangeable			= '{0}' veritabanı sürücüsü bağlantı açıldıktan sonra karakter kümesini değiştiremez. Karakter kümesi bir DSN parametresidir.
+
+dbcommand_prepare_failed					= TDbCommand "{1}" SQL deyimini hazırlayamadı: {0}
+dbcommand_execute_failed					= TDbCommand "{1}" SQL deyimini çalıştıramadı: {0}
+dbcommand_query_failed						= TDbCommand "{1}" SQL sorgusunu çalıştıramadı: {0}
+dbcommand_column_empty						= TDbCommand boş bir sonuç döndürdü ve skaler değeri alamadı.
+dbdatareader_rewind_invalid					= TDbDataReader yalnızca ileri yönlü bir akıştır. Üzerinde yalnızca bir kez dolaşılabilir.
+dbtransaction_transaction_inactive			= TDbTransaction etkin değil.
+
+dbcommandbuilder_value_must_not_be_null		= {0} özelliği, '{1}' tablosundaki '{2}' sütununda tanımlandığı üzere null olmamalıdır.
+
+dbcommon_invalid_table_name					= '{0}' veritabanı tablosu bulunamadı. Hata iletisi: {1}.
+dbcommon_invalid_identifier_name			= Geçersiz veritabanı tanımlayıcı adı '{0}'; ayrıntılar için {1} adresine bakın.
+dbtableinfo_invalid_column_name				= '{1}' veritabanı tablosu için geçersiz sütun adı '{0}'.
+dbmetadata_invalid_table_view				= Geçersiz tablo/görünüm adı '{0}' ya da '{0}' tablosu/görünümü erişilebilir sütun/alan tanımı içermiyor.
+dbmetadata_requires_php_version				= {0} veritabanını kullanmak için PHP {1} ya da sonraki bir sürüm gerekir.
+
+dbtablegateway_invalid_criteria				= Geçersiz ölçüt nesnesi; bir dize ya da TSqlCriteria örneği olmalıdır.
+dbtablegateway_no_primary_key_found			= '{0}' tablosu hiçbir birincil anahtar alanı içermiyor.
+dbtablegateway_missing_pk_values			= '{0}' tablosu için IN(key1, key2, ...) oluşturulurken birincil anahtar değerleri eksik.
+dbtablegateway_pk_value_count_mismatch		= '{0}' tablosu için IN( (key1, key2, ..), (key3, key4, ..)) oluşturulurken bileşik anahtar değer sayısı uyuşmuyor.
+dbtablegateway_mismatch_args_exception		= TTableGateway bulucu yöntemi '{0}' {1} parametre bekliyor ancak yalnızca {2} parametre bulundu.
+dbtablegateway_mismatch_column_name			= Dinamik __call() yöntemi '{0}' içinde eşleşen sütun bulunamadı; '{2}' tablosu için geçerli sütunlar: '{1}'.
+dbtablegateway_invalid_table_info			= Tablo bir dize ya da TDbTableInfo örneği olmalıdır.
+
+resource_not_a_resource						= Açık bir PHP kaynağı bekleniyordu ancak '{0}' alındı.
+processfork_failed							= Süreç çatallanamadı.
+liveprocessfork_readonly_receiver			= TLiveProcessFork verisi alıcı tarafta salt okunurdur; veriyi yalnızca gönderen taraf değiştirir.
+stream_open_failed							= '{0}' akışı '{1}' moduyla açılamadı: {2}
+binarystream_unexpected_eof					= Beklenmeyen akış sonu: {0} bayt gerekiyordu ancak yalnızca {1} bayt okundu.
+binarystream_short_write					= Eksik yazma: {0} bayt yazılacaktı ancak yalnızca {1} bayt kabul edildi.
+streamresourcewrapper_unusable_stream		= Akış ne okunabilir ne de yazılabilir; bir kaynak olarak sunulamaz.
+streamfilter_already_registered				= '{0}' akış filtresi zaten kayıtlı.
+streamfilter_registration_failed			= '{1}' sınıfı için '{0}' akış filtresi kaydedilemedi.
+streamwrapper_already_registered			= '{0}' akış sarmalayıcı protokolü zaten kayıtlı.
+streamwrapper_registration_failed			= '{1}' sınıfı için '{0}' akış sarmalayıcı protokolü kaydedilemedi.
+reservedspace_invalid						= Ayrılmış bir alan negatif olmayan bir konum ve pozitif bir uzunluk gerektirir; '{0}' konumu ve '{1}' uzunluğu verildi.
+reservedspace_access_denied					= İşlem, '{0}' konumundaki ayrılmış alanla çakışıyor.
+multipartstream_element_invalid				= Bir TMultipartStream öğesi 'name' ve 'contents' gerektirir.
+builtincompressor_extension_required		= '{0}' sıkıştırıcısı '{1}' PHP eklentisini gerektirir.
+builtincompressor_compress_failed			= '{0}' sıkıştırıcısı veriyi sıkıştıramadı.
+builtincompressor_decompress_failed			= '{0}' sıkıştırıcısı veriyi açamadı; veri bozuk ya da başka bir biçimde olabilir.
+compression_method_unknown					= '{0}' sıkıştırma yöntemi bilinmiyor ya da eklentisi kullanılabilir değil.
+compression_none_available					= Bu PHP kurulumunda kullanılabilir bir sıkıştırma yöntemi yok.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' bilinen bir içerik kodlaması değil. Bilinen kodlamalar: {1}.
+compression_xz_unsupported					= xz/LZMA için PHP eklentisi yok; yerel ya da CLI tabanlı bir xz kodlayıcı-kod çözücü için belisoful/prado-compression paketini kurun.
+clicompressor_command_missing				= '{0}' sıkıştırıcısı PATH üzerinde şu sistem komutlarından birini gerektirir: '{1}'.
+clicompressor_process_failed				= '{0}' sıkıştırıcısı '{1}' komutunu başlatamadı.
+clicompressor_command_failed				= '{0}' sıkıştırıcısının '{1}' komutu {2} koduyla sonlandı: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule bir Endpoint ya da onu oluşturmak için pozitif bir Port gerektirir.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' geçersiz. TSocketServer ya da bir alt sınıfı olmalıdır.
+socketservermodule_scheme_not_stream		= TSocketServerModule bağlantısız '{0}' şeması üzerinde bağlantı kabul edemez. tcp, tls, ssl ya da unix gibi bir akış şeması kullanın.
+
+bitreader_invalid_bits						= {0} bit okunamıyor; sayı 0 ile platform tamsayı genişliği arasında olmalıdır.
+bitreader_64bit_php_required				= {0} bit okumak 64 bit bir PHP derlemesi gerektirir.
+bitreader_invalid_float_bits				= {0} bitlik bir kayan noktalı sayı okunamıyor; yalnızca 8, 16, 32 ya da 64 bit destekleniyor.
+bitwriter_invalid_bits						= {0} bit yazılamıyor; sayı 0 ile platform tamsayı genişliği arasında olmalıdır.
+bitwriter_64bit_php_required				= {0} bit yazmak 64 bit bir PHP derlemesi gerektirir.
+bitwriter_invalid_float_bits				= {0} bitlik bir kayan noktalı sayı yazılamıyor; yalnızca 8, 16, 32 ya da 64 bit destekleniyor.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' yok. Ad alanı biçiminde belirtilmesi ve dosya uzantısının '.xml' ya da '.php' olması gerektiğini unutmayın.
+soapservice_server_invalid					= TSoapService SOAP sunucu sınıfı '{0}' geçersiz. TSoapServer ya da bir alt sınıfı olmalıdır.
+soapservice_serverid_required				= <soap> öğesi 'id' özniteliğine sahip olmalıdır.
+soapservice_serverid_duplicated				= SOAP sunucu kimliği '{0}' yinelenmiş.
+soapserver_id_invalid						= Geçersiz SOAP sunucu kimliği '{0}'. '.wsdl' ile bitmemelidir.
+soapserver_provider_invalid					= TSoapServer sağlayıcı sınıfı '{0}' çözümlenemedi.
+soapserver_version_invalid					= Geçersiz SOAP sürümü '{0}'. '1.1' ya da '1.2' olmalıdır.
+soapserver_wsdlstyle_invalid				= Geçersiz WSDL stili '{0}'. 'rpc' ya da 'document' olmalıdır.
+soapserver_wsdlstyle_unsupported			= '{0}' WSDL stili pradosoft/prado-wsdlgenerator 1.2 ya da sonraki bir sürümünü gerektirir. Kurulu üretici yalnızca 'rpc' üretir.
+
+jsonservice_id_required						= TJsonService, JSON öğelerinde 'id' özniteliğini gerektirir.
+jsonservice_response_type_invalid			= {0} JSON sınıfı geçersiz. TJsonResponse olmalı ya da TJsonResponse sınıfından türemelidir.
+jsonservice_class_required					= TJsonService, JSON öğelerinde 'class' özniteliğini gerektirir.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass gereklidir.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' geçerli bir kullanıcı sınıfı değil. Sınıf TDbUser sınıfından türemelidir.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' geçerli bir TDataSourceConfig modülüne işaret etmiyor.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID gereklidir.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' geçerli bir TDataSourceConfig modülüne işaret etmiyor.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID gereklidir.
+
+feedservice_id_required						= TFeedService, besleme öğelerinde 'id' özniteliğini gerektirir.
+feedservice_feedtype_invalid				= '{0}' besleme sınıfı IFeedContentProvider arayüzünü uygulamalıdır.
+feedservice_class_required					= TFeedService, besleme öğelerinde 'class' özniteliğini gerektirir.
+
+tabviewcollection_tabview_required			= TTabPanel alt öğe olarak yalnızca TTabView kabul eder.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID geçersiz bir kimliğe ('{0}') sahip.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex geçersiz bir dizine ('{0}') sahip.
+tabpanel_view_inexistent					= TTabPanel belirtilen görünümü bulamıyor.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID gereklidir.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' var olmayan bir modüle işaret ediyor.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' ICache arayüzünü uygulamayan bir modüle işaret ediyor.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping yalnızca TUrlMappingPattern ya da alt sınıflarını içerebilir.
+urlmapping_global_required					= TUrlMapping genel bir modül olarak yapılandırılmalıdır.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' bir dosya değil.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' ad alanı biçiminde bir XML dosyasına işaret etmelidir.
+
+urlmappingpattern_serviceparameter_required	= '{0}' deseni için TUrlMappingPattern.ServiceParameter gereklidir.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl boş olamaz.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' geçersiz.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme {0} ile {1} arasında bir tamsayı olmalıdır.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize {0} ile {1} arasında bir tamsayı olmalıdır.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength {0} ile {1} arasında bir tamsayı olmalıdır.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength {0} ile {1} arasında bir tamsayı olmalıdır.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet en az 2 karakterden oluşan bir dize olmalıdır.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey bilinmiyor. Varlıklar dizininizin web sunucusu süreci tarafından yazılabilir olduğundan emin olun.
+captcha_gd2_required						= TCaptcha PHP GD2 eklentisini gerektirir.
+captcha_imagettftext_required				= TCaptcha, TrueType yazı tipi desteğine sahip PHP GD2 eklentisini gerektirir.
+captcha_imagepng_required					= TCaptcha, PNG görüntü biçimi desteğine sahip PHP GD2 eklentisini gerektirir.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl var olan bir TCaptcha denetimine işaret etmelidir.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} var olan bir TCaptcha denetimine işaret etmelidir.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} var olan bir TCaptcha denetimine işaret etmelidir.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey bilinmiyor. reCAPTCHA kullanmak için bir API anahtarı edinmeniz gerekir.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey bilinmiyor. reCAPTCHA kullanmak için bir API anahtarı edinmeniz gerekir.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate bir TReCaptcha örneği olmalıdır.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' yalnızca harf, rakam, '_' ve '-' içermelidir.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity {0} ile {1} arasında bir tamsayı olmalıdır.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' bir TProofOfWork denetimine işaret etmelidir.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' geçerli bir kullanıcı sınıfı değil. Sınıf TSliderHandle sınıfından türemelidir.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' geçerli bir önbellek modülüne işaret etmiyor.
+cachepagestatepersister_cache_required		= TCachePageStatePersister yüklü bir önbellek modülü gerektirir.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' geçerli bir önbellek modülüne işaret etmiyor.
+cachemoduleid_cache_required				= {0} bir önbellek modülü gerektirir. Birincil bir önbellek yapılandırın ya da {0}.CacheModuleID ayarlayın.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout sıfırdan küçük olmayan bir tamsayı olmalıdır.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' geçerli bir PHP ifadesi değil: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule parametre verilerini saklamak için '{0}' veritabanı tablosunu bulamıyor.
+dbparametermodule_get_no_blank_key			= TDbParameterModule boş bir anahtarı alamaz.
+dbparametermodule_set_no_blank_key			= TDbParameterModule boş bir anahtara değer ayarlayamaz.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' geçerli bir TDataSourceConfig modülüne işaret etmiyor.
+dbparametermodule_serializer_not_callable	= TDbParameterModule Serializer çağrılabilir bir değer değil.
+
+clockawaretrait_invalid_clock_class			= '{0}' saat sınıfı Prado\Util\Clock\IClock arayüzünü uygulamalıdır.
+utcclock_timezone_fixed						= TUTCClock UTC'ye sabitlenmiştir; başka bir saat dilimi için TTimezoneClock kullanın.
+
+processcrontask_no_command					= '{0}' TProcessCronTask görevinin çalıştıracağı bir Command yok.
+processcrontask_launch_failed				= TProcessCronTask süreci başlatamadı: '{0}'.
+processcrontask_write_failed				= TProcessCronTask '{0}' pid dosyasına yazamadı.
+closurecrontask_no_closure					= '{0}' TClosureCronTask görevinin çalıştıracağı bir closure yok.
+closurecrontask_closure_required			= TClosureCronTask bir Closure gerektirir.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' bir TSecurityManager değil.
+closurecrontask_decrypt_failed				= '{0}' TClosureCronTask görevi closure yükünün şifresini çözemedi.
+cronmethodtask_no_module					= TCronMethodTask '{0}' modülünü bulamadı.
+cron_usermanager_nonexistent				= TCronModule '{0}' adlı UserManager modülünü bulamadı.
+cron_usermanager_invalid					= TCronModule UserManager '{0}' bir TUserManager değil.
+cron_task_as_array_required					= TCronModule yapılandırmasındaki görev işi bir dizi değil.
+cron_duplicate_task_name					= TCronModule görev işlerinin adları benzersiz olmalıdır.
+cron_schedule_required						= Cron görevinin bir zamanlaması olmalıdır.
+cron_task_required							= Cron görevinin bir görevi olmalıdır.
+cron_not_a_crontask							= '{0}' cron görevi bir TCronTask değil.
+cron_additional_tasks_invalid				= '{0}' geçerli bir ek cron görevi değil.
+crontask_no_module							= TCronTask '{0}' modülünü bulamadı.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask belirtilen '{0}' modülünü bulamadı.
+dbcron_invalid_name							= TDbCronManager görev adı '{0}' geçersiz.
+dbcron_conflicting_task_names				= Yapılandırmadaki cron görevleri veritabanındaki cron görevleriyle ('{0}') çakışıyor.
+dbcron_table_nonexistent					= TDbCronManager veritabanı tablosu yok.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' bir TDataSourceConfig değil.
+
+timescheduler_invalid_string				= TTimeScheduler '{0}' zamanlama öğesini ayrıştıramadı
+
+rational_bad_offset							= "{0}" TRational için geçerli bir özellik erişimcisi değil.
+
+bithelper_bad_fp_format						= TBitHelper {3} bit PHP ortamında '{0}' üs biti, '{1}' mantis biti ve '{2}' üs sapması ile çalışamaz.
+bithelper_invalid_color_in					= TBitHelper en az bir In Bit değerine sahip olmalıdır. '{0}' verildi.
+bithelper_invalid_color_out					= TBitHelper en az bir Out Bit değerine sahip olmalıdır. '{0}' verildi.
+bithelper_bad_mirror_bits					= TBitHelper {1} bit PHP ortamında '{0}' biti yansıtamaz.
+
+ar_data_invalid								= {0}.copyFrom() parametre olarak yalnızca bir nesne ya da dizi alabilir.
+ar_save_invalid								= {0} örneği silinmiş ya da bilinmeyen bir durumda olduğu için kaydedilemez.
+ar_delete_invalid							= {0} örneği yeni bir kayıt ya da zaten silinmiş bir kayıt olduğu için silinemez.
+
+dbmetadata_invalid_database_driver			= '{0}' sürücüsü desteklenmiyor. Varsa PRADO sürücüsünü kurun.
+dbmetadata_not_meta_data					= {1} sürücü sınıfı bekleniyordu ancak {0} sınıfı alındı.
+dbmetadata_tableinfo_class_invalid			= TDbMetaData tablo bilgisi sınıfı '{0}' bir sınıf değil, bir dizin ad alanı.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' geçersiz. Geçerli bir uygulama modülüne işaret ettiğinden emin olun.
+distributeddatasource_child_required		= {0} en az bir '{1}' alt öğesi gerektirir.
+masterslavedbconnection_connection_exists	= {0}.{1} bağlantısı zaten var.
+masterslavedbconnection_interface_required	= {0}.{1}, {2} arayüzünü uygulayan bir örnek gerektirir.
+slavedbconnection_requires_master			= {0} bir {1} gerektirir.
+
+response_status_reason_missing				= HTTP 1.1, genişletilmiş durum kodları için bir neden gerektirir
+response_status_reason_badchars				= HTTP 1.1 üstbilgisinde durum nedeni belirteci CR ya da LF belirteci içermemelidir
+
+activefileupload_temppath_invalid			= TActiveFileUpload TempPath yolu '{0}' yok ya da web sunucusu süreci tarafından yazılabilir değil.
+
+tactivetablecell_control_outoftable			= {0} '{1}' bir TTableRow denetimi içinde yer almalıdır.
+tactivetablecell_control_notincollection	= {0} '{1}' üst TTableRow denetiminin TTableCellCollection koleksiyonunun üyesi değil.
+
+tactivetablerow_control_outoftable			= {0} '{1}' bir TTable denetimi içinde yer almalıdır.
+tactivetablerow_control_notincollection		= {0} '{1}' üst TTable denetiminin TTableRowCollection koleksiyonunun üyesi değil.
+
+juioptions_option_invalid					= '{1}', '{0}' denetimi için geçerli bir seçenek değil.
+
+ratinglist_invalid_caption_id				= '{0}', '{0}' TRatingList denetimi için geçerli bir başlık denetimi değil.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID geçersiz bir kimliğe ('{0}') sahip.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex geçersiz bir dizine ('{0}') sahip.
+accordion_view_inexistent					= TAccordion belirtilen görünümü bulamıyor.
+
+dot_bad_size								= TDot Size pozitif bir tamsayı olmalıdır ancak '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth isteğe bağlı % ya da CSS uzunluk birimi içeren bir sayı olmalıdır ancak '{0}'
+
+juidatepicker_settextmode_unsupported		= TJuiDatePicker denetiminin TextMode özelliği değiştirilemez.
+
+control_adapter_not_active					= BaseActiveControl özelliği etkin olmayan bir denetim üzerinde çağrıldı.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' bir TFigure denetiminin doğrudan alt öğesi olmalıdır.
+summary_requires_details_parent				= TSummary '{0}' bir TDetails denetiminin doğrudan alt öğesi olmalıdır.
+
+gravatar_bad_default						= TGravatar DefaultImageStyle özellik değeri '{0}' desteklenmiyor
+gravatar_bad_size							= TGravatar Size [1 .. 512] aralığında değil; '{0}' verildi
+
+progress_value_invalid						= TProgress Value 0 ya da daha büyük olmalıdır; {0} verildi.
+progress_max_invalid						= TProgress Max 0'dan büyük olmalıdır; {0} verildi.
+
+time_invalid_datetime						= TTime DateTime bir DateTimeInterface, DateInterval, dize ya da sayısal değer olmalıdır; {0} verildi.
+time_invalid_text_format					= TTime TextFormat '{0}' bir TTimeFormat sabit adı ya da ICU tarih-saat deseni değil.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' '{1}' içeremez: etkin, geri gönderim ve doğrulayıcı denetimleri durağan şablon içeriğinde çalışmaz. {{...}} yer tutucularıyla düz işaretleme kullanın ya da ValidateContent="false" ayarlayın.
+
+vardumper_not_array							= __debuginfo() bir dizi döndürmelidir.
+
+htmlpurifier_source_path_failed				= '{0}' html purifier önbellek yolu oluşturulamadı. Üst dizinin var olduğundan ve web süreci tarafından yazılabilir olduğundan emin olun.

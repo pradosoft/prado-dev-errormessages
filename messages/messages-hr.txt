@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Croatian (hr).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application smije se postaviti samo jednom.
+prado_component_unknown						= Nepoznat tip komponente '{0}'. Uzrok može biti sljedeća greška parsiranja u datoteci klase {0}: {1}
+prado_using_invalid							= '{0}' nije valjan imenski prostor za korištenje. Provjerite je li dodan '.*' ako želite koristiti imenski prostor koji se odnosi na direktorij.
+prado_alias_redefined						= Alias '{0}' ne može se ponovno definirati.
+prado_alias_invalid							= Alias '{0}' upućuje na nevažeću putanju '{1}'. Alias se može dodijeliti samo postojećim direktorijima.
+prado_aliasname_invalid						= Alias '{0}' sadrži nedozvoljeni znak '.'.
+
+component_property_undefined				= Svojstvo komponente '{0}.{1}' nije definirano.
+component_property_readonly					= Svojstvo komponente '{0}.{1}' je samo za čitanje.
+component_event_undefined					= Događaj komponente '{0}.{1}' nije definiran.
+component_method_undefined					= Metoda komponente '{0}.{1}' nije definirana.
+component_eventhandler_invalid				= Događaju komponente '{0}.{1}' pridružen je nevažeći rukovatelj događaja '{2}'.
+component_expression_invalid				= Komponenta '{0}' evaluira nevažeći izraz '{1}' : {2}.
+component_statements_invalid				= Komponenta '{0}' evaluira nevažeće PHP naredbe '{1}' : {2}.
+component_class_behavior_defined			= Komponenta '{0}' već ima ponašanje klase '{1}'.
+component_not_a_behavior					= Komponenta '{0}' koja se dodaje kao ponašanje nije TBaseBehavior.
+object_not_a_component						= Objekt '{0}' koji se dodaje kao ponašanje nije TComponent.
+component_no_tcomponent_class_behaviors		= TComponent ne može imati pridružena ponašanja klase zbog rekurzije.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors se ne mogu pridružiti više vlasnika. Proslijedite string ili niz s klasom IBehavior i svojstvima za instanciranje na svakom vlasniku.
+
+propertyvalue_enumvalue_invalid				= Vrijednost '{0}' nije valjana vrijednost enumeracije ({1}).
+propertyvalue_invalid_hex_color				= Vrijednost '{0}' nije valjana heksadecimalna vrijednost boje, npr. "#112233".
+propertyvalue_invalid_array_literal			= Vrijednost '{0}' nije valjan literal niza.
+propertyvalue_array_too_deep				= Literal niza ugniježđen je dublje od {0} razina.
+
+eventhandler_lost_weak_ref					= TEventHandler ne može pozvati rukovatelja događaja jer je WeakReference na pozivni objekt izgubljen.
+eventhandler_no_set_handler					= TEventHandler ne može postaviti rukovatelja događaja, indeks "{0}".
+eventhandler_bad_offset						= TEventHandler nema pomak "{0}".
+
+eventparam_readonly							= {0} je samo za čitanje.
+eventparam_readonly_set						= {0} ne može promijeniti ReadOnly nakon što je postavljen.
+eventparam_readonly_not_self				= {0} ReadOnly može se postaviti samo interno.
+
+list_index_invalid							= Indeks '{0}' je izvan raspona.
+list_item_inexistent						= Stavka se ne može pronaći u listi.
+list_data_not_iterable						= Podaci moraju biti niz ili objekt koji implementira sučelje Traversable.
+list_readonly								= {0} je samo za čitanje.
+list_readonly_set							= {0} ne može promijeniti Read-Only nakon što je već postavljen.
+prioritylist_index_invalid					= Indeks '{0}' od '{1}' na prioritetu '{2}' je izvan raspona.
+prioritytrait_no_set_default_priority		= Zadani prioritet može se postaviti samo jednom ili od strane samog objekta.
+prioritytrait_no_set_precision				= Preciznost se može postaviti samo jednom ili od strane samog objekta.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid može se postaviti samo jednom ili od strane samog objekta.
+
+map_addition_disallowed						= Nova stavka ne može se dodati u mapu.
+map_item_unremovable						= Stavka se ne može ukloniti iz mape.
+map_data_not_iterable						= Podaci moraju biti niz ili objekt koji implementira sučelje Traversable.
+map_readonly								= {0} je samo za čitanje.
+map_readonly_set							= {0} ne može promijeniti Read-Only nakon što je već postavljen.
+
+tnull_clone_disallowed						= TNull singleton ne može se klonirati. Umjesto toga koristite TNull::null().
+
+weakcallablecollection_callable_required	= TWeakCallableCollection prihvaća samo callable vrijednosti.
+
+arraysubscription_no_change					= TArraySubscription.{0} ne može se mijenjati nakon pretplate.
+arraysubscription_no_null_key				= TArraySubscription se ne može pretplatiti na null ključ objekta ArrayAccess.
+arraysubscription_index_invalid				= TArraySubscription je u načinu rada liste (isAssociative = false), ali ključ '{0}' nije valjan (broj: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array ne može se postaviti izravno.
+eventsubscription_no_change					= TEventSubscription.{0} ne može se mijenjati nakon pretplate.
+
+application_includefile_invalid				= Nije moguće pronaći konfiguraciju aplikacije {0}. Provjerite je li u formatu imenskog prostora i završava li datoteka s ".xml" ili ".php".
+application_basepath_invalid				= Osnovna putanja aplikacije '{0}' ne postoji ili nije direktorij.
+application_runtimepath_invalid				= Putanja za izvršavanje aplikacije '{0}' ne postoji ili nije zapisiva za proces web poslužitelja.
+application_service_class_not_found			= Klasa servisa '{0}' ne postoji.
+application_service_class_not_service		= Klasa servisa '{0}' ne implementira IService.
+application_service_class_required			= registerService zahtijeva naziv klase ili niz serviceConfig za servis '{0}'.
+application_service_default_unregister		= Zadani servis stranica '{0}' ne može se odjaviti.
+service_csrf_token_invalid					= Servis '{0}' zahtijeva valjani CSRF token.
+application_moduleid_duplicated				= ID modula aplikacije '{0}' nije jedinstven.
+application_runtimepath_failed				= Nije moguće stvoriti putanju za izvršavanje '{0}'. Provjerite postoji li nadređeni direktorij i je li zapisiv za web proces.
+application_module_required_dep_missing		= Modul '{0}' ima obaveznu ovisnost o modulu '{1}', koji nije registriran u aplikaciji.
+application_module_dependency_cycle			= Otkriven je ciklus ovisnosti među sljedećim modulima: {0}.
+application_module_dependency_self_reference	= Modul '{0}' deklarira sam sebe kao ovisnost, što nikada nije valjano.
+
+appconfig_aliaspath_invalid					= Konfiguracija aplikacije <alias id="{0}"> koristi nevažeću putanju datoteke "{1}".
+appconfig_alias_invalid						= Element <alias> konfiguracije aplikacije mora imati atribut "id" i atribut "path".
+appconfig_alias_redefined					= Konfiguracija aplikacije <alias id="{0}"> ne može se ponovno definirati.
+appconfig_using_invalid						= Element <using> konfiguracije aplikacije mora imati atribut "namespace".
+appconfig_moduleid_required					= Element <module> konfiguracije aplikacije mora imati atribut "id".
+appconfig_moduletype_required				= Konfiguracija aplikacije <module id="{0}"> mora imati atribut "class".
+appconfig_moduletype_inapplicable			= Konfiguracija aplikacije <module id="{0}"> ne može imati atribut "class".
+appconfig_serviceid_required				= Element <service> konfiguracije aplikacije mora imati atribut "id".
+appconfig_servicetype_required				= Konfiguracija aplikacije <service id="{0}"> mora imati atribut "class".
+appconfig_parameterid_required				= Element <parameter> konfiguracije aplikacije mora imati atribut "id".
+appconfig_includefile_required				= Element <include> konfiguracije aplikacije mora imati atribut "file".
+appconfig_paths_invalid						= Konfiguracija aplikacije <paths> ne može sadržavati element <{0}>.
+appconfig_modules_invalid					= Konfiguracija aplikacije <modules> ne može sadržavati element <{0}>.
+appconfig_services_invalid					= Konfiguracija aplikacije <services> ne može sadržavati element <{0}>.
+appconfig_parameters_invalid				= Konfiguracija aplikacije <parameters> ne može sadržavati element <{0}>.
+appconfig_tag_invalid						= Konfiguracija aplikacije ne može sadržavati element <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey ne smije biti prazan.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey ne smije biti prazan.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey ne smije biti prazan.
+securitymanager_mcryptextension_required	= PHP proširenje Mcrypt potrebno je za korištenje značajke šifriranja TSecurityManager.
+securitymanager_mcryptextension_initfailed	= TSecurityManager nije uspio inicijalizirati modul mcrypt.
+
+uri_format_invalid							= '{0}' nije valjan URI.
+
+httprequest_browscap_required				= THttpRequest zahtijeva da direktiva browscap bude konfigurirana u php.ini.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator može sadržavati samo jedan znak.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' ne upućuje na postojeći modul.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' mora upućivati na modul koji nasljeđuje TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie je false, što zahtijeva modul sesije.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection prihvaća samo objekte THttpCookie.
+
+httpresponse_file_inexistent				= THttpResponse ne može poslati datoteku '{0}'. Datoteka ne postoji.
+httpresponse_responsedata_method_unavailable	= THttpResponse: metoda '{0}' ne može se koristiti bez odgovarajućeg adaptera koji je implementira.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' ne upućuje na postojeći modul.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' mora upućivati na modul koji nasljeđuje THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager može sadržavati samo THttpHeader ili njegove izvedene klase.
+httpheadersmanager_headerclass_missing		= Unosu <headerclass> u THttpHeadersManager nedostaje obavezni atribut 'name' ili 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID ne može se mijenjati nakon pokretanja sesije.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName ne može se mijenjati nakon pokretanja sesije.
+httpsession_sessionname_invalid				= THttpSession.SessionName smije sadržavati samo alfanumeričke znakove.
+httpsession_savepath_unchangeable			= THttpSession.SavePath ne može se mijenjati nakon pokretanja sesije.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' nije valjan.
+httpsession_storage_unchangeable			= THttpSession.Storage ne može se mijenjati nakon pokretanja sesije.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode ne može se mijenjati nakon pokretanja sesije.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart ne može se mijenjati nakon inicijalizacije modula sesije.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability ne može se mijenjati nakon pokretanja sesije.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability mora biti cijeli broj između 0 i 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID ne može se mijenjati nakon pokretanja sesije.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID ne može se postaviti kada je THttpSession.CookieMode postavljen na Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout ne može se mijenjati nakon pokretanja sesije.
+httpsession_handler_invalid					= THttpSessionHandler prihvaća samo objekt THttpSession kao parametar konstruktora
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' nije valjan. Provjerite je li u obliku imenskog prostora i upućuje li na direktorij zapisiv za proces web poslužitelja.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath ne može se mijenjati nakon inicijalizacije modula.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl ne može se mijenjati nakon inicijalizacije modula.
+assetmanager_filepath_invalid				= TAssetManager objavljuje nevažeću datoteku '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager objavljuje tar datoteku s nevažećim kontrolnim zbrojem '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager objavljuje nevažeću tar datoteku '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager nije uspio raspakirati tar datoteku '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager kopira nevažeći direktorij '{0}'.
+
+cache_primary_duplicated					= Dopušten je najviše jedan primarni modul predmemorije. {0} se pokušava registrirati kao još jedna primarna predmemorija.
+psrcache_backing_cache_required				= Potreban je TPsrCache.BackingCacheId ili TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' ne odnosi se na modul aplikacije.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' mora se odnositi na modul koji implementira Psr\SimpleCache\CacheInterface ili Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' je PSR adapter ovog TPsrCache; čitao bi i pisao natrag u istu predmemoriju.
+psrcachebacking_cache_required				= {0} zahtijeva pozadinsku predmemoriju. Postavite {0}.BackingCacheId, {0}.BackingCache ili primarnu predmemoriju aplikacije.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' ne odnosi se na modul aplikacije.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' mora se odnositi na modul Prado\Caching\ICache.
+psrcachebacking_key_invalid					= Ključ predmemorije {0} mora biti neprazan string bez rezerviranih znakova {}()/\@: , a zadan je '{1}'.
+sqlitecache_extension_required				= TSqliteCache zahtijeva PHP proširenje SQLite.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile je obavezan.
+sqlitecache_connection_failed				= Veza TSqliteCache s bazom podataka nije uspjela. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache nije uspio stvoriti bazu podataka predmemorije. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile ne može se mijenjati nakon inicijalizacije modula.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile nije valjan. Provjerite je li u ispravnom formatu imenskog prostora.
+
+dbcache_unavailable							= TDbCache zahtijeva PHP proširenje PDO.
+
+etcdcache_transport_required				= TEtcdCache zahtijeva PHP proširenje cURL ili allow_url_fopen.
+
+memcache_extension_required					= TMemCache zahtijeva PHP proširenje memcache.
+memcache_connection_failed					= TMemCache se nije uspio spojiti na memcache poslužitelj {0}:{1}.
+memcache_not_initialized					= Opcije se ne mogu postaviti na TMemCache prije inicijalizacije modula.
+
+apccache_extension_required					= TAPCCache zahtijeva PHP proširenje APC.
+apccache_extension_not_enabled				= TAPCCache zahtijeva apc.enabled = 1 u php.ini da bi radio.
+apccache_extension_not_enabled_cli			= TAPCCache zahtijeva apc.enable_cli = 1 u php.ini da bi radio s PHP-om iz naredbenog retka.
+
+cachesize_item_exceeds_maximum_size			= Stavka predmemorije ima {0} bajtova, što premašuje konfigurirani MaximumSize od {1} bajtova.
+
+filecache_directory_required				= TFileCache.Directory je obavezan.
+filecache_directory_create_failed			= TFileCache ne može stvoriti direktorij predmemorije '{0}'.
+filecache_directory_not_writable			= Direktorij predmemorije TFileCache '{0}' nije zapisiv.
+filecache_hash_token_identity				= TFileCache.hashToken mora transformirati svoj ulaz; implementacija u potklasi vratila je token nepromijenjen.
+filecache_hash_token_path_separator			= TFileCache.hashToken ne smije vratiti vrijednost koja sadrži razdjelnik putanje ("/" ili "\"); implementacija u potklasi vratila je nesiguran hash.
+
+memorycache_backing_file_directory_not_found	= Direktorij TMemoryCache.BackingFile ne postoji za putanju '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' nije valjan. Valjane vrijednosti su 'PHP' i 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' nije valjan. Valjane vrijednosti su 'None', 'Base64' i 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' nije valjan. Mora biti ID modula TSecurityManager ili instanca TSecurityManager.
+serializingcache_json_encode_failed			= TSerializingCache nije uspio JSON kodirati vrijednost: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} ne odnosi se na valjani direktorij.
+cachedependencylist_cachedependency_required	= U TCacheDependencyList mogu se dodati samo objekti koji implementiraju ICacheDependency.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' nije valjan. Provjerite je li u obliku imenskog prostora i upućuje li na valjani direktorij koji sadrži datoteke predložaka grešaka.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' nije valjan direktorij.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage ne može se mijenjati nakon inicijalizacije servisa.
+pageservice_basepath_unchangeable			= TPageService.BasePath ne može se mijenjati nakon inicijalizacije servisa.
+pageservice_pageclass_invalid				= Klasa stranice {0} nije valjana. Mora biti TPage ili naslijediti TPage.
+pageservice_includefile_invalid				= Nije moguće pronaći konfiguraciju servisa stranica {0}. Provjerite je li u formatu imenskog prostora i završava li datoteka s ".xml" ili ".php".
+
+pageserviceconf_file_invalid				= Nije moguće otvoriti konfiguracijsku datoteku direktorija stranica '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> koristi nevažeću putanju datoteke "{1}" u konfiguracijskoj datoteci direktorija stranica '{2}'.
+pageserviceconf_alias_invalid				= Element <alias> mora imati atribut "id" i atribut "path" u konfiguracijskoj datoteci direktorija stranica '{0}'.
+pageserviceconf_using_invalid				= Element <using> mora imati atribut "namespace" u konfiguracijskoj datoteci direktorija stranica '{0}'.
+pageserviceconf_module_invalid				= Element <module> mora imati atribut "id" u konfiguracijskoj datoteci direktorija stranica '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> mora imati atribut "class" u konfiguracijskoj datoteci direktorija stranica '{1}'.
+pageserviceconf_parameter_invalid			= Element <parameter> mora imati atribut "id" u konfiguracijskoj datoteci direktorija stranica '{0}'.
+pageserviceconf_page_invalid				= Element <page> mora imati atribut "id" u konfiguracijskoj datoteci direktorija stranica '{0}'.
+pageserviceconf_includefile_required		= Element <include> konfiguracije stranice mora imati atribut "file".
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" ne može se promijeniti (u "{1}") nakon što je ponašanje pridruženo.
+basebehavior_sync_no_owner					= TBaseBehavior "{0}" nema vlasnika i ne može sinkronizirati rukovatelje događaja na komponenti bez vlasnika.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" ne može sinkronizirati rukovatelje događaja na objektu koji nije vlasnik.
+behavior_has_owner							= TBehavior "{0}" može se pridružiti samo jednom vlasniku.
+behavior_bad_attach_component				= TBehavior "{0}" može se pridružiti samo komponenti TComponent.
+behavior_detach_without_owner				= TBehavior "{0}" ne može se odvojiti bez vlasnika.
+behavior_detach_wrong_owner					= TBehavior "{0}" ne može se odvojiti od objekta koji nije njegov vlasnik.
+behavior_property_unchangeable				= {1}.{0} ne može se mijenjati nakon što je ponašanje pridruženo.
+behavior_requires_owner						= {1}.{0} zahtijeva vlasnika.
+classbehavior_owner_attach_once				= TClassBehavior "{0}" može se pridružiti vlasniku samo jednom. Rukovatelji ne bi bili jedinstveni.
+classbehavior_bad_attach_component			= TClassBehavior "{0}" može se pridružiti samo komponenti TComponent.
+classbehavior_detach_without_owner			= TClassBehavior "{0}" ne može se odvojiti bez vlasnika.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" ne može se odvojiti od objekta koji nije njegov vlasnik.
+
+callchain_bad_dynamic_event					= Podignut je TCallChain.{0}, a očekivan je {1}.
+
+behaviormodule_behavior_as_array_required	= php <behavior> mora biti niz.
+behaviormodule_behaviorname_required		= <behavior> mora sadržavati atribut 'name' za pridruživanje ponašanja.
+behaviormodule_behaviorclass_required		= <behavior> mora sadržavati atribut 'class' koji definira klasu ponašanja.
+behaviormodule_attachto_class_required		= <behavior> mora imati atribut 'attachto' ili 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= <behavior> mora imati atribut 'attachto' ili 'attachtoclass', ne oba.
+behaviormodule_behaviorowner_required		= Objekt <behavior> attachto '{0}' nije pronađen.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors ne može se postaviti na nevažeći tip '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader mora imati naziv ponašanja (Behavior Name).
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader mora imati klasu ponašanja (Behavior Class).
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader mora imati atribut 'attachto' ili 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader smije imati samo jedan od atributa 'attachto' ili 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' zahtijeva ID modula.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' nije pronađen.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader nije pronašao modul '{0}' za pridruživanje ponašanja.
+
+evaluationfilter_statements_denied			= Komponenta '{0}' ne može evaluirati PHP naredbe '{1}' jer je TEvaluationFilterBehavior.AllowStatements false.
+evaluationfilter_code_denied				= Komponenta '{0}' ne može evaluirati '{1}' jer TEvaluationFilterBehavior ne dopušta '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior za konstrukciju mora imati callable.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior za konstrukciju mora imati callable.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior mora imati atribut Parameter.
+parameterizebehavior_no_property			= TParameterizeBehavior mora imati atribut Property.
+parameterizebehavior_owner_get_only_property	= Vlasnik TParameterizeBehavior ima svojstvo '{0}', ali je ono samo za čitanje.
+parameterizebehavior_owner_has_no_property	= Vlasnik TParameterizeBehavior nema svojstvo '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior ne može isprazniti Parameter nakon pridruživanja.
+
+processhelper_no_forking					= Razdvajanje (fork) procesa nije podržano.
+processhelper_no_signals					= Signali procesa ne mogu se slati na Windowsima.
+
+serializableclosure_no_decrypter			= TSerializableClosure ne može dešifrirati šifrirani sadržaj closurea bez konfiguriranog dekriptora.
+serializableclosure_decrypt_failed			= TSerializableClosure nije uspio dešifrirati šifrirani sadržaj closurea; sadržaj je možda neovlašteno izmijenjen ili je ključ promijenjen.
+
+appsignals_no_change						= TApplicationSignals::{0} ne može se mijenjati nakon pridruživanja.
+appsignals_not_a_dispatcher					= '{0}' nije TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' nije valjan PID.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} ne može se mijenjati nakon pridruživanja.
+
+initialized_property_unchangeable			= {1}.{0} ne može se postaviti jer je već inicijaliziran.
+initialized_requires_initialization			= {1}.{0} zahtijeva inicijalizaciju prije obrade.
+
+template_closingtag_unexpected				= Pronađena je neočekivana završna oznaka '{0}'.
+template_closingtag_expected				= Očekivana je završna oznaka '{0}', pronađena je '{1}'.
+template_directive_nonunique				= Direktiva '<%@ ... %>' mora se nalaziti na početku predloška i može se pojaviti najviše jednom.
+template_comments_forbidden					= Komentari predloška nisu dopušteni unutar oznaka svojstava.
+template_matching_unexpected				= Neočekivano podudaranje.
+template_property_unknown					= {0} nema svojstvo pod nazivom '{1}'.
+template_event_unknown						= {0} nema događaj pod nazivom '{1}'.
+template_property_readonly					= {0} ima svojstvo '{1}' koje je samo za čitanje.
+template_event_forbidden					= {0} je komponenta koja nije kontrola. Rukovatelj se ne može pridružiti njezinom događaju '{1}' u predlošku.
+template_databind_forbidden					= {0} je komponenta koja nije kontrola. Izrazi se ne mogu povezati s njezinim svojstvom '{1}'.
+template_component_required					= '{0}' nije komponenta. U predlošku se mogu pojaviti samo komponente.
+template_format_invalid						= Nevažeća sintaksa predloška: {0}
+template_property_duplicated				= Svojstvo {0} konfigurirano je dva ili više puta.
+template_eventhandler_invalid				= {0}.{1} prihvaća samo statički string.
+template_controlid_invalid					= {0}.ID prihvaća samo statički tekstualni string.
+template_controlskinid_invalid				= {0}.SkinID prihvaća samo statički tekstualni string.
+template_content_unexpected					= Pronađen je neočekivani sadržaj pri instanciranju predloška: {0}.
+template_include_invalid					= Nevažeće uključivanje predloška. Provjerite je li {0} valjani imenski prostor koji upućuje na postojeću datoteku predloška s ekstenzijom .tpl.
+template_tag_unexpected						= Inicijalizacija svojstva {0} sadrži nepoznat tip oznake {1}.
+
+xmldocument_file_read_failed				= TXmlDocument ne može pročitati datoteku '{0}'.
+xmldocument_file_write_failed				= TXmlDocument ne može zapisati datoteku '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList prihvaća samo objekte TXmlElement.
+
+xmlelement_null_tag							= Naziv oznake TXmlElement ne može biti null.
+xmlelement_empty_tag						= Naziv oznake TXmlElement ne može biti prazan string.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action može imati samo vrijednost 'allow' ili 'deny'.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb može imati samo vrijednost 'get' ili 'post'.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection prihvaća samo objekte TAuthorizationRule.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' nije valjana datoteka.
+usermanager_userfile_unchangeable			= TUserManager.UserFile ne može se mijenjati. Korisnički modul je već inicijaliziran.
+
+integritymanager_entry_invalid				= Unos integriteta TIntegrityManager za URL '{0}' zahtijeva neprazan url i hash.
+integritymanager_algorithm_invalid			= Algoritam TIntegrityManager '{0}' nije podržan; koristite jedan od: {1}.
+integritymanager_file_unreadable			= TIntegrityManager ne može pročitati datoteku '{0}' za izračun njezinog integriteta.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' nije valjana datoteka.
+integritymanager_integrityfile_unchangeable	= {1}.{0} ne može se mijenjati. Modul integriteta je već inicijaliziran.
+
+javascript_script_integrity_required		= Za udaljenu skriptu '{0}' nije registriran Subresource Integrity, a integritet je obavezan.
+
+authmanager_usermanager_required			= TAuthManager.UserManager mora imati dodijeljenu vrijednost.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' ne odnosi se na ID modula aplikacije.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' ne odnosi se na valjani modul aplikacije TUserManager.
+authmanager_session_required				= TAuthManager zahtijeva modul sesije aplikacije.
+
+permissions_events_invalid					= TPermissionEvent.Event ne može postaviti nevažeću vrijednost '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules ne može postaviti nevažeću vrijednost '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' ne odnosi se na ID modula aplikacije.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' ne odnosi se na valjani modul aplikacije TDbParameterModule.
+permissions_init_once						= TPermissionsManager.init može se inicijalizirati samo jednom.
+permissions_duplicate_permission			= Dozvola TPermissionsManager '{0}' već je registrirana.
+permissions_role_children_invalid			= Uloga '{0}' u konfiguraciji TPermissionsManager ima nevažeću djecu '{1}'.
+permissions_rule_invalid					= Pravilo dozvole '{0}' u konfiguraciji TPermissionsManager ima svojstva koja nisu niz.
+permissions_rules_require_name				= Pravila TPermissionsManager moraju imati svojstvo dozvole "name".
+permissions_role_rule_nested				= Uloga '{0}' u konfiguraciji TPermissionsManager sadrži <permissionrule>. Pravila dozvola su izravna djeca konfiguracijskog elementa permissions.
+permissions_rule_class_invalid				= Klasa pravila dozvole TPermissionsManager '{0}' je imenski prostor direktorija, a ne klasa.
+permissions_children_invalid				= Djeca TPermissionsManager.*RoleChildren moraju biti string ili niz, a zadano je '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' nije valjana datoteka.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' nije valjan alias putanje. Provjerite jeste li definirali ovaj alias u konfiguraciji i upućuje li na valjani direktorij.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' nije valjan direktorij.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath ne može se mijenjati nakon inicijalizacije modula.
+thememanager_theme_invalid					= Naziv teme TThemeManager '{0}' mora biti naziv jednog direktorija.
+
+theme_baseurl_required						= TThemeManager.BasePath je obavezan. Prema zadanim postavkama pretpostavlja se direktorij naziva 'themes' unutar direktorija koji sadrži ulaznu skriptu aplikacije.
+theme_path_inexistent						= Putanja teme '{0}' ne postoji.
+theme_control_nested						= Skin za tip kontrole '{0}' u temi '{1}' ne može se nalaziti unutar drugog skina.
+theme_skinid_duplicated						= SkinID '{0}.{1}' je dupliciran u temi '{2}'.
+theme_databind_forbidden					= Povezivanje podataka ne može se koristiti u temi '{0}' za skin kontrole '{1}.{2}' na svojstvu '{3}'.
+theme_property_readonly						= Skin se primjenjuje na svojstvo kontrole '{0}.{1}' koje je samo za čitanje.
+theme_property_undefined					= Skin se primjenjuje na nepostojeće svojstvo kontrole '{0}.{1}'.
+theme_tag_unexpected						= Inicijalizacija svojstva {0} sadrži nepoznat tip oznake {1}.
+
+control_object_reregistered					= Pronađen je duplicirani ID objekta '{0}'.
+control_id_invalid							= {0}.ID '{1}' nije valjan. Dopušteni su samo alfanumerički znakovi i podvlaka. Prvi znak mora biti slovo ili podvlaka.
+control_skinid_unchangeable					= {0}.SkinID ne može se mijenjati nakon što je skin primijenjen na kontrolu ili su stvorene podređene kontrole.
+control_enabletheming_unchangeable			= {0}.EnableTheming ne može se mijenjati nakon što su stvorene podređene kontrole.
+control_stylesheet_applied					= StyleSheet skin već je primijenjen na {0}.
+control_id_nonunique						= {0}.ID '{1}' nije jedinstven među svim kontrolama unutar istog imenskog spremnika.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' ne smije biti negativan.
+
+templatecontrol_mastercontrol_invalid		= Glavna kontrola mora biti tipa TTemplateControl ili izvedene klase.
+templatecontrol_mastercontrol_required		= Kontrola '{0}' zahtijeva glavnu kontrolu jer koristi TContent.
+templatecontrol_contentid_duplicated		= TContent ID '{0}' je dupliciran.
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder ID '{0}' je dupliciran.
+templatecontrol_directive_invalid			= {0}.{1} prihvaća samo statički tekstualni string putem direktive predloška.
+templatecontrol_placeholder_inexistent		= TContent '{0}' nema odgovarajući TContentPlaceHolder.
+
+page_form_duplicated						= Stranica može sadržavati najviše jedan TForm. Za ostale obrasce koristite obične HTML oznake form.
+page_isvalid_unknown						= TPage.IsValid još nije evaluiran.
+page_postbackcontrol_invalid				= Nije moguće odrediti postback kontrolu '{0}'.
+page_control_outofform						= {0} '{1}' mora biti unutar TForm.
+page_head_duplicated						= Stranica može sadržavati najviše jedan THead.
+page_head_required							= Kontrola THead potrebna je u predlošku stranice za prikaz CSS-a i JS-a u HTML zaglavlju (head).
+page_statepersister_invalid					= Spremnik stanja stranice mora implementirati sučelje IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Nepoznat naziv Prado biblioteke skripti '{0}'.
+csmanager_pradoscript_notloaded				= Prado biblioteka skripti naziva '{0}' još nije učitana.
+csmanager_pradostyle_invalid				= Nepoznat naziv Prado biblioteke stilova '{0}'.
+csmanager_invalid_packages					= Nepoznati paketi '{1}' za javascript pakete definirane u '{0}'. Valjani paketi su '{2}'.
+
+httpclient_transport_error					= Greška prijenosa HTTP klijenta (kod {0}): {1}
+httpclient_http_error						= HTTP odgovor s greškom, status {0}.
+httpclient_transport_required				= Nije dostupan nijedan HTTP prijenos: proširenje cURL nije učitano, a allow_url_fopen je isključen.
+
+restclient_invalid_header					= TRestClient zaglavlje '{0}' ima nevažeći naziv ili vrijednost koja sadrži CR/LF.
+restclient_basicauth_username_colon			= Korisničko ime za TRestClient Basic autentikaciju ne smije sadržavati dvotočku (razdjelnik vjerodajnica prema RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder mora imati ID.
+
+content_id_required							= TContent mora imati ID.
+
+controlcollection_control_required			= TControlList prihvaća samo stringove ili objekte TControl.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' nije valjan. Mora biti samo jedan znak.
+webcontrol_dir_invalid						= {0}.Dir '{1}' nije valjan. Dopuštene vrijednosti su 'ltr', 'rtl' i 'auto'.
+webcontrol_style_invalid					= {0}.Style prihvaća samo string vrijednost.
+
+listcontrol_selection_invalid				= {0} ima nevažeći odabir postavljen prije povezivanja podataka.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex ima nevažeću vrijednost {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue ima nevažeću vrijednost '{1}'.
+listcontrol_expression_invalid				= {0} evaluira nevažeći izraz '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} ne podržava višestruki odabir.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' nije pronađen.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' nije pronađen.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' nije pronađen.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' nije pronađen.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' ne smije biti negativan.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' ne smije biti negativan.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' mora biti između 0 i RenderFilterDepth {1} kontrole koja filtrira.
+
+hiddenfield_focus_unsupported				= THiddenField ne podržava postavljanje fokusa unosa.
+hiddenfield_theming_unsupported				= THiddenField ne podržava teme.
+hiddenfield_skinid_unsupported				= THiddenField ne podržava skin kontrole.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' ne odnosi se na postojeću kontrolu gumba.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding mora biti cijeli broj jednak ili veći od -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing mora biti cijeli broj jednak ili veći od -1.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History mora biti cijeli broj veći od 0.
+
+listitemcollection_item_invalid				= TListItemCollection prihvaća samo stringove ili objekte TListItem.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices je samo za čitanje.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack je samo za čitanje.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex je samo za čitanje.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices je samo za čitanje.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue je samo za čitanje.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices je samo za čitanje.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' ne postoji.
+logrouter_routeclass_required				= Atribut class obavezan je u konfiguraciji <route>.
+logrouter_routetype_required				= Ruta zapisnika mora biti instanca TLogRoute ili njegove izvedene klase.
+
+dblogroute_connectionid_invalid				= TDbLogRoute ne može stvoriti vezu s bazom podataka za ID '{0}'.
+dblogroute_insert_failed					= TDbLogRoute ne može umetnuti zapis u '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' nije valjan
+dblogroute_table_nonexistent				= Tablica TDbLogRoute '{0}' ne postoji i mora se stvoriti.
+dblogroute_order_invalid					= Redoslijed TDbLogRoute '{0}' mora navoditi stupce, svaki po želji praćen s ASC ili DESC.
+dblogroute_limit_invalid					= Ograničenje TDbLogRoute '{0}' mora biti broj redaka, 'count OFFSET offset' ili 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' mora biti direktorij u formatu imenskog prostora i mora biti zapisiv za proces web poslužitelja.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize mora biti veći od 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles mora biti veći od 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom ne može biti prazan.
+emaillogroute_mail_failed					= TEmailLogRoute nije uspio poslati zapisnik na '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags nisu valjane, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility nije valjan, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger je obavezan.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' nije ID modula ni naziv klase Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger ne može biti TPsrLogger; zapisivao bi natrag u isti TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns ne smije biti manji od 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate je prazan ili sadrži nevažeću putanju ID-a kontrole.
+basevalidator_validatable_required			= {0}.ControlToValidate mora upućivati na kontrolu koja implementira sučelje IValidatable.
+basevalidator_forcontrol_unsupported		= {0}.ForControl nije podržan.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare sadrži nevažeću putanju ID-a kontrole.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate mora upućivati na kontrolu TFileUpload.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate sadrži nevažeću putanju ID-a kontrole TListControl, "{1}" je {2}.
+
+repeater_template_required					= TRepeater.{0} zahtijeva instancu predloška koja implementira sučelje ITemplate.
+repeater_itemtype_unknown					= Nepoznat tip stavke repeatera {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection prihvaća samo objekte koji su instanca TControl ili njegove izvedene klase.
+
+datalist_template_required					= TDataList.{0} zahtijeva instancu predloška koja implementira sučelje ITemplate.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection prihvaća samo objekte TDataListItem.
+
+datagrid_template_required					= TDataGrid.{0} zahtijeva instancu predloška koja implementira sučelje ITemplate.
+templatecolumn_template_required			= TTemplateColumn.{0} zahtijeva instancu predloška koja implementira sučelje ITemplate.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex ne smije biti manji od 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize mora biti veći od 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount ne smije biti manji od 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection prihvaća samo objekte TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection prihvaća samo objekte TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount mora biti veći od 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor pokušava evaluirati vrijednost polja nevažećih podataka. Provjerite jesu li podaci niz, TMap, TList ili objekt koji sadrži navedeno polje '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor pokušava evaluirati vrijednost podataka nepoznatog polja '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection prihvaća samo objekte TTableRow.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection prihvaća samo objekte TTableColumn.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection prihvaća samo objekte TTableColumnGroup.
+tablecolumn_span_invalid					= TTableColumn Span mora biti 1 ili veći; zadano je {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection prihvaća samo objekte TTableCell.
+
+multiview_view_required						= TMultiView prihvaća samo TView kao podređeni element.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex ima nevažeći indeks '{0}'.
+multiview_view_inexistent					= TMultiView ne može pronaći navedeni pogled.
+multiview_viewid_invalid					= TMultiView ne može pronaći pogled '{0}' na koji treba prebaciti.
+
+viewcollection_view_required				= TViewCollection prihvaća samo TView kao svoj element.
+
+view_visible_readonly						= TView.Visible je samo za čitanje. Za promjenu vidljivosti koristite TView.Active.
+
+wizard_step_invalid							= Korak koji treba aktivirati ne može se pronaći u kolekciji koraka čarobnjaka.
+wizard_command_invalid						= Nevažeća navigacijska naredba čarobnjaka '{0}'.
+
+table_tablesection_outoforder				= Sekcije tablice TTable moraju biti u redoslijedu: Header, Body i Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType je samo za čitanje.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection prihvaća samo objekte TWizardStep ili njegovih izvedenih klasa.
+
+texthighlighter_stylesheet_invalid			= Nije moguće pronaći datoteku stilova za TTextHighlighter.
+
+hotspotcollection_hotspot_required			= THotSpotCollection prihvaća samo instance THotSpot ili njegovih izvedenih klasa.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode je samo za čitanje.
+htmlarea_tarfile_invalid					= THtmlArea ne može pronaći tar datoteku TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile ne može se mijenjati jer je modul već inicijaliziran.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' nije valjan. Provjerite je li u formatu imenskog prostora i je li ekstenzija datoteke '.xml' ili '.php'.
+parametermodule_parameterid_required		= Element parametra mora imati atribut 'id'.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' nije valjan. Dopušteni su samo alfanumerički znakovi i podvlaka. Prvi znak mora biti slovo ili podvlaka.
+datagridcolumn_expression_invalid			= {0} evaluira nevažeći izraz '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID postavljen je na nevažeći ID modula predmemorije {0}. Modul ne postoji ili ne implementira sučelje ICache.
+outputcache_duration_invalid				= {0}.Duration mora biti cijeli broj ne manji od 0.
+
+stack_data_not_iterable						= TStack može dohvatiti podatke samo iz niza ili objekta Traversable.
+stack_empty									= TStack je prazan.
+
+queue_data_not_iterable						= TQueue može dohvatiti podatke samo iz niza ili objekta Traversable.
+queue_empty									= TQueue je prazan.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount mora biti cijeli broj ne manji od 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex je izvan raspona.
+pager_pagecount_invalid						= TPager.PageCount ne može biti manji od 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} mora biti valjana putanja ID-a koja upućuje na kontrolu izvedenu iz TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize mora biti cijeli broj ne manji od 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount mora biti cijeli broj ne manji od 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex je izvan raspona.
+databoundcontrol_datasource_invalid			= {0}.DataSource nije valjan.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' ne odnosi se na postojeću kontrolu.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' mora se odnositi na kontrolu koja implementira IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' ne imenuje pogled izvora podataka.
+
+datasourcecontrol_focus_unsupported			= {0} ne podržava Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} ne podržava EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} ne podržava SkinID.
+datasourcecontrol_visible_unsupported		= {0} ne podržava Visible.
+datasourceview_insert_unsupported			= {0} ne podržava umetanje.
+datasourceview_update_unsupported			= {0} ne podržava ažuriranje.
+datasourceview_delete_unsupported			= {0} ne podržava brisanje.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource zahtijeva niz, IDataSource ili Traversable izvor podataka.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView zahtijeva null, niz ili Traversable izvor podataka.
+
+clientscript_invalid_file_position			= Nevažeća pozicija datoteke '{1}' za kontrolu TClientScript '{0}', mora biti 'Head', 'Here' ili 'Begin'.
+clientscript_invalid_package_path			= Nevažeći PackagePath '{0}' za kontrolu TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' ne podržava AutoPostBack.
+globalization_cache_path_failed				= Nije moguće stvoriti putanju predmemorije prevedenih poruka '{0}'. Provjerite postoji li nadređeni direktorij i je li zapisiv za web proces.
+globalization_source_path_failed			= Nije moguće stvoriti putanju prevedenih poruka '{0}'. Provjerite postoji li nadređeni direktorij i je li zapisiv za web proces.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' ne upućuje na valjani modul TDataSourceConfig.
+messagesource_connectionid_required			= ConnectionID u MessageSource_Database.source je obavezan.
+
+callback_not_support_no_priority_state_update	= Callback zahtjev ne podržava ažuriranje stanja stranice bez prioriteta.
+callback_invalid_callback_options			= '{1}' nije valjana kontrola TCallbackOptions za callback kontrolu '{0}'.
+callback_invalid_clientside_options			= Svojstvo ClientSide callbacka mora biti string koji je ID kontrole TCallbackOptions ili instanca TCallbackClientSideOptions.
+callback_invalid_handler					= Nevažeći rukovatelj callbacka, kontrola {0} mora implementirati ICallbackEventHandler.
+callback_invalid_target						= Nevažeći cilj callbacka, ne postoji kontrola s ID-om {0}.
+
+callback_interval_be_positive				= Interval za TCallbackTimer "{0}" mora biti strogo veći od nula sekundi.
+callback_decay_be_not_negative				= Stopa opadanja za TCallbackTimer "{0}" ne smije biti negativna.
+
+callback_no_autopostback					= Kontrola "{0}" ne može omogućiti AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform zahtijeva PHP proširenje XSL.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' nije valjan.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' nije valjan.
+xmltransform_transform_required				= Za TXmlTransform mora biti postavljeno svojstvo TransformContent ili TransformPath.
+
+ttriggeredcallback_invalid_controlid		= Svojstvo ControlID za '{0}' ne smije biti prazno.
+tactivecustomvalidator_clientfunction_unsupported	= {0} ne podržava funkciju validatora na strani klijenta.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' ne identificira valjani modul TDataSourceConfig.
+dbproperties_property_required				= {1}.{0} je obavezno svojstvo.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' nije valjan SQL identifikator.
+
+dbconnection_open_failed					= TDbConnection nije uspio uspostaviti vezu s bazom podataka: {0}
+dbconnection_connection_inactive			= TDbConnection nije aktivan.
+dbconnection_unsupported_driver_charset		= Driver baze podataka '{0}' ne podržava postavljanje skupa znakova.
+dbconnection_charset_unchangeable			= Driver baze podataka '{0}' ne može promijeniti skup znakova nakon otvaranja veze. Skup znakova je DSN parametar.
+
+dbcommand_prepare_failed					= TDbCommand nije uspio pripremiti SQL naredbu "{1}": {0}
+dbcommand_execute_failed					= TDbCommand nije uspio izvršiti SQL naredbu "{1}": {0}
+dbcommand_query_failed						= TDbCommand nije uspio izvršiti SQL upit "{1}": {0}
+dbcommand_column_empty						= TDbCommand je vratio prazan rezultat i nije mogao dohvatiti skalarnu vrijednost.
+dbdatareader_rewind_invalid					= TDbDataReader je tok samo unaprijed. Može se proći samo jednom.
+dbtransaction_transaction_inactive			= TDbTransaction nije aktivna.
+
+dbcommandbuilder_value_must_not_be_null		= Svojstvo {0} ne smije biti null, kako je definirano stupcem '{2}' u tablici '{1}'.
+
+dbcommon_invalid_table_name					= Tablica baze podataka '{0}' nije pronađena. Poruka greške: {1}.
+dbcommon_invalid_identifier_name			= Nevažeći naziv identifikatora baze podataka '{0}', pogledajte {1} za detalje.
+dbtableinfo_invalid_column_name				= Nevažeći naziv stupca '{0}' za tablicu baze podataka '{1}'.
+dbmetadata_invalid_table_view				= Nevažeći naziv tablice/pogleda '{0}' ili tablica/pogled '{0}' ne sadrži dostupne definicije stupaca/polja.
+dbmetadata_requires_php_version				= Za korištenje baze podataka {0} potrebna je PHP verzija {1} ili novija.
+
+dbtablegateway_invalid_criteria				= Nevažeći objekt kriterija, mora biti string ili instanca TSqlCriteria.
+dbtablegateway_no_primary_key_found			= Tablica '{0}' ne sadrži polja primarnog ključa.
+dbtablegateway_missing_pk_values			= Nedostaju vrijednosti primarnog ključa pri oblikovanju IN(key1, key2, ...) za tablicu '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Neslaganje broja vrijednosti složenog ključa pri oblikovanju IN( (key1, key2, ..), (key3, key4, ..)) za tablicu '{0}'.
+dbtablegateway_mismatch_args_exception		= Finder metoda TTableGateway '{0}' očekuje {1} parametara, a pronađeno je samo {2} parametara.
+dbtablegateway_mismatch_column_name			= U dinamičkoj __call() metodi '{0}' nisu pronađeni odgovarajući stupci; valjani stupci za tablicu '{2}' su '{1}'.
+dbtablegateway_invalid_table_info			= Tablica mora biti string ili instanca TDbTableInfo.
+
+resource_not_a_resource						= Očekivan je otvoreni PHP resurs, a dobiven je '{0}'.
+processfork_failed							= Nije moguće razdvojiti (fork) proces.
+liveprocessfork_readonly_receiver			= Podaci TLiveProcessFork samo su za čitanje na primateljskoj strani; mijenja ih samo strana pošiljatelja.
+stream_open_failed							= Nije moguće otvoriti tok '{0}' u načinu '{1}': {2}
+binarystream_unexpected_eof					= Neočekivan kraj toka: bilo je potrebno {0} bajtova, a pročitano je samo {1}.
+binarystream_short_write					= Nepotpuno pisanje: trebalo je zapisati {0} bajtova, a prihvaćeno je samo {1}.
+streamresourcewrapper_unusable_stream		= Tok nije ni čitljiv ni zapisiv te se ne može izložiti kao resurs.
+streamfilter_already_registered				= Filtar toka '{0}' već je registriran.
+streamfilter_registration_failed			= Nije moguće registrirati filtar toka '{0}' za klasu '{1}'.
+streamwrapper_already_registered			= Protokol omotača toka '{0}' već je registriran.
+streamwrapper_registration_failed			= Nije moguće registrirati protokol omotača toka '{0}' za klasu '{1}'.
+reservedspace_invalid						= Rezervirani prostor zahtijeva nenegativan pomak i pozitivnu duljinu; zadani su pomak '{0}' i duljina '{1}'.
+reservedspace_access_denied					= Operacija se preklapa s rezerviranim prostorom na pomaku '{0}'.
+multipartstream_element_invalid				= Element TMultipartStream zahtijeva 'name' i 'contents'.
+builtincompressor_extension_required		= Kompresor '{0}' zahtijeva PHP proširenje '{1}'.
+builtincompressor_compress_failed			= Kompresor '{0}' nije uspio komprimirati podatke.
+builtincompressor_decompress_failed			= Kompresor '{0}' nije uspio dekomprimirati podatke; podaci su možda oštećeni ili u drugom formatu.
+compression_method_unknown					= Metoda kompresije '{0}' je nepoznata ili njezino proširenje nije dostupno.
+compression_none_available					= U ovoj PHP instalaciji nije dostupna nijedna metoda kompresije.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' nije poznato kodiranje sadržaja. Poznata kodiranja su: {1}.
+compression_xz_unsupported					= xz/LZMA nema PHP proširenje; instalirajte belisoful/prado-compression za nativni ili CLI xz kodek.
+clicompressor_command_missing				= Kompresor '{0}' zahtijeva jednu od ovih sistemskih naredbi na PATH-u: '{1}'.
+clicompressor_process_failed				= Kompresor '{0}' nije mogao pokrenuti naredbu '{1}'.
+clicompressor_command_failed				= Naredba '{1}' kompresora '{0}' završila je s kodom {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule zahtijeva Endpoint ili pozitivan Port za njegovo sastavljanje.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' nije valjan. Mora biti TSocketServer ili potklasa.
+socketservermodule_scheme_not_stream		= TSocketServerModule ne može prihvaćati veze na shemi bez veze '{0}'. Koristite stream shemu kao što je tcp, tls, ssl ili unix.
+
+bitreader_invalid_bits						= Nije moguće pročitati {0} bitova; broj mora biti između 0 i širine cijelog broja platforme.
+bitreader_64bit_php_required				= Čitanje {0} bitova zahtijeva 64-bitnu PHP verziju.
+bitreader_invalid_float_bits				= Nije moguće pročitati {0}-bitni float; podržani su samo 8, 16, 32 ili 64 bita.
+bitwriter_invalid_bits						= Nije moguće zapisati {0} bitova; broj mora biti između 0 i širine cijelog broja platforme.
+bitwriter_64bit_php_required				= Zapisivanje {0} bitova zahtijeva 64-bitnu PHP verziju.
+bitwriter_invalid_float_bits				= Nije moguće zapisati {0}-bitni float; podržani su samo 8, 16, 32 ili 64 bita.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' ne postoji. Napomena: mora biti naveden u formatu imenskog prostora, a ekstenzija datoteke mora biti '.xml' ili '.php'.
+soapservice_server_invalid					= Klasa SOAP poslužitelja TSoapService '{0}' nije valjana. Mora biti TSoapServer ili potklasa.
+soapservice_serverid_required				= Element <soap> mora imati atribut 'id'.
+soapservice_serverid_duplicated				= ID SOAP poslužitelja '{0}' je dupliciran.
+soapserver_id_invalid						= Nevažeći ID SOAP poslužitelja '{0}'. Ne smije završavati s '.wsdl'.
+soapserver_provider_invalid					= Klasa pružatelja TSoapServer '{0}' ne može se razriješiti.
+soapserver_version_invalid					= Nevažeća SOAP verzija '{0}'. Mora biti '1.1' ili '1.2'.
+soapserver_wsdlstyle_invalid				= Nevažeći WSDL stil '{0}'. Mora biti 'rpc' ili 'document'.
+soapserver_wsdlstyle_unsupported			= WSDL stil '{0}' zahtijeva pradosoft/prado-wsdlgenerator 1.2 ili noviji. Instalirani generator proizvodi samo 'rpc'.
+
+jsonservice_id_required						= TJsonService zahtijeva atribut 'id' u svojim JSON elementima.
+jsonservice_response_type_invalid			= JSON klasa {0} nije valjana. Mora biti TJsonResponse ili naslijediti TJsonResponse.
+jsonservice_class_required					= TJsonService zahtijeva atribut 'class' u svojim JSON elementima.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass je obavezan.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' nije valjana korisnička klasa. Klasa mora naslijediti TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' ne upućuje na valjani modul TDataSourceConfig.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID je obavezan.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' ne upućuje na valjani modul TDataSourceConfig.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID je obavezan.
+
+feedservice_id_required						= TFeedService zahtijeva atribut 'id' u svojim feed elementima.
+feedservice_feedtype_invalid				= Klasa feeda '{0}' mora implementirati sučelje IFeedContentProvider.
+feedservice_class_required					= TFeedService zahtijeva atribut 'class' u svojim feed elementima.
+
+tabviewcollection_tabview_required			= TTabPanel prihvaća samo TTabView kao podređeni element.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID ima nevažeći ID '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex ima nevažeći indeks '{0}'.
+tabpanel_view_inexistent					= TTabPanel ne može pronaći navedeni pogled.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID je obavezan.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' upućuje na nepostojeći modul.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' upućuje na modul koji ne implementira sučelje ICache.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping može sadržavati samo TUrlMappingPattern ili njegove izvedene klase.
+urlmapping_global_required					= TUrlMapping mora biti konfiguriran kao globalni modul.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' nije datoteka.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' mora upućivati na XML datoteku u formatu imenskog prostora.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter je obavezan za uzorak '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl ne može biti prazan.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' nije valjan.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme mora biti cijeli broj između {0} i {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize mora biti cijeli broj između {0} i {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength mora biti cijeli broj između {0} i {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength mora biti cijeli broj između {0} i {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet mora biti string od najmanje 2 znaka.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey je nepoznat. Provjerite je li vaš direktorij resursa (assets) zapisiv za proces web poslužitelja.
+captcha_gd2_required						= TCaptcha zahtijeva PHP proširenje GD2.
+captcha_imagettftext_required				= TCaptcha zahtijeva PHP proširenje GD2 s podrškom za TrueType fontove.
+captcha_imagepng_required					= TCaptcha zahtijeva PHP proširenje GD2 s podrškom za PNG format slika.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl mora upućivati na postojeću kontrolu TCaptcha.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} mora upućivati na postojeću kontrolu TCaptcha.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} mora upućivati na postojeću kontrolu TCaptcha.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey je nepoznat. Za korištenje reCAPTCHA morate nabaviti API ključ.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey je nepoznat. Za korištenje reCAPTCHA morate nabaviti API ključ.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate mora biti instanca TReCaptcha.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' smije sadržavati samo slova, znamenke, '_' i '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity mora biti cijeli broj između {0} i {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' mora upućivati na kontrolu TProofOfWork.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' nije valjana korisnička klasa. Klasa mora naslijediti TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' ne upućuje na valjani modul predmemorije.
+cachepagestatepersister_cache_required		= TCachePageStatePersister zahtijeva učitan modul predmemorije.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' ne upućuje na valjani modul predmemorije.
+cachemoduleid_cache_required				= {0} zahtijeva modul predmemorije. Konfigurirajte primarnu predmemoriju ili postavite {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout mora biti cijeli broj ne manji od nule.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' nije valjan PHP izraz: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule ne može pronaći tablicu baze podataka '{0}' za pohranu podataka parametara.
+dbparametermodule_get_no_blank_key			= TDbParameterModule ne može dohvatiti prazan ključ.
+dbparametermodule_set_no_blank_key			= TDbParameterModule ne može postaviti vrijednost na prazan ključ.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' ne upućuje na valjani modul TDataSourceConfig.
+dbparametermodule_serializer_not_callable	= Serializer za TDbParameterModule nije callable.
+
+clockawaretrait_invalid_clock_class			= Klasa sata '{0}' mora implementirati Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock je fiksiran na UTC; za drugu vremensku zonu koristite TTimezoneClock.
+
+processcrontask_no_command					= TProcessCronTask '{0}' nema Command za izvršavanje.
+processcrontask_launch_failed				= TProcessCronTask nije uspio pokrenuti proces: '{0}'.
+processcrontask_write_failed				= TProcessCronTask nije mogao zapisati pid datoteku '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' nema closure za izvršavanje.
+closurecrontask_closure_required			= TClosureCronTask zahtijeva Closure.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' nije TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' nije mogao dešifrirati sadržaj svog closurea.
+cronmethodtask_no_module					= TCronMethodTask nije pronašao modul '{0}'.
+cron_usermanager_nonexistent				= TCronModule nije pronašao UserManager naziva '{0}'.
+cron_usermanager_invalid					= TCronModule UserManager '{0}' nije TUserManager.
+cron_task_as_array_required					= Zadatak u konfiguraciji TCronModule nije niz.
+cron_duplicate_task_name					= Zadaci TCronModule moraju imati jedinstvene nazive.
+cron_schedule_required						= Cron zadatak mora imati raspored.
+cron_task_required							= Cron zadatak mora imati zadatak.
+cron_not_a_crontask							= Cron zadatak '{0}' nije TCronTask.
+cron_additional_tasks_invalid				= '{0}' nije valjan dodatni cron zadatak.
+crontask_no_module							= TCronTask nije pronašao modul '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask nije pronašao navedeni modul '{0}'.
+dbcron_invalid_name							= TDbCronManager: naziv zadatka '{0}' nije valjan.
+dbcron_conflicting_task_names				= Cron zadaci iz konfiguracije u sukobu su s cron zadacima iz baze podataka '{0}'.
+dbcron_table_nonexistent					= Tablica baze podataka TDbCronManager ne postoji.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' nije TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler ne može parsirati element rasporeda '{0}'
+
+rational_bad_offset							= "{0}" nije valjan pristupnik svojstva TRational.
+
+bithelper_bad_fp_format						= TBitHelper ne može raditi s '{0}' bitova eksponenta, '{1}' bitova mantise i pomakom eksponenta '{2}' u {3}-bitnom PHP okruženju.
+bithelper_invalid_color_in					= TBitHelper mora imati najmanje jedan ulazni bit (In Bit). Zadano je '{0}'.
+bithelper_invalid_color_out					= TBitHelper mora imati najmanje jedan izlazni bit (Out Bit). Zadano je '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper ne može zrcaliti '{0}' bitova u {1}-bitnom PHP okruženju.
+
+ar_data_invalid								= {0}.copyFrom() prihvaća samo objekt ili niz kao parametar.
+ar_save_invalid								= Instanca {0} ne može se spremiti jer je izbrisana ili u nepoznatom stanju.
+ar_delete_invalid							= Instanca {0} ne može se izbrisati jer je novi zapis ili već izbrisan zapis.
+
+dbmetadata_invalid_database_driver			= Driver '{0}' nije podržan. Instalirajte njegov PRADO driver, ako je dostupan.
+dbmetadata_not_meta_data					= Očekivana je klasa drivera {1}, a dobivena je klasa {0}.
+dbmetadata_tableinfo_class_invalid			= Klasa informacija o tablici TDbMetaData '{0}' je imenski prostor direktorija, a ne klasa.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' nije valjan. Provjerite upućuje li na valjani modul aplikacije.
+distributeddatasource_child_required		= {0} zahtijeva najmanje jedan podređeni element '{1}'.
+masterslavedbconnection_connection_exists	= Veza {0}.{1} već postoji.
+masterslavedbconnection_interface_required	= {0}.{1} zahtijeva instancu koja implementira sučelje {2}.
+slavedbconnection_requires_master			= {0} zahtijeva {1}.
+
+response_status_reason_missing				= HTTP 1.1 zahtijeva razlog (reason) za proširene statusne kodove
+response_status_reason_badchars				= U HTTP 1.1 zaglavlju token status-reason ne smije sadržavati znakove CR ili LF
+
+activefileupload_temppath_invalid			= TActiveFileUpload TempPath putanja '{0}' ne postoji ili nije zapisiva za proces web poslužitelja.
+
+tactivetablecell_control_outoftable			= {0} '{1}' mora biti unutar kontrole TTableRow.
+tactivetablecell_control_notincollection	= {0} '{1}' nije član TTableCellCollection nadređene kontrole TTableRow.
+
+tactivetablerow_control_outoftable			= {0} '{1}' mora biti unutar kontrole TTable.
+tactivetablerow_control_notincollection		= {0} '{1}' nije član TTableRowCollection nadređene kontrole TTable.
+
+juioptions_option_invalid					= '{1}' nije valjana opcija za kontrolu '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' nije valjana kontrola natpisa za TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID ima nevažeći ID '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex ima nevažeći indeks '{0}'.
+accordion_view_inexistent					= TAccordion ne može pronaći navedeni pogled.
+
+dot_bad_size								= TDot Size mora biti pozitivan cijeli broj, a zadano je '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth mora biti broj s neobaveznim % ili CSS jedinicom duljine, a zadano je '{0}'
+
+juidatepicker_settextmode_unsupported		= TextMode kontrole TJuiDatePicker ne može se mijenjati.
+
+control_adapter_not_active					= Svojstvo BaseActiveControl pozvano je na kontroli koja nije aktivna.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' mora biti izravno dijete kontrole TFigure.
+summary_requires_details_parent				= TSummary '{0}' mora biti izravno dijete kontrole TDetails.
+
+gravatar_bad_default						= Vrijednost svojstva TGravatar DefaultImageStyle '{0}' nije podržana
+gravatar_bad_size							= TGravatar Size nije u rasponu [1 .. 512], a zadano je '{0}'
+
+progress_value_invalid						= TProgress Value mora biti 0 ili veći; zadano je {0}.
+progress_max_invalid						= TProgress Max mora biti veći od 0; zadano je {0}.
+
+time_invalid_datetime						= TTime DateTime mora biti DateTimeInterface, DateInterval, string ili numerička vrijednost; zadano je {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' nije naziv konstante TTimeFormat ni ICU uzorak datuma i vremena.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' ne može sadržavati '{1}': aktivne, postback i validatorske kontrole ne funkcioniraju unutar inertnog sadržaja predloška. Koristite obične oznake s {{...}} rezerviranim mjestima ili postavite ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() mora vratiti niz.
+
+htmlpurifier_source_path_failed				= Nije moguće stvoriti putanju predmemorije html purifiera '{0}'. Provjerite postoji li nadređeni direktorij i je li zapisiv za web proces.

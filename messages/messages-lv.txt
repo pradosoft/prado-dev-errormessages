@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Latvian (lv).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application var iestatīt tikai vienu reizi.
+prado_component_unknown						= Nezināms komponenta tips '{0}'. To var izraisīt šāda parsēšanas kļūda klases {0} failā: {1}
+prado_using_invalid							= '{0}' nav derīga nosaukumvieta lietošanai. Ja vēlaties lietot nosaukumvietu, kas norāda uz direktoriju, pārliecinieties, ka tai ir pievienots '.*'.
+prado_alias_redefined						= Aizstājvārdu '{0}' nevar definēt atkārtoti.
+prado_alias_invalid							= Aizstājvārds '{0}' norāda uz nederīgu ceļu '{1}'. Aizstājvārdu var piešķirt tikai esošām direktorijām.
+prado_aliasname_invalid						= Aizstājvārds '{0}' satur nederīgu rakstzīmi '.'.
+
+component_property_undefined				= Komponenta rekvizīts '{0}.{1}' nav definēts.
+component_property_readonly					= Komponenta rekvizīts '{0}.{1}' ir tikai lasāms.
+component_event_undefined					= Komponenta notikums '{0}.{1}' nav definēts.
+component_method_undefined					= Komponenta metode '{0}.{1}' nav definēta.
+component_eventhandler_invalid				= Komponenta notikumam '{0}.{1}' ir piesaistīts nederīgs notikumu apstrādātājs '{2}'.
+component_expression_invalid				= Komponents '{0}' izvērtē nederīgu izteiksmi '{1}' : {2}.
+component_statements_invalid				= Komponents '{0}' izvērtē nederīgus PHP priekšrakstus '{1}' : {2}.
+component_class_behavior_defined			= Komponentam '{0}' jau ir klases uzvedība '{1}'.
+component_not_a_behavior					= Komponents '{0}', kas tiek pievienots kā uzvedība, nav TBaseBehavior.
+object_not_a_component						= Objekts '{0}', kas tiek pievienots kā uzvedība, nav TComponent.
+component_no_tcomponent_class_behaviors		= TComponent nevar piesaistīt klases uzvedības rekursijas dēļ.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors nevar piesaistīt vairākiem īpašniekiem. Nododiet virkni vai masīvu ar IBehavior klasi un rekvizītiem, lai katram īpašniekam izveidotu atsevišķu instanci.
+
+propertyvalue_enumvalue_invalid				= Vērtība '{0}' nav derīga uzskaitījuma vērtība ({1}).
+propertyvalue_invalid_hex_color				= Vērtība '{0}' nav derīga heksadecimāla krāsas vērtība, piemēram, "#112233".
+propertyvalue_invalid_array_literal			= Vērtība '{0}' nav derīgs masīva literālis.
+propertyvalue_array_too_deep				= Masīva literālis ir ligzdots dziļāk par {0} līmeņiem.
+
+eventhandler_lost_weak_ref					= TEventHandler nevar izsaukt notikumu apstrādātāju, jo izsaucamā objekta WeakReference ir zaudēta.
+eventhandler_no_set_handler					= TEventHandler nevar iestatīt notikumu apstrādātāju ar indeksu "{0}".
+eventhandler_bad_offset						= TEventHandler nav nobīdes "{0}".
+
+eventparam_readonly							= {0} ir tikai lasāms.
+eventparam_readonly_set						= {0} nevar mainīt ReadOnly, kad tas jau ir iestatīts.
+eventparam_readonly_not_self				= {0} ReadOnly var iestatīt tikai iekšēji.
+
+list_index_invalid							= Indekss '{0}' ir ārpus diapazona.
+list_item_inexistent						= Vienums sarakstā nav atrasts.
+list_data_not_iterable						= Datiem jābūt masīvam vai objektam, kas implementē Traversable interfeisu.
+list_readonly								= {0} ir tikai lasāms.
+list_readonly_set							= {0} nevar mainīt Read-Only, kad tas jau ir iestatīts.
+prioritylist_index_invalid					= Indekss '{0}' elementam '{1}' ar prioritāti '{2}' ir ārpus diapazona.
+prioritytrait_no_set_default_priority		= Noklusējuma prioritāti var iestatīt tikai vienu reizi vai tikai pats objekts.
+prioritytrait_no_set_precision				= Precizitāti var iestatīt tikai vienu reizi vai tikai pats objekts.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid var iestatīt tikai vienu reizi vai tikai pats objekts.
+
+map_addition_disallowed						= Jauno vienumu nevar pievienot kartei.
+map_item_unremovable						= Vienumu nevar noņemt no kartes.
+map_data_not_iterable						= Datiem jābūt masīvam vai objektam, kas implementē Traversable interfeisu.
+map_readonly								= {0} ir tikai lasāms.
+map_readonly_set							= {0} nevar mainīt Read-Only, kad tas jau ir iestatīts.
+
+tnull_clone_disallowed						= TNull singleton objektu nevar klonēt. Tā vietā lietojiet TNull::null().
+
+weakcallablecollection_callable_required	= TWeakCallableCollection pieņem tikai izsaucamus objektus (callable).
+
+arraysubscription_no_change					= TArraySubscription.{0} nevar mainīt pēc abonēšanas.
+arraysubscription_no_null_key				= TArraySubscription nevar abonēt null atslēgu ArrayAccess objektā.
+arraysubscription_index_invalid				= TArraySubscription darbojas saraksta režīmā (isAssociative = false), bet atslēga '{0}' nav derīga (skaits: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array nevar iestatīt tieši.
+eventsubscription_no_change					= TEventSubscription.{0} nevar mainīt pēc abonēšanas.
+
+application_includefile_invalid				= Nevar atrast lietojumprogrammas konfigurāciju {0}. Pārliecinieties, ka tā ir nosaukumvietas formātā un fails beidzas ar ".xml" vai ".php".
+application_basepath_invalid				= Lietojumprogrammas bāzes ceļš '{0}' neeksistē vai nav direktorija.
+application_runtimepath_invalid				= Lietojumprogrammas izpildlaika ceļš '{0}' neeksistē vai tīmekļa servera procesam tajā nav rakstīšanas tiesību.
+application_service_class_not_found			= Pakalpojuma klase '{0}' neeksistē.
+application_service_class_not_service		= Pakalpojuma klase '{0}' neimplementē IService.
+application_service_class_required			= registerService pieprasa klases nosaukumu vai serviceConfig masīvu pakalpojumam '{0}'.
+application_service_default_unregister		= Noklusējuma lapu pakalpojuma '{0}' reģistrāciju nevar atcelt.
+service_csrf_token_invalid					= Pakalpojumam '{0}' ir nepieciešams derīgs CSRF marķieris.
+application_moduleid_duplicated				= Lietojumprogrammas moduļa ID '{0}' nav unikāls.
+application_runtimepath_failed				= Nevar izveidot izpildlaika ceļu '{0}'. Pārliecinieties, ka vecākdirektorija eksistē un tīmekļa procesam tajā ir rakstīšanas tiesības.
+application_module_required_dep_missing		= Modulim '{0}' ir obligāta atkarība no moduļa '{1}', kas nav reģistrēts lietojumprogrammā.
+application_module_dependency_cycle			= Starp šiem moduļiem konstatēts atkarību cikls: {0}.
+application_module_dependency_self_reference	= Modulis '{0}' deklarē pats sevi kā atkarību, kas nekad nav derīgi.
+
+appconfig_aliaspath_invalid					= Lietojumprogrammas konfigurācijas <alias id="{0}"> lieto nederīgu faila ceļu "{1}".
+appconfig_alias_invalid						= Lietojumprogrammas konfigurācijas <alias> elementam jābūt "id" atribūtam un "path" atribūtam.
+appconfig_alias_redefined					= Lietojumprogrammas konfigurācijas <alias id="{0}"> nevar definēt atkārtoti.
+appconfig_using_invalid						= Lietojumprogrammas konfigurācijas <using> elementam jābūt "namespace" atribūtam.
+appconfig_moduleid_required					= Lietojumprogrammas konfigurācijas <module> elementam jābūt "id" atribūtam.
+appconfig_moduletype_required				= Lietojumprogrammas konfigurācijas <module id="{0}"> jābūt "class" atribūtam.
+appconfig_moduletype_inapplicable			= Lietojumprogrammas konfigurācijas <module id="{0}"> nedrīkst būt "class" atribūts.
+appconfig_serviceid_required				= Lietojumprogrammas konfigurācijas <service> elementam jābūt "id" atribūtam.
+appconfig_servicetype_required				= Lietojumprogrammas konfigurācijas <service id="{0}"> jābūt "class" atribūtam.
+appconfig_parameterid_required				= Lietojumprogrammas konfigurācijas <parameter> elementam jābūt "id" atribūtam.
+appconfig_includefile_required				= Lietojumprogrammas konfigurācijas <include> elementam jābūt "file" atribūtam.
+appconfig_paths_invalid						= Lietojumprogrammas konfigurācijas <paths> nedrīkst saturēt elementu <{0}>.
+appconfig_modules_invalid					= Lietojumprogrammas konfigurācijas <modules> nedrīkst saturēt elementu <{0}>.
+appconfig_services_invalid					= Lietojumprogrammas konfigurācijas <services> nedrīkst saturēt elementu <{0}>.
+appconfig_parameters_invalid				= Lietojumprogrammas konfigurācijas <parameters> nedrīkst saturēt elementu <{0}>.
+appconfig_tag_invalid						= Lietojumprogrammas konfigurācija nedrīkst saturēt elementu <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey nedrīkst būt tukšs.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey nedrīkst būt tukšs.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey nedrīkst būt tukšs.
+securitymanager_mcryptextension_required	= Lai lietotu TSecurityManager šifrēšanas funkciju, nepieciešams Mcrypt PHP paplašinājums.
+securitymanager_mcryptextension_initfailed	= TSecurityManager neizdevās inicializēt mcrypt moduli.
+
+uri_format_invalid							= '{0}' nav derīgs URI.
+
+httprequest_browscap_required				= THttpRequest pieprasa, lai php.ini būtu konfigurēta browscap direktīva.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator var saturēt tikai vienu rakstzīmi.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' nenorāda uz esošu moduli.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' jānorāda uz moduli, kas atvasināts no TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie ir false, un tam nepieciešams sesijas modulis.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection pieņem tikai THttpCookie objektus.
+
+httpresponse_file_inexistent				= THttpResponse nevar nosūtīt failu '{0}'. Fails neeksistē.
+httpresponse_responsedata_method_unavailable	= THttpResponse: metodi '{0}' nevar lietot bez atbilstoša adaptera, kas to implementē.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' nenorāda uz esošu moduli.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' jānorāda uz moduli, kas atvasināts no THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager var saturēt tikai THttpHeader vai tās apakšklases.
+httpheadersmanager_headerclass_missing		= THttpHeadersManager <headerclass> ierakstam trūkst obligātā 'name' vai 'class' atribūta.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID nevar mainīt pēc sesijas sākšanas.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName nevar mainīt pēc sesijas sākšanas.
+httpsession_sessionname_invalid				= THttpSession.SessionName drīkst saturēt tikai burtciparu rakstzīmes.
+httpsession_savepath_unchangeable			= THttpSession.SavePath nevar mainīt pēc sesijas sākšanas.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' nav derīgs.
+httpsession_storage_unchangeable			= THttpSession.Storage nevar mainīt pēc sesijas sākšanas.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode nevar mainīt pēc sesijas sākšanas.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart nevar mainīt pēc sesijas moduļa inicializācijas.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability nevar mainīt pēc sesijas sākšanas.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability jābūt veselam skaitlim no 0 līdz 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID nevar mainīt pēc sesijas sākšanas.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID nevar iestatīt, kad THttpSession.CookieMode ir iestatīts uz Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout nevar mainīt pēc sesijas sākšanas.
+httpsession_handler_invalid					= THttpSessionHandler kā konstruktora parametru pieņem tikai THttpSession objektu
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' nav derīgs. Pārliecinieties, ka tas ir nosaukumvietas formā un norāda uz direktoriju, kurā tīmekļa servera procesam ir rakstīšanas tiesības.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath nevar mainīt pēc moduļa inicializācijas.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl nevar mainīt pēc moduļa inicializācijas.
+assetmanager_filepath_invalid				= TAssetManager publicē nederīgu failu '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager publicē tar failu ar nederīgu kontrolsummu '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager publicē nederīgu tar failu '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager neizdevās izvērst tar failu '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager kopē nederīgu direktoriju '{0}'.
+
+cache_primary_duplicated					= Atļauts ne vairāk kā viens primārās kešatmiņas modulis. {0} mēģina reģistrēties kā vēl viena primārā kešatmiņa.
+psrcache_backing_cache_required				= Nepieciešams TPsrCache.BackingCacheId vai TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' nenorāda uz lietojumprogrammas moduli.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' jānorāda uz moduli, kas implementē Psr\SimpleCache\CacheInterface vai Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' ir šīs TPsrCache PSR adapteris; tas lasītu un rakstītu atpakaļ tajā pašā kešatmiņā.
+psrcachebacking_cache_required				= {0} nepieciešama pamata kešatmiņa. Iestatiet {0}.BackingCacheId, {0}.BackingCache vai primāro lietojumprogrammas kešatmiņu.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' nenorāda uz lietojumprogrammas moduli.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' jānorāda uz Prado\Caching\ICache moduli.
+psrcachebacking_key_invalid					= {0} kešatmiņas atslēgai jābūt netukšai virknei bez rezervētajām rakstzīmēm {}()/\@:, bet norādīta '{1}'.
+sqlitecache_extension_required				= TSqliteCache nepieciešams SQLite PHP paplašinājums.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile ir obligāts.
+sqlitecache_connection_failed				= TSqliteCache datu bāzes savienojums neizdevās. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache neizdevās izveidot kešatmiņas datu bāzi. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile nevar mainīt pēc moduļa inicializācijas.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile nav derīgs. Pārliecinieties, ka tas ir pareizā nosaukumvietas formātā.
+
+dbcache_unavailable							= TDbCache nepieciešams PDO PHP paplašinājums.
+
+etcdcache_transport_required				= TEtcdCache nepieciešams cURL PHP paplašinājums vai allow_url_fopen.
+
+memcache_extension_required					= TMemCache nepieciešams memcache PHP paplašinājums.
+memcache_connection_failed					= TMemCache neizdevās izveidot savienojumu ar memcache serveri {0}:{1}.
+memcache_not_initialized					= TMemCache opcijas nevar iestatīt pirms moduļa inicializācijas.
+
+apccache_extension_required					= TAPCCache nepieciešams APC PHP paplašinājums.
+apccache_extension_not_enabled				= Lai TAPCCache darbotos, php.ini nepieciešams apc.enabled = 1.
+apccache_extension_not_enabled_cli			= Lai TAPCCache darbotos ar PHP komandrindā, php.ini nepieciešams apc.enable_cli = 1.
+
+cachesize_item_exceeds_maximum_size			= Kešatmiņas vienums ir {0} baiti, kas pārsniedz konfigurēto MaximumSize {1} baitus.
+
+filecache_directory_required				= TFileCache.Directory ir obligāts.
+filecache_directory_create_failed			= TFileCache nevar izveidot kešatmiņas direktoriju '{0}'.
+filecache_directory_not_writable			= TFileCache kešatmiņas direktorijā '{0}' nav rakstīšanas tiesību.
+filecache_hash_token_identity				= TFileCache.hashToken jāpārveido savu ievadi; apakšklases implementācija atgrieza marķieri nemainītu.
+filecache_hash_token_path_separator			= TFileCache.hashToken nedrīkst atgriezt vērtību, kas satur ceļa atdalītāju ("/" vai "\"); apakšklases implementācija atgrieza nedrošu jaucējkodu.
+
+memorycache_backing_file_directory_not_found	= TMemoryCache.BackingFile direktorija ceļam '{0}' neeksistē.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' nav derīgs. Derīgās vērtības ir 'PHP' un 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' nav derīgs. Derīgās vērtības ir 'None', 'Base64' un 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' nav derīgs. Tam jābūt TSecurityManager moduļa ID vai TSecurityManager instancei.
+serializingcache_json_encode_failed			= TSerializingCache neizdevās JSON kodēt vērtību: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} nenorāda uz derīgu direktoriju.
+cachedependencylist_cachedependency_required	= TCacheDependencyList var pievienot tikai objektus, kas implementē ICacheDependency.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' nav derīgs. Pārliecinieties, ka tas ir nosaukumvietas formā un norāda uz derīgu direktoriju, kurā ir kļūdu veidņu faili.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' nav derīga direktorija.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage nevar mainīt pēc pakalpojuma inicializācijas.
+pageservice_basepath_unchangeable			= TPageService.BasePath nevar mainīt pēc pakalpojuma inicializācijas.
+pageservice_pageclass_invalid				= Lapas klase {0} nav derīga. Tai jābūt TPage vai atvasinātai no TPage.
+pageservice_includefile_invalid				= Nevar atrast lapu pakalpojuma konfigurāciju {0}. Pārliecinieties, ka tā ir nosaukumvietas formātā un fails beidzas ar ".xml" vai ".php".
+
+pageserviceconf_file_invalid				= Nevar atvērt lapu direktorijas konfigurācijas failu '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> lieto nederīgu faila ceļu "{1}" lapu direktorijas konfigurācijas failā '{2}'.
+pageserviceconf_alias_invalid				= <alias> elementam jābūt "id" atribūtam un "path" atribūtam lapu direktorijas konfigurācijas failā '{0}'.
+pageserviceconf_using_invalid				= <using> elementam jābūt "namespace" atribūtam lapu direktorijas konfigurācijas failā '{0}'.
+pageserviceconf_module_invalid				= <module> elementam jābūt "id" atribūtam lapu direktorijas konfigurācijas failā '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> jābūt "class" atribūtam lapu direktorijas konfigurācijas failā '{1}'.
+pageserviceconf_parameter_invalid			= <parameter> elementam jābūt "id" atribūtam lapu direktorijas konfigurācijas failā '{0}'.
+pageserviceconf_page_invalid				= <page> elementam jābūt "id" atribūtam lapu direktorijas konfigurācijas failā '{0}'.
+pageserviceconf_includefile_required		= Lapas konfigurācijas <include> elementam jābūt "file" atribūtam.
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" nevar mainīt (uz "{1}") pēc uzvedības piesaistīšanas.
+basebehavior_sync_no_owner					= TBaseBehavior "{0}" nav īpašnieka, un tā nevar sinhronizēt notikumu apstrādātājus komponentā bez īpašniekiem.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" nevar sinhronizēt notikumu apstrādātājus objektā, kas nav tās īpašnieks.
+behavior_has_owner							= TBehavior "{0}" var piesaistīt tikai vienam īpašniekam.
+behavior_bad_attach_component				= TBehavior "{0}" var piesaistīt tikai TComponent.
+behavior_detach_without_owner				= TBehavior "{0}" nevar atsaistīt bez īpašnieka.
+behavior_detach_wrong_owner					= TBehavior "{0}" nevar atsaistīt no objekta, kas nav tās īpašnieks.
+behavior_property_unchangeable				= {1}.{0} nevar mainīt pēc uzvedības piesaistīšanas.
+behavior_requires_owner						= {1}.{0} nepieciešams īpašnieks.
+classbehavior_owner_attach_once				= TClassBehavior "{0}" vienam īpašniekam var piesaistīt tikai vienu reizi. Apstrādātāji nebūtu unikāli.
+classbehavior_bad_attach_component			= TClassBehavior "{0}" var piesaistīt tikai TComponent.
+classbehavior_detach_without_owner			= TClassBehavior "{0}" nevar atsaistīt bez īpašnieka.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" nevar atsaistīt no objekta, kas nav tās īpašnieks.
+
+callchain_bad_dynamic_event					= Tika izsaukts TCallChain.{0}, bet bija gaidīts {1}.
+
+behaviormodule_behavior_as_array_required	= PHP <behavior> jābūt masīvam.
+behaviormodule_behaviorname_required		= <behavior> jāsatur 'name' atribūts uzvedības piesaistīšanai.
+behaviormodule_behaviorclass_required		= <behavior> jāsatur 'class' atribūts, kas definē uzvedības klasi.
+behaviormodule_attachto_class_required		= <behavior> jābūt 'attachto' vai 'attachtoclass' atribūtam.
+behaviormodule_attachto_and_class_only_one	= <behavior> jābūt vai nu 'attachto', vai 'attachtoclass' atribūtam, bet ne abiem.
+behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' objekts nav atrasts.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors nevar iestatīt uz nederīgu tipu '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader jābūt norādītam uzvedības nosaukumam.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader jābūt norādītai uzvedības klasei.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader jābūt 'attachto' vai 'attachtoclass' atribūtam.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader drīkst būt tikai viens no atribūtiem 'attachto' vai 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' nepieciešams moduļa ID.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' nav atrasts.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader nevar atrast moduli '{0}', kuram piesaistīt uzvedības.
+
+evaluationfilter_statements_denied			= Komponents '{0}' nevar izvērtēt PHP priekšrakstus '{1}', jo TEvaluationFilterBehavior.AllowStatements ir false.
+evaluationfilter_code_denied				= Komponents '{0}' nevar izvērtēt '{1}', jo TEvaluationFilterBehavior neatļauj '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior konstruēšanai nepieciešams izsaucams objekts (callable).
+maproutebehavior_handler_not_callable		= TMapRouteBehavior konstruēšanai nepieciešams izsaucams objekts (callable).
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior jābūt Parameter atribūtam.
+parameterizebehavior_no_property			= TParameterizeBehavior jābūt Property atribūtam.
+parameterizebehavior_owner_get_only_property	= TParameterizeBehavior īpašniekam ir rekvizīts Property '{0}', bet tas ir tikai lasāms.
+parameterizebehavior_owner_has_no_property	= TParameterizeBehavior īpašniekam nav rekvizīta Property '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior nevar iztukšot Parameter pēc piesaistīšanas.
+
+processhelper_no_forking					= Procesu sazarošana (forking) netiek atbalstīta.
+processhelper_no_signals					= Procesu signālus operētājsistēmā Windows nevar nosūtīt.
+
+serializableclosure_no_decrypter			= TSerializableClosure nevar atšifrēt šifrētu slēgfunkcijas saturu bez konfigurēta atšifrētāja.
+serializableclosure_decrypt_failed			= TSerializableClosure neizdevās atšifrēt šifrēto slēgfunkcijas saturu; saturs var būt viltots vai atslēga var būt mainījusies.
+
+appsignals_no_change						= TApplicationSignals::{0} nevar mainīt pēc piesaistīšanas.
+appsignals_not_a_dispatcher					= '{0}' nav TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' nav derīgs PID.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} nevar mainīt pēc piesaistīšanas.
+
+initialized_property_unchangeable			= {1}.{0} nevar iestatīt, jo tas jau ir inicializēts.
+initialized_requires_initialization			= {1}.{0} pirms apstrādes nepieciešama inicializācija.
+
+template_closingtag_unexpected				= Atrasts neparedzēts noslēdzošais tags '{0}'.
+template_closingtag_expected				= Gaidīts noslēdzošais tags '{0}', atrasts '{1}'.
+template_directive_nonunique				= Direktīvai '<%@ ... %>' jāatrodas veidnes sākumā, un tā var parādīties ne vairāk kā vienu reizi.
+template_comments_forbidden					= Veidnes komentāri rekvizītu tagos nav atļauti.
+template_matching_unexpected				= Neparedzēta sakritība.
+template_property_unknown					= {0} nav rekvizīta ar nosaukumu '{1}'.
+template_event_unknown						= {0} nav notikuma ar nosaukumu '{1}'.
+template_property_readonly					= {0} rekvizīts '{1}' ir tikai lasāms.
+template_event_forbidden					= {0} nav vadīklas komponents. Veidnē tā notikumam '{1}' nevar piesaistīt apstrādātāju.
+template_databind_forbidden					= {0} nav vadīklas komponents. Tā rekvizītam '{1}' nevar piesaistīt izteiksmes.
+template_component_required					= '{0}' nav komponents. Veidnē var parādīties tikai komponenti.
+template_format_invalid						= Nederīga veidnes sintakse: {0}
+template_property_duplicated				= Rekvizīts {0} ir konfigurēts divas vai vairāk reizes.
+template_eventhandler_invalid				= {0}.{1} pieņem tikai statisku virkni.
+template_controlid_invalid					= {0}.ID pieņem tikai statisku teksta virkni.
+template_controlskinid_invalid				= {0}.SkinID pieņem tikai statisku teksta virkni.
+template_content_unexpected					= Instancējot veidni, sastopams neparedzēts saturs: {0}.
+template_include_invalid					= Nederīga veidnes iekļaušana. Pārliecinieties, ka {0} ir derīga nosaukumvieta, kas norāda uz esošu veidnes failu ar paplašinājumu .tpl.
+template_tag_unexpected						= Rekvizīta {0} inicializācija satur nezināmu taga tipu {1}.
+
+xmldocument_file_read_failed				= TXmlDocument nevar nolasīt failu '{0}'.
+xmldocument_file_write_failed				= TXmlDocument nevar ierakstīt failu '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList pieņem tikai TXmlElement objektus.
+
+xmlelement_null_tag							= TXmlElement taga nosaukums nevar būt null.
+xmlelement_empty_tag						= TXmlElement taga nosaukums nevar būt tukša virkne.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action vērtība var būt tikai 'allow' vai 'deny'.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb vērtība var būt tikai 'get' vai 'post'.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection pieņem tikai TAuthorizationRule objektus.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' nav derīgs fails.
+usermanager_userfile_unchangeable			= TUserManager.UserFile nevar mainīt. Lietotāju modulis jau ir inicializēts.
+
+integritymanager_entry_invalid				= TIntegrityManager integritātes ierakstam URL '{0}' nepieciešams netukšs url un jaucējkods.
+integritymanager_algorithm_invalid			= TIntegrityManager algoritms '{0}' netiek atbalstīts; lietojiet vienu no: {1}.
+integritymanager_file_unreadable			= TIntegrityManager nevar nolasīt failu '{0}', lai aprēķinātu tā integritāti.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' nav derīgs fails.
+integritymanager_integrityfile_unchangeable	= {1}.{0} nevar mainīt. Integritātes modulis jau ir inicializēts.
+
+javascript_script_integrity_required		= Attālajam skriptam '{0}' nav reģistrēta apakšresursu integritāte (Subresource Integrity), bet integritāte ir obligāta.
+
+authmanager_usermanager_required			= TAuthManager.UserManager jāpiešķir vērtība.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' nenorāda uz lietojumprogrammas moduļa ID.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' nenorāda uz derīgu TUserManager lietojumprogrammas moduli.
+authmanager_session_required				= TAuthManager nepieciešams sesijas lietojumprogrammas modulis.
+
+permissions_events_invalid					= TPermissionEvent.Event nevar iestatīt nederīgu vērtību '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules nevar iestatīt nederīgu vērtību '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' nenorāda uz lietojumprogrammas moduļa ID.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' nenorāda uz derīgu TDbParameterModule lietojumprogrammas moduli.
+permissions_init_once						= TPermissionsManager.init var inicializēt tikai vienu reizi.
+permissions_duplicate_permission			= TPermissionsManager atļauja '{0}' jau ir reģistrēta.
+permissions_role_children_invalid			= TPermissionsManager konfigurācijas lomai '{0}' ir nederīgi pakārtotie elementi '{1}'.
+permissions_rule_invalid					= TPermissionsManager konfigurācijas atļauju kārtulai '{0}' ir rekvizīti, kas nav masīvs.
+permissions_rules_require_name				= TPermissionsManager kārtulām jābūt atļaujas "name" rekvizītam.
+permissions_role_rule_nested				= TPermissionsManager konfigurācijas loma '{0}' satur <permissionrule>. Atļauju kārtulas ir tieši pakārtotas atļauju konfigurācijas elementam.
+permissions_rule_class_invalid				= TPermissionsManager atļauju kārtulas klase '{0}' ir direktorijas nosaukumvieta, nevis klase.
+permissions_children_invalid				= TPermissionsManager.*RoleChildren pakārtotajiem elementiem jābūt virknei vai masīvam, bet ir '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' nav derīgs fails.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' nav derīgs ceļa aizstājvārds. Pārliecinieties, ka šis aizstājvārds ir definēts konfigurācijā un norāda uz derīgu direktoriju.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' nav derīga direktorija.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath nevar mainīt pēc moduļa inicializācijas.
+thememanager_theme_invalid					= TThemeManager motīva nosaukumam '{0}' jābūt vienas direktorijas nosaukumam.
+
+theme_baseurl_required						= TThemeManager.BasePath ir obligāts. Pēc noklusējuma tiek pieņemta direktorija ar nosaukumu 'themes' direktorijā, kurā atrodas lietojumprogrammas ieejas skripts.
+theme_path_inexistent						= Motīva ceļš '{0}' neeksistē.
+theme_control_nested						= Vadīklas tipa '{0}' apdare motīvā '{1}' nevar atrasties citā apdarē.
+theme_skinid_duplicated						= SkinID '{0}.{1}' motīvā '{2}' dublējas.
+theme_databind_forbidden					= Datu piesaisti nevar lietot motīvā '{0}' vadīklas apdarei '{1}.{2}' rekvizītam '{3}'.
+theme_property_readonly						= Apdare tiek lietota tikai lasāmam vadīklas rekvizītam '{0}.{1}'.
+theme_property_undefined					= Apdare tiek lietota neesošam vadīklas rekvizītam '{0}.{1}'.
+theme_tag_unexpected						= Rekvizīta {0} inicializācija satur nezināmu taga tipu {1}.
+
+control_object_reregistered					= Atrasts dublēts objekta ID '{0}'.
+control_id_invalid							= {0}.ID '{1}' nav derīgs. Atļautas tikai burtciparu un pasvītrojuma rakstzīmes. Pirmajai rakstzīmei jābūt burtam vai pasvītrojumam.
+control_skinid_unchangeable					= {0}.SkinID nevar mainīt pēc tam, kad vadīklai ir lietota apdare vai ir izveidotas pakārtotās vadīklas.
+control_enabletheming_unchangeable			= {0}.EnableTheming nevar mainīt pēc pakārtoto vadīklu izveides.
+control_stylesheet_applied					= StyleSheet apdare jau ir lietota {0}.
+control_id_nonunique						= {0}.ID '{1}' nav unikāls starp visām vadīklām vienā nosaukumu konteinerā.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' nedrīkst būt negatīvs.
+
+templatecontrol_mastercontrol_invalid		= Pamatvadīklai (master) jābūt TTemplateControl vai tās apakšklases tipa.
+templatecontrol_mastercontrol_required		= Vadīklai '{0}' nepieciešama pamatvadīkla (master), jo vadīkla lieto TContent.
+templatecontrol_contentid_duplicated		= TContent ID '{0}' dublējas.
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder ID '{0}' dublējas.
+templatecontrol_directive_invalid			= {0}.{1} pieņem tikai statisku teksta virkni, ko norāda veidnes direktīvā.
+templatecontrol_placeholder_inexistent		= TContent '{0}' nav atbilstoša TContentPlaceHolder.
+
+page_form_duplicated						= Lapa var saturēt ne vairāk kā vienu TForm. Pārējām formām lietojiet parastos HTML form tagus.
+page_isvalid_unknown						= TPage.IsValid vēl nav izvērtēts.
+page_postbackcontrol_invalid				= Nevar noteikt postback vadīklu '{0}'.
+page_control_outofform						= {0} '{1}' jābūt ietvertai TForm iekšpusē.
+page_head_duplicated						= Lapa var saturēt ne vairāk kā vienu THead.
+page_head_required							= Lai HTML head sadaļā renderētu CSS un JS, lapas veidnē nepieciešama THead vadīkla.
+page_statepersister_invalid					= Lapas stāvokļa saglabātājam jāimplementē IPageStatePersister interfeiss.
+
+csmanager_pradoscript_invalid				= Nezināms Prado skriptu bibliotēkas nosaukums '{0}'.
+csmanager_pradoscript_notloaded				= Prado skriptu bibliotēka ar nosaukumu '{0}' vēl nav ielādēta.
+csmanager_pradostyle_invalid				= Nezināms Prado stilu bibliotēkas nosaukums '{0}'.
+csmanager_invalid_packages					= Nezināmas pakotnes '{1}' JavaScript pakotnēm, kas definētas '{0}'. Derīgās pakotnes ir '{2}'.
+
+httpclient_transport_error					= HTTP klienta transporta kļūda (kods {0}): {1}
+httpclient_http_error						= HTTP kļūdas atbilde ar statusu {0}.
+httpclient_transport_required				= Nav pieejams HTTP transports: cURL paplašinājums nav ielādēts un allow_url_fopen ir izslēgts.
+
+restclient_invalid_header					= TRestClient galvenei '{0}' ir nederīgs nosaukums vai vērtība, kas satur CR/LF.
+restclient_basicauth_username_colon			= TRestClient Basic autentifikācijas lietotājvārds nedrīkst saturēt kolu (RFC 7617 akreditācijas datu atdalītājs).
+
+contentplaceholder_id_required				= TContentPlaceHolder jābūt ID.
+
+content_id_required							= TContent jābūt ID.
+
+controlcollection_control_required			= TControlList pieņem tikai virknes vai TControl objektus.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' nav derīgs. Tam jābūt tikai vienai rakstzīmei.
+webcontrol_dir_invalid						= {0}.Dir '{1}' nav derīgs. Atļautās vērtības ir 'ltr', 'rtl' un 'auto'.
+webcontrol_style_invalid					= {0}.Style pieņem tikai virknes vērtību.
+
+listcontrol_selection_invalid				= {0} ir nederīga atlase, kas iestatīta pirms datu piesaistes veikšanas.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex ir nederīga vērtība {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue ir nederīga vērtība '{1}'.
+listcontrol_expression_invalid				= {0} izvērtē nederīgu izteiksmi '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} neatbalsta vairāku vienumu atlasi.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' nav atrasta.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' nav atrasts.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' nav atrasta.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' nav atrasta.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' nedrīkst būt negatīvs.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' nedrīkst būt negatīvs.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' jābūt no 0 līdz filtrējošās vadīklas RenderFilterDepth {1}.
+
+hiddenfield_focus_unsupported				= THiddenField neatbalsta ievades fokusa iestatīšanu.
+hiddenfield_theming_unsupported				= THiddenField neatbalsta motīvus.
+hiddenfield_skinid_unsupported				= THiddenField neatbalsta vadīklas apdari.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' nenorāda uz esošu pogas vadīklu.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding jābūt veselam skaitlim, kas vienāds ar -1 vai lielāks.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing jābūt veselam skaitlim, kas vienāds ar -1 vai lielāks.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History jābūt veselam skaitlim, kas lielāks par 0.
+
+listitemcollection_item_invalid				= TListItemCollection pieņem tikai virknes vai TListItem objektus.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices ir tikai lasāms.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack ir tikai lasāms.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex ir tikai lasāms.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices ir tikai lasāms.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue ir tikai lasāms.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices ir tikai lasāms.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' neeksistē.
+logrouter_routeclass_required				= <route> konfigurācijā ir obligāts class atribūts.
+logrouter_routetype_required				= Žurnāla maršrutam jābūt TLogRoute vai tās atvasinātās klases instancei.
+
+dblogroute_connectionid_invalid				= TDbLogRoute nevar izveidot datu bāzes savienojumu ar ID '{0}'.
+dblogroute_insert_failed					= TDbLogRoute nevar ievietot žurnāla ierakstu tabulā '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' nav derīgs
+dblogroute_table_nonexistent				= TDbLogRoute tabula '{0}' neeksistē, un tā ir jāizveido.
+dblogroute_order_invalid					= TDbLogRoute kārtošanas secībā '{0}' jāuzskaita kolonnas, katrai pēc izvēles pievienojot ASC vai DESC.
+dblogroute_limit_invalid					= TDbLogRoute ierobežojumam '{0}' jābūt rindu skaitam, 'count OFFSET offset' vai 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' jābūt direktorijai nosaukumvietas formātā, kurā tīmekļa servera procesam ir rakstīšanas tiesības.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize jābūt lielākam par 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles jābūt lielākam par 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom nevar būt tukšs.
+emaillogroute_mail_failed					= TEmailLogRoute neizdevās nosūtīt žurnāla ierakstu uz '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags nav derīgi, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility nav derīgs, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger ir obligāts.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' nav Psr\Log\LoggerInterface moduļa ID vai klases nosaukums.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger nevar būt TPsrLogger; tas žurnalētu atpakaļ tajā pašā TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns nedrīkst būt mazāks par 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate ir tukšs vai satur nederīgu vadīklas ID ceļu.
+basevalidator_validatable_required			= {0}.ControlToValidate jānorāda uz vadīklu, kas implementē IValidatable interfeisu.
+basevalidator_forcontrol_unsupported		= {0}.ForControl netiek atbalstīts.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare satur nederīgu vadīklas ID ceļu.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate jānorāda uz TFileUpload vadīklu.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate satur nederīgu TListControl ID ceļu, "{1}" ir {2}.
+
+repeater_template_required					= TRepeater.{0} nepieciešama veidnes instance, kas implementē ITemplate interfeisu.
+repeater_itemtype_unknown					= Nezināms atkārtotāja vienuma tips {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection pieņem tikai objektus, kas ir TControl vai tās pēcteču klases instances.
+
+datalist_template_required					= TDataList.{0} nepieciešama veidnes instance, kas implementē ITemplate interfeisu.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection pieņem tikai TDataListItem objektus.
+
+datagrid_template_required					= TDataGrid.{0} nepieciešama veidnes instance, kas implementē ITemplate interfeisu.
+templatecolumn_template_required			= TTemplateColumn.{0} nepieciešama veidnes instance, kas implementē ITemplate interfeisu.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex nedrīkst būt mazāks par 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize jābūt lielākam par 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount nedrīkst būt mazāks par 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection pieņem tikai TDataGridItem objektus.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection pieņem tikai TDataGridColumn objektus.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount jābūt lielākam par 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor mēģina izvērtēt lauka vērtību nederīgiem datiem. Pārliecinieties, ka dati ir masīvs, TMap, TList vai objekts, kas satur norādīto lauku '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor mēģina izvērtēt datu vērtību nezināmam laukam '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection pieņem tikai TTableRow objektus.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection pieņem tikai TTableColumn objektus.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection pieņem tikai TTableColumnGroup objektus.
+tablecolumn_span_invalid					= TTableColumn Span jābūt 1 vai lielākam; norādīts {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection pieņem tikai TTableCell objektus.
+
+multiview_view_required						= TMultiView kā pakārtoto elementu pieņem tikai TView.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex ir nederīgs indekss '{0}'.
+multiview_view_inexistent					= TMultiView nevar atrast norādīto skatu.
+multiview_viewid_invalid					= TMultiView nevar atrast skatu '{0}', uz kuru pārslēgties.
+
+viewcollection_view_required				= TViewCollection kā elementu pieņem tikai TView.
+
+view_visible_readonly						= TView.Visible ir tikai lasāms. Redzamības pārslēgšanai lietojiet TView.Active.
+
+wizard_step_invalid							= Aktivizējamais solis vedņa soļu kolekcijā nav atrasts.
+wizard_command_invalid						= Nederīga vedņa navigācijas komanda '{0}'.
+
+table_tablesection_outoforder				= TTable tabulas sadaļām jābūt šādā secībā: Header, Body un Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType ir tikai lasāms.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection pieņem tikai TWizardStep vai tās atvasināto klašu objektus.
+
+texthighlighter_stylesheet_invalid			= Nevar atrast TTextHighlighter stilu lapas failu.
+
+hotspotcollection_hotspot_required			= THotSpotCollection pieņem tikai THotSpot vai tās atvasināto klašu instances.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode ir tikai lasāms.
+htmlarea_tarfile_invalid					= THtmlArea nevar atrast TinyMCE tar failu.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile nevar mainīt, jo modulis jau ir inicializēts.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' nav derīgs. Pārliecinieties, ka tas ir nosaukumvietas formātā un faila paplašinājums ir '.xml' vai '.php'.
+parametermodule_parameterid_required		= Parametra elementam jābūt 'id' atribūtam.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' nav derīgs. Atļautas tikai burtciparu un pasvītrojuma rakstzīmes. Pirmajai rakstzīmei jābūt burtam vai pasvītrojumam.
+datagridcolumn_expression_invalid			= {0} izvērtē nederīgu izteiksmi '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID ir iestatīts ar nederīgu kešatmiņas moduļa ID {0}. Modulis vai nu neeksistē, vai neimplementē ICache interfeisu.
+outputcache_duration_invalid				= {0}.Duration jābūt veselam skaitlim, kas nav mazāks par 0.
+
+stack_data_not_iterable						= TStack var ielādēt datus tikai no masīva vai šķērsojama objekta.
+stack_empty									= TStack ir tukšs.
+
+queue_data_not_iterable						= TQueue var ielādēt datus tikai no masīva vai šķērsojama objekta.
+queue_empty									= TQueue ir tukša.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount jābūt veselam skaitlim, kas nav mazāks par 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex ir ārpus diapazona.
+pager_pagecount_invalid						= TPager.PageCount nevar būt mazāks par 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} jābūt derīgam ID ceļam, kas norāda uz no TDataBoundControl atvasinātu vadīklu.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize jābūt veselam skaitlim, kas nav mazāks par 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount jābūt veselam skaitlim, kas nav mazāks par 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex ir ārpus diapazona.
+databoundcontrol_datasource_invalid			= {0}.DataSource nav derīgs.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' nenorāda uz esošu vadīklu.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' jānorāda uz vadīklu, kas implementē IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' nenosauc datu avota skatu.
+
+datasourcecontrol_focus_unsupported			= {0} neatbalsta Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} neatbalsta EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} neatbalsta SkinID.
+datasourcecontrol_visible_unsupported		= {0} neatbalsta Visible.
+datasourceview_insert_unsupported			= {0} neatbalsta ievietošanu.
+datasourceview_update_unsupported			= {0} neatbalsta atjaunināšanu.
+datasourceview_delete_unsupported			= {0} neatbalsta dzēšanu.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource nepieciešams masīvs, IDataSource vai Traversable datu avots.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView nepieciešams null, masīvs vai Traversable datu avots.
+
+clientscript_invalid_file_position			= Nederīga faila pozīcija '{1}' TClientScript vadīklai '{0}'; tai jābūt 'Head', 'Here' vai 'Begin'.
+clientscript_invalid_package_path			= Nederīgs PackagePath '{0}' TClientScript vadīklai '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' neatbalsta AutoPostBack.
+globalization_cache_path_failed				= Nevar izveidot tulkojuma ziņojumu kešatmiņas ceļu '{0}'. Pārliecinieties, ka vecākdirektorija eksistē un tīmekļa procesam tajā ir rakstīšanas tiesības.
+globalization_source_path_failed			= Nevar izveidot tulkojuma ziņojumu ceļu '{0}'. Pārliecinieties, ka vecākdirektorija eksistē un tīmekļa procesam tajā ir rakstīšanas tiesības.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' nenorāda uz derīgu TDataSourceConfig moduli.
+messagesource_connectionid_required			= ConnectionID iestatījumā MessageSource_Database.source ir obligāts.
+
+callback_not_support_no_priority_state_update	= Atzvana (callback) pieprasījums neatbalsta lapas stāvokļa atjaunināšanu bez prioritātes.
+callback_invalid_callback_options			= '{1}' nav derīga TCallbackOptions vadīkla atzvana vadīklai '{0}'.
+callback_invalid_clientside_options			= Atzvana ClientSide rekvizītam jābūt vai nu virknei ar TCallbackOptions vadīklas ID, vai TCallbackClientSideOptions instancei.
+callback_invalid_handler					= Nederīgs atzvana apstrādātājs; vadīklai {0} jāimplementē ICallbackEventHandler.
+callback_invalid_target						= Nederīgs atzvana mērķis; nav vadīklas ar ID {0}.
+
+callback_interval_be_positive				= TCallbackTimer "{0}" intervālam jābūt stingri lielākam par nulli sekundēm.
+callback_decay_be_not_negative				= TCallbackTimer "{0}" samazinājuma koeficients nedrīkst būt negatīvs.
+
+callback_no_autopostback					= Vadīklai "{0}" nevar iespējot AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform nepieciešams PHP XSL paplašinājums.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' nav derīgs.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' nav derīgs.
+xmltransform_transform_required				= TXmlTransform jābūt iestatītam vai nu TransformContent, vai TransformPath rekvizītam.
+
+ttriggeredcallback_invalid_controlid		= ControlID rekvizīts vadīklai '{0}' nedrīkst būt tukšs.
+tactivecustomvalidator_clientfunction_unsupported	= {0} neatbalsta klienta puses validatora funkciju.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' neidentificē derīgu TDataSourceConfig moduli.
+dbproperties_property_required				= {1}.{0} ir obligāts rekvizīts.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' nav derīgs SQL identifikators.
+
+dbconnection_open_failed					= TDbConnection neizdevās izveidot datu bāzes savienojumu: {0}
+dbconnection_connection_inactive			= TDbConnection ir neaktīvs.
+dbconnection_unsupported_driver_charset		= Datu bāzes draiveris '{0}' neatbalsta rakstzīmju kopas iestatīšanu.
+dbconnection_charset_unchangeable			= Datu bāzes draiveris '{0}' nevar mainīt rakstzīmju kopu pēc savienojuma atvēršanas. Rakstzīmju kopa ir DSN parametrs.
+
+dbcommand_prepare_failed					= TDbCommand neizdevās sagatavot SQL priekšrakstu "{1}": {0}
+dbcommand_execute_failed					= TDbCommand neizdevās izpildīt SQL priekšrakstu "{1}": {0}
+dbcommand_query_failed						= TDbCommand neizdevās izpildīt SQL vaicājumu "{1}": {0}
+dbcommand_column_empty						= TDbCommand atgrieza tukšu rezultātu un nevarēja iegūt skalāro vērtību.
+dbdatareader_rewind_invalid					= TDbDataReader ir tikai uz priekšu lasāma plūsma. To var šķērsot tikai vienu reizi.
+dbtransaction_transaction_inactive			= TDbTransaction ir neaktīva.
+
+dbcommandbuilder_value_must_not_be_null		= Rekvizīts {0} nedrīkst būt null, kā to nosaka kolonna '{2}' tabulā '{1}'.
+
+dbcommon_invalid_table_name					= Datu bāzes tabula '{0}' nav atrasta. Kļūdas ziņojums: {1}.
+dbcommon_invalid_identifier_name			= Nederīgs datu bāzes identifikatora nosaukums '{0}', sīkāku informāciju skatiet {1}.
+dbtableinfo_invalid_column_name				= Nederīgs kolonnas nosaukums '{0}' datu bāzes tabulai '{1}'.
+dbmetadata_invalid_table_view				= Nederīgs tabulas/skata nosaukums '{0}', vai arī tabula/skats '{0}' nesatur pieejamu kolonnu/lauku definīciju.
+dbmetadata_requires_php_version				= Lai lietotu {0} datu bāzi, nepieciešama PHP versija {1} vai jaunāka.
+
+dbtablegateway_invalid_criteria				= Nederīgs kritērija objekts; tam jābūt virknei vai TSqlCriteria instancei.
+dbtablegateway_no_primary_key_found			= Tabula '{0}' nesatur primārās atslēgas laukus.
+dbtablegateway_missing_pk_values			= Trūkst primārās atslēgas vērtību, veidojot IN(key1, key2, ...) tabulai '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Saliktās atslēgas vērtību skaita neatbilstība, veidojot IN( (key1, key2, ..), (key3, key4, ..)) tabulai '{0}'.
+dbtablegateway_mismatch_args_exception		= TTableGateway meklēšanas metode '{0}' sagaida {1} parametrus, bet atrasti tikai {2} parametri.
+dbtablegateway_mismatch_column_name			= Dinamiskajā __call() metodē '{0}' nav atrastas atbilstošas kolonnas; derīgās kolonnas tabulai '{2}' ir '{1}'.
+dbtablegateway_invalid_table_info			= Tabulai jābūt virknei vai TDbTableInfo instancei.
+
+resource_not_a_resource						= Gaidīts atvērts PHP resurss, bet saņemts '{0}'.
+processfork_failed							= Nevar sazarot procesu.
+liveprocessfork_readonly_receiver			= TLiveProcessFork dati saņēmēja pusē ir tikai lasāmi; tos modificē tikai sūtītāja puse.
+stream_open_failed							= Nevar atvērt plūsmu '{0}' režīmā '{1}': {2}
+binarystream_unexpected_eof					= Neparedzētas plūsmas beigas: bija nepieciešami {0} baiti, bet nolasīti tikai {1}.
+binarystream_short_write					= Nepilnīga rakstīšana: bija jāieraksta {0} baiti, bet pieņemti tikai {1}.
+streamresourcewrapper_unusable_stream		= Plūsma nav ne lasāma, ne rakstāma, un to nevar atklāt kā resursu.
+streamfilter_already_registered				= Plūsmas filtrs '{0}' jau ir reģistrēts.
+streamfilter_registration_failed			= Nevar reģistrēt plūsmas filtru '{0}' klasei '{1}'.
+streamwrapper_already_registered			= Plūsmas ietinēja protokols '{0}' jau ir reģistrēts.
+streamwrapper_registration_failed			= Nevar reģistrēt plūsmas ietinēja protokolu '{0}' klasei '{1}'.
+reservedspace_invalid						= Rezervētai vietai nepieciešama nenegatīva nobīde un pozitīvs garums; norādīta nobīde '{0}' un garums '{1}'.
+reservedspace_access_denied					= Darbība pārklājas ar rezervēto vietu pie nobīdes '{0}'.
+multipartstream_element_invalid				= TMultipartStream elementam nepieciešams 'name' un 'contents'.
+builtincompressor_extension_required		= Kompresoram '{0}' nepieciešams PHP paplašinājums '{1}'.
+builtincompressor_compress_failed			= Kompresoram '{0}' neizdevās saspiest datus.
+builtincompressor_decompress_failed			= Kompresoram '{0}' neizdevās atspiest datus; tie var būt bojāti vai citā formātā.
+compression_method_unknown					= Saspiešanas metode '{0}' nav zināma, vai tās paplašinājums nav pieejams.
+compression_none_available					= Šajā PHP instalācijā nav pieejama neviena saspiešanas metode.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' nav zināms satura kodējums. Zināmie kodējumi ir: {1}.
+compression_xz_unsupported					= xz/LZMA nav PHP paplašinājuma; instalējiet belisoful/prado-compression, lai iegūtu natīvu vai CLI xz kodeku.
+clicompressor_command_missing				= Kompresoram '{0}' nepieciešama viena no šīm sistēmas komandām PATH: '{1}'.
+clicompressor_process_failed				= Kompresors '{0}' nevarēja palaist komandu '{1}'.
+clicompressor_command_failed				= Kompresora '{0}' komanda '{1}' beidza darbu ar kodu {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule nepieciešams Endpoint vai pozitīvs Port, no kura to izveidot.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' nav derīga. Tai jābūt TSocketServer vai tās apakšklasei.
+socketservermodule_scheme_not_stream		= TSocketServerModule nevar pieņemt savienojumus bezsavienojuma shēmā '{0}'. Lietojiet plūsmas shēmu, piemēram, tcp, tls, ssl vai unix.
+
+bitreader_invalid_bits						= Nevar nolasīt {0} bitus; skaitam jābūt no 0 līdz platformas veselā skaitļa platumam.
+bitreader_64bit_php_required				= {0} bitu nolasīšanai nepieciešams 64 bitu PHP būvējums.
+bitreader_invalid_float_bits				= Nevar nolasīt {0} bitu peldošā komata skaitli; atbalstīti tikai 8, 16, 32 vai 64 biti.
+bitwriter_invalid_bits						= Nevar ierakstīt {0} bitus; skaitam jābūt no 0 līdz platformas veselā skaitļa platumam.
+bitwriter_64bit_php_required				= {0} bitu ierakstīšanai nepieciešams 64 bitu PHP būvējums.
+bitwriter_invalid_float_bits				= Nevar ierakstīt {0} bitu peldošā komata skaitli; atbalstīti tikai 8, 16, 32 vai 64 biti.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' neeksistē. Ņemiet vērā, ka tas jānorāda nosaukumvietas formātā un faila paplašinājumam jābūt '.xml' vai '.php'.
+soapservice_server_invalid					= TSoapService SOAP servera klase '{0}' nav derīga. Tai jābūt TSoapServer vai tās apakšklasei.
+soapservice_serverid_required				= <soap> elementam jābūt 'id' atribūtam.
+soapservice_serverid_duplicated				= SOAP servera ID '{0}' dublējas.
+soapserver_id_invalid						= Nederīgs SOAP servera ID '{0}'. Tas nedrīkst beigties ar '.wsdl'.
+soapserver_provider_invalid					= TSoapServer nodrošinātāja klasi '{0}' nevar atrast.
+soapserver_version_invalid					= Nederīga SOAP versija '{0}'. Tai jābūt '1.1' vai '1.2'.
+soapserver_wsdlstyle_invalid				= Nederīgs WSDL stils '{0}'. Tam jābūt 'rpc' vai 'document'.
+soapserver_wsdlstyle_unsupported			= WSDL stilam '{0}' nepieciešams pradosoft/prado-wsdlgenerator 1.2 vai jaunāks. Instalētais ģenerators veido tikai 'rpc'.
+
+jsonservice_id_required						= TJsonService JSON elementos nepieciešams 'id' atribūts.
+jsonservice_response_type_invalid			= JSON klase {0} nav derīga. Tai jābūt TJsonResponse vai atvasinātai no TJsonResponse.
+jsonservice_class_required					= TJsonService JSON elementos nepieciešams 'class' atribūts.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass ir obligāts.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' nav derīga lietotāja klase. Klasei jābūt atvasinātai no TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' nenorāda uz derīgu TDataSourceConfig moduli.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID ir obligāts.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' nenorāda uz derīgu TDataSourceConfig moduli.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID ir obligāts.
+
+feedservice_id_required						= TFeedService barotnes elementos nepieciešams 'id' atribūts.
+feedservice_feedtype_invalid				= Barotnes klasei '{0}' jāimplementē IFeedContentProvider interfeiss.
+feedservice_class_required					= TFeedService barotnes elementos nepieciešams 'class' atribūts.
+
+tabviewcollection_tabview_required			= TTabPanel kā pakārtoto elementu pieņem tikai TTabView.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID ir nederīgs ID '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex ir nederīgs indekss '{0}'.
+tabpanel_view_inexistent					= TTabPanel nevar atrast norādīto skatu.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID ir obligāts.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' norāda uz neesošu moduli.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' norāda uz moduli, kas neimplementē ICache interfeisu.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping var saturēt tikai TUrlMappingPattern vai tās apakšklases.
+urlmapping_global_required					= TUrlMapping jākonfigurē kā globāls modulis.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' nav fails.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' jānorāda uz XML failu nosaukumvietas formātā.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter ir obligāts paraugam '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl nevar būt tukšs.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' nav derīgs.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme jābūt veselam skaitlim no {0} līdz {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize jābūt veselam skaitlim no {0} līdz {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength jābūt veselam skaitlim no {0} līdz {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength jābūt veselam skaitlim no {0} līdz {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet jābūt virknei, kas sastāv no vismaz 2 rakstzīmēm.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey nav zināms. Pārliecinieties, ka tīmekļa servera procesam ir rakstīšanas tiesības jūsu resursu (assets) direktorijā.
+captcha_gd2_required						= TCaptcha nepieciešams PHP GD2 paplašinājums.
+captcha_imagettftext_required				= TCaptcha nepieciešams PHP GD2 paplašinājums ar TrueType fontu atbalstu.
+captcha_imagepng_required					= TCaptcha nepieciešams PHP GD2 paplašinājums ar PNG attēlu formāta atbalstu.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl jānorāda uz esošu TCaptcha vadīklu.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} jānorāda uz esošu TCaptcha vadīklu.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} jānorāda uz esošu TCaptcha vadīklu.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey nav zināms. Lai lietotu reCAPTCHA, jāiegūst API atslēga.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey nav zināms. Lai lietotu reCAPTCHA, jāiegūst API atslēga.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate jābūt TReCaptcha instancei.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' drīkst saturēt tikai burtus, ciparus, '_' un '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity jābūt veselam skaitlim no {0} līdz {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' jānorāda uz TProofOfWork vadīklu.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' nav derīga lietotāja klase. Klasei jābūt atvasinātai no TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' nenorāda uz derīgu kešatmiņas moduli.
+cachepagestatepersister_cache_required		= TCachePageStatePersister nepieciešams ielādēts kešatmiņas modulis.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' nenorāda uz derīgu kešatmiņas moduli.
+cachemoduleid_cache_required				= {0} nepieciešams kešatmiņas modulis. Konfigurējiet primāro kešatmiņu vai iestatiet {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout jābūt veselam skaitlim, kas nav mazāks par nulli.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' nav derīga PHP izteiksme: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule nevar atrast datu bāzes tabulu '{0}' parametru datu glabāšanai.
+dbparametermodule_get_no_blank_key			= TDbParameterModule nevar iegūt tukšu atslēgu.
+dbparametermodule_set_no_blank_key			= TDbParameterModule nevar iestatīt vērtību tukšai atslēgai.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' nenorāda uz derīgu TDataSourceConfig moduli.
+dbparametermodule_serializer_not_callable	= TDbParameterModule Serializer nav izsaucams objekts (callable).
+
+clockawaretrait_invalid_clock_class			= Pulksteņa klasei '{0}' jāimplementē Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock ir fiksēts uz UTC; citai laika joslai lietojiet TTimezoneClock.
+
+processcrontask_no_command					= TProcessCronTask '{0}' nav izpildāmās Command.
+processcrontask_launch_failed				= TProcessCronTask neizdevās palaist procesu: '{0}'.
+processcrontask_write_failed				= TProcessCronTask nevarēja ierakstīt pid failu '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' nav izpildāmās slēgfunkcijas.
+closurecrontask_closure_required			= TClosureCronTask nepieciešama Closure.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' nav TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' nevarēja atšifrēt savu slēgfunkcijas saturu.
+cronmethodtask_no_module					= TCronMethodTask nevar atrast moduli '{0}'.
+cron_usermanager_nonexistent				= TCronModule nevar atrast UserManager ar nosaukumu '{0}'.
+cron_usermanager_invalid					= TCronModule UserManager '{0}' nav TUserManager.
+cron_task_as_array_required					= TCronModule konfigurācijas uzdevuma darbs nav masīvs.
+cron_duplicate_task_name					= TCronModule uzdevumu darbiem jābūt ar unikāliem nosaukumiem.
+cron_schedule_required						= Cron uzdevumam jābūt grafikam.
+cron_task_required							= Cron uzdevumam jābūt uzdevumam.
+cron_not_a_crontask							= Cron uzdevums '{0}' nav TCronTask.
+cron_additional_tasks_invalid				= '{0}' nav derīgs papildu cron uzdevums.
+crontask_no_module							= TCronTask nevar atrast moduli '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask nevar atrast norādīto moduli '{0}'.
+dbcron_invalid_name							= TDbCronManager uzdevuma nosaukums '{0}' nav derīgs.
+dbcron_conflicting_task_names				= Konfigurācijas cron uzdevumi konfliktē ar datu bāzes cron uzdevumiem '{0}'.
+dbcron_table_nonexistent					= TDbCronManager datu bāzes tabula neeksistē.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' nav TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler nevar parsēt grafika elementu '{0}'
+
+rational_bad_offset							= "{0}" nav derīga TRational rekvizīta piekļuves atslēga.
+
+bithelper_bad_fp_format						= TBitHelper nevar darboties ar '{0}' eksponenta bitiem, '{1}' mantisas bitiem un '{2}' eksponenta nobīdi {3} bitu PHP vidē.
+bithelper_invalid_color_in					= TBitHelper jābūt vismaz vienam ievades bitam (In Bit). Norādīts '{0}'.
+bithelper_invalid_color_out					= TBitHelper jābūt vismaz vienam izvades bitam (Out Bit). Norādīts '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper nevar spoguļot '{0}' bitus {1} bitu PHP vidē.
+
+ar_data_invalid								= {0}.copyFrom() kā parametru pieņem tikai objektu vai masīvu.
+ar_save_invalid								= {0} instanci nevar saglabāt, jo tā ir vai nu dzēsta, vai nezināmā stāvoklī.
+ar_delete_invalid							= {0} instanci nevar dzēst, jo tā ir vai nu jauns ieraksts, vai jau dzēsts ieraksts.
+
+dbmetadata_invalid_database_driver			= Draiveris '{0}' netiek atbalstīts. Instalējiet tā PRADO draiveri, ja tāds ir pieejams.
+dbmetadata_not_meta_data					= Gaidīta draivera klase {1}, bet saņemta klase {0}.
+dbmetadata_tableinfo_class_invalid			= TDbMetaData tabulas informācijas klase '{0}' ir direktorijas nosaukumvieta, nevis klase.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' nav derīgs. Pārliecinieties, ka tas norāda uz derīgu lietojumprogrammas moduli.
+distributeddatasource_child_required		= {0} nepieciešams vismaz viens pakārtotais elements '{1}'.
+masterslavedbconnection_connection_exists	= {0}.{1} savienojums jau eksistē.
+masterslavedbconnection_interface_required	= {0}.{1} nepieciešama instance, kas implementē {2} interfeisu.
+slavedbconnection_requires_master			= {0} nepieciešams {1}.
+
+response_status_reason_missing				= HTTP 1.1 paplašinātajiem statusa kodiem nepieciešama iemesla frāze
+response_status_reason_badchars				= HTTP 1.1 galvenē statusa iemesla marķieris nedrīkst saturēt CR vai LF rakstzīmes
+
+activefileupload_temppath_invalid			= TActiveFileUpload TempPath ceļš '{0}' neeksistē vai tīmekļa servera procesam tajā nav rakstīšanas tiesību.
+
+tactivetablecell_control_outoftable			= {0} '{1}' jābūt ietvertai TTableRow vadīklā.
+tactivetablecell_control_notincollection	= {0} '{1}' nav virsvadīklas TTableRow kolekcijas TTableCellCollection loceklis.
+
+tactivetablerow_control_outoftable			= {0} '{1}' jābūt ietvertai TTable vadīklā.
+tactivetablerow_control_notincollection		= {0} '{1}' nav virsvadīklas TTable kolekcijas TTableRowCollection loceklis.
+
+juioptions_option_invalid					= '{1}' nav derīga opcija vadīklai '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' nav derīga paraksta vadīkla TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID ir nederīgs ID '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex ir nederīgs indekss '{0}'.
+accordion_view_inexistent					= TAccordion nevar atrast norādīto skatu.
+
+dot_bad_size								= TDot Size jābūt pozitīvam veselam skaitlim, bet ir '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth jābūt skaitlim ar neobligātu % vai CSS garuma mērvienību, bet ir '{0}'
+
+juidatepicker_settextmode_unsupported		= TJuiDatePicker TextMode nevar mainīt.
+
+control_adapter_not_active					= BaseActiveControl rekvizīts izsaukts neaktīvai vadīklai.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' jābūt TFigure vadīklas tiešam pakārtotajam elementam.
+summary_requires_details_parent				= TSummary '{0}' jābūt TDetails vadīklas tiešam pakārtotajam elementam.
+
+gravatar_bad_default						= TGravatar DefaultImageStyle rekvizīta vērtība '{0}' netiek atbalstīta
+gravatar_bad_size							= TGravatar Size nav diapazonā [1 .. 512], bet ir '{0}'
+
+progress_value_invalid						= TProgress Value jābūt 0 vai lielākam; norādīts {0}.
+progress_max_invalid						= TProgress Max jābūt lielākam par 0; norādīts {0}.
+
+time_invalid_datetime						= TTime DateTime jābūt DateTimeInterface, DateInterval, virknei vai skaitliskai vērtībai; norādīts {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' nav TTimeFormat konstantes nosaukums vai ICU datuma un laika paraugs.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' nevar saturēt '{1}': aktīvās, postback un validatora vadīklas nedarbojas neaktīvā veidnes saturā. Lietojiet vienkāršu iezīmējumu ar {{...}} vietturiem vai iestatiet ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() jāatgriež masīvs.
+
+htmlpurifier_source_path_failed				= Nevar izveidot HTML Purifier kešatmiņas ceļu '{0}'. Pārliecinieties, ka vecākdirektorija eksistē un tīmekļa procesam tajā ir rakstīšanas tiesības.

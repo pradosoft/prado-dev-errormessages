@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Finnish (fi).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application voidaan asettaa vain kerran.
+prado_component_unknown						= Tuntematon komponenttityyppi '{0}'. Syynä voi olla seuraava jäsennysvirhe luokkatiedostossa {0}: {1}
+prado_using_invalid							= '{0}' ei ole kelvollinen käytettävä nimiavaruus. Varmista, että loppuun on lisätty '.*', jos haluat käyttää hakemistoon viittaavaa nimiavaruutta.
+prado_alias_redefined						= Aliasta '{0}' ei voi määritellä uudelleen.
+prado_alias_invalid							= Alias '{0}' viittaa virheelliseen polkuun '{1}'. Vain olemassa oleville hakemistoille voi antaa aliaksen.
+prado_aliasname_invalid						= Alias '{0}' sisältää virheellisen merkin '.'.
+
+component_property_undefined				= Komponentin ominaisuutta '{0}.{1}' ei ole määritelty.
+component_property_readonly					= Komponentin ominaisuus '{0}.{1}' on vain luettavissa.
+component_event_undefined					= Komponentin tapahtumaa '{0}.{1}' ei ole määritelty.
+component_method_undefined					= Komponentin metodia '{0}.{1}' ei ole määritelty.
+component_eventhandler_invalid				= Komponentin tapahtumaan '{0}.{1}' on liitetty virheellinen tapahtumankäsittelijä '{2}'.
+component_expression_invalid				= Komponentti '{0}' evaluoi virheellistä lauseketta '{1}' : {2}.
+component_statements_invalid				= Komponentti '{0}' evaluoi virheellisiä PHP-lauseita '{1}' : {2}.
+component_class_behavior_defined			= Komponentilla '{0}' on jo luokkakäyttäytyminen '{1}'.
+component_not_a_behavior					= Käyttäytymiseksi lisättävä komponentti '{0}' ei ole TBaseBehavior.
+object_not_a_component						= Käyttäytymiseksi lisättävä olio '{0}' ei ole TComponent.
+component_no_tcomponent_class_behaviors		= Luokkaan TComponent ei voi liittää luokkakäyttäytymisiä rekursion vuoksi.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors-olioita ei voi liittää useaan omistajaan. Anna merkkijono tai taulukko, jossa on IBehavior-luokka ja ominaisuudet, jotta kullekin omistajalle luodaan oma instanssi.
+
+propertyvalue_enumvalue_invalid				= Arvo '{0}' ei ole kelvollinen luetteloarvo ({1}).
+propertyvalue_invalid_hex_color				= Arvo '{0}' ei ole kelvollinen heksadesimaalinen väriarvo, esim. "#112233".
+propertyvalue_invalid_array_literal			= Arvo '{0}' ei ole kelvollinen taulukkoliteraali.
+propertyvalue_array_too_deep				= Taulukkoliteraali on sisäkkäinen yli {0} tason syvyyteen.
+
+eventhandler_lost_weak_ref					= TEventHandler ei voi kutsua tapahtumankäsittelijää, koska kutsuttavan olion WeakReference on kadonnut.
+eventhandler_no_set_handler					= TEventHandler ei voi asettaa tapahtumankäsittelijää indeksiin "{0}".
+eventhandler_bad_offset						= TEventHandler ei sisällä indeksiä "{0}".
+
+eventparam_readonly							= {0} on vain luettavissa.
+eventparam_readonly_set						= {0} ei voi muuttaa ReadOnly-ominaisuutta sen asettamisen jälkeen.
+eventparam_readonly_not_self				= {0}: ReadOnly voidaan asettaa vain sisäisesti.
+
+list_index_invalid							= Indeksi '{0}' on sallitun alueen ulkopuolella.
+list_item_inexistent						= Alkiota ei löydy listasta.
+list_data_not_iterable						= Datan on oltava taulukko tai Traversable-rajapinnan toteuttava olio.
+list_readonly								= {0} on vain luettavissa.
+list_readonly_set							= {0} ei voi muuttaa Read-Only-asetusta sen jälkeen, kun se on jo asetettu.
+prioritylist_index_invalid					= Indeksi '{0}' kohteessa '{1}' prioriteetilla '{2}' on sallitun alueen ulkopuolella.
+prioritytrait_no_set_default_priority		= Oletusprioriteetin voi asettaa vain kerran tai vain olio itse.
+prioritytrait_no_set_precision				= Tarkkuuden voi asettaa vain kerran tai vain olio itse.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid voidaan asettaa vain kerran tai vain olion itsensä toimesta.
+
+map_addition_disallowed						= Uutta alkiota ei voi lisätä karttaan.
+map_item_unremovable						= Alkiota ei voi poistaa kartasta.
+map_data_not_iterable						= Datan on oltava taulukko tai Traversable-rajapinnan toteuttava olio.
+map_readonly								= {0} on vain luettavissa.
+map_readonly_set							= {0} ei voi muuttaa Read-Only-asetusta sen jälkeen, kun se on jo asetettu.
+
+tnull_clone_disallowed						= TNull-singletonia ei voi kloonata. Käytä sen sijaan TNull::null()-kutsua.
+
+weakcallablecollection_callable_required	= TWeakCallableCollection hyväksyy vain kutsuttavia (callable).
+
+arraysubscription_no_change					= Ominaisuutta TArraySubscription.{0} ei voi muuttaa tilaamisen jälkeen.
+arraysubscription_no_null_key				= TArraySubscription ei voi tilata null-avainta ArrayAccess-oliossa.
+arraysubscription_index_invalid				= TArraySubscription on listatilassa (isAssociative = false), mutta avain '{0}' ei ole kelvollinen (lukumäärä: {1}).
+eventsubscription_no_setcollection			= Ominaisuutta TEventSubscription.Array ei voi asettaa suoraan.
+eventsubscription_no_change					= Ominaisuutta TEventSubscription.{0} ei voi muuttaa tilaamisen jälkeen.
+
+application_includefile_invalid				= Sovelluksen konfiguraatiota {0} ei löydy. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on ".xml" tai ".php".
+application_basepath_invalid				= Sovelluksen peruspolku '{0}' ei ole olemassa tai ei ole hakemisto.
+application_runtimepath_invalid				= Sovelluksen ajonaikainen polku '{0}' ei ole olemassa tai web-palvelimen prosessi ei voi kirjoittaa siihen.
+application_service_class_not_found			= Palveluluokkaa '{0}' ei ole olemassa.
+application_service_class_not_service		= Palveluluokka '{0}' ei toteuta rajapintaa IService.
+application_service_class_required			= registerService vaatii luokan nimen tai serviceConfig-taulukon palvelulle '{0}'.
+application_service_default_unregister		= Oletussivupalvelun '{0}' rekisteröintiä ei voi poistaa.
+service_csrf_token_invalid					= Palvelu '{0}' vaatii kelvollisen CSRF-tunnuksen.
+application_moduleid_duplicated				= Sovellusmoduulin tunnus '{0}' ei ole yksilöllinen.
+application_runtimepath_failed				= Ajonaikaista polkua '{0}' ei voi luoda. Varmista, että ylähakemisto on olemassa ja että web-prosessi voi kirjoittaa siihen.
+application_module_required_dep_missing		= Moduulilla '{0}' on pakollinen riippuvuus moduuliin '{1}', jota ei ole rekisteröity sovellukseen.
+application_module_dependency_cycle			= Seuraavien moduulien välillä havaittiin riippuvuussykli: {0}.
+application_module_dependency_self_reference	= Moduuli '{0}' ilmoittaa itsensä riippuvuudekseen, mikä ei ole koskaan sallittua.
+
+appconfig_aliaspath_invalid					= Sovelluksen konfiguraation <alias id="{0}"> käyttää virheellistä tiedostopolkua "{1}".
+appconfig_alias_invalid						= Sovelluksen konfiguraation <alias>-elementillä on oltava "id"- ja "path"-attribuutit.
+appconfig_alias_redefined					= Sovelluksen konfiguraation <alias id="{0}"> ei voi määritellä uudelleen.
+appconfig_using_invalid						= Sovelluksen konfiguraation <using>-elementillä on oltava "namespace"-attribuutti.
+appconfig_moduleid_required					= Sovelluksen konfiguraation <module>-elementillä on oltava "id"-attribuutti.
+appconfig_moduletype_required				= Sovelluksen konfiguraation elementillä <module id="{0}"> on oltava "class"-attribuutti.
+appconfig_moduletype_inapplicable			= Sovelluksen konfiguraation elementillä <module id="{0}"> ei voi olla "class"-attribuuttia.
+appconfig_serviceid_required				= Sovelluksen konfiguraation <service>-elementillä on oltava "id"-attribuutti.
+appconfig_servicetype_required				= Sovelluksen konfiguraation elementillä <service id="{0}"> on oltava "class"-attribuutti.
+appconfig_parameterid_required				= Sovelluksen konfiguraation <parameter>-elementillä on oltava "id"-attribuutti.
+appconfig_includefile_required				= Sovelluksen konfiguraation <include>-elementillä on oltava "file"-attribuutti.
+appconfig_paths_invalid						= Sovelluksen konfiguraation <paths> ei voi sisältää elementtiä <{0}>.
+appconfig_modules_invalid					= Sovelluksen konfiguraation <modules> ei voi sisältää elementtiä <{0}>.
+appconfig_services_invalid					= Sovelluksen konfiguraation <services> ei voi sisältää elementtiä <{0}>.
+appconfig_parameters_invalid				= Sovelluksen konfiguraation <parameters> ei voi sisältää elementtiä <{0}>.
+appconfig_tag_invalid						= Sovelluksen konfiguraatio ei voi sisältää elementtiä <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey ei saa olla tyhjä.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey ei saa olla tyhjä.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey ei saa olla tyhjä.
+securitymanager_mcryptextension_required	= Mcrypt-PHP-laajennus vaaditaan TSecurityManager-luokan salausominaisuuden käyttöön.
+securitymanager_mcryptextension_initfailed	= TSecurityManager ei onnistunut alustamaan mcrypt-moduulia.
+
+uri_format_invalid							= '{0}' ei ole kelvollinen URI.
+
+httprequest_browscap_required				= THttpRequest vaatii, että browscap-direktiivi on määritetty php.ini-tiedostossa.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator voi sisältää vain yhden merkin.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' ei viittaa olemassa olevaan moduuliin.
+httprequest_urlmanager_invalid				= Ominaisuuden THttpRequest.UrlManager arvon '{0}' on viitattava luokasta TUrlManager periytyvään moduuliin.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie on false, mikä vaatii istuntomoduulin.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection hyväksyy vain THttpCookie-olioita.
+
+httpresponse_file_inexistent				= THttpResponse ei voi lähettää tiedostoa '{0}'. Tiedostoa ei ole olemassa.
+httpresponse_responsedata_method_unavailable	= THttpResponse: metodia '{0}' ei voi käyttää ilman sen toteuttavaa sovitinta.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' ei viittaa olemassa olevaan moduuliin.
+httpresponse_headersmanager_invalid			= Ominaisuuden THttpResponse.HeadersManager arvon '{0}' on viitattava luokasta THttpHeadersManager periytyvään moduuliin.
+
+httpheadersmanager_header_required			= THttpHeadersManager voi sisältää vain THttpHeader-olioita tai sen aliluokkien olioita.
+httpheadersmanager_headerclass_missing		= THttpHeadersManager <headerclass>-merkinnästä puuttuu pakollinen 'name'- tai 'class'-attribuutti.
+
+httpsession_sessionid_unchangeable			= Ominaisuutta THttpSession.SessionID ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_sessionname_unchangeable		= Ominaisuutta THttpSession.SessionName ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_sessionname_invalid				= THttpSession.SessionName saa sisältää vain aakkosnumeerisia merkkejä.
+httpsession_savepath_unchangeable			= Ominaisuutta THttpSession.SavePath ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' on virheellinen.
+httpsession_storage_unchangeable			= Ominaisuutta THttpSession.Storage ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_cookiemode_unchangeable			= Ominaisuutta THttpSession.CookieMode ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_autostart_unchangeable			= Ominaisuutta THttpSession.AutoStart ei voi muuttaa istuntomoduulin alustamisen jälkeen.
+httpsession_gcprobability_unchangeable		= Ominaisuutta THttpSession.GCProbability ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_gcprobability_invalid			= Ominaisuuden THttpSession.GCProbability on oltava kokonaisluku väliltä 0–100.
+httpsession_transid_unchangeable			= Ominaisuutta THttpSession.UseTransparentSessionID ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_transid_cookieonly				= Ominaisuutta THttpSession.UseTransparentSessionID ei voi asettaa, kun THttpSession.CookieMode on asetettu arvoon Only.
+httpsession_maxlifetime_unchangeable		= Ominaisuutta THttpSession.Timeout ei voi muuttaa istunnon käynnistymisen jälkeen.
+httpsession_handler_invalid					= THttpSessionHandler hyväksyy konstruktorin parametriksi vain THttpSession-olion
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' on virheellinen. Varmista, että se on nimiavaruusmuodossa ja osoittaa hakemistoon, johon web-palvelimen prosessi voi kirjoittaa.
+assetmanager_basepath_unchangeable			= Ominaisuutta TAssetManager.BasePath ei voi muuttaa moduulin alustamisen jälkeen.
+assetmanager_baseurl_unchangeable			= Ominaisuutta TAssetManager.BaseUrl ei voi muuttaa moduulin alustamisen jälkeen.
+assetmanager_filepath_invalid				= TAssetManager julkaisee virheellistä tiedostoa '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager julkaisee tar-tiedostoa, jonka tarkistussumma '{0}' on virheellinen.
+assetmanager_tarfile_invalid				= TAssetManager julkaisee virheellistä tar-tiedostoa '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager ei onnistunut purkamaan tar-tiedostoa '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager kopioi virheellistä hakemistoa '{0}'.
+
+cache_primary_duplicated					= Ensisijaisia välimuistimoduuleja sallitaan enintään yksi. {0} yrittää rekisteröityä toiseksi ensisijaiseksi välimuistiksi.
+psrcache_backing_cache_required				= TPsrCache.BackingCacheId tai TPsrCache.BackingCache on pakollinen.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' ei viittaa sovellusmoduuliin.
+psrcache_invalid_backing_cache_type			= Ominaisuuden TPsrCache.BackingCacheId arvon '{0}' on viitattava moduuliin, joka toteuttaa rajapinnan Psr\SimpleCache\CacheInterface tai Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' on tämän TPsrCache-olion PSR-sovitin; se lukisi ja kirjoittaisi takaisin samaan välimuistiin.
+psrcachebacking_cache_required				= {0} vaatii taustavälimuistin. Aseta {0}.BackingCacheId, {0}.BackingCache tai sovelluksen ensisijainen välimuisti.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' ei viittaa sovellusmoduuliin.
+psrcachebacking_invalid_cache_type			= Ominaisuuden {0}.BackingCacheId arvon '{1}' on viitattava Prado\Caching\ICache-moduuliin.
+psrcachebacking_key_invalid					= {0}-välimuistiavaimen on oltava ei-tyhjä merkkijono, joka ei sisällä varattuja merkkejä {}()/\@:, mutta annettu arvo on '{1}'.
+sqlitecache_extension_required				= TSqliteCache vaatii SQLite-PHP-laajennuksen.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile on pakollinen.
+sqlitecache_connection_failed				= TSqliteCache-tietokantayhteys epäonnistui. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache ei onnistunut luomaan välimuistitietokantaa. {0}.
+sqlitecache_dbfile_unchangeable				= Ominaisuutta TSqliteCache.DbFile ei voi muuttaa moduulin alustamisen jälkeen.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile on virheellinen. Varmista, että se on oikeassa nimiavaruusmuodossa.
+
+dbcache_unavailable							= TDbCache vaatii PDO-PHP-laajennuksen.
+
+etcdcache_transport_required				= TEtcdCache vaatii cURL-PHP-laajennuksen tai allow_url_fopen-asetuksen.
+
+memcache_extension_required					= TMemCache vaatii memcache-PHP-laajennuksen.
+memcache_connection_failed					= TMemCache ei saanut yhteyttä memcache-palvelimeen {0}:{1}.
+memcache_not_initialized					= TMemCache-asetuksia ei voi asettaa ennen moduulin alustamista.
+
+apccache_extension_required					= TAPCCache vaatii APC-PHP-laajennuksen.
+apccache_extension_not_enabled				= TAPCCache vaatii toimiakseen asetuksen apc.enabled = 1 php.ini-tiedostossa.
+apccache_extension_not_enabled_cli			= TAPCCache vaatii asetuksen apc.enable_cli = 1 php.ini-tiedostossa toimiakseen PHP:n komentoriviltä.
+
+cachesize_item_exceeds_maximum_size			= Välimuistialkio on {0} tavua, mikä ylittää määritetyn MaximumSize-arvon {1} tavua.
+
+filecache_directory_required				= TFileCache.Directory on pakollinen.
+filecache_directory_create_failed			= TFileCache ei voi luoda välimuistihakemistoa '{0}'.
+filecache_directory_not_writable			= TFileCache-välimuistihakemistoon '{0}' ei voi kirjoittaa.
+filecache_hash_token_identity				= Metodin TFileCache.hashToken on muunnettava syötteensä; aliluokan toteutus palautti tokenin muuttumattomana.
+filecache_hash_token_path_separator			= Metodi TFileCache.hashToken ei saa palauttaa arvoa, joka sisältää polkuerottimen ("/" tai "\"); aliluokan toteutus palautti turvattoman tiivisteen.
+
+memorycache_backing_file_directory_not_found	= TMemoryCache.BackingFile-hakemistoa ei ole olemassa polulle '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' on virheellinen. Kelvolliset arvot ovat 'PHP' ja 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' on virheellinen. Kelvolliset arvot ovat 'None', 'Base64' ja 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' on virheellinen. Sen on oltava TSecurityManager-moduulin tunnus tai TSecurityManager-instanssi.
+serializingcache_json_encode_failed			= TSerializingCache ei onnistunut JSON-koodaamaan arvoa: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} ei viittaa kelvolliseen hakemistoon.
+cachedependencylist_cachedependency_required	= TCacheDependencyList-listaan voi lisätä vain ICacheDependency-rajapinnan toteuttavia olioita.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' on virheellinen. Varmista, että se on nimiavaruusmuodossa ja osoittaa kelvolliseen hakemistoon, joka sisältää virhemallinetiedostot.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' ei ole kelvollinen hakemisto.
+pageservice_defaultpage_unchangeable		= Ominaisuutta TPageService.DefaultPage ei voi muuttaa palvelun alustamisen jälkeen.
+pageservice_basepath_unchangeable			= Ominaisuutta TPageService.BasePath ei voi muuttaa palvelun alustamisen jälkeen.
+pageservice_pageclass_invalid				= Sivuluokka {0} on virheellinen. Sen on oltava TPage tai periydyttävä luokasta TPage.
+pageservice_includefile_invalid				= Sivupalvelun konfiguraatiota {0} ei löydy. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on ".xml" tai ".php".
+
+pageserviceconf_file_invalid				= Sivuhakemiston konfiguraatiotiedostoa '{0}' ei voi avata.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> käyttää virheellistä tiedostopolkua "{1}" sivuhakemiston konfiguraatiotiedostossa '{2}'.
+pageserviceconf_alias_invalid				= <alias>-elementillä on oltava "id"- ja "path"-attribuutit sivuhakemiston konfiguraatiotiedostossa '{0}'.
+pageserviceconf_using_invalid				= <using>-elementillä on oltava "namespace"-attribuutti sivuhakemiston konfiguraatiotiedostossa '{0}'.
+pageserviceconf_module_invalid				= <module>-elementillä on oltava "id"-attribuutti sivuhakemiston konfiguraatiotiedostossa '{0}'.
+pageserviceconf_moduletype_required			= Elementillä <module id="{0}"> on oltava "class"-attribuutti sivuhakemiston konfiguraatiotiedostossa '{1}'.
+pageserviceconf_parameter_invalid			= <parameter>-elementillä on oltava "id"-attribuutti sivuhakemiston konfiguraatiotiedostossa '{0}'.
+pageserviceconf_page_invalid				= <page>-elementillä on oltava "id"-attribuutti sivuhakemiston konfiguraatiotiedostossa '{0}'.
+pageserviceconf_includefile_required		= Sivukonfiguraation <include>-elementillä on oltava "file"-attribuutti.
+
+basebehavior_cannot_setname_with_owner		= Arvoa TBaseBehavior.Name "{0}" ei voi muuttaa (arvoon "{1}") käyttäytymisen liittämisen jälkeen.
+basebehavior_sync_no_owner					= TBaseBehavior-oliolla "{0}" ei ole omistajaa, eikä se voi synkronoida tapahtumankäsittelijöitä komponentilla, jolla ei ole omistajia.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" ei voi synkronoida tapahtumankäsittelijöitä oliolla, joka ei ole sen omistaja.
+behavior_has_owner							= TBehavior "{0}" voi liittyä vain yhteen omistajaan.
+behavior_bad_attach_component				= TBehavior "{0}" voi liittyä vain TComponent-olioon.
+behavior_detach_without_owner				= TBehavior-oliota "{0}" ei voi irrottaa ilman omistajaa.
+behavior_detach_wrong_owner					= TBehavior "{0}" ei voi irrottautua oliosta, joka ei ole sen omistaja.
+behavior_property_unchangeable				= Ominaisuutta {1}.{0} ei voi muuttaa käyttäytymisen liittämisen jälkeen.
+behavior_requires_owner						= {1}.{0} vaatii omistajan.
+classbehavior_owner_attach_once				= TClassBehavior "{0}" voidaan liittää omistajaan vain kerran. Käsittelijät eivät olisi yksilöllisiä.
+classbehavior_bad_attach_component			= TClassBehavior "{0}" voi liittyä vain TComponent-olioon.
+classbehavior_detach_without_owner			= TClassBehavior-oliota "{0}" ei voi irrottaa ilman omistajaa.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" ei voi irrottautua oliosta, joka ei ole sen omistaja.
+
+callchain_bad_dynamic_event					= TCallChain.{0} laukaistiin, mutta odotettiin {1}.
+
+behaviormodule_behavior_as_array_required	= PHP-muotoisen <behavior>-määrityksen on oltava taulukko.
+behaviormodule_behaviorname_required		= <behavior>-elementin on sisällettävä 'name'-attribuutti käyttäytymisen liittämiseksi.
+behaviormodule_behaviorclass_required		= <behavior>-elementin on sisällettävä 'class'-attribuutti, joka määrittää käyttäytymisluokan.
+behaviormodule_attachto_class_required		= <behavior>-elementillä on oltava 'attachto'- tai 'attachtoclass'-attribuutti.
+behaviormodule_attachto_and_class_only_one	= <behavior>-elementillä on oltava joko 'attachto'- tai 'attachtoclass'-attribuutti, ei molempia.
+behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' -oliota ei löydy.
+behaviormodule_additional_behaviors_invalid	= Ominaisuudelle TBehaviorModule.AdditionalBehaviors ei voi asettaa virheellistä tyyppiä '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader vaatii Behavior Name -arvon.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader vaatii Behavior Class -arvon.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader vaatii 'attachto'- tai 'attachtoclass'-attribuutin.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader saa sisältää vain yhden 'attachto'- tai 'attachtoclass'-attribuutin.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' vaatii moduulin tunnuksen.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto -kohdetta '{0}' ei löytynyt.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader ei löytänyt moduulia '{0}' käyttäytymisten liittämiseksi.
+
+evaluationfilter_statements_denied			= Komponentti '{0}' ei voi evaluoida PHP-lauseita '{1}', koska TEvaluationFilterBehavior.AllowStatements on false.
+evaluationfilter_code_denied				= Komponentti '{0}' ei voi evaluoida lauseketta '{1}', koska TEvaluationFilterBehavior ei salli kohdetta '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior vaatii konstruktoriinsa kutsuttavan (callable).
+maproutebehavior_handler_not_callable		= TMapRouteBehavior vaatii konstruktoriinsa kutsuttavan (callable).
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior vaatii Parameter-attribuutin.
+parameterizebehavior_no_property			= TParameterizeBehavior vaatii Property-attribuutin.
+parameterizebehavior_owner_get_only_property	= TParameterizeBehavior-omistajalla on ominaisuus Property '{0}', mutta se on vain luettavissa.
+parameterizebehavior_owner_has_no_property	= TParameterizeBehavior-omistajalla ei ole ominaisuutta Property '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior ei voi tyhjentää Parameter-arvoa liittämisen jälkeen.
+
+processhelper_no_forking					= Prosessin haarauttamista (fork) ei tueta.
+processhelper_no_signals					= Prosessisignaaleja ei voi lähettää Windowsissa.
+
+serializableclosure_no_decrypter			= TSerializableClosure ei voi purkaa salatun sulkeuman hyötykuormaa ilman määritettyä salauksenpurkajaa.
+serializableclosure_decrypt_failed			= TSerializableClosure ei onnistunut purkamaan salatun sulkeuman hyötykuormaa; hyötykuormaa on ehkä peukaloitu tai avain on muuttunut.
+
+appsignals_no_change						= Arvoa TApplicationSignals::{0} ei voi muuttaa liittämisen jälkeen.
+appsignals_not_a_dispatcher					= '{0}' ei ole TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' ei ole kelvollinen PID.
+signalsdispatcher_no_change					= Arvoa TSignalsDispatcher::{0} ei voi muuttaa liittämisen jälkeen.
+
+initialized_property_unchangeable			= Ominaisuutta {1}.{0} ei voi asettaa, koska se on jo alustettu.
+initialized_requires_initialization			= {1}.{0} vaatii alustuksen ennen käsittelyä.
+
+template_closingtag_unexpected				= Odottamaton sulkeva tagi '{0}' löytyi.
+template_closingtag_expected				= Odotettiin sulkevaa tagia '{0}', mutta löytyi '{1}'.
+template_directive_nonunique				= Direktiivin '<%@ ... %>' on oltava mallineen alussa, ja se voi esiintyä enintään kerran.
+template_comments_forbidden					= Mallinekommentit eivät ole sallittuja ominaisuustagien sisällä.
+template_matching_unexpected				= Odottamaton täsmäys.
+template_property_unknown					= {0}-luokalla ei ole ominaisuutta nimeltä '{1}'.
+template_event_unknown						= {0}-luokalla ei ole tapahtumaa nimeltä '{1}'.
+template_property_readonly					= {0}-luokan ominaisuus '{1}' on vain luettavissa.
+template_event_forbidden					= {0} ei ole kontrollikomponentti. Sen tapahtumaan '{1}' ei voi liittää käsittelijää mallineessa.
+template_databind_forbidden					= {0} ei ole kontrollikomponentti. Sen ominaisuuteen '{1}' ei voi sitoa lausekkeita.
+template_component_required					= '{0}' ei ole komponentti. Mallineessa voi esiintyä vain komponentteja.
+template_format_invalid						= Virheellinen mallinesyntaksi: {0}
+template_property_duplicated				= Ominaisuus {0} on määritetty kaksi tai useampia kertoja.
+template_eventhandler_invalid				= {0}.{1} hyväksyy vain staattisen merkkijonon.
+template_controlid_invalid					= {0}.ID hyväksyy vain staattisen tekstimerkkijonon.
+template_controlskinid_invalid				= {0}.SkinID hyväksyy vain staattisen tekstimerkkijonon.
+template_content_unexpected					= Mallinetta instantioitaessa kohdattiin odottamatonta sisältöä: {0}.
+template_include_invalid					= Virheellinen mallineen sisällytys. Varmista, että {0} on kelvollinen nimiavaruus, joka osoittaa olemassa olevaan mallinetiedostoon, jonka pääte on .tpl.
+template_tag_unexpected						= Ominaisuuden {0} alustus sisältää tuntemattoman tagityypin {1}.
+
+xmldocument_file_read_failed				= TXmlDocument ei voi lukea tiedostoa '{0}'.
+xmldocument_file_write_failed				= TXmlDocument ei voi kirjoittaa tiedostoa '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList hyväksyy vain TXmlElement-olioita.
+
+xmlelement_null_tag							= TXmlElement-tagin nimi ei voi olla null.
+xmlelement_empty_tag						= TXmlElement-tagin nimi ei voi olla tyhjä merkkijono.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action voi saada arvoksi vain 'allow' tai 'deny'.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb voi saada arvoksi vain 'get' tai 'post'.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection hyväksyy vain TAuthorizationRule-olioita.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' ei ole kelvollinen tiedosto.
+usermanager_userfile_unchangeable			= Ominaisuutta TUserManager.UserFile ei voi muuttaa. Käyttäjämoduuli on jo alustettu.
+
+integritymanager_entry_invalid				= TIntegrityManager-eheysmerkintä URL-osoitteelle '{0}' vaatii ei-tyhjän url- ja hash-arvon.
+integritymanager_algorithm_invalid			= TIntegrityManager-algoritmia '{0}' ei tueta; käytä jotakin seuraavista: {1}.
+integritymanager_file_unreadable			= TIntegrityManager ei voi lukea tiedostoa '{0}' sen eheyden laskemiseksi.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' ei ole kelvollinen tiedosto.
+integritymanager_integrityfile_unchangeable	= Ominaisuutta {1}.{0} ei voi muuttaa. Eheysmoduuli on jo alustettu.
+
+javascript_script_integrity_required		= Etäskriptille '{0}' ei ole rekisteröity Subresource Integrity -arvoa, mutta eheys vaaditaan.
+
+authmanager_usermanager_required			= Ominaisuudelle TAuthManager.UserManager on annettava arvo.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' ei viittaa sovellusmoduulin tunnukseen.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' ei viittaa kelvolliseen TUserManager-sovellusmoduuliin.
+authmanager_session_required				= TAuthManager vaatii istuntosovellusmoduulin.
+
+permissions_events_invalid					= Ominaisuudelle TPermissionEvent.Event ei voi asettaa virheellistä arvoa '{0}'.
+permissions_rules_invalid					= Ominaisuudelle TPermissionEvent.Rules ei voi asettaa virheellistä arvoa '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' ei viittaa sovellusmoduulin tunnukseen.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' ei viittaa kelvolliseen TDbParameterModule-sovellusmoduuliin.
+permissions_init_once						= TPermissionsManager.init voidaan alustaa vain kerran.
+permissions_duplicate_permission			= TPermissionsManager-oikeus '{0}' on jo rekisteröity.
+permissions_role_children_invalid			= TPermissionsManager-konfiguraation roolilla '{0}' on virheelliset lapset '{1}'.
+permissions_rule_invalid					= TPermissionsManager-konfiguraation oikeussäännön '{0}' ominaisuudet eivät ole taulukko.
+permissions_rules_require_name				= TPermissionsManager-säännöillä on oltava oikeuden "name"-ominaisuus.
+permissions_role_rule_nested				= TPermissionsManager-konfiguraation rooli '{0}' sisältää <permissionrule>-elementin. Oikeussäännöt ovat permissions-konfiguraatioelementin suoria lapsia.
+permissions_rule_class_invalid				= TPermissionsManager-oikeussääntöluokka '{0}' on hakemistonimiavaruus, ei luokka.
+permissions_children_invalid				= TPermissionsManager.*RoleChildren-lasten on oltava merkkijono tai taulukko, mutta arvo on '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' ei ole kelvollinen tiedosto.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' ei ole kelvollinen polkualias. Varmista, että alias on määritelty konfiguraatiossa ja että se osoittaa kelvolliseen hakemistoon.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' ei ole kelvollinen hakemisto.
+thememanager_basepath_unchangeable			= Ominaisuutta TThemeManager.BasePath ei voi muuttaa moduulin alustamisen jälkeen.
+thememanager_theme_invalid					= TThemeManager-teeman nimen '{0}' on oltava yksittäinen hakemistonimi.
+
+theme_baseurl_required						= TThemeManager.BasePath on pakollinen. Oletuksena käytetään hakemistoa nimeltä 'themes', joka sijaitsee sovelluksen aloitusskriptin sisältävässä hakemistossa.
+theme_path_inexistent						= Teemapolkua '{0}' ei ole olemassa.
+theme_control_nested						= Kontrollityypin '{0}' skin teemassa '{1}' ei voi olla toisen skinin sisällä.
+theme_skinid_duplicated						= SkinID '{0}.{1}' esiintyy kahdesti teemassa '{2}'.
+theme_databind_forbidden					= Tietosidontaa ei voi käyttää teemassa '{0}' kontrollin skinissä '{1}.{2}' ominaisuudelle '{3}'.
+theme_property_readonly						= Skiniä sovelletaan vain luettavissa olevaan kontrollin ominaisuuteen '{0}.{1}'.
+theme_property_undefined					= Skiniä sovelletaan kontrollin ominaisuuteen '{0}.{1}', jota ei ole olemassa.
+theme_tag_unexpected						= Ominaisuuden {0} alustus sisältää tuntemattoman tagityypin {1}.
+
+control_object_reregistered					= Löytyi kahdesti esiintyvä olion tunnus '{0}'.
+control_id_invalid							= {0}.ID '{1}' on virheellinen. Sallittuja ovat vain aakkosnumeeriset merkit ja alaviiva. Ensimmäisen merkin on oltava kirjain tai alaviiva.
+control_skinid_unchangeable					= Ominaisuutta {0}.SkinID ei voi muuttaa sen jälkeen, kun kontrolliin on sovellettu skin tai lapsikontrollit on luotu.
+control_enabletheming_unchangeable			= Ominaisuutta {0}.EnableTheming ei voi muuttaa lapsikontrollien luomisen jälkeen.
+control_stylesheet_applied					= StyleSheet-skin on jo sovellettu kohteeseen {0}.
+control_id_nonunique						= {0}.ID '{1}' ei ole yksilöllinen saman nimeämissäiliön kontrollien joukossa.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' ei saa olla negatiivinen.
+
+templatecontrol_mastercontrol_invalid		= Isäntäkontrollin on oltava tyyppiä TTemplateControl tai sen aliluokka.
+templatecontrol_mastercontrol_required		= Kontrolli '{0}' vaatii isäntäkontrollin, koska se käyttää TContent-kontrollia.
+templatecontrol_contentid_duplicated		= TContent-tunnus '{0}' esiintyy kahdesti.
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder-tunnus '{0}' esiintyy kahdesti.
+templatecontrol_directive_invalid			= {0}.{1} hyväksyy vain staattisen tekstimerkkijonon mallinedirektiivin kautta.
+templatecontrol_placeholder_inexistent		= TContent-kontrollille '{0}' ei ole vastaavaa TContentPlaceHolder-kontrollia.
+
+page_form_duplicated						= Sivu voi sisältää enintään yhden TForm-kontrollin. Käytä muille lomakkeille tavallisia HTML-lomaketageja.
+page_isvalid_unknown						= Arvoa TPage.IsValid ei ole vielä evaluoitu.
+page_postbackcontrol_invalid				= Postback-kontrollia '{0}' ei voi määrittää.
+page_control_outofform						= {0} '{1}' on sijoitettava TForm-kontrollin sisään.
+page_head_duplicated						= Sivu voi sisältää enintään yhden THead-kontrollin.
+page_head_required							= Sivumallineessa tarvitaan THead-kontrolli, jotta CSS ja js voidaan renderöidä HTML-dokumentin head-osioon.
+page_statepersister_invalid					= Sivun tilan tallentajan on toteutettava IPageStatePersister-rajapinta.
+
+csmanager_pradoscript_invalid				= Tuntematon Prado-skriptikirjaston nimi '{0}'.
+csmanager_pradoscript_notloaded				= Prado-skriptikirjastoa '{0}' ei ole vielä ladattu.
+csmanager_pradostyle_invalid				= Tuntematon Prado-tyylikirjaston nimi '{0}'.
+csmanager_invalid_packages					= Tuntemattomat paketit '{1}' kohteessa '{0}' määritetyille javascript-paketeille. Kelvolliset paketit ovat '{2}'.
+
+httpclient_transport_error					= HTTP-asiakkaan siirtovirhe (koodi {0}): {1}
+httpclient_http_error						= HTTP-virhevastaus tilakoodilla {0}.
+httpclient_transport_required				= HTTP-siirtotapaa ei ole käytettävissä: cURL-laajennusta ei ole ladattu ja allow_url_fopen on pois käytöstä.
+
+restclient_invalid_header					= TRestClient-otsakkeen '{0}' nimi on virheellinen tai sen arvo sisältää CR/LF-merkkejä.
+restclient_basicauth_username_colon			= TRestClient Basic-auth-käyttäjänimi ei saa sisältää kaksoispistettä (RFC 7617:n tunnuserotin).
+
+contentplaceholder_id_required				= TContentPlaceHolder-kontrollilla on oltava ID.
+
+content_id_required							= TContent-kontrollilla on oltava ID.
+
+controlcollection_control_required			= TControlList hyväksyy vain merkkijonoja tai TControl-olioita.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' on virheellinen. Sen on oltava vain yksi merkki.
+webcontrol_dir_invalid						= {0}.Dir '{1}' on virheellinen. Sallitut arvot ovat 'ltr', 'rtl' ja 'auto'.
+webcontrol_style_invalid					= {0}.Style hyväksyy vain merkkijonoarvon.
+
+listcontrol_selection_invalid				= {0} sisältää virheellisen valinnan, joka on asetettu ennen tietosidontaa.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex sisältää virheellisen arvon {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue sisältää virheellisen arvon '{1}'.
+listcontrol_expression_invalid				= {0} evaluoi virheellistä lauseketta '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} ei tue monivalintaa.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl-kontrollia '{0}' ei löydy.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList-kontrollia '{0}' ei löydy.
+
+output_forcontrol_invalid					= TOutput.ForControl-kontrollia '{0}' ei löydy.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl-kontrollia '{1}' ei löydy.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' ei saa olla negatiivinen.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' ei saa olla negatiivinen.
+renderfilterparameter_depthlimit_invalid	= Arvon TRenderFilterParameter.DepthLimit '{0}' on oltava välillä 0 ja suodattavan kontrollin RenderFilterDepth {1}.
+
+hiddenfield_focus_unsupported				= THiddenField ei tue syöttökohdistuksen asettamista.
+hiddenfield_theming_unsupported				= THiddenField ei tue teemoja.
+hiddenfield_skinid_unsupported				= THiddenField ei tue kontrollin skiniä.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' ei viittaa olemassa olevaan painikekontrolliin.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding hyväksyy vain kokonaisluvun, joka on vähintään -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing hyväksyy vain kokonaisluvun, joka on vähintään -1.
+
+sessionpagestatepersister_historysize_invalid	= Arvon TSessionPageStatePersister.History on oltava nollaa suurempi kokonaisluku.
+
+listitemcollection_item_invalid				= TListItemCollection hyväksyy vain merkkijonoja tai TListItem-olioita.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices on vain luettavissa.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack on vain luettavissa.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex on vain luettavissa.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices on vain luettavissa.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue on vain luettavissa.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices on vain luettavissa.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' ei ole olemassa.
+logrouter_routeclass_required				= <route>-konfiguraatiossa vaaditaan class-attribuutti.
+logrouter_routetype_required				= Lokireitin on oltava TLogRoute-luokan tai sen aliluokan instanssi.
+
+dblogroute_connectionid_invalid				= TDbLogRoute ei voi luoda tietokantayhteyttä tunnuksella '{0}'.
+dblogroute_insert_failed					= TDbLogRoute ei voi lisätä lokimerkintää tauluun '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' ei ole kelvollinen
+dblogroute_table_nonexistent				= TDbLogRoute-taulua '{0}' ei ole olemassa, ja se on luotava.
+dblogroute_order_invalid					= TDbLogRoute-järjestyksen '{0}' on lueteltava sarakkeet, joista kutakin voi valinnaisesti seurata ASC tai DESC.
+dblogroute_limit_invalid					= TDbLogRoute-rajoituksen '{0}' on oltava rivimäärä, 'count OFFSET offset' tai 'offset, count'.
+
+filelogroute_logpath_invalid				= Polun TFileLogRoute.LogPath '{0}' on oltava nimiavaruusmuotoinen hakemisto, johon web-palvelimen prosessi voi kirjoittaa.
+filelogroute_maxfilesize_invalid			= Arvon TFileLogRoute.MaxFileSize on oltava suurempi kuin 0.
+filelogroute_maxlogfiles_invalid			= Arvon TFileLogRoute.MaxLogFiles on oltava suurempi kuin 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom ei voi olla tyhjä.
+emaillogroute_mail_failed					= TEmailLogRoute ei onnistunut lähettämään lokia osoitteeseen '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags eivät ole kelvollisia: '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility ei ole kelvollinen: '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger on pakollinen.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' ei ole Psr\Log\LoggerInterface-rajapinnan moduulitunnus tai luokan nimi.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger ei voi olla TPsrLogger; se kirjoittaisi lokin takaisin samaan TLogger-olioon.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns ei saa olla pienempi kuin 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate on tyhjä tai sisältää virheellisen kontrollin ID-polun.
+basevalidator_validatable_required			= Arvon {0}.ControlToValidate on osoitettava IValidatable-rajapinnan toteuttavaan kontrolliin.
+basevalidator_forcontrol_unsupported		= {0}.ForControl ei ole tuettu.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare sisältää virheellisen kontrollin ID-polun.
+
+filevalidator_fileupload_required			= Arvon {0}.ControlToValidate on osoitettava TFileUpload-kontrolliin.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate sisältää virheellisen TListControl-ID-polun, "{1}" on {2}.
+
+repeater_template_required					= TRepeater.{0} vaatii ITemplate-rajapinnan toteuttavan mallineinstanssin.
+repeater_itemtype_unknown					= Tuntematon toistimen alkiotyyppi {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection hyväksyy vain olioita, jotka ovat TControl-luokan tai sen jälkeläisluokan instansseja.
+
+datalist_template_required					= TDataList.{0} vaatii ITemplate-rajapinnan toteuttavan mallineinstanssin.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection hyväksyy vain TDataListItem-olioita.
+
+datagrid_template_required					= TDataGrid.{0} vaatii ITemplate-rajapinnan toteuttavan mallineinstanssin.
+templatecolumn_template_required			= TTemplateColumn.{0} vaatii ITemplate-rajapinnan toteuttavan mallineinstanssin.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex ei saa olla pienempi kuin 0.
+datagrid_pagesize_invalid					= Arvon TDataGrid.PageSize on oltava suurempi kuin 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount ei saa olla pienempi kuin 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection hyväksyy vain TDataGridItem-olioita.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection hyväksyy vain TDataGridColumn-olioita.
+datagridpagerstyle_pagebuttoncount_invalid	= Arvon TDataGridPagerStyle.PageButtonCount on oltava suurempi kuin 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor yrittää evaluoida kentän arvoa virheellisestä datasta. Varmista, että data on taulukko, TMap, TList tai olio, joka sisältää määritetyn kentän '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor yrittää evaluoida tuntemattoman kentän '{0}' arvoa: {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection hyväksyy vain TTableRow-olioita.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection hyväksyy vain TTableColumn-olioita.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection hyväksyy vain TTableColumnGroup-olioita.
+tablecolumn_span_invalid					= TTableColumn Span -arvon on oltava vähintään 1; annettu arvo on {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection hyväksyy vain TTableCell-olioita.
+
+multiview_view_required						= TMultiView hyväksyy lapsekseen vain TView-kontrolleja.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex sisältää virheellisen indeksin '{0}'.
+multiview_view_inexistent					= TMultiView ei löydä määritettyä näkymää.
+multiview_viewid_invalid					= TMultiView ei löydä näkymää '{0}', johon vaihtaa.
+
+viewcollection_view_required				= TViewCollection hyväksyy alkioikseen vain TView-kontrolleja.
+
+view_visible_readonly						= TView.Visible on vain luettavissa. Käytä TView.Active-ominaisuutta näkyvyyden vaihtamiseen.
+
+wizard_step_invalid							= Aktivoitavaa vaihetta ei löydy ohjatun toiminnon vaihekokoelmasta.
+wizard_command_invalid						= Virheellinen ohjatun toiminnon navigointikomento '{0}'.
+
+table_tablesection_outoforder				= TTable-taulukon osioiden on oltava järjestyksessä: Header, Body ja Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType on vain luettavissa.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection hyväksyy vain TWizardStep-luokan tai sen aliluokkien olioita.
+
+texthighlighter_stylesheet_invalid			= TTextHighlighter-kontrollin tyylitiedostoa ei löydy.
+
+hotspotcollection_hotspot_required			= THotSpotCollection hyväksyy vain THotSpot-luokan tai sen aliluokkien instansseja.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode on vain luettavissa.
+htmlarea_tarfile_invalid					= THtmlArea ei löydä TinyMCE-tar-tiedostoa.
+
+parametermodule_parameterfile_unchangeable	= Ominaisuutta TParameterModule.ParameterFile ei voi muuttaa, koska moduuli on jo alustettu.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' on virheellinen. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on '.xml' tai '.php'.
+parametermodule_parameterid_required		= Parameter-elementillä on oltava 'id'-attribuutti.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' on virheellinen. Sallittuja ovat vain aakkosnumeeriset merkit ja alaviiva. Ensimmäisen merkin on oltava kirjain tai alaviiva.
+datagridcolumn_expression_invalid			= {0} evaluoi virheellistä lauseketta '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID on asetettu virheelliseen välimuistimoduulin tunnukseen {0}. Moduulia ei joko ole olemassa tai se ei toteuta ICache-rajapintaa.
+outputcache_duration_invalid				= Arvon {0}.Duration on oltava kokonaisluku, joka ei ole pienempi kuin 0.
+
+stack_data_not_iterable						= TStack voi noutaa dataa vain taulukosta tai läpikäytävästä (Traversable) oliosta.
+stack_empty									= TStack on tyhjä.
+
+queue_data_not_iterable						= TQueue voi noutaa dataa vain taulukosta tai läpikäytävästä (Traversable) oliosta.
+queue_empty									= TQueue on tyhjä.
+
+pager_pagebuttoncount_invalid				= Arvon TPager.PageButtonCount on oltava kokonaisluku, joka on vähintään 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex on sallitun alueen ulkopuolella.
+pager_pagecount_invalid						= TPager.PageCount ei voi olla pienempi kuin 0.
+pager_controltopaginate_invalid				= Arvon TPager.ControlToPaginate {0} on oltava kelvollinen ID-polku, joka osoittaa TDataBoundControl-luokasta periytyvään kontrolliin.
+
+databoundcontrol_pagesize_invalid			= Arvon {0}.PageSize on oltava kokonaisluku, joka on vähintään 1.
+databoundcontrol_virtualitemcount_invalid	= Arvon {0}.VirtualItemCount on oltava kokonaisluku, joka on vähintään 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex on sallitun alueen ulkopuolella.
+databoundcontrol_datasource_invalid			= {0}.DataSource ei ole kelvollinen.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' ei viittaa olemassa olevaan kontrolliin.
+databoundcontrol_datasourceid_invalid		= DataSourceID-arvon '{0}' on viitattava IDataSource-rajapinnan toteuttavaan kontrolliin.
+databoundcontrol_datamember_invalid			= DataMember '{0}' ei nimeä tietolähteen näkymää.
+
+datasourcecontrol_focus_unsupported			= {0} ei tue Focus-ominaisuutta.
+datasourcecontrol_enabletheming_unsupported	= {0} ei tue EnableTheming-ominaisuutta.
+datasourcecontrol_skinid_unsupported		= {0} ei tue SkinID-ominaisuutta.
+datasourcecontrol_visible_unsupported		= {0} ei tue Visible-ominaisuutta.
+datasourceview_insert_unsupported			= {0} ei tue lisäystä.
+datasourceview_update_unsupported			= {0} ei tue päivitystä.
+datasourceview_delete_unsupported			= {0} ei tue poistoa.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource vaatii tietolähteeksi taulukon, IDataSource-olion tai Traversable-olion.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView vaatii tietolähteeksi arvon null, taulukon tai Traversable-olion.
+
+clientscript_invalid_file_position			= Virheellinen tiedostosijainti '{1}' TClientScript-kontrollille '{0}'; sen on oltava 'Head', 'Here' tai 'Begin'.
+clientscript_invalid_package_path			= Virheellinen PackagePath '{0}' TClientScript-kontrollille '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' ei tue AutoPostBack-ominaisuutta.
+globalization_cache_path_failed				= Käännösviestien välimuistipolkua '{0}' ei voi luoda. Varmista, että ylähakemisto on olemassa ja että web-prosessi voi kirjoittaa siihen.
+globalization_source_path_failed			= Käännösviestien polkua '{0}' ei voi luoda. Varmista, että ylähakemisto on olemassa ja että web-prosessi voi kirjoittaa siihen.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' ei viittaa kelvolliseen TDataSourceConfig-moduuliin.
+messagesource_connectionid_required			= ConnectionID vaaditaan MessageSource_Database.source-arvossa.
+
+callback_not_support_no_priority_state_update	= Takaisinkutsupyyntö ei tue sivutilan päivitystä ilman prioriteettia.
+callback_invalid_callback_options			= '{1}' ei ole kelvollinen TCallbackOptions-kontrolli takaisinkutsukontrollille '{0}'.
+callback_invalid_clientside_options			= Takaisinkutsun ClientSide-ominaisuuden on oltava joko merkkijono, joka on TCallbackOptions-kontrollin ID, tai TCallbackClientSideOptions-instanssi.
+callback_invalid_handler					= Virheellinen takaisinkutsun käsittelijä; kontrollin {0} on toteutettava ICallbackEventHandler-rajapinta.
+callback_invalid_target						= Virheellinen takaisinkutsun kohde; kontrollia, jonka ID on {0}, ei ole.
+
+callback_interval_be_positive				= TCallbackTimer-ajastimen "{0}" aikavälin on oltava aidosti suurempi kuin nolla sekuntia.
+callback_decay_be_not_negative				= TCallbackTimer-ajastimen "{0}" vaimenemiskerroin ei saa olla negatiivinen.
+
+callback_no_autopostback					= Kontrolli "{0}" ei voi ottaa AutoPostBack-ominaisuutta käyttöön.
+
+xmltransform_xslextension_required			= TXmlTransform vaatii PHP:n XSL-laajennuksen.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' on virheellinen.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' on virheellinen.
+xmltransform_transform_required				= TXmlTransform-kontrollille on asetettava joko TransformContent- tai TransformPath-ominaisuus.
+
+ttriggeredcallback_invalid_controlid		= Kontrollin '{0}' ControlID-ominaisuus ei saa olla tyhjä.
+tactivecustomvalidator_clientfunction_unsupported	= {0} ei tue asiakaspuolen validointifunktiota.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' ei tunnista kelvollista TDataSourceConfig-moduulia.
+dbproperties_property_required				= {1}.{0} on pakollinen ominaisuus.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' ei ole kelvollinen SQL-tunniste.
+
+dbconnection_open_failed					= TDbConnection ei onnistunut muodostamaan tietokantayhteyttä: {0}
+dbconnection_connection_inactive			= TDbConnection ei ole aktiivinen.
+dbconnection_unsupported_driver_charset		= Tietokanta-ajuri '{0}' ei tue merkistön asettamista.
+dbconnection_charset_unchangeable			= Tietokanta-ajuri '{0}' ei voi muuttaa merkistöä yhteyden avaamisen jälkeen. Merkistö on DSN-parametri.
+
+dbcommand_prepare_failed					= TDbCommand ei onnistunut valmistelemaan SQL-lausetta "{1}": {0}
+dbcommand_execute_failed					= TDbCommand ei onnistunut suorittamaan SQL-lausetta "{1}": {0}
+dbcommand_query_failed						= TDbCommand ei onnistunut suorittamaan SQL-kyselyä "{1}": {0}
+dbcommand_column_empty						= TDbCommand palautti tyhjän tuloksen eikä voinut noutaa skalaariarvoa.
+dbdatareader_rewind_invalid					= TDbDataReader on vain eteenpäin luettava virta. Sen voi käydä läpi vain kerran.
+dbtransaction_transaction_inactive			= TDbTransaction ei ole aktiivinen.
+
+dbcommandbuilder_value_must_not_be_null		= Ominaisuus {0} ei saa olla null taulun '{1}' sarakkeen '{2}' määrityksen mukaisesti.
+
+dbcommon_invalid_table_name					= Tietokantataulua '{0}' ei löydy. Virheilmoitus: {1}.
+dbcommon_invalid_identifier_name			= Virheellinen tietokantatunnisteen nimi '{0}', katso lisätiedot kohdasta {1}.
+dbtableinfo_invalid_column_name				= Virheellinen sarakkeen nimi '{0}' tietokantataululle '{1}'.
+dbmetadata_invalid_table_view				= Virheellinen taulun/näkymän nimi '{0}', tai taulu/näkymä '{0}' ei sisällä käytettävissä olevia sarake-/kenttämäärityksiä.
+dbmetadata_requires_php_version				= {0}-tietokannan käyttö vaatii PHP-version {1} tai uudemman.
+
+dbtablegateway_invalid_criteria				= Virheellinen kriteeriolio; sen on oltava merkkijono tai TSqlCriteria-instanssi.
+dbtablegateway_no_primary_key_found			= Taulu '{0}' ei sisällä perusavainkenttiä.
+dbtablegateway_missing_pk_values			= Perusavainarvot puuttuvat muodostettaessa IN(key1, key2, ...) taululle '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Yhdistelmäavaimen arvojen määrä ei täsmää muodostettaessa IN( (key1, key2, ..), (key3, key4, ..)) taululle '{0}'.
+dbtablegateway_mismatch_args_exception		= TTableGateway-hakumetodi '{0}' odottaa {1} parametria, mutta sai vain {2} parametria.
+dbtablegateway_mismatch_column_name			= Dynaamisessa __call()-metodissa '{0}' ei löytynyt vastaavia sarakkeita; taulun '{2}' kelvolliset sarakkeet ovat '{1}'.
+dbtablegateway_invalid_table_info			= Taulun on oltava merkkijono tai TDbTableInfo-instanssi.
+
+resource_not_a_resource						= Odotettiin avointa PHP-resurssia, mutta saatiin '{0}'.
+processfork_failed							= Prosessia ei voi haarauttaa (fork).
+liveprocessfork_readonly_receiver			= TLiveProcessFork-data on vastaanottavalla puolella vain luettavissa; vain lähettävä puoli muuttaa sitä.
+stream_open_failed							= Virtaa '{0}' ei voi avata tilassa '{1}': {2}
+binarystream_unexpected_eof					= Odottamaton virran loppu: tarvittiin {0} tavua, mutta luettiin vain {1}.
+binarystream_short_write					= Vajaa kirjoitus: {0} tavua piti kirjoittaa, mutta vain {1} hyväksyttiin.
+streamresourcewrapper_unusable_stream		= Virta ei ole luettava eikä kirjoitettava, eikä sitä voi esittää resurssina.
+streamfilter_already_registered				= Virtasuodatin '{0}' on jo rekisteröity.
+streamfilter_registration_failed			= Virtasuodatinta '{0}' ei voi rekisteröidä luokalle '{1}'.
+streamwrapper_already_registered			= Virtakääreen protokolla '{0}' on jo rekisteröity.
+streamwrapper_registration_failed			= Virtakääreen protokollaa '{0}' ei voi rekisteröidä luokalle '{1}'.
+reservedspace_invalid						= Varattu alue vaatii ei-negatiivisen siirtymän ja positiivisen pituuden; annettiin siirtymä '{0}' ja pituus '{1}'.
+reservedspace_access_denied					= Toiminto osuu varattuun alueeseen siirtymässä '{0}'.
+multipartstream_element_invalid				= TMultipartStream-elementti vaatii 'name'- ja 'contents'-arvot.
+builtincompressor_extension_required		= Pakkaaja '{0}' vaatii PHP-laajennuksen '{1}'.
+builtincompressor_compress_failed			= Pakkaaja '{0}' ei onnistunut pakkaamaan dataa.
+builtincompressor_decompress_failed			= Pakkaaja '{0}' ei onnistunut purkamaan dataa; data voi olla vioittunut tai toisessa muodossa.
+compression_method_unknown					= Pakkausmenetelmä '{0}' on tuntematon tai sen laajennus ei ole käytettävissä.
+compression_none_available					= Tässä PHP-asennuksessa ei ole käytettävissä yhtään pakkausmenetelmää.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' ei ole tunnettu sisältökoodaus. Tunnetut koodaukset ovat: {1}.
+compression_xz_unsupported					= xz/LZMA:lle ei ole PHP-laajennusta; asenna belisoful/prado-compression saadaksesi natiivin tai komentorivipohjaisen xz-koodekin.
+clicompressor_command_missing				= Pakkaaja '{0}' vaatii jonkin seuraavista järjestelmäkomennoista PATH-polulta: '{1}'.
+clicompressor_process_failed				= Pakkaaja '{0}' ei voinut käynnistää komentoa '{1}'.
+clicompressor_command_failed				= Pakkaajan '{0}' komento '{1}' päättyi koodilla {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule vaatii Endpoint-arvon tai positiivisen Port-arvon sen muodostamiseksi.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' on virheellinen. Sen on oltava TSocketServer tai sen aliluokka.
+socketservermodule_scheme_not_stream		= TSocketServerModule ei voi vastaanottaa yhteyksiä yhteydettömällä skeemalla '{0}'. Käytä virtaskeemaa, kuten tcp, tls, ssl tai unix.
+
+bitreader_invalid_bits						= Ei voi lukea {0} bittiä; määrän on oltava välillä 0 ja alustan kokonaisluvun bittileveys.
+bitreader_64bit_php_required				= {0} bitin lukeminen vaatii 64-bittisen PHP-version.
+bitreader_invalid_float_bits				= {0}-bittistä liukulukua ei voi lukea; tuettuja ovat vain 8, 16, 32 ja 64 bittiä.
+bitwriter_invalid_bits						= Ei voi kirjoittaa {0} bittiä; määrän on oltava välillä 0 ja alustan kokonaisluvun bittileveys.
+bitwriter_64bit_php_required				= {0} bitin kirjoittaminen vaatii 64-bittisen PHP-version.
+bitwriter_invalid_float_bits				= {0}-bittistä liukulukua ei voi kirjoittaa; tuettuja ovat vain 8, 16, 32 ja 64 bittiä.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' ei ole olemassa. Huomaa, että se on määritettävä nimiavaruusmuodossa ja tiedoston päätteen on oltava '.xml' tai '.php'.
+soapservice_server_invalid					= TSoapService SOAP-palvelinluokka '{0}' on virheellinen. Sen on oltava TSoapServer tai sen aliluokka.
+soapservice_serverid_required				= <soap>-elementillä on oltava 'id'-attribuutti.
+soapservice_serverid_duplicated				= SOAP-palvelimen tunnus '{0}' esiintyy kahdesti.
+soapserver_id_invalid						= Virheellinen SOAP-palvelimen tunnus '{0}'. Se ei saa päättyä merkkijonoon '.wsdl'.
+soapserver_provider_invalid					= TSoapServer-tarjoajaluokkaa '{0}' ei voitu ratkaista.
+soapserver_version_invalid					= Virheellinen SOAP-versio '{0}'. Sen on oltava joko '1.1' tai '1.2'.
+soapserver_wsdlstyle_invalid				= Virheellinen WSDL-tyyli '{0}'. Sen on oltava joko 'rpc' tai 'document'.
+soapserver_wsdlstyle_unsupported			= WSDL-tyyli '{0}' vaatii pradosoft/prado-wsdlgenerator-version 1.2 tai uudemman. Asennettu generaattori tuottaa vain 'rpc'-tyyliä.
+
+jsonservice_id_required						= TJsonService vaatii 'id'-attribuutin JSON-elementeissään.
+jsonservice_response_type_invalid			= JSON-luokka {0} on virheellinen. Sen on oltava TJsonResponse tai periydyttävä luokasta TJsonResponse.
+jsonservice_class_required					= TJsonService vaatii 'class'-attribuutin JSON-elementeissään.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass on pakollinen.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' ei ole kelvollinen käyttäjäluokka. Luokan on periydyttävä luokasta TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' ei viittaa kelvolliseen TDataSourceConfig-moduuliin.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID on pakollinen.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' ei viittaa kelvolliseen TDataSourceConfig-moduuliin.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID on pakollinen.
+
+feedservice_id_required						= TFeedService vaatii 'id'-attribuutin syöte-elementeissään.
+feedservice_feedtype_invalid				= Syöteluokan '{0}' on toteutettava IFeedContentProvider-rajapinta.
+feedservice_class_required					= TFeedService vaatii 'class'-attribuutin syöte-elementeissään.
+
+tabviewcollection_tabview_required			= TTabPanel hyväksyy lapsekseen vain TTabView-kontrolleja.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID sisältää virheellisen tunnuksen '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex sisältää virheellisen indeksin '{0}'.
+tabpanel_view_inexistent					= TTabPanel ei löydä määritettyä näkymää.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID on pakollinen.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' osoittaa moduuliin, jota ei ole olemassa.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' osoittaa moduuliin, joka ei toteuta ICache-rajapintaa.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping voi sisältää vain TUrlMappingPattern-olioita tai sen aliluokkien olioita.
+urlmapping_global_required					= TUrlMapping on määritettävä globaaliksi moduuliksi.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' ei ole tiedosto.
+urlmapping_configfile_invalid				= Arvon TUrlMapping.ConfigFile '{0}' on osoitettava nimiavaruusmuotoiseen XML-tiedostoon.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter on pakollinen kuviolle '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl ei voi olla tyhjä.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' on virheellinen.
+
+captcha_tokenimagetheme_invalid				= Arvon TCaptcha.TokenImageTheme on oltava kokonaisluku väliltä {0}–{1}.
+captcha_tokenfontsize_invalid				= Arvon TCaptcha.TokenFontSize on oltava kokonaisluku väliltä {0}–{1}.
+captcha_mintokenlength_invalid				= Arvon TCaptcha.MinTokenLength on oltava kokonaisluku väliltä {0}–{1}.
+captcha_maxtokenlength_invalid				= Arvon TCaptcha.MaxTokenLength on oltava kokonaisluku väliltä {0}–{1}.
+captcha_tokenalphabet_invalid				= Arvon TCaptcha.TokenAlphabet on oltava vähintään 2 merkin pituinen merkkijono.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey on tuntematon. Varmista, että web-palvelimen prosessi voi kirjoittaa assets-hakemistoon.
+captcha_gd2_required						= TCaptcha vaatii PHP:n GD2-laajennuksen.
+captcha_imagettftext_required				= TCaptcha vaatii PHP:n GD2-laajennuksen TrueType-fonttituella.
+captcha_imagepng_required					= TCaptcha vaatii PHP:n GD2-laajennuksen PNG-kuvamuodon tuella.
+
+captchavalidator_captchacontrol_required	= Arvon TCaptchaValidator.CaptchaControl on osoitettava olemassa olevaan TCaptcha-kontrolliin.
+captchavalidator_captchacontrol_inexistent	= Arvon TCaptchaValidator.CaptchaControl {0} on osoitettava olemassa olevaan TCaptcha-kontrolliin.
+captchavalidator_captchacontrol_invalid		= Arvon TCaptchaValidator.CaptchaControl {0} on osoitettava olemassa olevaan TCaptcha-kontrolliin.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey on tuntematon. reCAPTCHA:n käyttö vaatii API-avaimen hankkimisen.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey on tuntematon. reCAPTCHA:n käyttö vaatii API-avaimen hankkimisen.
+
+recaptchavalidator_captchacontrol_invalid	= Arvon TReCaptchaValidator.ControlToValidate on oltava TReCaptcha-instanssi.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' saa sisältää vain kirjaimia, numeroita sekä merkit '_' ja '-'.
+proofofwork_complexity_invalid				= Arvon TProofOfWork.Complexity on oltava kokonaisluku väliltä {0}–{1}.
+proofofworkvalidator_control_invalid		= Arvon TProofOfWorkValidator.ControlToValidate '{0}' on osoitettava TProofOfWork-kontrolliin.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' ei ole kelvollinen käyttäjäluokka. Luokan on periydyttävä luokasta TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' ei osoita kelvolliseen välimuistimoduuliin.
+cachepagestatepersister_cache_required		= TCachePageStatePersister vaatii, että välimuistimoduuli on ladattu.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' ei osoita kelvolliseen välimuistimoduuliin.
+cachemoduleid_cache_required				= {0} vaatii välimuistimoduulin. Määritä ensisijainen välimuisti tai aseta {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= Arvon TCachePageStatePersister.Timeout on oltava kokonaisluku, joka ei ole pienempi kuin nolla.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' ei ole kelvollinen PHP-lauseke: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule ei löydä tietokantataulua '{0}' parametridatan tallentamiseen.
+dbparametermodule_get_no_blank_key			= TDbParameterModule ei voi hakea tyhjää avainta.
+dbparametermodule_set_no_blank_key			= TDbParameterModule ei voi asettaa arvoa tyhjälle avaimelle.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' ei viittaa kelvolliseen TDataSourceConfig-moduuliin.
+dbparametermodule_serializer_not_callable	= TDbParameterModule Serializer ei ole kutsuttava (callable).
+
+clockawaretrait_invalid_clock_class			= Kelloluokan '{0}' on toteutettava rajapinta Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock on kiinnitetty UTC-aikaan; käytä TTimezoneClock-luokkaa muille aikavyöhykkeille.
+
+processcrontask_no_command					= TProcessCronTask '{0}' ei sisällä suoritettavaa Command-arvoa.
+processcrontask_launch_failed				= TProcessCronTask ei onnistunut käynnistämään prosessia: '{0}'.
+processcrontask_write_failed				= TProcessCronTask ei voinut kirjoittaa pid-tiedostoa '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' ei sisällä suoritettavaa sulkeumaa.
+closurecrontask_closure_required			= TClosureCronTask vaatii Closure-olion.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' ei ole TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' ei voinut purkaa sulkeumansa hyötykuorman salausta.
+cronmethodtask_no_module					= TCronMethodTask ei löytänyt moduulia '{0}'.
+cron_usermanager_nonexistent				= TCronModule ei löytänyt UserManager-moduulia nimellä '{0}'.
+cron_usermanager_invalid					= TCronModule UserManager '{0}' ei ole TUserManager.
+cron_task_as_array_required					= TCronModule-konfiguraation tehtävä ei ollut taulukko.
+cron_duplicate_task_name					= TCronModule-tehtävillä on oltava yksilölliset nimet.
+cron_schedule_required						= Cron-tehtävällä on oltava aikataulu.
+cron_task_required							= Cron-tehtävällä on oltava tehtävä.
+cron_not_a_crontask							= Cron-tehtävä '{0}' ei ole TCronTask.
+cron_additional_tasks_invalid				= '{0}' ei ole kelvollinen lisä-cron-tehtävä.
+crontask_no_module							= TCronTask ei löytänyt moduulia '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask ei löytänyt määritettyä moduulia '{0}'.
+dbcron_invalid_name							= TDbCronManager: tehtävän nimi '{0}' on virheellinen.
+dbcron_conflicting_task_names				= Konfiguraation cron-tehtävät ovat ristiriidassa tietokannan cron-tehtävien '{0}' kanssa.
+dbcron_table_nonexistent					= TDbCronManager-tietokantataulua ei ole olemassa.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' ei ole TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler ei voinut jäsentää aikataulun osaa '{0}'
+
+rational_bad_offset							= "{0}" ei ole kelvollinen TRational-luokan ominaisuusviittaus.
+
+bithelper_bad_fp_format						= TBitHelper ei voi käsitellä arvoja '{0}' eksponenttibittiä, '{1}' mantissabittiä ja '{2}' eksponentin siirtymä {3}-bittisessä PHP-ympäristössä.
+bithelper_invalid_color_in					= TBitHelper vaatii vähintään yhden In-bitin. Annettu arvo on '{0}'.
+bithelper_invalid_color_out					= TBitHelper vaatii vähintään yhden Out-bitin. Annettu arvo on '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper ei voi peilata '{0}' bittiä {1}-bittisessä PHP-ympäristössä.
+
+ar_data_invalid								= {0}.copyFrom() hyväksyy parametriksi vain olion tai taulukon.
+ar_save_invalid								= {0}-instanssia ei voi tallentaa, koska se on joko poistettu tai tuntemattomassa tilassa.
+ar_delete_invalid							= {0}-instanssia ei voi poistaa, koska se on joko uusi tietue tai jo poistettu tietue.
+
+dbmetadata_invalid_database_driver			= Ajuria '{0}' ei tueta. Asenna sen PRADO-ajuri, jos sellainen on saatavilla.
+dbmetadata_not_meta_data					= Odotettiin ajuriluokkaa {1}, mutta saatiin luokka {0}.
+dbmetadata_tableinfo_class_invalid			= TDbMetaData-taulutietoluokka '{0}' on hakemistonimiavaruus, ei luokka.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' on virheellinen. Varmista, että se osoittaa kelvolliseen sovellusmoduuliin.
+distributeddatasource_child_required		= {0} vaatii vähintään yhden '{1}'-lapsielementin.
+masterslavedbconnection_connection_exists	= {0}.{1}-yhteys on jo olemassa.
+masterslavedbconnection_interface_required	= {0}.{1} vaatii instanssin, joka toteuttaa rajapinnan {2}.
+slavedbconnection_requires_master			= {0} vaatii kohteen {1}.
+
+response_status_reason_missing				= HTTP 1.1 vaatii syytekstin laajennetuille tilakoodeille
+response_status_reason_badchars				= HTTP 1.1 -otsakkeessa status-reason-token ei saa sisältää CR- tai LF-merkkejä
+
+activefileupload_temppath_invalid			= TActiveFileUpload TempPath-polku '{0}' ei ole olemassa tai web-palvelimen prosessi ei voi kirjoittaa siihen.
+
+tactivetablecell_control_outoftable			= {0} '{1}' on sijoitettava TTableRow-kontrollin sisään.
+tactivetablecell_control_notincollection	= {0} '{1}' ei ole ylemmän TTableRow-kontrollin TTableCellCollection-kokoelman jäsen.
+
+tactivetablerow_control_outoftable			= {0} '{1}' on sijoitettava TTable-kontrollin sisään.
+tactivetablerow_control_notincollection		= {0} '{1}' ei ole ylemmän TTable-kontrollin TTableRowCollection-kokoelman jäsen.
+
+juioptions_option_invalid					= '{1}' ei ole kelvollinen asetus kontrollille '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' ei ole kelvollinen otsikkokontrolli TRatingList-kontrollille '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID sisältää virheellisen tunnuksen '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex sisältää virheellisen indeksin '{0}'.
+accordion_view_inexistent					= TAccordion ei löydä määritettyä näkymää.
+
+dot_bad_size								= TDot Size -arvon on oltava positiivinen kokonaisluku, mutta se on '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth -arvon on oltava luku, jota voi seurata % tai CSS-pituusyksikkö, mutta se on '{0}'
+
+juidatepicker_settextmode_unsupported		= TJuiDatePicker-kontrollin TextMode-arvoa ei voi muuttaa.
+
+control_adapter_not_active					= BaseActiveControl-ominaisuutta kutsuttiin ei-aktiiviselle kontrollille.
+
+figcaption_requires_figure_parent			= TFigureCaption-kontrollin '{0}' on oltava TFigure-kontrollin suora lapsi.
+summary_requires_details_parent				= TSummary-kontrollin '{0}' on oltava TDetails-kontrollin suora lapsi.
+
+gravatar_bad_default						= TGravatar DefaultImageStyle -ominaisuuden arvoa '{0}' ei tueta
+gravatar_bad_size							= TGravatar Size ei ole välillä [1 .. 512], vaan '{0}'
+
+progress_value_invalid						= TProgress Value -arvon on oltava 0 tai suurempi; annettu arvo on {0}.
+progress_max_invalid						= TProgress Max -arvon on oltava suurempi kuin 0; annettu arvo on {0}.
+
+time_invalid_datetime						= TTime DateTime -arvon on oltava DateTimeInterface, DateInterval, merkkijono tai numeerinen arvo; annettu arvo on {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' ei ole TTimeFormat-vakion nimi eikä ICU-päivämäärämuotokuvio.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' ei voi sisältää kohdetta '{1}': aktiiviset, postback- ja validaattorikontrollit eivät toimi passiivisen mallinesisällön sisällä. Käytä pelkkää merkkausta {{...}}-paikkamerkeillä tai aseta ValidateContent="false".
+
+vardumper_not_array							= Metodin __debuginfo() on palautettava taulukko.
+
+htmlpurifier_source_path_failed				= HTML Purifier -välimuistipolkua '{0}' ei voi luoda. Varmista, että ylähakemisto on olemassa ja että web-prosessi voi kirjoittaa siihen.

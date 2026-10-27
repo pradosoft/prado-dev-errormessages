@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Hindi (hi).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application केवल एक बार ही सेट किया जा सकता है।
+prado_component_unknown						= अज्ञात कंपोनेंट प्रकार '{0}'। इसका कारण {0} क्लास फ़ाइल में निम्न पार्सिंग त्रुटि हो सकती है: {1}
+prado_using_invalid							= '{0}' उपयोग के लिए मान्य नेमस्पेस नहीं है। यदि आप किसी डायरेक्टरी को संदर्भित करने वाला नेमस्पेस उपयोग करना चाहते हैं तो सुनिश्चित करें कि अंत में '.*' जोड़ा गया है।
+prado_alias_redefined						= एलियास '{0}' को पुनः परिभाषित नहीं किया जा सकता।
+prado_alias_invalid							= एलियास '{0}' एक अमान्य पथ '{1}' को संदर्भित करता है। केवल मौजूदा डायरेक्टरियों का ही एलियास बनाया जा सकता है।
+prado_aliasname_invalid						= एलियास '{0}' में अमान्य वर्ण '.' है।
+
+component_property_undefined				= कंपोनेंट प्रॉपर्टी '{0}.{1}' परिभाषित नहीं है।
+component_property_readonly					= कंपोनेंट प्रॉपर्टी '{0}.{1}' केवल-पठन है।
+component_event_undefined					= कंपोनेंट इवेंट '{0}.{1}' परिभाषित नहीं है।
+component_method_undefined					= कंपोनेंट मेथड '{0}.{1}' परिभाषित नहीं है।
+component_eventhandler_invalid				= कंपोनेंट इवेंट '{0}.{1}' से एक अमान्य इवेंट हैंडलर '{2}' संलग्न है।
+component_expression_invalid				= कंपोनेंट '{0}' एक अमान्य एक्सप्रेशन '{1}' का मूल्यांकन कर रहा है : {2}।
+component_statements_invalid				= कंपोनेंट '{0}' अमान्य PHP स्टेटमेंट '{1}' का मूल्यांकन कर रहा है : {2}।
+component_class_behavior_defined			= कंपोनेंट '{0}' में पहले से '{1}' का क्लास बिहेवियर मौजूद है।
+component_not_a_behavior					= कंपोनेंट '{0}' जिसे बिहेवियर के रूप में जोड़ा जा रहा है, TBaseBehavior नहीं है।
+object_not_a_component						= ऑब्जेक्ट '{0}' जिसे बिहेवियर के रूप में जोड़ा जा रहा है, TComponent नहीं है।
+component_no_tcomponent_class_behaviors		= रिकर्शन के कारण TComponent से क्लास बिहेवियर संलग्न नहीं किए जा सकते।
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors एक से अधिक ओनर से संलग्न नहीं हो सकते। प्रत्येक ओनर पर इंस्टेंस बनाने के लिए एक स्ट्रिंग या IBehavior क्लास और प्रॉपर्टीज़ का ऐरे पास करें।
+
+propertyvalue_enumvalue_invalid				= मान '{0}' एक मान्य इन्यूमरेशन मान नहीं है ({1})।
+propertyvalue_invalid_hex_color				= मान '{0}' एक मान्य हेक्स रंग मान नहीं है। उदा. "#112233"
+propertyvalue_invalid_array_literal			= मान '{0}' एक मान्य ऐरे लिटरल नहीं है।
+propertyvalue_array_too_deep				= ऐरे लिटरल {0} स्तरों से अधिक गहराई तक नेस्टेड है।
+
+eventhandler_lost_weak_ref					= TEventHandler इवेंट हैंडलर को इनवोक नहीं कर सकता क्योंकि कॉलेबल ऑब्जेक्ट का WeakReference खो गया है।
+eventhandler_no_set_handler					= TEventHandler इवेंट हैंडलर सेट नहीं कर सकता, इंडेक्स "{0}"।
+eventhandler_bad_offset						= TEventHandler में ऑफ़सेट "{0}" नहीं है।
+
+eventparam_readonly							= {0} केवल-पठन है।
+eventparam_readonly_set						= {0} एक बार सेट होने के बाद ReadOnly को बदल नहीं सकता।
+eventparam_readonly_not_self				= {0} ReadOnly केवल आंतरिक रूप से सेट किया जा सकता है।
+
+list_index_invalid							= इंडेक्स '{0}' सीमा से बाहर है।
+list_item_inexistent						= आइटम सूची में नहीं मिला।
+list_data_not_iterable						= डेटा या तो एक ऐरे होना चाहिए या Traversable इंटरफ़ेस को लागू करने वाला ऑब्जेक्ट।
+list_readonly								= {0} केवल-पठन है।
+list_readonly_set							= {0} एक बार सेट होने के बाद Read-Only को बदल नहीं सकता।
+prioritylist_index_invalid					= प्रायोरिटी '{2}' पर '{1}' का इंडेक्स '{0}' सीमा से बाहर है।
+prioritytrait_no_set_default_priority		= डिफ़ॉल्ट प्रायोरिटी केवल एक बार या ऑब्जेक्ट द्वारा स्वयं ही सेट की जा सकती है।
+prioritytrait_no_set_precision				= प्रिसिज़न केवल एक बार या ऑब्जेक्ट द्वारा स्वयं ही सेट की जा सकती है।
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid केवल एक बार या ऑब्जेक्ट द्वारा स्वयं ही सेट किया जा सकता है।
+
+map_addition_disallowed						= नया आइटम मैप में नहीं जोड़ा जा सकता।
+map_item_unremovable						= आइटम को मैप से हटाया नहीं जा सकता।
+map_data_not_iterable						= डेटा या तो एक ऐरे होना चाहिए या Traversable इंटरफ़ेस को लागू करने वाला ऑब्जेक्ट।
+map_readonly								= {0} केवल-पठन है।
+map_readonly_set							= {0} एक बार सेट होने के बाद Read-Only को बदल नहीं सकता।
+
+tnull_clone_disallowed						= TNull सिंगलटन को क्लोन नहीं किया जा सकता। इसके बजाय TNull::null() का उपयोग करें।
+
+weakcallablecollection_callable_required	= TWeakCallableCollection केवल कॉलेबल स्वीकार कर सकता है।
+
+arraysubscription_no_change					= TArraySubscription.{0} को सब्सक्राइब होने के बाद बदला नहीं जा सकता।
+arraysubscription_no_null_key				= TArraySubscription किसी ArrayAccess ऑब्जेक्ट पर null कुंजी को सब्सक्राइब नहीं कर सकता।
+arraysubscription_index_invalid				= TArraySubscription List मोड में है (isAssociative = false) लेकिन कुंजी '{0}' मान्य नहीं है (गणना: {1})।
+eventsubscription_no_setcollection			= TEventSubscription.Array को सीधे सेट नहीं किया जा सकता।
+eventsubscription_no_change					= TEventSubscription.{0} को सब्सक्राइब होने के बाद बदला नहीं जा सकता।
+
+application_includefile_invalid				= एप्लिकेशन कॉन्फ़िगरेशन {0} नहीं मिला। सुनिश्चित करें कि यह नेमस्पेस फ़ॉर्मेट में है और फ़ाइल ".xml" या ".php" पर समाप्त होती है।
+application_basepath_invalid				= एप्लिकेशन बेस पथ '{0}' मौजूद नहीं है या डायरेक्टरी नहीं है।
+application_runtimepath_invalid				= एप्लिकेशन रनटाइम पथ '{0}' मौजूद नहीं है या वेब सर्वर प्रोसेस द्वारा लिखने योग्य नहीं है।
+application_service_class_not_found			= सर्विस क्लास '{0}' मौजूद नहीं है।
+application_service_class_not_service		= सर्विस क्लास '{0}' IService को लागू नहीं करती।
+application_service_class_required			= registerService को सर्विस '{0}' के लिए एक क्लास नाम या serviceConfig ऐरे चाहिए।
+application_service_default_unregister		= डिफ़ॉल्ट पेज सर्विस '{0}' का रजिस्ट्रेशन हटाया नहीं जा सकता।
+service_csrf_token_invalid					= सर्विस '{0}' को एक मान्य CSRF टोकन चाहिए।
+application_moduleid_duplicated				= एप्लिकेशन मॉड्यूल ID '{0}' अद्वितीय नहीं है।
+application_runtimepath_failed				= रनटाइम पथ '{0}' नहीं बनाया जा सका। सुनिश्चित करें कि पैरेंट डायरेक्टरी मौजूद है और वेब प्रोसेस द्वारा लिखने योग्य है।
+application_module_required_dep_missing		= मॉड्यूल '{0}' की मॉड्यूल '{1}' पर आवश्यक निर्भरता है, जो एप्लिकेशन में रजिस्टर्ड नहीं है।
+application_module_dependency_cycle			= निम्न मॉड्यूलों के बीच एक निर्भरता चक्र पाया गया: {0}।
+application_module_dependency_self_reference	= मॉड्यूल '{0}' स्वयं को निर्भरता के रूप में घोषित करता है, जो कभी मान्य नहीं है।
+
+appconfig_aliaspath_invalid					= एप्लिकेशन कॉन्फ़िगरेशन <alias id="{0}"> एक अमान्य फ़ाइल पथ "{1}" का उपयोग करता है।
+appconfig_alias_invalid						= एप्लिकेशन कॉन्फ़िगरेशन <alias> एलिमेंट में "id" एट्रिब्यूट और "path" एट्रिब्यूट होना चाहिए।
+appconfig_alias_redefined					= एप्लिकेशन कॉन्फ़िगरेशन <alias id="{0}"> को पुनः परिभाषित नहीं किया जा सकता।
+appconfig_using_invalid						= एप्लिकेशन कॉन्फ़िगरेशन <using> एलिमेंट में "namespace" एट्रिब्यूट होना चाहिए।
+appconfig_moduleid_required					= एप्लिकेशन कॉन्फ़िगरेशन <module> एलिमेंट में "id" एट्रिब्यूट होना चाहिए।
+appconfig_moduletype_required				= एप्लिकेशन कॉन्फ़िगरेशन <module id="{0}"> में "class" एट्रिब्यूट होना चाहिए।
+appconfig_moduletype_inapplicable			= एप्लिकेशन कॉन्फ़िगरेशन <module id="{0}"> में "class" एट्रिब्यूट नहीं हो सकता।
+appconfig_serviceid_required				= एप्लिकेशन कॉन्फ़िगरेशन <service> एलिमेंट में "id" एट्रिब्यूट होना चाहिए।
+appconfig_servicetype_required				= एप्लिकेशन कॉन्फ़िगरेशन <service id="{0}"> में "class" एट्रिब्यूट होना चाहिए।
+appconfig_parameterid_required				= एप्लिकेशन कॉन्फ़िगरेशन <parameter> एलिमेंट में "id" एट्रिब्यूट होना चाहिए।
+appconfig_includefile_required				= एप्लिकेशन कॉन्फ़िगरेशन <include> एलिमेंट में "file" एट्रिब्यूट होना चाहिए।
+appconfig_paths_invalid						= एप्लिकेशन कॉन्फ़िगरेशन <paths> में एलिमेंट <{0}> नहीं हो सकता।
+appconfig_modules_invalid					= एप्लिकेशन कॉन्फ़िगरेशन <modules> में एलिमेंट <{0}> नहीं हो सकता।
+appconfig_services_invalid					= एप्लिकेशन कॉन्फ़िगरेशन <services> में एलिमेंट <{0}> नहीं हो सकता।
+appconfig_parameters_invalid				= एप्लिकेशन कॉन्फ़िगरेशन <parameters> में एलिमेंट <{0}> नहीं हो सकता।
+appconfig_tag_invalid						= एप्लिकेशन कॉन्फ़िगरेशन में एलिमेंट <{0}> नहीं हो सकता।
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey खाली नहीं होना चाहिए।
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey खाली नहीं होना चाहिए।
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey खाली नहीं होना चाहिए।
+securitymanager_mcryptextension_required	= TSecurityManager की एन्क्रिप्शन सुविधा उपयोग करने के लिए Mcrypt PHP एक्सटेंशन आवश्यक है।
+securitymanager_mcryptextension_initfailed	= TSecurityManager mcrypt मॉड्यूल को इनिशियलाइज़ करने में विफल रहा।
+
+uri_format_invalid							= '{0}' एक मान्य URI नहीं है।
+
+httprequest_browscap_required				= THttpRequest के लिए php.ini में browscap डायरेक्टिव कॉन्फ़िगर होना आवश्यक है।
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator में केवल एक ही वर्ण हो सकता है।
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' किसी मौजूदा मॉड्यूल की ओर संकेत नहीं करता।
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' को TUrlManager से विस्तारित मॉड्यूल की ओर संकेत करना चाहिए।
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie false है, जिसके लिए एक सेशन मॉड्यूल आवश्यक है।
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection केवल THttpCookie ऑब्जेक्ट स्वीकार कर सकता है।
+
+httpresponse_file_inexistent				= THttpResponse फ़ाइल '{0}' नहीं भेज सकता। फ़ाइल मौजूद नहीं है।
+httpresponse_responsedata_method_unavailable	= THttpResponse: मेथड '{0}' का उपयोग इसे लागू करने वाले उचित एडॉप्टर के बिना नहीं किया जा सकता।
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' किसी मौजूदा मॉड्यूल की ओर संकेत नहीं करता।
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' को THttpHeadersManager से विस्तारित मॉड्यूल की ओर संकेत करना चाहिए।
+
+httpheadersmanager_header_required			= THttpHeadersManager में केवल THttpHeader या उसकी चाइल्ड क्लासें हो सकती हैं।
+httpheadersmanager_headerclass_missing		= THttpHeadersManager <headerclass> प्रविष्टि में आवश्यक 'name' या 'class' एट्रिब्यूट नहीं है।
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_sessionname_unchangeable		= THttpSession.SessionName को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_sessionname_invalid				= THttpSession.SessionName में केवल अल्फ़ान्यूमेरिक वर्ण होने चाहिए।
+httpsession_savepath_unchangeable			= THttpSession.SavePath को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' अमान्य है।
+httpsession_storage_unchangeable			= THttpSession.Storage को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_autostart_unchangeable			= THttpSession.AutoStart को सेशन मॉड्यूल इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_gcprobability_invalid			= THttpSession.GCProbability 0 और 100 के बीच का पूर्णांक होना चाहिए।
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_transid_cookieonly				= जब THttpSession.CookieMode Only पर सेट हो तो THttpSession.UseTransparentSessionID सेट नहीं किया जा सकता।
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout को सेशन प्रारंभ होने के बाद बदला नहीं जा सकता।
+httpsession_handler_invalid					= THttpSessionHandler कंस्ट्रक्टर पैरामीटर के रूप में केवल एक THttpSession ऑब्जेक्ट स्वीकार कर सकता है
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' अमान्य है। सुनिश्चित करें कि यह नेमस्पेस रूप में है और वेब सर्वर प्रोसेस द्वारा लिखने योग्य डायरेक्टरी की ओर संकेत करता है।
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath को मॉड्यूल इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl को मॉड्यूल इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+assetmanager_filepath_invalid				= TAssetManager एक अमान्य फ़ाइल '{0}' प्रकाशित कर रहा है।
+assetmanager_tarchecksum_invalid			= TAssetManager अमान्य चेकसम '{0}' वाली tar फ़ाइल प्रकाशित कर रहा है।
+assetmanager_tarfile_invalid				= TAssetManager एक अमान्य tar फ़ाइल '{0}' प्रकाशित कर रहा है।
+assetmanager_tarfile_extract_failed			= TAssetManager tar फ़ाइल '{0}' को एक्सट्रैक्ट करने में विफल रहा।
+assetmanager_source_directory_invalid		= TAssetManager एक अमान्य डायरेक्टरी '{0}' कॉपी कर रहा है।
+
+cache_primary_duplicated					= अधिकतम एक प्राइमरी कैश मॉड्यूल की अनुमति है। {0} एक और प्राइमरी कैश के रूप में रजिस्टर होने का प्रयास कर रहा है।
+psrcache_backing_cache_required				= TPsrCache.BackingCacheId या TPsrCache.BackingCache आवश्यक है।
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' किसी एप्लिकेशन मॉड्यूल को संदर्भित नहीं करता।
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' को Psr\SimpleCache\CacheInterface या Psr\Cache\CacheItemPoolInterface लागू करने वाले मॉड्यूल को संदर्भित करना चाहिए।
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' इसी TPsrCache का एक PSR एडॉप्टर है; यह उसी कैश में पढ़ेगा और वापस लिखेगा।
+psrcachebacking_cache_required				= {0} को एक बैकिंग कैश चाहिए। {0}.BackingCacheId, {0}.BackingCache, या एक प्राइमरी एप्लिकेशन कैश सेट करें।
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' किसी एप्लिकेशन मॉड्यूल को संदर्भित नहीं करता।
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' को एक Prado\Caching\ICache मॉड्यूल को संदर्भित करना चाहिए।
+psrcachebacking_key_invalid					= {0} कैश कुंजी आरक्षित वर्णों {}()/\@: के बिना एक गैर-खाली स्ट्रिंग होनी चाहिए, लेकिन '{1}' दी गई है।
+sqlitecache_extension_required				= TSqliteCache के लिए SQLite PHP एक्सटेंशन आवश्यक है।
+sqlitecache_dbfile_required					= TSqliteCache.DbFile आवश्यक है।
+sqlitecache_connection_failed				= TSqliteCache डेटाबेस कनेक्शन विफल रहा। {0}।
+sqlitecache_table_creation_failed			= TSqliteCache कैश डेटाबेस बनाने में विफल रहा। {0}।
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile को मॉड्यूल इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile अमान्य है। सुनिश्चित करें कि यह उचित नेमस्पेस फ़ॉर्मेट में है।
+
+dbcache_unavailable							= TDbCache के लिए PDO PHP एक्सटेंशन आवश्यक है।
+
+etcdcache_transport_required				= TEtcdCache के लिए cURL PHP एक्सटेंशन या allow_url_fopen आवश्यक है।
+
+memcache_extension_required					= TMemCache के लिए memcache PHP एक्सटेंशन आवश्यक है।
+memcache_connection_failed					= TMemCache memcache सर्वर {0}:{1} से कनेक्ट होने में विफल रहा।
+memcache_not_initialized					= मॉड्यूल इनिशियलाइज़ होने से पहले TMemCache पर विकल्प सेट नहीं किए जा सकते।
+
+apccache_extension_required					= TAPCCache के लिए APC PHP एक्सटेंशन आवश्यक है।
+apccache_extension_not_enabled				= TAPCCache को काम करने के लिए php.ini में apc.enabled = 1 चाहिए।
+apccache_extension_not_enabled_cli			= TAPCCache को कमांड लाइन से PHP के साथ काम करने के लिए php.ini में apc.enable_cli = 1 चाहिए।
+
+cachesize_item_exceeds_maximum_size			= कैश आइटम {0} बाइट का है, जो {1} बाइट के कॉन्फ़िगर किए गए MaximumSize से अधिक है।
+
+filecache_directory_required				= TFileCache.Directory आवश्यक है।
+filecache_directory_create_failed			= TFileCache कैश डायरेक्टरी '{0}' नहीं बना सकता।
+filecache_directory_not_writable			= TFileCache कैश डायरेक्टरी '{0}' लिखने योग्य नहीं है।
+filecache_hash_token_identity				= TFileCache.hashToken को अपने इनपुट को रूपांतरित करना चाहिए; सबक्लास कार्यान्वयन ने टोकन को अपरिवर्तित लौटाया।
+filecache_hash_token_path_separator			= TFileCache.hashToken को पथ विभाजक ("/" या "\") वाला मान नहीं लौटाना चाहिए; सबक्लास कार्यान्वयन ने एक असुरक्षित हैश लौटाया।
+
+memorycache_backing_file_directory_not_found	= TMemoryCache.BackingFile डायरेक्टरी पथ '{0}' के लिए मौजूद नहीं है।
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' अमान्य है। मान्य मान 'PHP' और 'JSON' हैं।
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' अमान्य है। मान्य मान 'None', 'Base64' और 'Hex' हैं।
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' अमान्य है। यह एक TSecurityManager मॉड्यूल id या TSecurityManager इंस्टेंस होना चाहिए।
+serializingcache_json_encode_failed			= TSerializingCache मान को JSON-एन्कोड करने में विफल रहा: {0}।
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} किसी मान्य डायरेक्टरी को संदर्भित नहीं करता।
+cachedependencylist_cachedependency_required	= TCacheDependencyList में केवल ICacheDependency लागू करने वाले ऑब्जेक्ट ही जोड़े जा सकते हैं।
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' अमान्य है। सुनिश्चित करें कि यह नेमस्पेस रूप में है और त्रुटि टेम्पलेट फ़ाइलों वाली मान्य डायरेक्टरी की ओर संकेत करता है।
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' एक मान्य डायरेक्टरी नहीं है।
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage को सर्विस इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+pageservice_basepath_unchangeable			= TPageService.BasePath को सर्विस इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+pageservice_pageclass_invalid				= पेज क्लास {0} अमान्य है। यह TPage होनी चाहिए या TPage से विस्तारित होनी चाहिए।
+pageservice_includefile_invalid				= पेज सर्विस कॉन्फ़िगरेशन {0} नहीं मिला। सुनिश्चित करें कि यह नेमस्पेस फ़ॉर्मेट में है और फ़ाइल ".xml" या ".php" पर समाप्त होती है।
+
+pageserviceconf_file_invalid				= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{0}' नहीं खोली जा सकी।
+pageserviceconf_aliaspath_invalid			= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{2}' में <alias id="{0}"> एक अमान्य फ़ाइल पथ "{1}" का उपयोग करता है।
+pageserviceconf_alias_invalid				= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{0}' में <alias> एलिमेंट में "id" एट्रिब्यूट और "path" एट्रिब्यूट होना चाहिए।
+pageserviceconf_using_invalid				= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{0}' में <using> एलिमेंट में "namespace" एट्रिब्यूट होना चाहिए।
+pageserviceconf_module_invalid				= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{0}' में <module> एलिमेंट में "id" एट्रिब्यूट होना चाहिए।
+pageserviceconf_moduletype_required			= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{1}' में <module id="{0}"> में "class" एट्रिब्यूट होना चाहिए।
+pageserviceconf_parameter_invalid			= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{0}' में <parameter> एलिमेंट में "id" एट्रिब्यूट होना चाहिए।
+pageserviceconf_page_invalid				= पेज डायरेक्टरी कॉन्फ़िगरेशन फ़ाइल '{0}' में <page> एलिमेंट में "id" एट्रिब्यूट होना चाहिए।
+pageserviceconf_includefile_required		= पेज कॉन्फ़िगरेशन <include> एलिमेंट में "file" एट्रिब्यूट होना चाहिए।
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" को बिहेवियर संलग्न होने के बाद ("{1}" में) बदला नहीं जा सकता।
+basebehavior_sync_no_owner					= TBaseBehavior "{0}" का कोई ओनर नहीं है और यह ओनर-रहित कंपोनेंट पर इवेंट हैंडलर सिंक्रनाइज़ नहीं कर सकता।
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" ऐसे ऑब्जेक्ट पर इवेंट हैंडलर सिंक्रनाइज़ नहीं कर सकता जो ओनर नहीं है।
+behavior_has_owner							= TBehavior "{0}" केवल एक ओनर से संलग्न हो सकता है।
+behavior_bad_attach_component				= TBehavior "{0}" केवल एक TComponent से संलग्न हो सकता है।
+behavior_detach_without_owner				= TBehavior "{0}" को ओनर के बिना अलग नहीं किया जा सकता।
+behavior_detach_wrong_owner					= TBehavior "{0}" ऐसे ऑब्जेक्ट से अलग नहीं हो सकता जो उसका ओनर नहीं है।
+behavior_property_unchangeable				= {1}.{0} को बिहेवियर संलग्न होने के बाद बदला नहीं जा सकता।
+behavior_requires_owner						= {1}.{0} के लिए एक ओनर आवश्यक है।
+classbehavior_owner_attach_once				= TClassBehavior "{0}" किसी ओनर से केवल एक बार संलग्न हो सकता है। हैंडलर अद्वितीय नहीं रहेंगे।
+classbehavior_bad_attach_component			= TClassBehavior "{0}" केवल एक TComponent से संलग्न हो सकता है।
+classbehavior_detach_without_owner			= TClassBehavior "{0}" को ओनर के बिना अलग नहीं किया जा सकता।
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" ऐसे ऑब्जेक्ट से अलग नहीं हो सकता जो उसका ओनर नहीं है।
+
+callchain_bad_dynamic_event					= TCallChain.{0} रेज़ किया गया लेकिन {1} अपेक्षित था।
+
+behaviormodule_behavior_as_array_required	= php <behavior> एक ऐरे होना चाहिए।
+behaviormodule_behaviorname_required		= बिहेवियर संलग्न करने के लिए <behavior> में 'name' एट्रिब्यूट होना चाहिए।
+behaviormodule_behaviorclass_required		= <behavior> में बिहेवियर क्लास परिभाषित करने वाला 'class' एट्रिब्यूट होना चाहिए।
+behaviormodule_attachto_class_required		= <behavior> में 'attachto' या 'attachtoclass' एट्रिब्यूट होना चाहिए।
+behaviormodule_attachto_and_class_only_one	= <behavior> में 'attachto' या 'attachtoclass' एट्रिब्यूट में से कोई एक होना चाहिए, दोनों नहीं।
+behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' ऑब्जेक्ट नहीं मिला।
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors को अमान्य प्रकार '{0}' पर सेट नहीं किया जा सकता
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader में एक बिहेवियर Name होना चाहिए।
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader में एक बिहेवियर Class होनी चाहिए।
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader में 'attachto' या 'attachtoclass' एट्रिब्यूट होना चाहिए।
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader में 'attachto' या 'attachtoclass' में से केवल एक ही एट्रिब्यूट होना चाहिए।
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' के लिए एक मॉड्यूल id आवश्यक है।
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' नहीं मिला।
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader को बिहेवियर संलग्न करने के लिए मॉड्यूल '{0}' नहीं मिला।
+
+evaluationfilter_statements_denied			= कंपोनेंट '{0}' PHP स्टेटमेंट '{1}' का मूल्यांकन नहीं कर सकता क्योंकि TEvaluationFilterBehavior.AllowStatements false है।
+evaluationfilter_code_denied				= कंपोनेंट '{0}' '{1}' का मूल्यांकन नहीं कर सकता क्योंकि TEvaluationFilterBehavior '{2}' की अनुमति नहीं देता।
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior को निर्मित करने के लिए एक कॉलेबल चाहिए।
+maproutebehavior_handler_not_callable		= TMapRouteBehavior को निर्मित करने के लिए एक कॉलेबल चाहिए।
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior में एक Parameter एट्रिब्यूट होना चाहिए।
+parameterizebehavior_no_property			= TParameterizeBehavior में एक Property एट्रिब्यूट होना चाहिए।
+parameterizebehavior_owner_get_only_property	= TParameterizeBehavior ओनर में Property '{0}' है लेकिन वह केवल-पठन है।
+parameterizebehavior_owner_has_no_property	= TParameterizeBehavior ओनर में Property '{0}' नहीं है।
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior संलग्न होने के बाद Parameter को खाली नहीं कर सकता।
+
+processhelper_no_forking					= प्रोसेस फ़ोर्किंग समर्थित नहीं है।
+processhelper_no_signals					= Windows पर प्रोसेस सिग्नल नहीं भेजे जा सकते।
+
+serializableclosure_no_decrypter			= TSerializableClosure कॉन्फ़िगर किए गए डिक्रिप्टर के बिना एन्क्रिप्टेड क्लोज़र पेलोड को डिक्रिप्ट नहीं कर सकता।
+serializableclosure_decrypt_failed			= TSerializableClosure एन्क्रिप्टेड क्लोज़र पेलोड को डिक्रिप्ट करने में विफल रहा; पेलोड से छेड़छाड़ हुई हो सकती है या कुंजी बदल गई हो सकती है।
+
+appsignals_no_change						= TApplicationSignals::{0} को संलग्न होने के बाद बदला नहीं जा सकता।
+appsignals_not_a_dispatcher					= '{0}' एक TSignalsDispatcher नहीं है।
+
+signalsdispatcher_bad_pid					= '{0}' एक मान्य PID नहीं है।
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} को संलग्न होने के बाद बदला नहीं जा सकता।
+
+initialized_property_unchangeable			= {1}.{0} सेट नहीं किया जा सकता क्योंकि यह पहले से इनिशियलाइज़ है।
+initialized_requires_initialization			= {1}.{0} को प्रोसेसिंग से पहले इनिशियलाइज़ेशन आवश्यक है।
+
+template_closingtag_unexpected				= अनपेक्षित क्लोज़िंग टैग '{0}' पाया गया।
+template_closingtag_expected				= क्लोज़िंग टैग '{0}' अपेक्षित था, '{1}' पाया गया।
+template_directive_nonunique				= डायरेक्टिव '<%@ ... %>' टेम्पलेट के प्रारंभ में होना चाहिए और अधिकतम एक बार ही आ सकता है।
+template_comments_forbidden					= प्रॉपर्टी टैग के भीतर टेम्पलेट कमेंट की अनुमति नहीं है।
+template_matching_unexpected				= अनपेक्षित मैचिंग।
+template_property_unknown					= {0} में '{1}' नाम की कोई प्रॉपर्टी नहीं है।
+template_event_unknown						= {0} में '{1}' नाम का कोई इवेंट नहीं है।
+template_property_readonly					= {0} की प्रॉपर्टी '{1}' केवल-पठन है।
+template_event_forbidden					= {0} एक गैर-कंट्रोल कंपोनेंट है। टेम्पलेट में इसके इवेंट '{1}' से कोई हैंडलर संलग्न नहीं किया जा सकता।
+template_databind_forbidden					= {0} एक गैर-कंट्रोल कंपोनेंट है। इसकी प्रॉपर्टी '{1}' से एक्सप्रेशन बाइंड नहीं किए जा सकते।
+template_component_required					= '{0}' एक कंपोनेंट नहीं है। टेम्पलेट में केवल कंपोनेंट ही आ सकते हैं।
+template_format_invalid						= अमान्य टेम्पलेट सिंटैक्स: {0}
+template_property_duplicated				= प्रॉपर्टी {0} दो या अधिक बार कॉन्फ़िगर की गई है।
+template_eventhandler_invalid				= {0}.{1} केवल एक स्थिर स्ट्रिंग स्वीकार कर सकता है।
+template_controlid_invalid					= {0}.ID केवल एक स्थिर टेक्स्ट स्ट्रिंग स्वीकार कर सकता है।
+template_controlskinid_invalid				= {0}.SkinID केवल एक स्थिर टेक्स्ट स्ट्रिंग स्वीकार कर सकता है।
+template_content_unexpected					= टेम्पलेट इंस्टेंशिएट करते समय अनपेक्षित सामग्री मिली: {0}।
+template_include_invalid					= अमान्य टेम्पलेट इन्क्लूज़न। सुनिश्चित करें कि {0} एक मान्य नेमस्पेस है जो .tpl एक्सटेंशन वाली मौजूदा टेम्पलेट फ़ाइल की ओर संकेत करता है।
+template_tag_unexpected						= प्रॉपर्टी {0} के इनिशियलाइज़ेशन में एक अज्ञात टैग प्रकार {1} है।
+
+xmldocument_file_read_failed				= TXmlDocument फ़ाइल '{0}' को पढ़ने में असमर्थ है।
+xmldocument_file_write_failed				= TXmlDocument फ़ाइल '{0}' को लिखने में असमर्थ है।
+
+xmlelementlist_xmlelement_required			= TXmlElementList केवल TXmlElement ऑब्जेक्ट स्वीकार कर सकता है।
+
+xmlelement_null_tag							= TXmlElement टैग नाम null नहीं हो सकता।
+xmlelement_empty_tag						= TXmlElement टैग नाम खाली स्ट्रिंग नहीं हो सकता।
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action का मान केवल 'allow' या 'deny' हो सकता है।
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb का मान केवल 'get' या 'post' हो सकता है।
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection केवल TAuthorizationRule ऑब्जेक्ट स्वीकार कर सकता है।
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' एक मान्य फ़ाइल नहीं है।
+usermanager_userfile_unchangeable			= TUserManager.UserFile को बदला नहीं जा सकता। यूज़र मॉड्यूल पहले ही इनिशियलाइज़ हो चुका है।
+
+integritymanager_entry_invalid				= URL '{0}' के लिए TIntegrityManager इंटेग्रिटी प्रविष्टि में गैर-खाली url और hash आवश्यक हैं।
+integritymanager_algorithm_invalid			= TIntegrityManager एल्गोरिदम '{0}' समर्थित नहीं है; इनमें से एक उपयोग करें: {1}।
+integritymanager_file_unreadable			= TIntegrityManager इंटेग्रिटी की गणना के लिए फ़ाइल '{0}' नहीं पढ़ सकता।
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' एक मान्य फ़ाइल नहीं है।
+integritymanager_integrityfile_unchangeable	= {1}.{0} को बदला नहीं जा सकता। इंटेग्रिटी मॉड्यूल पहले ही इनिशियलाइज़ हो चुका है।
+
+javascript_script_integrity_required		= रिमोट स्क्रिप्ट '{0}' के लिए कोई Subresource Integrity रजिस्टर्ड नहीं है, लेकिन इंटेग्रिटी आवश्यक है।
+
+authmanager_usermanager_required			= TAuthManager.UserManager को एक मान असाइन किया जाना चाहिए।
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' किसी एप्लिकेशन मॉड्यूल की ID को संदर्भित नहीं करता।
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' किसी मान्य TUserManager एप्लिकेशन मॉड्यूल को संदर्भित नहीं करता।
+authmanager_session_required				= TAuthManager के लिए एक सेशन एप्लिकेशन मॉड्यूल आवश्यक है।
+
+permissions_events_invalid					= TPermissionEvent.Event अमान्य मान '{0}' सेट नहीं कर सकता।
+permissions_rules_invalid					= TPermissionEvent.Rules अमान्य मान '{0}' सेट नहीं कर सकता।
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' किसी एप्लिकेशन मॉड्यूल की ID को संदर्भित नहीं करता।
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' किसी मान्य TDbParameterModule एप्लिकेशन मॉड्यूल को संदर्भित नहीं करता।
+permissions_init_once						= TPermissionsManager.init केवल एक बार ही इनिशियलाइज़ किया जा सकता है।
+permissions_duplicate_permission			= TPermissionsManager अनुमति '{0}' पहले से रजिस्टर्ड है।
+permissions_role_children_invalid			= TPermissionsManager कॉन्फ़िगरेशन रोल '{0}' में अमान्य चाइल्ड '{1}' हैं।
+permissions_rule_invalid					= TPermissionsManager कॉन्फ़िगरेशन अनुमति नियम '{0}' की प्रॉपर्टीज़ ऐरे नहीं हैं।
+permissions_rules_require_name				= TPermissionsManager नियमों में अनुमति "name" प्रॉपर्टी होनी चाहिए।
+permissions_role_rule_nested				= TPermissionsManager कॉन्फ़िगरेशन रोल '{0}' में एक <permissionrule> है। अनुमति नियम permissions कॉन्फ़िगरेशन एलिमेंट के प्रत्यक्ष चाइल्ड होते हैं।
+permissions_rule_class_invalid				= TPermissionsManager अनुमति नियम क्लास '{0}' एक डायरेक्टरी नेमस्पेस है, क्लास नहीं।
+permissions_children_invalid				= TPermissionsManager.*RoleChildren चाइल्ड एक स्ट्रिंग या ऐरे होने चाहिए लेकिन '{0}' है।
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' एक मान्य फ़ाइल नहीं है।
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' एक मान्य पथ एलियास नहीं है। सुनिश्चित करें कि आपने यह एलियास कॉन्फ़िगरेशन में परिभाषित किया है और यह एक मान्य डायरेक्टरी की ओर संकेत करता है।
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' एक मान्य डायरेक्टरी नहीं है।
+thememanager_basepath_unchangeable			= TThemeManager.BasePath को मॉड्यूल इनिशियलाइज़ होने के बाद बदला नहीं जा सकता।
+thememanager_theme_invalid					= TThemeManager थीम नाम '{0}' एक एकल डायरेक्टरी नाम होना चाहिए।
+
+theme_baseurl_required						= TThemeManager.BasePath आवश्यक है। डिफ़ॉल्ट रूप से, एप्लिकेशन एंट्री स्क्रिप्ट वाली डायरेक्टरी के अंतर्गत 'themes' नाम की डायरेक्टरी मानी जाती है।
+theme_path_inexistent						= थीम पथ '{0}' मौजूद नहीं है।
+theme_control_nested						= थीम '{1}' में कंट्रोल प्रकार '{0}' की स्किन किसी दूसरी स्किन के भीतर नहीं हो सकती।
+theme_skinid_duplicated						= SkinID '{0}.{1}' थीम '{2}' में डुप्लिकेट है।
+theme_databind_forbidden					= थीम '{0}' में कंट्रोल स्किन '{1}.{2}' की प्रॉपर्टी '{3}' के लिए Databind का उपयोग नहीं किया जा सकता।
+theme_property_readonly						= स्किन एक केवल-पठन कंट्रोल प्रॉपर्टी '{0}.{1}' पर लागू की जा रही है।
+theme_property_undefined					= स्किन एक अस्तित्वहीन कंट्रोल प्रॉपर्टी '{0}.{1}' पर लागू की जा रही है।
+theme_tag_unexpected						= प्रॉपर्टी {0} के इनिशियलाइज़ेशन में एक अज्ञात टैग प्रकार {1} है।
+
+control_object_reregistered					= डुप्लिकेट ऑब्जेक्ट ID '{0}' पाया गया।
+control_id_invalid							= {0}.ID '{1}' अमान्य है। केवल अल्फ़ान्यूमेरिक और अंडरलाइन वर्णों की अनुमति है। पहला वर्ण एक अक्षर या अंडरलाइन होना चाहिए।
+control_skinid_unchangeable					= {0}.SkinID को कंट्रोल पर स्किन लागू होने या चाइल्ड कंट्रोल बनने के बाद बदला नहीं जा सकता।
+control_enabletheming_unchangeable			= {0}.EnableTheming को चाइल्ड कंट्रोल बनने के बाद बदला नहीं जा सकता।
+control_stylesheet_applied					= StyleSheet स्किन {0} पर पहले ही लागू की जा चुकी है।
+control_id_nonunique						= {0}.ID '{1}' एक ही नेमिंग कंटेनर के अंतर्गत सभी कंट्रोलों में अद्वितीय नहीं है।
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' ऋणात्मक नहीं होना चाहिए।
+
+templatecontrol_mastercontrol_invalid		= मास्टर कंट्रोल TTemplateControl प्रकार या उसकी चाइल्ड क्लास का होना चाहिए।
+templatecontrol_mastercontrol_required		= कंट्रोल '{0}' को एक मास्टर कंट्रोल चाहिए क्योंकि कंट्रोल TContent का उपयोग करता है।
+templatecontrol_contentid_duplicated		= TContent ID '{0}' डुप्लिकेट है।
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder ID '{0}' डुप्लिकेट है।
+templatecontrol_directive_invalid			= {0}.{1} टेम्पलेट डायरेक्टिव के माध्यम से केवल एक स्थिर टेक्स्ट स्ट्रिंग स्वीकार कर सकता है।
+templatecontrol_placeholder_inexistent		= TContent '{0}' के लिए कोई मेल खाता TContentPlaceHolder नहीं है।
+
+page_form_duplicated						= एक पेज में अधिकतम एक TForm हो सकता है। शेष फ़ॉर्म के लिए सामान्य HTML form टैग का उपयोग करें।
+page_isvalid_unknown						= TPage.IsValid का अभी मूल्यांकन नहीं हुआ है।
+page_postbackcontrol_invalid				= पोस्टबैक कंट्रोल '{0}' निर्धारित नहीं किया जा सका।
+page_control_outofform						= {0} '{1}' TForm के भीतर होना चाहिए।
+page_head_duplicated						= एक पेज में अधिकतम एक THead हो सकता है।
+page_head_required							= HTML head सेक्शन में CSS और js रेंडर करने के लिए पेज टेम्पलेट में एक THead कंट्रोल आवश्यक है।
+page_statepersister_invalid					= पेज स्टेट पर्सिस्टर को IPageStatePersister इंटरफ़ेस लागू करना चाहिए।
+
+csmanager_pradoscript_invalid				= अज्ञात Prado स्क्रिप्ट लाइब्रेरी नाम '{0}'।
+csmanager_pradoscript_notloaded				= Prado स्क्रिप्ट लाइब्रेरी नाम '{0}' अभी लोड नहीं हुआ है।
+csmanager_pradostyle_invalid				= अज्ञात Prado स्टाइल लाइब्रेरी नाम '{0}'।
+csmanager_invalid_packages					= '{0}' में परिभाषित javascript पैकेजों के लिए अज्ञात पैकेज '{1}'। मान्य पैकेज '{2}' हैं।
+
+httpclient_transport_error					= HTTP क्लाइंट ट्रांसपोर्ट त्रुटि (कोड {0}): {1}
+httpclient_http_error						= स्टेटस {0} के साथ HTTP त्रुटि प्रतिक्रिया।
+httpclient_transport_required				= कोई HTTP ट्रांसपोर्ट उपलब्ध नहीं है: cURL एक्सटेंशन लोड नहीं है और allow_url_fopen बंद है।
+
+restclient_invalid_header					= TRestClient हेडर '{0}' का नाम अमान्य है या मान में CR/LF है।
+restclient_basicauth_username_colon			= TRestClient Basic-auth यूज़रनेम में कोलन नहीं होना चाहिए (RFC 7617 क्रेडेंशियल विभाजक)।
+
+contentplaceholder_id_required				= TContentPlaceHolder में एक ID होना चाहिए।
+
+content_id_required							= TContent में एक ID होना चाहिए।
+
+controlcollection_control_required			= TControlList केवल स्ट्रिंग या TControl ऑब्जेक्ट स्वीकार कर सकता है।
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' अमान्य है। यह केवल एक एकल वर्ण होना चाहिए।
+webcontrol_dir_invalid						= {0}.Dir '{1}' अमान्य है। अनुमत मान 'ltr', 'rtl' और 'auto' हैं।
+webcontrol_style_invalid					= {0}.Style केवल स्ट्रिंग मान ले सकता है।
+
+listcontrol_selection_invalid				= {0} में एक अमान्य चयन है जो डेटाबाइंडिंग करने से पहले सेट किया गया है।
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex का मान {1} अमान्य है।
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue का मान '{1}' अमान्य है।
+listcontrol_expression_invalid				= {0} एक अमान्य एक्सप्रेशन '{1}' का मूल्यांकन कर रहा है : {2}
+listcontrol_multiselect_unsupported			= {0} बहु-चयन का समर्थन नहीं करता।
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' नहीं मिला।
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' नहीं मिला।
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' नहीं मिला।
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' नहीं मिला।
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' ऋणात्मक नहीं होना चाहिए।
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' ऋणात्मक नहीं होना चाहिए।
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' 0 से फ़िल्टरिंग कंट्रोल के RenderFilterDepth {1} तक होना चाहिए।
+
+hiddenfield_focus_unsupported				= THiddenField इनपुट फ़ोकस सेट करने का समर्थन नहीं करता।
+hiddenfield_theming_unsupported				= THiddenField थीमिंग का समर्थन नहीं करता।
+hiddenfield_skinid_unsupported				= THiddenField कंट्रोल स्किन का समर्थन नहीं करता।
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' किसी मौजूदा बटन कंट्रोल को संदर्भित नहीं करता।
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding -1 या उससे बड़ा पूर्णांक होना चाहिए।
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing -1 या उससे बड़ा पूर्णांक होना चाहिए।
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History 0 से बड़ा पूर्णांक होना चाहिए।
+
+listitemcollection_item_invalid				= TListItemCollection केवल स्ट्रिंग या TListItem ऑब्जेक्ट ले सकता है।
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices केवल-पठन है।
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack केवल-पठन है।
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex केवल-पठन है।
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices केवल-पठन है।
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue केवल-पठन है।
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices केवल-पठन है।
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' मौजूद नहीं है।
+logrouter_routeclass_required				= <route> कॉन्फ़िगरेशन में Class एट्रिब्यूट आवश्यक है।
+logrouter_routetype_required				= लॉग रूट TLogRoute या उसकी व्युत्पन्न क्लास का इंस्टेंस होना चाहिए।
+
+dblogroute_connectionid_invalid				= TDbLogRoute डेटाबेस कनेक्शन ID '{0}' बनाने में असमर्थ है।
+dblogroute_insert_failed					= TDbLogRoute '{0}' में लॉग इन्सर्ट करने में असमर्थ है।
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' मान्य नहीं है
+dblogroute_table_nonexistent				= TDbLogRoute टेबल '{0}' मौजूद नहीं है और इसे बनाया जाना चाहिए।
+dblogroute_order_invalid					= TDbLogRoute order '{0}' में कॉलम सूचीबद्ध होने चाहिए, प्रत्येक के बाद वैकल्पिक रूप से ASC या DESC।
+dblogroute_limit_invalid					= TDbLogRoute limit '{0}' एक पंक्ति गणना, 'count OFFSET offset', या 'offset, count' होना चाहिए।
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' नेमस्पेस फ़ॉर्मेट में एक डायरेक्टरी होना चाहिए और वेब सर्वर प्रोसेस द्वारा लिखने योग्य होना चाहिए।
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize 0 से बड़ा होना चाहिए।
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles 0 से बड़ा होना चाहिए।
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom खाली नहीं हो सकता।
+emaillogroute_mail_failed					= TEmailLogRoute '{0}' को लॉग भेजने में विफल रहा।
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags मान्य नहीं हैं, '{0}'।
+syslogroute_bad_facility					= TSysLogRoute.Facility मान्य नहीं है, '{0}'।
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger आवश्यक है।
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' किसी Psr\Log\LoggerInterface का मॉड्यूल ID या क्लास नाम नहीं है।
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger एक TPsrLogger नहीं हो सकता; यह उसी TLogger में वापस लॉग करेगा।
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns 0 से कम नहीं होना चाहिए।
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate खाली है या इसमें अमान्य कंट्रोल ID पथ है।
+basevalidator_validatable_required			= {0}.ControlToValidate को IValidatable इंटरफ़ेस लागू करने वाले कंट्रोल की ओर संकेत करना चाहिए।
+basevalidator_forcontrol_unsupported		= {0}.ForControl समर्थित नहीं है।
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare में अमान्य कंट्रोल ID पथ है।
+
+filevalidator_fileupload_required			= {0}.ControlToValidate को एक TFileUpload कंट्रोल की ओर संकेत करना चाहिए।
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate में अमान्य TListControl ID पथ है, "{1}" एक {2} है।
+
+repeater_template_required					= TRepeater.{0} को ITemplate इंटरफ़ेस लागू करने वाला टेम्पलेट इंस्टेंस चाहिए।
+repeater_itemtype_unknown					= अज्ञात रिपीटर आइटम प्रकार {0}।
+repeateritemcollection_item_invalid			= TRepeaterItemCollection केवल ऐसे ऑब्जेक्ट स्वीकार कर सकता है जो TControl या उसकी वंशज क्लास के इंस्टेंस हों।
+
+datalist_template_required					= TDataList.{0} को ITemplate इंटरफ़ेस लागू करने वाला टेम्पलेट इंस्टेंस चाहिए।
+datalistitemcollection_datalistitem_required	= TDataListItemCollection केवल TDataListItem ऑब्जेक्ट स्वीकार कर सकता है।
+
+datagrid_template_required					= TDataGrid.{0} को ITemplate इंटरफ़ेस लागू करने वाला टेम्पलेट इंस्टेंस चाहिए।
+templatecolumn_template_required			= TTemplateColumn.{0} को ITemplate इंटरफ़ेस लागू करने वाला टेम्पलेट इंस्टेंस चाहिए।
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex 0 से कम नहीं होना चाहिए।
+datagrid_pagesize_invalid					= TDataGrid.PageSize 0 से बड़ा होना चाहिए।
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount 0 से कम नहीं होना चाहिए।
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection केवल TDataGridItem ऑब्जेक्ट स्वीकार कर सकता है।
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection केवल TDataGridColumn ऑब्जेक्ट स्वीकार कर सकता है।
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount 0 से बड़ा होना चाहिए।
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor अमान्य डेटा के फ़ील्ड मान का मूल्यांकन करने का प्रयास कर रहा है। सुनिश्चित करें कि डेटा एक ऐरे, TMap, TList, या निर्दिष्ट फ़ील्ड '{0}' वाला ऑब्जेक्ट है।
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor अज्ञात फ़ील्ड '{0}' के डेटा मान का मूल्यांकन करने का प्रयास कर रहा है: {1}।
+
+tablerowcollection_tablerow_required		= TTableRowCollection केवल TTableRow ऑब्जेक्ट स्वीकार कर सकता है।
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection केवल TTableColumn ऑब्जेक्ट स्वीकार कर सकता है।
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection केवल TTableColumnGroup ऑब्जेक्ट स्वीकार कर सकता है।
+tablecolumn_span_invalid					= TTableColumn Span 1 या उससे बड़ा होना चाहिए; {0} दिया गया।
+
+tablecellcollection_tablerow_required		= TTableCellCollection केवल TTableCell ऑब्जेक्ट स्वीकार कर सकता है।
+
+multiview_view_required						= TMultiView केवल TView को चाइल्ड के रूप में स्वीकार कर सकता है।
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex का इंडेक्स '{0}' अमान्य है।
+multiview_view_inexistent					= TMultiView निर्दिष्ट व्यू नहीं ढूँढ सकता।
+multiview_viewid_invalid					= TMultiView स्विच करने के लिए व्यू '{0}' नहीं ढूँढ सकता।
+
+viewcollection_view_required				= TViewCollection केवल TView को अपने एलिमेंट के रूप में स्वीकार कर सकता है।
+
+view_visible_readonly						= TView.Visible केवल-पठन है। इसकी दृश्यता टॉगल करने के लिए TView.Active का उपयोग करें।
+
+wizard_step_invalid							= सक्रिय किया जाने वाला स्टेप विज़ार्ड स्टेप संग्रह में नहीं मिला।
+wizard_command_invalid						= अमान्य विज़ार्ड नेविगेशन कमांड '{0}'।
+
+table_tablesection_outoforder				= TTable टेबल सेक्शन इस क्रम में होने चाहिए: Header, Body और Footer।
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType केवल-पठन है।
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection केवल TWizardStep या उसकी व्युत्पन्न क्लासों के ऑब्जेक्ट स्वीकार कर सकता है।
+
+texthighlighter_stylesheet_invalid			= TTextHighlighter के लिए स्टाइलशीट फ़ाइल नहीं मिली।
+
+hotspotcollection_hotspot_required			= THotSpotCollection केवल THotSpot या उसकी व्युत्पन्न क्लासों के इंस्टेंस स्वीकार कर सकता है।
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode केवल-पठन है।
+htmlarea_tarfile_invalid					= THtmlArea TinyMCE tar फ़ाइल का पता लगाने में असमर्थ है।
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile को बदला नहीं जा सकता क्योंकि मॉड्यूल पहले से इनिशियलाइज़ है।
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' अमान्य है। सुनिश्चित करें कि यह नेमस्पेस फ़ॉर्मेट में है और फ़ाइल एक्सटेंशन '.xml' या '.php' है।
+parametermodule_parameterid_required		= Parameter एलिमेंट में 'id' एट्रिब्यूट होना चाहिए।
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' अमान्य है। केवल अल्फ़ान्यूमेरिक और अंडरलाइन वर्णों की अनुमति है। पहला वर्ण एक अक्षर या अंडरलाइन होना चाहिए।
+datagridcolumn_expression_invalid			= {0} एक अमान्य एक्सप्रेशन '{1}' का मूल्यांकन कर रहा है : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID एक अमान्य कैश मॉड्यूल ID {0} पर सेट है। या तो मॉड्यूल मौजूद नहीं है या ICache इंटरफ़ेस लागू नहीं करता।
+outputcache_duration_invalid				= {0}.Duration 0 से कम न होने वाला पूर्णांक होना चाहिए।
+
+stack_data_not_iterable						= TStack केवल ऐरे या ट्रैवर्सेबल ऑब्जेक्ट से डेटा प्राप्त कर सकता है।
+stack_empty									= TStack खाली है।
+
+queue_data_not_iterable						= TQueue केवल ऐरे या ट्रैवर्सेबल ऑब्जेक्ट से डेटा प्राप्त कर सकता है।
+queue_empty									= TQueue खाली है।
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount 1 से कम न होने वाला पूर्णांक होना चाहिए।
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex सीमा से बाहर है।
+pager_pagecount_invalid						= TPager.PageCount 0 से छोटा नहीं हो सकता।
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} एक मान्य ID पथ होना चाहिए जो TDataBoundControl से व्युत्पन्न कंट्रोल की ओर संकेत करता हो।
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize 1 से छोटा न होने वाला पूर्णांक होना चाहिए।
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount 0 से छोटा न होने वाला पूर्णांक होना चाहिए।
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex सीमा से बाहर है।
+databoundcontrol_datasource_invalid			= {0}.DataSource मान्य नहीं है।
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' किसी मौजूदा कंट्रोल को संदर्भित नहीं करता।
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' को IDataSource लागू करने वाले कंट्रोल को संदर्भित करना चाहिए।
+databoundcontrol_datamember_invalid			= DataMember '{0}' डेटा स्रोत के किसी व्यू का नाम नहीं है।
+
+datasourcecontrol_focus_unsupported			= {0} Focus का समर्थन नहीं करता।
+datasourcecontrol_enabletheming_unsupported	= {0} EnableTheming का समर्थन नहीं करता।
+datasourcecontrol_skinid_unsupported		= {0} SkinID का समर्थन नहीं करता।
+datasourcecontrol_visible_unsupported		= {0} Visible का समर्थन नहीं करता।
+datasourceview_insert_unsupported			= {0} insert का समर्थन नहीं करता।
+datasourceview_update_unsupported			= {0} update का समर्थन नहीं करता।
+datasourceview_delete_unsupported			= {0} delete का समर्थन नहीं करता।
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource को एक ऐरे, एक IDataSource, या एक Traversable डेटा स्रोत चाहिए।
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView को null, एक ऐरे, या एक Traversable डेटा स्रोत चाहिए।
+
+clientscript_invalid_file_position			= TClientScript कंट्रोल '{0}' के लिए अमान्य फ़ाइल स्थिति '{1}', यह 'Head', 'Here' या 'Begin' होनी चाहिए।
+clientscript_invalid_package_path			= TClientScript कंट्रोल '{1}' के लिए अमान्य PackagePath '{0}'।
+
+tdatepicker_autopostback_unsupported		= '{0}' AutoPostBack का समर्थन नहीं करता।
+globalization_cache_path_failed				= अनुवाद संदेश कैश पथ '{0}' नहीं बनाया जा सका। सुनिश्चित करें कि पैरेंट डायरेक्टरी मौजूद है और वेब प्रोसेस द्वारा लिखने योग्य है।
+globalization_source_path_failed			= अनुवाद संदेश पथ '{0}' नहीं बनाया जा सका। सुनिश्चित करें कि पैरेंट डायरेक्टरी मौजूद है और वेब प्रोसेस द्वारा लिखने योग्य है।
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' किसी मान्य TDataSourceConfig मॉड्यूल की ओर संकेत नहीं करता।
+messagesource_connectionid_required			= MessageSource_Database.source में ConnectionID आवश्यक है।
+
+callback_not_support_no_priority_state_update	= कॉलबैक अनुरोध गैर-प्राथमिकता वाले पेजस्टेट अपडेट का समर्थन नहीं करता।
+callback_invalid_callback_options			= '{1}' कॉलबैक कंट्रोल '{0}' के लिए मान्य TCallbackOptions कंट्रोल नहीं है।
+callback_invalid_clientside_options			= कॉलबैक ClientSide प्रॉपर्टी या तो TCallbackOptions कंट्रोल की ID वाली स्ट्रिंग होनी चाहिए या TCallbackClientSideOptions का इंस्टेंस।
+callback_invalid_handler					= अमान्य कॉलबैक हैंडलर, कंट्रोल {0} को ICallbackEventHandler लागू करना चाहिए।
+callback_invalid_target						= अमान्य कॉलबैक लक्ष्य, ID {0} वाला कोई कंट्रोल नहीं है।
+
+callback_interval_be_positive				= TCallbackTimer "{0}" का Interval शून्य सेकंड से सख्ती से बड़ा होना चाहिए।
+callback_decay_be_not_negative				= TCallbackTimer "{0}" की Decay दर ऋणात्मक नहीं होनी चाहिए।
+
+callback_no_autopostback					= कंट्रोल "{0}" AutoPostBack सक्षम नहीं कर सकता।
+
+xmltransform_xslextension_required			= TXmlTransform के लिए PHP का XSL एक्सटेंशन आवश्यक है।
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' अमान्य है।
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' अमान्य है।
+xmltransform_transform_required				= TXmlTransform के लिए TransformContent या TransformPath प्रॉपर्टी में से एक सेट होनी चाहिए।
+
+ttriggeredcallback_invalid_controlid		= '{0}' के लिए ControlID प्रॉपर्टी खाली नहीं होनी चाहिए।
+tactivecustomvalidator_clientfunction_unsupported	= {0} क्लाइंट साइड वैलिडेटर फ़ंक्शन का समर्थन नहीं करता।
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' किसी मान्य TDataSourceConfig मॉड्यूल की पहचान नहीं करता।
+dbproperties_property_required				= {1}.{0} एक आवश्यक प्रॉपर्टी है।
+dbproperties_identifier_invalid				= {1}.{0} '{2}' एक मान्य SQL आइडेंटिफ़ायर नहीं है।
+
+dbconnection_open_failed					= TDbConnection DB कनेक्शन स्थापित करने में विफल रहा: {0}
+dbconnection_connection_inactive			= TDbConnection निष्क्रिय है।
+dbconnection_unsupported_driver_charset		= डेटाबेस ड्राइवर '{0}' charset सेट करने का समर्थन नहीं करता।
+dbconnection_charset_unchangeable			= डेटाबेस ड्राइवर '{0}' खोलने के बाद charset नहीं बदल सकता। Charset एक DSN पैरामीटर है।
+
+dbcommand_prepare_failed					= TDbCommand SQL स्टेटमेंट "{1}" को तैयार करने में विफल रहा: {0}
+dbcommand_execute_failed					= TDbCommand SQL स्टेटमेंट "{1}" को निष्पादित करने में विफल रहा: {0}
+dbcommand_query_failed						= TDbCommand क्वेरी SQL "{1}" को निष्पादित करने में विफल रहा: {0}
+dbcommand_column_empty						= TDbCommand ने खाली परिणाम लौटाया और स्केलर प्राप्त नहीं कर सका।
+dbdatareader_rewind_invalid					= TDbDataReader एक केवल-अग्रगामी स्ट्रीम है। इसे केवल एक बार ट्रैवर्स किया जा सकता है।
+dbtransaction_transaction_inactive			= TDbTransaction निष्क्रिय है।
+
+dbcommandbuilder_value_must_not_be_null		= प्रॉपर्टी {0} null नहीं होनी चाहिए, जैसा टेबल '{1}' के कॉलम '{2}' द्वारा परिभाषित है।
+
+dbcommon_invalid_table_name					= डेटाबेस टेबल '{0}' नहीं मिली। त्रुटि संदेश: {1}।
+dbcommon_invalid_identifier_name			= अमान्य डेटाबेस आइडेंटिफ़ायर नाम '{0}', विवरण के लिए {1} देखें।
+dbtableinfo_invalid_column_name				= डेटाबेस टेबल '{1}' के लिए अमान्य कॉलम नाम '{0}'।
+dbmetadata_invalid_table_view				= अमान्य टेबल/व्यू नाम '{0}', या उस टेबल/व्यू '{0}' में कोई सुलभ कॉलम/फ़ील्ड परिभाषा नहीं है।
+dbmetadata_requires_php_version				= {0} डेटाबेस के उपयोग के लिए PHP संस्करण {1} या बाद का आवश्यक है।
+
+dbtablegateway_invalid_criteria				= अमान्य criteria ऑब्जेक्ट, यह एक स्ट्रिंग या TSqlCriteria का इंस्टेंस होना चाहिए।
+dbtablegateway_no_primary_key_found			= टेबल '{0}' में कोई प्राइमरी की फ़ील्ड नहीं है।
+dbtablegateway_missing_pk_values			= टेबल '{0}' के लिए IN(key1, key2, ...) बनाने में प्राइमरी की मान अनुपलब्ध हैं।
+dbtablegateway_pk_value_count_mismatch		= टेबल '{0}' के लिए IN( (key1, key2, ..), (key3, key4, ..)) बनाने में संयुक्त की मानों की गणना मेल नहीं खाती।
+dbtablegateway_mismatch_args_exception		= TTableGateway फ़ाइंडर मेथड '{0}' को {1} पैरामीटर अपेक्षित हैं लेकिन केवल {2} पैरामीटर मिले।
+dbtablegateway_mismatch_column_name			= डायनामिक __call() मेथड '{0}' में कोई मेल खाता कॉलम नहीं मिला, टेबल '{2}' के मान्य कॉलम '{1}' हैं।
+dbtablegateway_invalid_table_info			= टेबल एक स्ट्रिंग या TDbTableInfo का इंस्टेंस होना चाहिए।
+
+resource_not_a_resource						= एक खुला PHP रिसोर्स अपेक्षित था लेकिन '{0}' मिला।
+processfork_failed							= प्रोसेस को फ़ोर्क नहीं किया जा सका।
+liveprocessfork_readonly_receiver			= TLiveProcessFork डेटा प्राप्तकर्ता पक्ष पर केवल-पठन है; केवल प्रेषक पक्ष ही इसे बदलता है।
+stream_open_failed							= स्ट्रीम '{0}' को मोड '{1}' के साथ नहीं खोला जा सका: {2}
+binarystream_unexpected_eof					= स्ट्रीम का अनपेक्षित अंत: {0} बाइट चाहिए थे लेकिन केवल {1} पढ़े गए।
+binarystream_short_write					= अपूर्ण लेखन: {0} बाइट लिखे जाने थे लेकिन केवल {1} स्वीकार किए गए।
+streamresourcewrapper_unusable_stream		= स्ट्रीम न पठनीय है न लेखनीय और इसे रिसोर्स के रूप में प्रस्तुत नहीं किया जा सकता।
+streamfilter_already_registered				= स्ट्रीम फ़िल्टर '{0}' पहले से रजिस्टर्ड है।
+streamfilter_registration_failed			= क्लास '{1}' के लिए स्ट्रीम फ़िल्टर '{0}' रजिस्टर नहीं किया जा सका।
+streamwrapper_already_registered			= स्ट्रीम रैपर प्रोटोकॉल '{0}' पहले से रजिस्टर्ड है।
+streamwrapper_registration_failed			= क्लास '{1}' के लिए स्ट्रीम रैपर प्रोटोकॉल '{0}' रजिस्टर नहीं किया जा सका।
+reservedspace_invalid						= आरक्षित स्थान के लिए गैर-ऋणात्मक ऑफ़सेट और धनात्मक लंबाई आवश्यक है; ऑफ़सेट '{0}' और लंबाई '{1}' दी गई।
+reservedspace_access_denied					= यह ऑपरेशन ऑफ़सेट '{0}' पर आरक्षित स्थान से ओवरलैप करता है।
+multipartstream_element_invalid				= TMultipartStream एलिमेंट में 'name' और 'contents' आवश्यक हैं।
+builtincompressor_extension_required		= '{0}' कंप्रेसर के लिए '{1}' PHP एक्सटेंशन आवश्यक है।
+builtincompressor_compress_failed			= '{0}' कंप्रेसर डेटा को कंप्रेस करने में विफल रहा।
+builtincompressor_decompress_failed			= '{0}' कंप्रेसर डेटा को डीकंप्रेस करने में विफल रहा; यह दूषित हो सकता है या किसी अन्य फ़ॉर्मेट में हो सकता है।
+compression_method_unknown					= कंप्रेशन मेथड '{0}' अज्ञात है या इसका एक्सटेंशन उपलब्ध नहीं है।
+compression_none_available					= इस PHP इंस्टॉलेशन में कोई कंप्रेशन मेथड उपलब्ध नहीं है।
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' एक ज्ञात कंटेंट कोडिंग नहीं है। ज्ञात कोडिंग हैं: {1}।
+compression_xz_unsupported					= xz/LZMA के लिए कोई PHP एक्सटेंशन नहीं है; नेटिव-या-CLI xz कोडेक के लिए belisoful/prado-compression इंस्टॉल करें।
+clicompressor_command_missing				= '{0}' कंप्रेसर के लिए PATH पर इनमें से एक सिस्टम कमांड आवश्यक है: '{1}'।
+clicompressor_process_failed				= '{0}' कंप्रेसर '{1}' कमांड प्रारंभ नहीं कर सका।
+clicompressor_command_failed				= '{0}' कंप्रेसर कमांड '{1}' कोड {2} के साथ समाप्त हुई: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule को एक Endpoint, या उसे बनाने के लिए एक धनात्मक Port चाहिए।
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' अमान्य है। यह TSocketServer या उसकी सबक्लास होनी चाहिए।
+socketservermodule_scheme_not_stream		= TSocketServerModule कनेक्शन-रहित स्कीम '{0}' पर accept नहीं कर सकता। tcp, tls, ssl, या unix जैसी स्ट्रीम स्कीम का उपयोग करें।
+
+bitreader_invalid_bits						= {0} बिट नहीं पढ़े जा सकते; गणना 0 और प्लेटफ़ॉर्म पूर्णांक चौड़ाई के बीच होनी चाहिए।
+bitreader_64bit_php_required				= {0} बिट पढ़ने के लिए 64-बिट PHP बिल्ड आवश्यक है।
+bitreader_invalid_float_bits				= {0}-बिट फ़्लोट नहीं पढ़ा जा सकता; केवल 8, 16, 32, या 64 बिट समर्थित हैं।
+bitwriter_invalid_bits						= {0} बिट नहीं लिखे जा सकते; गणना 0 और प्लेटफ़ॉर्म पूर्णांक चौड़ाई के बीच होनी चाहिए।
+bitwriter_64bit_php_required				= {0} बिट लिखने के लिए 64-बिट PHP बिल्ड आवश्यक है।
+bitwriter_invalid_float_bits				= {0}-बिट फ़्लोट नहीं लिखा जा सकता; केवल 8, 16, 32, या 64 बिट समर्थित हैं।
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' मौजूद नहीं है। ध्यान दें, इसे नेमस्पेस फ़ॉर्मेट में निर्दिष्ट करना होगा और फ़ाइल एक्सटेंशन '.xml' या '.php' होना चाहिए।
+soapservice_server_invalid					= TSoapService SOAP सर्वर क्लास '{0}' अमान्य है। यह TSoapServer या उसकी सबक्लास होनी चाहिए।
+soapservice_serverid_required				= <soap> एलिमेंट में 'id' एट्रिब्यूट होना चाहिए।
+soapservice_serverid_duplicated				= SOAP सर्वर ID '{0}' डुप्लिकेट है।
+soapserver_id_invalid						= अमान्य SOAP सर्वर ID '{0}'। इसका अंत '.wsdl' से नहीं होना चाहिए।
+soapserver_provider_invalid					= TSoapServer प्रोवाइडर क्लास '{0}' को रिज़ॉल्व नहीं किया जा सका।
+soapserver_version_invalid					= अमान्य SOAP संस्करण '{0}'। यह '1.1' या '1.2' होना चाहिए।
+soapserver_wsdlstyle_invalid				= अमान्य WSDL स्टाइल '{0}'। यह 'rpc' या 'document' होना चाहिए।
+soapserver_wsdlstyle_unsupported			= WSDL स्टाइल '{0}' के लिए pradosoft/prado-wsdlgenerator 1.2 या बाद का चाहिए। इंस्टॉल किया गया जेनरेटर केवल 'rpc' उत्पन्न करता है।
+
+jsonservice_id_required						= TJsonService को अपने JSON एलिमेंट में 'id' एट्रिब्यूट चाहिए।
+jsonservice_response_type_invalid			= JSON क्लास {0} अमान्य है। यह TJsonResponse होनी चाहिए या TJsonResponse से विस्तारित होनी चाहिए।
+jsonservice_class_required					= TJsonService को अपने JSON एलिमेंट में 'class' एट्रिब्यूट चाहिए।
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass आवश्यक है।
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' एक मान्य यूज़र क्लास नहीं है। क्लास को TDbUser से विस्तारित होना चाहिए।
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' किसी मान्य TDataSourceConfig मॉड्यूल की ओर संकेत नहीं करता।
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID आवश्यक है।
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' किसी मान्य TDataSourceConfig मॉड्यूल की ओर संकेत नहीं करता।
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID आवश्यक है।
+
+feedservice_id_required						= TFeedService को अपने feed एलिमेंट में 'id' एट्रिब्यूट चाहिए।
+feedservice_feedtype_invalid				= फ़ीड क्लास '{0}' को IFeedContentProvider इंटरफ़ेस लागू करना चाहिए।
+feedservice_class_required					= TFeedService को अपने feed एलिमेंट में 'class' एट्रिब्यूट चाहिए।
+
+tabviewcollection_tabview_required			= TTabPanel केवल TTabView को चाइल्ड के रूप में स्वीकार कर सकता है।
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID की ID '{0}' अमान्य है।
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex का इंडेक्स '{0}' अमान्य है।
+tabpanel_view_inexistent					= TTabPanel निर्दिष्ट व्यू नहीं ढूँढ सकता।
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID आवश्यक है।
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' एक अस्तित्वहीन मॉड्यूल की ओर संकेत करता है।
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' ऐसे मॉड्यूल की ओर संकेत करता है जो ICache इंटरफ़ेस लागू नहीं करता।
+
+urlmapping_urlmappingpattern_required		= TUrlMapping में केवल TUrlMappingPattern या उसकी चाइल्ड क्लासें हो सकती हैं।
+urlmapping_global_required					= TUrlMapping को ग्लोबल मॉड्यूल के रूप में कॉन्फ़िगर किया जाना चाहिए।
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' एक फ़ाइल नहीं है।
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' को नेमस्पेस फ़ॉर्मेट में एक XML फ़ाइल की ओर संकेत करना चाहिए।
+
+urlmappingpattern_serviceparameter_required	= पैटर्न '{0}' के लिए TUrlMappingPattern.ServiceParameter आवश्यक है।
+
+keyboard_forcontrol_required				= TKeyboard.ForControl खाली नहीं हो सकता।
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' अमान्य है।
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme {0} और {1} के बीच का पूर्णांक होना चाहिए।
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize {0} और {1} के बीच का पूर्णांक होना चाहिए।
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength {0} और {1} के बीच का पूर्णांक होना चाहिए।
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength {0} और {1} के बीच का पूर्णांक होना चाहिए।
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet कम से कम 2 वर्णों वाली स्ट्रिंग होनी चाहिए।
+captcha_privatekey_unknown					= TCaptcha.PrivateKey अज्ञात है। कृपया सुनिश्चित करें कि आपकी assets डायरेक्टरी वेब सर्वर प्रोसेस द्वारा लिखने योग्य है।
+captcha_gd2_required						= TCaptcha के लिए PHP GD2 एक्सटेंशन आवश्यक है।
+captcha_imagettftext_required				= TCaptcha के लिए TrueType फ़ॉन्ट समर्थन वाला PHP GD2 एक्सटेंशन आवश्यक है।
+captcha_imagepng_required					= TCaptcha के लिए PNG इमेज फ़ॉर्मेट समर्थन वाला PHP GD2 एक्सटेंशन आवश्यक है।
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl को किसी मौजूदा TCaptcha कंट्रोल की ओर संकेत करना चाहिए।
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} को किसी मौजूदा TCaptcha कंट्रोल की ओर संकेत करना चाहिए।
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} को किसी मौजूदा TCaptcha कंट्रोल की ओर संकेत करना चाहिए।
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey अज्ञात है। reCAPTCHA उपयोग करने के लिए आपको एक API कुंजी प्राप्त करनी होगी।
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey अज्ञात है। reCAPTCHA उपयोग करने के लिए आपको एक API कुंजी प्राप्त करनी होगी।
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate TReCaptcha का इंस्टेंस होना चाहिए।
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' में केवल अक्षर, अंक, '_' और '-' होने चाहिए।
+proofofwork_complexity_invalid				= TProofOfWork.Complexity {0} और {1} के बीच का पूर्णांक होना चाहिए।
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' को एक TProofOfWork कंट्रोल की ओर संकेत करना चाहिए।
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' एक मान्य यूज़र क्लास नहीं है। क्लास को TSliderHandle से विस्तारित होना चाहिए।
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' किसी मान्य कैश मॉड्यूल की ओर संकेत नहीं करता।
+cachepagestatepersister_cache_required		= TCachePageStatePersister के लिए एक कैश मॉड्यूल लोड होना आवश्यक है।
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' किसी मान्य कैश मॉड्यूल की ओर संकेत नहीं करता।
+cachemoduleid_cache_required				= {0} को एक कैश मॉड्यूल चाहिए। एक प्राइमरी कैश कॉन्फ़िगर करें या {0}.CacheModuleID सेट करें।
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout शून्य से कम न होने वाला पूर्णांक होना चाहिए।
+
+conditional_condition_invalid				= TConditional.Condition '{0}' एक मान्य PHP एक्सप्रेशन नहीं है: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule को पैरामीटर डेटा संग्रहीत करने के लिए DB टेबल '{0}' नहीं मिली।
+dbparametermodule_get_no_blank_key			= TDbParameterModule खाली कुंजी प्राप्त नहीं कर सकता।
+dbparametermodule_set_no_blank_key			= TDbParameterModule खाली कुंजी को मान के साथ सेट नहीं कर सकता।
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' किसी मान्य TDataSourceConfig मॉड्यूल की ओर संकेत नहीं करता।
+dbparametermodule_serializer_not_callable	= TDbParameterModule Serializer एक कॉलेबल नहीं है।
+
+clockawaretrait_invalid_clock_class			= क्लॉक क्लास '{0}' को Prado\Util\Clock\IClock लागू करना चाहिए।
+utcclock_timezone_fixed						= TUTCClock UTC पर स्थिर है; किसी अन्य ज़ोन के लिए TTimezoneClock का उपयोग करें।
+
+processcrontask_no_command					= TProcessCronTask '{0}' में चलाने के लिए कोई Command नहीं है।
+processcrontask_launch_failed				= TProcessCronTask प्रोसेस लॉन्च करने में विफल रहा: '{0}'।
+processcrontask_write_failed				= TProcessCronTask pid फ़ाइल '{0}' नहीं लिख सका।
+closurecrontask_no_closure					= TClosureCronTask '{0}' में चलाने के लिए कोई क्लोज़र नहीं है।
+closurecrontask_closure_required			= TClosureCronTask को एक Closure चाहिए।
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' एक TSecurityManager नहीं है।
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' अपने क्लोज़र पेलोड को डिक्रिप्ट नहीं कर सका।
+cronmethodtask_no_module					= TCronMethodTask को मॉड्यूल '{0}' नहीं मिला।
+cron_usermanager_nonexistent				= TCronModule को '{0}' नाम का UserManager नहीं मिला।
+cron_usermanager_invalid					= TCronModule UserManager '{0}' एक TUserManager नहीं है।
+cron_task_as_array_required					= TCronModule कॉन्फ़िगरेशन टास्क जॉब एक ऐरे नहीं था।
+cron_duplicate_task_name					= TCronModule के टास्क जॉब के नाम अद्वितीय होने चाहिए।
+cron_schedule_required						= क्रॉन टास्क में एक शेड्यूल होना चाहिए।
+cron_task_required							= क्रॉन टास्क में एक टास्क होना चाहिए।
+cron_not_a_crontask							= क्रॉन टास्क '{0}' एक TCronTask नहीं है।
+cron_additional_tasks_invalid				= '{0}' एक मान्य अतिरिक्त क्रॉन टास्क नहीं है।
+crontask_no_module							= TCronTask को मॉड्यूल '{0}' नहीं मिला।
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask को निर्दिष्ट मॉड्यूल '{0}' नहीं मिला।
+dbcron_invalid_name							= TDbCronManager टास्क नाम '{0}' अमान्य है।
+dbcron_conflicting_task_names				= कॉन्फ़िगरेशन क्रॉन टास्क DB क्रॉन टास्क '{0}' से संघर्ष करते हैं।
+dbcron_table_nonexistent					= TDbCronManager डेटाबेस टेबल मौजूद नहीं है।
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' एक TDataSourceConfig नहीं है।
+
+timescheduler_invalid_string				= TTimeScheduler शेड्यूल एलिमेंट '{0}' को पार्स नहीं कर सका
+
+rational_bad_offset							= "{0}" TRational का मान्य प्रॉपर्टी एक्सेसर नहीं है।
+
+bithelper_bad_fp_format						= TBitHelper {3} बिट PHP वातावरण में '{0}' एक्सपोनेंट बिट, '{1}' मैंटिसा बिट, '{2}' एक्सपोनेंट बायस के साथ काम नहीं कर सकता।
+bithelper_invalid_color_in					= TBitHelper में कम से कम एक In Bit होना चाहिए। '{0}' दिया गया।
+bithelper_invalid_color_out					= TBitHelper में कम से कम एक Out Bit होना चाहिए। '{0}' दिया गया।
+bithelper_bad_mirror_bits					= TBitHelper {1} बिट PHP वातावरण में '{0}' बिट मिरर नहीं कर सकता।
+
+ar_data_invalid								= {0}.copyFrom() पैरामीटर के रूप में केवल ऑब्जेक्ट या ऐरे ले सकता है।
+ar_save_invalid								= {0} इंस्टेंस को सेव नहीं किया जा सकता क्योंकि यह या तो हटाया गया है या अज्ञात स्थिति में है।
+ar_delete_invalid							= {0} इंस्टेंस को हटाया नहीं जा सकता क्योंकि यह या तो नया रिकॉर्ड है या पहले से हटाया गया रिकॉर्ड है।
+
+dbmetadata_invalid_database_driver			= ड्राइवर '{0}' असमर्थित है। कृपया उपलब्ध होने पर इसका PRADO ड्राइवर इंस्टॉल करें।
+dbmetadata_not_meta_data					= ड्राइवर क्लास {1} अपेक्षित थी लेकिन क्लास {0} मिली।
+dbmetadata_tableinfo_class_invalid			= TDbMetaData टेबल इन्फ़ो क्लास '{0}' एक डायरेक्टरी नेमस्पेस है, क्लास नहीं।
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' अमान्य है। कृपया सुनिश्चित करें कि यह किसी मान्य एप्लिकेशन मॉड्यूल की ओर संकेत करता है।
+distributeddatasource_child_required		= {0} को कम से कम एक '{1}' चाइल्ड एलिमेंट चाहिए।
+masterslavedbconnection_connection_exists	= {0}.{1} कनेक्शन पहले से मौजूद है।
+masterslavedbconnection_interface_required	= {0}.{1} को {2} इंटरफ़ेस लागू करने वाला इंस्टेंस चाहिए।
+slavedbconnection_requires_master			= {0} को एक {1} चाहिए।
+
+response_status_reason_missing				= HTTP 1.1 को विस्तारित स्टेटस-कोड के लिए reason चाहिए
+response_status_reason_badchars				= HTTP 1.1 हेडर के लिए, टोकन status-reason में टोकन CR या LF नहीं होना चाहिए
+
+activefileupload_temppath_invalid			= TActiveFileUpload TempPath पथ '{0}' मौजूद नहीं है या वेब सर्वर प्रोसेस द्वारा लिखने योग्य नहीं है।
+
+tactivetablecell_control_outoftable			= {0} '{1}' एक TTableRow कंट्रोल के भीतर होना चाहिए।
+tactivetablecell_control_notincollection	= {0} '{1}' पैरेंट TTableRow कंट्रोल के TTableCellCollection का सदस्य नहीं है।
+
+tactivetablerow_control_outoftable			= {0} '{1}' एक TTable कंट्रोल के भीतर होना चाहिए।
+tactivetablerow_control_notincollection		= {0} '{1}' पैरेंट TTable कंट्रोल के TTableRowCollection का सदस्य नहीं है।
+
+juioptions_option_invalid					= '{1}' कंट्रोल '{0}' के लिए मान्य विकल्प नहीं है।
+
+ratinglist_invalid_caption_id				= '{0}' TRatingList '{0}' के लिए मान्य कैप्शन कंट्रोल नहीं है।
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID की ID '{0}' अमान्य है।
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex का इंडेक्स '{0}' अमान्य है।
+accordion_view_inexistent					= TAccordion निर्दिष्ट व्यू नहीं ढूँढ सकता।
+
+dot_bad_size								= TDot Size एक धनात्मक पूर्णांक होना चाहिए लेकिन '{0}' है
+dot_bad_border_width						= TDot FlatBorderWidth वैकल्पिक % या CSS लंबाई इकाई वाली संख्या होनी चाहिए लेकिन '{0}' है
+
+juidatepicker_settextmode_unsupported		= TJuiDatePicker का TextMode बदला नहीं जा सकता।
+
+control_adapter_not_active					= BaseActiveControl प्रॉपर्टी को एक गैर-सक्रिय कंट्रोल पर कॉल किया गया।
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' एक TFigure कंट्रोल का प्रत्यक्ष चाइल्ड होना चाहिए।
+summary_requires_details_parent				= TSummary '{0}' एक TDetails कंट्रोल का प्रत्यक्ष चाइल्ड होना चाहिए।
+
+gravatar_bad_default						= TGravatar DefaultImageStyle प्रॉपर्टी मान '{0}' समर्थित नहीं है
+gravatar_bad_size							= TGravatar Size [1 .. 512] के बीच नहीं है बल्कि '{0}' है
+
+progress_value_invalid						= TProgress Value 0 या उससे बड़ा होना चाहिए; {0} दिया गया।
+progress_max_invalid						= TProgress Max 0 से बड़ा होना चाहिए; {0} दिया गया।
+
+time_invalid_datetime						= TTime DateTime एक DateTimeInterface, DateInterval, स्ट्रिंग, या संख्यात्मक मान होना चाहिए; {0} दिया गया।
+time_invalid_text_format					= TTime TextFormat '{0}' कोई TTimeFormat कॉन्स्टेंट नाम या ICU datetime पैटर्न नहीं है।
+
+webtemplate_invalid_child					= TWebTemplate '{0}' में '{1}' नहीं हो सकता: सक्रिय, पोस्टबैक और वैलिडेटर कंट्रोल निष्क्रिय टेम्पलेट सामग्री के भीतर काम नहीं करते। {{...}} प्लेसहोल्डर के साथ सादे मार्कअप का उपयोग करें, या ValidateContent="false" सेट करें।
+
+vardumper_not_array							= __debuginfo() को एक ऐरे लौटाना चाहिए।
+
+htmlpurifier_source_path_failed				= html purifier कैश पथ '{0}' नहीं बनाया जा सका। सुनिश्चित करें कि पैरेंट डायरेक्टरी मौजूद है और वेब प्रोसेस द्वारा लिखने योग्य है।

@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Korean (ko).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application은 한 번만 설정할 수 있습니다.
+prado_component_unknown						= 알 수 없는 컴포넌트 유형 '{0}'입니다. {0} 클래스 파일의 다음 구문 분석 오류가 원인일 수 있습니다: {1}
+prado_using_invalid							= '{0}'은(는) 사용할 수 있는 유효한 네임스페이스가 아닙니다. 디렉터리를 가리키는 네임스페이스를 사용하려면 '.*'을 뒤에 붙였는지 확인하십시오.
+prado_alias_redefined						= 별칭 '{0}'은(는) 다시 정의할 수 없습니다.
+prado_alias_invalid							= 별칭 '{0}'이(가) 유효하지 않은 경로 '{1}'을(를) 참조합니다. 존재하는 디렉터리만 별칭으로 지정할 수 있습니다.
+prado_aliasname_invalid						= 별칭 '{0}'에 유효하지 않은 문자 '.'이 포함되어 있습니다.
+
+component_property_undefined				= 컴포넌트 속성 '{0}.{1}'이(가) 정의되지 않았습니다.
+component_property_readonly					= 컴포넌트 속성 '{0}.{1}'은(는) 읽기 전용입니다.
+component_event_undefined					= 컴포넌트 이벤트 '{0}.{1}'이(가) 정의되지 않았습니다.
+component_method_undefined					= 컴포넌트 메서드 '{0}.{1}'이(가) 정의되지 않았습니다.
+component_eventhandler_invalid				= 컴포넌트 이벤트 '{0}.{1}'에 유효하지 않은 이벤트 핸들러 '{2}'이(가) 연결되어 있습니다.
+component_expression_invalid				= 컴포넌트 '{0}'이(가) 유효하지 않은 표현식 '{1}'을(를) 평가하고 있습니다 : {2}.
+component_statements_invalid				= 컴포넌트 '{0}'이(가) 유효하지 않은 PHP 문 '{1}'을(를) 평가하고 있습니다 : {2}.
+component_class_behavior_defined			= 컴포넌트 '{0}'에 이미 '{1}' 클래스 비헤이비어가 있습니다.
+component_not_a_behavior					= 비헤이비어로 추가되는 컴포넌트 '{0}'이(가) TBaseBehavior가 아닙니다.
+object_not_a_component						= 비헤이비어로 추가되는 객체 '{0}'이(가) TComponent가 아닙니다.
+component_no_tcomponent_class_behaviors		= TComponent에는 재귀 문제로 인해 클래스 비헤이비어를 연결할 수 없습니다.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors는 여러 소유자에 연결할 수 없습니다. 각 소유자마다 인스턴스를 생성하도록 IBehavior 클래스와 속성의 문자열 또는 배열을 전달하십시오.
+
+propertyvalue_enumvalue_invalid				= 값 '{0}'은(는) 유효한 열거형 값이 아닙니다 ({1}).
+propertyvalue_invalid_hex_color				= 값 '{0}'은(는) 유효한 16진수 색상 값이 아닙니다. 예: "#112233"
+propertyvalue_invalid_array_literal			= 값 '{0}'은(는) 유효한 배열 리터럴이 아닙니다.
+propertyvalue_array_too_deep				= 배열 리터럴이 {0}단계보다 깊게 중첩되어 있습니다.
+
+eventhandler_lost_weak_ref					= 호출 가능 객체의 WeakReference가 소멸되어 TEventHandler가 이벤트 핸들러를 호출할 수 없습니다.
+eventhandler_no_set_handler					= TEventHandler는 인덱스 "{0}"의 이벤트 핸들러를 설정할 수 없습니다.
+eventhandler_bad_offset						= TEventHandler에 오프셋 "{0}"이(가) 없습니다.
+
+eventparam_readonly							= {0}은(는) 읽기 전용입니다.
+eventparam_readonly_set						= {0}은(는) ReadOnly가 설정된 후에는 변경할 수 없습니다.
+eventparam_readonly_not_self				= {0} ReadOnly는 내부에서만 설정할 수 있습니다.
+
+list_index_invalid							= 인덱스 '{0}'이(가) 범위를 벗어났습니다.
+list_item_inexistent						= 목록에서 해당 항목을 찾을 수 없습니다.
+list_data_not_iterable						= 데이터는 배열이거나 Traversable 인터페이스를 구현한 객체여야 합니다.
+list_readonly								= {0}은(는) 읽기 전용입니다.
+list_readonly_set							= {0}은(는) Read-Only가 이미 설정된 후에는 변경할 수 없습니다.
+prioritylist_index_invalid					= 우선순위 '{2}'의 '{1}'에서 인덱스 '{0}'이(가) 범위를 벗어났습니다.
+prioritytrait_no_set_default_priority		= 기본 우선순위는 한 번만 설정하거나 객체 자신만 설정할 수 있습니다.
+prioritytrait_no_set_precision				= 정밀도는 한 번만 설정하거나 객체 자신만 설정할 수 있습니다.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid는 한 번만 설정하거나 객체 자신만 설정할 수 있습니다.
+
+map_addition_disallowed						= 새 항목을 맵에 추가할 수 없습니다.
+map_item_unremovable						= 해당 항목을 맵에서 제거할 수 없습니다.
+map_data_not_iterable						= 데이터는 배열이거나 Traversable 인터페이스를 구현한 객체여야 합니다.
+map_readonly								= {0}은(는) 읽기 전용입니다.
+map_readonly_set							= {0}은(는) Read-Only가 이미 설정된 후에는 변경할 수 없습니다.
+
+tnull_clone_disallowed						= TNull 싱글턴은 복제할 수 없습니다. 대신 TNull::null()을 사용하십시오.
+
+weakcallablecollection_callable_required	= TWeakCallableCollection은 호출 가능한 값만 허용합니다.
+
+arraysubscription_no_change					= TArraySubscription.{0}은(는) 구독한 후에는 변경할 수 없습니다.
+arraysubscription_no_null_key				= TArraySubscription은 ArrayAccess 객체의 null 키를 구독할 수 없습니다.
+arraysubscription_index_invalid				= TArraySubscription이 목록 모드(isAssociative = false)이지만 키 '{0}'이(가) 유효하지 않습니다 (개수: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array는 직접 설정할 수 없습니다.
+eventsubscription_no_change					= TEventSubscription.{0}은(는) 구독한 후에는 변경할 수 없습니다.
+
+application_includefile_invalid				= 애플리케이션 구성 {0}을(를) 찾을 수 없습니다. 네임스페이스 형식이고 파일이 ".xml" 또는 ".php"로 끝나는지 확인하십시오.
+application_basepath_invalid				= 애플리케이션 기본 경로 '{0}'이(가) 존재하지 않거나 디렉터리가 아닙니다.
+application_runtimepath_invalid				= 애플리케이션 런타임 경로 '{0}'이(가) 존재하지 않거나 웹 서버 프로세스가 쓸 수 없습니다.
+application_service_class_not_found			= 서비스 클래스 '{0}'이(가) 존재하지 않습니다.
+application_service_class_not_service		= 서비스 클래스 '{0}'이(가) IService를 구현하지 않습니다.
+application_service_class_required			= registerService는 서비스 '{0}'에 대해 클래스 이름 또는 serviceConfig 배열을 요구합니다.
+application_service_default_unregister		= 기본 페이지 서비스 '{0}'은(는) 등록 해제할 수 없습니다.
+service_csrf_token_invalid					= 서비스 '{0}'은(는) 유효한 CSRF 토큰을 요구합니다.
+application_moduleid_duplicated				= 애플리케이션 모듈 ID '{0}'이(가) 고유하지 않습니다.
+application_runtimepath_failed				= 런타임 경로 '{0}'을(를) 생성할 수 없습니다. 상위 디렉터리가 존재하고 웹 프로세스가 쓸 수 있는지 확인하십시오.
+application_module_required_dep_missing		= 모듈 '{0}'이(가) 모듈 '{1}'에 필수 의존성을 가지고 있지만 해당 모듈이 애플리케이션에 등록되어 있지 않습니다.
+application_module_dependency_cycle			= 다음 모듈 간에 의존성 순환이 감지되었습니다: {0}.
+application_module_dependency_self_reference	= 모듈 '{0}'이(가) 자신을 의존성으로 선언했습니다. 이는 허용되지 않습니다.
+
+appconfig_aliaspath_invalid					= 애플리케이션 구성 <alias id="{0}">이(가) 유효하지 않은 파일 경로 "{1}"을(를) 사용합니다.
+appconfig_alias_invalid						= 애플리케이션 구성 <alias> 요소에는 "id" 속성과 "path" 속성이 있어야 합니다.
+appconfig_alias_redefined					= 애플리케이션 구성 <alias id="{0}">은(는) 다시 정의할 수 없습니다.
+appconfig_using_invalid						= 애플리케이션 구성 <using> 요소에는 "namespace" 속성이 있어야 합니다.
+appconfig_moduleid_required					= 애플리케이션 구성 <module> 요소에는 "id" 속성이 있어야 합니다.
+appconfig_moduletype_required				= 애플리케이션 구성 <module id="{0}">에는 "class" 속성이 있어야 합니다.
+appconfig_moduletype_inapplicable			= 애플리케이션 구성 <module id="{0}">에는 "class" 속성을 지정할 수 없습니다.
+appconfig_serviceid_required				= 애플리케이션 구성 <service> 요소에는 "id" 속성이 있어야 합니다.
+appconfig_servicetype_required				= 애플리케이션 구성 <service id="{0}">에는 "class" 속성이 있어야 합니다.
+appconfig_parameterid_required				= 애플리케이션 구성 <parameter> 요소에는 "id" 속성이 있어야 합니다.
+appconfig_includefile_required				= 애플리케이션 구성 <include> 요소에는 "file" 속성이 있어야 합니다.
+appconfig_paths_invalid						= 애플리케이션 구성 <paths>에는 <{0}> 요소를 포함할 수 없습니다.
+appconfig_modules_invalid					= 애플리케이션 구성 <modules>에는 <{0}> 요소를 포함할 수 없습니다.
+appconfig_services_invalid					= 애플리케이션 구성 <services>에는 <{0}> 요소를 포함할 수 없습니다.
+appconfig_parameters_invalid				= 애플리케이션 구성 <parameters>에는 <{0}> 요소를 포함할 수 없습니다.
+appconfig_tag_invalid						= 애플리케이션 구성에는 <{0}> 요소를 포함할 수 없습니다.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey는 비어 있을 수 없습니다.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey는 비어 있을 수 없습니다.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey는 비어 있을 수 없습니다.
+securitymanager_mcryptextension_required	= TSecurityManager의 암호화 기능을 사용하려면 Mcrypt PHP 확장이 필요합니다.
+securitymanager_mcryptextension_initfailed	= TSecurityManager가 mcrypt 모듈을 초기화하지 못했습니다.
+
+uri_format_invalid							= '{0}'은(는) 유효한 URI가 아닙니다.
+
+httprequest_browscap_required				= THttpRequest를 사용하려면 php.ini에 browscap 지시문이 구성되어 있어야 합니다.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator는 단일 문자만 포함할 수 있습니다.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}'이(가) 존재하는 모듈을 가리키지 않습니다.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}'은(는) TUrlManager를 확장한 모듈을 가리켜야 합니다.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie가 false이므로 세션 모듈이 필요합니다.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection은 THttpCookie 객체만 허용합니다.
+
+httpresponse_file_inexistent				= THttpResponse가 파일 '{0}'을(를) 전송할 수 없습니다. 파일이 존재하지 않습니다.
+httpresponse_responsedata_method_unavailable	= THttpResponse: 메서드 '{0}'은(는) 이를 구현하는 적절한 어댑터 없이는 사용할 수 없습니다.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}'이(가) 존재하는 모듈을 가리키지 않습니다.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}'은(는) THttpHeadersManager를 확장한 모듈을 가리켜야 합니다.
+
+httpheadersmanager_header_required			= THttpHeadersManager는 THttpHeader 또는 그 하위 클래스만 포함할 수 있습니다.
+httpheadersmanager_headerclass_missing		= THttpHeadersManager <headerclass> 항목에 필수 'name' 또는 'class' 속성이 없습니다.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID는 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName은 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_sessionname_invalid				= THttpSession.SessionName은 영숫자 문자만 포함해야 합니다.
+httpsession_savepath_unchangeable			= THttpSession.SavePath는 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}'이(가) 유효하지 않습니다.
+httpsession_storage_unchangeable			= THttpSession.Storage는 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode는 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart는 세션 모듈이 초기화된 후에는 수정할 수 없습니다.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability는 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability는 0에서 100 사이의 정수여야 합니다.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID는 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_transid_cookieonly				= THttpSession.CookieMode가 Only로 설정된 경우 THttpSession.UseTransparentSessionID를 설정할 수 없습니다.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout은 세션이 시작된 후에는 수정할 수 없습니다.
+httpsession_handler_invalid					= THttpSessionHandler는 생성자 매개변수로 THttpSession 객체만 허용합니다
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}'이(가) 유효하지 않습니다. 네임스페이스 형식이고 웹 서버 프로세스가 쓸 수 있는 디렉터리를 가리키는지 확인하십시오.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath는 모듈이 초기화된 후에는 수정할 수 없습니다.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl은 모듈이 초기화된 후에는 수정할 수 없습니다.
+assetmanager_filepath_invalid				= TAssetManager가 유효하지 않은 파일 '{0}'을(를) 게시하고 있습니다.
+assetmanager_tarchecksum_invalid			= TAssetManager가 유효하지 않은 체크섬 '{0}'을(를) 가진 tar 파일을 게시하고 있습니다.
+assetmanager_tarfile_invalid				= TAssetManager가 유효하지 않은 tar 파일 '{0}'을(를) 게시하고 있습니다.
+assetmanager_tarfile_extract_failed			= TAssetManager가 tar 파일 '{0}'을(를) 추출하지 못했습니다.
+assetmanager_source_directory_invalid		= TAssetManager가 유효하지 않은 디렉터리 '{0}'을(를) 복사하고 있습니다.
+
+cache_primary_duplicated					= 기본 캐시 모듈은 최대 하나만 허용됩니다. {0}이(가) 또 다른 기본 캐시로 등록을 시도하고 있습니다.
+psrcache_backing_cache_required				= TPsrCache.BackingCacheId 또는 TPsrCache.BackingCache가 필요합니다.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}'이(가) 애플리케이션 모듈을 참조하지 않습니다.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}'은(는) Psr\SimpleCache\CacheInterface 또는 Psr\Cache\CacheItemPoolInterface를 구현한 모듈을 참조해야 합니다.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}'은(는) 이 TPsrCache의 PSR 어댑터이므로 같은 캐시에 다시 읽고 쓰게 됩니다.
+psrcachebacking_cache_required				= {0}에는 백킹 캐시가 필요합니다. {0}.BackingCacheId, {0}.BackingCache 또는 기본 애플리케이션 캐시를 설정하십시오.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}'이(가) 애플리케이션 모듈을 참조하지 않습니다.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}'은(는) Prado\Caching\ICache 모듈을 참조해야 합니다.
+psrcachebacking_key_invalid					= {0} 캐시 키는 예약 문자 {}()/\@:를 포함하지 않는 비어 있지 않은 문자열이어야 하지만 '{1}'이(가) 지정되었습니다.
+sqlitecache_extension_required				= TSqliteCache를 사용하려면 SQLite PHP 확장이 필요합니다.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile은 필수입니다.
+sqlitecache_connection_failed				= TSqliteCache 데이터베이스 연결에 실패했습니다. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache가 캐시 데이터베이스를 생성하지 못했습니다. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile은 모듈이 초기화된 후에는 수정할 수 없습니다.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile이 유효하지 않습니다. 올바른 네임스페이스 형식인지 확인하십시오.
+
+dbcache_unavailable							= TDbCache를 사용하려면 PDO PHP 확장이 필요합니다.
+
+etcdcache_transport_required				= TEtcdCache를 사용하려면 cURL PHP 확장 또는 allow_url_fopen이 필요합니다.
+
+memcache_extension_required					= TMemCache를 사용하려면 memcache PHP 확장이 필요합니다.
+memcache_connection_failed					= TMemCache가 memcache 서버 {0}:{1}에 연결하지 못했습니다.
+memcache_not_initialized					= 모듈이 초기화되기 전에는 TMemCache에 옵션을 설정할 수 없습니다.
+
+apccache_extension_required					= TAPCCache를 사용하려면 APC PHP 확장이 필요합니다.
+apccache_extension_not_enabled				= TAPCCache가 작동하려면 php.ini에 apc.enabled = 1 설정이 필요합니다.
+apccache_extension_not_enabled_cli			= TAPCCache가 명령줄 PHP에서 작동하려면 php.ini에 apc.enable_cli = 1 설정이 필요합니다.
+
+cachesize_item_exceeds_maximum_size			= 캐시 항목이 {0}바이트로, 구성된 MaximumSize {1}바이트를 초과합니다.
+
+filecache_directory_required				= TFileCache.Directory는 필수입니다.
+filecache_directory_create_failed			= TFileCache가 캐시 디렉터리 '{0}'을(를) 생성할 수 없습니다.
+filecache_directory_not_writable			= TFileCache 캐시 디렉터리 '{0}'에 쓸 수 없습니다.
+filecache_hash_token_identity				= TFileCache.hashToken은 입력을 변환해야 합니다. 하위 클래스 구현이 토큰을 변경하지 않고 그대로 반환했습니다.
+filecache_hash_token_path_separator			= TFileCache.hashToken은 경로 구분자("/" 또는 "\")를 포함한 값을 반환해서는 안 됩니다. 하위 클래스 구현이 안전하지 않은 해시를 반환했습니다.
+
+memorycache_backing_file_directory_not_found	= TMemoryCache.BackingFile 경로 '{0}'의 디렉터리가 존재하지 않습니다.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}'이(가) 유효하지 않습니다. 유효한 값은 'PHP'와 'JSON'입니다.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}'이(가) 유효하지 않습니다. 유효한 값은 'None', 'Base64', 'Hex'입니다.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}'이(가) 유효하지 않습니다. TSecurityManager 모듈 ID 또는 TSecurityManager 인스턴스여야 합니다.
+serializingcache_json_encode_failed			= TSerializingCache가 값을 JSON으로 인코딩하지 못했습니다: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0}이(가) 유효한 디렉터리를 참조하지 않습니다.
+cachedependencylist_cachedependency_required	= ICacheDependency를 구현한 객체만 TCacheDependencyList에 추가할 수 있습니다.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}'이(가) 유효하지 않습니다. 네임스페이스 형식이고 오류 템플릿 파일이 들어 있는 유효한 디렉터리를 가리키는지 확인하십시오.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}'은(는) 유효한 디렉터리가 아닙니다.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage는 서비스가 초기화된 후에는 수정할 수 없습니다.
+pageservice_basepath_unchangeable			= TPageService.BasePath는 서비스가 초기화된 후에는 수정할 수 없습니다.
+pageservice_pageclass_invalid				= 페이지 클래스 {0}이(가) 유효하지 않습니다. TPage이거나 TPage를 확장해야 합니다.
+pageservice_includefile_invalid				= 페이지 서비스 구성 {0}을(를) 찾을 수 없습니다. 네임스페이스 형식이고 파일이 ".xml" 또는 ".php"로 끝나는지 확인하십시오.
+
+pageserviceconf_file_invalid				= 페이지 디렉터리 구성 파일 '{0}'을(를) 열 수 없습니다.
+pageserviceconf_aliaspath_invalid			= 페이지 디렉터리 구성 파일 '{2}'의 <alias id="{0}">이(가) 유효하지 않은 파일 경로 "{1}"을(를) 사용합니다.
+pageserviceconf_alias_invalid				= 페이지 디렉터리 구성 파일 '{0}'의 <alias> 요소에는 "id" 속성과 "path" 속성이 있어야 합니다.
+pageserviceconf_using_invalid				= 페이지 디렉터리 구성 파일 '{0}'의 <using> 요소에는 "namespace" 속성이 있어야 합니다.
+pageserviceconf_module_invalid				= 페이지 디렉터리 구성 파일 '{0}'의 <module> 요소에는 "id" 속성이 있어야 합니다.
+pageserviceconf_moduletype_required			= 페이지 디렉터리 구성 파일 '{1}'의 <module id="{0}">에는 "class" 속성이 있어야 합니다.
+pageserviceconf_parameter_invalid			= 페이지 디렉터리 구성 파일 '{0}'의 <parameter> 요소에는 "id" 속성이 있어야 합니다.
+pageserviceconf_page_invalid				= 페이지 디렉터리 구성 파일 '{0}'의 <page> 요소에는 "id" 속성이 있어야 합니다.
+pageserviceconf_includefile_required		= 페이지 구성 <include> 요소에는 "file" 속성이 있어야 합니다.
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}"은(는) 비헤이비어가 연결된 후에는 "{1}"로 변경할 수 없습니다.
+basebehavior_sync_no_owner					= TBaseBehavior "{0}"에 소유자가 없으므로 소유자가 없는 컴포넌트의 이벤트 핸들러를 동기화할 수 없습니다.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}"은(는) 소유자가 아닌 객체의 이벤트 핸들러를 동기화할 수 없습니다.
+behavior_has_owner							= TBehavior "{0}"은(는) 하나의 소유자에만 연결할 수 있습니다.
+behavior_bad_attach_component				= TBehavior "{0}"은(는) TComponent에만 연결할 수 있습니다.
+behavior_detach_without_owner				= TBehavior "{0}"은(는) 소유자 없이 분리할 수 없습니다.
+behavior_detach_wrong_owner					= TBehavior "{0}"은(는) 자신의 소유자가 아닌 객체에서 분리할 수 없습니다.
+behavior_property_unchangeable				= {1}.{0}은(는) 비헤이비어가 연결된 후에는 수정할 수 없습니다.
+behavior_requires_owner						= {1}.{0}에는 소유자가 필요합니다.
+classbehavior_owner_attach_once				= TClassBehavior "{0}"은(는) 소유자에 한 번만 연결할 수 있습니다. 그렇지 않으면 핸들러가 고유하지 않게 됩니다.
+classbehavior_bad_attach_component			= TClassBehavior "{0}"은(는) TComponent에만 연결할 수 있습니다.
+classbehavior_detach_without_owner			= TClassBehavior "{0}"은(는) 소유자 없이 분리할 수 없습니다.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}"은(는) 자신의 소유자가 아닌 객체에서 분리할 수 없습니다.
+
+callchain_bad_dynamic_event					= TCallChain.{0}이(가) 발생했지만 {1}이(가) 예상되었습니다.
+
+behaviormodule_behavior_as_array_required	= php <behavior>는 배열이어야 합니다.
+behaviormodule_behaviorname_required		= <behavior>에는 비헤이비어를 연결하기 위한 'name' 속성이 있어야 합니다.
+behaviormodule_behaviorclass_required		= <behavior>에는 비헤이비어 클래스를 정의하는 'class' 속성이 있어야 합니다.
+behaviormodule_attachto_class_required		= <behavior>에는 'attachto' 또는 'attachtoclass' 속성이 있어야 합니다.
+behaviormodule_attachto_and_class_only_one	= <behavior>에는 'attachto' 또는 'attachtoclass' 속성 중 하나만 있어야 하며 둘 다 지정할 수 없습니다.
+behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' 객체를 찾을 수 없습니다.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors에 유효하지 않은 유형 '{0}'을(를) 설정할 수 없습니다
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader에는 비헤이비어 Name이 있어야 합니다.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader에는 비헤이비어 Class가 있어야 합니다.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader에는 'attachto' 또는 'attachtoclass' 속성이 있어야 합니다.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader에는 'attachto' 또는 'attachtoclass' 속성 중 하나만 있어야 합니다.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:'에는 모듈 id가 필요합니다.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}'을(를) 찾을 수 없습니다.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader가 비헤이비어를 연결할 모듈 '{0}'을(를) 찾을 수 없습니다.
+
+evaluationfilter_statements_denied			= TEvaluationFilterBehavior.AllowStatements가 false이므로 컴포넌트 '{0}'은(는) PHP 문 '{1}'을(를) 평가할 수 없습니다.
+evaluationfilter_code_denied				= TEvaluationFilterBehavior가 '{2}'을(를) 허용하지 않으므로 컴포넌트 '{0}'은(는) '{1}'을(를) 평가할 수 없습니다.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior를 생성하려면 호출 가능한 값이 필요합니다.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior를 생성하려면 호출 가능한 값이 필요합니다.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior에는 Parameter 속성이 있어야 합니다.
+parameterizebehavior_no_property			= TParameterizeBehavior에는 Property 속성이 있어야 합니다.
+parameterizebehavior_owner_get_only_property	= TParameterizeBehavior 소유자에 Property '{0}'이(가) 있지만 읽기 전용입니다.
+parameterizebehavior_owner_has_no_property	= TParameterizeBehavior 소유자에 Property '{0}'이(가) 없습니다.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior는 연결된 후에는 Parameter를 비울 수 없습니다.
+
+processhelper_no_forking					= 프로세스 포크는 지원되지 않습니다.
+processhelper_no_signals					= Windows에서는 프로세스 시그널을 보낼 수 없습니다.
+
+serializableclosure_no_decrypter			= TSerializableClosure는 구성된 복호화기 없이 암호화된 클로저 페이로드를 복호화할 수 없습니다.
+serializableclosure_decrypt_failed			= TSerializableClosure가 암호화된 클로저 페이로드를 복호화하지 못했습니다. 페이로드가 변조되었거나 키가 변경되었을 수 있습니다.
+
+appsignals_no_change						= TApplicationSignals::{0}은(는) 연결된 후에는 변경할 수 없습니다.
+appsignals_not_a_dispatcher					= '{0}'은(는) TSignalsDispatcher가 아닙니다.
+
+signalsdispatcher_bad_pid					= '{0}'은(는) 유효한 PID가 아닙니다.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0}은(는) 연결된 후에는 변경할 수 없습니다.
+
+initialized_property_unchangeable			= {1}.{0}은(는) 이미 초기화되었으므로 설정할 수 없습니다.
+initialized_requires_initialization			= {1}.{0}은(는) 처리 전에 초기화가 필요합니다.
+
+template_closingtag_unexpected				= 예기치 않은 닫는 태그 '{0}'이(가) 발견되었습니다.
+template_closingtag_expected				= 닫는 태그 '{0}'이(가) 예상되었지만 '{1}'이(가) 발견되었습니다.
+template_directive_nonunique				= 지시문 '<%@ ... %>'은(는) 템플릿의 시작 부분에 나타나야 하며 최대 한 번만 나타날 수 있습니다.
+template_comments_forbidden					= 속성 태그 안에서는 템플릿 주석을 사용할 수 없습니다.
+template_matching_unexpected				= 예기치 않은 일치입니다.
+template_property_unknown					= {0}에 '{1}'이라는 속성이 없습니다.
+template_event_unknown						= {0}에 '{1}'이라는 이벤트가 없습니다.
+template_property_readonly					= {0}의 속성 '{1}'은(는) 읽기 전용입니다.
+template_event_forbidden					= {0}은(는) 컨트롤이 아닌 컴포넌트입니다. 템플릿에서 해당 이벤트 '{1}'에 핸들러를 연결할 수 없습니다.
+template_databind_forbidden					= {0}은(는) 컨트롤이 아닌 컴포넌트입니다. 해당 속성 '{1}'에 표현식을 바인딩할 수 없습니다.
+template_component_required					= '{0}'은(는) 컴포넌트가 아닙니다. 템플릿에는 컴포넌트만 나타날 수 있습니다.
+template_format_invalid						= 유효하지 않은 템플릿 구문입니다: {0}
+template_property_duplicated				= 속성 {0}이(가) 두 번 이상 구성되었습니다.
+template_eventhandler_invalid				= {0}.{1}은(는) 정적 문자열만 허용합니다.
+template_controlid_invalid					= {0}.ID는 정적 텍스트 문자열만 허용합니다.
+template_controlskinid_invalid				= {0}.SkinID는 정적 텍스트 문자열만 허용합니다.
+template_content_unexpected					= 템플릿을 인스턴스화하는 중 예기치 않은 콘텐츠가 발견되었습니다: {0}.
+template_include_invalid					= 유효하지 않은 템플릿 포함입니다. {0}이(가) 확장자가 .tpl인 기존 템플릿 파일을 가리키는 유효한 네임스페이스인지 확인하십시오.
+template_tag_unexpected						= 속성 {0}의 초기화에 알 수 없는 태그 유형 {1}이(가) 포함되어 있습니다.
+
+xmldocument_file_read_failed				= TXmlDocument가 파일 '{0}'을(를) 읽을 수 없습니다.
+xmldocument_file_write_failed				= TXmlDocument가 파일 '{0}'에 쓸 수 없습니다.
+
+xmlelementlist_xmlelement_required			= TXmlElementList는 TXmlElement 객체만 허용합니다.
+
+xmlelement_null_tag							= TXmlElement 태그 이름은 null일 수 없습니다.
+xmlelement_empty_tag						= TXmlElement 태그 이름은 빈 문자열일 수 없습니다.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action은 'allow' 또는 'deny' 값만 가질 수 있습니다.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb는 'get' 또는 'post' 값만 가질 수 있습니다.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection은 TAuthorizationRule 객체만 허용합니다.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}'은(는) 유효한 파일이 아닙니다.
+usermanager_userfile_unchangeable			= TUserManager.UserFile은 수정할 수 없습니다. 사용자 모듈이 이미 초기화되었습니다.
+
+integritymanager_entry_invalid				= URL '{0}'에 대한 TIntegrityManager 무결성 항목에는 비어 있지 않은 url과 hash가 필요합니다.
+integritymanager_algorithm_invalid			= TIntegrityManager 알고리즘 '{0}'은(는) 지원되지 않습니다. 다음 중 하나를 사용하십시오: {1}.
+integritymanager_file_unreadable			= TIntegrityManager가 무결성을 계산하기 위한 파일 '{0}'을(를) 읽을 수 없습니다.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}'은(는) 유효한 파일이 아닙니다.
+integritymanager_integrityfile_unchangeable	= {1}.{0}은(는) 수정할 수 없습니다. 무결성 모듈이 이미 초기화되었습니다.
+
+javascript_script_integrity_required		= 원격 스크립트 '{0}'에 등록된 Subresource Integrity가 없지만 무결성이 필수입니다.
+
+authmanager_usermanager_required			= TAuthManager.UserManager에 값을 할당해야 합니다.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}'이(가) 애플리케이션 모듈의 ID를 참조하지 않습니다.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}'이(가) 유효한 TUserManager 애플리케이션 모듈을 참조하지 않습니다.
+authmanager_session_required				= TAuthManager에는 세션 애플리케이션 모듈이 필요합니다.
+
+permissions_events_invalid					= TPermissionEvent.Event에 유효하지 않은 값 '{0}'을(를) 설정할 수 없습니다.
+permissions_rules_invalid					= TPermissionEvent.Rules에 유효하지 않은 값 '{0}'을(를) 설정할 수 없습니다.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}'이(가) 애플리케이션 모듈의 ID를 참조하지 않습니다.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}'이(가) 유효한 TDbParameterModule 애플리케이션 모듈을 참조하지 않습니다.
+permissions_init_once						= TPermissionsManager.init은 한 번만 초기화할 수 있습니다.
+permissions_duplicate_permission			= TPermissionsManager 권한 '{0}'이(가) 이미 등록되어 있습니다.
+permissions_role_children_invalid			= TPermissionsManager 구성의 역할 '{0}'에 유효하지 않은 하위 항목 '{1}'이(가) 있습니다.
+permissions_rule_invalid					= TPermissionsManager 구성의 권한 규칙 '{0}'에 배열이 아닌 속성이 있습니다.
+permissions_rules_require_name				= TPermissionsManager 규칙에는 권한 "name" 속성이 있어야 합니다.
+permissions_role_rule_nested				= TPermissionsManager 구성의 역할 '{0}'에 <permissionrule>이 포함되어 있습니다. 권한 규칙은 permissions 구성 요소의 직접 하위 요소여야 합니다.
+permissions_rule_class_invalid				= TPermissionsManager 권한 규칙 클래스 '{0}'은(는) 클래스가 아닌 디렉터리 네임스페이스입니다.
+permissions_children_invalid				= TPermissionsManager.*RoleChildren의 하위 항목은 문자열 또는 배열이어야 하지만 '{0}'입니다.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}'은(는) 유효한 파일이 아닙니다.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}'은(는) 유효한 경로 별칭이 아닙니다. 구성에서 이 별칭을 정의했고 유효한 디렉터리를 가리키는지 확인하십시오.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}'은(는) 유효한 디렉터리가 아닙니다.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath는 모듈이 초기화된 후에는 수정할 수 없습니다.
+thememanager_theme_invalid					= TThemeManager 테마 이름 '{0}'은(는) 단일 디렉터리 이름이어야 합니다.
+
+theme_baseurl_required						= TThemeManager.BasePath는 필수입니다. 기본적으로 애플리케이션 진입 스크립트가 있는 디렉터리 아래의 'themes' 디렉터리로 간주됩니다.
+theme_path_inexistent						= 테마 경로 '{0}'이(가) 존재하지 않습니다.
+theme_control_nested						= 테마 '{1}'의 컨트롤 유형 '{0}' 스킨은 다른 스킨 안에 있을 수 없습니다.
+theme_skinid_duplicated						= 테마 '{2}'에 SkinID '{0}.{1}'이(가) 중복되어 있습니다.
+theme_databind_forbidden					= 테마 '{0}'의 컨트롤 스킨 '{1}.{2}'에서 속성 '{3}'에 대해 데이터 바인딩을 사용할 수 없습니다.
+theme_property_readonly						= 읽기 전용 컨트롤 속성 '{0}.{1}'에 스킨이 적용되고 있습니다.
+theme_property_undefined					= 존재하지 않는 컨트롤 속성 '{0}.{1}'에 스킨이 적용되고 있습니다.
+theme_tag_unexpected						= 속성 {0}의 초기화에 알 수 없는 태그 유형 {1}이(가) 포함되어 있습니다.
+
+control_object_reregistered					= 중복된 객체 ID '{0}'이(가) 발견되었습니다.
+control_id_invalid							= {0}.ID '{1}'이(가) 유효하지 않습니다. 영숫자와 밑줄 문자만 허용됩니다. 첫 문자는 알파벳 또는 밑줄 문자여야 합니다.
+control_skinid_unchangeable					= {0}.SkinID는 컨트롤에 스킨이 적용되거나 자식 컨트롤이 생성된 후에는 수정할 수 없습니다.
+control_enabletheming_unchangeable			= {0}.EnableTheming은 자식 컨트롤이 생성된 후에는 수정할 수 없습니다.
+control_stylesheet_applied					= StyleSheet 스킨이 이미 {0}에 적용되었습니다.
+control_id_nonunique						= {0}.ID '{1}'이(가) 같은 네이밍 컨테이너 아래의 모든 컨트롤 중에서 고유하지 않습니다.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}'은(는) 음수일 수 없습니다.
+
+templatecontrol_mastercontrol_invalid		= 마스터 컨트롤은 TTemplateControl 또는 그 하위 클래스 유형이어야 합니다.
+templatecontrol_mastercontrol_required		= 컨트롤 '{0}'이(가) TContent를 사용하므로 마스터 컨트롤이 필요합니다.
+templatecontrol_contentid_duplicated		= TContent ID '{0}'이(가) 중복되었습니다.
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder ID '{0}'이(가) 중복되었습니다.
+templatecontrol_directive_invalid			= {0}.{1}은(는) 템플릿 지시문을 통해 정적 텍스트 문자열만 허용합니다.
+templatecontrol_placeholder_inexistent		= TContent '{0}'에 일치하는 TContentPlaceHolder가 없습니다.
+
+page_form_duplicated						= 페이지에는 TForm을 최대 하나만 포함할 수 있습니다. 나머지 폼에는 일반 HTML form 태그를 사용하십시오.
+page_isvalid_unknown						= TPage.IsValid가 아직 평가되지 않았습니다.
+page_postbackcontrol_invalid				= 포스트백 컨트롤 '{0}'을(를) 확인할 수 없습니다.
+page_control_outofform						= {0} '{1}'은(는) TForm 안에 있어야 합니다.
+page_head_duplicated						= 페이지에는 THead를 최대 하나만 포함할 수 있습니다.
+page_head_required							= HTML head 섹션에 CSS와 js를 렌더링하려면 페이지 템플릿에 THead 컨트롤이 필요합니다.
+page_statepersister_invalid					= 페이지 상태 퍼시스터는 IPageStatePersister 인터페이스를 구현해야 합니다.
+
+csmanager_pradoscript_invalid				= 알 수 없는 Prado 스크립트 라이브러리 이름 '{0}'입니다.
+csmanager_pradoscript_notloaded				= Prado 스크립트 라이브러리 '{0}'이(가) 아직 로드되지 않았습니다.
+csmanager_pradostyle_invalid				= 알 수 없는 Prado 스타일 라이브러리 이름 '{0}'입니다.
+csmanager_invalid_packages					= '{0}'에 정의된 javascript 패키지에 알 수 없는 패키지 '{1}'이(가) 있습니다. 유효한 패키지는 '{2}'입니다.
+
+httpclient_transport_error					= HTTP 클라이언트 전송 오류 (코드 {0}): {1}
+httpclient_http_error						= 상태 {0}의 HTTP 오류 응답입니다.
+httpclient_transport_required				= 사용할 수 있는 HTTP 전송 수단이 없습니다. cURL 확장이 로드되지 않았고 allow_url_fopen이 꺼져 있습니다.
+
+restclient_invalid_header					= TRestClient 헤더 '{0}'의 이름이 유효하지 않거나 값에 CR/LF가 포함되어 있습니다.
+restclient_basicauth_username_colon			= TRestClient Basic 인증 사용자 이름에는 콜론(RFC 7617 자격 증명 구분자)을 포함할 수 없습니다.
+
+contentplaceholder_id_required				= TContentPlaceHolder에는 ID가 있어야 합니다.
+
+content_id_required							= TContent에는 ID가 있어야 합니다.
+
+controlcollection_control_required			= TControlList는 문자열 또는 TControl 객체만 허용합니다.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}'이(가) 유효하지 않습니다. 단일 문자여야 합니다.
+webcontrol_dir_invalid						= {0}.Dir '{1}'이(가) 유효하지 않습니다. 허용되는 값은 'ltr', 'rtl', 'auto'입니다.
+webcontrol_style_invalid					= {0}.Style은 문자열 값만 가질 수 있습니다.
+
+listcontrol_selection_invalid				= {0}에 데이터 바인딩을 수행하기 전에 설정된 유효하지 않은 선택 항목이 있습니다.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex에 유효하지 않은 값 {1}이(가) 있습니다.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue에 유효하지 않은 값 '{1}'이(가) 있습니다.
+listcontrol_expression_invalid				= {0}이(가) 유효하지 않은 표현식 '{1}'을(를) 평가하고 있습니다 : {2}
+listcontrol_multiselect_unsupported			= {0}은(는) 다중 선택을 지원하지 않습니다.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}'을(를) 찾을 수 없습니다.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}'을(를) 찾을 수 없습니다.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}'을(를) 찾을 수 없습니다.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}'을(를) 찾을 수 없습니다.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}'은(는) 음수일 수 없습니다.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}'은(는) 음수일 수 없습니다.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}'은(는) 0부터 필터링 컨트롤의 RenderFilterDepth {1} 사이여야 합니다.
+
+hiddenfield_focus_unsupported				= THiddenField는 입력 포커스 설정을 지원하지 않습니다.
+hiddenfield_theming_unsupported				= THiddenField는 테마 적용을 지원하지 않습니다.
+hiddenfield_skinid_unsupported				= THiddenField는 컨트롤 스킨을 지원하지 않습니다.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}'이(가) 존재하는 버튼 컨트롤을 참조하지 않습니다.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding은 -1 이상의 정수여야 합니다.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing은 -1 이상의 정수여야 합니다.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History는 0보다 큰 정수여야 합니다.
+
+listitemcollection_item_invalid				= TListItemCollection은 문자열 또는 TListItem 객체만 허용합니다.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices는 읽기 전용입니다.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack은 읽기 전용입니다.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex는 읽기 전용입니다.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices는 읽기 전용입니다.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue는 읽기 전용입니다.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices는 읽기 전용입니다.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}'이(가) 존재하지 않습니다.
+logrouter_routeclass_required				= <route> 구성에는 class 속성이 필요합니다.
+logrouter_routetype_required				= 로그 라우트는 TLogRoute 또는 그 파생 클래스의 인스턴스여야 합니다.
+
+dblogroute_connectionid_invalid				= TDbLogRoute가 데이터베이스 연결 ID '{0}'을(를) 생성할 수 없습니다.
+dblogroute_insert_failed					= TDbLogRoute가 '{0}'에 로그를 삽입할 수 없습니다.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}'이(가) 유효하지 않습니다
+dblogroute_table_nonexistent				= TDbLogRoute 테이블 '{0}'이(가) 존재하지 않으므로 생성해야 합니다.
+dblogroute_order_invalid					= TDbLogRoute 정렬 순서 '{0}'은(는) 열 목록이어야 하며 각 열 뒤에 선택적으로 ASC 또는 DESC를 붙일 수 있습니다.
+dblogroute_limit_invalid					= TDbLogRoute 제한 '{0}'은(는) 행 수, 'count OFFSET offset' 또는 'offset, count' 형식이어야 합니다.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}'은(는) 네임스페이스 형식의 디렉터리여야 하며 웹 서버 프로세스가 쓸 수 있어야 합니다.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize는 0보다 커야 합니다.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles는 0보다 커야 합니다.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom은 비어 있을 수 없습니다.
+emaillogroute_mail_failed					= TEmailLogRoute가 '{0}'으로 로그를 전송하지 못했습니다.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags가 유효하지 않습니다, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility가 유효하지 않습니다, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger는 필수입니다.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}'은(는) Psr\Log\LoggerInterface의 모듈 ID 또는 클래스 이름이 아닙니다.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger는 TPsrLogger일 수 없습니다. 같은 TLogger에 다시 로그를 기록하게 됩니다.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns는 0 이상이어야 합니다.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate가 비어 있거나 유효하지 않은 컨트롤 ID 경로를 포함하고 있습니다.
+basevalidator_validatable_required			= {0}.ControlToValidate는 IValidatable 인터페이스를 구현한 컨트롤을 가리켜야 합니다.
+basevalidator_forcontrol_unsupported		= {0}.ForControl은 지원되지 않습니다.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare에 유효하지 않은 컨트롤 ID 경로가 포함되어 있습니다.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate는 TFileUpload 컨트롤을 가리켜야 합니다.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate에 유효하지 않은 TListControl ID 경로가 포함되어 있습니다. "{1}"은(는) {2}입니다.
+
+repeater_template_required					= TRepeater.{0}에는 ITemplate 인터페이스를 구현한 템플릿 인스턴스가 필요합니다.
+repeater_itemtype_unknown					= 알 수 없는 리피터 항목 유형 {0}입니다.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection은 TControl 또는 그 파생 클래스의 인스턴스인 객체만 허용합니다.
+
+datalist_template_required					= TDataList.{0}에는 ITemplate 인터페이스를 구현한 템플릿 인스턴스가 필요합니다.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection은 TDataListItem 객체만 허용합니다.
+
+datagrid_template_required					= TDataGrid.{0}에는 ITemplate 인터페이스를 구현한 템플릿 인스턴스가 필요합니다.
+templatecolumn_template_required			= TTemplateColumn.{0}에는 ITemplate 인터페이스를 구현한 템플릿 인스턴스가 필요합니다.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex는 0 이상이어야 합니다.
+datagrid_pagesize_invalid					= TDataGrid.PageSize는 0보다 커야 합니다.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount는 0 이상이어야 합니다.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection은 TDataGridItem 객체만 허용합니다.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection은 TDataGridColumn 객체만 허용합니다.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount는 0보다 커야 합니다.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor가 유효하지 않은 데이터의 필드 값을 평가하려고 합니다. 데이터가 지정된 필드 '{0}'을(를) 포함하는 배열, TMap, TList 또는 객체인지 확인하십시오.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor가 알 수 없는 필드 '{0}'의 데이터 값을 평가하려고 합니다: {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection은 TTableRow 객체만 허용합니다.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection은 TTableColumn 객체만 허용합니다.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection은 TTableColumnGroup 객체만 허용합니다.
+tablecolumn_span_invalid					= TTableColumn Span은 1 이상이어야 하지만 {0}이(가) 지정되었습니다.
+
+tablecellcollection_tablerow_required		= TTableCellCollection은 TTableCell 객체만 허용합니다.
+
+multiview_view_required						= TMultiView는 자식으로 TView만 허용합니다.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex에 유효하지 않은 인덱스 '{0}'이(가) 있습니다.
+multiview_view_inexistent					= TMultiView가 지정된 뷰를 찾을 수 없습니다.
+multiview_viewid_invalid					= TMultiView가 전환할 뷰 '{0}'을(를) 찾을 수 없습니다.
+
+viewcollection_view_required				= TViewCollection은 요소로 TView만 허용합니다.
+
+view_visible_readonly						= TView.Visible은 읽기 전용입니다. 표시 여부를 전환하려면 TView.Active를 사용하십시오.
+
+wizard_step_invalid							= 활성화할 단계를 마법사 단계 컬렉션에서 찾을 수 없습니다.
+wizard_command_invalid						= 유효하지 않은 마법사 탐색 명령 '{0}'입니다.
+
+table_tablesection_outoforder				= TTable 테이블 섹션은 Header, Body, Footer 순서여야 합니다.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType은 읽기 전용입니다.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection은 TWizardStep 또는 그 파생 클래스의 객체만 허용합니다.
+
+texthighlighter_stylesheet_invalid			= TTextHighlighter의 스타일시트 파일을 찾을 수 없습니다.
+
+hotspotcollection_hotspot_required			= THotSpotCollection은 THotSpot 또는 그 파생 클래스의 인스턴스만 허용합니다.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode는 읽기 전용입니다.
+htmlarea_tarfile_invalid					= THtmlArea가 TinyMCE tar 파일을 찾을 수 없습니다.
+
+parametermodule_parameterfile_unchangeable	= 모듈이 이미 초기화되었으므로 TParameterModule.ParameterFile은 변경할 수 없습니다.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}'이(가) 유효하지 않습니다. 네임스페이스 형식이고 파일 확장자가 '.xml' 또는 '.php'인지 확인하십시오.
+parametermodule_parameterid_required		= Parameter 요소에는 'id' 속성이 있어야 합니다.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}'이(가) 유효하지 않습니다. 영숫자와 밑줄 문자만 허용됩니다. 첫 문자는 알파벳 또는 밑줄 문자여야 합니다.
+datagridcolumn_expression_invalid			= {0}이(가) 유효하지 않은 표현식 '{1}'을(를) 평가하고 있습니다 : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID에 유효하지 않은 캐시 모듈 ID {0}이(가) 설정되었습니다. 모듈이 존재하지 않거나 ICache 인터페이스를 구현하지 않습니다.
+outputcache_duration_invalid				= {0}.Duration은 0 이상의 정수여야 합니다.
+
+stack_data_not_iterable						= TStack은 배열 또는 순회 가능한 객체에서만 데이터를 가져올 수 있습니다.
+stack_empty									= TStack이 비어 있습니다.
+
+queue_data_not_iterable						= TQueue는 배열 또는 순회 가능한 객체에서만 데이터를 가져올 수 있습니다.
+queue_empty									= TQueue가 비어 있습니다.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount는 1 이상의 정수여야 합니다.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex가 범위를 벗어났습니다.
+pager_pagecount_invalid						= TPager.PageCount는 0보다 작을 수 없습니다.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0}은(는) TDataBoundControl에서 파생된 컨트롤을 가리키는 유효한 ID 경로여야 합니다.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize는 1 이상의 정수여야 합니다.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount는 0 이상의 정수여야 합니다.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex가 범위를 벗어났습니다.
+databoundcontrol_datasource_invalid			= {0}.DataSource가 유효하지 않습니다.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}'이(가) 존재하는 컨트롤을 참조하지 않습니다.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}'은(는) IDataSource를 구현한 컨트롤을 참조해야 합니다.
+databoundcontrol_datamember_invalid			= DataMember '{0}'이(가) 데이터 소스의 뷰 이름이 아닙니다.
+
+datasourcecontrol_focus_unsupported			= {0}은(는) Focus를 지원하지 않습니다.
+datasourcecontrol_enabletheming_unsupported	= {0}은(는) EnableTheming을 지원하지 않습니다.
+datasourcecontrol_skinid_unsupported		= {0}은(는) SkinID를 지원하지 않습니다.
+datasourcecontrol_visible_unsupported		= {0}은(는) Visible을 지원하지 않습니다.
+datasourceview_insert_unsupported			= {0}은(는) 삽입을 지원하지 않습니다.
+datasourceview_update_unsupported			= {0}은(는) 갱신을 지원하지 않습니다.
+datasourceview_delete_unsupported			= {0}은(는) 삭제를 지원하지 않습니다.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource에는 배열, IDataSource 또는 Traversable 데이터 소스가 필요합니다.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView에는 null, 배열 또는 Traversable 데이터 소스가 필요합니다.
+
+clientscript_invalid_file_position			= TClientScript 컨트롤 '{0}'의 파일 위치 '{1}'이(가) 유효하지 않습니다. 'Head', 'Here' 또는 'Begin'이어야 합니다.
+clientscript_invalid_package_path			= TClientScript 컨트롤 '{1}'의 PackagePath '{0}'이(가) 유효하지 않습니다.
+
+tdatepicker_autopostback_unsupported		= '{0}'은(는) AutoPostBack을 지원하지 않습니다.
+globalization_cache_path_failed				= 번역 메시지 캐시 경로 '{0}'을(를) 생성할 수 없습니다. 상위 디렉터리가 존재하고 웹 프로세스가 쓸 수 있는지 확인하십시오.
+globalization_source_path_failed			= 번역 메시지 경로 '{0}'을(를) 생성할 수 없습니다. 상위 디렉터리가 존재하고 웹 프로세스가 쓸 수 있는지 확인하십시오.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}'이(가) 유효한 TDataSourceConfig 모듈을 가리키지 않습니다.
+messagesource_connectionid_required			= MessageSource_Database.source의 ConnectionID는 필수입니다.
+
+callback_not_support_no_priority_state_update	= 콜백 요청은 우선순위가 없는 페이지 상태 갱신을 지원하지 않습니다.
+callback_invalid_callback_options			= '{1}'은(는) 콜백 컨트롤 '{0}'에 대한 유효한 TCallbackOptions 컨트롤이 아닙니다.
+callback_invalid_clientside_options			= 콜백 ClientSide 속성은 TCallbackOptions 컨트롤의 ID인 문자열 또는 TCallbackClientSideOptions의 인스턴스여야 합니다.
+callback_invalid_handler					= 유효하지 않은 콜백 핸들러입니다. 컨트롤 {0}은(는) ICallbackEventHandler를 구현해야 합니다.
+callback_invalid_target						= 유효하지 않은 콜백 대상입니다. ID가 {0}인 컨트롤이 없습니다.
+
+callback_interval_be_positive				= TCallbackTimer "{0}"의 Interval은 0초보다 커야 합니다.
+callback_decay_be_not_negative				= TCallbackTimer "{0}"의 감쇠율(Decay)은 음수일 수 없습니다.
+
+callback_no_autopostback					= 컨트롤 "{0}"은(는) AutoPostBack을 활성화할 수 없습니다.
+
+xmltransform_xslextension_required			= TXmlTransform을 사용하려면 PHP의 XSL 확장이 필요합니다.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}'이(가) 유효하지 않습니다.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}'이(가) 유효하지 않습니다.
+xmltransform_transform_required				= TXmlTransform에는 TransformContent 또는 TransformPath 속성 중 하나가 설정되어야 합니다.
+
+ttriggeredcallback_invalid_controlid		= '{0}'의 ControlID 속성은 비어 있을 수 없습니다.
+tactivecustomvalidator_clientfunction_unsupported	= {0}은(는) 클라이언트 측 검증 함수를 지원하지 않습니다.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}'이(가) 유효한 TDataSourceConfig 모듈을 식별하지 않습니다.
+dbproperties_property_required				= {1}.{0}은(는) 필수 속성입니다.
+dbproperties_identifier_invalid				= {1}.{0} '{2}'은(는) 유효한 SQL 식별자가 아닙니다.
+
+dbconnection_open_failed					= TDbConnection이 DB 연결을 수립하지 못했습니다: {0}
+dbconnection_connection_inactive			= TDbConnection이 비활성 상태입니다.
+dbconnection_unsupported_driver_charset		= 데이터베이스 드라이버 '{0}'은(는) 문자 집합 설정을 지원하지 않습니다.
+dbconnection_charset_unchangeable			= 데이터베이스 드라이버 '{0}'은(는) 연결을 연 후에 문자 집합을 변경할 수 없습니다. 문자 집합은 DSN 매개변수입니다.
+
+dbcommand_prepare_failed					= TDbCommand가 SQL 문 "{1}"을(를) 준비하지 못했습니다: {0}
+dbcommand_execute_failed					= TDbCommand가 SQL 문 "{1}"을(를) 실행하지 못했습니다: {0}
+dbcommand_query_failed						= TDbCommand가 쿼리 SQL "{1}"을(를) 실행하지 못했습니다: {0}
+dbcommand_column_empty						= TDbCommand가 빈 결과를 반환하여 스칼라 값을 얻을 수 없습니다.
+dbdatareader_rewind_invalid					= TDbDataReader는 전진 전용 스트림입니다. 한 번만 순회할 수 있습니다.
+dbtransaction_transaction_inactive			= TDbTransaction이 비활성 상태입니다.
+
+dbcommandbuilder_value_must_not_be_null		= 속성 {0}은(는) 테이블 '{1}'의 열 '{2}'에 정의된 대로 null일 수 없습니다.
+
+dbcommon_invalid_table_name					= 데이터베이스 테이블 '{0}'을(를) 찾을 수 없습니다. 오류 메시지: {1}.
+dbcommon_invalid_identifier_name			= 유효하지 않은 데이터베이스 식별자 이름 '{0}'입니다. 자세한 내용은 {1}을(를) 참조하십시오.
+dbtableinfo_invalid_column_name				= 데이터베이스 테이블 '{1}'의 열 이름 '{0}'이(가) 유효하지 않습니다.
+dbmetadata_invalid_table_view				= 테이블/뷰 이름 '{0}'이(가) 유효하지 않거나, 해당 테이블/뷰 '{0}'에 접근 가능한 열/필드 정의가 없습니다.
+dbmetadata_requires_php_version				= {0} 데이터베이스를 사용하려면 PHP 버전 {1} 이상이 필요합니다.
+
+dbtablegateway_invalid_criteria				= 유효하지 않은 조건 객체입니다. 문자열 또는 TSqlCriteria의 인스턴스여야 합니다.
+dbtablegateway_no_primary_key_found			= 테이블 '{0}'에 기본 키 필드가 없습니다.
+dbtablegateway_missing_pk_values			= 테이블 '{0}'에 대한 IN(key1, key2, ...) 구성에 기본 키 값이 없습니다.
+dbtablegateway_pk_value_count_mismatch		= 테이블 '{0}'에 대한 IN( (key1, key2, ..), (key3, key4, ..)) 구성에서 복합 키 값의 개수가 일치하지 않습니다.
+dbtablegateway_mismatch_args_exception		= TTableGateway 파인더 메서드 '{0}'은(는) {1}개의 매개변수를 예상하지만 {2}개의 매개변수만 발견되었습니다.
+dbtablegateway_mismatch_column_name			= 동적 __call() 메서드 '{0}'에서 일치하는 열을 찾을 수 없습니다. 테이블 '{2}'의 유효한 열은 '{1}'입니다.
+dbtablegateway_invalid_table_info			= 테이블은 문자열 또는 TDbTableInfo의 인스턴스여야 합니다.
+
+resource_not_a_resource						= 열린 PHP 리소스가 예상되었지만 '{0}'이(가) 지정되었습니다.
+processfork_failed							= 프로세스를 포크할 수 없습니다.
+liveprocessfork_readonly_receiver			= TLiveProcessFork 데이터는 수신 측에서 읽기 전용입니다. 송신 측만 이를 변경합니다.
+stream_open_failed							= 모드 '{1}'로 스트림 '{0}'을(를) 열 수 없습니다: {2}
+binarystream_unexpected_eof					= 예기치 않은 스트림 끝입니다: {0}바이트가 필요했지만 {1}바이트만 읽었습니다.
+binarystream_short_write					= 불완전한 쓰기입니다: {0}바이트를 써야 했지만 {1}바이트만 수락되었습니다.
+streamresourcewrapper_unusable_stream		= 스트림이 읽기도 쓰기도 불가능하여 리소스로 노출할 수 없습니다.
+streamfilter_already_registered				= 스트림 필터 '{0}'이(가) 이미 등록되어 있습니다.
+streamfilter_registration_failed			= 클래스 '{1}'에 대한 스트림 필터 '{0}'을(를) 등록할 수 없습니다.
+streamwrapper_already_registered			= 스트림 래퍼 프로토콜 '{0}'이(가) 이미 등록되어 있습니다.
+streamwrapper_registration_failed			= 클래스 '{1}'에 대한 스트림 래퍼 프로토콜 '{0}'을(를) 등록할 수 없습니다.
+reservedspace_invalid						= 예약 공간에는 음수가 아닌 오프셋과 양수 길이가 필요하지만 오프셋 '{0}'과 길이 '{1}'이(가) 지정되었습니다.
+reservedspace_access_denied					= 해당 작업이 오프셋 '{0}'의 예약 공간과 겹칩니다.
+multipartstream_element_invalid				= TMultipartStream 요소에는 'name'과 'contents'가 필요합니다.
+builtincompressor_extension_required		= '{0}' 압축기를 사용하려면 '{1}' PHP 확장이 필요합니다.
+builtincompressor_compress_failed			= '{0}' 압축기가 데이터를 압축하지 못했습니다.
+builtincompressor_decompress_failed			= '{0}' 압축기가 데이터를 압축 해제하지 못했습니다. 데이터가 손상되었거나 다른 형식일 수 있습니다.
+compression_method_unknown					= 압축 방식 '{0}'을(를) 알 수 없거나 해당 확장을 사용할 수 없습니다.
+compression_none_available					= 이 PHP 설치에서는 사용할 수 있는 압축 방식이 없습니다.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}'은(는) 알려진 콘텐츠 코딩이 아닙니다. 알려진 코딩은 다음과 같습니다: {1}.
+compression_xz_unsupported					= xz/LZMA에는 PHP 확장이 없습니다. 네이티브 또는 CLI xz 코덱을 사용하려면 belisoful/prado-compression을 설치하십시오.
+clicompressor_command_missing				= '{0}' 압축기를 사용하려면 PATH에 다음 시스템 명령 중 하나가 있어야 합니다: '{1}'.
+clicompressor_process_failed				= '{0}' 압축기가 '{1}' 명령을 시작할 수 없습니다.
+clicompressor_command_failed				= '{0}' 압축기 명령 '{1}'이(가) 코드 {2}로 종료되었습니다: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule에는 Endpoint 또는 이를 구성할 양수 Port가 필요합니다.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}'이(가) 유효하지 않습니다. TSocketServer 또는 그 하위 클래스여야 합니다.
+socketservermodule_scheme_not_stream		= TSocketServerModule은 비연결형 스킴 '{0}'에서 연결을 수락할 수 없습니다. tcp, tls, ssl, unix 같은 스트림 스킴을 사용하십시오.
+
+bitreader_invalid_bits						= {0}비트를 읽을 수 없습니다. 개수는 0과 플랫폼 정수 폭 사이여야 합니다.
+bitreader_64bit_php_required				= {0}비트를 읽으려면 64비트 PHP 빌드가 필요합니다.
+bitreader_invalid_float_bits				= {0}비트 부동 소수점을 읽을 수 없습니다. 8, 16, 32, 64비트만 지원됩니다.
+bitwriter_invalid_bits						= {0}비트를 쓸 수 없습니다. 개수는 0과 플랫폼 정수 폭 사이여야 합니다.
+bitwriter_64bit_php_required				= {0}비트를 쓰려면 64비트 PHP 빌드가 필요합니다.
+bitwriter_invalid_float_bits				= {0}비트 부동 소수점을 쓸 수 없습니다. 8, 16, 32, 64비트만 지원됩니다.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}'이(가) 존재하지 않습니다. 네임스페이스 형식으로 지정해야 하며 파일 확장자는 '.xml' 또는 '.php'여야 합니다.
+soapservice_server_invalid					= TSoapService SOAP 서버 클래스 '{0}'이(가) 유효하지 않습니다. TSoapServer 또는 그 하위 클래스여야 합니다.
+soapservice_serverid_required				= <soap> 요소에는 'id' 속성이 있어야 합니다.
+soapservice_serverid_duplicated				= SOAP 서버 ID '{0}'이(가) 중복되었습니다.
+soapserver_id_invalid						= 유효하지 않은 SOAP 서버 ID '{0}'입니다. '.wsdl'로 끝나서는 안 됩니다.
+soapserver_provider_invalid					= TSoapServer 제공자 클래스 '{0}'을(를) 확인할 수 없습니다.
+soapserver_version_invalid					= 유효하지 않은 SOAP 버전 '{0}'입니다. '1.1' 또는 '1.2'여야 합니다.
+soapserver_wsdlstyle_invalid				= 유효하지 않은 WSDL 스타일 '{0}'입니다. 'rpc' 또는 'document'여야 합니다.
+soapserver_wsdlstyle_unsupported			= WSDL 스타일 '{0}'에는 pradosoft/prado-wsdlgenerator 1.2 이상이 필요합니다. 설치된 생성기는 'rpc'만 생성합니다.
+
+jsonservice_id_required						= TJsonService의 JSON 요소에는 'id' 속성이 필요합니다.
+jsonservice_response_type_invalid			= JSON 클래스 {0}이(가) 유효하지 않습니다. TJsonResponse이거나 TJsonResponse를 확장해야 합니다.
+jsonservice_class_required					= TJsonService의 JSON 요소에는 'class' 속성이 필요합니다.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass는 필수입니다.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}'은(는) 유효한 사용자 클래스가 아닙니다. 클래스는 TDbUser를 확장해야 합니다.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}'이(가) 유효한 TDataSourceConfig 모듈을 가리키지 않습니다.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID는 필수입니다.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}'이(가) 유효한 TDataSourceConfig 모듈을 가리키지 않습니다.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID는 필수입니다.
+
+feedservice_id_required						= TFeedService의 피드 요소에는 'id' 속성이 필요합니다.
+feedservice_feedtype_invalid				= 피드 클래스 '{0}'은(는) IFeedContentProvider 인터페이스를 구현해야 합니다.
+feedservice_class_required					= TFeedService의 피드 요소에는 'class' 속성이 필요합니다.
+
+tabviewcollection_tabview_required			= TTabPanel은 자식으로 TTabView만 허용합니다.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID에 유효하지 않은 ID '{0}'이(가) 있습니다.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex에 유효하지 않은 인덱스 '{0}'이(가) 있습니다.
+tabpanel_view_inexistent					= TTabPanel이 지정된 뷰를 찾을 수 없습니다.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID는 필수입니다.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}'이(가) 존재하지 않는 모듈을 가리킵니다.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}'이(가) ICache 인터페이스를 구현하지 않는 모듈을 가리킵니다.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping은 TUrlMappingPattern 또는 그 하위 클래스만 포함할 수 있습니다.
+urlmapping_global_required					= TUrlMapping은 전역 모듈로 구성되어야 합니다.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}'은(는) 파일이 아닙니다.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}'은(는) 네임스페이스 형식의 XML 파일을 가리켜야 합니다.
+
+urlmappingpattern_serviceparameter_required	= 패턴 '{0}'에는 TUrlMappingPattern.ServiceParameter가 필요합니다.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl은 비어 있을 수 없습니다.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}'이(가) 유효하지 않습니다.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme는 {0}에서 {1} 사이의 정수여야 합니다.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize는 {0}에서 {1} 사이의 정수여야 합니다.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength는 {0}에서 {1} 사이의 정수여야 합니다.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength는 {0}에서 {1} 사이의 정수여야 합니다.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet은 2자 이상으로 구성된 문자열이어야 합니다.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey를 알 수 없습니다. 자산(assets) 디렉터리에 웹 서버 프로세스가 쓸 수 있는지 확인하십시오.
+captcha_gd2_required						= TCaptcha를 사용하려면 PHP GD2 확장이 필요합니다.
+captcha_imagettftext_required				= TCaptcha를 사용하려면 TrueType 글꼴을 지원하는 PHP GD2 확장이 필요합니다.
+captcha_imagepng_required					= TCaptcha를 사용하려면 PNG 이미지 형식을 지원하는 PHP GD2 확장이 필요합니다.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl은 존재하는 TCaptcha 컨트롤을 가리켜야 합니다.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0}은(는) 존재하는 TCaptcha 컨트롤을 가리켜야 합니다.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0}은(는) 존재하는 TCaptcha 컨트롤을 가리켜야 합니다.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey를 알 수 없습니다. reCAPTCHA를 사용하려면 API 키를 발급받아야 합니다.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey를 알 수 없습니다. reCAPTCHA를 사용하려면 API 키를 발급받아야 합니다.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate는 TReCaptcha의 인스턴스여야 합니다.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}'은(는) 문자, 숫자, '_', '-'만 포함해야 합니다.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity는 {0}에서 {1} 사이의 정수여야 합니다.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}'은(는) TProofOfWork 컨트롤을 가리켜야 합니다.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}'은(는) 유효한 사용자 클래스가 아닙니다. 클래스는 TSliderHandle을 확장해야 합니다.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}'이(가) 유효한 캐시 모듈을 가리키지 않습니다.
+cachepagestatepersister_cache_required		= TCachePageStatePersister를 사용하려면 캐시 모듈이 로드되어 있어야 합니다.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}'이(가) 유효한 캐시 모듈을 가리키지 않습니다.
+cachemoduleid_cache_required				= {0}에는 캐시 모듈이 필요합니다. 기본 캐시를 구성하거나 {0}.CacheModuleID를 설정하십시오.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout은 0 이상의 정수여야 합니다.
+
+conditional_condition_invalid				= TConditional.Condition '{0}'은(는) 유효한 PHP 표현식이 아닙니다: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule이 매개변수 데이터를 저장할 DB 테이블 '{0}'을(를) 찾을 수 없습니다.
+dbparametermodule_get_no_blank_key			= TDbParameterModule은 빈 키를 가져올 수 없습니다.
+dbparametermodule_set_no_blank_key			= TDbParameterModule은 빈 키에 값을 설정할 수 없습니다.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}'이(가) 유효한 TDataSourceConfig 모듈을 가리키지 않습니다.
+dbparametermodule_serializer_not_callable	= TDbParameterModule Serializer가 호출 가능한 값이 아닙니다.
+
+clockawaretrait_invalid_clock_class			= 클록 클래스 '{0}'은(는) Prado\Util\Clock\IClock을 구현해야 합니다.
+utcclock_timezone_fixed						= TUTCClock은 UTC로 고정되어 있습니다. 다른 시간대에는 TTimezoneClock을 사용하십시오.
+
+processcrontask_no_command					= TProcessCronTask '{0}'에 실행할 Command가 없습니다.
+processcrontask_launch_failed				= TProcessCronTask가 프로세스를 시작하지 못했습니다: '{0}'.
+processcrontask_write_failed				= TProcessCronTask가 pid 파일 '{0}'에 쓸 수 없습니다.
+closurecrontask_no_closure					= TClosureCronTask '{0}'에 실행할 클로저가 없습니다.
+closurecrontask_closure_required			= TClosureCronTask에는 Closure가 필요합니다.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}'은(는) TSecurityManager가 아닙니다.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}'이(가) 클로저 페이로드를 복호화할 수 없습니다.
+cronmethodtask_no_module					= TCronMethodTask가 모듈 '{0}'을(를) 찾을 수 없습니다.
+cron_usermanager_nonexistent				= TCronModule이 이름이 '{0}'인 UserManager를 찾을 수 없습니다.
+cron_usermanager_invalid					= TCronModule UserManager '{0}'은(는) TUserManager가 아닙니다.
+cron_task_as_array_required					= TCronModule 구성의 작업 잡이 배열이 아닙니다.
+cron_duplicate_task_name					= TCronModule의 작업 잡은 고유한 이름을 가져야 합니다.
+cron_schedule_required						= 크론 작업에는 스케줄이 있어야 합니다.
+cron_task_required							= 크론 작업에는 태스크가 있어야 합니다.
+cron_not_a_crontask							= 크론 작업 '{0}'은(는) TCronTask가 아닙니다.
+cron_additional_tasks_invalid				= '{0}'은(는) 유효한 추가 크론 작업이 아닙니다.
+crontask_no_module							= TCronTask가 모듈 '{0}'을(를) 찾을 수 없습니다.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask가 지정된 모듈 '{0}'을(를) 찾을 수 없습니다.
+dbcron_invalid_name							= TDbCronManager 작업 이름 '{0}'이(가) 유효하지 않습니다.
+dbcron_conflicting_task_names				= 구성의 크론 작업이 DB 크론 작업 '{0}'과(와) 충돌합니다.
+dbcron_table_nonexistent					= TDbCronManager 데이터베이스 테이블이 존재하지 않습니다.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}'은(는) TDataSourceConfig가 아닙니다.
+
+timescheduler_invalid_string				= TTimeScheduler가 스케줄 요소 '{0}'을(를) 구문 분석할 수 없습니다
+
+rational_bad_offset							= "{0}"은(는) TRational의 유효한 속성 접근자가 아닙니다.
+
+bithelper_bad_fp_format						= TBitHelper는 {3}비트 PHP 환경에서 지수 비트 '{0}', 가수 비트 '{1}', 지수 바이어스 '{2}'로는 동작할 수 없습니다.
+bithelper_invalid_color_in					= TBitHelper에는 In Bit이 하나 이상 있어야 합니다. '{0}'이(가) 지정되었습니다.
+bithelper_invalid_color_out					= TBitHelper에는 Out Bit이 하나 이상 있어야 합니다. '{0}'이(가) 지정되었습니다.
+bithelper_bad_mirror_bits					= TBitHelper는 {1}비트 PHP 환경에서 '{0}'비트를 미러링할 수 없습니다.
+
+ar_data_invalid								= {0}.copyFrom()은 매개변수로 객체 또는 배열만 받을 수 있습니다.
+ar_save_invalid								= {0} 인스턴스는 삭제되었거나 알 수 없는 상태이므로 저장할 수 없습니다.
+ar_delete_invalid							= {0} 인스턴스는 새 레코드이거나 이미 삭제된 레코드이므로 삭제할 수 없습니다.
+
+dbmetadata_invalid_database_driver			= 드라이버 '{0}'은(는) 지원되지 않습니다. 가능한 경우 해당 PRADO 드라이버를 설치하십시오.
+dbmetadata_not_meta_data					= 드라이버 클래스 {1}이(가) 예상되었지만 클래스 {0}이(가) 지정되었습니다.
+dbmetadata_tableinfo_class_invalid			= TDbMetaData 테이블 정보 클래스 '{0}'은(는) 클래스가 아닌 디렉터리 네임스페이스입니다.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}'이(가) 유효하지 않습니다. 유효한 애플리케이션 모듈을 가리키는지 확인하십시오.
+distributeddatasource_child_required		= {0}에는 최소 하나의 '{1}' 하위 요소가 필요합니다.
+masterslavedbconnection_connection_exists	= {0}.{1} 연결이 이미 존재합니다.
+masterslavedbconnection_interface_required	= {0}.{1}에는 {2} 인터페이스를 구현한 인스턴스가 필요합니다.
+slavedbconnection_requires_master			= {0}에는 {1}이(가) 필요합니다.
+
+response_status_reason_missing				= HTTP 1.1에서는 확장 상태 코드에 사유 구문(reason)이 필요합니다
+response_status_reason_badchars				= HTTP 1.1 헤더의 상태 사유(status-reason) 토큰에는 CR 또는 LF 토큰을 포함할 수 없습니다
+
+activefileupload_temppath_invalid			= TActiveFileUpload TempPath 경로 '{0}'이(가) 존재하지 않거나 웹 서버 프로세스가 쓸 수 없습니다.
+
+tactivetablecell_control_outoftable			= {0} '{1}'은(는) TTableRow 컨트롤 안에 있어야 합니다.
+tactivetablecell_control_notincollection	= {0} '{1}'이(가) 부모 TTableRow 컨트롤의 TTableCellCollection에 속해 있지 않습니다.
+
+tactivetablerow_control_outoftable			= {0} '{1}'은(는) TTable 컨트롤 안에 있어야 합니다.
+tactivetablerow_control_notincollection		= {0} '{1}'이(가) 부모 TTable 컨트롤의 TTableRowCollection에 속해 있지 않습니다.
+
+juioptions_option_invalid					= '{1}'은(는) 컨트롤 '{0}'의 유효한 옵션이 아닙니다.
+
+ratinglist_invalid_caption_id				= '{0}'은(는) TRatingList '{0}'의 유효한 캡션 컨트롤이 아닙니다.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID에 유효하지 않은 ID '{0}'이(가) 있습니다.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex에 유효하지 않은 인덱스 '{0}'이(가) 있습니다.
+accordion_view_inexistent					= TAccordion이 지정된 뷰를 찾을 수 없습니다.
+
+dot_bad_size								= TDot Size는 양의 정수여야 하지만 '{0}'입니다
+dot_bad_border_width						= TDot FlatBorderWidth는 선택적 % 또는 CSS 길이 단위가 붙은 숫자여야 하지만 '{0}'입니다
+
+juidatepicker_settextmode_unsupported		= TJuiDatePicker의 TextMode는 변경할 수 없습니다.
+
+control_adapter_not_active					= 활성 컨트롤이 아닌 컨트롤에서 BaseActiveControl 속성이 호출되었습니다.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}'은(는) TFigure 컨트롤의 직접 자식이어야 합니다.
+summary_requires_details_parent				= TSummary '{0}'은(는) TDetails 컨트롤의 직접 자식이어야 합니다.
+
+gravatar_bad_default						= TGravatar DefaultImageStyle 속성 값 '{0}'은(는) 지원되지 않습니다
+gravatar_bad_size							= TGravatar Size가 [1 .. 512] 범위에 있지 않으며 '{0}'입니다
+
+progress_value_invalid						= TProgress Value는 0 이상이어야 하지만 {0}이(가) 지정되었습니다.
+progress_max_invalid						= TProgress Max는 0보다 커야 하지만 {0}이(가) 지정되었습니다.
+
+time_invalid_datetime						= TTime DateTime은 DateTimeInterface, DateInterval, 문자열 또는 숫자 값이어야 하지만 {0}이(가) 지정되었습니다.
+time_invalid_text_format					= TTime TextFormat '{0}'은(는) TTimeFormat 상수 이름 또는 ICU 날짜/시간 패턴이 아닙니다.
+
+webtemplate_invalid_child					= TWebTemplate '{0}'에는 '{1}'을(를) 포함할 수 없습니다. 활성, 포스트백, 검증기 컨트롤은 비활성 템플릿 콘텐츠 안에서 동작하지 않습니다. {{...}} 자리 표시자가 있는 일반 마크업을 사용하거나 ValidateContent="false"를 설정하십시오.
+
+vardumper_not_array							= __debuginfo()는 배열을 반환해야 합니다.
+
+htmlpurifier_source_path_failed				= html purifier 캐시 경로 '{0}'을(를) 생성할 수 없습니다. 상위 디렉터리가 존재하고 웹 프로세스가 쓸 수 있는지 확인하십시오.

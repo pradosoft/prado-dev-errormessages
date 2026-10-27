@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Slovak (sk).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application je možné nastaviť iba raz.
+prado_component_unknown						= Neznámy typ komponentu '{0}'. Príčinou môže byť nasledujúca chyba pri parsovaní súboru triedy {0}: {1}
+prado_using_invalid							= '{0}' nie je platný namespace na použitie. Ak chcete použiť namespace odkazujúci na adresár, uistite sa, že je pripojené '.*'.
+prado_alias_redefined						= Alias '{0}' nie je možné predefinovať.
+prado_alias_invalid							= Alias '{0}' odkazuje na neplatnú cestu '{1}'. Alias je možné vytvoriť iba pre existujúce adresáre.
+prado_aliasname_invalid						= Alias '{0}' obsahuje neplatný znak '.'.
+
+component_property_undefined				= Vlastnosť komponentu '{0}.{1}' nie je definovaná.
+component_property_readonly					= Vlastnosť komponentu '{0}.{1}' je iba na čítanie.
+component_event_undefined					= Udalosť komponentu '{0}.{1}' nie je definovaná.
+component_method_undefined					= Metóda komponentu '{0}.{1}' nie je definovaná.
+component_eventhandler_invalid				= K udalosti komponentu '{0}.{1}' je pripojená neplatná obslužná metóda udalosti '{2}'.
+component_expression_invalid				= Komponent '{0}' vyhodnocuje neplatný výraz '{1}' : {2}.
+component_statements_invalid				= Komponent '{0}' vyhodnocuje neplatné PHP príkazy '{1}' : {2}.
+component_class_behavior_defined			= Komponent '{0}' už má správanie triedy '{1}'.
+component_not_a_behavior					= Komponent '{0}' pridávaný ako správanie nie je TBaseBehavior.
+object_not_a_component						= Objekt '{0}' pridávaný ako správanie nie je TComponent.
+component_no_tcomponent_class_behaviors		= TComponent nemôže mať pripojené správania triedy kvôli rekurzii.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors sa nemôžu pripojiť k viacerým vlastníkom. Odovzdajte reťazec alebo pole s triedou IBehavior a vlastnosťami na vytvorenie inštancie pre každého vlastníka.
+
+propertyvalue_enumvalue_invalid				= Hodnota '{0}' nie je platná hodnota enumerácie ({1}).
+propertyvalue_invalid_hex_color				= Hodnota '{0}' nie je platná hexadecimálna hodnota farby, napr. "#112233".
+propertyvalue_invalid_array_literal			= Hodnota '{0}' nie je platný literál poľa.
+propertyvalue_array_too_deep				= Literál poľa je vnorený hlbšie ako {0} úrovní.
+
+eventhandler_lost_weak_ref					= TEventHandler nemôže zavolať obslužnú metódu udalosti, pretože WeakReference na volateľný objekt bola stratená.
+eventhandler_no_set_handler					= TEventHandler nemôže nastaviť obslužnú metódu udalosti, index "{0}".
+eventhandler_bad_offset						= TEventHandler nemá offset "{0}".
+
+eventparam_readonly							= {0} je iba na čítanie.
+eventparam_readonly_set						= {0} nemôže zmeniť ReadOnly, keď už bolo nastavené.
+eventparam_readonly_not_self				= {0} ReadOnly je možné nastaviť iba interne.
+
+list_index_invalid							= Index '{0}' je mimo rozsahu.
+list_item_inexistent						= Položku nie je možné nájsť v zozname.
+list_data_not_iterable						= Dáta musia byť pole alebo objekt implementujúci rozhranie Traversable.
+list_readonly								= {0} je iba na čítanie.
+list_readonly_set							= {0} nemôže zmeniť Read-Only, keď už je nastavené.
+prioritylist_index_invalid					= Index '{0}' z '{1}' s prioritou '{2}' je mimo rozsahu.
+prioritytrait_no_set_default_priority		= Predvolenú prioritu je možné nastaviť iba raz alebo samotným objektom.
+prioritytrait_no_set_precision				= Presnosť je možné nastaviť iba raz alebo samotným objektom.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid je možné nastaviť iba raz alebo samotným objektom.
+
+map_addition_disallowed						= Novú položku nie je možné pridať do mapy.
+map_item_unremovable						= Položku nie je možné odstrániť z mapy.
+map_data_not_iterable						= Dáta musia byť pole alebo objekt implementujúci rozhranie Traversable.
+map_readonly								= {0} je iba na čítanie.
+map_readonly_set							= {0} nemôže zmeniť Read-Only, keď už je nastavené.
+
+tnull_clone_disallowed						= Singleton TNull nie je možné klonovať. Použite namiesto toho TNull::null().
+
+weakcallablecollection_callable_required	= TWeakCallableCollection prijíma iba volateľné hodnoty (callable).
+
+arraysubscription_no_change					= TArraySubscription.{0} nie je možné zmeniť po prihlásení na odber.
+arraysubscription_no_null_key				= TArraySubscription sa nemôže prihlásiť na odber kľúča null na objekte ArrayAccess.
+arraysubscription_index_invalid				= TArraySubscription je v režime zoznamu (isAssociative = false), ale kľúč '{0}' nie je platný (počet: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array nie je možné nastaviť priamo.
+eventsubscription_no_change					= TEventSubscription.{0} nie je možné zmeniť po prihlásení na odber.
+
+application_includefile_invalid				= Nie je možné nájsť konfiguráciu aplikácie {0}. Uistite sa, že je vo formáte namespace a súbor má príponu ".xml" alebo ".php".
+application_basepath_invalid				= Základná cesta aplikácie '{0}' neexistuje alebo nie je adresár.
+application_runtimepath_invalid				= Runtime cesta aplikácie '{0}' neexistuje alebo do nej proces webového servera nemôže zapisovať.
+application_service_class_not_found			= Trieda služby '{0}' neexistuje.
+application_service_class_not_service		= Trieda služby '{0}' neimplementuje IService.
+application_service_class_required			= registerService vyžaduje názov triedy alebo pole serviceConfig pre službu '{0}'.
+application_service_default_unregister		= Predvolenú službu stránok '{0}' nie je možné odregistrovať.
+service_csrf_token_invalid					= Služba '{0}' vyžaduje platný CSRF token.
+application_moduleid_duplicated				= ID modulu aplikácie '{0}' nie je jedinečné.
+application_runtimepath_failed				= Nie je možné vytvoriť runtime cestu '{0}'. Uistite sa, že nadradený adresár existuje a webový proces doň môže zapisovať.
+application_module_required_dep_missing		= Modul '{0}' má povinnú závislosť na module '{1}', ktorý nie je zaregistrovaný v aplikácii.
+application_module_dependency_cycle			= Medzi nasledujúcimi modulmi bol zistený cyklus závislostí: {0}.
+application_module_dependency_self_reference	= Modul '{0}' deklaruje sám seba ako závislosť, čo nie je nikdy platné.
+
+appconfig_aliaspath_invalid					= Konfigurácia aplikácie <alias id="{0}"> používa neplatnú cestu k súboru "{1}".
+appconfig_alias_invalid						= Element <alias> konfigurácie aplikácie musí mať atribút "id" a atribút "path".
+appconfig_alias_redefined					= Konfiguráciu aplikácie <alias id="{0}"> nie je možné predefinovať.
+appconfig_using_invalid						= Element <using> konfigurácie aplikácie musí mať atribút "namespace".
+appconfig_moduleid_required					= Element <module> konfigurácie aplikácie musí mať atribút "id".
+appconfig_moduletype_required				= Element <module id="{0}"> konfigurácie aplikácie musí mať atribút "class".
+appconfig_moduletype_inapplicable			= Element <module id="{0}"> konfigurácie aplikácie nemôže mať atribút "class".
+appconfig_serviceid_required				= Element <service> konfigurácie aplikácie musí mať atribút "id".
+appconfig_servicetype_required				= Element <service id="{0}"> konfigurácie aplikácie musí mať atribút "class".
+appconfig_parameterid_required				= Element <parameter> konfigurácie aplikácie musí mať atribút "id".
+appconfig_includefile_required				= Element <include> konfigurácie aplikácie musí mať atribút "file".
+appconfig_paths_invalid						= Element <paths> konfigurácie aplikácie nemôže obsahovať element <{0}>.
+appconfig_modules_invalid					= Element <modules> konfigurácie aplikácie nemôže obsahovať element <{0}>.
+appconfig_services_invalid					= Element <services> konfigurácie aplikácie nemôže obsahovať element <{0}>.
+appconfig_parameters_invalid				= Element <parameters> konfigurácie aplikácie nemôže obsahovať element <{0}>.
+appconfig_tag_invalid						= Konfigurácia aplikácie nemôže obsahovať element <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey nesmie byť prázdny.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey nesmie byť prázdny.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey nesmie byť prázdny.
+securitymanager_mcryptextension_required	= Na použitie šifrovacej funkcie TSecurityManager je potrebné PHP rozšírenie Mcrypt.
+securitymanager_mcryptextension_initfailed	= TSecurityManager nedokázal inicializovať modul mcrypt.
+
+uri_format_invalid							= '{0}' nie je platné URI.
+
+httprequest_browscap_required				= THttpRequest vyžaduje nakonfigurovanú direktívu browscap v php.ini.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator môže obsahovať iba jeden znak.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' neodkazuje na existujúci modul.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' musí odkazovať na modul rozširujúci TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie je false, čo vyžaduje modul relácie (session).
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection prijíma iba objekty THttpCookie.
+
+httpresponse_file_inexistent				= THttpResponse nemôže odoslať súbor '{0}'. Súbor neexistuje.
+httpresponse_responsedata_method_unavailable	= THttpResponse: metódu '{0}' nie je možné použiť bez vhodného adaptéra, ktorý ju implementuje.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' neodkazuje na existujúci modul.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' musí odkazovať na modul rozširujúci THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager môže obsahovať iba THttpHeader alebo jeho potomkov.
+httpheadersmanager_headerclass_missing		= Položke <headerclass> v THttpHeadersManager chýba povinný atribút 'name' alebo 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID nie je možné zmeniť po spustení relácie.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName nie je možné zmeniť po spustení relácie.
+httpsession_sessionname_invalid				= THttpSession.SessionName musí obsahovať iba alfanumerické znaky.
+httpsession_savepath_unchangeable			= THttpSession.SavePath nie je možné zmeniť po spustení relácie.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' je neplatná.
+httpsession_storage_unchangeable			= THttpSession.Storage nie je možné zmeniť po spustení relácie.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode nie je možné zmeniť po spustení relácie.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart nie je možné zmeniť po inicializácii modulu relácie.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability nie je možné zmeniť po spustení relácie.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability musí byť celé číslo od 0 do 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID nie je možné zmeniť po spustení relácie.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID nie je možné nastaviť, keď je THttpSession.CookieMode nastavený na Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout nie je možné zmeniť po spustení relácie.
+httpsession_handler_invalid					= THttpSessionHandler prijíma ako parameter konštruktora iba objekt THttpSession
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' je neplatná. Uistite sa, že je vo formáte namespace a odkazuje na adresár, do ktorého môže proces webového servera zapisovať.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath nie je možné zmeniť po inicializácii modulu.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl nie je možné zmeniť po inicializácii modulu.
+assetmanager_filepath_invalid				= TAssetManager publikuje neplatný súbor '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager publikuje tar súbor s neplatným kontrolným súčtom '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager publikuje neplatný tar súbor '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager nedokázal rozbaliť tar súbor '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager kopíruje neplatný adresár '{0}'.
+
+cache_primary_duplicated					= Povolený je najviac jeden primárny modul cache. {0} sa pokúša zaregistrovať ako ďalšia primárna cache.
+psrcache_backing_cache_required				= Vyžaduje sa TPsrCache.BackingCacheId alebo TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' neodkazuje na modul aplikácie.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' musí odkazovať na modul implementujúci Psr\SimpleCache\CacheInterface alebo Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' je PSR adaptér tejto TPsrCache; čítal by a zapisoval späť do tej istej cache.
+psrcachebacking_cache_required				= {0} vyžaduje podpornú cache. Nastavte {0}.BackingCacheId, {0}.BackingCache alebo primárnu cache aplikácie.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' neodkazuje na modul aplikácie.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' musí odkazovať na modul Prado\Caching\ICache.
+psrcachebacking_key_invalid					= Kľúč cache {0} musí byť neprázdny reťazec bez vyhradených znakov {}()/\@:, ale bolo zadané '{1}'.
+sqlitecache_extension_required				= TSqliteCache vyžaduje PHP rozšírenie SQLite.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile je povinný.
+sqlitecache_connection_failed				= Pripojenie k databáze TSqliteCache zlyhalo. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache nedokázala vytvoriť databázu cache. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile nie je možné zmeniť po inicializácii modulu.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile je neplatný. Uistite sa, že je v správnom formáte namespace.
+
+dbcache_unavailable							= TDbCache vyžaduje PHP rozšírenie PDO.
+
+etcdcache_transport_required				= TEtcdCache vyžaduje PHP rozšírenie cURL alebo allow_url_fopen.
+
+memcache_extension_required					= TMemCache vyžaduje PHP rozšírenie memcache.
+memcache_connection_failed					= TMemCache sa nedokázala pripojiť k serveru memcache {0}:{1}.
+memcache_not_initialized					= Voľby TMemCache nie je možné nastaviť pred inicializáciou modulu.
+
+apccache_extension_required					= TAPCCache vyžaduje PHP rozšírenie APC.
+apccache_extension_not_enabled				= TAPCCache vyžaduje na fungovanie apc.enabled = 1 v php.ini.
+apccache_extension_not_enabled_cli			= TAPCCache vyžaduje apc.enable_cli = 1 v php.ini, aby fungovala s PHP z príkazového riadka.
+
+cachesize_item_exceeds_maximum_size			= Položka cache má {0} bajtov, čo prekračuje nakonfigurovanú MaximumSize {1} bajtov.
+
+filecache_directory_required				= TFileCache.Directory je povinný.
+filecache_directory_create_failed			= TFileCache nemôže vytvoriť adresár cache '{0}'.
+filecache_directory_not_writable			= Do adresára cache TFileCache '{0}' nie je možné zapisovať.
+filecache_hash_token_identity				= TFileCache.hashToken musí transformovať svoj vstup; implementácia v podtriede vrátila token nezmenený.
+filecache_hash_token_path_separator			= TFileCache.hashToken nesmie vrátiť hodnotu obsahujúcu oddeľovač cesty ("/" alebo "\"); implementácia v podtriede vrátila nebezpečný hash.
+
+memorycache_backing_file_directory_not_found	= Adresár TMemoryCache.BackingFile pre cestu '{0}' neexistuje.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' je neplatný. Platné hodnoty sú 'PHP' a 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' je neplatné. Platné hodnoty sú 'None', 'Base64' a 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' je neplatný. Musí to byť ID modulu TSecurityManager alebo inštancia TSecurityManager.
+serializingcache_json_encode_failed			= TSerializingCache nedokázala zakódovať hodnotu do JSON: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} neodkazuje na platný adresár.
+cachedependencylist_cachedependency_required	= Do TCacheDependencyList je možné pridať iba objekty implementujúce ICacheDependency.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' je neplatná. Uistite sa, že je vo formáte namespace a odkazuje na platný adresár obsahujúci súbory šablón chýb.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' nie je platný adresár.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage nie je možné zmeniť po inicializácii služby.
+pageservice_basepath_unchangeable			= TPageService.BasePath nie je možné zmeniť po inicializácii služby.
+pageservice_pageclass_invalid				= Trieda stránky {0} je neplatná. Musí to byť TPage alebo trieda rozširujúca TPage.
+pageservice_includefile_invalid				= Nie je možné nájsť konfiguráciu služby stránok {0}. Uistite sa, že je vo formáte namespace a súbor má príponu ".xml" alebo ".php".
+
+pageserviceconf_file_invalid				= Nie je možné otvoriť konfiguračný súbor adresára stránok '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> používa neplatnú cestu k súboru "{1}" v konfiguračnom súbore adresára stránok '{2}'.
+pageserviceconf_alias_invalid				= Element <alias> musí mať atribút "id" a atribút "path" v konfiguračnom súbore adresára stránok '{0}'.
+pageserviceconf_using_invalid				= Element <using> musí mať atribút "namespace" v konfiguračnom súbore adresára stránok '{0}'.
+pageserviceconf_module_invalid				= Element <module> musí mať atribút "id" v konfiguračnom súbore adresára stránok '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> musí mať atribút "class" v konfiguračnom súbore adresára stránok '{1}'.
+pageserviceconf_parameter_invalid			= Element <parameter> musí mať atribút "id" v konfiguračnom súbore adresára stránok '{0}'.
+pageserviceconf_page_invalid				= Element <page> musí mať atribút "id" v konfiguračnom súbore adresára stránok '{0}'.
+pageserviceconf_includefile_required		= Element <include> konfigurácie stránky musí mať atribút "file".
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" nie je možné zmeniť (na "{1}") po pripojení správania.
+basebehavior_sync_no_owner					= TBaseBehavior "{0}" nemá vlastníka a nemôže synchronizovať obslužné metódy udalostí na komponente bez vlastníkov.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" nemôže synchronizovať obslužné metódy udalostí na objekte, ktorý nie je jeho vlastníkom.
+behavior_has_owner							= TBehavior "{0}" sa môže pripojiť iba k jednému vlastníkovi.
+behavior_bad_attach_component				= TBehavior "{0}" sa môže pripojiť iba k TComponent.
+behavior_detach_without_owner				= TBehavior "{0}" nie je možné odpojiť bez vlastníka.
+behavior_detach_wrong_owner					= TBehavior "{0}" sa nemôže odpojiť od objektu, ktorý nie je jeho vlastníkom.
+behavior_property_unchangeable				= {1}.{0} nie je možné zmeniť po pripojení správania.
+behavior_requires_owner						= {1}.{0} vyžaduje vlastníka.
+classbehavior_owner_attach_once				= TClassBehavior "{0}" je možné pripojiť k vlastníkovi iba raz. Obslužné metódy by neboli jedinečné.
+classbehavior_bad_attach_component			= TClassBehavior "{0}" sa môže pripojiť iba k TComponent.
+classbehavior_detach_without_owner			= TClassBehavior "{0}" nie je možné odpojiť bez vlastníka.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" sa nemôže odpojiť od objektu, ktorý nie je jeho vlastníkom.
+
+callchain_bad_dynamic_event					= Bola vyvolaná TCallChain.{0}, ale očakávala sa {1}.
+
+behaviormodule_behavior_as_array_required	= php <behavior> musí byť pole.
+behaviormodule_behaviorname_required		= <behavior> musí obsahovať atribút 'name' na pripojenie správania.
+behaviormodule_behaviorclass_required		= <behavior> musí obsahovať atribút 'class' definujúci triedu správania.
+behaviormodule_attachto_class_required		= <behavior> musí mať atribút 'attachto' alebo 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= <behavior> musí mať buď atribút 'attachto', alebo 'attachtoclass', nie oba.
+behaviormodule_behaviorowner_required		= Objekt attachto '{0}' pre <behavior> sa nenašiel.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors nie je možné nastaviť na neplatný typ '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader musí mať názov správania (Behavior Name).
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader musí mať triedu správania (Behavior Class).
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader musí mať atribút 'attachto' alebo 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader musí mať iba jeden z atribútov 'attachto' alebo 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' vyžaduje ID modulu.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' sa nenašiel.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader nenašiel modul '{0}' na pripojenie správaní.
+
+evaluationfilter_statements_denied			= Komponent '{0}' nemôže vyhodnotiť PHP príkazy '{1}', pretože TEvaluationFilterBehavior.AllowStatements je false.
+evaluationfilter_code_denied				= Komponent '{0}' nemôže vyhodnotiť '{1}', pretože TEvaluationFilterBehavior nepovoľuje '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior vyžaduje na vytvorenie volateľnú hodnotu (callable).
+maproutebehavior_handler_not_callable		= TMapRouteBehavior vyžaduje na vytvorenie volateľnú hodnotu (callable).
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior musí mať atribút Parameter.
+parameterizebehavior_no_property			= TParameterizeBehavior musí mať atribút Property.
+parameterizebehavior_owner_get_only_property	= Vlastník TParameterizeBehavior má vlastnosť (Property) '{0}', ale je iba na čítanie.
+parameterizebehavior_owner_has_no_property	= Vlastník TParameterizeBehavior nemá vlastnosť (Property) '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior nemôže vyprázdniť Parameter po pripojení.
+
+processhelper_no_forking					= Forkovanie procesov nie je podporované.
+processhelper_no_signals					= Signály procesom nie je možné posielať v systéme Windows.
+
+serializableclosure_no_decrypter			= TSerializableClosure nemôže dešifrovať zašifrovaný payload closure bez nakonfigurovaného dešifrovača.
+serializableclosure_decrypt_failed			= TSerializableClosure nedokázala dešifrovať zašifrovaný payload closure; payload môže byť pozmenený alebo sa zmenil kľúč.
+
+appsignals_no_change						= TApplicationSignals::{0} nie je možné zmeniť po pripojení.
+appsignals_not_a_dispatcher					= '{0}' nie je TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' nie je platný PID.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} nie je možné zmeniť po pripojení.
+
+initialized_property_unchangeable			= {1}.{0} nie je možné nastaviť, pretože je už inicializované.
+initialized_requires_initialization			= {1}.{0} vyžaduje pred spracovaním inicializáciu.
+
+template_closingtag_unexpected				= Nájdená neočakávaná uzatváracia značka '{0}'.
+template_closingtag_expected				= Očakávala sa uzatváracia značka '{0}', nájdená '{1}'.
+template_directive_nonunique				= Direktíva '<%@ ... %>' sa musí nachádzať na začiatku šablóny a môže sa vyskytnúť najviac raz.
+template_comments_forbidden					= Komentáre šablóny nie sú povolené vnútri značiek vlastností.
+template_matching_unexpected				= Neočakávaná zhoda.
+template_property_unknown					= {0} nemá vlastnosť s názvom '{1}'.
+template_event_unknown						= {0} nemá udalosť s názvom '{1}'.
+template_property_readonly					= {0} má vlastnosť '{1}' iba na čítanie.
+template_event_forbidden					= {0} je komponent, ktorý nie je ovládacím prvkom. K jeho udalosti '{1}' nie je možné v šablóne pripojiť obslužnú metódu.
+template_databind_forbidden					= {0} je komponent, ktorý nie je ovládacím prvkom. Na jeho vlastnosť '{1}' nie je možné naviazať výrazy.
+template_component_required					= '{0}' nie je komponent. V šablóne sa môžu vyskytovať iba komponenty.
+template_format_invalid						= Neplatná syntax šablóny: {0}
+template_property_duplicated				= Vlastnosť {0} je nakonfigurovaná dvakrát alebo viackrát.
+template_eventhandler_invalid				= {0}.{1} prijíma iba statický reťazec.
+template_controlid_invalid					= {0}.ID prijíma iba statický textový reťazec.
+template_controlskinid_invalid				= {0}.SkinID prijíma iba statický textový reťazec.
+template_content_unexpected					= Pri vytváraní inštancie šablóny sa vyskytol neočakávaný obsah: {0}.
+template_include_invalid					= Neplatné vloženie šablóny. Uistite sa, že {0} je platný namespace odkazujúci na existujúci súbor šablóny s príponou .tpl.
+template_tag_unexpected						= Inicializácia vlastnosti {0} obsahuje neznámy typ značky {1}.
+
+xmldocument_file_read_failed				= TXmlDocument nemôže načítať súbor '{0}'.
+xmldocument_file_write_failed				= TXmlDocument nemôže zapísať súbor '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList prijíma iba objekty TXmlElement.
+
+xmlelement_null_tag							= Názov značky TXmlElement nemôže byť null.
+xmlelement_empty_tag						= Názov značky TXmlElement nemôže byť prázdny reťazec.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action môže mať iba hodnotu 'allow' alebo 'deny'.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb môže mať iba hodnotu 'get' alebo 'post'.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection prijíma iba objekty TAuthorizationRule.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' nie je platný súbor.
+usermanager_userfile_unchangeable			= TUserManager.UserFile nie je možné zmeniť. Modul používateľov je už inicializovaný.
+
+integritymanager_entry_invalid				= Položka integrity TIntegrityManager pre URL '{0}' vyžaduje neprázdne url a hash.
+integritymanager_algorithm_invalid			= Algoritmus TIntegrityManager '{0}' nie je podporovaný; použite jeden z: {1}.
+integritymanager_file_unreadable			= TIntegrityManager nemôže načítať súbor '{0}' na výpočet jeho integrity.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' nie je platný súbor.
+integritymanager_integrityfile_unchangeable	= {1}.{0} nie je možné zmeniť. Modul integrity je už inicializovaný.
+
+javascript_script_integrity_required		= Pre vzdialený skript '{0}' nie je zaregistrovaná žiadna Subresource Integrity, ale integrita je vyžadovaná.
+
+authmanager_usermanager_required			= TAuthManager.UserManager musí mať priradenú hodnotu.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' neodkazuje na ID modulu aplikácie.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' neodkazuje na platný modul aplikácie TUserManager.
+authmanager_session_required				= TAuthManager vyžaduje modul relácie aplikácie.
+
+permissions_events_invalid					= TPermissionEvent.Event nie je možné nastaviť na neplatnú hodnotu '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules nie je možné nastaviť na neplatnú hodnotu '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' neodkazuje na ID modulu aplikácie.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' neodkazuje na platný modul aplikácie TDbParameterModule.
+permissions_init_once						= TPermissionsManager.init je možné inicializovať iba raz.
+permissions_duplicate_permission			= Oprávnenie TPermissionsManager '{0}' je už zaregistrované.
+permissions_role_children_invalid			= Rola '{0}' v konfigurácii TPermissionsManager má neplatných potomkov '{1}'.
+permissions_rule_invalid					= Pravidlo oprávnenia '{0}' v konfigurácii TPermissionsManager má vlastnosti, ktoré nie sú pole.
+permissions_rules_require_name				= Pravidlá TPermissionsManager musia mať vlastnosť oprávnenia "name".
+permissions_role_rule_nested				= Rola '{0}' v konfigurácii TPermissionsManager obsahuje <permissionrule>. Pravidlá oprávnení sú priamymi potomkami konfiguračného elementu permissions.
+permissions_rule_class_invalid				= Trieda pravidla oprávnenia TPermissionsManager '{0}' je namespace adresára, nie trieda.
+permissions_children_invalid				= Potomkovia TPermissionsManager.*RoleChildren musia byť reťazec alebo pole, ale sú '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' nie je platný súbor.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' nie je platný alias cesty. Uistite sa, že ste tento alias definovali v konfigurácii a že odkazuje na platný adresár.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' nie je platný adresár.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath nie je možné zmeniť po inicializácii modulu.
+thememanager_theme_invalid					= Názov témy TThemeManager '{0}' musí byť názov jediného adresára.
+
+theme_baseurl_required						= TThemeManager.BasePath je povinná. Predvolene sa predpokladá adresár s názvom 'themes' v adresári obsahujúcom vstupný skript aplikácie.
+theme_path_inexistent						= Cesta k téme '{0}' neexistuje.
+theme_control_nested						= Skin pre typ ovládacieho prvku '{0}' v téme '{1}' nemôže byť vnútri iného skinu.
+theme_skinid_duplicated						= SkinID '{0}.{1}' je v téme '{2}' duplicitné.
+theme_databind_forbidden					= Databind nie je možné použiť v téme '{0}' pre skin ovládacieho prvku '{1}.{2}' pri vlastnosti '{3}'.
+theme_property_readonly						= Skin sa aplikuje na vlastnosť ovládacieho prvku '{0}.{1}', ktorá je iba na čítanie.
+theme_property_undefined					= Skin sa aplikuje na neexistujúcu vlastnosť ovládacieho prvku '{0}.{1}'.
+theme_tag_unexpected						= Inicializácia vlastnosti {0} obsahuje neznámy typ značky {1}.
+
+control_object_reregistered					= Nájdené duplicitné ID objektu '{0}'.
+control_id_invalid							= {0}.ID '{1}' je neplatné. Povolené sú iba alfanumerické znaky a podčiarkovník. Prvý znak musí byť písmeno alebo podčiarkovník.
+control_skinid_unchangeable					= {0}.SkinID nie je možné zmeniť po aplikovaní skinu na ovládací prvok alebo po vytvorení podradených ovládacích prvkov.
+control_enabletheming_unchangeable			= {0}.EnableTheming nie je možné zmeniť po vytvorení podradených ovládacích prvkov.
+control_stylesheet_applied					= Skin StyleSheet už bol aplikovaný na {0}.
+control_id_nonunique						= {0}.ID '{1}' nie je jedinečné medzi všetkými ovládacími prvkami v rámci toho istého pomenúvacieho kontajnera.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' nesmie byť záporná.
+
+templatecontrol_mastercontrol_invalid		= Hlavný ovládací prvok (master) musí byť typu TTemplateControl alebo jeho potomok.
+templatecontrol_mastercontrol_required		= Ovládací prvok '{0}' vyžaduje hlavný ovládací prvok (master), pretože používa TContent.
+templatecontrol_contentid_duplicated		= ID TContent '{0}' je duplicitné.
+templatecontrol_placeholderid_duplicated	= ID TContentPlaceHolder '{0}' je duplicitné.
+templatecontrol_directive_invalid			= {0}.{1} prijíma cez direktívu šablóny iba statický textový reťazec.
+templatecontrol_placeholder_inexistent		= TContent '{0}' nemá zodpovedajúci TContentPlaceHolder.
+
+page_form_duplicated						= Stránka môže obsahovať najviac jeden TForm. Pre ostatné formuláre použite bežné HTML značky form.
+page_isvalid_unknown						= TPage.IsValid ešte nebolo vyhodnotené.
+page_postbackcontrol_invalid				= Nie je možné určiť ovládací prvok postbacku '{0}'.
+page_control_outofform						= {0} '{1}' musí byť umiestnený vnútri TForm.
+page_head_duplicated						= Stránka môže obsahovať najviac jeden THead.
+page_head_required							= Na vykreslenie CSS a js v HTML sekcii head je v šablóne stránky potrebný ovládací prvok THead.
+page_statepersister_invalid					= Perzistor stavu stránky musí implementovať rozhranie IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Neznámy názov knižnice skriptov Prado '{0}'.
+csmanager_pradoscript_notloaded				= Knižnica skriptov Prado s názvom '{0}' ešte nebola načítaná.
+csmanager_pradostyle_invalid				= Neznámy názov knižnice štýlov Prado '{0}'.
+csmanager_invalid_packages					= Neznáme balíky '{1}' pre javascriptové balíky definované v '{0}'. Platné balíky sú '{2}'.
+
+httpclient_transport_error					= Chyba transportu HTTP klienta (kód {0}): {1}
+httpclient_http_error						= Chybová HTTP odpoveď so stavom {0}.
+httpclient_transport_required				= Nie je dostupný žiadny HTTP transport: rozšírenie cURL nie je načítané a allow_url_fopen je vypnuté.
+
+restclient_invalid_header					= Hlavička TRestClient '{0}' má neplatný názov alebo hodnotu obsahujúcu CR/LF.
+restclient_basicauth_username_colon			= Používateľské meno pre Basic autentifikáciu TRestClient nesmie obsahovať dvojbodku (oddeľovač prihlasovacích údajov podľa RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder musí mať ID.
+
+content_id_required							= TContent musí mať ID.
+
+controlcollection_control_required			= TControlList prijíma iba reťazce alebo objekty TControl.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' je neplatný. Musí to byť iba jeden znak.
+webcontrol_dir_invalid						= {0}.Dir '{1}' je neplatný. Povolené hodnoty sú 'ltr', 'rtl' a 'auto'.
+webcontrol_style_invalid					= {0}.Style prijíma iba reťazcovú hodnotu.
+
+listcontrol_selection_invalid				= {0} má neplatný výber nastavený pred vykonaním databindingu.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex má neplatnú hodnotu {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue má neplatnú hodnotu '{1}'.
+listcontrol_expression_invalid				= {0} vyhodnocuje neplatný výraz '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} nepodporuje viacnásobný výber.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' sa nenašiel.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' sa nenašiel.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' sa nenašiel.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' sa nenašiel.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' nesmie byť záporný.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' nesmie byť záporný.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' musí byť v rozsahu od 0 po RenderFilterDepth {1} filtrujúceho ovládacieho prvku.
+
+hiddenfield_focus_unsupported				= THiddenField nepodporuje nastavenie zamerania (focus) vstupu.
+hiddenfield_theming_unsupported				= THiddenField nepodporuje témy.
+hiddenfield_skinid_unsupported				= THiddenField nepodporuje skin ovládacieho prvku.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' neodkazuje na existujúci ovládací prvok tlačidla.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding musí byť celé číslo väčšie alebo rovné -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing musí byť celé číslo väčšie alebo rovné -1.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History musí byť celé číslo väčšie ako 0.
+
+listitemcollection_item_invalid				= TListItemCollection prijíma iba reťazce alebo objekty TListItem.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices je iba na čítanie.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack je iba na čítanie.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex je iba na čítanie.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices je iba na čítanie.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue je iba na čítanie.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices je iba na čítanie.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' neexistuje.
+logrouter_routeclass_required				= V konfigurácii <route> je povinný atribút class.
+logrouter_routetype_required				= Trasa logu musí byť inštancia TLogRoute alebo odvodenej triedy.
+
+dblogroute_connectionid_invalid				= TDbLogRoute nemôže vytvoriť pripojenie k databáze s ID '{0}'.
+dblogroute_insert_failed					= TDbLogRoute nemôže vložiť log do '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' nie je platná
+dblogroute_table_nonexistent				= Tabuľka TDbLogRoute '{0}' neexistuje a musí byť vytvorená.
+dblogroute_order_invalid					= Zoradenie TDbLogRoute '{0}' musí uvádzať stĺpce, každý voliteľne nasledovaný ASC alebo DESC.
+dblogroute_limit_invalid					= Limit TDbLogRoute '{0}' musí byť počet riadkov, 'count OFFSET offset' alebo 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' musí byť adresár vo formáte namespace, do ktorého môže proces webového servera zapisovať.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize musí byť väčšia ako 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles musí byť väčší ako 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom nemôže byť prázdny.
+emaillogroute_mail_failed					= TEmailLogRoute nedokázala odoslať log na '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags nie sú platné, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility nie je platná, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger je povinný.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' nie je ID modulu ani názov triedy Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger nemôže byť TPsrLogger; logoval by späť do toho istého TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns nesmie byť menšie ako 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate je prázdny alebo obsahuje neplatnú cestu ID ovládacieho prvku.
+basevalidator_validatable_required			= {0}.ControlToValidate musí odkazovať na ovládací prvok implementujúci rozhranie IValidatable.
+basevalidator_forcontrol_unsupported		= {0}.ForControl nie je podporovaný.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare obsahuje neplatnú cestu ID ovládacieho prvku.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate musí odkazovať na ovládací prvok TFileUpload.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate obsahuje neplatnú cestu ID TListControl, "{1}" je {2}.
+
+repeater_template_required					= TRepeater.{0} vyžaduje inštanciu šablóny implementujúcu rozhranie ITemplate.
+repeater_itemtype_unknown					= Neznámy typ položky repeatera {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection prijíma iba objekty, ktoré sú inštanciou TControl alebo jeho potomka.
+
+datalist_template_required					= TDataList.{0} vyžaduje inštanciu šablóny implementujúcu rozhranie ITemplate.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection prijíma iba objekty TDataListItem.
+
+datagrid_template_required					= TDataGrid.{0} vyžaduje inštanciu šablóny implementujúcu rozhranie ITemplate.
+templatecolumn_template_required			= TTemplateColumn.{0} vyžaduje inštanciu šablóny implementujúcu rozhranie ITemplate.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex nesmie byť menší ako 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize musí byť väčšia ako 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount nesmie byť menší ako 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection prijíma iba objekty TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection prijíma iba objekty TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount musí byť väčší ako 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor sa pokúša vyhodnotiť hodnotu poľa z neplatných dát. Uistite sa, že dáta sú pole, TMap, TList alebo objekt obsahujúci zadané pole '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor sa pokúša vyhodnotiť dátovú hodnotu neznámeho poľa '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection prijíma iba objekty TTableRow.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection prijíma iba objekty TTableColumn.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection prijíma iba objekty TTableColumnGroup.
+tablecolumn_span_invalid					= TTableColumn Span musí byť 1 alebo viac; zadané {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection prijíma iba objekty TTableCell.
+
+multiview_view_required						= TMultiView prijíma ako potomka iba TView.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex má neplatný index '{0}'.
+multiview_view_inexistent					= TMultiView nemôže nájsť zadané zobrazenie (view).
+multiview_viewid_invalid					= TMultiView nemôže nájsť zobrazenie (view) '{0}', na ktoré sa má prepnúť.
+
+viewcollection_view_required				= TViewCollection prijíma ako svoj prvok iba TView.
+
+view_visible_readonly						= TView.Visible je iba na čítanie. Na prepínanie viditeľnosti použite TView.Active.
+
+wizard_step_invalid							= Krok, ktorý sa má aktivovať, sa v kolekcii krokov sprievodcu nenašiel.
+wizard_command_invalid						= Neplatný navigačný príkaz sprievodcu '{0}'.
+
+table_tablesection_outoforder				= Sekcie tabuľky TTable musia byť v poradí: Header, Body a Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType je iba na čítanie.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection prijíma iba objekty TWizardStep alebo jeho odvodených tried.
+
+texthighlighter_stylesheet_invalid			= Nie je možné nájsť súbor so štýlmi pre TTextHighlighter.
+
+hotspotcollection_hotspot_required			= THotSpotCollection prijíma iba inštancie THotSpot alebo jeho odvodených tried.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode je iba na čítanie.
+htmlarea_tarfile_invalid					= THtmlArea nemôže nájsť tar súbor TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile nie je možné zmeniť, pretože modul je už inicializovaný.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' je neplatný. Uistite sa, že je vo formáte namespace a prípona súboru je '.xml' alebo '.php'.
+parametermodule_parameterid_required		= Element parameter musí mať atribút 'id'.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' je neplatné. Povolené sú iba alfanumerické znaky a podčiarkovník. Prvý znak musí byť písmeno alebo podčiarkovník.
+datagridcolumn_expression_invalid			= {0} vyhodnocuje neplatný výraz '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID je nastavené na neplatné ID modulu cache {0}. Modul buď neexistuje, alebo neimplementuje rozhranie ICache.
+outputcache_duration_invalid				= {0}.Duration musí byť celé číslo nie menšie ako 0.
+
+stack_data_not_iterable						= TStack môže načítať dáta iba z poľa alebo traversable objektu.
+stack_empty									= TStack je prázdny.
+
+queue_data_not_iterable						= TQueue môže načítať dáta iba z poľa alebo traversable objektu.
+queue_empty									= TQueue je prázdna.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount musí byť celé číslo nie menšie ako 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex je mimo rozsahu.
+pager_pagecount_invalid						= TPager.PageCount nemôže byť menší ako 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} musí byť platná cesta ID odkazujúca na ovládací prvok odvodený od TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize musí byť celé číslo nie menšie ako 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount musí byť celé číslo nie menšie ako 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex je mimo rozsahu.
+databoundcontrol_datasource_invalid			= {0}.DataSource nie je platný.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' neodkazuje na existujúci ovládací prvok.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' musí odkazovať na ovládací prvok implementujúci IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' nepomenúva zobrazenie (view) zdroja dát.
+
+datasourcecontrol_focus_unsupported			= {0} nepodporuje Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} nepodporuje EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} nepodporuje SkinID.
+datasourcecontrol_visible_unsupported		= {0} nepodporuje Visible.
+datasourceview_insert_unsupported			= {0} nepodporuje vkladanie (insert).
+datasourceview_update_unsupported			= {0} nepodporuje aktualizáciu (update).
+datasourceview_delete_unsupported			= {0} nepodporuje odstraňovanie (delete).
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource vyžaduje pole, IDataSource alebo Traversable zdroj dát.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView vyžaduje null, pole alebo Traversable zdroj dát.
+
+clientscript_invalid_file_position			= Neplatná pozícia súboru '{1}' pre ovládací prvok TClientScript '{0}', musí byť 'Head', 'Here' alebo 'Begin'.
+clientscript_invalid_package_path			= Neplatná PackagePath '{0}' pre ovládací prvok TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' nepodporuje AutoPostBack.
+globalization_cache_path_failed				= Nie je možné vytvoriť cestu cache prekladových správ '{0}'. Uistite sa, že nadradený adresár existuje a webový proces doň môže zapisovať.
+globalization_source_path_failed			= Nie je možné vytvoriť cestu prekladových správ '{0}'. Uistite sa, že nadradený adresár existuje a webový proces doň môže zapisovať.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' neodkazuje na platný modul TDataSourceConfig.
+messagesource_connectionid_required			= ConnectionID v MessageSource_Database.source je povinné.
+
+callback_not_support_no_priority_state_update	= Callback požiadavka nepodporuje aktualizáciu stavu stránky bez priority.
+callback_invalid_callback_options			= '{1}' nie je platný ovládací prvok TCallbackOptions pre Callback ovládací prvok '{0}'.
+callback_invalid_clientside_options			= Vlastnosť ClientSide callbacku musí byť buď reťazec s ID ovládacieho prvku TCallbackOptions, alebo inštancia TCallbackClientSideOptions.
+callback_invalid_handler					= Neplatný callback handler, ovládací prvok {0} musí implementovať ICallbackEventHandler.
+callback_invalid_target						= Neplatný cieľ callbacku, neexistuje ovládací prvok s ID {0}.
+
+callback_interval_be_positive				= Interval pre TCallbackTimer "{0}" musí byť striktne väčší ako nula sekúnd.
+callback_decay_be_not_negative				= Miera útlmu (Decay) pre TCallbackTimer "{0}" nesmie byť záporná.
+
+callback_no_autopostback					= Ovládací prvok "{0}" nemôže povoliť AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform vyžaduje PHP rozšírenie XSL.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' je neplatná.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' je neplatná.
+xmltransform_transform_required				= Pre TXmlTransform musí byť nastavená vlastnosť TransformContent alebo TransformPath.
+
+ttriggeredcallback_invalid_controlid		= Vlastnosť ControlID pre '{0}' nesmie byť prázdna.
+tactivecustomvalidator_clientfunction_unsupported	= {0} nepodporuje validačnú funkciu na strane klienta.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' neidentifikuje platný modul TDataSourceConfig.
+dbproperties_property_required				= {1}.{0} je povinná vlastnosť.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' nie je platný SQL identifikátor.
+
+dbconnection_open_failed					= TDbConnection nedokázalo nadviazať pripojenie k DB: {0}
+dbconnection_connection_inactive			= TDbConnection je neaktívne.
+dbconnection_unsupported_driver_charset		= Databázový ovládač '{0}' nepodporuje nastavenie znakovej sady.
+dbconnection_charset_unchangeable			= Databázový ovládač '{0}' nemôže zmeniť znakovú sadu po otvorení pripojenia. Znaková sada je parameter DSN.
+
+dbcommand_prepare_failed					= TDbCommand nedokázal pripraviť SQL príkaz "{1}": {0}
+dbcommand_execute_failed					= TDbCommand nedokázal vykonať SQL príkaz "{1}": {0}
+dbcommand_query_failed						= TDbCommand nedokázal vykonať SQL dopyt "{1}": {0}
+dbcommand_column_empty						= TDbCommand vrátil prázdny výsledok a nemohol získať skalárnu hodnotu.
+dbdatareader_rewind_invalid					= TDbDataReader je stream iba na čítanie dopredu. Je možné ho prejsť iba raz.
+dbtransaction_transaction_inactive			= TDbTransaction je neaktívna.
+
+dbcommandbuilder_value_must_not_be_null		= Vlastnosť {0} nesmie byť null, ako definuje stĺpec '{2}' v tabuľke '{1}'.
+
+dbcommon_invalid_table_name					= Databázová tabuľka '{0}' sa nenašla. Chybová správa: {1}.
+dbcommon_invalid_identifier_name			= Neplatný názov databázového identifikátora '{0}', podrobnosti nájdete v {1}.
+dbtableinfo_invalid_column_name				= Neplatný názov stĺpca '{0}' pre databázovú tabuľku '{1}'.
+dbmetadata_invalid_table_view				= Neplatný názov tabuľky/pohľadu '{0}' alebo tabuľka/pohľad '{0}' neobsahuje žiadne prístupné definície stĺpcov/polí.
+dbmetadata_requires_php_version				= Na použitie databázy {0} je potrebné PHP verzie {1} alebo novšej.
+
+dbtablegateway_invalid_criteria				= Neplatný objekt kritérií, musí to byť reťazec alebo inštancia TSqlCriteria.
+dbtablegateway_no_primary_key_found			= Tabuľka '{0}' neobsahuje žiadne polia primárneho kľúča.
+dbtablegateway_missing_pk_values			= Chýbajú hodnoty primárneho kľúča pri zostavovaní IN(key1, key2, ...) pre tabuľku '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Nezhoda počtu hodnôt zloženého kľúča pri zostavovaní IN( (key1, key2, ..), (key3, key4, ..)) pre tabuľku '{0}'.
+dbtablegateway_mismatch_args_exception		= Vyhľadávacia metóda TTableGateway '{0}' očakáva {1} parametrov, ale našlo sa iba {2} parametrov.
+dbtablegateway_mismatch_column_name			= V dynamickej metóde __call() '{0}' sa nenašli žiadne zodpovedajúce stĺpce; platné stĺpce pre tabuľku '{2}' sú '{1}'.
+dbtablegateway_invalid_table_info			= Tabuľka musí byť reťazec alebo inštancia TDbTableInfo.
+
+resource_not_a_resource						= Očakával sa otvorený PHP resource, ale bolo zadané '{0}'.
+processfork_failed							= Nie je možné forknuť proces.
+liveprocessfork_readonly_receiver			= Dáta TLiveProcessFork sú na prijímajúcej strane iba na čítanie; mení ich iba odosielajúca strana.
+stream_open_failed							= Nie je možné otvoriť stream '{0}' v režime '{1}': {2}
+binarystream_unexpected_eof					= Neočakávaný koniec streamu: bolo potrebných {0} bajtov, ale načítaných bolo iba {1}.
+binarystream_short_write					= Neúplný zápis: malo sa zapísať {0} bajtov, ale prijatých bolo iba {1}.
+streamresourcewrapper_unusable_stream		= Stream nie je čitateľný ani zapisovateľný a nie je možné ho sprístupniť ako resource.
+streamfilter_already_registered				= Stream filter '{0}' je už zaregistrovaný.
+streamfilter_registration_failed			= Nie je možné zaregistrovať stream filter '{0}' pre triedu '{1}'.
+streamwrapper_already_registered			= Protokol stream wrappera '{0}' je už zaregistrovaný.
+streamwrapper_registration_failed			= Nie je možné zaregistrovať protokol stream wrappera '{0}' pre triedu '{1}'.
+reservedspace_invalid						= Rezervovaný priestor vyžaduje nezáporný offset a kladnú dĺžku; zadaný bol offset '{0}' a dĺžka '{1}'.
+reservedspace_access_denied					= Operácia sa prekrýva s rezervovaným priestorom na offsete '{0}'.
+multipartstream_element_invalid				= Prvok TMultipartStream vyžaduje 'name' a 'contents'.
+builtincompressor_extension_required		= Kompresor '{0}' vyžaduje PHP rozšírenie '{1}'.
+builtincompressor_compress_failed			= Kompresoru '{0}' sa nepodarilo skomprimovať dáta.
+builtincompressor_decompress_failed			= Kompresoru '{0}' sa nepodarilo dekomprimovať dáta; môžu byť poškodené alebo v inom formáte.
+compression_method_unknown					= Kompresná metóda '{0}' je neznáma alebo jej rozšírenie nie je dostupné.
+compression_none_available					= V tejto inštalácii PHP nie je dostupná žiadna kompresná metóda.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' nie je známe kódovanie obsahu (content coding). Známe kódovania sú: {1}.
+compression_xz_unsupported					= xz/LZMA nemá PHP rozšírenie; nainštalujte belisoful/prado-compression pre natívny alebo CLI xz kodek.
+clicompressor_command_missing				= Kompresor '{0}' vyžaduje jeden z týchto systémových príkazov v PATH: '{1}'.
+clicompressor_process_failed				= Kompresor '{0}' nemohol spustiť príkaz '{1}'.
+clicompressor_command_failed				= Príkaz '{1}' kompresora '{0}' skončil s kódom {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule vyžaduje Endpoint alebo kladný Port na jeho zostavenie.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' je neplatná. Musí to byť TSocketServer alebo jeho podtrieda.
+socketservermodule_scheme_not_stream		= TSocketServerModule nemôže prijímať pripojenia na schéme bez spojenia '{0}'. Použite streamovú schému, ako tcp, tls, ssl alebo unix.
+
+bitreader_invalid_bits						= Nie je možné čítať {0} bitov; počet musí byť medzi 0 a šírkou celého čísla platformy.
+bitreader_64bit_php_required				= Čítanie {0} bitov vyžaduje 64-bitový build PHP.
+bitreader_invalid_float_bits				= Nie je možné čítať {0}-bitové desatinné číslo (float); podporovaných je iba 8, 16, 32 alebo 64 bitov.
+bitwriter_invalid_bits						= Nie je možné zapísať {0} bitov; počet musí byť medzi 0 a šírkou celého čísla platformy.
+bitwriter_64bit_php_required				= Zápis {0} bitov vyžaduje 64-bitový build PHP.
+bitwriter_invalid_float_bits				= Nie je možné zapísať {0}-bitové desatinné číslo (float); podporovaných je iba 8, 16, 32 alebo 64 bitov.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' neexistuje. Upozornenie: musí byť zadaný vo formáte namespace a prípona súboru musí byť '.xml' alebo '.php'.
+soapservice_server_invalid					= Trieda SOAP servera TSoapService '{0}' je neplatná. Musí to byť TSoapServer alebo jeho podtrieda.
+soapservice_serverid_required				= Element <soap> musí mať atribút 'id'.
+soapservice_serverid_duplicated				= ID SOAP servera '{0}' je duplicitné.
+soapserver_id_invalid						= Neplatné ID SOAP servera '{0}'. Nesmie končiť na '.wsdl'.
+soapserver_provider_invalid					= Triedu poskytovateľa TSoapServer '{0}' nebolo možné vyriešiť.
+soapserver_version_invalid					= Neplatná verzia SOAP '{0}'. Musí to byť buď '1.1', alebo '1.2'.
+soapserver_wsdlstyle_invalid				= Neplatný štýl WSDL '{0}'. Musí to byť buď 'rpc', alebo 'document'.
+soapserver_wsdlstyle_unsupported			= Štýl WSDL '{0}' vyžaduje pradosoft/prado-wsdlgenerator 1.2 alebo novší. Nainštalovaný generátor vytvára iba 'rpc'.
+
+jsonservice_id_required						= TJsonService vyžaduje atribút 'id' vo svojich JSON elementoch.
+jsonservice_response_type_invalid			= JSON trieda {0} je neplatná. Musí to byť TJsonResponse alebo trieda rozširujúca TJsonResponse.
+jsonservice_class_required					= TJsonService vyžaduje atribút 'class' vo svojich JSON elementoch.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass je povinná.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' nie je platná trieda používateľa. Trieda musí rozširovať TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' neodkazuje na platný modul TDataSourceConfig.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID je povinné.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' neodkazuje na platný modul TDataSourceConfig.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID je povinné.
+
+feedservice_id_required						= TFeedService vyžaduje atribút 'id' vo svojich elementoch feed.
+feedservice_feedtype_invalid				= Trieda feedu '{0}' musí implementovať rozhranie IFeedContentProvider.
+feedservice_class_required					= TFeedService vyžaduje atribút 'class' vo svojich elementoch feed.
+
+tabviewcollection_tabview_required			= TTabPanel prijíma ako potomka iba TTabView.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID má neplatné ID '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex má neplatný index '{0}'.
+tabpanel_view_inexistent					= TTabPanel nemôže nájsť zadané zobrazenie (view).
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID je povinné.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' odkazuje na neexistujúci modul.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' odkazuje na modul, ktorý neimplementuje rozhranie ICache.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping môže obsahovať iba TUrlMappingPattern alebo jeho potomkov.
+urlmapping_global_required					= TUrlMapping musí byť nakonfigurovaný ako globálny modul.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' nie je súbor.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' musí odkazovať na XML súbor vo formáte namespace.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter je povinný pre vzor '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl nemôže byť prázdny.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' je neplatný.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme musí byť celé číslo medzi {0} a {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize musí byť celé číslo medzi {0} a {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength musí byť celé číslo medzi {0} a {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength musí byť celé číslo medzi {0} a {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet musí byť reťazec pozostávajúci aspoň z 2 znakov.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey je neznámy. Uistite sa, že do adresára assets môže proces webového servera zapisovať.
+captcha_gd2_required						= TCaptcha vyžaduje PHP rozšírenie GD2.
+captcha_imagettftext_required				= TCaptcha vyžaduje PHP rozšírenie GD2 s podporou písiem TrueType.
+captcha_imagepng_required					= TCaptcha vyžaduje PHP rozšírenie GD2 s podporou obrazového formátu PNG.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl musí odkazovať na existujúci ovládací prvok TCaptcha.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} musí odkazovať na existujúci ovládací prvok TCaptcha.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} musí odkazovať na existujúci ovládací prvok TCaptcha.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey je neznámy. Na použitie reCAPTCHA musíte získať API kľúč.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey je neznámy. Na použitie reCAPTCHA musíte získať API kľúč.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate musí byť inštancia TReCaptcha.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' môže obsahovať iba písmená, číslice, '_' a '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity musí byť celé číslo medzi {0} a {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' musí odkazovať na ovládací prvok TProofOfWork.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' nie je platná používateľská trieda. Trieda musí rozširovať TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' neodkazuje na platný modul cache.
+cachepagestatepersister_cache_required		= TCachePageStatePersister vyžaduje načítaný modul cache.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' neodkazuje na platný modul cache.
+cachemoduleid_cache_required				= {0} vyžaduje modul cache. Nakonfigurujte primárnu cache alebo nastavte {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout musí byť celé číslo nie menšie ako nula.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' nie je platný PHP výraz: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule nemôže nájsť DB tabuľku '{0}' na uloženie dát parametrov.
+dbparametermodule_get_no_blank_key			= TDbParameterModule nemôže získať prázdny kľúč.
+dbparametermodule_set_no_blank_key			= TDbParameterModule nemôže nastaviť hodnotu pre prázdny kľúč.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' neodkazuje na platný modul TDataSourceConfig.
+dbparametermodule_serializer_not_callable	= Serializer TDbParameterModule nie je volateľný (callable).
+
+clockawaretrait_invalid_clock_class			= Trieda hodín '{0}' musí implementovať Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock je pevne nastavený na UTC; pre inú zónu použite TTimezoneClock.
+
+processcrontask_no_command					= TProcessCronTask '{0}' nemá Command na spustenie.
+processcrontask_launch_failed				= TProcessCronTask nedokázala spustiť proces: '{0}'.
+processcrontask_write_failed				= TProcessCronTask nemohla zapísať pid súbor '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' nemá closure na spustenie.
+closurecrontask_closure_required			= TClosureCronTask vyžaduje Closure.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' nie je TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' nemohla dešifrovať svoj payload closure.
+cronmethodtask_no_module					= TCronMethodTask nenašla modul '{0}'.
+cron_usermanager_nonexistent				= TCronModule nenašiel UserManager s názvom '{0}'.
+cron_usermanager_invalid					= UserManager '{0}' modulu TCronModule nie je TUserManager.
+cron_task_as_array_required					= Úloha (task job) v konfigurácii TCronModule nebola pole.
+cron_duplicate_task_name					= Úlohy TCronModule musia mať jedinečné názvy.
+cron_schedule_required						= Cron Task musí mať plán (schedule).
+cron_task_required							= Cron Task musí mať úlohu (task).
+cron_not_a_crontask							= Cron Task '{0}' nie je TCronTask.
+cron_additional_tasks_invalid				= '{0}' nie je platná dodatočná cron úloha.
+crontask_no_module							= TCronTask nenašla modul '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask nenašla zadaný modul '{0}'.
+dbcron_invalid_name							= TDbCronManager: názov úlohy '{0}' je neplatný.
+dbcron_conflicting_task_names				= Cron úlohy z konfigurácie sú v konflikte s DB cron úlohami '{0}'.
+dbcron_table_nonexistent					= Databázová tabuľka TDbCronManager neexistuje.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' nie je TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler nedokázal spracovať element plánu '{0}'
+
+rational_bad_offset							= "{0}" nie je platný prístupový názov vlastnosti TRational.
+
+bithelper_bad_fp_format						= TBitHelper nemôže pracovať s '{0}' bitmi exponentu, '{1}' bitmi mantisy a biasom exponentu '{2}' v {3}-bitovom prostredí PHP.
+bithelper_invalid_color_in					= TBitHelper musí mať aspoň jeden vstupný bit (In Bit). Zadané bolo '{0}'.
+bithelper_invalid_color_out					= TBitHelper musí mať aspoň jeden výstupný bit (Out Bit). Zadané bolo '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper nemôže zrkadliť '{0}' bitov v {1}-bitovom prostredí PHP.
+
+ar_data_invalid								= {0}.copyFrom() prijíma ako parameter iba objekt alebo pole.
+ar_save_invalid								= Inštanciu {0} nie je možné uložiť, pretože je buď odstránená, alebo v neznámom stave.
+ar_delete_invalid							= Inštanciu {0} nie je možné odstrániť, pretože je buď nový záznam, alebo už odstránený záznam.
+
+dbmetadata_invalid_database_driver			= Ovládač '{0}' nie je podporovaný. Nainštalujte jeho PRADO ovládač, ak je dostupný.
+dbmetadata_not_meta_data					= Očakávala sa trieda ovládača {1}, ale bola získaná trieda {0}.
+dbmetadata_tableinfo_class_invalid			= Trieda informácií o tabuľke TDbMetaData '{0}' je namespace adresára, nie trieda.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' je neplatné. Uistite sa, že odkazuje na platný modul aplikácie.
+distributeddatasource_child_required		= {0} vyžaduje aspoň jeden podradený element '{1}'.
+masterslavedbconnection_connection_exists	= Pripojenie {0}.{1} už existuje.
+masterslavedbconnection_interface_required	= {0}.{1} vyžaduje inštanciu implementujúcu rozhranie {2}.
+slavedbconnection_requires_master			= {0} vyžaduje {1}.
+
+response_status_reason_missing				= HTTP 1.1 vyžaduje dôvod (reason) pre rozšírené stavové kódy
+response_status_reason_badchars				= V hlavičke HTTP 1.1 nesmie token status-reason obsahovať znaky CR ani LF
+
+activefileupload_temppath_invalid			= Cesta TActiveFileUpload TempPath '{0}' neexistuje alebo do nej proces webového servera nemôže zapisovať.
+
+tactivetablecell_control_outoftable			= {0} '{1}' musí byť umiestnený vnútri ovládacieho prvku TTableRow.
+tactivetablecell_control_notincollection	= {0} '{1}' nie je členom TTableCellCollection nadradeného ovládacieho prvku TTableRow.
+
+tactivetablerow_control_outoftable			= {0} '{1}' musí byť umiestnený vnútri ovládacieho prvku TTable.
+tactivetablerow_control_notincollection		= {0} '{1}' nie je členom TTableRowCollection nadradeného ovládacieho prvku TTable.
+
+juioptions_option_invalid					= '{1}' nie je platná voľba pre ovládací prvok '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' nie je platný ovládací prvok popisu (caption) pre TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID má neplatné ID '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex má neplatný index '{0}'.
+accordion_view_inexistent					= TAccordion nemôže nájsť zadané zobrazenie (view).
+
+dot_bad_size								= TDot Size musí byť kladné celé číslo, ale je '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth musí byť číslo s voliteľným % alebo CSS jednotkou dĺžky, ale je '{0}'
+
+juidatepicker_settextmode_unsupported		= TextMode ovládacieho prvku TJuiDatePicker nie je možné zmeniť.
+
+control_adapter_not_active					= Vlastnosť BaseActiveControl bola volaná na neaktívnom ovládacom prvku (Control).
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' musí byť priamym potomkom ovládacieho prvku TFigure.
+summary_requires_details_parent				= TSummary '{0}' musí byť priamym potomkom ovládacieho prvku TDetails.
+
+gravatar_bad_default						= Hodnota vlastnosti TGravatar DefaultImageStyle '{0}' nie je podporovaná
+gravatar_bad_size							= TGravatar Size nie je v rozsahu [1 .. 512], ale je '{0}'
+
+progress_value_invalid						= TProgress Value musí byť 0 alebo viac; zadané {0}.
+progress_max_invalid						= TProgress Max musí byť väčšie ako 0; zadané {0}.
+
+time_invalid_datetime						= TTime DateTime musí byť DateTimeInterface, DateInterval, reťazec alebo číselná hodnota; zadané {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' nie je názov konštanty TTimeFormat ani ICU vzor dátumu a času.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' nemôže obsahovať '{1}': aktívne, postback a validačné ovládacie prvky nefungujú vnútri inertného obsahu šablóny. Použite obyčajné značky so zástupnými symbolmi {{...}} alebo nastavte ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() musí vrátiť pole.
+
+htmlpurifier_source_path_failed				= Nie je možné vytvoriť cestu cache html purifiera '{0}'. Uistite sa, že nadradený adresár existuje a webový proces doň môže zapisovať.

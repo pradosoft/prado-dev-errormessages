@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Ukrainian (uk).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application можна встановити лише один раз.
+prado_component_unknown						= Невідомий тип компонента '{0}'. Причиною може бути така помилка розбору у файлі класу {0}: {1}
+prado_using_invalid							= '{0}' не є припустимим простором імен для використання. Переконайтеся, що додано '.*', якщо простір імен має вказувати на каталог.
+prado_alias_redefined						= Псевдонім '{0}' не можна перевизначити.
+prado_alias_invalid							= Псевдонім '{0}' вказує на неприпустимий шлях '{1}'. Псевдонім можна призначити лише існуючому каталогу.
+prado_aliasname_invalid						= Псевдонім '{0}' містить неприпустимий символ '.'.
+
+component_property_undefined				= Властивість компонента '{0}.{1}' не визначена.
+component_property_readonly					= Властивість компонента '{0}.{1}' доступна лише для читання.
+component_event_undefined					= Подія компонента '{0}.{1}' не визначена.
+component_method_undefined					= Метод компонента '{0}.{1}' не визначений.
+component_eventhandler_invalid				= До події компонента '{0}.{1}' приєднано неприпустимий обробник події '{2}'.
+component_expression_invalid				= Компонент '{0}' обчислює неприпустимий вираз '{1}' : {2}.
+component_statements_invalid				= Компонент '{0}' виконує неприпустимі інструкції PHP '{1}' : {2}.
+component_class_behavior_defined			= Компонент '{0}' уже має поведінку класу '{1}'.
+component_not_a_behavior					= Компонент '{0}', що додається як поведінка, не є TBaseBehavior.
+object_not_a_component						= Об'єкт '{0}', що додається як поведінка, не є TComponent.
+component_no_tcomponent_class_behaviors		= До TComponent не можна приєднувати поведінки класу через рекурсію.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors не можуть приєднуватися до кількох власників. Передайте рядок або масив із класом IBehavior та властивостями для створення екземпляра на кожному власнику.
+
+propertyvalue_enumvalue_invalid				= Значення '{0}' не є припустимим значенням перелічення ({1}).
+propertyvalue_invalid_hex_color				= Значення '{0}' не є припустимим шістнадцятковим значенням кольору. Наприклад: "#112233"
+propertyvalue_invalid_array_literal			= Значення '{0}' не є припустимим літералом масиву.
+propertyvalue_array_too_deep				= Літерал масиву вкладений глибше ніж на {0} рівнів.
+
+eventhandler_lost_weak_ref					= TEventHandler не може викликати обробник події, оскільки WeakReference на викликуваний об'єкт втрачено.
+eventhandler_no_set_handler					= TEventHandler не може встановити обробник події, індекс "{0}".
+eventhandler_bad_offset						= TEventHandler не має зсуву "{0}".
+
+eventparam_readonly							= {0} доступний лише для читання.
+eventparam_readonly_set						= {0} не може змінити ReadOnly після того, як його встановлено.
+eventparam_readonly_not_self				= {0} ReadOnly можна встановити лише внутрішньо.
+
+list_index_invalid							= Індекс '{0}' виходить за межі діапазону.
+list_item_inexistent						= Елемент не знайдено у списку.
+list_data_not_iterable						= Дані мають бути масивом або об'єктом, що реалізує інтерфейс Traversable.
+list_readonly								= {0} доступний лише для читання.
+list_readonly_set							= {0} не може змінити Read-Only після того, як його вже встановлено.
+prioritylist_index_invalid					= Індекс '{0}' у '{1}' з пріоритетом '{2}' виходить за межі діапазону.
+prioritytrait_no_set_default_priority		= Пріоритет за замовчуванням можна встановити лише один раз або самим об'єктом.
+prioritytrait_no_set_precision				= Точність можна встановити лише один раз або самим об'єктом.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid можна встановити лише один раз або самим об'єктом.
+
+map_addition_disallowed						= Новий елемент не можна додати до відображення.
+map_item_unremovable						= Елемент не можна видалити з відображення.
+map_data_not_iterable						= Дані мають бути масивом або об'єктом, що реалізує інтерфейс Traversable.
+map_readonly								= {0} доступний лише для читання.
+map_readonly_set							= {0} не може змінити Read-Only після того, як його вже встановлено.
+
+tnull_clone_disallowed						= Одинак TNull не можна клонувати. Використовуйте замість цього TNull::null().
+
+weakcallablecollection_callable_required	= TWeakCallableCollection приймає лише callable.
+
+arraysubscription_no_change					= TArraySubscription.{0} не можна змінити після підписки.
+arraysubscription_no_null_key				= TArraySubscription не може підписатися на ключ null в об'єкті ArrayAccess.
+arraysubscription_index_invalid				= TArraySubscription перебуває в режимі списку (isAssociative = false), але ключ '{0}' неприпустимий (кількість: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array не можна встановити безпосередньо.
+eventsubscription_no_change					= TEventSubscription.{0} не можна змінити після підписки.
+
+application_includefile_invalid				= Не вдалося знайти конфігурацію застосунку {0}. Переконайтеся, що вона вказана у форматі простору імен і файл закінчується на ".xml" або ".php".
+application_basepath_invalid				= Базовий шлях застосунку '{0}' не існує або не є каталогом.
+application_runtimepath_invalid				= Шлях часу виконання застосунку '{0}' не існує або недоступний для запису процесом вебсервера.
+application_service_class_not_found			= Клас сервісу '{0}' не існує.
+application_service_class_not_service		= Клас сервісу '{0}' не реалізує IService.
+application_service_class_required			= registerService потребує ім'я класу або масив serviceConfig для сервісу '{0}'.
+application_service_default_unregister		= Сервіс сторінок за замовчуванням '{0}' не можна скасувати.
+service_csrf_token_invalid					= Сервіс '{0}' потребує дійсного токена CSRF.
+application_moduleid_duplicated				= ID модуля застосунку '{0}' не є унікальним.
+application_runtimepath_failed				= Не вдалося створити шлях часу виконання '{0}'. Переконайтеся, що батьківський каталог існує і доступний для запису вебпроцесом.
+application_module_required_dep_missing		= Модуль '{0}' має обов'язкову залежність від модуля '{1}', який не зареєстрований у застосунку.
+application_module_dependency_cycle			= Виявлено цикл залежностей серед таких модулів: {0}.
+application_module_dependency_self_reference	= Модуль '{0}' оголошує себе як залежність, що ніколи не є припустимим.
+
+appconfig_aliaspath_invalid					= Конфігурація застосунку <alias id="{0}"> використовує неприпустимий шлях до файлу "{1}".
+appconfig_alias_invalid						= Елемент <alias> конфігурації застосунку повинен мати атрибути "id" і "path".
+appconfig_alias_redefined					= Конфігурацію застосунку <alias id="{0}"> не можна перевизначити.
+appconfig_using_invalid						= Елемент <using> конфігурації застосунку повинен мати атрибут "namespace".
+appconfig_moduleid_required					= Елемент <module> конфігурації застосунку повинен мати атрибут "id".
+appconfig_moduletype_required				= Конфігурація застосунку <module id="{0}"> повинна мати атрибут "class".
+appconfig_moduletype_inapplicable			= Конфігурація застосунку <module id="{0}"> не може мати атрибут "class".
+appconfig_serviceid_required				= Елемент <service> конфігурації застосунку повинен мати атрибут "id".
+appconfig_servicetype_required				= Конфігурація застосунку <service id="{0}"> повинна мати атрибут "class".
+appconfig_parameterid_required				= Елемент <parameter> конфігурації застосунку повинен мати атрибут "id".
+appconfig_includefile_required				= Елемент <include> конфігурації застосунку повинен мати атрибут "file".
+appconfig_paths_invalid						= Конфігурація застосунку <paths> не може містити елемент <{0}>.
+appconfig_modules_invalid					= Конфігурація застосунку <modules> не може містити елемент <{0}>.
+appconfig_services_invalid					= Конфігурація застосунку <services> не може містити елемент <{0}>.
+appconfig_parameters_invalid				= Конфігурація застосунку <parameters> не може містити елемент <{0}>.
+appconfig_tag_invalid						= Конфігурація застосунку не може містити елемент <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey не може бути порожнім.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey не може бути порожнім.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey не може бути порожнім.
+securitymanager_mcryptextension_required	= Для використання функції шифрування TSecurityManager потрібне розширення PHP Mcrypt.
+securitymanager_mcryptextension_initfailed	= TSecurityManager не вдалося ініціалізувати модуль mcrypt.
+
+uri_format_invalid							= '{0}' не є припустимим URI.
+
+httprequest_browscap_required				= THttpRequest потребує налаштованої директиви browscap у php.ini.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator може містити лише один символ.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' не вказує на існуючий модуль.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' повинен вказувати на модуль, що розширює TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie має значення false, що потребує модуля сесії.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection приймає лише об'єкти THttpCookie.
+
+httpresponse_file_inexistent				= THttpResponse не може надіслати файл '{0}'. Файл не існує.
+httpresponse_responsedata_method_unavailable	= THttpResponse: метод '{0}' не можна використати без відповідного адаптера, що його реалізує.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' не вказує на існуючий модуль.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' повинен вказувати на модуль, що розширює THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager може містити лише THttpHeader або його дочірні класи.
+httpheadersmanager_headerclass_missing		= У записі <headerclass> THttpHeadersManager відсутній обов'язковий атрибут 'name' або 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID не можна змінити після запуску сесії.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName не можна змінити після запуску сесії.
+httpsession_sessionname_invalid				= THttpSession.SessionName повинен містити лише алфавітно-цифрові символи.
+httpsession_savepath_unchangeable			= THttpSession.SavePath не можна змінити після запуску сесії.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' неприпустимий.
+httpsession_storage_unchangeable			= THttpSession.Storage не можна змінити після запуску сесії.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode не можна змінити після запуску сесії.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart не можна змінити після ініціалізації модуля сесії.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability не можна змінити після запуску сесії.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability повинен бути цілим числом від 0 до 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID не можна змінити після запуску сесії.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID не можна встановити, коли THttpSession.CookieMode має значення Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout не можна змінити після запуску сесії.
+httpsession_handler_invalid					= THttpSessionHandler приймає як параметр конструктора лише об'єкт THttpSession
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' неприпустимий. Переконайтеся, що він у форматі простору імен і вказує на каталог, доступний для запису процесом вебсервера.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath не можна змінити після ініціалізації модуля.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl не можна змінити після ініціалізації модуля.
+assetmanager_filepath_invalid				= TAssetManager публікує неприпустимий файл '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager публікує tar-файл із неприпустимою контрольною сумою '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager публікує неприпустимий tar-файл '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager не вдалося розпакувати tar-файл '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager копіює неприпустимий каталог '{0}'.
+
+cache_primary_duplicated					= Дозволено щонайбільше один основний модуль кешу. {0} намагається зареєструватися як ще один основний кеш.
+psrcache_backing_cache_required				= Потрібно вказати TPsrCache.BackingCacheId або TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' не посилається на модуль застосунку.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' повинен посилатися на модуль, що реалізує Psr\SimpleCache\CacheInterface або Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' є PSR-адаптером цього TPsrCache; він читав би та записував би назад у той самий кеш.
+psrcachebacking_cache_required				= {0} потребує резервного кешу. Встановіть {0}.BackingCacheId, {0}.BackingCache або основний кеш застосунку.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' не посилається на модуль застосунку.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' повинен посилатися на модуль Prado\Caching\ICache.
+psrcachebacking_key_invalid					= Ключ кешу {0} має бути непорожнім рядком без зарезервованих символів {}()/\@:, але передано '{1}'.
+sqlitecache_extension_required				= TSqliteCache потребує розширення PHP SQLite.
+sqlitecache_dbfile_required					= Потрібно вказати TSqliteCache.DbFile.
+sqlitecache_connection_failed				= Не вдалося підключитися до бази даних TSqliteCache. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache не вдалося створити базу даних кешу. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile не можна змінити після ініціалізації модуля.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile неприпустимий. Переконайтеся, що він у правильному форматі простору імен.
+
+dbcache_unavailable							= TDbCache потребує розширення PHP PDO.
+
+etcdcache_transport_required				= TEtcdCache потребує розширення PHP cURL або allow_url_fopen.
+
+memcache_extension_required					= TMemCache потребує розширення PHP memcache.
+memcache_connection_failed					= TMemCache не вдалося підключитися до сервера memcache {0}:{1}.
+memcache_not_initialized					= Параметри TMemCache не можна встановити до ініціалізації модуля.
+
+apccache_extension_required					= TAPCCache потребує розширення PHP APC.
+apccache_extension_not_enabled				= Для роботи TAPCCache потрібно apc.enabled = 1 у php.ini.
+apccache_extension_not_enabled_cli			= Для роботи TAPCCache з PHP у командному рядку потрібно apc.enable_cli = 1 у php.ini.
+
+cachesize_item_exceeds_maximum_size			= Розмір елемента кешу становить {0} байт, що перевищує налаштований MaximumSize у {1} байт.
+
+filecache_directory_required				= Потрібно вказати TFileCache.Directory.
+filecache_directory_create_failed			= TFileCache не може створити каталог кешу '{0}'.
+filecache_directory_not_writable			= Каталог кешу TFileCache '{0}' недоступний для запису.
+filecache_hash_token_identity				= TFileCache.hashToken повинен перетворювати вхідне значення; реалізація в підкласі повернула токен без змін.
+filecache_hash_token_path_separator			= TFileCache.hashToken не повинен повертати значення, що містить роздільник шляху ("/" або "\"); реалізація в підкласі повернула небезпечний хеш.
+
+memorycache_backing_file_directory_not_found	= Каталог TMemoryCache.BackingFile не існує для шляху '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' неприпустимий. Припустимі значення: 'PHP' і 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' неприпустимий. Припустимі значення: 'None', 'Base64' і 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' неприпустимий. Він має бути ID модуля TSecurityManager або екземпляром TSecurityManager.
+serializingcache_json_encode_failed			= TSerializingCache не вдалося закодувати значення в JSON: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} не посилається на дійсний каталог.
+cachedependencylist_cachedependency_required	= До TCacheDependencyList можна додавати лише об'єкти, що реалізують ICacheDependency.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' неприпустимий. Переконайтеся, що він у форматі простору імен і вказує на дійсний каталог із файлами шаблонів помилок.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' не є дійсним каталогом.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage не можна змінити після ініціалізації сервісу.
+pageservice_basepath_unchangeable			= TPageService.BasePath не можна змінити після ініціалізації сервісу.
+pageservice_pageclass_invalid				= Клас сторінки {0} неприпустимий. Він має бути TPage або розширювати TPage.
+pageservice_includefile_invalid				= Не вдалося знайти конфігурацію сервісу сторінок {0}. Переконайтеся, що вона вказана у форматі простору імен і файл закінчується на ".xml" або ".php".
+
+pageserviceconf_file_invalid				= Не вдалося відкрити файл конфігурації каталогу сторінок '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> використовує неприпустимий шлях до файлу "{1}" у файлі конфігурації каталогу сторінок '{2}'.
+pageserviceconf_alias_invalid				= Елемент <alias> повинен мати атрибути "id" і "path" у файлі конфігурації каталогу сторінок '{0}'.
+pageserviceconf_using_invalid				= Елемент <using> повинен мати атрибут "namespace" у файлі конфігурації каталогу сторінок '{0}'.
+pageserviceconf_module_invalid				= Елемент <module> повинен мати атрибут "id" у файлі конфігурації каталогу сторінок '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> повинен мати атрибут "class" у файлі конфігурації каталогу сторінок '{1}'.
+pageserviceconf_parameter_invalid			= Елемент <parameter> повинен мати атрибут "id" у файлі конфігурації каталогу сторінок '{0}'.
+pageserviceconf_page_invalid				= Елемент <page> повинен мати атрибут "id" у файлі конфігурації каталогу сторінок '{0}'.
+pageserviceconf_includefile_required		= Елемент <include> конфігурації сторінки повинен мати атрибут "file".
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" не можна змінити (на "{1}") після приєднання поведінки.
+basebehavior_sync_no_owner					= TBaseBehavior "{0}" не має власника і не може синхронізувати обробники подій на компоненті без власників.
+basebehavior_sync_not_owner					= TBaseBehavior "{0}" не може синхронізувати обробники подій на об'єкті, який не є власником.
+behavior_has_owner							= TBehavior "{0}" може приєднуватися лише до одного власника.
+behavior_bad_attach_component				= TBehavior "{0}" може приєднуватися лише до TComponent.
+behavior_detach_without_owner				= TBehavior "{0}" не можна від'єднати без власника.
+behavior_detach_wrong_owner					= TBehavior "{0}" не може від'єднатися від об'єкта, який не є його власником.
+behavior_property_unchangeable				= {1}.{0} не можна змінити після приєднання поведінки.
+behavior_requires_owner						= {1}.{0} потребує власника.
+classbehavior_owner_attach_once				= TClassBehavior "{0}" можна приєднати до власника лише один раз. Обробники не були б унікальними.
+classbehavior_bad_attach_component			= TClassBehavior "{0}" може приєднуватися лише до TComponent.
+classbehavior_detach_without_owner			= TClassBehavior "{0}" не можна від'єднати без власника.
+classbehavior_detach_wrong_owner			= TClassBehavior "{0}" не може від'єднатися від об'єкта, який не є його власником.
+
+callchain_bad_dynamic_event					= Викликано TCallChain.{0}, але очікувалося {1}.
+
+behaviormodule_behavior_as_array_required	= php <behavior> повинен бути масивом.
+behaviormodule_behaviorname_required		= <behavior> повинен містити атрибут 'name' для приєднання поведінки.
+behaviormodule_behaviorclass_required		= <behavior> повинен містити атрибут 'class', що визначає клас поведінки.
+behaviormodule_attachto_class_required		= <behavior> повинен мати атрибут 'attachto' або 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= <behavior> повинен мати атрибут 'attachto' або 'attachtoclass', але не обидва.
+behaviormodule_behaviorowner_required		= Об'єкт attachto '{0}' для <behavior> не знайдено.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors не можна встановити в неприпустимий тип '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader повинен мати Behavior Name.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader повинен мати Behavior Class.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader повинен мати атрибут 'attachto' або 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader повинен мати лише один атрибут 'attachto' або 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' потребує ID модуля.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' не знайдено.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader не знайшов модуль '{0}' для приєднання поведінок.
+
+evaluationfilter_statements_denied			= Компонент '{0}' не може виконати інструкції PHP '{1}', оскільки TEvaluationFilterBehavior.AllowStatements має значення false.
+evaluationfilter_code_denied				= Компонент '{0}' не може обчислити '{1}', оскільки TEvaluationFilterBehavior не дозволяє '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior потребує callable для створення.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior потребує callable для створення.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior повинен мати атрибут Parameter.
+parameterizebehavior_no_property			= TParameterizeBehavior повинен мати атрибут Property.
+parameterizebehavior_owner_get_only_property	= Власник TParameterizeBehavior має властивість Property '{0}', але вона доступна лише для читання.
+parameterizebehavior_owner_has_no_property	= Власник TParameterizeBehavior не має властивості Property '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior не може очистити Parameter після приєднання.
+
+processhelper_no_forking					= Розгалуження процесів (fork) не підтримується.
+processhelper_no_signals					= Сигнали процесам не можна надсилати у Windows.
+
+serializableclosure_no_decrypter			= TSerializableClosure не може розшифрувати зашифровані дані замикання без налаштованого дешифратора.
+serializableclosure_decrypt_failed			= TSerializableClosure не вдалося розшифрувати зашифровані дані замикання; дані могли бути підроблені або ключ змінився.
+
+appsignals_no_change						= TApplicationSignals::{0} не можна змінити після приєднання.
+appsignals_not_a_dispatcher					= '{0}' не є TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' не є дійсним PID.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} не можна змінити після приєднання.
+
+initialized_property_unchangeable			= {1}.{0} не можна встановити, оскільки він уже ініціалізований.
+initialized_requires_initialization			= {1}.{0} потребує ініціалізації перед обробкою.
+
+template_closingtag_unexpected				= Знайдено неочікуваний закривальний тег '{0}'.
+template_closingtag_expected				= Очікувався закривальний тег '{0}', знайдено '{1}'.
+template_directive_nonunique				= Директива '<%@ ... %>' повинна бути на початку шаблону і може з'являтися щонайбільше один раз.
+template_comments_forbidden					= Коментарі шаблону не дозволені всередині тегів властивостей.
+template_matching_unexpected				= Неочікуваний збіг.
+template_property_unknown					= {0} не має властивості з ім'ям '{1}'.
+template_event_unknown						= {0} не має події з ім'ям '{1}'.
+template_property_readonly					= {0} має властивість '{1}', доступну лише для читання.
+template_event_forbidden					= {0} є компонентом, що не є елементом керування. У шаблоні не можна приєднати обробник до його події '{1}'.
+template_databind_forbidden					= {0} є компонентом, що не є елементом керування. Вирази не можна прив'язати до його властивості '{1}'.
+template_component_required					= '{0}' не є компонентом. У шаблоні можуть з'являтися лише компоненти.
+template_format_invalid						= Неприпустимий синтаксис шаблону: {0}
+template_property_duplicated				= Властивість {0} налаштована двічі або більше разів.
+template_eventhandler_invalid				= {0}.{1} приймає лише статичний рядок.
+template_controlid_invalid					= {0}.ID приймає лише статичний текстовий рядок.
+template_controlskinid_invalid				= {0}.SkinID приймає лише статичний текстовий рядок.
+template_content_unexpected					= Виявлено неочікуваний вміст під час створення екземпляра шаблону: {0}.
+template_include_invalid					= Неприпустиме включення шаблону. Переконайтеся, що {0} є дійсним простором імен, який вказує на існуючий файл шаблону з розширенням .tpl.
+template_tag_unexpected						= Ініціалізація властивості {0} містить невідомий тип тегу {1}.
+
+xmldocument_file_read_failed				= TXmlDocument не може прочитати файл '{0}'.
+xmldocument_file_write_failed				= TXmlDocument не може записати файл '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList приймає лише об'єкти TXmlElement.
+
+xmlelement_null_tag							= Ім'я тегу TXmlElement не може бути null.
+xmlelement_empty_tag						= Ім'я тегу TXmlElement не може бути порожнім рядком.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action може приймати лише значення 'allow' або 'deny'.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb може приймати лише значення 'get' або 'post'.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection приймає лише об'єкти TAuthorizationRule.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' не є дійсним файлом.
+usermanager_userfile_unchangeable			= TUserManager.UserFile не можна змінити. Модуль користувачів уже ініціалізовано.
+
+integritymanager_entry_invalid				= Запис цілісності TIntegrityManager для URL '{0}' потребує непорожніх url і hash.
+integritymanager_algorithm_invalid			= Алгоритм TIntegrityManager '{0}' не підтримується; використовуйте один із: {1}.
+integritymanager_file_unreadable			= TIntegrityManager не може прочитати файл '{0}' для обчислення його цілісності.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' не є дійсним файлом.
+integritymanager_integrityfile_unchangeable	= {1}.{0} не можна змінити. Модуль цілісності вже ініціалізовано.
+
+javascript_script_integrity_required		= Для віддаленого скрипту '{0}' не зареєстровано Subresource Integrity, але цілісність є обов'язковою.
+
+authmanager_usermanager_required			= TAuthManager.UserManager повинен мати присвоєне значення.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' не посилається на ID модуля застосунку.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' не посилається на дійсний модуль застосунку TUserManager.
+authmanager_session_required				= TAuthManager потребує модуля сесії застосунку.
+
+permissions_events_invalid					= TPermissionEvent.Event не можна встановити в неприпустиме значення '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules не можна встановити в неприпустиме значення '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' не посилається на ID модуля застосунку.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' не посилається на дійсний модуль застосунку TDbParameterModule.
+permissions_init_once						= TPermissionsManager.init можна ініціалізувати лише один раз.
+permissions_duplicate_permission			= Дозвіл TPermissionsManager '{0}' уже зареєстровано.
+permissions_role_children_invalid			= Роль '{0}' у конфігурації TPermissionsManager має неприпустимі дочірні елементи '{1}'.
+permissions_rule_invalid					= Правило дозволу '{0}' у конфігурації TPermissionsManager має властивості, що не є масивом.
+permissions_rules_require_name				= Правила TPermissionsManager повинні мати властивість дозволу "name".
+permissions_role_rule_nested				= Роль '{0}' у конфігурації TPermissionsManager містить <permissionrule>. Правила дозволів є безпосередніми дочірніми елементами елемента конфігурації дозволів.
+permissions_rule_class_invalid				= Клас правила дозволу TPermissionsManager '{0}' є простором імен каталогу, а не класом.
+permissions_children_invalid				= Дочірні елементи TPermissionsManager.*RoleChildren повинні бути рядком або масивом, але передано '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' не є дійсним файлом.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' не є дійсним псевдонімом шляху. Переконайтеся, що цей псевдонім визначено в конфігурації і він вказує на дійсний каталог.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' не є дійсним каталогом.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath не можна змінити після ініціалізації модуля.
+thememanager_theme_invalid					= Ім'я теми TThemeManager '{0}' повинно бути ім'ям одного каталогу.
+
+theme_baseurl_required						= Потрібно вказати TThemeManager.BasePath. За замовчуванням використовується каталог з ім'ям 'themes' у каталозі, що містить вхідний скрипт застосунку.
+theme_path_inexistent						= Шлях до теми '{0}' не існує.
+theme_control_nested						= Скін для типу елемента керування '{0}' у темі '{1}' не може перебувати всередині іншого скіна.
+theme_skinid_duplicated						= SkinID '{0}.{1}' дублюється в темі '{2}'.
+theme_databind_forbidden					= Прив'язку даних не можна використовувати в темі '{0}' для скіна елемента керування '{1}.{2}' щодо властивості '{3}'.
+theme_property_readonly						= Скін застосовується до властивості елемента керування '{0}.{1}', доступної лише для читання.
+theme_property_undefined					= Скін застосовується до неіснуючої властивості елемента керування '{0}.{1}'.
+theme_tag_unexpected						= Ініціалізація властивості {0} містить невідомий тип тегу {1}.
+
+control_object_reregistered					= Знайдено дубльований ID об'єкта '{0}'.
+control_id_invalid							= {0}.ID '{1}' неприпустимий. Дозволені лише алфавітно-цифрові символи та підкреслення. Перший символ має бути літерою або підкресленням.
+control_skinid_unchangeable					= {0}.SkinID не можна змінити після застосування скіна до елемента керування або створення дочірніх елементів керування.
+control_enabletheming_unchangeable			= {0}.EnableTheming не можна змінити після створення дочірніх елементів керування.
+control_stylesheet_applied					= Скін StyleSheet уже застосовано до {0}.
+control_id_nonunique						= {0}.ID '{1}' не є унікальним серед усіх елементів керування в одному контейнері імен.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' не може бути від'ємним.
+
+templatecontrol_mastercontrol_invalid		= Головний елемент керування повинен бути типу TTemplateControl або його дочірнього класу.
+templatecontrol_mastercontrol_required		= Елемент керування '{0}' потребує головного елемента керування, оскільки використовує TContent.
+templatecontrol_contentid_duplicated		= ID TContent '{0}' дублюється.
+templatecontrol_placeholderid_duplicated	= ID TContentPlaceHolder '{0}' дублюється.
+templatecontrol_directive_invalid			= {0}.{1} приймає лише статичний текстовий рядок через директиву шаблону.
+templatecontrol_placeholder_inexistent		= TContent '{0}' не має відповідного TContentPlaceHolder.
+
+page_form_duplicated						= Сторінка може містити щонайбільше один TForm. Для решти форм використовуйте звичайні теги HTML form.
+page_isvalid_unknown						= TPage.IsValid ще не обчислено.
+page_postbackcontrol_invalid				= Не вдалося визначити елемент керування зворотного надсилання '{0}'.
+page_control_outofform						= {0} '{1}' повинен бути розміщений усередині TForm.
+page_head_duplicated						= Сторінка може містити щонайбільше один THead.
+page_head_required							= Для відображення CSS і js у розділі head HTML у шаблоні сторінки потрібен елемент керування THead.
+page_statepersister_invalid					= Засіб збереження стану сторінки повинен реалізовувати інтерфейс IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Невідоме ім'я бібліотеки скриптів Prado '{0}'.
+csmanager_pradoscript_notloaded				= Бібліотеку скриптів Prado з ім'ям '{0}' ще не завантажено.
+csmanager_pradostyle_invalid				= Невідоме ім'я бібліотеки стилів Prado '{0}'.
+csmanager_invalid_packages					= Невідомі пакети '{1}' для пакетів javascript, визначених у '{0}'. Припустимі пакети: '{2}'.
+
+httpclient_transport_error					= Помилка транспорту HTTP-клієнта (код {0}): {1}
+httpclient_http_error						= Відповідь із помилкою HTTP зі статусом {0}.
+httpclient_transport_required				= Транспорт HTTP недоступний: розширення cURL не завантажено, а allow_url_fopen вимкнено.
+
+restclient_invalid_header					= Заголовок TRestClient '{0}' має неприпустиме ім'я або значення, що містить CR/LF.
+restclient_basicauth_username_colon			= Ім'я користувача Basic-auth у TRestClient не повинно містити двокрапку (роздільник облікових даних за RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder повинен мати ID.
+
+content_id_required							= TContent повинен мати ID.
+
+controlcollection_control_required			= TControlList приймає лише рядки або об'єкти TControl.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' неприпустимий. Він має складатися лише з одного символу.
+webcontrol_dir_invalid						= {0}.Dir '{1}' неприпустимий. Дозволені значення: 'ltr', 'rtl' і 'auto'.
+webcontrol_style_invalid					= {0}.Style приймає лише рядкове значення.
+
+listcontrol_selection_invalid				= {0} має неприпустимий вибір, встановлений до виконання прив'язки даних.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex має неприпустиме значення {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue має неприпустиме значення '{1}'.
+listcontrol_expression_invalid				= {0} обчислює неприпустимий вираз '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} не підтримує множинний вибір.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' не знайдено.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' не знайдено.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' не знайдено.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' не знайдено.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' не може бути від'ємним.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' не може бути від'ємним.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' повинен бути від 0 до RenderFilterDepth {1} фільтрувального елемента керування.
+
+hiddenfield_focus_unsupported				= THiddenField не підтримує встановлення фокуса введення.
+hiddenfield_theming_unsupported				= THiddenField не підтримує теми.
+hiddenfield_skinid_unsupported				= THiddenField не підтримує скіни елемента керування.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' не посилається на існуючий елемент керування кнопки.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding приймає ціле число, що дорівнює або більше за -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing приймає ціле число, що дорівнює або більше за -1.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History повинен бути цілим числом, більшим за 0.
+
+listitemcollection_item_invalid				= TListItemCollection приймає лише рядки або об'єкти TListItem.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices доступний лише для читання.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack доступний лише для читання.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex доступний лише для читання.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices доступний лише для читання.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue доступний лише для читання.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices доступний лише для читання.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' не існує.
+logrouter_routeclass_required				= Атрибут class є обов'язковим у конфігурації <route>.
+logrouter_routetype_required				= Маршрут журналу повинен бути екземпляром TLogRoute або його похідного класу.
+
+dblogroute_connectionid_invalid				= TDbLogRoute не може створити підключення до бази даних з ID '{0}'.
+dblogroute_insert_failed					= TDbLogRoute не може вставити запис журналу в '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' неприпустимий
+dblogroute_table_nonexistent				= Таблиця TDbLogRoute '{0}' не існує, її потрібно створити.
+dblogroute_order_invalid					= Порядок сортування TDbLogRoute '{0}' повинен перелічувати стовпці, кожен із необов'язковим ASC або DESC.
+dblogroute_limit_invalid					= Обмеження TDbLogRoute '{0}' повинно бути кількістю рядків, 'count OFFSET offset' або 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' повинен бути каталогом у форматі простору імен, доступним для запису процесом вебсервера.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize повинен бути більшим за 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles повинен бути більшим за 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom не може бути порожнім.
+emaillogroute_mail_failed					= TEmailLogRoute не вдалося надіслати журнал на '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags неприпустимі, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility неприпустимий, '{0}'.
+
+psrlogroute_logger_required					= Потрібно вказати TPsrLogRoute.Logger.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' не є ID модуля або ім'ям класу Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger не може бути TPsrLogger; він записував би журнал назад у той самий TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns не може бути меншим за 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate порожній або містить неприпустимий шлях ID елемента керування.
+basevalidator_validatable_required			= {0}.ControlToValidate повинен вказувати на елемент керування, що реалізує інтерфейс IValidatable.
+basevalidator_forcontrol_unsupported		= {0}.ForControl не підтримується.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare містить неприпустимий шлях ID елемента керування.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate повинен вказувати на елемент керування TFileUpload.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate містить неприпустимий шлях ID TListControl, "{1}" є {2}.
+
+repeater_template_required					= TRepeater.{0} потребує екземпляра шаблону, що реалізує інтерфейс ITemplate.
+repeater_itemtype_unknown					= Невідомий тип елемента повторювача {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection приймає лише об'єкти, що є екземплярами TControl або його нащадків.
+
+datalist_template_required					= TDataList.{0} потребує екземпляра шаблону, що реалізує інтерфейс ITemplate.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection приймає лише об'єкти TDataListItem.
+
+datagrid_template_required					= TDataGrid.{0} потребує екземпляра шаблону, що реалізує інтерфейс ITemplate.
+templatecolumn_template_required			= TTemplateColumn.{0} потребує екземпляра шаблону, що реалізує інтерфейс ITemplate.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex не може бути меншим за 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize повинен бути більшим за 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount не може бути меншим за 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection приймає лише об'єкти TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection приймає лише об'єкти TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount повинен бути більшим за 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor намагається обчислити значення поля неприпустимих даних. Переконайтеся, що дані є масивом, TMap, TList або об'єктом, що містить вказане поле '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor намагається обчислити значення даних невідомого поля '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection приймає лише об'єкти TTableRow.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection приймає лише об'єкти TTableColumn.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection приймає лише об'єкти TTableColumnGroup.
+tablecolumn_span_invalid					= TTableColumn Span повинен бути 1 або більше; передано {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection приймає лише об'єкти TTableCell.
+
+multiview_view_required						= TMultiView приймає як дочірній елемент лише TView.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex має неприпустимий індекс '{0}'.
+multiview_view_inexistent					= TMultiView не може знайти вказане подання.
+multiview_viewid_invalid					= TMultiView не може знайти подання '{0}' для перемикання.
+
+viewcollection_view_required				= TViewCollection приймає як елемент лише TView.
+
+view_visible_readonly						= TView.Visible доступний лише для читання. Використовуйте TView.Active для перемикання видимості.
+
+wizard_step_invalid							= Крок, який потрібно активувати, не знайдено в колекції кроків майстра.
+wizard_command_invalid						= Неприпустима команда навігації майстра '{0}'.
+
+table_tablesection_outoforder				= Розділи таблиці TTable повинні йти в порядку: Header, Body і Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType доступний лише для читання.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection приймає лише об'єкти TWizardStep або його похідних класів.
+
+texthighlighter_stylesheet_invalid			= Не вдалося знайти файл таблиці стилів для TTextHighlighter.
+
+hotspotcollection_hotspot_required			= THotSpotCollection приймає лише екземпляри THotSpot або його похідних класів.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode доступний лише для читання.
+htmlarea_tarfile_invalid					= THtmlArea не може знайти tar-файл TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile не можна змінити, оскільки модуль уже ініціалізовано.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' неприпустимий. Переконайтеся, що він у форматі простору імен і файл має розширення '.xml' або '.php'.
+parametermodule_parameterid_required		= Елемент параметра повинен мати атрибут 'id'.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' неприпустимий. Дозволені лише алфавітно-цифрові символи та підкреслення. Перший символ має бути літерою або підкресленням.
+datagridcolumn_expression_invalid			= {0} обчислює неприпустимий вираз '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID встановлено в неприпустимий ID модуля кешу {0}. Модуль не існує або не реалізує інтерфейс ICache.
+outputcache_duration_invalid				= {0}.Duration повинен бути цілим числом не меншим за 0.
+
+stack_data_not_iterable						= TStack може отримувати дані лише з масиву або об'єкта Traversable.
+stack_empty									= TStack порожній.
+
+queue_data_not_iterable						= TQueue може отримувати дані лише з масиву або об'єкта Traversable.
+queue_empty									= TQueue порожня.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount повинен бути цілим числом не меншим за 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex виходить за межі діапазону.
+pager_pagecount_invalid						= TPager.PageCount не може бути меншим за 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} повинен бути дійсним шляхом ID, що вказує на елемент керування, похідний від TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize повинен бути цілим числом не меншим за 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount повинен бути цілим числом не меншим за 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex виходить за межі діапазону.
+databoundcontrol_datasource_invalid			= {0}.DataSource неприпустимий.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' не посилається на існуючий елемент керування.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' повинен посилатися на елемент керування, що реалізує IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' не є ім'ям подання джерела даних.
+
+datasourcecontrol_focus_unsupported			= {0} не підтримує Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} не підтримує EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} не підтримує SkinID.
+datasourcecontrol_visible_unsupported		= {0} не підтримує Visible.
+datasourceview_insert_unsupported			= {0} не підтримує вставлення.
+datasourceview_update_unsupported			= {0} не підтримує оновлення.
+datasourceview_delete_unsupported			= {0} не підтримує видалення.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource потребує джерела даних у вигляді масиву, IDataSource або Traversable.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView потребує джерела даних у вигляді null, масиву або Traversable.
+
+clientscript_invalid_file_position			= Неприпустима позиція файлу '{1}' для елемента керування TClientScript '{0}'; має бути 'Head', 'Here' або 'Begin'.
+clientscript_invalid_package_path			= Неприпустимий PackagePath '{0}' для елемента керування TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' не підтримує AutoPostBack.
+globalization_cache_path_failed				= Не вдалося створити шлях кешу повідомлень перекладу '{0}'. Переконайтеся, що батьківський каталог існує і доступний для запису вебпроцесом.
+globalization_source_path_failed			= Не вдалося створити шлях повідомлень перекладу '{0}'. Переконайтеся, що батьківський каталог існує і доступний для запису вебпроцесом.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' не вказує на дійсний модуль TDataSourceConfig.
+messagesource_connectionid_required			= Потрібно вказати ConnectionID у MessageSource_Database.source.
+
+callback_not_support_no_priority_state_update	= Запит зворотного виклику не підтримує оновлення стану сторінки без пріоритету.
+callback_invalid_callback_options			= '{1}' не є дійсним елементом керування TCallbackOptions для елемента керування зворотного виклику '{0}'.
+callback_invalid_clientside_options			= Властивість ClientSide зворотного виклику повинна бути рядком з ID елемента керування TCallbackOptions або екземпляром TCallbackClientSideOptions.
+callback_invalid_handler					= Неприпустимий обробник зворотного виклику: елемент керування {0} повинен реалізовувати ICallbackEventHandler.
+callback_invalid_target						= Неприпустима ціль зворотного виклику: елемент керування з ID {0} не існує.
+
+callback_interval_be_positive				= Інтервал для TCallbackTimer "{0}" повинен бути строго більшим за нуль секунд.
+callback_decay_be_not_negative				= Коефіцієнт затухання для TCallbackTimer "{0}" не може бути від'ємним.
+
+callback_no_autopostback					= Елемент керування "{0}" не може увімкнути AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform потребує розширення PHP XSL.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' неприпустимий.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' неприпустимий.
+xmltransform_transform_required				= Для TXmlTransform потрібно встановити властивість TransformContent або TransformPath.
+
+ttriggeredcallback_invalid_controlid		= Властивість ControlID для '{0}' не може бути порожньою.
+tactivecustomvalidator_clientfunction_unsupported	= {0} не підтримує клієнтську функцію валідатора.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' не визначає дійсний модуль TDataSourceConfig.
+dbproperties_property_required				= {1}.{0} є обов'язковою властивістю.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' не є дійсним ідентифікатором SQL.
+
+dbconnection_open_failed					= TDbConnection не вдалося встановити підключення до БД: {0}
+dbconnection_connection_inactive			= TDbConnection неактивне.
+dbconnection_unsupported_driver_charset		= Драйвер бази даних '{0}' не підтримує встановлення кодування.
+dbconnection_charset_unchangeable			= Драйвер бази даних '{0}' не може змінити кодування після відкриття. Кодування є параметром DSN.
+
+dbcommand_prepare_failed					= TDbCommand не вдалося підготувати SQL-інструкцію "{1}": {0}
+dbcommand_execute_failed					= TDbCommand не вдалося виконати SQL-інструкцію "{1}": {0}
+dbcommand_query_failed						= TDbCommand не вдалося виконати SQL-запит "{1}": {0}
+dbcommand_column_empty						= TDbCommand повернула порожній результат і не змогла отримати скалярне значення.
+dbdatareader_rewind_invalid					= TDbDataReader є потоком лише для прямого читання. Його можна обійти лише один раз.
+dbtransaction_transaction_inactive			= TDbTransaction неактивна.
+
+dbcommandbuilder_value_must_not_be_null		= Властивість {0} не може бути null згідно з визначенням стовпця '{2}' у таблиці '{1}'.
+
+dbcommon_invalid_table_name					= Таблицю бази даних '{0}' не знайдено. Повідомлення про помилку: {1}.
+dbcommon_invalid_identifier_name			= Неприпустиме ім'я ідентифікатора бази даних '{0}'; подробиці див. у {1}.
+dbtableinfo_invalid_column_name				= Неприпустиме ім'я стовпця '{0}' для таблиці бази даних '{1}'.
+dbmetadata_invalid_table_view				= Неприпустиме ім'я таблиці/подання '{0}', або таблиця/подання '{0}' не містить доступних визначень стовпців/полів.
+dbmetadata_requires_php_version				= Для використання бази даних {0} потрібна версія PHP {1} або новіша.
+
+dbtablegateway_invalid_criteria				= Неприпустимий об'єкт критеріїв; має бути рядок або екземпляр TSqlCriteria.
+dbtablegateway_no_primary_key_found			= Таблиця '{0}' не містить полів первинного ключа.
+dbtablegateway_missing_pk_values			= Відсутні значення первинного ключа при формуванні IN(key1, key2, ...) для таблиці '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Невідповідність кількості значень складеного ключа при формуванні IN( (key1, key2, ..), (key3, key4, ..)) для таблиці '{0}'.
+dbtablegateway_mismatch_args_exception		= Метод пошуку TTableGateway '{0}' очікує {1} параметрів, але знайдено лише {2}.
+dbtablegateway_mismatch_column_name			= У динамічному методі __call() '{0}' не знайдено відповідних стовпців; припустимі стовпці для таблиці '{2}': '{1}'.
+dbtablegateway_invalid_table_info			= Таблиця повинна бути рядком або екземпляром TDbTableInfo.
+
+resource_not_a_resource						= Очікувався відкритий ресурс PHP, але отримано '{0}'.
+processfork_failed							= Не вдалося розгалузити (fork) процес.
+liveprocessfork_readonly_receiver			= Дані TLiveProcessFork доступні лише для читання на стороні отримувача; їх змінює лише сторона відправника.
+stream_open_failed							= Не вдалося відкрити потік '{0}' у режимі '{1}': {2}
+binarystream_unexpected_eof					= Неочікуваний кінець потоку: потрібно було {0} байт, але прочитано лише {1}.
+binarystream_short_write					= Неповний запис: потрібно було записати {0} байт, але прийнято лише {1}.
+streamresourcewrapper_unusable_stream		= Потік недоступний ні для читання, ні для запису, тому його не можна надати як ресурс.
+streamfilter_already_registered				= Фільтр потоку '{0}' уже зареєстровано.
+streamfilter_registration_failed			= Не вдалося зареєструвати фільтр потоку '{0}' для класу '{1}'.
+streamwrapper_already_registered			= Протокол обгортки потоку '{0}' уже зареєстровано.
+streamwrapper_registration_failed			= Не вдалося зареєструвати протокол обгортки потоку '{0}' для класу '{1}'.
+reservedspace_invalid						= Зарезервований простір потребує невід'ємного зсуву та додатної довжини; передано зсув '{0}' і довжину '{1}'.
+reservedspace_access_denied					= Операція перетинається із зарезервованим простором за зсувом '{0}'.
+multipartstream_element_invalid				= Елемент TMultipartStream потребує 'name' і 'contents'.
+builtincompressor_extension_required		= Компресор '{0}' потребує розширення PHP '{1}'.
+builtincompressor_compress_failed			= Компресору '{0}' не вдалося стиснути дані.
+builtincompressor_decompress_failed			= Компресору '{0}' не вдалося розпакувати дані; вони можуть бути пошкоджені або мати інший формат.
+compression_method_unknown					= Метод стиснення '{0}' невідомий або його розширення недоступне.
+compression_none_available					= У цій інсталяції PHP немає доступного методу стиснення.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' не є відомим кодуванням вмісту. Відомі кодування: {1}.
+compression_xz_unsupported					= Для xz/LZMA немає розширення PHP; встановіть belisoful/prado-compression для нативного або CLI-кодека xz.
+clicompressor_command_missing				= Компресор '{0}' потребує однієї з таких системних команд у PATH: '{1}'.
+clicompressor_process_failed				= Компресор '{0}' не зміг запустити команду '{1}'.
+clicompressor_command_failed				= Команда компресора '{0}' '{1}' завершилася з кодом {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule потребує Endpoint або додатного Port для його формування.
+socketservermodule_serverclass_invalid		= ServerClass '{0}' для TSocketServerModule неприпустимий. Він має бути TSocketServer або його підкласом.
+socketservermodule_scheme_not_stream		= TSocketServerModule не може приймати з'єднання за схемою без з'єднання '{0}'. Використовуйте потокову схему, таку як tcp, tls, ssl або unix.
+
+bitreader_invalid_bits						= Не можна прочитати {0} біт; кількість має бути від 0 до ширини цілого числа платформи.
+bitreader_64bit_php_required				= Читання {0} біт потребує 64-бітної збірки PHP.
+bitreader_invalid_float_bits				= Не можна прочитати {0}-бітне число з рухомою крапкою; підтримуються лише 8, 16, 32 або 64 біти.
+bitwriter_invalid_bits						= Не можна записати {0} біт; кількість має бути від 0 до ширини цілого числа платформи.
+bitwriter_64bit_php_required				= Запис {0} біт потребує 64-бітної збірки PHP.
+bitwriter_invalid_float_bits				= Не можна записати {0}-бітне число з рухомою крапкою; підтримуються лише 8, 16, 32 або 64 біти.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' не існує. Зауважте, що його потрібно вказати у форматі простору імен, а файл повинен мати розширення '.xml' або '.php'.
+soapservice_server_invalid					= Клас SOAP-сервера TSoapService '{0}' неприпустимий. Він має бути TSoapServer або його підкласом.
+soapservice_serverid_required				= Елемент <soap> повинен мати атрибут 'id'.
+soapservice_serverid_duplicated				= ID SOAP-сервера '{0}' дублюється.
+soapserver_id_invalid						= Неприпустимий ID SOAP-сервера '{0}'. Він не повинен закінчуватися на '.wsdl'.
+soapserver_provider_invalid					= Не вдалося визначити клас постачальника TSoapServer '{0}'.
+soapserver_version_invalid					= Неприпустима версія SOAP '{0}'. Вона має бути '1.1' або '1.2'.
+soapserver_wsdlstyle_invalid				= Неприпустимий стиль WSDL '{0}'. Він має бути 'rpc' або 'document'.
+soapserver_wsdlstyle_unsupported			= Стиль WSDL '{0}' потребує pradosoft/prado-wsdlgenerator 1.2 або новішого. Встановлений генератор створює лише 'rpc'.
+
+jsonservice_id_required						= TJsonService потребує атрибут 'id' у своїх елементах JSON.
+jsonservice_response_type_invalid			= Клас JSON {0} неприпустимий. Він має бути TJsonResponse або розширювати TJsonResponse.
+jsonservice_class_required					= TJsonService потребує атрибут 'class' у своїх елементах JSON.
+
+dbusermanager_userclass_required			= Потрібно вказати TDbUserManager.UserClass.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' не є дійсним класом користувача. Клас повинен розширювати TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' не вказує на дійсний модуль TDataSourceConfig.
+dbusermanager_connectionid_required			= Потрібно вказати TDbUserManager.ConnectionID.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' не вказує на дійсний модуль TDataSourceConfig.
+dbpluginmodule_connectionid_required		= Потрібно вказати TDbPluginModule.ConnectionID.
+
+feedservice_id_required						= TFeedService потребує атрибут 'id' у своїх елементах стрічок.
+feedservice_feedtype_invalid				= Клас стрічки '{0}' повинен реалізовувати інтерфейс IFeedContentProvider.
+feedservice_class_required					= TFeedService потребує атрибут 'class' у своїх елементах стрічок.
+
+tabviewcollection_tabview_required			= TTabPanel приймає як дочірній елемент лише TTabView.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID має неприпустимий ID '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex має неприпустимий індекс '{0}'.
+tabpanel_view_inexistent					= TTabPanel не може знайти вказане подання.
+
+cachesession_cachemoduleid_required			= Потрібно вказати TCacheHttpSession.CacheModuleID.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' вказує на неіснуючий модуль.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' вказує на модуль, що не реалізує інтерфейс ICache.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping може містити лише TUrlMappingPattern або його дочірні класи.
+urlmapping_global_required					= TUrlMapping повинен бути налаштований як глобальний модуль.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' не є файлом.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' повинен вказувати на XML-файл у форматі простору імен.
+
+urlmappingpattern_serviceparameter_required	= Потрібно вказати TUrlMappingPattern.ServiceParameter для шаблону '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl не може бути порожнім.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' неприпустимий.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme повинен бути цілим числом від {0} до {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize повинен бути цілим числом від {0} до {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength повинен бути цілим числом від {0} до {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength повинен бути цілим числом від {0} до {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet повинен бути рядком щонайменше з 2 символів.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey невідомий. Переконайтеся, що каталог ресурсів доступний для запису процесом вебсервера.
+captcha_gd2_required						= TCaptcha потребує розширення PHP GD2.
+captcha_imagettftext_required				= TCaptcha потребує розширення PHP GD2 із підтримкою шрифтів TrueType.
+captcha_imagepng_required					= TCaptcha потребує розширення PHP GD2 із підтримкою формату зображень PNG.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl повинен вказувати на існуючий елемент керування TCaptcha.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} повинен вказувати на існуючий елемент керування TCaptcha.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} повинен вказувати на існуючий елемент керування TCaptcha.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey невідомий. Для використання reCAPTCHA потрібно отримати ключ API.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey невідомий. Для використання reCAPTCHA потрібно отримати ключ API.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate повинен бути екземпляром TReCaptcha.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' повинен містити лише літери, цифри, '_' і '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity повинен бути цілим числом від {0} до {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' повинен вказувати на елемент керування TProofOfWork.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' не є дійсним класом користувача. Клас повинен розширювати TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' не вказує на дійсний модуль кешу.
+cachepagestatepersister_cache_required		= TCachePageStatePersister потребує завантаженого модуля кешу.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' не вказує на дійсний модуль кешу.
+cachemoduleid_cache_required				= {0} потребує модуля кешу. Налаштуйте основний кеш або встановіть {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout повинен бути цілим числом не меншим за нуль.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' не є дійсним виразом PHP: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule не може знайти таблицю БД '{0}' для зберігання даних параметрів.
+dbparametermodule_get_no_blank_key			= TDbParameterModule не може отримати порожній ключ.
+dbparametermodule_set_no_blank_key			= TDbParameterModule не може встановити значення для порожнього ключа.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' не вказує на дійсний модуль TDataSourceConfig.
+dbparametermodule_serializer_not_callable	= Serializer для TDbParameterModule не є callable.
+
+clockawaretrait_invalid_clock_class			= Клас годинника '{0}' повинен реалізовувати Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock жорстко прив'язаний до UTC; для іншого часового поясу використовуйте TTimezoneClock.
+
+processcrontask_no_command					= TProcessCronTask '{0}' не має Command для виконання.
+processcrontask_launch_failed				= TProcessCronTask не вдалося запустити процес: '{0}'.
+processcrontask_write_failed				= TProcessCronTask не вдалося записати pid-файл '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' не має замикання для виконання.
+closurecrontask_closure_required			= TClosureCronTask потребує Closure.
+closurecrontask_invalid_securitymanager		= SecurityManagerID '{0}' для TClosureCronTask не є TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' не вдалося розшифрувати дані свого замикання.
+cronmethodtask_no_module					= TCronMethodTask не знайшов модуль '{0}'.
+cron_usermanager_nonexistent				= TCronModule не знайшов UserManager з ім'ям '{0}'.
+cron_usermanager_invalid					= UserManager '{0}' для TCronModule не є TUserManager.
+cron_task_as_array_required					= Завдання в конфігурації TCronModule не є масивом.
+cron_duplicate_task_name					= Завдання TCronModule повинні мати унікальні імена.
+cron_schedule_required						= Завдання Cron повинно мати розклад.
+cron_task_required							= Завдання Cron повинно мати задачу.
+cron_not_a_crontask							= Завдання Cron '{0}' не є TCronTask.
+cron_additional_tasks_invalid				= '{0}' не є дійсним додатковим завданням cron.
+crontask_no_module							= TCronTask не знайшов модуль '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask не знайшов вказаний модуль '{0}'.
+dbcron_invalid_name							= Ім'я завдання TDbCronManager '{0}' неприпустиме.
+dbcron_conflicting_task_names				= Завдання cron з конфігурації конфліктують із завданнями cron у БД '{0}'.
+dbcron_table_nonexistent					= Таблиця бази даних TDbCronManager не існує.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' не є TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler не вдалося розібрати елемент розкладу '{0}'
+
+rational_bad_offset							= "{0}" не є дійсним засобом доступу до властивості TRational.
+
+bithelper_bad_fp_format						= TBitHelper не може працювати з '{0}' бітами експоненти, '{1}' бітами мантиси, зсувом експоненти '{2}' у {3}-бітному середовищі PHP.
+bithelper_invalid_color_in					= TBitHelper повинен мати щонайменше один вхідний біт (In Bit). Передано '{0}'.
+bithelper_invalid_color_out					= TBitHelper повинен мати щонайменше один вихідний біт (Out Bit). Передано '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper не може віддзеркалити '{0}' біт у {1}-бітному середовищі PHP.
+
+ar_data_invalid								= {0}.copyFrom() приймає як параметр лише об'єкт або масив.
+ar_save_invalid								= Екземпляр {0} не можна зберегти, оскільки він видалений або перебуває в невідомому стані.
+ar_delete_invalid							= Екземпляр {0} не можна видалити, оскільки він є новим записом або вже видаленим записом.
+
+dbmetadata_invalid_database_driver			= Драйвер '{0}' не підтримується. Встановіть його драйвер PRADO, якщо він доступний.
+dbmetadata_not_meta_data					= Очікувався клас драйвера {1}, але отримано клас {0}.
+dbmetadata_tableinfo_class_invalid			= Клас інформації про таблицю TDbMetaData '{0}' є простором імен каталогу, а не класом.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' неприпустимий. Переконайтеся, що він вказує на дійсний модуль застосунку.
+distributeddatasource_child_required		= {0} потребує щонайменше одного дочірнього елемента '{1}'.
+masterslavedbconnection_connection_exists	= Підключення {0}.{1} уже існує.
+masterslavedbconnection_interface_required	= {0}.{1} потребує екземпляра, що реалізує інтерфейс {2}.
+slavedbconnection_requires_master			= {0} потребує {1}.
+
+response_status_reason_missing				= HTTP 1.1 потребує причини для розширених кодів статусу
+response_status_reason_badchars				= У заголовку HTTP 1.1 токен причини статусу не повинен містити символів CR або LF
+
+activefileupload_temppath_invalid			= Шлях TActiveFileUpload TempPath '{0}' не існує або недоступний для запису процесом вебсервера.
+
+tactivetablecell_control_outoftable			= {0} '{1}' повинен бути розміщений усередині елемента керування TTableRow.
+tactivetablecell_control_notincollection	= {0} '{1}' не є членом TTableCellCollection батьківського елемента керування TTableRow.
+
+tactivetablerow_control_outoftable			= {0} '{1}' повинен бути розміщений усередині елемента керування TTable.
+tactivetablerow_control_notincollection		= {0} '{1}' не є членом TTableRowCollection батьківського елемента керування TTable.
+
+juioptions_option_invalid					= '{1}' не є дійсним параметром для елемента керування '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' не є дійсним елементом керування підпису для TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID має неприпустимий ID '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex має неприпустимий індекс '{0}'.
+accordion_view_inexistent					= TAccordion не може знайти вказане подання.
+
+dot_bad_size								= TDot Size повинен бути додатним цілим числом, але має значення '{0}'
+dot_bad_border_width						= TDot FlatBorderWidth повинен бути числом з необов'язковим % або одиницею довжини CSS, але має значення '{0}'
+
+juidatepicker_settextmode_unsupported		= TextMode для TJuiDatePicker не можна змінити.
+
+control_adapter_not_active					= Властивість BaseActiveControl викликано на неактивному елементі керування.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' повинен бути безпосереднім дочірнім елементом елемента керування TFigure.
+summary_requires_details_parent				= TSummary '{0}' повинен бути безпосереднім дочірнім елементом елемента керування TDetails.
+
+gravatar_bad_default						= Значення властивості TGravatar DefaultImageStyle '{0}' не підтримується
+gravatar_bad_size							= TGravatar Size не входить у діапазон [1 .. 512], а має значення '{0}'
+
+progress_value_invalid						= TProgress Value повинен бути 0 або більше; передано {0}.
+progress_max_invalid						= TProgress Max повинен бути більшим за 0; передано {0}.
+
+time_invalid_datetime						= TTime DateTime повинен бути DateTimeInterface, DateInterval, рядком або числовим значенням; передано {0}.
+time_invalid_text_format					= TTime TextFormat '{0}' не є ім'ям константи TTimeFormat або шаблоном дати й часу ICU.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' не може містити '{1}': активні елементи керування, елементи зворотного надсилання та валідатори не працюють усередині інертного вмісту шаблону. Використовуйте звичайну розмітку із заповнювачами {{...}} або встановіть ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() повинен повертати масив.
+
+htmlpurifier_source_path_failed				= Не вдалося створити шлях кешу html purifier '{0}'. Переконайтеся, що батьківський каталог існує і доступний для запису вебпроцесом.

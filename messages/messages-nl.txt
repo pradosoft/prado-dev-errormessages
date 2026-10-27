@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Dutch (nl).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application mag slechts eenmaal worden ingesteld.
+prado_component_unknown						= Onbekend componenttype '{0}'. Dit kan worden veroorzaakt door de volgende parseerfout in het klassebestand van {0}: {1}
+prado_using_invalid							= '{0}' is geen geldige namespace om te gebruiken. Zorg dat '.*' is toegevoegd als u een namespace wilt gebruiken die naar een directory verwijst.
+prado_alias_redefined						= Alias '{0}' kan niet opnieuw worden gedefinieerd.
+prado_alias_invalid							= Alias '{0}' verwijst naar een ongeldig pad '{1}'. Alleen bestaande directory's kunnen een alias krijgen.
+prado_aliasname_invalid						= Alias '{0}' bevat het ongeldige teken '.'.
+
+component_property_undefined				= Componenteigenschap '{0}.{1}' is niet gedefinieerd.
+component_property_readonly					= Componenteigenschap '{0}.{1}' is alleen-lezen.
+component_event_undefined					= Componentevent '{0}.{1}' is niet gedefinieerd.
+component_method_undefined					= Componentmethode '{0}.{1}' is niet gedefinieerd.
+component_eventhandler_invalid				= Aan componentevent '{0}.{1}' is een ongeldige eventhandler '{2}' gekoppeld.
+component_expression_invalid				= Component '{0}' evalueert een ongeldige expressie '{1}' : {2}.
+component_statements_invalid				= Component '{0}' evalueert ongeldige PHP-statements '{1}' : {2}.
+component_class_behavior_defined			= Component '{0}' heeft al een class behavior '{1}'.
+component_not_a_behavior					= Component '{0}' wordt toegevoegd als behavior maar is geen TBaseBehavior.
+object_not_a_component						= Object '{0}' wordt toegevoegd als behavior maar is geen TComponent.
+component_no_tcomponent_class_behaviors		= Aan TComponent kunnen geen class behaviors worden gekoppeld vanwege recursie.
+component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors kunnen niet aan meerdere eigenaren worden gekoppeld. Geef een string of een array met de IBehavior-klasse en -eigenschappen op om per eigenaar een instantie te maken.
+
+propertyvalue_enumvalue_invalid				= Waarde '{0}' is geen geldige enumeratiewaarde ({1}).
+propertyvalue_invalid_hex_color				= Waarde '{0}' is geen geldige hexadecimale kleurwaarde, bijvoorbeeld "#112233".
+propertyvalue_invalid_array_literal			= Waarde '{0}' is geen geldige array-literal.
+propertyvalue_array_too_deep				= De array-literal is dieper genest dan {0} niveaus.
+
+eventhandler_lost_weak_ref					= TEventHandler kan de eventhandler niet aanroepen omdat de WeakReference naar het callable object verloren is gegaan.
+eventhandler_no_set_handler					= TEventHandler kan de eventhandler niet instellen, index "{0}".
+eventhandler_bad_offset						= TEventHandler heeft geen offset "{0}".
+
+eventparam_readonly							= {0} is alleen-lezen.
+eventparam_readonly_set						= {0} kan ReadOnly niet meer wijzigen nadat deze is ingesteld.
+eventparam_readonly_not_self				= {0} ReadOnly kan alleen intern worden ingesteld.
+
+list_index_invalid							= Index '{0}' valt buiten het bereik.
+list_item_inexistent						= Het item is niet gevonden in de lijst.
+list_data_not_iterable						= De data moet een array zijn of een object dat de interface Traversable implementeert.
+list_readonly								= {0} is alleen-lezen.
+list_readonly_set							= {0} kan Read-Only niet meer wijzigen nadat deze al is ingesteld.
+prioritylist_index_invalid					= Index '{0}' van '{1}' bij prioriteit '{2}' valt buiten het bereik.
+prioritytrait_no_set_default_priority		= De standaardprioriteit kan slechts eenmaal of alleen door het object zelf worden ingesteld.
+prioritytrait_no_set_precision				= De precisie kan slechts eenmaal of alleen door het object zelf worden ingesteld.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid kan slechts eenmaal of alleen door het object zelf worden ingesteld.
+
+map_addition_disallowed						= Het nieuwe item kan niet aan de map worden toegevoegd.
+map_item_unremovable						= Het item kan niet uit de map worden verwijderd.
+map_data_not_iterable						= De data moet een array zijn of een object dat de interface Traversable implementeert.
+map_readonly								= {0} is alleen-lezen.
+map_readonly_set							= {0} kan Read-Only niet meer wijzigen nadat deze al is ingesteld.
+
+tnull_clone_disallowed						= De TNull-singleton kan niet worden gekloond. Gebruik in plaats daarvan TNull::null().
+
+weakcallablecollection_callable_required	= TWeakCallableCollection accepteert alleen callables.
+
+arraysubscription_no_change					= TArraySubscription.{0} kan niet worden gewijzigd nadat het abonnement is gestart.
+arraysubscription_no_null_key				= TArraySubscription kan zich niet abonneren op een null-sleutel van een ArrayAccess-object.
+arraysubscription_index_invalid				= TArraySubscription staat in lijstmodus (isAssociative = false), maar de sleutel '{0}' is niet geldig (aantal: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array kan niet rechtstreeks worden ingesteld.
+eventsubscription_no_change					= TEventSubscription.{0} kan niet worden gewijzigd nadat het abonnement is gestart.
+
+application_includefile_invalid				= De applicatieconfiguratie {0} is niet gevonden. Zorg dat deze in namespace-notatie staat en dat het bestand eindigt op ".xml" of ".php".
+application_basepath_invalid				= Het basispad van de applicatie '{0}' bestaat niet of is geen directory.
+application_runtimepath_invalid				= Het runtime-pad van de applicatie '{0}' bestaat niet of is niet schrijfbaar voor het webserverproces.
+application_service_class_not_found			= Serviceklasse '{0}' bestaat niet.
+application_service_class_not_service		= Serviceklasse '{0}' implementeert IService niet.
+application_service_class_required			= registerService vereist een klassenaam of een serviceConfig-array voor service '{0}'.
+application_service_default_unregister		= De standaardpaginaservice '{0}' kan niet worden afgemeld.
+service_csrf_token_invalid					= Service '{0}' vereist een geldig CSRF-token.
+application_moduleid_duplicated				= Het applicatiemodule-ID '{0}' is niet uniek.
+application_runtimepath_failed				= Het runtime-pad '{0}' kan niet worden aangemaakt. Zorg dat de bovenliggende directory bestaat en schrijfbaar is voor het webproces.
+application_module_required_dep_missing		= Module '{0}' heeft een verplichte afhankelijkheid van module '{1}', die niet bij de applicatie is geregistreerd.
+application_module_dependency_cycle			= Er is een afhankelijkheidscyclus gedetecteerd tussen de volgende modules: {0}.
+application_module_dependency_self_reference	= Module '{0}' declareert zichzelf als afhankelijkheid, wat nooit geldig is.
+
+appconfig_aliaspath_invalid					= Applicatieconfiguratie <alias id="{0}"> gebruikt een ongeldig bestandspad "{1}".
+appconfig_alias_invalid						= Het element <alias> in de applicatieconfiguratie moet een "id"-attribuut en een "path"-attribuut hebben.
+appconfig_alias_redefined					= Applicatieconfiguratie <alias id="{0}"> kan niet opnieuw worden gedefinieerd.
+appconfig_using_invalid						= Het element <using> in de applicatieconfiguratie moet een "namespace"-attribuut hebben.
+appconfig_moduleid_required					= Het element <module> in de applicatieconfiguratie moet een "id"-attribuut hebben.
+appconfig_moduletype_required				= Applicatieconfiguratie <module id="{0}"> moet een "class"-attribuut hebben.
+appconfig_moduletype_inapplicable			= Applicatieconfiguratie <module id="{0}"> mag geen "class"-attribuut hebben.
+appconfig_serviceid_required				= Het element <service> in de applicatieconfiguratie moet een "id"-attribuut hebben.
+appconfig_servicetype_required				= Applicatieconfiguratie <service id="{0}"> moet een "class"-attribuut hebben.
+appconfig_parameterid_required				= Het element <parameter> in de applicatieconfiguratie moet een "id"-attribuut hebben.
+appconfig_includefile_required				= Het element <include> in de applicatieconfiguratie moet een "file"-attribuut hebben.
+appconfig_paths_invalid						= Applicatieconfiguratie <paths> mag geen element <{0}> bevatten.
+appconfig_modules_invalid					= Applicatieconfiguratie <modules> mag geen element <{0}> bevatten.
+appconfig_services_invalid					= Applicatieconfiguratie <services> mag geen element <{0}> bevatten.
+appconfig_parameters_invalid				= Applicatieconfiguratie <parameters> mag geen element <{0}> bevatten.
+appconfig_tag_invalid						= De applicatieconfiguratie mag geen element <{0}> bevatten.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey mag niet leeg zijn.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey mag niet leeg zijn.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey mag niet leeg zijn.
+securitymanager_mcryptextension_required	= De PHP-extensie Mcrypt is vereist om de encryptiefunctie van TSecurityManager te gebruiken.
+securitymanager_mcryptextension_initfailed	= TSecurityManager kan de mcrypt-module niet initialiseren.
+
+uri_format_invalid							= '{0}' is geen geldige URI.
+
+httprequest_browscap_required				= THttpRequest vereist dat de browscap-directive in php.ini is geconfigureerd.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator mag slechts één teken bevatten.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' verwijst niet naar een bestaande module.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' moet verwijzen naar een module die TUrlManager uitbreidt.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie is false, wat een sessiemodule vereist.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection accepteert alleen THttpCookie-objecten.
+
+httpresponse_file_inexistent				= THttpResponse kan het bestand '{0}' niet verzenden. Het bestand bestaat niet.
+httpresponse_responsedata_method_unavailable	= THttpResponse: methode '{0}' kan niet worden gebruikt zonder een geschikte adapter die deze implementeert.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' verwijst niet naar een bestaande module.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' moet verwijzen naar een module die THttpHeadersManager uitbreidt.
+
+httpheadersmanager_header_required			= THttpHeadersManager kan alleen THttpHeader of afgeleide klassen daarvan bevatten.
+httpheadersmanager_headerclass_missing		= Bij een <headerclass>-vermelding van THttpHeadersManager ontbreekt het verplichte attribuut 'name' of 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_sessionname_invalid				= THttpSession.SessionName mag alleen alfanumerieke tekens bevatten.
+httpsession_savepath_unchangeable			= THttpSession.SavePath kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' is ongeldig.
+httpsession_storage_unchangeable			= THttpSession.Storage kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart kan niet worden gewijzigd nadat de sessiemodule is geïnitialiseerd.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability moet een geheel getal tussen 0 en 100 zijn.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID kan niet worden ingesteld wanneer THttpSession.CookieMode op Only staat.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout kan niet worden gewijzigd nadat de sessie is gestart.
+httpsession_handler_invalid					= THttpSessionHandler accepteert alleen een THttpSession-object als constructorparameter
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' is ongeldig. Zorg dat het in namespace-notatie staat en verwijst naar een directory die schrijfbaar is voor het webserverproces.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath kan niet worden gewijzigd nadat de module is geïnitialiseerd.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl kan niet worden gewijzigd nadat de module is geïnitialiseerd.
+assetmanager_filepath_invalid				= TAssetManager publiceert een ongeldig bestand '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager publiceert een tar-bestand met een ongeldige checksum '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager publiceert een ongeldig tar-bestand '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager kan het tar-bestand '{0}' niet uitpakken.
+assetmanager_source_directory_invalid		= TAssetManager kopieert een ongeldige directory '{0}'.
+
+cache_primary_duplicated					= Er is maximaal één primaire cachemodule toegestaan. {0} probeert zich als een tweede primaire cache te registreren.
+psrcache_backing_cache_required				= TPsrCache.BackingCacheId of TPsrCache.BackingCache is vereist.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' verwijst niet naar een applicatiemodule.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' moet verwijzen naar een module die Psr\SimpleCache\CacheInterface of Psr\Cache\CacheItemPoolInterface implementeert.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' is een PSR-adapter van deze TPsrCache; deze zou in dezelfde cache lezen en terugschrijven.
+psrcachebacking_cache_required				= {0} vereist een achterliggende cache. Stel {0}.BackingCacheId, {0}.BackingCache of een primaire applicatiecache in.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' verwijst niet naar een applicatiemodule.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' moet verwijzen naar een Prado\Caching\ICache-module.
+psrcachebacking_key_invalid					= De cachesleutel van {0} moet een niet-lege string zijn zonder de gereserveerde tekens {}()/\@: maar '{1}' is opgegeven.
+sqlitecache_extension_required				= TSqliteCache vereist de PHP-extensie SQLite.
+sqlitecache_dbfile_required					= TSqliteCache.DbFile is vereist.
+sqlitecache_connection_failed				= De databaseverbinding van TSqliteCache is mislukt. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache kan de cachedatabase niet aanmaken. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile kan niet worden gewijzigd nadat de module is geïnitialiseerd.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile is ongeldig. Zorg dat het in een correcte namespace-notatie staat.
+
+dbcache_unavailable							= TDbCache vereist de PHP-extensie PDO.
+
+etcdcache_transport_required				= TEtcdCache vereist de PHP-extensie cURL of allow_url_fopen.
+
+memcache_extension_required					= TMemCache vereist de PHP-extensie memcache.
+memcache_connection_failed					= TMemCache kan geen verbinding maken met de memcache-server {0}:{1}.
+memcache_not_initialized					= Opties van TMemCache kunnen niet worden ingesteld voordat de module is geïnitialiseerd.
+
+apccache_extension_required					= TAPCCache vereist de PHP-extensie APC.
+apccache_extension_not_enabled				= TAPCCache heeft apc.enabled = 1 in php.ini nodig om te werken.
+apccache_extension_not_enabled_cli			= TAPCCache heeft apc.enable_cli = 1 in php.ini nodig om met PHP vanaf de opdrachtregel te werken.
+
+cachesize_item_exceeds_maximum_size			= Het cache-item is {0} bytes groot, wat de geconfigureerde MaximumSize van {1} bytes overschrijdt.
+
+filecache_directory_required				= TFileCache.Directory is vereist.
+filecache_directory_create_failed			= TFileCache kan de cachedirectory '{0}' niet aanmaken.
+filecache_directory_not_writable			= De cachedirectory '{0}' van TFileCache is niet schrijfbaar.
+filecache_hash_token_identity				= TFileCache.hashToken moet zijn invoer transformeren; de implementatie in de subklasse heeft het token ongewijzigd teruggegeven.
+filecache_hash_token_path_separator			= TFileCache.hashToken mag geen waarde teruggeven die een padscheidingsteken ("/" of "\") bevat; de implementatie in de subklasse heeft een onveilige hash teruggegeven.
+
+memorycache_backing_file_directory_not_found	= De directory van TMemoryCache.BackingFile bestaat niet voor pad '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' is ongeldig. Geldige waarden zijn 'PHP' en 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' is ongeldig. Geldige waarden zijn 'None', 'Base64' en 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' is ongeldig. Het moet een module-ID van een TSecurityManager of een TSecurityManager-instantie zijn.
+serializingcache_json_encode_failed			= TSerializingCache kan de waarde niet als JSON coderen: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} verwijst niet naar een geldige directory.
+cachedependencylist_cachedependency_required	= Alleen objecten die ICacheDependency implementeren kunnen aan TCacheDependencyList worden toegevoegd.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' is ongeldig. Zorg dat het in namespace-notatie staat en verwijst naar een geldige directory met foutsjabloonbestanden.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' is geen geldige directory.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage kan niet worden gewijzigd nadat de service is geïnitialiseerd.
+pageservice_basepath_unchangeable			= TPageService.BasePath kan niet worden gewijzigd nadat de service is geïnitialiseerd.
+pageservice_pageclass_invalid				= Paginaklasse {0} is ongeldig. Het moet TPage zijn of TPage uitbreiden.
+pageservice_includefile_invalid				= De paginaserviceconfiguratie {0} is niet gevonden. Zorg dat deze in namespace-notatie staat en dat het bestand eindigt op ".xml" of ".php".
+
+pageserviceconf_file_invalid				= Het configuratiebestand van de paginadirectory '{0}' kan niet worden geopend.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> gebruikt een ongeldig bestandspad "{1}" in het configuratiebestand van de paginadirectory '{2}'.
+pageserviceconf_alias_invalid				= Het element <alias> moet een "id"-attribuut en een "path"-attribuut hebben in het configuratiebestand van de paginadirectory '{0}'.
+pageserviceconf_using_invalid				= Het element <using> moet een "namespace"-attribuut hebben in het configuratiebestand van de paginadirectory '{0}'.
+pageserviceconf_module_invalid				= Het element <module> moet een "id"-attribuut hebben in het configuratiebestand van de paginadirectory '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> moet een "class"-attribuut hebben in het configuratiebestand van de paginadirectory '{1}'.
+pageserviceconf_parameter_invalid			= Het element <parameter> moet een "id"-attribuut hebben in het configuratiebestand van de paginadirectory '{0}'.
+pageserviceconf_page_invalid				= Het element <page> moet een "id"-attribuut hebben in het configuratiebestand van de paginadirectory '{0}'.
+pageserviceconf_includefile_required		= Het element <include> in de paginaconfiguratie moet een "file"-attribuut hebben.
+
+basebehavior_cannot_setname_with_owner		= TBaseBehavior.Name "{0}" kan niet worden gewijzigd (naar "{1}") nadat de behavior is gekoppeld.
+basebehavior_sync_no_owner					= De TBaseBehavior "{0}" heeft geen eigenaar en kan geen eventhandlers synchroniseren op een component zonder eigenaren.
+basebehavior_sync_not_owner					= De TBaseBehavior "{0}" kan geen eventhandlers synchroniseren op een object dat niet de eigenaar is.
+behavior_has_owner							= De TBehavior "{0}" kan aan slechts één eigenaar worden gekoppeld.
+behavior_bad_attach_component				= De TBehavior "{0}" kan alleen aan een TComponent worden gekoppeld.
+behavior_detach_without_owner				= De TBehavior "{0}" kan niet worden ontkoppeld zonder eigenaar.
+behavior_detach_wrong_owner					= De TBehavior "{0}" kan niet worden ontkoppeld van een object dat niet zijn eigenaar is.
+behavior_property_unchangeable				= {1}.{0} kan niet worden gewijzigd nadat de behavior is gekoppeld.
+behavior_requires_owner						= {1}.{0} vereist een eigenaar.
+classbehavior_owner_attach_once				= De TClassBehavior "{0}" kan slechts eenmaal aan een eigenaar worden gekoppeld. De handlers zouden anders niet uniek zijn.
+classbehavior_bad_attach_component			= De TClassBehavior "{0}" kan alleen aan een TComponent worden gekoppeld.
+classbehavior_detach_without_owner			= De TClassBehavior "{0}" kan niet worden ontkoppeld zonder eigenaar.
+classbehavior_detach_wrong_owner			= De TClassBehavior "{0}" kan niet worden ontkoppeld van een object dat niet zijn eigenaar is.
+
+callchain_bad_dynamic_event					= TCallChain.{0} is aangeroepen, maar {1} werd verwacht.
+
+behaviormodule_behavior_as_array_required	= Een php-<behavior> moet een array zijn.
+behaviormodule_behaviorname_required		= <behavior> moet een 'name'-attribuut bevatten om de behavior te koppelen.
+behaviormodule_behaviorclass_required		= <behavior> moet een 'class'-attribuut bevatten dat de behaviorklasse definieert.
+behaviormodule_attachto_class_required		= <behavior> moet een 'attachto'- of 'attachtoclass'-attribuut hebben.
+behaviormodule_attachto_and_class_only_one	= <behavior> moet ofwel een 'attachto'- ofwel een 'attachtoclass'-attribuut hebben, niet beide.
+behaviormodule_behaviorowner_required		= Het attachto-object '{0}' van <behavior> is niet gevonden.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors kan niet worden ingesteld op het ongeldige type '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader moet een Behavior Name hebben.
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader moet een Behavior Class hebben.
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader moet een 'attachto'- of 'attachtoclass'-attribuut hebben.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader mag slechts één 'attachto'- of 'attachtoclass'-attribuut hebben.
+behaviorparameterloader_moduleid_required	= TBehaviorParameterLoader attachto 'module:' vereist een module-ID.
+behaviorparameterloader_behaviorowner_required	= TBehaviorParameterLoader attachto '{0}' is niet gevonden.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader kan module '{0}' niet vinden om behaviors aan te koppelen.
+
+evaluationfilter_statements_denied			= Component '{0}' kan de PHP-statements '{1}' niet evalueren omdat TEvaluationFilterBehavior.AllowStatements false is.
+evaluationfilter_code_denied				= Component '{0}' kan '{1}' niet evalueren omdat TEvaluationFilterBehavior '{2}' niet toestaat.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior heeft een callable nodig om te worden geconstrueerd.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior heeft een callable nodig om te worden geconstrueerd.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior moet een Parameter-attribuut hebben.
+parameterizebehavior_no_property			= TParameterizeBehavior moet een Property-attribuut hebben.
+parameterizebehavior_owner_get_only_property	= De eigenaar van TParameterizeBehavior heeft de eigenschap '{0}', maar deze is alleen-lezen.
+parameterizebehavior_owner_has_no_property	= De eigenaar van TParameterizeBehavior heeft geen eigenschap '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior kan de Parameter niet leegmaken nadat de behavior is gekoppeld.
+
+processhelper_no_forking					= Het forken van processen wordt niet ondersteund.
+processhelper_no_signals					= Processignalen kunnen niet worden verzonden op Windows.
+
+serializableclosure_no_decrypter			= TSerializableClosure kan een versleutelde closure-payload niet ontsleutelen zonder een geconfigureerde decrypter.
+serializableclosure_decrypt_failed			= TSerializableClosure kan de versleutelde closure-payload niet ontsleutelen; de payload is mogelijk gemanipuleerd of de sleutel is gewijzigd.
+
+appsignals_no_change						= TApplicationSignals::{0} kan niet worden gewijzigd nadat het is gekoppeld.
+appsignals_not_a_dispatcher					= '{0}' is geen TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' is geen geldige PID.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} kan niet worden gewijzigd nadat het is gekoppeld.
+
+initialized_property_unchangeable			= {1}.{0} kan niet worden ingesteld omdat het al is geïnitialiseerd.
+initialized_requires_initialization			= {1}.{0} moet worden geïnitialiseerd voordat het kan worden verwerkt.
+
+template_closingtag_unexpected				= Onverwachte sluittag '{0}' gevonden.
+template_closingtag_expected				= Sluittag '{0}' werd verwacht, maar '{1}' is gevonden.
+template_directive_nonunique				= De directive '<%@ ... %>' moet aan het begin van het sjabloon staan en mag hoogstens eenmaal voorkomen.
+template_comments_forbidden					= Sjablooncommentaar is niet toegestaan binnen eigenschapstags.
+template_matching_unexpected				= Onverwachte overeenkomst.
+template_property_unknown					= {0} heeft geen eigenschap met de naam '{1}'.
+template_event_unknown						= {0} heeft geen event met de naam '{1}'.
+template_property_readonly					= {0} heeft een alleen-lezen eigenschap '{1}'.
+template_event_forbidden					= {0} is een component die geen control is. In een sjabloon kan geen handler aan zijn event '{1}' worden gekoppeld.
+template_databind_forbidden					= {0} is een component die geen control is. Expressies kunnen niet aan zijn eigenschap '{1}' worden gebonden.
+template_component_required					= '{0}' is geen component. Alleen componenten kunnen in een sjabloon voorkomen.
+template_format_invalid						= Ongeldige sjabloonsyntaxis: {0}
+template_property_duplicated				= Eigenschap {0} is twee of meer keer geconfigureerd.
+template_eventhandler_invalid				= {0}.{1} accepteert alleen een statische string.
+template_controlid_invalid					= {0}.ID accepteert alleen een statische tekststring.
+template_controlskinid_invalid				= {0}.SkinID accepteert alleen een statische tekststring.
+template_content_unexpected					= Onverwachte inhoud aangetroffen bij het instantiëren van het sjabloon: {0}.
+template_include_invalid					= Ongeldige sjablooninclusie. Zorg dat {0} een geldige namespace is die verwijst naar een bestaand sjabloonbestand met de extensie .tpl.
+template_tag_unexpected						= De initialisatie van eigenschap {0} bevat een onbekend tagtype {1}.
+
+xmldocument_file_read_failed				= TXmlDocument kan het bestand '{0}' niet lezen.
+xmldocument_file_write_failed				= TXmlDocument kan het bestand '{0}' niet schrijven.
+
+xmlelementlist_xmlelement_required			= TXmlElementList accepteert alleen TXmlElement-objecten.
+
+xmlelement_null_tag							= De Tag Name van TXmlElement mag niet null zijn.
+xmlelement_empty_tag						= De Tag Name van TXmlElement mag geen lege string zijn.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action accepteert alleen 'allow' of 'deny' als waarde.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb accepteert alleen 'get' of 'post' als waarde.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection accepteert alleen TAuthorizationRule-objecten.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' is geen geldig bestand.
+usermanager_userfile_unchangeable			= TUserManager.UserFile kan niet worden gewijzigd. De gebruikersmodule is al geïnitialiseerd.
+
+integritymanager_entry_invalid				= De integriteitsvermelding van TIntegrityManager voor URL '{0}' vereist een niet-lege url en hash.
+integritymanager_algorithm_invalid			= Het algoritme '{0}' van TIntegrityManager wordt niet ondersteund; gebruik een van: {1}.
+integritymanager_file_unreadable			= TIntegrityManager kan het bestand '{0}' niet lezen om de integriteit ervan te berekenen.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' is geen geldig bestand.
+integritymanager_integrityfile_unchangeable	= {1}.{0} kan niet worden gewijzigd. De integriteitsmodule is al geïnitialiseerd.
+
+javascript_script_integrity_required		= Er is geen Subresource Integrity geregistreerd voor het externe script '{0}', maar integriteit is vereist.
+
+authmanager_usermanager_required			= Aan TAuthManager.UserManager moet een waarde worden toegewezen.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' verwijst niet naar het ID van een applicatiemodule.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' verwijst niet naar een geldige TUserManager-applicatiemodule.
+authmanager_session_required				= TAuthManager vereist een sessie-applicatiemodule.
+
+permissions_events_invalid					= TPermissionEvent.Event kan niet op de ongeldige waarde '{0}' worden ingesteld.
+permissions_rules_invalid					= TPermissionEvent.Rules kan niet op de ongeldige waarde '{0}' worden ingesteld.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' verwijst niet naar het ID van een applicatiemodule.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' verwijst niet naar een geldige TDbParameterModule-applicatiemodule.
+permissions_init_once						= TPermissionsManager.init kan slechts eenmaal worden geïnitialiseerd.
+permissions_duplicate_permission			= De permissie '{0}' van TPermissionsManager is al geregistreerd.
+permissions_role_children_invalid			= De configuratierol '{0}' van TPermissionsManager heeft ongeldige kinderen '{1}'.
+permissions_rule_invalid					= De configuratiepermissieregel '{0}' van TPermissionsManager heeft eigenschappen die geen array zijn.
+permissions_rules_require_name				= De regels van TPermissionsManager moeten een permissie-eigenschap "name" hebben.
+permissions_role_rule_nested				= De configuratierol '{0}' van TPermissionsManager bevat een <permissionrule>. Permissieregels zijn directe kinderen van het permissies-configuratie-element.
+permissions_rule_class_invalid				= De permissieregelklasse '{0}' van TPermissionsManager is een directory-namespace, geen klasse.
+permissions_children_invalid				= De kinderen van TPermissionsManager.*RoleChildren moeten een string of array zijn, maar zijn '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' is geen geldig bestand.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' is geen geldige padalias. Zorg dat u deze alias in de configuratie hebt gedefinieerd en dat deze naar een geldige directory verwijst.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' is geen geldige directory.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath kan niet worden gewijzigd nadat de module is geïnitialiseerd.
+thememanager_theme_invalid					= De themanaam '{0}' van TThemeManager moet één enkele directorynaam zijn.
+
+theme_baseurl_required						= TThemeManager.BasePath is vereist. Standaard wordt een directory met de naam 'themes' aangenomen in de directory waarin het startscript van de applicatie staat.
+theme_path_inexistent						= Themapad '{0}' bestaat niet.
+theme_control_nested						= De skin voor controltype '{0}' in thema '{1}' kan niet binnen een andere skin staan.
+theme_skinid_duplicated						= SkinID '{0}.{1}' komt dubbel voor in thema '{2}'.
+theme_databind_forbidden					= Databind kan niet worden gebruikt in thema '{0}' voor controlskin '{1}.{2}' bij eigenschap '{3}'.
+theme_property_readonly						= Een skin wordt toegepast op een alleen-lezen controleigenschap '{0}.{1}'.
+theme_property_undefined					= Een skin wordt toegepast op een niet-bestaande controleigenschap '{0}.{1}'.
+theme_tag_unexpected						= De initialisatie van eigenschap {0} bevat een onbekend tagtype {1}.
+
+control_object_reregistered					= Dubbel object-ID '{0}' gevonden.
+control_id_invalid							= {0}.ID '{1}' is ongeldig. Alleen alfanumerieke tekens en underscores zijn toegestaan. Het eerste teken moet een letter of underscore zijn.
+control_skinid_unchangeable					= {0}.SkinID kan niet worden gewijzigd nadat een skin op de control is toegepast of de onderliggende controls zijn aangemaakt.
+control_enabletheming_unchangeable			= {0}.EnableTheming kan niet worden gewijzigd nadat de onderliggende controls zijn aangemaakt.
+control_stylesheet_applied					= De StyleSheet-skin is al toegepast op {0}.
+control_id_nonunique						= {0}.ID '{1}' is niet uniek onder alle controls binnen dezelfde naamgevingscontainer.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' mag niet negatief zijn.
+
+templatecontrol_mastercontrol_invalid		= De mastercontrol moet van het type TTemplateControl of een afgeleide klasse zijn.
+templatecontrol_mastercontrol_required		= Control '{0}' vereist een mastercontrol omdat de control TContent gebruikt.
+templatecontrol_contentid_duplicated		= TContent-ID '{0}' komt dubbel voor.
+templatecontrol_placeholderid_duplicated	= TContentPlaceHolder-ID '{0}' komt dubbel voor.
+templatecontrol_directive_invalid			= {0}.{1} accepteert alleen een statische tekststring via een sjabloondirective.
+templatecontrol_placeholder_inexistent		= TContent '{0}' heeft geen bijpassende TContentPlaceHolder.
+
+page_form_duplicated						= Een pagina kan hoogstens één TForm bevatten. Gebruik gewone HTML-formuliertags voor de overige formulieren.
+page_isvalid_unknown						= TPage.IsValid is nog niet geëvalueerd.
+page_postbackcontrol_invalid				= De postback-control '{0}' kan niet worden bepaald.
+page_control_outofform						= {0} '{1}' moet binnen een TForm staan.
+page_head_duplicated						= Een pagina kan hoogstens één THead bevatten.
+page_head_required							= Een THead-control is nodig in het paginasjabloon om CSS en js in de HTML-head-sectie te renderen.
+page_statepersister_invalid					= De paginastatus-persister moet de interface IPageStatePersister implementeren.
+
+csmanager_pradoscript_invalid				= Onbekende naam van Prado-scriptbibliotheek '{0}'.
+csmanager_pradoscript_notloaded				= De Prado-scriptbibliotheek met de naam '{0}' is nog niet geladen.
+csmanager_pradostyle_invalid				= Onbekende naam van Prado-stijlbibliotheek '{0}'.
+csmanager_invalid_packages					= Onbekende pakketten '{1}' voor de javascript-pakketten gedefinieerd in '{0}'. Geldige pakketten zijn '{2}'.
+
+httpclient_transport_error					= Transportfout van de HTTP-client (code {0}): {1}
+httpclient_http_error						= HTTP-foutantwoord met status {0}.
+httpclient_transport_required				= Er is geen HTTP-transport beschikbaar: de cURL-extensie is niet geladen en allow_url_fopen staat uit.
+
+restclient_invalid_header					= De header '{0}' van TRestClient heeft een ongeldige naam of een waarde die CR/LF bevat.
+restclient_basicauth_username_colon			= De Basic-auth-gebruikersnaam van TRestClient mag geen dubbele punt bevatten (het scheidingsteken voor credentials volgens RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder moet een ID hebben.
+
+content_id_required							= TContent moet een ID hebben.
+
+controlcollection_control_required			= TControlList accepteert alleen strings of TControl-objecten.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' is ongeldig. Het moet één enkel teken zijn.
+webcontrol_dir_invalid						= {0}.Dir '{1}' is ongeldig. Toegestane waarden zijn 'ltr', 'rtl' en 'auto'.
+webcontrol_style_invalid					= {0}.Style accepteert alleen een stringwaarde.
+
+listcontrol_selection_invalid				= {0} heeft een ongeldige selectie die is ingesteld voordat de databinding is uitgevoerd.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex heeft een ongeldige waarde {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue heeft een ongeldige waarde '{1}'.
+listcontrol_expression_invalid				= {0} evalueert een ongeldige expressie '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} ondersteunt geen meervoudige selectie.
+
+label_associatedcontrol_invalid				= TLabel.AssociatedControl '{0}' is niet gevonden.
+
+textbox_suggestionlist_invalid				= TTextBox.SuggestionList '{0}' is niet gevonden.
+
+output_forcontrol_invalid					= TOutput.ForControl '{0}' is niet gevonden.
+
+baseterm_targetcontrol_invalid				= {0}.TargetControl '{1}' is niet gevonden.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' mag niet negatief zijn.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' mag niet negatief zijn.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' moet tussen 0 en de RenderFilterDepth {1} van de filterende control liggen.
+
+hiddenfield_focus_unsupported				= THiddenField ondersteunt het instellen van de invoerfocus niet.
+hiddenfield_theming_unsupported				= THiddenField ondersteunt geen theming.
+hiddenfield_skinid_unsupported				= THiddenField ondersteunt geen controlskin.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' verwijst niet naar een bestaande knopcontrol.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding moet een geheel getal groter dan of gelijk aan -1 zijn.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing moet een geheel getal groter dan of gelijk aan -1 zijn.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History moet een geheel getal groter dan 0 zijn.
+
+listitemcollection_item_invalid				= TListItemCollection accepteert alleen strings of TListItem-objecten.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices is alleen-lezen.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack is alleen-lezen.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex is alleen-lezen.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices is alleen-lezen.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue is alleen-lezen.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices is alleen-lezen.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' bestaat niet.
+logrouter_routeclass_required				= Het attribuut class is vereist in de <route>-configuratie.
+logrouter_routetype_required				= Een logroute moet een instantie van TLogRoute of een afgeleide klasse zijn.
+
+dblogroute_connectionid_invalid				= TDbLogRoute kan de databaseverbinding met ID '{0}' niet aanmaken.
+dblogroute_insert_failed					= TDbLogRoute kan het logbericht niet invoegen in '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' is niet geldig
+dblogroute_table_nonexistent				= De tabel '{0}' van TDbLogRoute bestaat niet en moet worden aangemaakt.
+dblogroute_order_invalid					= De sortering '{0}' van TDbLogRoute moet kolommen opsommen, elk optioneel gevolgd door ASC of DESC.
+dblogroute_limit_invalid					= De limiet '{0}' van TDbLogRoute moet een aantal rijen, 'count OFFSET offset' of 'offset, count' zijn.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' moet een directory in namespace-notatie zijn die schrijfbaar is voor het webserverproces.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize moet groter dan 0 zijn.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles moet groter dan 0 zijn.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom mag niet leeg zijn.
+emaillogroute_mail_failed					= TEmailLogRoute kan het logbericht niet verzenden naar '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags zijn niet geldig, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility is niet geldig, '{0}'.
+
+psrlogroute_logger_required					= TPsrLogRoute.Logger is vereist.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' is geen module-ID of klassenaam van een Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger kan geen TPsrLogger zijn; deze zou terugloggen in dezelfde TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns mag niet kleiner dan 0 zijn.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate is leeg of bevat een ongeldig control-ID-pad.
+basevalidator_validatable_required			= {0}.ControlToValidate moet verwijzen naar een control die de interface IValidatable implementeert.
+basevalidator_forcontrol_unsupported		= {0}.ForControl wordt niet ondersteund.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare bevat een ongeldig control-ID-pad.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate moet verwijzen naar een TFileUpload-control.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate bevat een ongeldig TListControl-ID-pad, "{1}" is een {2}.
+
+repeater_template_required					= TRepeater.{0} vereist een sjablooninstantie die de interface ITemplate implementeert.
+repeater_itemtype_unknown					= Onbekend repeater-itemtype {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection accepteert alleen objecten die een instantie van TControl of een afgeleide klasse zijn.
+
+datalist_template_required					= TDataList.{0} vereist een sjablooninstantie die de interface ITemplate implementeert.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection accepteert alleen TDataListItem-objecten.
+
+datagrid_template_required					= TDataGrid.{0} vereist een sjablooninstantie die de interface ITemplate implementeert.
+templatecolumn_template_required			= TTemplateColumn.{0} vereist een sjablooninstantie die de interface ITemplate implementeert.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex mag niet kleiner dan 0 zijn.
+datagrid_pagesize_invalid					= TDataGrid.PageSize moet groter dan 0 zijn.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount mag niet kleiner dan 0 zijn.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection accepteert alleen TDataGridItem-objecten.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection accepteert alleen TDataGridColumn-objecten.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount moet groter dan 0 zijn.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor probeert een veldwaarde van ongeldige data te evalueren. Zorg dat de data een array, TMap, TList of object is dat het opgegeven veld '{0}' bevat.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor probeert de datawaarde van een onbekend veld '{0}' te evalueren: {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection accepteert alleen TTableRow-objecten.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection accepteert alleen TTableColumn-objecten.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection accepteert alleen TTableColumnGroup-objecten.
+tablecolumn_span_invalid					= De Span van TTableColumn moet 1 of groter zijn; {0} opgegeven.
+
+tablecellcollection_tablerow_required		= TTableCellCollection accepteert alleen TTableCell-objecten.
+
+multiview_view_required						= TMultiView accepteert alleen TView als kind.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex heeft een ongeldige index '{0}'.
+multiview_view_inexistent					= TMultiView kan de opgegeven view niet vinden.
+multiview_viewid_invalid					= TMultiView kan de view '{0}' om naar over te schakelen niet vinden.
+
+viewcollection_view_required				= TViewCollection accepteert alleen TView als element.
+
+view_visible_readonly						= TView.Visible is alleen-lezen. Gebruik TView.Active om de zichtbaarheid te schakelen.
+
+wizard_step_invalid							= De te activeren stap is niet gevonden in de stappenverzameling van de wizard.
+wizard_command_invalid						= Ongeldige wizard-navigatieopdracht '{0}'.
+
+table_tablesection_outoforder				= De tabelsecties van TTable moeten in deze volgorde staan: Header, Body en Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType is alleen-lezen.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection accepteert alleen objecten van TWizardStep of afgeleide klassen daarvan.
+
+texthighlighter_stylesheet_invalid			= Het stylesheet-bestand voor TTextHighlighter is niet gevonden.
+
+hotspotcollection_hotspot_required			= THotSpotCollection accepteert alleen instanties van THotSpot of afgeleide klassen daarvan.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode is alleen-lezen.
+htmlarea_tarfile_invalid					= THtmlArea kan het tar-bestand van TinyMCE niet vinden.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile kan niet worden gewijzigd omdat de module al is geïnitialiseerd.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' is ongeldig. Zorg dat het in namespace-notatie staat en dat de bestandsextensie '.xml' of '.php' is.
+parametermodule_parameterid_required		= Een parameterelement moet een 'id'-attribuut hebben.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' is ongeldig. Alleen alfanumerieke tekens en underscores zijn toegestaan. Het eerste teken moet een letter of underscore zijn.
+datagridcolumn_expression_invalid			= {0} evalueert een ongeldige expressie '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID is ingesteld op een ongeldig cachemodule-ID {0}. De module bestaat niet of implementeert de interface ICache niet.
+outputcache_duration_invalid				= {0}.Duration moet een geheel getal zijn dat niet kleiner dan 0 is.
+
+stack_data_not_iterable						= TStack kan alleen data ophalen uit een array of een traversable object.
+stack_empty									= TStack is leeg.
+
+queue_data_not_iterable						= TQueue kan alleen data ophalen uit een array of een traversable object.
+queue_empty									= TQueue is leeg.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount moet een geheel getal zijn dat niet kleiner dan 1 is.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex valt buiten het bereik.
+pager_pagecount_invalid						= TPager.PageCount mag niet kleiner dan 0 zijn.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} moet een geldig ID-pad zijn dat verwijst naar een van TDataBoundControl afgeleide control.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize moet een geheel getal zijn dat niet kleiner dan 1 is.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount moet een geheel getal zijn dat niet kleiner dan 0 is.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex valt buiten het bereik.
+databoundcontrol_datasource_invalid			= {0}.DataSource is niet geldig.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' verwijst niet naar een bestaande control.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' moet verwijzen naar een control die IDataSource implementeert.
+databoundcontrol_datamember_invalid			= DataMember '{0}' benoemt geen view van de databron.
+
+datasourcecontrol_focus_unsupported			= {0} ondersteunt Focus niet.
+datasourcecontrol_enabletheming_unsupported	= {0} ondersteunt EnableTheming niet.
+datasourcecontrol_skinid_unsupported		= {0} ondersteunt SkinID niet.
+datasourcecontrol_visible_unsupported		= {0} ondersteunt Visible niet.
+datasourceview_insert_unsupported			= {0} ondersteunt invoegen niet.
+datasourceview_update_unsupported			= {0} ondersteunt bijwerken niet.
+datasourceview_delete_unsupported			= {0} ondersteunt verwijderen niet.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource vereist een array, een IDataSource of een Traversable databron.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView vereist null, een array of een Traversable databron.
+
+clientscript_invalid_file_position			= Ongeldige bestandspositie '{1}' voor TClientScript-control '{0}', moet 'Head', 'Here' of 'Begin' zijn.
+clientscript_invalid_package_path			= Ongeldig PackagePath '{0}' voor TClientScript-control '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' ondersteunt AutoPostBack niet.
+globalization_cache_path_failed				= Het cachepad voor vertaalberichten '{0}' kan niet worden aangemaakt. Zorg dat de bovenliggende directory bestaat en schrijfbaar is voor het webproces.
+globalization_source_path_failed			= Het pad voor vertaalberichten '{0}' kan niet worden aangemaakt. Zorg dat de bovenliggende directory bestaat en schrijfbaar is voor het webproces.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' verwijst niet naar een geldige TDataSourceConfig-module.
+messagesource_connectionid_required			= ConnectionID in MessageSource_Database.source is vereist.
+
+callback_not_support_no_priority_state_update	= Een callback-verzoek ondersteunt geen paginastatus-update zonder prioriteit.
+callback_invalid_callback_options			= '{1}' is geen geldige TCallbackOptions-control voor callback-control '{0}'.
+callback_invalid_clientside_options			= De eigenschap ClientSide van een callback moet ofwel een string zijn met het ID van een TCallbackOptions-control, ofwel een instantie van TCallbackClientSideOptions.
+callback_invalid_handler					= Ongeldige callback-handler, control {0} moet ICallbackEventHandler implementeren.
+callback_invalid_target						= Ongeldig callback-doel, er is geen control met ID {0}.
+
+callback_interval_be_positive				= Het interval van TCallbackTimer "{0}" moet strikt groter dan nul seconden zijn.
+callback_decay_be_not_negative				= De vervalsnelheid van TCallbackTimer "{0}" mag niet negatief zijn.
+
+callback_no_autopostback					= Control "{0}" kan AutoPostBack niet inschakelen.
+
+xmltransform_xslextension_required			= TXmlTransform vereist de XSL-extensie van PHP.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' is ongeldig.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' is ongeldig.
+xmltransform_transform_required				= Voor TXmlTransform moet de eigenschap TransformContent of TransformPath zijn ingesteld.
+
+ttriggeredcallback_invalid_controlid		= De eigenschap ControlID van '{0}' mag niet leeg zijn.
+tactivecustomvalidator_clientfunction_unsupported	= {0} ondersteunt geen validatorfunctie aan de clientzijde.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' identificeert geen geldige TDataSourceConfig-module.
+dbproperties_property_required				= {1}.{0} is een verplichte eigenschap.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' is geen geldige SQL-identifier.
+
+dbconnection_open_failed					= TDbConnection kan geen databaseverbinding tot stand brengen: {0}
+dbconnection_connection_inactive			= TDbConnection is inactief.
+dbconnection_unsupported_driver_charset		= Databasedriver '{0}' ondersteunt het instellen van de tekenset niet.
+dbconnection_charset_unchangeable			= Databasedriver '{0}' kan de tekenset niet wijzigen nadat de verbinding is geopend. De tekenset is een DSN-parameter.
+
+dbcommand_prepare_failed					= TDbCommand kan het SQL-statement "{1}" niet voorbereiden: {0}
+dbcommand_execute_failed					= TDbCommand kan het SQL-statement "{1}" niet uitvoeren: {0}
+dbcommand_query_failed						= TDbCommand kan de SQL-query "{1}" niet uitvoeren: {0}
+dbcommand_column_empty						= TDbCommand heeft een leeg resultaat teruggegeven en kan de scalaire waarde niet ophalen.
+dbdatareader_rewind_invalid					= TDbDataReader is een stream die alleen vooruit leest. Deze kan slechts eenmaal worden doorlopen.
+dbtransaction_transaction_inactive			= TDbTransaction is inactief.
+
+dbcommandbuilder_value_must_not_be_null		= Eigenschap {0} mag niet null zijn, zoals gedefinieerd door kolom '{2}' in tabel '{1}'.
+
+dbcommon_invalid_table_name					= Databasetabel '{0}' is niet gevonden. Foutmelding: {1}.
+dbcommon_invalid_identifier_name			= Ongeldige database-identifier '{0}', zie {1} voor details.
+dbtableinfo_invalid_column_name				= Ongeldige kolomnaam '{0}' voor databasetabel '{1}'.
+dbmetadata_invalid_table_view				= Ongeldige tabel-/viewnaam '{0}', of de tabel/view '{0}' bevat geen toegankelijke kolom-/velddefinities.
+dbmetadata_requires_php_version				= PHP-versie {1} of hoger is vereist om de database {0} te gebruiken.
+
+dbtablegateway_invalid_criteria				= Ongeldig criteria-object, moet een string of een instantie van TSqlCriteria zijn.
+dbtablegateway_no_primary_key_found			= Tabel '{0}' bevat geen primaire-sleutelvelden.
+dbtablegateway_missing_pk_values			= Primaire-sleutelwaarden ontbreken bij het vormen van IN(key1, key2, ...) voor tabel '{0}'.
+dbtablegateway_pk_value_count_mismatch		= Het aantal waarden van de samengestelde sleutel komt niet overeen bij het vormen van IN( (key1, key2, ..), (key3, key4, ..)) voor tabel '{0}'.
+dbtablegateway_mismatch_args_exception		= De finder-methode '{0}' van TTableGateway verwacht {1} parameters, maar er zijn slechts {2} parameters gevonden.
+dbtablegateway_mismatch_column_name			= In de dynamische __call()-methode '{0}' zijn geen overeenkomende kolommen gevonden; geldige kolommen voor tabel '{2}' zijn '{1}'.
+dbtablegateway_invalid_table_info			= De tabel moet een string of een instantie van TDbTableInfo zijn.
+
+resource_not_a_resource						= Een open PHP-resource werd verwacht, maar '{0}' is ontvangen.
+processfork_failed							= Het proces kan niet worden geforkt.
+liveprocessfork_readonly_receiver			= De data van TLiveProcessFork is alleen-lezen aan de ontvangende kant; alleen de verzendende kant wijzigt deze.
+stream_open_failed							= De stream '{0}' kan niet worden geopend met modus '{1}': {2}
+binarystream_unexpected_eof					= Onverwacht einde van de stream: {0} bytes waren nodig, maar slechts {1} zijn gelezen.
+binarystream_short_write					= Onvolledige schrijfactie: {0} bytes moesten worden geschreven, maar slechts {1} zijn geaccepteerd.
+streamresourcewrapper_unusable_stream		= De stream is niet leesbaar en niet schrijfbaar en kan niet als resource worden aangeboden.
+streamfilter_already_registered				= Streamfilter '{0}' is al geregistreerd.
+streamfilter_registration_failed			= Streamfilter '{0}' kan niet worden geregistreerd voor klasse '{1}'.
+streamwrapper_already_registered			= Streamwrapper-protocol '{0}' is al geregistreerd.
+streamwrapper_registration_failed			= Streamwrapper-protocol '{0}' kan niet worden geregistreerd voor klasse '{1}'.
+reservedspace_invalid						= Een gereserveerde ruimte vereist een niet-negatieve offset en een positieve lengte; offset '{0}' en lengte '{1}' zijn opgegeven.
+reservedspace_access_denied					= De bewerking overlapt de gereserveerde ruimte op offset '{0}'.
+multipartstream_element_invalid				= Een TMultipartStream-element vereist een 'name' en 'contents'.
+builtincompressor_extension_required		= De compressor '{0}' vereist de PHP-extensie '{1}'.
+builtincompressor_compress_failed			= De compressor '{0}' kan de data niet comprimeren.
+builtincompressor_decompress_failed			= De compressor '{0}' kan de data niet decomprimeren; deze is mogelijk beschadigd of heeft een andere indeling.
+compression_method_unknown					= De compressiemethode '{0}' is onbekend of de bijbehorende extensie is niet beschikbaar.
+compression_none_available					= Er is geen compressiemethode beschikbaar in deze PHP-installatie.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' is geen bekende content coding. De bekende codings zijn: {1}.
+compression_xz_unsupported					= Voor xz/LZMA bestaat geen PHP-extensie; installeer belisoful/prado-compression voor een native of CLI-gebaseerde xz-codec.
+clicompressor_command_missing				= De compressor '{0}' vereist een van deze systeemopdrachten in het PATH: '{1}'.
+clicompressor_process_failed				= De compressor '{0}' kan de opdracht '{1}' niet starten.
+clicompressor_command_failed				= De opdracht '{1}' van compressor '{0}' is beëindigd met code {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule vereist een Endpoint, of een positieve Port om er een samen te stellen.
+socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' is ongeldig. Het moet TSocketServer of een subklasse zijn.
+socketservermodule_scheme_not_stream		= TSocketServerModule kan geen verbindingen accepteren op het verbindingsloze schema '{0}'. Gebruik een streamschema zoals tcp, tls, ssl of unix.
+
+bitreader_invalid_bits						= Kan {0} bits niet lezen; het aantal moet tussen 0 en de integerbreedte van het platform liggen.
+bitreader_64bit_php_required				= Het lezen van {0} bits vereist een 64-bits PHP-build.
+bitreader_invalid_float_bits				= Kan geen {0}-bits float lezen; alleen 8, 16, 32 of 64 bits worden ondersteund.
+bitwriter_invalid_bits						= Kan {0} bits niet schrijven; het aantal moet tussen 0 en de integerbreedte van het platform liggen.
+bitwriter_64bit_php_required				= Het schrijven van {0} bits vereist een 64-bits PHP-build.
+bitwriter_invalid_float_bits				= Kan geen {0}-bits float schrijven; alleen 8, 16, 32 of 64 bits worden ondersteund.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' bestaat niet. Let op: het moet in namespace-notatie worden opgegeven en de bestandsextensie moet '.xml' of '.php' zijn.
+soapservice_server_invalid					= De SOAP-serverklasse '{0}' van TSoapService is ongeldig. Het moet TSoapServer of een subklasse zijn.
+soapservice_serverid_required				= Het element <soap> moet een 'id'-attribuut hebben.
+soapservice_serverid_duplicated				= SOAP-server-ID '{0}' komt dubbel voor.
+soapserver_id_invalid						= Ongeldig SOAP-server-ID '{0}'. Het mag niet eindigen op '.wsdl'.
+soapserver_provider_invalid					= De providerklasse '{0}' van TSoapServer kan niet worden gevonden.
+soapserver_version_invalid					= Ongeldige SOAP-versie '{0}'. Het moet '1.1' of '1.2' zijn.
+soapserver_wsdlstyle_invalid				= Ongeldige WSDL-stijl '{0}'. Het moet 'rpc' of 'document' zijn.
+soapserver_wsdlstyle_unsupported			= WSDL-stijl '{0}' vereist pradosoft/prado-wsdlgenerator 1.2 of hoger. De geïnstalleerde generator produceert alleen 'rpc'.
+
+jsonservice_id_required						= TJsonService vereist een 'id'-attribuut in zijn JSON-elementen.
+jsonservice_response_type_invalid			= JSON-klasse {0} is ongeldig. Het moet TJsonResponse zijn of TJsonResponse uitbreiden.
+jsonservice_class_required					= TJsonService vereist een 'class'-attribuut in zijn JSON-elementen.
+
+dbusermanager_userclass_required			= TDbUserManager.UserClass is vereist.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' is geen geldige gebruikersklasse. De klasse moet TDbUser uitbreiden.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' verwijst niet naar een geldige TDataSourceConfig-module.
+dbusermanager_connectionid_required			= TDbUserManager.ConnectionID is vereist.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' verwijst niet naar een geldige TDataSourceConfig-module.
+dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID is vereist.
+
+feedservice_id_required						= TFeedService vereist een 'id'-attribuut in zijn feed-elementen.
+feedservice_feedtype_invalid				= De feedklasse '{0}' moet de interface IFeedContentProvider implementeren.
+feedservice_class_required					= TFeedService vereist een 'class'-attribuut in zijn feed-elementen.
+
+tabviewcollection_tabview_required			= TTabPanel accepteert alleen TTabView als kind.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID heeft een ongeldig ID '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex heeft een ongeldige index '{0}'.
+tabpanel_view_inexistent					= TTabPanel kan de opgegeven view niet vinden.
+
+cachesession_cachemoduleid_required			= TCacheHttpSession.CacheModuleID is vereist.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' verwijst naar een niet-bestaande module.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' verwijst naar een module die de interface ICache niet implementeert.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping kan alleen TUrlMappingPattern of afgeleide klassen daarvan bevatten.
+urlmapping_global_required					= TUrlMapping moet als globale module worden geconfigureerd.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' is geen bestand.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' moet verwijzen naar een XML-bestand in namespace-notatie.
+
+urlmappingpattern_serviceparameter_required	= TUrlMappingPattern.ServiceParameter is vereist voor patroon '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl mag niet leeg zijn.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' is ongeldig.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme moet een geheel getal tussen {0} en {1} zijn.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize moet een geheel getal tussen {0} en {1} zijn.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength moet een geheel getal tussen {0} en {1} zijn.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength moet een geheel getal tussen {0} en {1} zijn.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet moet een string van minimaal 2 tekens zijn.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey is onbekend. Zorg dat uw assets-directory schrijfbaar is voor het webserverproces.
+captcha_gd2_required						= TCaptcha vereist de PHP-extensie GD2.
+captcha_imagettftext_required				= TCaptcha vereist de PHP-extensie GD2 met ondersteuning voor TrueType-lettertypen.
+captcha_imagepng_required					= TCaptcha vereist de PHP-extensie GD2 met ondersteuning voor de PNG-afbeeldingsindeling.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl moet verwijzen naar een bestaande TCaptcha-control.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} moet verwijzen naar een bestaande TCaptcha-control.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} moet verwijzen naar een bestaande TCaptcha-control.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey is onbekend. Om reCAPTCHA te gebruiken moet u een API-sleutel aanvragen.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey is onbekend. Om reCAPTCHA te gebruiken moet u een API-sleutel aanvragen.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate moet een instantie van TReCaptcha zijn.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' mag alleen letters, cijfers, '_' en '-' bevatten.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity moet een geheel getal tussen {0} en {1} zijn.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' moet verwijzen naar een TProofOfWork-control.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' is geen geldige gebruikersklasse. De klasse moet TSliderHandle uitbreiden.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' verwijst niet naar een geldige cachemodule.
+cachepagestatepersister_cache_required		= TCachePageStatePersister vereist dat een cachemodule is geladen.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' verwijst niet naar een geldige cachemodule.
+cachemoduleid_cache_required				= {0} vereist een cachemodule. Configureer een primaire cache of stel {0}.CacheModuleID in.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout moet een geheel getal zijn dat niet kleiner dan nul is.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' is geen geldige PHP-expressie: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule kan de databasetabel '{0}' voor het opslaan van parameterdata niet vinden.
+dbparametermodule_get_no_blank_key			= TDbParameterModule kan geen lege sleutel ophalen.
+dbparametermodule_set_no_blank_key			= TDbParameterModule kan geen waarde instellen voor een lege sleutel.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' verwijst niet naar een geldige TDataSourceConfig-module.
+dbparametermodule_serializer_not_callable	= De Serializer van TDbParameterModule is geen callable.
+
+clockawaretrait_invalid_clock_class			= Klokklasse '{0}' moet Prado\Util\Clock\IClock implementeren.
+utcclock_timezone_fixed						= TUTCClock is vast ingesteld op UTC; gebruik TTimezoneClock voor een andere tijdzone.
+
+processcrontask_no_command					= TProcessCronTask '{0}' heeft geen Command om uit te voeren.
+processcrontask_launch_failed				= TProcessCronTask kan het proces niet starten: '{0}'.
+processcrontask_write_failed				= TProcessCronTask kan het pid-bestand '{0}' niet schrijven.
+closurecrontask_no_closure					= TClosureCronTask '{0}' heeft geen closure om uit te voeren.
+closurecrontask_closure_required			= TClosureCronTask vereist een Closure.
+closurecrontask_invalid_securitymanager		= TClosureCronTask SecurityManagerID '{0}' is geen TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' kan zijn closure-payload niet ontsleutelen.
+cronmethodtask_no_module					= TCronMethodTask kan module '{0}' niet vinden.
+cron_usermanager_nonexistent				= TCronModule kan de UserManager met de naam '{0}' niet vinden.
+cron_usermanager_invalid					= De UserManager '{0}' van TCronModule is geen TUserManager.
+cron_task_as_array_required					= De taak in de configuratie van TCronModule is geen array.
+cron_duplicate_task_name					= De taken van TCronModule moeten unieke namen hebben.
+cron_schedule_required						= Een crontaak moet een schema hebben.
+cron_task_required							= Een crontaak moet een taak hebben.
+cron_not_a_crontask							= Crontaak '{0}' is geen TCronTask.
+cron_additional_tasks_invalid				= '{0}' is geen geldige aanvullende crontaak.
+crontask_no_module							= TCronTask kan module '{0}' niet vinden.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask kan de opgegeven module '{0}' niet vinden.
+dbcron_invalid_name							= TDbCronManager: de taaknaam '{0}' is ongeldig.
+dbcron_conflicting_task_names				= Crontaken uit de configuratie conflicteren met de DB-crontaken '{0}'.
+dbcron_table_nonexistent					= De databasetabel van TDbCronManager bestaat niet.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' is geen TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler kan het schema-element '{0}' niet parseren
+
+rational_bad_offset							= "{0}" is geen geldige eigenschapsaccessor van TRational.
+
+bithelper_bad_fp_format						= TBitHelper kan niet werken met '{0}' exponentbits, '{1}' mantissebits en '{2}' exponentbias in een {3}-bits PHP-omgeving.
+bithelper_invalid_color_in					= TBitHelper moet minimaal één In Bit hebben. '{0}' is opgegeven.
+bithelper_invalid_color_out					= TBitHelper moet minimaal één Out Bit hebben. '{0}' is opgegeven.
+bithelper_bad_mirror_bits					= TBitHelper kan '{0}' bits niet spiegelen in een {1}-bits PHP-omgeving.
+
+ar_data_invalid								= {0}.copyFrom() accepteert alleen een object of array als parameter.
+ar_save_invalid								= De {0}-instantie kan niet worden opgeslagen omdat deze is verwijderd of zich in een onbekende staat bevindt.
+ar_delete_invalid							= De {0}-instantie kan niet worden verwijderd omdat deze een nieuw record is of een record dat al is verwijderd.
+
+dbmetadata_invalid_database_driver			= Driver '{0}' wordt niet ondersteund. Installeer de bijbehorende PRADO-driver, indien beschikbaar.
+dbmetadata_not_meta_data					= Driverklasse {1} werd verwacht, maar klasse {0} is ontvangen.
+dbmetadata_tableinfo_class_invalid			= De tabelinfoklasse '{0}' van TDbMetaData is een directory-namespace, geen klasse.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' is ongeldig. Zorg dat het naar een geldige applicatiemodule verwijst.
+distributeddatasource_child_required		= {0} vereist minimaal één '{1}'-kindelement.
+masterslavedbconnection_connection_exists	= De verbinding {0}.{1} bestaat al.
+masterslavedbconnection_interface_required	= {0}.{1} vereist een instantie die de interface {2} implementeert.
+slavedbconnection_requires_master			= {0} vereist een {1}.
+
+response_status_reason_missing				= HTTP 1.1 vereist een reden voor uitgebreide statuscodes
+response_status_reason_badchars				= In een HTTP 1.1-header mag het token status-reason geen CR- of LF-token bevatten
+
+activefileupload_temppath_invalid			= Het TempPath-pad '{0}' van TActiveFileUpload bestaat niet of is niet schrijfbaar voor het webserverproces.
+
+tactivetablecell_control_outoftable			= {0} '{1}' moet binnen een TTableRow-control staan.
+tactivetablecell_control_notincollection	= {0} '{1}' is geen lid van de TTableCellCollection van de bovenliggende TTableRow-control.
+
+tactivetablerow_control_outoftable			= {0} '{1}' moet binnen een TTable-control staan.
+tactivetablerow_control_notincollection		= {0} '{1}' is geen lid van de TTableRowCollection van de bovenliggende TTable-control.
+
+juioptions_option_invalid					= '{1}' is geen geldige optie voor control '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' is geen geldige caption-control voor TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID heeft een ongeldig ID '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex heeft een ongeldige index '{0}'.
+accordion_view_inexistent					= TAccordion kan de opgegeven view niet vinden.
+
+dot_bad_size								= De Size van TDot moet een positief geheel getal zijn, maar is '{0}'
+dot_bad_border_width						= De FlatBorderWidth van TDot moet een getal zijn met optioneel een % of een CSS-lengte-eenheid, maar is '{0}'
+
+juidatepicker_settextmode_unsupported		= De TextMode van TJuiDatePicker kan niet worden gewijzigd.
+
+control_adapter_not_active					= Een eigenschap van BaseActiveControl is aangeroepen op een niet-actieve control.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' moet een direct kind van een TFigure-control zijn.
+summary_requires_details_parent				= TSummary '{0}' moet een direct kind van een TDetails-control zijn.
+
+gravatar_bad_default						= De waarde '{0}' van de eigenschap DefaultImageStyle van TGravatar wordt niet ondersteund
+gravatar_bad_size							= De Size van TGravatar ligt niet tussen [1 .. 512], maar is '{0}'
+
+progress_value_invalid						= De Value van TProgress moet 0 of groter zijn; {0} opgegeven.
+progress_max_invalid						= De Max van TProgress moet groter dan 0 zijn; {0} opgegeven.
+
+time_invalid_datetime						= De DateTime van TTime moet een DateTimeInterface, DateInterval, string of numerieke waarde zijn; {0} opgegeven.
+time_invalid_text_format					= De TextFormat '{0}' van TTime is geen constantenaam van TTimeFormat en geen ICU-datum-tijdpatroon.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' kan '{1}' niet bevatten: active, postback- en validator-controls werken niet binnen inerte sjablooninhoud. Gebruik gewone markup met {{...}}-placeholders of stel ValidateContent="false" in.
+
+vardumper_not_array							= __debuginfo() moet een array teruggeven.
+
+htmlpurifier_source_path_failed				= Het cachepad voor html purifier '{0}' kan niet worden aangemaakt. Zorg dat de bovenliggende directory bestaat en schrijfbaar is voor het webproces.

@@ -1,0 +1,826 @@
+# PRADO developer exception messages: Catalan (ca).
+# Translation of framework/Exceptions/messages/messages.txt of pradosoft/prado.
+# Messages thrown as THttpException are translated by the framework itself and are not in this file.
+# Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
+
+prado_application_singleton_required		= Prado.Application només es pot establir una vegada.
+prado_component_unknown						= Tipus de component desconegut '{0}'. Això pot ser causat per l'error d'anàlisi següent al fitxer de la classe {0}: {1}
+prado_using_invalid							= '{0}' no és un espai de noms vàlid per utilitzar. Assegureu-vos d'afegir '.*' al final si voleu utilitzar un espai de noms que faci referència a un directori.
+prado_alias_redefined						= L'àlies '{0}' no es pot redefinir.
+prado_alias_invalid							= L'àlies '{0}' fa referència a un camí no vàlid '{1}'. Només es poden definir àlies per a directoris existents.
+prado_aliasname_invalid						= L'àlies '{0}' conté el caràcter no vàlid '.'.
+
+component_property_undefined				= La propietat del component '{0}.{1}' no està definida.
+component_property_readonly					= La propietat del component '{0}.{1}' és només de lectura.
+component_event_undefined					= L'esdeveniment del component '{0}.{1}' no està definit.
+component_method_undefined					= El mètode del component '{0}.{1}' no està definit.
+component_eventhandler_invalid				= L'esdeveniment del component '{0}.{1}' té associat un gestor d'esdeveniments no vàlid '{2}'.
+component_expression_invalid				= El component '{0}' està avaluant una expressió no vàlida '{1}' : {2}.
+component_statements_invalid				= El component '{0}' està avaluant sentències PHP no vàlides '{1}' : {2}.
+component_class_behavior_defined			= El component '{0}' ja té un comportament de classe '{1}'.
+component_not_a_behavior					= El component '{0}' que s'està afegint com a comportament no és un TBaseBehavior.
+object_not_a_component						= L'objecte '{0}' que s'està afegint com a comportament no és un TComponent.
+component_no_tcomponent_class_behaviors		= TComponent no pot tenir comportaments de classe associats a causa de la recursió.
+component_tbehavior_cannot_attach_as_class_behavior	= Els IBehaviors no es poden associar a diversos propietaris. Passeu una cadena o una matriu amb la classe IBehavior i les propietats per instanciar-lo a cada propietari.
+
+propertyvalue_enumvalue_invalid				= El valor '{0}' no és un valor d'enumeració vàlid ({1}).
+propertyvalue_invalid_hex_color				= El valor '{0}' no és un valor de color hexadecimal vàlid. P. ex. "#112233"
+propertyvalue_invalid_array_literal			= El valor '{0}' no és un literal de matriu vàlid.
+propertyvalue_array_too_deep				= El literal de matriu té més de {0} nivells d'imbricació.
+
+eventhandler_lost_weak_ref					= TEventHandler no pot invocar el gestor d'esdeveniments perquè s'ha perdut la WeakReference de l'objecte invocable.
+eventhandler_no_set_handler					= TEventHandler no pot establir el gestor d'esdeveniments, índex "{0}".
+eventhandler_bad_offset						= TEventHandler no té el desplaçament "{0}".
+
+eventparam_readonly							= {0} és només de lectura.
+eventparam_readonly_set						= {0} no pot canviar ReadOnly un cop s'ha establert.
+eventparam_readonly_not_self				= {0} ReadOnly només es pot establir internament.
+
+list_index_invalid							= L'índex '{0}' està fora de l'interval.
+list_item_inexistent						= L'element no s'ha trobat a la llista.
+list_data_not_iterable						= Les dades han de ser una matriu o un objecte que implementi la interfície Traversable.
+list_readonly								= {0} és només de lectura.
+list_readonly_set							= {0} no pot canviar Read-Only un cop ja s'ha establert.
+prioritylist_index_invalid					= L'índex '{0}' de '{1}' amb prioritat '{2}' està fora de l'interval.
+prioritytrait_no_set_default_priority		= La prioritat per defecte només es pot establir una vegada o pel mateix objecte.
+prioritytrait_no_set_precision				= La precisió només es pot establir una vegada o pel mateix objecte.
+weak_no_set_discard_invalid					= '{0}'.DiscardInvalid només es pot establir una vegada o pel mateix objecte.
+
+map_addition_disallowed						= L'element nou no es pot afegir al mapa.
+map_item_unremovable						= L'element no es pot eliminar del mapa.
+map_data_not_iterable						= Les dades han de ser una matriu o un objecte que implementi la interfície Traversable.
+map_readonly								= {0} és només de lectura.
+map_readonly_set							= {0} no pot canviar Read-Only un cop ja s'ha establert.
+
+tnull_clone_disallowed						= El singleton TNull no es pot clonar. Utilitzeu TNull::null() en lloc seu.
+
+weakcallablecollection_callable_required	= TWeakCallableCollection només accepta invocables.
+
+arraysubscription_no_change					= TArraySubscription.{0} no es pot canviar després de subscriure's.
+arraysubscription_no_null_key				= TArraySubscription no es pot subscriure a una clau nul·la d'un objecte ArrayAccess.
+arraysubscription_index_invalid				= TArraySubscription està en mode llista (isAssociative = false) però la clau '{0}' no és vàlida (recompte: {1}).
+eventsubscription_no_setcollection			= TEventSubscription.Array no es pot establir directament.
+eventsubscription_no_change					= TEventSubscription.{0} no es pot canviar després de subscriure's.
+
+application_includefile_invalid				= No s'ha pogut trobar la configuració de l'aplicació {0}. Assegureu-vos que està en format d'espai de noms i que el fitxer acaba en ".xml" o ".php".
+application_basepath_invalid				= El camí base de l'aplicació '{0}' no existeix o no és un directori.
+application_runtimepath_invalid				= El camí d'execució de l'aplicació '{0}' no existeix o no té permís d'escriptura per al procés del servidor web.
+application_service_class_not_found			= La classe de servei '{0}' no existeix.
+application_service_class_not_service		= La classe de servei '{0}' no implementa IService.
+application_service_class_required			= registerService requereix un nom de classe o una matriu serviceConfig per al servei '{0}'.
+application_service_default_unregister		= El servei de pàgines per defecte '{0}' no es pot donar de baixa.
+service_csrf_token_invalid					= El servei '{0}' requereix un testimoni CSRF vàlid.
+application_moduleid_duplicated				= L'ID de mòdul de l'aplicació '{0}' no és únic.
+application_runtimepath_failed				= No s'ha pogut crear el camí d'execució '{0}'. Assegureu-vos que el directori pare existeix i que el procés web hi té permís d'escriptura.
+application_module_required_dep_missing		= El mòdul '{0}' té una dependència obligatòria del mòdul '{1}', que no està registrat a l'aplicació.
+application_module_dependency_cycle			= S'ha detectat un cicle de dependències entre els mòduls següents: {0}.
+application_module_dependency_self_reference	= El mòdul '{0}' es declara a si mateix com a dependència, cosa que no és vàlida mai.
+
+appconfig_aliaspath_invalid					= La configuració de l'aplicació <alias id="{0}"> utilitza un camí de fitxer no vàlid "{1}".
+appconfig_alias_invalid						= L'element <alias> de la configuració de l'aplicació ha de tenir un atribut "id" i un atribut "path".
+appconfig_alias_redefined					= La configuració de l'aplicació <alias id="{0}"> no es pot redefinir.
+appconfig_using_invalid						= L'element <using> de la configuració de l'aplicació ha de tenir un atribut "namespace".
+appconfig_moduleid_required					= L'element <module> de la configuració de l'aplicació ha de tenir un atribut "id".
+appconfig_moduletype_required				= La configuració de l'aplicació <module id="{0}"> ha de tenir un atribut "class".
+appconfig_moduletype_inapplicable			= La configuració de l'aplicació <module id="{0}"> no pot tenir l'atribut "class".
+appconfig_serviceid_required				= L'element <service> de la configuració de l'aplicació ha de tenir un atribut "id".
+appconfig_servicetype_required				= La configuració de l'aplicació <service id="{0}"> ha de tenir un atribut "class".
+appconfig_parameterid_required				= L'element <parameter> de la configuració de l'aplicació ha de tenir un atribut "id".
+appconfig_includefile_required				= L'element <include> de la configuració de l'aplicació ha de tenir un atribut "file".
+appconfig_paths_invalid						= L'element <paths> de la configuració de l'aplicació no pot contenir l'element <{0}>.
+appconfig_modules_invalid					= L'element <modules> de la configuració de l'aplicació no pot contenir l'element <{0}>.
+appconfig_services_invalid					= L'element <services> de la configuració de l'aplicació no pot contenir l'element <{0}>.
+appconfig_parameters_invalid				= L'element <parameters> de la configuració de l'aplicació no pot contenir l'element <{0}>.
+appconfig_tag_invalid						= La configuració de l'aplicació no pot contenir l'element <{0}>.
+
+securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey no pot estar buit.
+securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey no pot estar buit.
+securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey no pot estar buit.
+securitymanager_mcryptextension_required	= Cal l'extensió PHP Mcrypt per utilitzar la funció de xifratge de TSecurityManager.
+securitymanager_mcryptextension_initfailed	= TSecurityManager no ha pogut inicialitzar el mòdul mcrypt.
+
+uri_format_invalid							= '{0}' no és un URI vàlid.
+
+httprequest_browscap_required				= THttpRequest requereix que la directiva browscap estigui configurada al php.ini.
+httprequest_separator_invalid				= THttpRequest.UrlParamSeparator només pot contenir un sol caràcter.
+httprequest_urlmanager_inexist				= THttpRequest.UrlManager '{0}' no apunta a un mòdul existent.
+httprequest_urlmanager_invalid				= THttpRequest.UrlManager '{0}' ha d'apuntar a un mòdul que estengui TUrlManager.
+httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie és false, cosa que requereix un mòdul de sessió.
+
+httpcookiecollection_httpcookie_required	= THttpCookieCollection només accepta objectes THttpCookie.
+
+httpresponse_file_inexistent				= THttpResponse no pot enviar el fitxer '{0}'. El fitxer no existeix.
+httpresponse_responsedata_method_unavailable	= THttpResponse: el mètode '{0}' no es pot utilitzar sense un adaptador adequat que l'implementi.
+httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' no apunta a un mòdul existent.
+httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' ha d'apuntar a un mòdul que estengui THttpHeadersManager.
+
+httpheadersmanager_header_required			= THttpHeadersManager només pot contenir THttpHeader o les seves classes filles.
+httpheadersmanager_headerclass_missing		= A l'entrada <headerclass> de THttpHeadersManager li falta l'atribut obligatori 'name' o 'class'.
+
+httpsession_sessionid_unchangeable			= THttpSession.SessionID no es pot modificar després d'iniciar la sessió.
+httpsession_sessionname_unchangeable		= THttpSession.SessionName no es pot modificar després d'iniciar la sessió.
+httpsession_sessionname_invalid				= THttpSession.SessionName només pot contenir caràcters alfanumèrics.
+httpsession_savepath_unchangeable			= THttpSession.SavePath no es pot modificar després d'iniciar la sessió.
+httpsession_savepath_invalid				= THttpSession.SavePath '{0}' no és vàlid.
+httpsession_storage_unchangeable			= THttpSession.Storage no es pot modificar després d'iniciar la sessió.
+httpsession_cookiemode_unchangeable			= THttpSession.CookieMode no es pot modificar després d'iniciar la sessió.
+httpsession_autostart_unchangeable			= THttpSession.AutoStart no es pot modificar després d'inicialitzar el mòdul de sessió.
+httpsession_gcprobability_unchangeable		= THttpSession.GCProbability no es pot modificar després d'iniciar la sessió.
+httpsession_gcprobability_invalid			= THttpSession.GCProbability ha de ser un enter entre 0 i 100.
+httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID no es pot modificar després d'iniciar la sessió.
+httpsession_transid_cookieonly				= THttpSession.UseTransparentSessionID no es pot establir quan THttpSession.CookieMode està establert a Only.
+httpsession_maxlifetime_unchangeable		= THttpSession.Timeout no es pot modificar després d'iniciar la sessió.
+httpsession_handler_invalid					= THttpSessionHandler només accepta un objecte THttpSession com a paràmetre del constructor
+
+assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' no és vàlid. Assegureu-vos que està en format d'espai de noms i que apunta a un directori amb permís d'escriptura per al procés del servidor web.
+assetmanager_basepath_unchangeable			= TAssetManager.BasePath no es pot modificar després d'inicialitzar el mòdul.
+assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl no es pot modificar després d'inicialitzar el mòdul.
+assetmanager_filepath_invalid				= TAssetManager està publicant un fitxer no vàlid '{0}'.
+assetmanager_tarchecksum_invalid			= TAssetManager està publicant un fitxer tar amb una suma de verificació no vàlida '{0}'.
+assetmanager_tarfile_invalid				= TAssetManager està publicant un fitxer tar no vàlid '{0}'.
+assetmanager_tarfile_extract_failed			= TAssetManager no ha pogut extreure el fitxer tar '{0}'.
+assetmanager_source_directory_invalid		= TAssetManager està copiant un directori no vàlid '{0}'.
+
+cache_primary_duplicated					= Només es permet un mòdul de memòria cau primari com a màxim. {0} intenta registrar-se com a una altra memòria cau primària.
+psrcache_backing_cache_required				= Cal TPsrCache.BackingCacheId o TPsrCache.BackingCache.
+psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' no fa referència a cap mòdul de l'aplicació.
+psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' ha de fer referència a un mòdul que implementi Psr\SimpleCache\CacheInterface o Psr\Cache\CacheItemPoolInterface.
+psrcache_backing_cache_recursive			= TPsrCache.BackingCache '{0}' és un adaptador PSR d'aquest TPsrCache; llegiria i escriuria de nou a la mateixa memòria cau.
+psrcachebacking_cache_required				= {0} requereix una memòria cau de suport. Establiu {0}.BackingCacheId, {0}.BackingCache o una memòria cau primària de l'aplicació.
+psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' no fa referència a cap mòdul de l'aplicació.
+psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' ha de fer referència a un mòdul Prado\Caching\ICache.
+psrcachebacking_key_invalid					= La clau de memòria cau de {0} ha de ser una cadena no buida sense els caràcters reservats {}()/\@: però s'ha donat '{1}'.
+sqlitecache_extension_required				= TSqliteCache requereix l'extensió PHP SQLite.
+sqlitecache_dbfile_required					= Cal TSqliteCache.DbFile.
+sqlitecache_connection_failed				= Ha fallat la connexió a la base de dades de TSqliteCache. {0}.
+sqlitecache_table_creation_failed			= TSqliteCache no ha pogut crear la base de dades de la memòria cau. {0}.
+sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile no es pot modificar després d'inicialitzar el mòdul.
+sqlitecache_dbfile_invalid					= TSqliteCache.DbFile no és vàlid. Assegureu-vos que està en un format d'espai de noms correcte.
+
+dbcache_unavailable							= TDbCache requereix l'extensió PHP PDO.
+
+etcdcache_transport_required				= TEtcdCache requereix l'extensió PHP cURL o allow_url_fopen.
+
+memcache_extension_required					= TMemCache requereix l'extensió PHP memcache.
+memcache_connection_failed					= TMemCache no ha pogut connectar-se al servidor memcache {0}:{1}.
+memcache_not_initialized					= No es poden establir opcions a TMemCache abans d'inicialitzar el mòdul.
+
+apccache_extension_required					= TAPCCache requereix l'extensió PHP APC.
+apccache_extension_not_enabled				= TAPCCache necessita apc.enabled = 1 al php.ini per funcionar.
+apccache_extension_not_enabled_cli			= TAPCCache necessita apc.enable_cli = 1 al php.ini per funcionar amb PHP des de la línia d'ordres.
+
+cachesize_item_exceeds_maximum_size			= L'element de la memòria cau ocupa {0} bytes, cosa que supera el MaximumSize configurat de {1} bytes.
+
+filecache_directory_required				= Cal TFileCache.Directory.
+filecache_directory_create_failed			= TFileCache no pot crear el directori de memòria cau '{0}'.
+filecache_directory_not_writable			= El directori de memòria cau '{0}' de TFileCache no té permís d'escriptura.
+filecache_hash_token_identity				= TFileCache.hashToken ha de transformar l'entrada; la implementació de la subclasse ha retornat el testimoni sense canvis.
+filecache_hash_token_path_separator			= TFileCache.hashToken no pot retornar un valor que contingui un separador de camí ("/" o "\"); la implementació de la subclasse ha retornat un hash no segur.
+
+memorycache_backing_file_directory_not_found	= El directori de TMemoryCache.BackingFile no existeix per al camí '{0}'.
+
+serializingcache_type_invalid				= TSerializingCache.SerializationType '{0}' no és vàlid. Els valors vàlids són 'PHP' i 'JSON'.
+serializingcache_encoding_invalid			= TSerializingCache.Encoding '{0}' no és vàlid. Els valors vàlids són 'None', 'Base64' i 'Hex'.
+serializingcache_securitymanager_invalid	= TSerializingCache.SecurityManager '{0}' no és vàlid. Ha de ser un ID de mòdul TSecurityManager o una instància de TSecurityManager.
+serializingcache_json_encode_failed			= TSerializingCache no ha pogut codificar el valor en JSON: {0}.
+directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory {0} no fa referència a un directori vàlid.
+cachedependencylist_cachedependency_required	= Només es poden afegir a TCacheDependencyList objectes que implementin ICacheDependency.
+
+errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' no és vàlid. Assegureu-vos que està en format d'espai de noms i que apunta a un directori vàlid que contingui els fitxers de plantilla d'error.
+
+pageservice_basepath_invalid				= TPageService.BasePath '{0}' no és un directori vàlid.
+pageservice_defaultpage_unchangeable		= TPageService.DefaultPage no es pot modificar després d'inicialitzar el servei.
+pageservice_basepath_unchangeable			= TPageService.BasePath no es pot modificar després d'inicialitzar el servei.
+pageservice_pageclass_invalid				= La classe de pàgina {0} no és vàlida. Ha de ser TPage o estendre TPage.
+pageservice_includefile_invalid				= No s'ha pogut trobar la configuració del servei de pàgines {0}. Assegureu-vos que està en format d'espai de noms i que el fitxer acaba en ".xml" o ".php".
+
+pageserviceconf_file_invalid				= No s'ha pogut obrir el fitxer de configuració del directori de pàgines '{0}'.
+pageserviceconf_aliaspath_invalid			= <alias id="{0}"> utilitza un camí de fitxer no vàlid "{1}" al fitxer de configuració del directori de pàgines '{2}'.
+pageserviceconf_alias_invalid				= L'element <alias> ha de tenir un atribut "id" i un atribut "path" al fitxer de configuració del directori de pàgines '{0}'.
+pageserviceconf_using_invalid				= L'element <using> ha de tenir un atribut "namespace" al fitxer de configuració del directori de pàgines '{0}'.
+pageserviceconf_module_invalid				= L'element <module> ha de tenir un atribut "id" al fitxer de configuració del directori de pàgines '{0}'.
+pageserviceconf_moduletype_required			= <module id="{0}"> ha de tenir un atribut "class" al fitxer de configuració del directori de pàgines '{1}'.
+pageserviceconf_parameter_invalid			= L'element <parameter> ha de tenir un atribut "id" al fitxer de configuració del directori de pàgines '{0}'.
+pageserviceconf_page_invalid				= L'element <page> ha de tenir un atribut "id" al fitxer de configuració del directori de pàgines '{0}'.
+pageserviceconf_includefile_required		= L'element <include> de la configuració de pàgines ha de tenir un atribut "file".
+
+basebehavior_cannot_setname_with_owner		= El TBaseBehavior.Name "{0}" no es pot canviar (a "{1}") després d'associar el comportament.
+basebehavior_sync_no_owner					= El TBaseBehavior "{0}" no té propietari i no pot sincronitzar gestors d'esdeveniments en un component sense propietaris.
+basebehavior_sync_not_owner					= El TBaseBehavior "{0}" no pot sincronitzar gestors d'esdeveniments en un objecte que no n'és el propietari.
+behavior_has_owner							= El TBehavior "{0}" només es pot associar a un sol propietari.
+behavior_bad_attach_component				= El TBehavior "{0}" només es pot associar a un TComponent.
+behavior_detach_without_owner				= El TBehavior "{0}" no es pot desassociar sense un propietari.
+behavior_detach_wrong_owner					= El TBehavior "{0}" no es pot desassociar d'un objecte que no n'és el propietari.
+behavior_property_unchangeable				= {1}.{0} no es pot modificar després d'associar el comportament.
+behavior_requires_owner						= {1}.{0} requereix un propietari.
+classbehavior_owner_attach_once				= El TClassBehavior "{0}" només es pot associar a un propietari una vegada. Els gestors no serien únics.
+classbehavior_bad_attach_component			= El TClassBehavior "{0}" només es pot associar a un TComponent.
+classbehavior_detach_without_owner			= El TClassBehavior "{0}" no es pot desassociar sense un propietari.
+classbehavior_detach_wrong_owner			= El TClassBehavior "{0}" no es pot desassociar d'un objecte que no n'és el propietari.
+
+callchain_bad_dynamic_event					= S'ha generat TCallChain.{0} però s'esperava {1}.
+
+behaviormodule_behavior_as_array_required	= El <behavior> en php ha de ser una matriu.
+behaviormodule_behaviorname_required		= <behavior> ha de contenir un atribut 'name' per associar el comportament.
+behaviormodule_behaviorclass_required		= <behavior> ha de contenir un atribut 'class' que defineixi la classe del comportament.
+behaviormodule_attachto_class_required		= <behavior> ha de tenir un atribut 'attachto' o 'attachtoclass'.
+behaviormodule_attachto_and_class_only_one	= <behavior> ha de tenir l'atribut 'attachto' o bé 'attachtoclass', però no tots dos.
+behaviormodule_behaviorowner_required		= No s'ha trobat l'objecte attachto '{0}' de <behavior>.
+behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors no es pot establir al tipus no vàlid '{0}'
+
+behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader ha de tenir un nom de comportament (BehaviorName).
+behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader ha de tenir una classe de comportament (BehaviorClass).
+behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader ha de tenir un atribut 'attachto' o 'attachtoclass'.
+behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader només pot tenir un dels atributs 'attachto' o 'attachtoclass'.
+behaviorparameterloader_moduleid_required	= L'attachto 'module:' de TBehaviorParameterLoader requereix un ID de mòdul.
+behaviorparameterloader_behaviorowner_required	= No s'ha pogut trobar l'attachto '{0}' de TBehaviorParameterLoader.
+behaviorparameterloader_behaviormodule_not_found	= TBehaviorParameterLoader no ha pogut trobar el mòdul '{0}' per associar-hi els comportaments.
+
+evaluationfilter_statements_denied			= El component '{0}' no pot avaluar les sentències PHP '{1}' perquè TEvaluationFilterBehavior.AllowStatements és false.
+evaluationfilter_code_denied				= El component '{0}' no pot avaluar '{1}' perquè TEvaluationFilterBehavior no permet '{2}'.
+
+maplazyloadbehavior_handler_not_callable	= TMapLazyLoadBehavior ha de tenir un invocable per construir-se.
+maproutebehavior_handler_not_callable		= TMapRouteBehavior ha de tenir un invocable per construir-se.
+
+parameterizebehavior_no_parameter			= TParameterizeBehavior ha de tenir un atribut Parameter.
+parameterizebehavior_no_property			= TParameterizeBehavior ha de tenir un atribut Property.
+parameterizebehavior_owner_get_only_property	= El propietari de TParameterizeBehavior té la Property '{0}' però és només de lectura.
+parameterizebehavior_owner_has_no_property	= El propietari de TParameterizeBehavior no té cap Property '{0}'.
+parameterizebehavior_cannot_set_parameter_to_blank_after_attach	= TParameterizeBehavior no pot deixar en blanc el Parameter després d'associar-se.
+
+processhelper_no_forking					= La bifurcació de processos no és compatible.
+processhelper_no_signals					= Els senyals de procés no es poden enviar a Windows.
+
+serializableclosure_no_decrypter			= TSerializableClosure no pot desxifrar una càrrega de clausura xifrada sense un desxifrador configurat.
+serializableclosure_decrypt_failed			= TSerializableClosure no ha pogut desxifrar una càrrega de clausura xifrada; la càrrega pot haver estat manipulada o la clau pot haver canviat.
+
+appsignals_no_change						= TApplicationSignals::{0} no es pot canviar després d'associar-se.
+appsignals_not_a_dispatcher					= '{0}' no és un TSignalsDispatcher.
+
+signalsdispatcher_bad_pid					= '{0}' no és un PID vàlid.
+signalsdispatcher_no_change					= TSignalsDispatcher::{0} no es pot canviar després d'associar-se.
+
+initialized_property_unchangeable			= {1}.{0} no es pot establir perquè ja està inicialitzat.
+initialized_requires_initialization			= {1}.{0} requereix inicialització abans del processament.
+
+template_closingtag_unexpected				= S'ha trobat una etiqueta de tancament inesperada '{0}'.
+template_closingtag_expected				= S'esperava l'etiqueta de tancament '{0}', però s'ha trobat '{1}'.
+template_directive_nonunique				= La directiva '<%@ ... %>' ha d'aparèixer al començament de la plantilla i només pot aparèixer una vegada com a màxim.
+template_comments_forbidden					= No es permeten comentaris de plantilla dins de les etiquetes de propietat.
+template_matching_unexpected				= Coincidència inesperada.
+template_property_unknown					= {0} no té cap propietat anomenada '{1}'.
+template_event_unknown						= {0} no té cap esdeveniment anomenat '{1}'.
+template_property_readonly					= {0} té una propietat només de lectura '{1}'.
+template_event_forbidden					= {0} és un component que no és un control. No es pot associar cap gestor al seu esdeveniment '{1}' en una plantilla.
+template_databind_forbidden					= {0} és un component que no és un control. No es poden vincular expressions a la seva propietat '{1}'.
+template_component_required					= '{0}' no és un component. Només els components poden aparèixer en una plantilla.
+template_format_invalid						= Sintaxi de plantilla no vàlida: {0}
+template_property_duplicated				= La propietat {0} està configurada dues o més vegades.
+template_eventhandler_invalid				= {0}.{1} només accepta una cadena estàtica.
+template_controlid_invalid					= {0}.ID només accepta una cadena de text estàtica.
+template_controlskinid_invalid				= {0}.SkinID només accepta una cadena de text estàtica.
+template_content_unexpected					= S'ha trobat contingut inesperat en instanciar la plantilla: {0}.
+template_include_invalid					= Inclusió de plantilla no vàlida. Assegureu-vos que {0} és un espai de noms vàlid que apunta a un fitxer de plantilla existent amb l'extensió .tpl.
+template_tag_unexpected						= La inicialització de la propietat {0} conté un tipus d'etiqueta desconegut {1}.
+
+xmldocument_file_read_failed				= TXmlDocument no pot llegir el fitxer '{0}'.
+xmldocument_file_write_failed				= TXmlDocument no pot escriure el fitxer '{0}'.
+
+xmlelementlist_xmlelement_required			= TXmlElementList només accepta objectes TXmlElement.
+
+xmlelement_null_tag							= El nom d'etiqueta de TXmlElement no pot ser nul.
+xmlelement_empty_tag						= El nom d'etiqueta de TXmlElement no pot ser una cadena buida.
+
+authorizationrule_action_invalid			= TAuthorizationRule.Action només admet 'allow' o 'deny' com a valor.
+authorizationrule_verb_invalid				= TAuthorizationRule.Verb només admet 'get' o 'post' com a valor.
+
+authorizationrulecollection_authorizationrule_required	= TAuthorizationRuleCollection només accepta objectes TAuthorizationRule.
+
+usermanager_userfile_invalid				= TUserManager.UserFile '{0}' no és un fitxer vàlid.
+usermanager_userfile_unchangeable			= TUserManager.UserFile no es pot modificar. El mòdul d'usuaris ja s'ha inicialitzat.
+
+integritymanager_entry_invalid				= L'entrada d'integritat de TIntegrityManager per a l'URL '{0}' requereix un url i un hash no buits.
+integritymanager_algorithm_invalid			= L'algorisme '{0}' de TIntegrityManager no és compatible; utilitzeu-ne un d'aquests: {1}.
+integritymanager_file_unreadable			= TIntegrityManager no pot llegir el fitxer '{0}' per calcular-ne la integritat.
+integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' no és un fitxer vàlid.
+integritymanager_integrityfile_unchangeable	= {1}.{0} no es pot modificar. El mòdul d'integritat ja s'ha inicialitzat.
+
+javascript_script_integrity_required		= No hi ha cap Subresource Integrity registrada per a l'script remot '{0}', però la integritat és obligatòria.
+
+authmanager_usermanager_required			= Cal assignar un valor a TAuthManager.UserManager.
+authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' no fa referència a l'ID de cap mòdul de l'aplicació.
+authmanager_usermanager_invalid				= TAuthManager.UserManager '{0}' no fa referència a un mòdul d'aplicació TUserManager vàlid.
+authmanager_session_required				= TAuthManager requereix un mòdul de sessió de l'aplicació.
+
+permissions_events_invalid					= TPermissionEvent.Event no pot establir el valor no vàlid '{0}'.
+permissions_rules_invalid					= TPermissionEvent.Rules no pot establir el valor no vàlid '{0}'.
+permissions_dbparameter_nonexistent			= TPermissionsManager.DbParameter '{0}' no fa referència a l'ID de cap mòdul de l'aplicació.
+permissions_dbparameter_invalid				= TPermissionsManager.DbParameter '{0}' no fa referència a un mòdul d'aplicació TDbParameterModule vàlid.
+permissions_init_once						= TPermissionsManager.init només es pot inicialitzar una vegada.
+permissions_duplicate_permission			= El permís '{0}' de TPermissionsManager ja està registrat.
+permissions_role_children_invalid			= El rol '{0}' de la configuració de TPermissionsManager té fills no vàlids '{1}'.
+permissions_rule_invalid					= La regla de permís '{0}' de la configuració de TPermissionsManager té propietats que no són una matriu.
+permissions_rules_require_name				= Les regles de TPermissionsManager han de tenir una propietat "name" de permís.
+permissions_role_rule_nested				= El rol '{0}' de la configuració de TPermissionsManager conté un <permissionrule>. Les regles de permís són fills directes de l'element de configuració de permisos.
+permissions_rule_class_invalid				= La classe de regla de permís '{0}' de TPermissionsManager és un espai de noms de directori, no una classe.
+permissions_children_invalid				= Els fills de TPermissionsManager.*RoleChildren han de ser una cadena o una matriu, però són '{0}'.
+permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' no és un fitxer vàlid.
+
+thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' no és un àlies de camí vàlid. Assegureu-vos que heu definit aquest àlies a la configuració i que apunta a un directori vàlid.
+thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' no és un directori vàlid.
+thememanager_basepath_unchangeable			= TThemeManager.BasePath no es pot modificar després d'inicialitzar el mòdul.
+thememanager_theme_invalid					= El nom de tema '{0}' de TThemeManager ha de ser un nom de directori simple.
+
+theme_baseurl_required						= Cal TThemeManager.BasePath. Per defecte, s'assumeix un directori anomenat 'themes' dins del directori que conté l'script d'entrada de l'aplicació.
+theme_path_inexistent						= El camí del tema '{0}' no existeix.
+theme_control_nested						= L'aparença per al tipus de control '{0}' del tema '{1}' no pot estar dins d'una altra aparença.
+theme_skinid_duplicated						= El SkinID '{0}.{1}' està duplicat al tema '{2}'.
+theme_databind_forbidden					= No es pot utilitzar la vinculació de dades al tema '{0}' per a l'aparença de control '{1}.{2}' en la propietat '{3}'.
+theme_property_readonly						= S'està aplicant una aparença a una propietat de control només de lectura '{0}.{1}'.
+theme_property_undefined					= S'està aplicant una aparença a una propietat de control inexistent '{0}.{1}'.
+theme_tag_unexpected						= La inicialització de la propietat {0} conté un tipus d'etiqueta desconegut {1}.
+
+control_object_reregistered					= S'ha trobat un ID d'objecte duplicat '{0}'.
+control_id_invalid							= {0}.ID '{1}' no és vàlid. Només es permeten caràcters alfanumèrics i el guió baix. El primer caràcter ha de ser una lletra o un guió baix.
+control_skinid_unchangeable					= {0}.SkinID no es pot modificar després d'aplicar una aparença al control o de crear els controls fills.
+control_enabletheming_unchangeable			= {0}.EnableTheming no es pot modificar després de crear els controls fills.
+control_stylesheet_applied					= L'aparença StyleSheet ja s'ha aplicat a {0}.
+control_id_nonunique						= {0}.ID '{1}' no és únic entre tots els controls del mateix contenidor de noms.
+control_renderfilterdepth_invalid			= {0}.RenderFilterDepth '{1}' no pot ser negatiu.
+
+templatecontrol_mastercontrol_invalid		= El control mestre ha de ser de tipus TTemplateControl o d'una classe filla.
+templatecontrol_mastercontrol_required		= El control '{0}' requereix un control mestre perquè utilitza TContent.
+templatecontrol_contentid_duplicated		= L'ID de TContent '{0}' està duplicat.
+templatecontrol_placeholderid_duplicated	= L'ID de TContentPlaceHolder '{0}' està duplicat.
+templatecontrol_directive_invalid			= {0}.{1} només accepta una cadena de text estàtica mitjançant una directiva de plantilla.
+templatecontrol_placeholder_inexistent		= TContent '{0}' no té cap TContentPlaceHolder corresponent.
+
+page_form_duplicated						= Una pàgina pot contenir un TForm com a màxim. Utilitzeu etiquetes form HTML normals per a la resta de formularis.
+page_isvalid_unknown						= TPage.IsValid encara no s'ha avaluat.
+page_postbackcontrol_invalid				= No s'ha pogut determinar el control de postback '{0}'.
+page_control_outofform						= {0} '{1}' ha d'estar dins d'un TForm.
+page_head_duplicated						= Una pàgina pot contenir un THead com a màxim.
+page_head_required							= Cal un control THead a la plantilla de la pàgina per renderitzar el CSS i el js a la secció head de l'HTML.
+page_statepersister_invalid					= El persistidor d'estat de la pàgina ha d'implementar la interfície IPageStatePersister.
+
+csmanager_pradoscript_invalid				= Nom de biblioteca d'scripts de Prado desconegut '{0}'.
+csmanager_pradoscript_notloaded				= La biblioteca d'scripts de Prado '{0}' encara no s'ha carregat.
+csmanager_pradostyle_invalid				= Nom de biblioteca d'estils de Prado desconegut '{0}'.
+csmanager_invalid_packages					= Paquets desconeguts '{1}' per als paquets de javascript definits a '{0}'. Els paquets vàlids són '{2}'.
+
+httpclient_transport_error					= Error de transport del client HTTP (codi {0}): {1}
+httpclient_http_error						= Resposta d'error HTTP amb l'estat {0}.
+httpclient_transport_required				= No hi ha cap transport HTTP disponible: l'extensió cURL no està carregada i allow_url_fopen està desactivat.
+
+restclient_invalid_header					= La capçalera '{0}' de TRestClient té un nom no vàlid o un valor que conté CR/LF.
+restclient_basicauth_username_colon			= El nom d'usuari de l'autenticació bàsica de TRestClient no pot contenir dos punts (separador de credencials de l'RFC 7617).
+
+contentplaceholder_id_required				= TContentPlaceHolder ha de tenir un ID.
+
+content_id_required							= TContent ha de tenir un ID.
+
+controlcollection_control_required			= TControlList només accepta cadenes o objectes TControl.
+
+webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' no és vàlid. Ha de ser un sol caràcter.
+webcontrol_dir_invalid						= {0}.Dir '{1}' no és vàlid. Els valors permesos són 'ltr', 'rtl' i 'auto'.
+webcontrol_style_invalid					= {0}.Style només admet un valor de cadena.
+
+listcontrol_selection_invalid				= {0} té una selecció no vàlida establerta abans de fer la vinculació de dades.
+listcontrol_selectedindex_invalid			= {0}.SelectedIndex té un valor no vàlid {1}.
+listcontrol_selectedvalue_invalid			= {0}.SelectedValue té un valor no vàlid '{1}'.
+listcontrol_expression_invalid				= {0} està avaluant una expressió no vàlida '{1}' : {2}
+listcontrol_multiselect_unsupported			= {0} no admet la selecció múltiple.
+
+label_associatedcontrol_invalid				= No s'ha trobat TLabel.AssociatedControl '{0}'.
+
+textbox_suggestionlist_invalid				= No s'ha trobat TTextBox.SuggestionList '{0}'.
+
+output_forcontrol_invalid					= No s'ha trobat TOutput.ForControl '{0}'.
+
+baseterm_targetcontrol_invalid				= No s'ha trobat {0}.TargetControl '{1}'.
+baseterm_marklimit_invalid					= {0}.MarkLimit '{1}' no pot ser negatiu.
+baseterm_depthlimit_invalid					= {0}.DepthLimit '{1}' no pot ser negatiu.
+renderfilterparameter_depthlimit_invalid	= TRenderFilterParameter.DepthLimit '{0}' ha d'estar entre 0 i el RenderFilterDepth {1} del control de filtratge.
+
+hiddenfield_focus_unsupported				= THiddenField no admet establir el focus d'entrada.
+hiddenfield_theming_unsupported				= THiddenField no admet temes.
+hiddenfield_skinid_unsupported				= THiddenField no admet aparences de control.
+
+panel_defaultbutton_invalid					= TPanel.DefaultButton '{0}' no fa referència a un control de botó existent.
+
+tablestyle_cellpadding_invalid				= TTableStyle.CellPadding ha de ser un enter igual o superior a -1.
+tablestyle_cellspacing_invalid				= TTableStyle.CellSpacing ha de ser un enter igual o superior a -1.
+
+sessionpagestatepersister_historysize_invalid	= TSessionPageStatePersister.History ha de ser un enter superior a 0.
+
+listitemcollection_item_invalid				= TListItemCollection només accepta cadenes o objectes TListItem.
+
+dropdownlist_selectedindices_unsupported	= TDropDownList.SelectedIndices és només de lectura.
+
+bulletedlist_autopostback_unsupported		= TBulletedList.AutoPostBack és només de lectura.
+bulletedlist_selectedindex_unsupported		= TBulletedList.SelectedIndex és només de lectura.
+bulletedlist_selectedindices_unsupported	= TBulletedList.SelectedIndices és només de lectura.
+bulletedlist_selectedvalue_unsupported		= TBulletedList.SelectedValue és només de lectura.
+
+radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices és només de lectura.
+
+logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' no existeix.
+logrouter_routeclass_required				= L'atribut class és obligatori a la configuració <route>.
+logrouter_routetype_required				= La ruta de registre ha de ser una instància de TLogRoute o d'una classe derivada.
+
+dblogroute_connectionid_invalid				= TDbLogRoute no pot crear la connexió de base de dades amb l'ID '{0}'.
+dblogroute_insert_failed					= TDbLogRoute no pot inserir el registre a '{0}'.
+dblogroute_bad_retain_period				= TDbLogRoute.RetainPeriod '{0}' no és vàlid
+dblogroute_table_nonexistent				= La taula '{0}' de TDbLogRoute no existeix i s'ha de crear.
+dblogroute_order_invalid					= L'ordenació '{0}' de TDbLogRoute ha d'enumerar columnes, cadascuna seguida opcionalment d'ASC o DESC.
+dblogroute_limit_invalid					= El límit '{0}' de TDbLogRoute ha de ser un recompte de files, 'count OFFSET offset' o 'offset, count'.
+
+filelogroute_logpath_invalid				= TFileLogRoute.LogPath '{0}' ha de ser un directori en format d'espai de noms amb permís d'escriptura per al procés del servidor web.
+filelogroute_maxfilesize_invalid			= TFileLogRoute.MaxFileSize ha de ser superior a 0.
+filelogroute_maxlogfiles_invalid			= TFileLogRoute.MaxLogFiles ha de ser superior a 0.
+
+emaillogroute_sentfrom_required				= TEmailLogRoute.SentFrom no pot estar buit.
+emaillogroute_mail_failed					= TEmailLogRoute no ha pogut enviar el registre a '{0}'.
+
+syslogroute_bad_flags						= TSysLogRoute.SysLogFlags no són vàlids, '{0}'.
+syslogroute_bad_facility					= TSysLogRoute.Facility no és vàlid, '{0}'.
+
+psrlogroute_logger_required					= Cal TPsrLogRoute.Logger.
+psrlogroute_logger_invalid					= TPsrLogRoute.Logger '{0}' no és un ID de mòdul ni un nom de classe d'un Psr\Log\LoggerInterface.
+psrlogroute_logger_recursive				= TPsrLogRoute.Logger no pot ser un TPsrLogger; registraria de nou al mateix TLogger.
+
+repeatinfo_repeatcolumns_invalid			= TRepeatInfo.RepeatColumns no pot ser inferior a 0.
+
+basevalidator_controltovalidate_invalid		= {0}.ControlToValidate està buit o conté un camí d'ID de control no vàlid.
+basevalidator_validatable_required			= {0}.ControlToValidate ha d'apuntar a un control que implementi la interfície IValidatable.
+basevalidator_forcontrol_unsupported		= {0}.ForControl no és compatible.
+
+comparevalidator_controltocompare_invalid	= TCompareValidator.ControlToCompare conté un camí d'ID de control no vàlid.
+
+filevalidator_fileupload_required			= {0}.ControlToValidate ha d'apuntar a un control TFileUpload.
+
+listcontrolvalidator_invalid_control		= {0}.ControlToValidate conté un camí d'ID de TListControl no vàlid, "{1}" és un {2}.
+
+repeater_template_required					= TRepeater.{0} requereix una instància de plantilla que implementi la interfície ITemplate.
+repeater_itemtype_unknown					= Tipus d'element de repetidor desconegut {0}.
+repeateritemcollection_item_invalid			= TRepeaterItemCollection només accepta objectes que siguin instàncies de TControl o d'una classe descendent.
+
+datalist_template_required					= TDataList.{0} requereix una instància de plantilla que implementi la interfície ITemplate.
+datalistitemcollection_datalistitem_required	= TDataListItemCollection només accepta objectes TDataListItem.
+
+datagrid_template_required					= TDataGrid.{0} requereix una instància de plantilla que implementi la interfície ITemplate.
+templatecolumn_template_required			= TTemplateColumn.{0} requereix una instància de plantilla que implementi la interfície ITemplate.
+datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex no pot ser inferior a 0.
+datagrid_pagesize_invalid					= TDataGrid.PageSize ha de ser superior a 0.
+datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount no pot ser inferior a 0.
+datagriditemcollection_datagriditem_required	= TDataGridItemCollection només accepta objectes TDataGridItem.
+datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection només accepta objectes TDataGridColumn.
+datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount ha de ser superior a 0.
+
+datafieldaccessor_data_invalid				= TDataFieldAccessor intenta avaluar el valor d'un camp de dades no vàlides. Assegureu-vos que les dades són una matriu, un TMap, un TList o un objecte que contingui el camp especificat '{0}'.
+datafieldaccessor_datafield_invalid			= TDataFieldAccessor intenta avaluar el valor de dades d'un camp desconegut '{0}': {1}.
+
+tablerowcollection_tablerow_required		= TTableRowCollection només accepta objectes TTableRow.
+tablecolumncollection_tablecolumn_required	= TTableColumnCollection només accepta objectes TTableColumn.
+tablecolumngroupcollection_group_required	= TTableColumnGroupCollection només accepta objectes TTableColumnGroup.
+tablecolumn_span_invalid					= El Span de TTableColumn ha de ser 1 o superior; s'ha donat {0}.
+
+tablecellcollection_tablerow_required		= TTableCellCollection només accepta objectes TTableCell.
+
+multiview_view_required						= TMultiView només accepta TView com a fill.
+multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex té un índex no vàlid '{0}'.
+multiview_view_inexistent					= TMultiView no pot trobar la vista especificada.
+multiview_viewid_invalid					= TMultiView no pot trobar la vista '{0}' a la qual canviar.
+
+viewcollection_view_required				= TViewCollection només accepta TView com a element.
+
+view_visible_readonly						= TView.Visible és només de lectura. Utilitzeu TView.Active per canviar-ne la visibilitat.
+
+wizard_step_invalid							= El pas que s'ha d'activar no s'ha trobat a la col·lecció de passos de l'assistent.
+wizard_command_invalid						= Ordre de navegació de l'assistent no vàlida '{0}'.
+
+table_tablesection_outoforder				= Les seccions de taula de TTable han d'estar en aquest ordre: Header, Body i Footer.
+
+completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType és només de lectura.
+
+wizardstepcollection_wizardstep_required	= TWizardStepCollection només accepta objectes TWizardStep o de les seves classes derivades.
+
+texthighlighter_stylesheet_invalid			= No s'ha pogut trobar el fitxer de full d'estil per a TTextHighlighter.
+
+hotspotcollection_hotspot_required			= THotSpotCollection només accepta instàncies de THotSpot o de les seves classes derivades.
+
+htmlarea_textmode_readonly					= THtmlArea.TextMode és només de lectura.
+htmlarea_tarfile_invalid					= THtmlArea no pot localitzar el fitxer tar de TinyMCE.
+
+parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile no es pot canviar perquè el mòdul ja està inicialitzat.
+parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' no és vàlid. Assegureu-vos que està en format d'espai de noms i que l'extensió del fitxer és '.xml' o '.php'.
+parametermodule_parameterid_required		= L'element de paràmetre ha de tenir l'atribut 'id'.
+
+datagridcolumn_id_invalid					= {0}.ID '{1}' no és vàlid. Només es permeten caràcters alfanumèrics i el guió baix. El primer caràcter ha de ser una lletra o un guió baix.
+datagridcolumn_expression_invalid			= {0} està avaluant una expressió no vàlida '{1}' : {2}
+
+outputcache_cachemoduleid_invalid			= TOutputCache.CacheModuleID té establert un ID de mòdul de memòria cau no vàlid {0}. El mòdul no existeix o no implementa la interfície ICache.
+outputcache_duration_invalid				= {0}.Duration ha de ser un enter no inferior a 0.
+
+stack_data_not_iterable						= TStack només pot obtenir dades d'una matriu o d'un objecte Traversable.
+stack_empty									= TStack és buit.
+
+queue_data_not_iterable						= TQueue només pot obtenir dades d'una matriu o d'un objecte Traversable.
+queue_empty									= TQueue és buida.
+
+pager_pagebuttoncount_invalid				= TPager.PageButtonCount ha de ser un enter no inferior a 1.
+pager_currentpageindex_invalid				= TPager.CurrentPageIndex està fora de l'interval.
+pager_pagecount_invalid						= TPager.PageCount no pot ser inferior a 0.
+pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} ha de ser un camí d'ID vàlid que apunti a un control derivat de TDataBoundControl.
+
+databoundcontrol_pagesize_invalid			= {0}.PageSize ha de ser un enter no inferior a 1.
+databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount ha de ser un enter no inferior a 0.
+databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex està fora de l'interval.
+databoundcontrol_datasource_invalid			= {0}.DataSource no és vàlid.
+databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' no fa referència a un control existent.
+databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' ha de fer referència a un control que implementi IDataSource.
+databoundcontrol_datamember_invalid			= DataMember '{0}' no anomena cap vista de la font de dades.
+
+datasourcecontrol_focus_unsupported			= {0} no admet Focus.
+datasourcecontrol_enabletheming_unsupported	= {0} no admet EnableTheming.
+datasourcecontrol_skinid_unsupported		= {0} no admet SkinID.
+datasourcecontrol_visible_unsupported		= {0} no admet Visible.
+datasourceview_insert_unsupported			= {0} no admet la inserció.
+datasourceview_update_unsupported			= {0} no admet l'actualització.
+datasourceview_delete_unsupported			= {0} no admet la supressió.
+readonlydatasource_datasource_invalid		= TReadOnlyDataSource requereix una font de dades que sigui una matriu, un IDataSource o un Traversable.
+readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView requereix una font de dades que sigui null, una matriu o un Traversable.
+
+clientscript_invalid_file_position			= Posició de fitxer no vàlida '{1}' per al control TClientScript '{0}'; ha de ser 'Head', 'Here' o 'Begin'.
+clientscript_invalid_package_path			= PackagePath no vàlid '{0}' per al control TClientScript '{1}'.
+
+tdatepicker_autopostback_unsupported		= '{0}' no admet AutoPostBack.
+globalization_cache_path_failed				= No s'ha pogut crear el camí de la memòria cau de missatges de traducció '{0}'. Assegureu-vos que el directori pare existeix i que el procés web hi té permís d'escriptura.
+globalization_source_path_failed			= No s'ha pogut crear el camí dels missatges de traducció '{0}'. Assegureu-vos que el directori pare existeix i que el procés web hi té permís d'escriptura.
+messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' no apunta a un mòdul TDataSourceConfig vàlid.
+messagesource_connectionid_required			= Cal el ConnectionID a MessageSource_Database.source.
+
+callback_not_support_no_priority_state_update	= La sol·licitud de crida de retorn no admet l'actualització de l'estat de pàgina sense prioritat.
+callback_invalid_callback_options			= '{1}' no és un control TCallbackOptions vàlid per al control de crida de retorn '{0}'.
+callback_invalid_clientside_options			= La propietat ClientSide de la crida de retorn ha de ser una cadena amb l'ID d'un control TCallbackOptions o una instància de TCallbackClientSideOptions.
+callback_invalid_handler					= Gestor de crida de retorn no vàlid; el control {0} ha d'implementar ICallbackEventHandler.
+callback_invalid_target						= Destinació de crida de retorn no vàlida; no hi ha cap control amb l'ID {0}.
+
+callback_interval_be_positive				= L'interval de TCallbackTimer "{0}" ha de ser estrictament superior a zero segons.
+callback_decay_be_not_negative				= La taxa de decaïment de TCallbackTimer "{0}" no pot ser negativa.
+
+callback_no_autopostback					= El control "{0}" no pot habilitar AutoPostBack.
+
+xmltransform_xslextension_required			= TXmlTransform requereix l'extensió XSL de PHP.
+xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' no és vàlid.
+xmltransform_documentpath_invalid			= TXmlTransform.DocumentPath '{0}' no és vàlid.
+xmltransform_transform_required				= Cal establir la propietat TransformContent o TransformPath de TXmlTransform.
+
+ttriggeredcallback_invalid_controlid		= La propietat ControlID de '{0}' no pot estar buida.
+tactivecustomvalidator_clientfunction_unsupported	= {0} no admet una funció de validació al costat del client.
+
+dbproperties_connectionid_invalid			= {1}.ConnectionID '{0}' no identifica un mòdul TDataSourceConfig vàlid.
+dbproperties_property_required				= {1}.{0} és una propietat obligatòria.
+dbproperties_identifier_invalid				= {1}.{0} '{2}' no és un identificador SQL vàlid.
+
+dbconnection_open_failed					= TDbConnection no ha pogut establir la connexió amb la base de dades: {0}
+dbconnection_connection_inactive			= TDbConnection està inactiva.
+dbconnection_unsupported_driver_charset		= El controlador de base de dades '{0}' no admet establir el joc de caràcters.
+dbconnection_charset_unchangeable			= El controlador de base de dades '{0}' no pot canviar el joc de caràcters després d'obrir la connexió. El joc de caràcters és un paràmetre del DSN.
+
+dbcommand_prepare_failed					= TDbCommand no ha pogut preparar la sentència SQL "{1}": {0}
+dbcommand_execute_failed					= TDbCommand no ha pogut executar la sentència SQL "{1}": {0}
+dbcommand_query_failed						= TDbCommand no ha pogut executar la consulta SQL "{1}": {0}
+dbcommand_column_empty						= TDbCommand ha retornat un resultat buit i no ha pogut obtenir l'escalar.
+dbdatareader_rewind_invalid					= TDbDataReader és un flux només d'avançament. Només es pot recórrer una vegada.
+dbtransaction_transaction_inactive			= TDbTransaction està inactiva.
+
+dbcommandbuilder_value_must_not_be_null		= La propietat {0} no pot ser nul·la, tal com defineix la columna '{2}' de la taula '{1}'.
+
+dbcommon_invalid_table_name					= No s'ha trobat la taula de base de dades '{0}'. Missatge d'error: {1}.
+dbcommon_invalid_identifier_name			= Nom d'identificador de base de dades no vàlid '{0}'; consulteu {1} per a més detalls.
+dbtableinfo_invalid_column_name				= Nom de columna no vàlid '{0}' per a la taula de base de dades '{1}'.
+dbmetadata_invalid_table_view				= El nom de taula/vista '{0}' no és vàlid, o bé la taula/vista '{0}' no conté cap definició de columna/camp accessible.
+dbmetadata_requires_php_version				= Cal PHP versió {1} o posterior per utilitzar la base de dades {0}.
+
+dbtablegateway_invalid_criteria				= Objecte de criteris no vàlid; ha de ser una cadena o una instància de TSqlCriteria.
+dbtablegateway_no_primary_key_found			= La taula '{0}' no conté cap camp de clau primària.
+dbtablegateway_missing_pk_values			= Falten valors de clau primària en formar IN(key1, key2, ...) per a la taula '{0}'.
+dbtablegateway_pk_value_count_mismatch		= El nombre de valors de la clau composta no coincideix en formar IN( (key1, key2, ..), (key3, key4, ..)) per a la taula '{0}'.
+dbtablegateway_mismatch_args_exception		= El mètode cercador '{0}' de TTableGateway espera {1} paràmetres però només n'ha trobat {2}.
+dbtablegateway_mismatch_column_name			= Al mètode dinàmic __call() '{0}' no s'ha trobat cap columna coincident; les columnes vàlides per a la taula '{2}' són '{1}'.
+dbtablegateway_invalid_table_info			= La taula ha de ser una cadena o una instància de TDbTableInfo.
+
+resource_not_a_resource						= S'esperava un recurs PHP obert però s'ha obtingut '{0}'.
+processfork_failed							= No s'ha pogut bifurcar el procés.
+liveprocessfork_readonly_receiver			= Les dades de TLiveProcessFork són només de lectura al costat receptor; només el costat emissor les modifica.
+stream_open_failed							= No s'ha pogut obrir el flux '{0}' amb el mode '{1}': {2}
+binarystream_unexpected_eof					= Final de flux inesperat: calien {0} bytes però només se n'han llegit {1}.
+binarystream_short_write					= Escriptura incompleta: s'havien d'escriure {0} bytes però només se n'han acceptat {1}.
+streamresourcewrapper_unusable_stream		= El flux no és llegible ni escrivible i no es pot exposar com a recurs.
+streamfilter_already_registered				= El filtre de flux '{0}' ja està registrat.
+streamfilter_registration_failed			= No s'ha pogut registrar el filtre de flux '{0}' per a la classe '{1}'.
+streamwrapper_already_registered			= El protocol d'embolcall de flux '{0}' ja està registrat.
+streamwrapper_registration_failed			= No s'ha pogut registrar el protocol d'embolcall de flux '{0}' per a la classe '{1}'.
+reservedspace_invalid						= Un espai reservat requereix un desplaçament no negatiu i una longitud positiva; s'han donat el desplaçament '{0}' i la longitud '{1}'.
+reservedspace_access_denied					= L'operació se superposa amb l'espai reservat al desplaçament '{0}'.
+multipartstream_element_invalid				= Un element de TMultipartStream requereix un 'name' i un 'contents'.
+builtincompressor_extension_required		= El compressor '{0}' requereix l'extensió PHP '{1}'.
+builtincompressor_compress_failed			= El compressor '{0}' no ha pogut comprimir les dades.
+builtincompressor_decompress_failed			= El compressor '{0}' no ha pogut descomprimir les dades; poden estar malmeses o en un altre format.
+compression_method_unknown					= El mètode de compressió '{0}' és desconegut o la seva extensió no està disponible.
+compression_none_available					= No hi ha cap mètode de compressió disponible en aquesta instal·lació de PHP.
+compressionconfig_method_unknown			= TCompressionConfig.Method '{0}' no és una codificació de contingut coneguda. Les codificacions conegudes són: {1}.
+compression_xz_unsupported					= xz/LZMA no té cap extensió PHP; instal·leu belisoful/prado-compression per obtenir un còdec xz natiu o per CLI.
+clicompressor_command_missing				= El compressor '{0}' requereix una d'aquestes ordres del sistema al PATH: '{1}'.
+clicompressor_process_failed				= El compressor '{0}' no ha pogut iniciar l'ordre '{1}'.
+clicompressor_command_failed				= L'ordre '{1}' del compressor '{0}' ha acabat amb el codi {2}: {3}
+
+socketservermodule_endpoint_required		= TSocketServerModule requereix un Endpoint, o un Port positiu per compondre'n un.
+socketservermodule_serverclass_invalid		= El ServerClass '{0}' de TSocketServerModule no és vàlid. Ha de ser TSocketServer o una subclasse.
+socketservermodule_scheme_not_stream		= TSocketServerModule no pot acceptar connexions amb l'esquema sense connexió '{0}'. Utilitzeu un esquema de flux com tcp, tls, ssl o unix.
+
+bitreader_invalid_bits						= No es poden llegir {0} bits; el recompte ha d'estar entre 0 i l'amplada d'enter de la plataforma.
+bitreader_64bit_php_required				= Llegir {0} bits requereix una compilació de PHP de 64 bits.
+bitreader_invalid_float_bits				= No es pot llegir un float de {0} bits; només s'admeten 8, 16, 32 o 64 bits.
+bitwriter_invalid_bits						= No es poden escriure {0} bits; el recompte ha d'estar entre 0 i l'amplada d'enter de la plataforma.
+bitwriter_64bit_php_required				= Escriure {0} bits requereix una compilació de PHP de 64 bits.
+bitwriter_invalid_float_bits				= No es pot escriure un float de {0} bits; només s'admeten 8, 16, 32 o 64 bits.
+
+soapservice_configfile_invalid				= TSoapService.ConfigFile '{0}' no existeix. Tingueu en compte que s'ha d'especificar en format d'espai de noms i que l'extensió del fitxer ha de ser '.xml' o '.php'.
+soapservice_server_invalid					= La classe de servidor SOAP '{0}' de TSoapService no és vàlida. Ha de ser TSoapServer o una subclasse.
+soapservice_serverid_required				= L'element <soap> ha de tenir l'atribut 'id'.
+soapservice_serverid_duplicated				= L'ID de servidor SOAP '{0}' està duplicat.
+soapserver_id_invalid						= ID de servidor SOAP no vàlid '{0}'. No ha d'acabar en '.wsdl'.
+soapserver_provider_invalid					= No s'ha pogut resoldre la classe de proveïdor '{0}' de TSoapServer.
+soapserver_version_invalid					= Versió de SOAP no vàlida '{0}'. Ha de ser '1.1' o '1.2'.
+soapserver_wsdlstyle_invalid				= Estil WSDL no vàlid '{0}'. Ha de ser 'rpc' o 'document'.
+soapserver_wsdlstyle_unsupported			= L'estil WSDL '{0}' necessita pradosoft/prado-wsdlgenerator 1.2 o posterior. El generador instal·lat només produeix 'rpc'.
+
+jsonservice_id_required						= TJsonService requereix l'atribut 'id' als seus elements JSON.
+jsonservice_response_type_invalid			= La classe JSON {0} no és vàlida. Ha de ser TJsonResponse o estendre TJsonResponse.
+jsonservice_class_required					= TJsonService requereix l'atribut 'class' als seus elements JSON.
+
+dbusermanager_userclass_required			= Cal TDbUserManager.UserClass.
+dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' no és una classe d'usuari vàlida. La classe ha d'estendre TDbUser.
+dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' no apunta a un mòdul TDataSourceConfig vàlid.
+dbusermanager_connectionid_required			= Cal TDbUserManager.ConnectionID.
+
+dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' no apunta a un mòdul TDataSourceConfig vàlid.
+dbpluginmodule_connectionid_required		= Cal TDbPluginModule.ConnectionID.
+
+feedservice_id_required						= TFeedService requereix l'atribut 'id' als seus elements de canal.
+feedservice_feedtype_invalid				= La classe de canal '{0}' ha d'implementar la interfície IFeedContentProvider.
+feedservice_class_required					= TFeedService requereix l'atribut 'class' als seus elements de canal.
+
+tabviewcollection_tabview_required			= TTabPanel només accepta TTabView com a fill.
+tabpanel_activeviewid_invalid				= TTabPanel.ActiveViewID té un ID no vàlid '{0}'.
+tabpanel_activeviewindex_invalid			= TTabPanel.ActiveViewIndex té un índex no vàlid '{0}'.
+tabpanel_view_inexistent					= TTabPanel no pot trobar la vista especificada.
+
+cachesession_cachemoduleid_required			= Cal TCacheHttpSession.CacheModuleID.
+cachesession_cachemodule_inexistent			= TCacheHttpSession.CacheModuleID '{0}' apunta a un mòdul inexistent.
+cachesession_cachemodule_invalid			= TCacheHttpSession.CacheModuleID '{0}' apunta a un mòdul que no implementa la interfície ICache.
+
+urlmapping_urlmappingpattern_required		= TUrlMapping només pot contenir TUrlMappingPattern o les seves classes filles.
+urlmapping_global_required					= TUrlMapping s'ha de configurar com a mòdul global.
+urlmapping_configfile_inexistent			= TUrlMapping.ConfigFile '{0}' no és un fitxer.
+urlmapping_configfile_invalid				= TUrlMapping.ConfigFile '{0}' ha d'apuntar a un fitxer XML en format d'espai de noms.
+
+urlmappingpattern_serviceparameter_required	= Cal TUrlMappingPattern.ServiceParameter per al patró '{0}'.
+
+keyboard_forcontrol_required				= TKeyboard.ForControl no pot estar buit.
+keyboard_forcontrol_invalid					= TKeyboard.ForControl '{0}' no és vàlid.
+
+captcha_tokenimagetheme_invalid				= TCaptcha.TokenImageTheme ha de ser un enter entre {0} i {1}.
+captcha_tokenfontsize_invalid				= TCaptcha.TokenFontSize ha de ser un enter entre {0} i {1}.
+captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength ha de ser un enter entre {0} i {1}.
+captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength ha de ser un enter entre {0} i {1}.
+captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet ha de ser una cadena d'almenys 2 caràcters.
+captcha_privatekey_unknown					= TCaptcha.PrivateKey és desconeguda. Assegureu-vos que el procés del servidor web té permís d'escriptura al directori d'actius.
+captcha_gd2_required						= TCaptcha requereix l'extensió PHP GD2.
+captcha_imagettftext_required				= TCaptcha requereix l'extensió PHP GD2 amb suport per a tipus de lletra TrueType.
+captcha_imagepng_required					= TCaptcha requereix l'extensió PHP GD2 amb suport per al format d'imatge PNG.
+
+captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl ha d'apuntar a un control TCaptcha existent.
+captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} ha d'apuntar a un control TCaptcha existent.
+captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} ha d'apuntar a un control TCaptcha existent.
+
+recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey és desconeguda. Per utilitzar reCAPTCHA cal obtenir una clau d'API.
+recaptcha_publickey_unknown					= TReCaptcha.PublicKey és desconeguda. Per utilitzar reCAPTCHA cal obtenir una clau d'API.
+
+recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate ha de ser una instància de TReCaptcha.
+
+formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' només pot contenir lletres, dígits, '_' i '-'.
+proofofwork_complexity_invalid				= TProofOfWork.Complexity ha de ser un enter entre {0} i {1}.
+proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' ha d'apuntar a un control TProofOfWork.
+
+slider_handle_class_invalid					= TSlider.HandleClass '{0}' no és una classe d'usuari vàlida. La classe ha d'estendre TSliderHandle.
+
+cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' no apunta a un mòdul de memòria cau vàlid.
+cachepagestatepersister_cache_required		= TCachePageStatePersister requereix que hi hagi carregat un mòdul de memòria cau.
+cachemoduleid_invalid						= {0}.CacheModuleID '{1}' no apunta a un mòdul de memòria cau vàlid.
+cachemoduleid_cache_required				= {0} requereix un mòdul de memòria cau. Configureu una memòria cau primària o establiu {0}.CacheModuleID.
+cachepagestatepersister_timeout_invalid		= TCachePageStatePersister.Timeout ha de ser un enter no inferior a zero.
+
+conditional_condition_invalid				= TConditional.Condition '{0}' no és una expressió PHP vàlida: {1}
+
+dbparametermodule_table_nonexistent			= TDbParameterModule no pot trobar la taula de base de dades '{0}' per emmagatzemar les dades dels paràmetres.
+dbparametermodule_get_no_blank_key			= TDbParameterModule no pot obtenir una clau buida.
+dbparametermodule_set_no_blank_key			= TDbParameterModule no pot establir una clau buida amb un valor.
+dbparametermodule_connectionid_invalid		= TDbParameterModule.ConnectionID '{0}' no apunta a un mòdul TDataSourceConfig vàlid.
+dbparametermodule_serializer_not_callable	= El Serializer de TDbParameterModule no és un invocable.
+
+clockawaretrait_invalid_clock_class			= La classe de rellotge '{0}' ha d'implementar Prado\Util\Clock\IClock.
+utcclock_timezone_fixed						= TUTCClock està fixat a UTC; utilitzeu TTimezoneClock per a una altra zona.
+
+processcrontask_no_command					= TProcessCronTask '{0}' no té cap Command per executar.
+processcrontask_launch_failed				= TProcessCronTask no ha pogut llançar el procés: '{0}'.
+processcrontask_write_failed				= TProcessCronTask no ha pogut escriure el fitxer pid '{0}'.
+closurecrontask_no_closure					= TClosureCronTask '{0}' no té cap clausura per executar.
+closurecrontask_closure_required			= TClosureCronTask requereix una Closure.
+closurecrontask_invalid_securitymanager		= El SecurityManagerID '{0}' de TClosureCronTask no és un TSecurityManager.
+closurecrontask_decrypt_failed				= TClosureCronTask '{0}' no ha pogut desxifrar la càrrega de la seva clausura.
+cronmethodtask_no_module					= TCronMethodTask no ha pogut trobar el mòdul '{0}'.
+cron_usermanager_nonexistent				= TCronModule no ha pogut trobar el UserManager amb el nom '{0}'.
+cron_usermanager_invalid					= El UserManager '{0}' de TCronModule no és un TUserManager.
+cron_task_as_array_required					= La tasca de la configuració de TCronModule no era una matriu.
+cron_duplicate_task_name					= Les tasques de TCronModule han de tenir noms únics.
+cron_schedule_required						= La tasca de cron ha de tenir una planificació.
+cron_task_required							= La tasca de cron ha de tenir una tasca.
+cron_not_a_crontask							= La tasca de cron '{0}' no és un TCronTask.
+cron_additional_tasks_invalid				= '{0}' no és una tasca de cron addicional vàlida.
+crontask_no_module							= TCronTask no ha pogut trobar el mòdul '{0}'.
+
+dbcronclean_moduleid_is_null				= TDbCronCleanLogTask no ha pogut trobar el mòdul especificat '{0}'.
+dbcron_invalid_name							= El nom de tasca '{0}' de TDbCronManager no és vàlid.
+dbcron_conflicting_task_names				= Les tasques de cron de la configuració entren en conflicte amb les tasques de cron de la base de dades '{0}'.
+dbcron_table_nonexistent					= La taula de base de dades de TDbCronManager no existeix.
+dbcron_connectionid_invalid					= TDbCronManager.ConnectionID '{0}' no és un TDataSourceConfig.
+
+timescheduler_invalid_string				= TTimeScheduler no ha pogut analitzar l'element de planificació '{0}'
+
+rational_bad_offset							= "{0}" no és un accessor de propietat vàlid de TRational.
+
+bithelper_bad_fp_format						= TBitHelper no pot treballar amb '{0}' bits d'exponent, '{1}' bits de mantissa i '{2}' de desviació d'exponent en un entorn PHP de {3} bits.
+bithelper_invalid_color_in					= TBitHelper ha de tenir almenys un bit d'entrada (In Bit). S'ha donat '{0}'.
+bithelper_invalid_color_out					= TBitHelper ha de tenir almenys un bit de sortida (Out Bit). S'ha donat '{0}'.
+bithelper_bad_mirror_bits					= TBitHelper no pot reflectir '{0}' bits en un entorn PHP de {1} bits.
+
+ar_data_invalid								= {0}.copyFrom() només admet un objecte o una matriu com a paràmetre.
+ar_save_invalid								= La instància de {0} no es pot desar perquè està suprimida o en un estat desconegut.
+ar_delete_invalid							= La instància de {0} no es pot suprimir perquè és un registre nou o un registre ja suprimit.
+
+dbmetadata_invalid_database_driver			= El controlador '{0}' no és compatible. Instal·leu-ne el controlador de PRADO, si n'hi ha.
+dbmetadata_not_meta_data					= S'esperava la classe de controlador {1} però s'ha obtingut la classe {0}.
+dbmetadata_tableinfo_class_invalid			= La classe d'informació de taula '{0}' de TDbMetaData és un espai de noms de directori, no una classe.
+
+datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' no és vàlid. Assegureu-vos que apunta a un mòdul d'aplicació vàlid.
+distributeddatasource_child_required		= {0} requereix almenys un element fill '{1}'.
+masterslavedbconnection_connection_exists	= La connexió {0}.{1} ja existeix.
+masterslavedbconnection_interface_required	= {0}.{1} requereix una instància que implementi la interfície {2}.
+slavedbconnection_requires_master			= {0} requereix un {1}.
+
+response_status_reason_missing				= HTTP 1.1 necessita un motiu per als codis d'estat ampliats
+response_status_reason_badchars				= A la capçalera HTTP 1.1, el testimoni de motiu d'estat no pot contenir els testimonis CR ni LF
+
+activefileupload_temppath_invalid			= El camí TempPath '{0}' de TActiveFileUpload no existeix o no té permís d'escriptura per al procés del servidor web.
+
+tactivetablecell_control_outoftable			= {0} '{1}' ha d'estar dins d'un control TTableRow.
+tactivetablecell_control_notincollection	= {0} '{1}' no és membre de la TTableCellCollection del control TTableRow pare.
+
+tactivetablerow_control_outoftable			= {0} '{1}' ha d'estar dins d'un control TTable.
+tactivetablerow_control_notincollection		= {0} '{1}' no és membre de la TTableRowCollection del control TTable pare.
+
+juioptions_option_invalid					= '{1}' no és una opció vàlida per al control '{0}'.
+
+ratinglist_invalid_caption_id				= '{0}' no és un control de llegenda vàlid per a TRatingList '{0}'.
+
+accordion_activeviewid_invalid				= TAccordion.ActiveViewID té un ID no vàlid '{0}'.
+accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex té un índex no vàlid '{0}'.
+accordion_view_inexistent					= TAccordion no pot trobar la vista especificada.
+
+dot_bad_size								= El Size de TDot ha de ser un enter positiu però és '{0}'
+dot_bad_border_width						= El FlatBorderWidth de TDot ha de ser un nombre amb un % opcional o una unitat de longitud CSS però és '{0}'
+
+juidatepicker_settextmode_unsupported		= El TextMode de TJuiDatePicker no es pot canviar.
+
+control_adapter_not_active					= S'ha cridat una propietat de BaseActiveControl en un control que no és actiu.
+
+figcaption_requires_figure_parent			= TFigureCaption '{0}' ha de ser fill directe d'un control TFigure.
+summary_requires_details_parent				= TSummary '{0}' ha de ser fill directe d'un control TDetails.
+
+gravatar_bad_default						= El valor '{0}' de la propietat DefaultImageStyle de TGravatar no és compatible
+gravatar_bad_size							= El Size de TGravatar no està entre [1 .. 512], sinó que és '{0}'
+
+progress_value_invalid						= El Value de TProgress ha de ser 0 o superior; s'ha donat {0}.
+progress_max_invalid						= El Max de TProgress ha de ser superior a 0; s'ha donat {0}.
+
+time_invalid_datetime						= El DateTime de TTime ha de ser un DateTimeInterface, un DateInterval, una cadena o un valor numèric; s'ha donat {0}.
+time_invalid_text_format					= El TextFormat '{0}' de TTime no és el nom d'una constant de TTimeFormat ni un patró de data i hora ICU.
+
+webtemplate_invalid_child					= TWebTemplate '{0}' no pot contenir '{1}': els controls actius, de postback i de validació no funcionen dins de contingut de plantilla inert. Utilitzeu marcatge simple amb marcadors de posició {{...}}, o establiu ValidateContent="false".
+
+vardumper_not_array							= __debuginfo() ha de retornar una matriu.
+
+htmlpurifier_source_path_failed				= No s'ha pogut crear el camí de la memòria cau de l'html purifier '{0}'. Assegureu-vos que el directori pare existeix i que el procés web hi té permís d'escriptura.
