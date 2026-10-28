@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel ha de ser d'1 a
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel ha de ser d'1 a 6; s'ha indicat {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' no és vàlid. Els valors permesos són '', 'anonymous' i 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' no pot contenir '{1}': els controls actius, de postback i de validació no funcionen dins de contingut de plantilla inert. Utilitzeu marcatge simple amb marcadors de posició {{...}}, o establiu ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() ha de retornar una matriu.

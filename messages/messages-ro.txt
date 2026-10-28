@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel trebuie să fie
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel trebuie să fie între 1 și 6; s-a primit {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' este invalid. Valorile permise sunt '', 'anonymous' și 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' nu poate conține '{1}': controalele active, de postback și de validare nu funcționează în interiorul conținutului de șablon inert. Folosiți marcaj simplu cu substituenți {{...}} sau setați ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() trebuie să returneze un tablou.

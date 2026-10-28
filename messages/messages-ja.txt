@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList の HeaderLevel は 1 か�
 
 hgroup_headerlevel_invalid				= THGroup の HeaderLevel は 1 から 6 まででなければなりません。{0} が指定されました。
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' は無効です。許可される値は ''、'anonymous' と 'use-credentials' です。
+
 webtemplate_invalid_child					= TWebTemplate '{0}' に '{1}' を含めることはできません。アクティブコントロール、ポストバックコントロール、バリデータコントロールは不活性なテンプレートコンテンツ内では機能しません。{{...}} プレースホルダーを使用したプレーンマークアップを使用するか、ValidateContent="false" を設定してください。
 
 vardumper_not_array							= __debuginfo() は配列を返す必要があります。

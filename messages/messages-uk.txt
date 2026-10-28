@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel має бути
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel має бути від 1 до 6; передано {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' неприпустимий. Дозволені значення: '', 'anonymous' і 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' не може містити '{1}': активні елементи керування, елементи зворотного надсилання та валідатори не працюють усередині інертного вмісту шаблону. Використовуйте звичайну розмітку із заповнювачами {{...}} або встановіть ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() повинен повертати масив.

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= HeaderLevel TReferenceList mestilah 1 hing
 
 hgroup_headerlevel_invalid				= HeaderLevel THGroup mestilah 1 hingga 6; {0} diberikan.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' tidak sah. Nilai yang dibenarkan ialah '', 'anonymous' dan 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' tidak boleh mengandungi '{1}': kawalan aktif, postback, dan pengesah tidak berfungsi di dalam kandungan templat lengai. Gunakan penanda biasa dengan ruang letak {{...}}, atau tetapkan ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() mesti memulangkan tatasusunan.

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel 1 ile 6 arasın
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel 1 ile 6 arasında olmalıdır; {0} verildi.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' geçersiz. İzin verilen değerler '', 'anonymous' ve 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' '{1}' içeremez: etkin, geri gönderim ve doğrulayıcı denetimleri durağan şablon içeriğinde çalışmaz. {{...}} yer tutucularıyla düz işaretleme kullanın ya da ValidateContent="false" ayarlayın.
 
 vardumper_not_array							= __debuginfo() bir dizi döndürmelidir.

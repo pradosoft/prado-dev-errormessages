@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel 1 से 6 त�
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel 1 से 6 तक होना चाहिए; {0} दिया गया।
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' अमान्य है। अनुमत मान '', 'anonymous' और 'use-credentials' हैं।
+
 webtemplate_invalid_child					= TWebTemplate '{0}' में '{1}' नहीं हो सकता: सक्रिय, पोस्टबैक और वैलिडेटर कंट्रोल निष्क्रिय टेम्पलेट सामग्री के भीतर काम नहीं करते। {{...}} प्लेसहोल्डर के साथ सादे मार्कअप का उपयोग करें, या ValidateContent="false" सेट करें।
 
 vardumper_not_array							= __debuginfo() को एक ऐरे लौटाना चाहिए।

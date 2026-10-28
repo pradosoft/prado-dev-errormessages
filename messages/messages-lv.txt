@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel jābūt no 1 l�
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel jābūt no 1 līdz 6; norādīts {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' nav derīga. Atļautās vērtības ir '', 'anonymous' un 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' nevar saturēt '{1}': aktīvās, postback un validatora vadīklas nedarbojas neaktīvā veidnes saturā. Lietojiet vienkāršu iezīmējumu ar {{...}} vietturiem vai iestatiet ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() jāatgriež masīvs.

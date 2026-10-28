@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= Το TReferenceList HeaderLevel πρέπε
 
 hgroup_headerlevel_invalid				= Το THGroup HeaderLevel πρέπει να είναι από 1 έως 6· δόθηκε {0}.
 
+media_crossorigin_invalid				= Το {0}.CrossOrigin '{1}' δεν είναι έγκυρο. Οι επιτρεπόμενες τιμές είναι '', 'anonymous' και 'use-credentials'.
+
 webtemplate_invalid_child					= Το TWebTemplate '{0}' δεν μπορεί να περιέχει '{1}': τα active, postback και validator στοιχεία ελέγχου δεν λειτουργούν μέσα σε αδρανές περιεχόμενο προτύπου. Χρησιμοποιήστε απλή σήμανση με σύμβολα κράτησης θέσης {{...}}, ή ορίστε ValidateContent="false".
 
 vardumper_not_array							= Η __debuginfo() πρέπει να επιστρέφει πίνακα.

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel -arvon on oltav
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel -arvon on oltava välillä 1–6; annettu arvo on {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' on virheellinen. Sallitut arvot ovat '', 'anonymous' ja 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' ei voi sisältää kohdetta '{1}': aktiiviset, postback- ja validaattorikontrollit eivät toimi passiivisen mallinesisällön sisällä. Käytä pelkkää merkkausta {{...}}-paikkamerkeillä tai aseta ValidateContent="false".
 
 vardumper_not_array							= Metodin __debuginfo() on palautettava taulukko.

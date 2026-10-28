@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel musí být 1 a�
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel musí být 1 až 6; zadáno {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' je neplatné. Povolené hodnoty jsou '', 'anonymous' a 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' nemůže obsahovat '{1}': aktivní, postbackové a validační prvky uvnitř neaktivního obsahu šablony nefungují. Použijte prostý markup se zástupnými symboly {{...}}, nebo nastavte ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() musí vracet pole.

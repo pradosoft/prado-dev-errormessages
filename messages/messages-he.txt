@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= HeaderLevel של TReferenceList חייב �
 
 hgroup_headerlevel_invalid				= HeaderLevel של THGroup חייב להיות בין 1 ל-6; התקבל {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' אינו תקין. הערכים המותרים הם '', 'anonymous' ו-'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' אינו יכול להכיל '{1}': פקדים פעילים, פקדי postback ופקדי אימות אינם פועלים בתוך תוכן תבנית אינרטי. יש להשתמש בתגיות (markup) רגילות עם מצייני מקום {{...}}, או להגדיר ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() חייב להחזיר מערך.

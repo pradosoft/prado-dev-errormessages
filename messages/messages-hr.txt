@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel mora biti izme�
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel mora biti između 1 i 6; zadano je {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' nije valjan. Dopuštene vrijednosti su '', 'anonymous' i 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' ne može sadržavati '{1}': aktivne, postback i validatorske kontrole ne funkcioniraju unutar inertnog sadržaja predloška. Koristite obične oznake s {{...}} rezerviranim mjestima ili postavite ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() mora vratiti niz.

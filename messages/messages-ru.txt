@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel должен б
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel должен быть от 1 до 6; передано {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' недопустимо. Допустимые значения: '', 'anonymous' и 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' не может содержать '{1}': активные, postback- и валидирующие элементы управления не работают внутри инертного содержимого шаблона. Используйте обычную разметку с плейсхолдерами {{...}} или установите ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() должен возвращать массив.

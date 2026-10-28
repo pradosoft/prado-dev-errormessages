@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel은 1에서 6 �
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel은 1에서 6 사이여야 하지만 {0}이(가) 지정되었습니다.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}'이(가) 유효하지 않습니다. 허용되는 값은 '', 'anonymous'과 'use-credentials'입니다.
+
 webtemplate_invalid_child					= TWebTemplate '{0}'에는 '{1}'을(를) 포함할 수 없습니다. 활성, 포스트백, 검증기 컨트롤은 비활성 템플릿 콘텐츠 안에서 동작하지 않습니다. {{...}} 자리 표시자가 있는 일반 마크업을 사용하거나 ValidateContent="false"를 설정하십시오.
 
 vardumper_not_array							= __debuginfo()는 배열을 반환해야 합니다.

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList 的 HeaderLevel 必须为 1
 
 hgroup_headerlevel_invalid				= THGroup 的 HeaderLevel 必须为 1 到 6；实际为 {0}。
 
+media_crossorigin_invalid				= {0}.CrossOrigin“{1}”无效。允许的值为“”、“anonymous”和“use-credentials”。
+
 webtemplate_invalid_child					= TWebTemplate“{0}”不能包含“{1}”：活动控件、回发控件和验证器控件在惰性模板内容中无法工作。请使用带 {{...}} 占位符的纯标记，或设置 ValidateContent="false"。
 
 vardumper_not_array							= __debuginfo() 必须返回一个数组。

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel muss 1 bis 6 se
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel muss 1 bis 6 sein; {0} angegeben.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' ist ungültig. Zulässige Werte sind '', 'anonymous' und 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' darf '{1}' nicht enthalten: Active-, Postback- und Validator-Controls funktionieren innerhalb von inertem Vorlageninhalt nicht. Verwenden Sie reines Markup mit {{...}}-Platzhaltern oder setzen Sie ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() muss ein Array zurückgeben.

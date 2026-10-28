@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel musí byť od 1
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel musí byť od 1 do 6; zadané {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' je neplatné. Povolené hodnoty sú '', 'anonymous' a 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' nemôže obsahovať '{1}': aktívne, postback a validačné ovládacie prvky nefungujú vnútri inertného obsahu šablóny. Použite obyčajné značky so zástupnými symbolmi {{...}} alebo nastavte ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() musí vrátiť pole.

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= HeaderLevel ของ TReferenceList ต�
 
 hgroup_headerlevel_invalid				= HeaderLevel ของ THGroup ต้องอยู่ระหว่าง 1 ถึง 6 แต่ได้รับ {0}
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' ไม่ถูกต้อง ค่าที่อนุญาตคือ '', 'anonymous' และ 'use-credentials'
+
 webtemplate_invalid_child					= TWebTemplate '{0}' ไม่สามารถมี '{1}' ได้: คอนโทรลแบบแอ็กทีฟ โพสต์แบ็ก และตัวตรวจสอบความถูกต้องไม่ทำงานภายในเนื้อหาเทมเพลตแบบคงที่ ให้ใช้มาร์กอัปธรรมดาพร้อมเพลซโฮลเดอร์ {{...}} หรือกำหนด ValidateContent="false"
 
 vardumper_not_array							= __debuginfo() ต้องส่งคืนอาร์เรย์

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= TReferenceList HeaderLevel skal være 1 ti
 
 hgroup_headerlevel_invalid				= THGroup HeaderLevel skal være 1 til 6; {0} blev angivet.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' er ugyldig. De tilladte værdier er '', 'anonymous' og 'use-credentials'.
+
 webtemplate_invalid_child					= TWebTemplate '{0}' kan ikke indeholde '{1}': aktive, postback- og validatorkontroller fungerer ikke inden i inert skabelonindhold. Brug almindelig markup med {{...}}-pladsholdere, eller sæt ValidateContent="false".
 
 vardumper_not_array							= __debuginfo() skal returnere et array.

@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= A TReferenceList HeaderLevel értéke 1 é
 
 hgroup_headerlevel_invalid				= A THGroup HeaderLevel értéke 1 és 6 között kell legyen; {0} lett megadva.
 
+media_crossorigin_invalid				= A(z) {0}.CrossOrigin '{1}' érvénytelen. A megengedett értékek: '', 'anonymous' és 'use-credentials'.
+
 webtemplate_invalid_child					= A(z) '{0}' TWebTemplate nem tartalmazhat '{1}' elemet: az aktív, visszaküldő (postback) és ellenőrző vezérlők nem működnek inert sablontartalomban. Használjon egyszerű jelölést {{...}} helyőrzőkkel, vagy állítsa be a ValidateContent="false" értéket.
 
 vardumper_not_array							= A __debuginfo() metódusnak tömböt kell visszaadnia.

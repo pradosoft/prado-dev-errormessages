@@ -775,6 +775,8 @@ referencelist_headerlevel_invalid			= يجب أن يكون TReferenceList Header
 
 hgroup_headerlevel_invalid				= يجب أن يكون THGroup HeaderLevel بين 1 و 6؛ القيمة المعطاة {0}.
 
+media_crossorigin_invalid				= {0}.CrossOrigin '{1}' غير صالح. القيم المسموح بها هي ''، 'anonymous' و 'use-credentials'.
+
 webtemplate_invalid_child					= لا يمكن أن يحوي TWebTemplate '{0}' العنصر '{1}': عناصر التحكم النشطة وعناصر إعادة الإرسال والمدقّقات لا تعمل داخل محتوى قالب ساكن. استخدم ترميزًا عاديًا مع عناصر نائبة {{...}}، أو عيّن ValidateContent="false".
 
 vardumper_not_array							= يجب أن تُعيد __debuginfo() مصفوفة.
