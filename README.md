@@ -88,6 +88,10 @@ composer test
 
 The tests lint each language file against the English master of the installed `pradosoft/prado`: key set, order, placeholders, preserved identifiers, and that every entry is translated. They then render every entry through `TException` and check that the Composer manifest path resolves to each language file. A file falls out of sync with the English master when the framework adds or removes an error code; the tests report the keys.
 
+## Release cadence
+
+The package follows PRADO releases, not PRADO `master`. The English master changes between releases as keys are added, removed, or reworded, so the files here are brought up to date in one batch just before each PRADO release and the two are tagged together. Between releases the package may lag `master`; the tests report the difference as missing or stale keys. A key missing from the package renders in English, so an application loses nothing in the meantime.
+
 ## Adding a language
 
 1. Copy an existing `messages/messages-<lang>.txt` to the new two-letter code and translate every entry.

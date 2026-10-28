@@ -34,6 +34,13 @@ Procedure for a new or updated key:
 3. Keep `{n}` placeholders, class and interface names (`TPage`, `IService`, `TPageService.BasePath`), quoted literals (`'auto'`, `'.xml'`), and acronyms (PHP, SQL, HTTP, JSON, XML, CSRF) unchanged.
 4. Run `composer test`. `MessageFilesTest` names each file and key that is missing, misplaced, untranslated, or loses a placeholder or identifier.
 
+Procedure for a PRADO release sync (one batch per release):
+
+1. `composer update pradosoft/prado` to the release candidate.
+2. Run `composer test`. `MessageFilesTest` lists the keys missing from or stale in each file and any key whose placeholders changed.
+3. Translate the missing keys in every file, drop the stale ones, fix the placeholders, run `composer test` until green.
+4. Set the CHANGELOG heading, then tag the package together with the PRADO release.
+
 Procedure for a new language:
 
 1. Copy `messages/messages-de.txt` (or any complete file) to `messages/messages-<xx>.txt`, `xx` being the two-letter code `Prado::getPreferredLanguage()` returns for that language.
