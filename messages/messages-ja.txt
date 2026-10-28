@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array は直接設定で�
 application_includefile_invalid				= アプリケーション構成 {0} が見つかりません。名前空間形式であり、ファイルの末尾が ".xml" または ".php" であることを確認してください。
 application_basepath_invalid				= アプリケーションのベースパス '{0}' は存在しないか、ディレクトリではありません。
 application_runtimepath_invalid				= アプリケーションのランタイムパス '{0}' は存在しないか、Web サーバープロセスから書き込みできません。
-application_service_invalid					= サービス '{0}' は IService インターフェースを実装する必要があります。
 application_service_class_not_found			= サービスクラス '{0}' は存在しません。
 application_service_class_not_service		= サービスクラス '{0}' は IService を実装していません。
 application_service_class_required			= TApplication::registerService() には、サービス '{0}' のクラス名またはサービス構成配列が必要です。
 application_service_default_unregister		= デフォルトのページサービス '{0}' は登録解除できません。
-application_service_unavailable				= サービス '{0}' は現在利用できません。
 service_csrf_token_invalid					= サービス '{0}' には有効な CSRF トークンが必要です。
 application_moduleid_duplicated				= アプリケーションモジュール ID '{0}' は一意ではありません。
 application_runtimepath_failed				= ランタイムパス '{0}' を作成できません。親ディレクトリが存在し、Web プロセスから書き込み可能であることを確認してください。
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList に追加で
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' は無効です。名前空間形式であり、エラーテンプレートファイルを含む有効なディレクトリを指していることを確認してください。
 
-pageservice_pageclass_unknown				= ページクラス '{0}' は不明です。
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' は有効なディレクトリではありません。
 pageservice_includefile_invalid				= ページサービス構成 {0} が見つかりません。名前空間形式であり、ファイルの末尾が ".xml" または ".php" であることを確認してください。
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} は変更できません。整合性モジュールは既に初期化されています。
 
 javascript_script_integrity_required		= リモートスクリプト '{0}' に対する Subresource Integrity が登録されていませんが、整合性が必須です。
+stylesheet_integrity_required				= リモートスタイルシート '{0}' に Subresource Integrity が登録されていませんが、整合性が必須です。
 
 authmanager_usermanager_required			= TAuthManager.UserManager には値を割り当てる必要があります。
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' はアプリケーションモジュールの ID を参照していません。
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' は TForm の内側に配置する必要
 page_head_duplicated						= ページに含めることができる THead は最大1つです。
 page_head_required							= HTML の head セクションに CSS と js をレンダリングするには、ページテンプレートに THead コントロールが必要です。
 page_statepersister_invalid					= ページ状態パーシスタは IPageStatePersister インターフェースを実装する必要があります。
-page_csmanagerclass_invalid					= ClientScriptManager クラス '{0}' は TClientScriptManager のインスタンスである必要があります。
 
 csmanager_pradoscript_invalid				= 不明な Prado スクリプトライブラリ名 '{0}' です。
 csmanager_pradostyle_invalid				= 不明な Prado スタイルライブラリ名 '{0}' です。
@@ -596,6 +593,11 @@ clicompressor_command_failed				= '{0}' 圧縮器のコマンド '{1}' が終了
 socketservermodule_endpoint_required		= TSocketServerModule には Endpoint、またはそれを構成するための正の Port が必要です。
 socketservermodule_serverclass_invalid		= TSocketServerModule の ServerClass '{0}' は無効です。TSocketServer またはそのサブクラスでなければなりません。
 socketservermodule_scheme_not_stream		= TSocketServerModule はコネクションレスなスキーム '{0}' で接続を受け付けることができません。tcp、tls、ssl、unix などのストリームスキームを使用してください。
+socketservermodule_eventloopclass_invalid	= TSocketServerModule の EventLoopClass '{0}' は無効です。Prado\IO\Async\IEventLoop を実装する必要があります。
+
+eventloop_delay_invalid						= イベントループの遅延 '{0}' は無効です。0 秒以上でなければなりません。
+eventloop_callback_invalid					= イベントループのコールバック '{0}' は不明です。登録されていないか、既にキャンセルされています。
+eventloop_signals_unsupported				= イベントループのシグナルコールバックには pcntl 拡張モジュールが必要です。
 
 bitreader_invalid_bits						= {0} ビットを読み取ることはできません。ビット数は 0 からプラットフォームの整数幅までの範囲でなければなりません。
 bitreader_64bit_php_required				= {0} ビットの読み取りには 64 ビット版の PHP が必要です。
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' は親 TTableRow コント�
 tactivetablerow_control_outoftable			= {0} '{1}' は TTable コントロールの内側に配置する必要があります。
 tactivetablerow_control_notincollection		= {0} '{1}' は親 TTable コントロールの TTableRowCollection のメンバーではありません。
 
-juioptions_control_invalid					= コントロール '{0}' は IJuiOptions を実装する必要があります。
 juioptions_option_invalid					= '{1}' はコントロール '{0}' の有効なオプションではありません。
 
 ratinglist_invalid_caption_id				= '{0}' は TRatingList '{0}' の有効なキャプションコントロールではありません。
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress の Max は 0 より大きくなければ�
 
 time_invalid_datetime						= TTime の DateTime は DateTimeInterface、DateInterval、文字列、または数値でなければなりません。{0} が指定されました。
 time_invalid_text_format					= TTime の TextFormat '{0}' は TTimeFormat の定数名でも ICU の日時パターンでもありません。
+
+bdo_dir_invalid								= {0}.Dir '{1}' は無効です。許可される値は 'ltr' と 'rtl' です。
+footnote_referencelist_missing				= TFootnote '{0}' に TReferenceList がありません。ReferenceList '{1}' が TReferenceList ではないか、ページに存在しません。
+referencelist_headerlevel_invalid			= TReferenceList の HeaderLevel は 1 から 6 まででなければなりません。{0} が指定されました。
 
 webtemplate_invalid_child					= TWebTemplate '{0}' に '{1}' を含めることはできません。アクティブコントロール、ポストバックコントロール、バリデータコントロールは不活性なテンプレートコンテンツ内では機能しません。{{...}} プレースホルダーを使用したプレーンマークアップを使用するか、ValidateContent="false" を設定してください。
 

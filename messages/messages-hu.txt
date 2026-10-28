@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= A TEventSubscription.Array nem állítható b
 application_includefile_invalid				= A(z) {0} alkalmazáskonfiguráció nem található. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése ".xml" vagy ".php".
 application_basepath_invalid				= A(z) '{0}' alkalmazás-alapútvonal nem létezik, vagy nem könyvtár.
 application_runtimepath_invalid				= A(z) '{0}' alkalmazás-futásidejű útvonal nem létezik, vagy a webkiszolgáló folyamata nem írhatja.
-application_service_invalid					= A(z) '{0}' szolgáltatásnak meg kell valósítania az IService interfészt.
 application_service_class_not_found			= A(z) '{0}' szolgáltatásosztály nem létezik.
 application_service_class_not_service		= A(z) '{0}' szolgáltatásosztály nem valósítja meg az IService interfészt.
 application_service_class_required			= A TApplication::registerService() osztálynevet vagy szolgáltatáskonfigurációs tömböt igényel a(z) '{0}' szolgáltatáshoz.
 application_service_default_unregister		= Az alapértelmezett '{0}' oldalszolgáltatás regisztrációja nem szüntethető meg.
-application_service_unavailable				= A(z) '{0}' szolgáltatás jelenleg nem érhető el.
 service_csrf_token_invalid					= A(z) '{0}' szolgáltatás érvényes CSRF tokent igényel.
 application_moduleid_duplicated				= A(z) '{0}' alkalmazásmodul-azonosító nem egyedi.
 application_runtimepath_failed				= A(z) '{0}' futásidejű útvonal nem hozható létre. Győződjön meg róla, hogy a szülőkönyvtár létezik, és a webfolyamat írhatja.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= A TCacheDependencyList csak az IC
 
 errorhandler_errortemplatepath_invalid		= A TErrorHandler.ErrorTemplatePath '{0}' érvénytelen. Győződjön meg róla, hogy névtérformátumban van megadva, és hibasablonfájlokat tartalmazó érvényes könyvtárra mutat.
 
-pageservice_pageclass_unknown				= A(z) '{0}' oldalosztály ismeretlen.
 pageservice_basepath_invalid				= A TPageService.BasePath '{0}' nem érvényes könyvtár.
 pageservice_includefile_invalid				= A(z) {0} oldalszolgáltatás-konfiguráció nem található. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése ".xml" vagy ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= A TIntegrityManager.IntegrityFile '{0}
 integritymanager_integrityfile_unchangeable	= A(z) {1}.{0} nem módosítható. Az integritási modul már inicializálva van.
 
 javascript_script_integrity_required		= A(z) '{0}' távoli szkripthez nincs regisztrálva Subresource Integrity, pedig az integritás kötelező.
+stylesheet_integrity_required				= A(z) '{0}' távoli stíluslaphoz nincs Subresource Integrity regisztrálva, pedig az integritás kötelező.
 
 authmanager_usermanager_required			= A TAuthManager.UserManager értékét meg kell adni.
 authmanager_usermanager_inexistent			= A TAuthManager.UserManager '{0}' nem alkalmazásmodul azonosítójára hivatkozik.
@@ -338,7 +336,6 @@ page_control_outofform						= A(z) {0} '{1}' elemnek TForm elemen belül kell le
 page_head_duplicated						= Egy oldal legfeljebb egy THead elemet tartalmazhat.
 page_head_required							= A CSS és js HTML fejrészben történő megjelenítéséhez THead vezérlő szükséges az oldalsablonban.
 page_statepersister_invalid					= Az oldalállapot-tárolónak meg kell valósítania az IPageStatePersister interfészt.
-page_csmanagerclass_invalid					= A(z) '{0}' ClientScriptManager osztálynak a TClientScriptManager egy példányának kell lennie.
 
 csmanager_pradoscript_invalid				= Ismeretlen Prado szkriptkönyvtár-név: '{0}'.
 csmanager_pradostyle_invalid				= Ismeretlen Prado stíluskönyvtár-név: '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= A(z) '{0}' tömörítő '{1}' parancsa {2} kó
 socketservermodule_endpoint_required		= A TSocketServerModule Endpoint értéket vagy annak összeállításához pozitív Port értéket igényel.
 socketservermodule_serverclass_invalid		= A TSocketServerModule ServerClass '{0}' érvénytelen. TSocketServer osztálynak vagy alosztályának kell lennie.
 socketservermodule_scheme_not_stream		= A TSocketServerModule nem fogadhat kapcsolatot a kapcsolat nélküli '{0}' sémán. Használjon adatfolyam-sémát, például tcp, tls, ssl vagy unix.
+socketservermodule_eventloopclass_invalid	= A TSocketServerModule EventLoopClass '{0}' érvénytelen. Meg kell valósítania a Prado\IO\Async\IEventLoop interfészt.
+
+eventloop_delay_invalid						= Az eseményciklus '{0}' késleltetése érvénytelen. Nulla vagy több másodperc kell legyen.
+eventloop_callback_invalid					= Az eseményciklus '{0}' callbackje ismeretlen; sosem lett regisztrálva, vagy már visszavonták.
+eventloop_signals_unsupported				= Az eseményciklus szignál-callbackjeihez a pcntl kiterjesztés szükséges.
 
 bitreader_invalid_bits						= {0} bit nem olvasható; a számnak 0 és a platform egészszám-szélessége közé kell esnie.
 bitreader_64bit_php_required				= {0} bit olvasása 64 bites PHP buildet igényel.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= A(z) {0} '{1}' nem tagja a szülő TT
 tactivetablerow_control_outoftable			= A(z) {0} '{1}' elemnek TTable vezérlőn belül kell lennie.
 tactivetablerow_control_notincollection		= A(z) {0} '{1}' nem tagja a szülő TTable vezérlő TTableRowCollection gyűjteményének.
 
-juioptions_control_invalid					= A(z) '{0}' vezérlőnek meg kell valósítania az IJuiOptions interfészt.
 juioptions_option_invalid					= '{1}' nem érvényes beállítás a(z) '{0}' vezérlőhöz.
 
 ratinglist_invalid_caption_id				= '{0}' nem érvényes feliratvezérlő a(z) '{0}' TRatingList vezérlőhöz.
@@ -758,6 +759,10 @@ progress_max_invalid						= A TProgress Max értéke 0-nál nagyobb kell legyen;
 
 time_invalid_datetime						= A TTime DateTime értéke DateTimeInterface, DateInterval, karakterlánc vagy numerikus érték lehet; {0} lett megadva.
 time_invalid_text_format					= A TTime TextFormat '{0}' nem TTimeFormat konstansnév és nem ICU dátum-idő minta.
+
+bdo_dir_invalid								= A(z) {0}.Dir '{1}' érvénytelen. A megengedett értékek: 'ltr' és 'rtl'.
+footnote_referencelist_missing				= A(z) '{0}' TFootnote vezérlőnek nincs TReferenceList vezérlője: a(z) '{1}' ReferenceList nem TReferenceList, vagy az oldalon nincs ilyen.
+referencelist_headerlevel_invalid			= A TReferenceList HeaderLevel értéke 1 és 6 között kell legyen; {0} lett megadva.
 
 webtemplate_invalid_child					= A(z) '{0}' TWebTemplate nem tartalmazhat '{1}' elemet: az aktív, visszaküldő (postback) és ellenőrző vezérlők nem működnek inert sablontartalomban. Használjon egyszerű jelölést {{...}} helyőrzőkkel, vagy állítsa be a ValidateContent="false" értéket.
 

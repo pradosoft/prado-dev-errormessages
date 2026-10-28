@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array kan ikke sættes dir
 application_includefile_invalid				= Applikationskonfigurationen {0} kan ikke findes. Sørg for, at den er i navneområdeformat, og at filen ender på ".xml" eller ".php".
 application_basepath_invalid				= Applikationens basissti '{0}' findes ikke eller er ikke en mappe.
 application_runtimepath_invalid				= Applikationens runtime-sti '{0}' findes ikke eller kan ikke skrives af webserverprocessen.
-application_service_invalid					= Tjenesten '{0}' skal implementere grænsefladen IService.
 application_service_class_not_found			= Tjenesteklassen '{0}' findes ikke.
 application_service_class_not_service		= Tjenesteklassen '{0}' implementerer ikke IService.
 application_service_class_required			= TApplication::registerService() kræver et klassenavn eller et tjenestekonfigurations-array for tjenesten '{0}'.
 application_service_default_unregister		= Standardsidetjenesten '{0}' kan ikke afregistreres.
-application_service_unavailable				= Tjenesten '{0}' er ikke tilgængelig i øjeblikket.
 service_csrf_token_invalid					= Tjenesten '{0}' kræver et gyldigt CSRF-token.
 application_moduleid_duplicated				= Applikationsmodul-ID'et '{0}' er ikke unikt.
 application_runtimepath_failed				= Runtime-stien '{0}' kan ikke oprettes. Sørg for, at den overordnede mappe findes og kan skrives af webprocessen.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Kun objekter, der implementerer I
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' er ugyldig. Sørg for, at den er i navneområdeform og peger på en gyldig mappe med fejlskabelonfiler.
 
-pageservice_pageclass_unknown				= Sideklassen '{0}' er ukendt.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' er ikke en gyldig mappe.
 pageservice_includefile_invalid				= Sidetjenestekonfigurationen {0} kan ikke findes. Sørg for, at den er i navneområdeformat, og at filen ender på ".xml" eller ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} kan ikke ændres. Integritetsmodulet er allerede initialiseret.
 
 javascript_script_integrity_required		= Der er ingen Subresource Integrity registreret for det eksterne script '{0}', men integritet er påkrævet.
+stylesheet_integrity_required				= Der er ikke registreret nogen Subresource Integrity for det eksterne stylesheet '{0}', men integritet er påkrævet.
 
 authmanager_usermanager_required			= TAuthManager.UserManager skal tildeles en værdi.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' henviser ikke til et ID for et applikationsmodul.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' skal være omsluttet af TForm.
 page_head_duplicated						= En side kan højst indeholde én THead.
 page_head_required							= En THead-kontrol er nødvendig i sideskabelonen for at rendere CSS og js i HTML-head-sektionen.
 page_statepersister_invalid					= Sidetilstandspersisteren skal implementere IPageStatePersister-interfacet.
-page_csmanagerclass_invalid					= ClientScriptManager-klassen '{0}' skal være en instans af TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Ukendt Prado-scriptbiblioteksnavn '{0}'.
 csmanager_pradostyle_invalid				= Ukendt Prado-stilbiblioteksnavn '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Komprimeringsværktøjet '{0}' kommandoen '{1}
 socketservermodule_endpoint_required		= TSocketServerModule kræver et Endpoint eller en positiv Port til at sammensætte et.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' er ugyldig. Den skal være TSocketServer eller en underklasse.
 socketservermodule_scheme_not_stream		= TSocketServerModule kan ikke acceptere forbindelser på det forbindelsesløse skema '{0}'. Brug et strømskema såsom tcp, tls, ssl eller unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' er ugyldig. Den skal implementere Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Hændelsesløkkens forsinkelse '{0}' er ugyldig. Den skal være nul eller flere sekunder.
+eventloop_callback_invalid					= Hændelsesløkkens callback '{0}' er ukendt; den er aldrig blevet registreret eller er allerede annulleret.
+eventloop_signals_unsupported				= Hændelsesløkkens signal-callbacks kræver pcntl-udvidelsen.
 
 bitreader_invalid_bits						= Kan ikke læse {0} bits; antallet skal være mellem 0 og platformens heltalsbredde.
 bitreader_64bit_php_required				= Læsning af {0} bits kræver en 64-bit PHP-build.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' er ikke medlem af TTableCel
 tactivetablerow_control_outoftable			= {0} '{1}' skal være omsluttet af en TTable-kontrol.
 tactivetablerow_control_notincollection		= {0} '{1}' er ikke medlem af TTableRowCollection i den overordnede TTable-kontrol.
 
-juioptions_control_invalid					= Kontrollen '{0}' skal implementere IJuiOptions.
 juioptions_option_invalid					= '{1}' er ikke en gyldig indstilling for kontrollen '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' er ikke en gyldig captionkontrol for TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max skal være større end 0; {0} angivet.
 
 time_invalid_datetime						= TTime DateTime skal være en DateTimeInterface, DateInterval, streng eller numerisk værdi; {0} angivet.
 time_invalid_text_format					= TTime TextFormat '{0}' er ikke et TTimeFormat-konstantnavn eller et ICU-datetime-mønster.
+
+bdo_dir_invalid								= {0}.Dir '{1}' er ugyldig. De tilladte værdier er 'ltr' og 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' har ingen TReferenceList: ReferenceList '{1}' er ikke en TReferenceList, eller siden har ingen.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel skal være 1 til 6; {0} blev angivet.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' kan ikke indeholde '{1}': aktive, postback- og validatorkontroller fungerer ikke inden i inert skabelonindhold. Brug almindelig markup med {{...}}-pladsholdere, eller sæt ValidateContent="false".
 

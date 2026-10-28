@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array нельзя уст�
 application_includefile_invalid				= Не удалось найти конфигурацию приложения {0}. Убедитесь, что она задана в формате пространства имён, а файл имеет расширение ".xml" или ".php".
 application_basepath_invalid				= Базовый путь приложения '{0}' не существует или не является каталогом.
 application_runtimepath_invalid				= Путь времени выполнения приложения '{0}' не существует или недоступен для записи процессу веб-сервера.
-application_service_invalid					= Сервис '{0}' должен реализовывать интерфейс IService.
 application_service_class_not_found			= Класс сервиса '{0}' не существует.
 application_service_class_not_service		= Класс сервиса '{0}' не реализует IService.
 application_service_class_required			= TApplication::registerService() требует имя класса или массив конфигурации сервиса для сервиса '{0}'.
 application_service_default_unregister		= Сервис страниц по умолчанию '{0}' нельзя отменить.
-application_service_unavailable				= Сервис '{0}' в данный момент недоступен.
 service_csrf_token_invalid					= Сервис '{0}' требует действительный CSRF-токен.
 application_moduleid_duplicated				= ID модуля приложения '{0}' не уникален.
 application_runtimepath_failed				= Не удалось создать путь времени выполнения '{0}'. Убедитесь, что родительский каталог существует и доступен для записи процессу веб-сервера.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= В TCacheDependencyList можн�
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' недопустим. Убедитесь, что он задан в формате пространства имён и указывает на существующий каталог с файлами шаблонов ошибок.
 
-pageservice_pageclass_unknown				= Класс страницы '{0}' неизвестен.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' не является существующим каталогом.
 pageservice_includefile_invalid				= Не удалось найти конфигурацию сервиса страниц {0}. Убедитесь, что она задана в формате пространства имён, а файл имеет расширение ".xml" или ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} нельзя изменить. Модуль целостности уже инициализирован.
 
 javascript_script_integrity_required		= Для внешнего скрипта '{0}' не зарегистрирован Subresource Integrity, но целостность обязательна.
+stylesheet_integrity_required				= Для внешней таблицы стилей '{0}' не зарегистрирован Subresource Integrity, но целостность обязательна.
 
 authmanager_usermanager_required			= TAuthManager.UserManager должен иметь значение.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' не ссылается на ID модуля приложения.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' должен находиться вну
 page_head_duplicated						= Страница может содержать не более одного THead.
 page_head_required							= Для вывода CSS и js в секции head HTML в шаблоне страницы требуется элемент управления THead.
 page_statepersister_invalid					= Хранитель состояния страницы должен реализовывать интерфейс IPageStatePersister.
-page_csmanagerclass_invalid					= Класс ClientScriptManager '{0}' должен быть экземпляром TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Неизвестное имя библиотеки скриптов Prado '{0}'.
 csmanager_pradostyle_invalid				= Неизвестное имя библиотеки стилей Prado '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Команда '{1}' компрессора '{
 socketservermodule_endpoint_required		= TSocketServerModule требует Endpoint или положительный Port для его формирования.
 socketservermodule_serverclass_invalid		= ServerClass '{0}' у TSocketServerModule недопустим. Это должен быть TSocketServer или его подкласс.
 socketservermodule_scheme_not_stream		= TSocketServerModule не может принимать соединения по схеме без установления соединения '{0}'. Используйте потоковую схему, например tcp, tls, ssl или unix.
+socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' у TSocketServerModule недопустим. Он должен реализовывать Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Задержка цикла событий '{0}' недопустима. Она должна быть равна нулю или более секунд.
+eventloop_callback_invalid					= Callback цикла событий '{0}' неизвестен: он не был зарегистрирован или уже отменён.
+eventloop_signals_unsupported				= Для callback-обработчиков сигналов цикла событий требуется расширение pcntl.
 
 bitreader_invalid_bits						= Невозможно прочитать {0} бит; количество должно быть от 0 до разрядности целого числа платформы.
 bitreader_64bit_php_required				= Для чтения {0} бит требуется 64-битная сборка PHP.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' не входит в TTable
 tactivetablerow_control_outoftable			= {0} '{1}' должен находиться внутри элемента управления TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' не входит в TTableRowCollection родительского элемента управления TTable.
 
-juioptions_control_invalid					= Элемент управления '{0}' должен реализовывать IJuiOptions.
 juioptions_option_invalid					= '{1}' не является допустимой опцией для элемента управления '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' не является корректным элементом управления подписи для TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= Max у TProgress должно быть больше 
 
 time_invalid_datetime						= DateTime у TTime должно быть DateTimeInterface, DateInterval, строкой или числовым значением; передано {0}.
 time_invalid_text_format					= TextFormat у TTime '{0}' не является именем константы TTimeFormat или шаблоном даты и времени ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' недопустимо. Допустимые значения: 'ltr' и 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' не имеет TReferenceList: ReferenceList '{1}' не является TReferenceList, либо на странице его нет.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel должен быть от 1 до 6; передано {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' не может содержать '{1}': активные, postback- и валидирующие элементы управления не работают внутри инертного содержимого шаблона. Используйте обычную разметку с плейсхолдерами {{...}} или установите ValidateContent="false".
 

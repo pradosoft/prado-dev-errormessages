@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array не може бит
 application_includefile_invalid				= Конфигурација апликације {0} није пронађена. Проверите да је у формату именског простора и да се датотека завршава на ".xml" или ".php".
 application_basepath_invalid				= Основна путања апликације '{0}' не постоји или није директоријум.
 application_runtimepath_invalid				= Путања за извршавање апликације '{0}' не постоји или није уписива за процес веб сервера.
-application_service_invalid					= Сервис '{0}' мора имплементирати интерфејс IService.
 application_service_class_not_found			= Класа сервиса '{0}' не постоји.
 application_service_class_not_service		= Класа сервиса '{0}' не имплементира IService.
 application_service_class_required			= TApplication::registerService() захтева име класе или конфигурациони низ сервиса за сервис '{0}'.
 application_service_default_unregister		= Подразумевани сервис страница '{0}' не може бити одјављен.
-application_service_unavailable				= Сервис '{0}' тренутно није доступан.
 service_csrf_token_invalid					= Сервис '{0}' захтева важећи CSRF токен.
 application_moduleid_duplicated				= ID модула апликације '{0}' није јединствен.
 application_runtimepath_failed				= Није могуће креирати путању за извршавање '{0}'. Проверите да надређени директоријум постоји и да је уписив за процес веб сервера.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= У TCacheDependencyList могу 
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' није важећи. Проверите да је у облику именског простора и да указује на важећи директоријум који садржи датотеке шаблона грешака.
 
-pageservice_pageclass_unknown				= Класа странице '{0}' није позната.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' није важећи директоријум.
 pageservice_includefile_invalid				= Конфигурација сервиса страница {0} није пронађена. Проверите да је у формату именског простора и да се датотека завршава на ".xml" или ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} не може бити измењен. Модул интегритета је већ иницијализован.
 
 javascript_script_integrity_required		= За удаљену скрипту '{0}' није регистрован Subresource Integrity, а интегритет је обавезан.
+stylesheet_integrity_required				= За удаљени стилски лист '{0}' није регистрован ниједан Subresource Integrity, а интегритет је обавезан.
 
 authmanager_usermanager_required			= TAuthManager.UserManager мора имати додељену вредност.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' се не односи на ID модула апликације.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' мора бити унутар TForm.
 page_head_duplicated						= Страница може садржати највише један THead.
 page_head_required							= Контрола THead је потребна у шаблону странице да би се CSS и js исцртали у HTML head секцији.
 page_statepersister_invalid					= Чувар стања странице мора имплементирати интерфејс IPageStatePersister.
-page_csmanagerclass_invalid					= Класа ClientScriptManager '{0}' мора бити инстанца класе TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Непознат назив Prado библиотеке скрипти '{0}'.
 csmanager_pradostyle_invalid				= Непознат назив Prado библиотеке стилова '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Команда компресора '{0}' '{1}
 socketservermodule_endpoint_required		= TSocketServerModule захтева Endpoint или позитиван Port од којег ће га саставити.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' није важећи. Мора бити TSocketServer или поткласа.
 socketservermodule_scheme_not_stream		= TSocketServerModule не може прихватати везе на шеми без успостављања везе '{0}'. Користите stream шему као што је tcp, tls, ssl или unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' није важећи. Мора имплементирати Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Кашњење петље догађаја '{0}' није важеће. Мора бити нула или више секунди.
+eventloop_callback_invalid					= Callback петље догађаја '{0}' није познат; никада није регистрован или је већ отказан.
+eventloop_signals_unsupported				= Сигнални callback-ови петље догађаја захтевају проширење pcntl.
 
 bitreader_invalid_bits						= Није могуће прочитати {0} бита; број мора бити између 0 и ширине целог броја платформе.
 bitreader_64bit_php_required				= Читање {0} бита захтева 64-битну PHP верзију.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' није члан TTableCel
 tactivetablerow_control_outoftable			= {0} '{1}' мора бити унутар TTable контроле.
 tactivetablerow_control_notincollection		= {0} '{1}' није члан TTableRowCollection надређене TTable контроле.
 
-juioptions_control_invalid					= Контрола '{0}' мора имплементирати IJuiOptions.
 juioptions_option_invalid					= '{1}' није важећа опција за контролу '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' није важећа контрола натписа за TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max мора бити већи од 0; д�
 
 time_invalid_datetime						= TTime DateTime мора бити DateTimeInterface, DateInterval, стринг или нумеричка вредност; дато је {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' није назив TTimeFormat константе ни ICU образац датума и времена.
+
+bdo_dir_invalid								= {0}.Dir '{1}' није важећи. Дозвољене вредности су 'ltr' и 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' нема TReferenceList: ReferenceList '{1}' није TReferenceList, или га страница нема.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel мора бити од 1 до 6; дато је {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' не може садржати '{1}': активне, postback и валидаторске контроле не функционишу унутар инертног садржаја шаблона. Користите обичан markup са {{...}} чуварима места или поставите ValidateContent="false".
 

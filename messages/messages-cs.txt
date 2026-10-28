@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array nelze nastavit pří
 application_includefile_invalid				= Konfiguraci aplikace {0} nelze najít. Ujistěte se, že je ve formátu jmenného prostoru a soubor končí na ".xml" nebo ".php".
 application_basepath_invalid				= Základní cesta aplikace '{0}' neexistuje nebo není adresářem.
 application_runtimepath_invalid				= Běhová cesta aplikace '{0}' neexistuje nebo do ní proces webového serveru nemůže zapisovat.
-application_service_invalid					= Služba '{0}' musí implementovat rozhraní IService.
 application_service_class_not_found			= Třída služby '{0}' neexistuje.
 application_service_class_not_service		= Třída služby '{0}' neimplementuje IService.
 application_service_class_required			= TApplication::registerService() vyžaduje název třídy nebo pole s konfigurací služby pro službu '{0}'.
 application_service_default_unregister		= Výchozí službu stránek '{0}' nelze odregistrovat.
-application_service_unavailable				= Služba '{0}' není v tuto chvíli dostupná.
 service_csrf_token_invalid					= Služba '{0}' vyžaduje platný CSRF token.
 application_moduleid_duplicated				= ID modulu aplikace '{0}' není jedinečné.
 application_runtimepath_failed				= Běhovou cestu '{0}' nelze vytvořit. Ujistěte se, že nadřazený adresář existuje a webový proces do něj může zapisovat.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Do TCacheDependencyList lze přid
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' je neplatná. Ujistěte se, že je ve formátu jmenného prostoru a odkazuje na platný adresář obsahující soubory chybových šablon.
 
-pageservice_pageclass_unknown				= Třída stránky '{0}' není známa.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' není platný adresář.
 pageservice_includefile_invalid				= Konfiguraci služby stránek {0} nelze najít. Ujistěte se, že je ve formátu jmenného prostoru a soubor končí na ".xml" nebo ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} nelze změnit. Modul integrity je již inicializován.
 
 javascript_script_integrity_required		= Pro vzdálený skript '{0}' není registrována žádná Subresource Integrity, ale integrita je vyžadována.
+stylesheet_integrity_required				= Pro vzdálenou šablonu stylů '{0}' není registrována žádná Subresource Integrity, ale integrita je vyžadována.
 
 authmanager_usermanager_required			= TAuthManager.UserManager musí mít přiřazenou hodnotu.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' neodkazuje na ID modulu aplikace.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' musí být uzavřen v TForm.
 page_head_duplicated						= Stránka může obsahovat nejvýše jeden THead.
 page_head_required							= Pro vykreslení CSS a js v sekci head HTML je v šabloně stránky vyžadován prvek THead.
 page_statepersister_invalid					= Persister stavu stránky musí implementovat rozhraní IPageStatePersister.
-page_csmanagerclass_invalid					= Třída ClientScriptManager '{0}' musí být instancí TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Neznámý název knihovny skriptů Prado '{0}'.
 csmanager_pradostyle_invalid				= Neznámý název knihovny stylů Prado '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Příkaz '{1}' kompresoru '{0}' skončil s kó
 socketservermodule_endpoint_required		= TSocketServerModule vyžaduje Endpoint nebo kladný Port, ze kterého jej sestaví.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' je neplatná. Musí to být TSocketServer nebo jeho podtřída.
 socketservermodule_scheme_not_stream		= TSocketServerModule nemůže přijímat spojení na schématu bez spojení '{0}'. Použijte streamové schéma, například tcp, tls, ssl nebo unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' je neplatná. Musí implementovat Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Zpoždění smyčky událostí '{0}' je neplatné. Musí to být nula nebo více sekund.
+eventloop_callback_invalid					= Callback smyčky událostí '{0}' je neznámý; nikdy nebyl registrován nebo je již zrušen.
+eventloop_signals_unsupported				= Signálové callbacky smyčky událostí vyžadují rozšíření pcntl.
 
 bitreader_invalid_bits						= Nelze číst {0} bitů; počet musí být mezi 0 a šířkou celého čísla platformy.
 bitreader_64bit_php_required				= Čtení {0} bitů vyžaduje 64bitové sestavení PHP.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' není členem TTableCellCol
 tactivetablerow_control_outoftable			= {0} '{1}' musí být uzavřen v prvku TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' není členem TTableRowCollection nadřazeného prvku TTable.
 
-juioptions_control_invalid					= Prvek '{0}' musí implementovat IJuiOptions.
 juioptions_option_invalid					= '{1}' není platná volba pro prvek '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' není platný prvek titulku pro TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max musí být větší než 0; zadáno {0
 
 time_invalid_datetime						= TTime DateTime musí být DateTimeInterface, DateInterval, řetězec nebo číselná hodnota; zadáno {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' není název konstanty TTimeFormat ani ICU vzor data a času.
+
+bdo_dir_invalid								= {0}.Dir '{1}' je neplatné. Povolené hodnoty jsou 'ltr' a 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' nemá žádný TReferenceList: ReferenceList '{1}' není TReferenceList, nebo stránka žádný neobsahuje.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel musí být 1 až 6; zadáno {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nemůže obsahovat '{1}': aktivní, postbackové a validační prvky uvnitř neaktivního obsahu šablony nefungují. Použijte prostý markup se zástupnými symboly {{...}}, nebo nastavte ValidateContent="false".
 

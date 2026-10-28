@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array ei saa otse määrat
 application_includefile_invalid				= Rakenduse konfiguratsiooni {0} ei leitud. Veendu, et see on nimeruumi vormingus ja faili laiend on ".xml" või ".php".
 application_basepath_invalid				= Rakenduse baastee '{0}' ei eksisteeri või ei ole kataloog.
 application_runtimepath_invalid				= Rakenduse käitusaja tee '{0}' ei eksisteeri või ei ole veebiserveri protsessile kirjutatav.
-application_service_invalid					= Teenus '{0}' peab realiseerima liidese IService.
 application_service_class_not_found			= Teenuseklass '{0}' ei eksisteeri.
 application_service_class_not_service		= Teenuseklass '{0}' ei realiseeri liidest IService.
 application_service_class_required			= TApplication::registerService() nõuab teenuse '{0}' jaoks klassinime või teenuse konfiguratsiooni massiivi.
 application_service_default_unregister		= Vaikimisi leheteenuse '{0}' registreeringut ei saa tühistada.
-application_service_unavailable				= Teenus '{0}' ei ole praegu saadaval.
 service_csrf_token_invalid					= Teenus '{0}' nõuab kehtivat CSRF-märgist.
 application_moduleid_duplicated				= Rakenduse mooduli ID '{0}' ei ole unikaalne.
 application_runtimepath_failed				= Käitusaja teed '{0}' ei õnnestu luua. Veendu, et ülemkataloog eksisteerib ja on veebiprotsessile kirjutatav.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList loendisse sa
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' on vigane. Veendu, et see on nimeruumi kujul ja viitab kehtivale kataloogile, mis sisaldab veamallide faile.
 
-pageservice_pageclass_unknown				= Leheklass '{0}' on tundmatu.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ei ole kehtiv kataloog.
 pageservice_includefile_invalid				= Leheteenuse konfiguratsiooni {0} ei leitud. Veendu, et see on nimeruumi vormingus ja faili laiend on ".xml" või ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} ei saa muuta. Terviklusmoodul on juba lähtestatud.
 
 javascript_script_integrity_required		= Kaugskripti '{0}' jaoks ei ole registreeritud Subresource Integrity väärtust, kuid terviklus on nõutav.
+stylesheet_integrity_required				= Kaugstiililehe '{0}' jaoks ei ole registreeritud ühtegi Subresource Integrity väärtust, kuid terviklus on nõutav.
 
 authmanager_usermanager_required			= TAuthManager.UserManager peab olema määratud.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' ei viita rakenduse mooduli ID-le.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' peab asuma TForm elemendi sees.
 page_head_duplicated						= Leht võib sisaldada ülimalt ühte THead elementi.
 page_head_required							= CSS-i ja JS-i renderdamiseks HTML-i head-sektsioonis on lehe mallis vajalik THead juhtelement.
 page_statepersister_invalid					= Lehe oleku säilitaja peab realiseerima liidese IPageStatePersister.
-page_csmanagerclass_invalid					= ClientScriptManager klass '{0}' peab olema klassi TClientScriptManager isend.
 
 csmanager_pradoscript_invalid				= Tundmatu Prado skriptiteegi nimi '{0}'.
 csmanager_pradostyle_invalid				= Tundmatu Prado stiiliteegi nimi '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Pakkija '{0}' käsk '{1}' lõpetas koodiga {2}
 socketservermodule_endpoint_required		= TSocketServerModule nõuab Endpoint väärtust või positiivset Port väärtust selle moodustamiseks.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' on vigane. See peab olema TSocketServer või selle alamklass.
 socketservermodule_scheme_not_stream		= TSocketServerModule ei saa ühendusi vastu võtta ühenduseta skeemil '{0}'. Kasuta vooskeemi, näiteks tcp, tls, ssl või unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' on vigane. See peab realiseerima liidese Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Sündmustsükli viivitus '{0}' on vigane. See peab olema null või enam sekundit.
+eventloop_callback_invalid					= Sündmustsükli tagasikutse '{0}' on tundmatu; seda ei ole kunagi registreeritud või see on juba tühistatud.
+eventloop_signals_unsupported				= Sündmustsükli signaalide tagasikutsed nõuavad laiendust pcntl.
 
 bitreader_invalid_bits						= {0} bitti ei saa lugeda; arv peab olema vahemikus 0 kuni platvormi täisarvu laius.
 bitreader_64bit_php_required				= {0} biti lugemine nõuab 64-bitist PHP ehitust.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' ei kuulu ülema TTableRow j
 tactivetablerow_control_outoftable			= {0} '{1}' peab asuma TTable juhtelemendi sees.
 tactivetablerow_control_notincollection		= {0} '{1}' ei kuulu ülema TTable juhtelemendi TTableRowCollection kogumisse.
 
-juioptions_control_invalid					= Juhtelement '{0}' peab realiseerima liidese IJuiOptions.
 juioptions_option_invalid					= '{1}' ei ole juhtelemendi '{0}' kehtiv valik.
 
 ratinglist_invalid_caption_id				= '{0}' ei ole TRatingList '{0}' kehtiv pealkirja juhtelement.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max peab olema suurem kui 0; anti {0}.
 
 time_invalid_datetime						= TTime DateTime peab olema DateTimeInterface, DateInterval, sõne või arvväärtus; anti {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ei ole TTimeFormat konstandi nimi ega ICU kuupäeva-aja muster.
+
+bdo_dir_invalid								= {0}.Dir '{1}' on vigane. Lubatud väärtused on 'ltr' ja 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' juurde ei kuulu TReferenceList: ReferenceList '{1}' ei ole TReferenceList või lehel pole ühtegi.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel peab olema 1 kuni 6; anti {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ei saa sisaldada elementi '{1}': aktiivsed, postback- ja valideerimisjuhtelemendid ei toimi inertse mallisisu sees. Kasuta tavalist märgendust koos {{...}} kohatäidetega või määra ValidateContent="false".
 

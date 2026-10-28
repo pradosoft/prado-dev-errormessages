@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array kan niet rechtstreek
 application_includefile_invalid				= De applicatieconfiguratie {0} is niet gevonden. Zorg dat deze in namespace-notatie staat en dat het bestand eindigt op ".xml" of ".php".
 application_basepath_invalid				= Het basispad van de applicatie '{0}' bestaat niet of is geen directory.
 application_runtimepath_invalid				= Het runtime-pad van de applicatie '{0}' bestaat niet of is niet schrijfbaar voor het webserverproces.
-application_service_invalid					= Service '{0}' moet de interface IService implementeren.
 application_service_class_not_found			= Serviceklasse '{0}' bestaat niet.
 application_service_class_not_service		= Serviceklasse '{0}' implementeert IService niet.
 application_service_class_required			= TApplication::registerService() vereist een klassenaam of een serviceconfiguratie-array voor service '{0}'.
 application_service_default_unregister		= De standaardpaginaservice '{0}' kan niet worden afgemeld.
-application_service_unavailable				= Service '{0}' is op dit moment niet beschikbaar.
 service_csrf_token_invalid					= Service '{0}' vereist een geldig CSRF-token.
 application_moduleid_duplicated				= Het applicatiemodule-ID '{0}' is niet uniek.
 application_runtimepath_failed				= Het runtime-pad '{0}' kan niet worden aangemaakt. Zorg dat de bovenliggende directory bestaat en schrijfbaar is voor het webproces.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Alleen objecten die ICacheDepende
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' is ongeldig. Zorg dat het in namespace-notatie staat en verwijst naar een geldige directory met foutsjabloonbestanden.
 
-pageservice_pageclass_unknown				= Paginaklasse '{0}' is onbekend.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' is geen geldige directory.
 pageservice_includefile_invalid				= De paginaserviceconfiguratie {0} is niet gevonden. Zorg dat deze in namespace-notatie staat en dat het bestand eindigt op ".xml" of ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} kan niet worden gewijzigd. De integriteitsmodule is al geïnitialiseerd.
 
 javascript_script_integrity_required		= Er is geen Subresource Integrity geregistreerd voor het externe script '{0}', maar integriteit is vereist.
+stylesheet_integrity_required				= Er is geen Subresource Integrity geregistreerd voor de externe stylesheet '{0}', maar integriteit is vereist.
 
 authmanager_usermanager_required			= Aan TAuthManager.UserManager moet een waarde worden toegewezen.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' verwijst niet naar het ID van een applicatiemodule.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' moet binnen een TForm staan.
 page_head_duplicated						= Een pagina kan hoogstens één THead bevatten.
 page_head_required							= Een THead-control is nodig in het paginasjabloon om CSS en js in de HTML-head-sectie te renderen.
 page_statepersister_invalid					= De paginastatus-persister moet de interface IPageStatePersister implementeren.
-page_csmanagerclass_invalid					= ClientScriptManager-klasse '{0}' moet een instantie van TClientScriptManager zijn.
 
 csmanager_pradoscript_invalid				= Onbekende naam van Prado-scriptbibliotheek '{0}'.
 csmanager_pradostyle_invalid				= Onbekende naam van Prado-stijlbibliotheek '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= De opdracht '{1}' van compressor '{0}' is beë
 socketservermodule_endpoint_required		= TSocketServerModule vereist een Endpoint, of een positieve Port om er een samen te stellen.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' is ongeldig. Het moet TSocketServer of een subklasse zijn.
 socketservermodule_scheme_not_stream		= TSocketServerModule kan geen verbindingen accepteren op het verbindingsloze schema '{0}'. Gebruik een streamschema zoals tcp, tls, ssl of unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' is ongeldig. Het moet Prado\IO\Async\IEventLoop implementeren.
+
+eventloop_delay_invalid						= De event-loop-vertraging '{0}' is ongeldig. Deze moet nul of meer seconden zijn.
+eventloop_callback_invalid					= De event-loop-callback '{0}' is onbekend; deze is nooit geregistreerd of is al geannuleerd.
+eventloop_signals_unsupported				= Signaal-callbacks van de event loop vereisen de extensie pcntl.
 
 bitreader_invalid_bits						= Kan {0} bits niet lezen; het aantal moet tussen 0 en de integerbreedte van het platform liggen.
 bitreader_64bit_php_required				= Het lezen van {0} bits vereist een 64-bits PHP-build.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' is geen lid van de TTableCe
 tactivetablerow_control_outoftable			= {0} '{1}' moet binnen een TTable-control staan.
 tactivetablerow_control_notincollection		= {0} '{1}' is geen lid van de TTableRowCollection van de bovenliggende TTable-control.
 
-juioptions_control_invalid					= Control '{0}' moet IJuiOptions implementeren.
 juioptions_option_invalid					= '{1}' is geen geldige optie voor control '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' is geen geldige caption-control voor TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= De Max van TProgress moet groter dan 0 zijn; {0} opg
 
 time_invalid_datetime						= De DateTime van TTime moet een DateTimeInterface, DateInterval, string of numerieke waarde zijn; {0} opgegeven.
 time_invalid_text_format					= De TextFormat '{0}' van TTime is geen constantenaam van TTimeFormat en geen ICU-datum-tijdpatroon.
+
+bdo_dir_invalid								= {0}.Dir '{1}' is ongeldig. Toegestane waarden zijn 'ltr' en 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' heeft geen TReferenceList: ReferenceList '{1}' is geen TReferenceList, of de pagina heeft er geen.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel moet 1 tot en met 6 zijn; {0} opgegeven.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' kan '{1}' niet bevatten: active, postback- en validator-controls werken niet binnen inerte sjablooninhoud. Gebruik gewone markup met {{...}}-placeholders of stel ValidateContent="false" in.
 

@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array nevar iestatīt tie�
 application_includefile_invalid				= Nevar atrast lietojumprogrammas konfigurāciju {0}. Pārliecinieties, ka tā ir nosaukumvietas formātā un fails beidzas ar ".xml" vai ".php".
 application_basepath_invalid				= Lietojumprogrammas bāzes ceļš '{0}' neeksistē vai nav direktorija.
 application_runtimepath_invalid				= Lietojumprogrammas izpildlaika ceļš '{0}' neeksistē vai tīmekļa servera procesam tajā nav rakstīšanas tiesību.
-application_service_invalid					= Pakalpojumam '{0}' jāimplementē IService interfeiss.
 application_service_class_not_found			= Pakalpojuma klase '{0}' neeksistē.
 application_service_class_not_service		= Pakalpojuma klase '{0}' neimplementē IService.
 application_service_class_required			= TApplication::registerService() pieprasa klases nosaukumu vai pakalpojuma konfigurācijas masīvu pakalpojumam '{0}'.
 application_service_default_unregister		= Noklusējuma lapu pakalpojuma '{0}' reģistrāciju nevar atcelt.
-application_service_unavailable				= Pakalpojums '{0}' šobrīd nav pieejams.
 service_csrf_token_invalid					= Pakalpojumam '{0}' ir nepieciešams derīgs CSRF marķieris.
 application_moduleid_duplicated				= Lietojumprogrammas moduļa ID '{0}' nav unikāls.
 application_runtimepath_failed				= Nevar izveidot izpildlaika ceļu '{0}'. Pārliecinieties, ka vecākdirektorija eksistē un tīmekļa procesam tajā ir rakstīšanas tiesības.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList var pievieno
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' nav derīgs. Pārliecinieties, ka tas ir nosaukumvietas formā un norāda uz derīgu direktoriju, kurā ir kļūdu veidņu faili.
 
-pageservice_pageclass_unknown				= Lapas klase '{0}' nav zināma.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nav derīga direktorija.
 pageservice_includefile_invalid				= Nevar atrast lapu pakalpojuma konfigurāciju {0}. Pārliecinieties, ka tā ir nosaukumvietas formātā un fails beidzas ar ".xml" vai ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} nevar mainīt. Integritātes modulis jau ir inicializēts.
 
 javascript_script_integrity_required		= Attālajam skriptam '{0}' nav reģistrēta apakšresursu integritāte (Subresource Integrity), bet integritāte ir obligāta.
+stylesheet_integrity_required				= Attālajai stilu lapai '{0}' nav reģistrēta apakšresursu integritāte (Subresource Integrity), bet integritāte ir obligāta.
 
 authmanager_usermanager_required			= TAuthManager.UserManager jāpiešķir vērtība.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' nenorāda uz lietojumprogrammas moduļa ID.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' jābūt ietvertai TForm iekšpusē.
 page_head_duplicated						= Lapa var saturēt ne vairāk kā vienu THead.
 page_head_required							= Lai HTML head sadaļā renderētu CSS un JS, lapas veidnē nepieciešama THead vadīkla.
 page_statepersister_invalid					= Lapas stāvokļa saglabātājam jāimplementē IPageStatePersister interfeiss.
-page_csmanagerclass_invalid					= ClientScriptManager klasei '{0}' jābūt TClientScriptManager instancei.
 
 csmanager_pradoscript_invalid				= Nezināms Prado skriptu bibliotēkas nosaukums '{0}'.
 csmanager_pradostyle_invalid				= Nezināms Prado stilu bibliotēkas nosaukums '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Kompresora '{0}' komanda '{1}' beidza darbu ar
 socketservermodule_endpoint_required		= TSocketServerModule nepieciešams Endpoint vai pozitīvs Port, no kura to izveidot.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' nav derīga. Tai jābūt TSocketServer vai tās apakšklasei.
 socketservermodule_scheme_not_stream		= TSocketServerModule nevar pieņemt savienojumus bezsavienojuma shēmā '{0}'. Lietojiet plūsmas shēmu, piemēram, tcp, tls, ssl vai unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' nav derīga. Tai jāimplementē Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Notikumu cikla aizkave '{0}' nav derīga. Tai jābūt nullei vai vairāk sekundēm.
+eventloop_callback_invalid					= Notikumu cikla atzvans '{0}' nav zināms; tas nekad nav reģistrēts vai ir jau atcelts.
+eventloop_signals_unsupported				= Notikumu cikla signālu atzvaniem nepieciešams pcntl paplašinājums.
 
 bitreader_invalid_bits						= Nevar nolasīt {0} bitus; skaitam jābūt no 0 līdz platformas veselā skaitļa platumam.
 bitreader_64bit_php_required				= {0} bitu nolasīšanai nepieciešams 64 bitu PHP būvējums.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' nav virsvadīklas TTableRow
 tactivetablerow_control_outoftable			= {0} '{1}' jābūt ietvertai TTable vadīklā.
 tactivetablerow_control_notincollection		= {0} '{1}' nav virsvadīklas TTable kolekcijas TTableRowCollection loceklis.
 
-juioptions_control_invalid					= Vadīklai '{0}' jāimplementē IJuiOptions.
 juioptions_option_invalid					= '{1}' nav derīga opcija vadīklai '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' nav derīga paraksta vadīkla TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max jābūt lielākam par 0; norādīts {0
 
 time_invalid_datetime						= TTime DateTime jābūt DateTimeInterface, DateInterval, virknei vai skaitliskai vērtībai; norādīts {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nav TTimeFormat konstantes nosaukums vai ICU datuma un laika paraugs.
+
+bdo_dir_invalid								= {0}.Dir '{1}' nav derīga. Atļautās vērtības ir 'ltr' un 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' nav TReferenceList: ReferenceList '{1}' nav TReferenceList, vai lapai tā nav.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel jābūt no 1 līdz 6; norādīts {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nevar saturēt '{1}': aktīvās, postback un validatora vadīklas nedarbojas neaktīvā veidnes saturā. Lietojiet vienkāršu iezīmējumu ar {{...}} vietturiem vai iestatiet ValidateContent="false".
 

@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array tidak boleh ditetapk
 application_includefile_invalid				= Konfigurasi aplikasi {0} tidak dapat ditemui. Pastikan ia dalam format ruang nama dan fail berakhir dengan ".xml" atau ".php".
 application_basepath_invalid				= Laluan asas aplikasi '{0}' tidak wujud atau bukan direktori.
 application_runtimepath_invalid				= Laluan masa jalan aplikasi '{0}' tidak wujud atau tidak boleh ditulis oleh proses pelayan Web.
-application_service_invalid					= Perkhidmatan '{0}' mesti melaksanakan antara muka IService.
 application_service_class_not_found			= Kelas perkhidmatan '{0}' tidak wujud.
 application_service_class_not_service		= Kelas perkhidmatan '{0}' tidak melaksanakan IService.
 application_service_class_required			= TApplication::registerService() memerlukan nama kelas atau tatasusunan konfigurasi perkhidmatan untuk perkhidmatan '{0}'.
 application_service_default_unregister		= Perkhidmatan halaman lalai '{0}' tidak boleh dinyahdaftarkan.
-application_service_unavailable				= Perkhidmatan '{0}' tidak tersedia pada masa ini.
 service_csrf_token_invalid					= Perkhidmatan '{0}' memerlukan token CSRF yang sah.
 application_moduleid_duplicated				= ID modul aplikasi '{0}' tidak unik.
 application_runtimepath_failed				= Laluan masa jalan '{0}' tidak dapat dicipta. Pastikan direktori induk wujud dan boleh ditulis oleh proses Web.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Hanya objek yang melaksanakan ICa
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' tidak sah. Pastikan ia dalam bentuk ruang nama dan menunjuk kepada direktori sah yang mengandungi fail templat ralat.
 
-pageservice_pageclass_unknown				= Kelas halaman '{0}' tidak dikenali.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' bukan direktori yang sah.
 pageservice_includefile_invalid				= Konfigurasi perkhidmatan halaman {0} tidak dapat ditemui. Pastikan ia dalam format ruang nama dan fail berakhir dengan ".xml" atau ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} tidak boleh diubah. Modul integriti sudah dimulakan.
 
 javascript_script_integrity_required		= Tiada Subresource Integrity didaftarkan untuk skrip jauh '{0}', tetapi integriti diperlukan.
+stylesheet_integrity_required				= Tiada Subresource Integrity didaftarkan untuk lembaran gaya jauh '{0}', tetapi integriti diperlukan.
 
 authmanager_usermanager_required			= TAuthManager.UserManager mesti diberi nilai.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' tidak merujuk kepada ID modul aplikasi.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' mesti berada di dalam TForm.
 page_head_duplicated						= Halaman hanya boleh mengandungi paling banyak satu THead.
 page_head_required							= Kawalan THead diperlukan dalam templat halaman untuk memaparkan CSS dan js dalam bahagian head HTML.
 page_statepersister_invalid					= Pengekal keadaan halaman mesti melaksanakan antara muka IPageStatePersister.
-page_csmanagerclass_invalid					= Kelas ClientScriptManager '{0}' mesti merupakan tika TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nama pustaka skrip Prado '{0}' tidak dikenali.
 csmanager_pradostyle_invalid				= Nama pustaka gaya Prado '{0}' tidak dikenali.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Arahan pemampat '{0}' '{1}' keluar dengan kod 
 socketservermodule_endpoint_required		= TSocketServerModule memerlukan Endpoint, atau Port positif untuk membentuknya.
 socketservermodule_serverclass_invalid		= ServerClass TSocketServerModule '{0}' tidak sah. Ia mestilah TSocketServer atau subkelasnya.
 socketservermodule_scheme_not_stream		= TSocketServerModule tidak boleh menerima sambungan pada skema tanpa sambungan '{0}'. Gunakan skema strim seperti tcp, tls, ssl, atau unix.
+socketservermodule_eventloopclass_invalid	= EventLoopClass TSocketServerModule '{0}' tidak sah. Ia mesti melaksanakan Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Lengah gelung peristiwa '{0}' tidak sah. Ia mestilah sifar saat atau lebih.
+eventloop_callback_invalid					= Callback gelung peristiwa '{0}' tidak dikenali; ia tidak pernah didaftarkan atau sudah dibatalkan.
+eventloop_signals_unsupported				= Callback isyarat gelung peristiwa memerlukan sambungan pcntl.
 
 bitreader_invalid_bits						= Tidak dapat membaca {0} bit; bilangan mestilah antara 0 dan lebar integer platform.
 bitreader_64bit_php_required				= Membaca {0} bit memerlukan binaan PHP 64-bit.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' bukan ahli TTableCellCollec
 tactivetablerow_control_outoftable			= {0} '{1}' mesti berada di dalam kawalan TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' bukan ahli TTableRowCollection bagi kawalan TTable induk.
 
-juioptions_control_invalid					= Kawalan '{0}' mesti melaksanakan IJuiOptions.
 juioptions_option_invalid					= '{1}' bukan pilihan yang sah untuk kawalan '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' bukan kawalan kapsyen yang sah untuk TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= Max TProgress mesti lebih besar daripada 0; {0} dibe
 
 time_invalid_datetime						= DateTime TTime mestilah DateTimeInterface, DateInterval, rentetan, atau nilai berangka; {0} diberikan.
 time_invalid_text_format					= TextFormat TTime '{0}' bukan nama pemalar TTimeFormat atau corak tarikh-masa ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' tidak sah. Nilai yang dibenarkan ialah 'ltr' dan 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' tidak mempunyai TReferenceList: ReferenceList '{1}' bukan TReferenceList, atau halaman tidak mempunyainya.
+referencelist_headerlevel_invalid			= HeaderLevel TReferenceList mestilah 1 hingga 6; {0} diberikan.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' tidak boleh mengandungi '{1}': kawalan aktif, postback, dan pengesah tidak berfungsi di dalam kandungan templat lengai. Gunakan penanda biasa dengan ruang letak {{...}}, atau tetapkan ValidateContent="false".
 

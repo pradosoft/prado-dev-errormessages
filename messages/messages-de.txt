@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array kann nicht direkt ge
 application_includefile_invalid				= Die Anwendungskonfiguration {0} wurde nicht gefunden. Stellen Sie sicher, dass sie im Namespace-Format angegeben ist und die Datei auf ".xml" oder ".php" endet.
 application_basepath_invalid				= Der Basispfad der Anwendung '{0}' existiert nicht oder ist kein Verzeichnis.
 application_runtimepath_invalid				= Der Laufzeitpfad der Anwendung '{0}' existiert nicht oder ist für den Webserver-Prozess nicht beschreibbar.
-application_service_invalid					= Der Service '{0}' muss das Interface IService implementieren.
 application_service_class_not_found			= Die Service-Klasse '{0}' existiert nicht.
 application_service_class_not_service		= Die Service-Klasse '{0}' implementiert IService nicht.
 application_service_class_required			= TApplication::registerService() erfordert einen Klassennamen oder ein Service-Konfigurations-Array für den Service '{0}'.
 application_service_default_unregister		= Der Standard-Seitenservice '{0}' kann nicht abgemeldet werden.
-application_service_unavailable				= Der Service '{0}' ist derzeit nicht verfügbar.
 service_csrf_token_invalid					= Der Service '{0}' erfordert ein gültiges CSRF-Token.
 application_moduleid_duplicated				= Die Anwendungsmodul-ID '{0}' ist nicht eindeutig.
 application_runtimepath_failed				= Der Laufzeitpfad '{0}' kann nicht erstellt werden. Stellen Sie sicher, dass das übergeordnete Verzeichnis existiert und für den Webserver-Prozess beschreibbar ist.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Nur Objekte, die ICacheDependency
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' ist ungültig. Stellen Sie sicher, dass er im Namespace-Format angegeben ist und auf ein gültiges Verzeichnis mit Fehlervorlagendateien verweist.
 
-pageservice_pageclass_unknown				= Die Seitenklasse '{0}' ist unbekannt.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ist kein gültiges Verzeichnis.
 pageservice_includefile_invalid				= Die Seitenservice-Konfiguration {0} wurde nicht gefunden. Stellen Sie sicher, dass sie im Namespace-Format angegeben ist und die Datei auf ".xml" oder ".php" endet.
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} kann nicht geändert werden. Das Integritätsmodul wurde bereits initialisiert.
 
 javascript_script_integrity_required		= Für das entfernte Skript '{0}' ist keine Subresource Integrity registriert, Integrität ist aber erforderlich.
+stylesheet_integrity_required				= Für das externe Stylesheet '{0}' ist keine Subresource Integrity registriert, aber Integrität ist erforderlich.
 
 authmanager_usermanager_required			= TAuthManager.UserManager muss ein Wert zugewiesen werden.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' verweist nicht auf die ID eines Anwendungsmoduls.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' muss von TForm umschlossen sein.
 page_head_duplicated						= Eine Seite darf höchstens ein THead enthalten.
 page_head_required							= Die Seitenvorlage benötigt ein THead-Control, um CSS und JavaScript im HTML-Head-Bereich zu rendern.
 page_statepersister_invalid					= Der Seitenzustands-Persister muss die Schnittstelle IPageStatePersister implementieren.
-page_csmanagerclass_invalid					= Die ClientScriptManager-Klasse '{0}' muss eine Instanz von TClientScriptManager sein.
 
 csmanager_pradoscript_invalid				= Unbekannter Name der Prado-Skriptbibliothek '{0}'.
 csmanager_pradostyle_invalid				= Unbekannter Name der Prado-Stilbibliothek '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Der Befehl '{1}' des Kompressors '{0}' wurde m
 socketservermodule_endpoint_required		= TSocketServerModule erfordert einen Endpoint oder einen positiven Port, um einen zu bilden.
 socketservermodule_serverclass_invalid		= Die TSocketServerModule ServerClass '{0}' ist ungültig. Sie muss TSocketServer oder eine Unterklasse sein.
 socketservermodule_scheme_not_stream		= TSocketServerModule kann auf dem verbindungslosen Schema '{0}' keine Verbindungen annehmen. Verwenden Sie ein Stream-Schema wie tcp, tls, ssl oder unix.
+socketservermodule_eventloopclass_invalid	= Die TSocketServerModule EventLoopClass '{0}' ist ungültig. Sie muss Prado\IO\Async\IEventLoop implementieren.
+
+eventloop_delay_invalid						= Die Event-Loop-Verzögerung '{0}' ist ungültig. Sie muss null oder mehr Sekunden betragen.
+eventloop_callback_invalid					= Der Event-Loop-Callback '{0}' ist unbekannt; er wurde nie registriert oder ist bereits abgebrochen.
+eventloop_signals_unsupported				= Signal-Callbacks der Event-Loop erfordern die Erweiterung pcntl.
 
 bitreader_invalid_bits						= {0} Bits können nicht gelesen werden; die Anzahl muss zwischen 0 und der Integer-Breite der Plattform liegen.
 bitreader_64bit_php_required				= Das Lesen von {0} Bits erfordert ein 64-Bit-PHP.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' ist kein Mitglied der TTabl
 tactivetablerow_control_outoftable			= {0} '{1}' muss von einem TTable-Control umschlossen sein.
 tactivetablerow_control_notincollection		= {0} '{1}' ist kein Mitglied der TTableRowCollection des übergeordneten TTable-Controls.
 
-juioptions_control_invalid					= Das Control '{0}' muss IJuiOptions implementieren.
 juioptions_option_invalid					= '{1}' ist keine gültige Option für das Control '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' ist kein gültiges Beschriftungs-Control für TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max muss größer als 0 sein; übergeben w
 
 time_invalid_datetime						= TTime DateTime muss ein DateTimeInterface, ein DateInterval, ein String oder ein numerischer Wert sein; übergeben wurde {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ist weder der Name einer TTimeFormat-Konstante noch ein ICU-Datums-/Zeitmuster.
+
+bdo_dir_invalid								= {0}.Dir '{1}' ist ungültig. Zulässige Werte sind 'ltr' und 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' hat keine TReferenceList: ReferenceList '{1}' ist keine TReferenceList, oder die Seite hat keine.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel muss 1 bis 6 sein; {0} angegeben.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' darf '{1}' nicht enthalten: Active-, Postback- und Validator-Controls funktionieren innerhalb von inertem Vorlageninhalt nicht. Verwenden Sie reines Markup mit {{...}}-Platzhaltern oder setzen Sie ValidateContent="false".
 

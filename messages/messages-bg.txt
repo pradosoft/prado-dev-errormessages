@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array не може да �
 application_includefile_invalid				= Конфигурацията на приложението {0} не може да бъде намерена. Уверете се, че е във формат на пространство от имена и че файлът завършва на ".xml" или ".php".
 application_basepath_invalid				= Базовият път на приложението '{0}' не съществува или не е директория.
 application_runtimepath_invalid				= Пътят за изпълнение на приложението '{0}' не съществува или не е достъпен за запис от процеса на уеб сървъра.
-application_service_invalid					= Услугата '{0}' трябва да имплементира интерфейса IService.
 application_service_class_not_found			= Класът на услугата '{0}' не съществува.
 application_service_class_not_service		= Класът на услугата '{0}' не имплементира IService.
 application_service_class_required			= TApplication::registerService() изисква име на клас или масив с конфигурация на услугата за услугата '{0}'.
 application_service_default_unregister		= Услугата за страници по подразбиране '{0}' не може да бъде отрегистрирана.
-application_service_unavailable				= Услугата '{0}' не е достъпна в момента.
 service_csrf_token_invalid					= Услугата '{0}' изисква валиден CSRF токен.
 application_moduleid_duplicated				= ID на модула на приложението '{0}' не е уникален.
 application_runtimepath_failed				= Пътят за изпълнение '{0}' не може да бъде създаден. Уверете се, че родителската директория съществува и е достъпна за запис от уеб процеса.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Към TCacheDependencyList мо�
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' е невалидно. Уверете се, че е във формат на пространство от имена и сочи към валидна директория, съдържаща файлове с шаблони за грешки.
 
-pageservice_pageclass_unknown				= Класът на страницата '{0}' е неизвестен.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' не е валидна директория.
 pageservice_includefile_invalid				= Конфигурацията на услугата за страници {0} не може да бъде намерена. Уверете се, че е във формат на пространство от имена и че файлът завършва на ".xml" или ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} не може да бъде променено. Модулът за цялостност вече е инициализиран.
 
 javascript_script_integrity_required		= За отдалечения скрипт '{0}' не е регистрирана Subresource Integrity, а цялостността е задължителна.
+stylesheet_integrity_required				= За отдалечения стилов файл '{0}' не е регистриран Subresource Integrity, но интегритетът е задължителен.
 
 authmanager_usermanager_required			= На TAuthManager.UserManager трябва да бъде присвоена стойност.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' не сочи към ID на модул на приложението.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' трябва да бъде вложен 
 page_head_duplicated						= Една страница може да съдържа най-много един THead.
 page_head_required							= В шаблона на страницата е необходима контрола THead, за да се рендират CSS и js в секцията head на HTML.
 page_statepersister_invalid					= Класът за запазване на състоянието на страницата трябва да имплементира интерфейса IPageStatePersister.
-page_csmanagerclass_invalid					= Класът ClientScriptManager '{0}' трябва да бъде инстанция на TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Неизвестно име на скриптова библиотека на Prado '{0}'.
 csmanager_pradostyle_invalid				= Неизвестно име на библиотека със стилове на Prado '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Командата '{1}' на компресо
 socketservermodule_endpoint_required		= TSocketServerModule изисква Endpoint или положителен Port, от който да го състави.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' е невалиден. Трябва да бъде TSocketServer или негов подклас.
 socketservermodule_scheme_not_stream		= TSocketServerModule не може да приема връзки по схемата без връзка '{0}'. Използвайте поточна схема като tcp, tls, ssl или unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' е невалиден. Трябва да имплементира Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Закъснението '{0}' на цикъла на събитията е невалидно. Трябва да бъде нула или повече секунди.
+eventloop_callback_invalid					= Callback '{0}' на цикъла на събитията е неизвестен; никога не е бил регистриран или вече е отменен.
+eventloop_signals_unsupported				= Сигналните callback-и на цикъла на събитията изискват разширението pcntl.
 
 bitreader_invalid_bits						= Не могат да бъдат прочетени {0} бита; броят трябва да бъде между 0 и ширината на цялото число на платформата.
 bitreader_64bit_php_required				= Четенето на {0} бита изисква 64-битова PHP компилация.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' не е член на TTabl
 tactivetablerow_control_outoftable			= {0} '{1}' трябва да бъде вложен в контрола TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' не е член на TTableRowCollection на родителската контрола TTable.
 
-juioptions_control_invalid					= Контролата '{0}' трябва да имплементира IJuiOptions.
 juioptions_option_invalid					= '{1}' не е валидна опция за контролата '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' не е валидна контрола за надпис за TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max трябва да бъде по-гол
 
 time_invalid_datetime						= TTime DateTime трябва да бъде DateTimeInterface, DateInterval, низ или числова стойност; подадено е {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' не е име на константа на TTimeFormat или ICU шаблон за дата и час.
+
+bdo_dir_invalid								= {0}.Dir '{1}' е невалидно. Допустимите стойности са 'ltr' и 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' няма TReferenceList: ReferenceList '{1}' не е TReferenceList или страницата няма такъв.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel трябва да бъде от 1 до 6; подадено е {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' не може да съдържа '{1}': активни, postback и валидаторни контроли не функционират вътре в инертно съдържание на шаблон. Използвайте обикновена маркировка със заместители {{...}} или задайте ValidateContent="false".
 

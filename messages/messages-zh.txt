@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array 不能被直接设�
 application_includefile_invalid				= 无法找到应用配置文件 {0}。请确认它以命名空间格式指定，并且文件以“.xml”或“.php”结尾。
 application_basepath_invalid				= 应用基础路径“{0}”不存在或不是一个目录。
 application_runtimepath_invalid				= 应用运行时路径“{0}”不存在，或 Web 服务器进程无法写入该目录。
-application_service_invalid					= 服务“{0}”必须实现 IService 接口。
 application_service_class_not_found			= 服务类“{0}”不存在。
 application_service_class_not_service		= 服务类“{0}”没有实现 IService。
 application_service_class_required			= TApplication::registerService() 需要为服务“{0}”提供类名或服务配置数组。
 application_service_default_unregister		= 默认页面服务“{0}”不能被注销。
-application_service_unavailable				= 服务“{0}”当前不可用。
 service_csrf_token_invalid					= 服务“{0}”需要一个有效的 CSRF 令牌。
 application_moduleid_duplicated				= 应用模块 ID“{0}”不唯一。
 application_runtimepath_failed				= 无法创建运行时路径“{0}”。请确认父目录存在，并且可被 Web 进程写入。
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= 只有实现 ICacheDependency 的
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath“{0}”无效。请确认它以命名空间格式指定，并且指向一个包含错误模板文件的有效目录。
 
-pageservice_pageclass_unknown				= 页面类“{0}”未知。
 pageservice_basepath_invalid				= TPageService.BasePath“{0}”不是一个有效的目录。
 pageservice_includefile_invalid				= 无法找到页面服务配置 {0}。请确认它以命名空间格式指定，并且文件以“.xml”或“.php”结尾。
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile“{0}�
 integritymanager_integrityfile_unchangeable	= {1}.{0} 不能修改。完整性模块已经初始化完毕。
 
 javascript_script_integrity_required		= 远程脚本“{0}”没有注册子资源完整性（Subresource Integrity），但完整性校验是必需的。
+stylesheet_integrity_required				= 远程样式表“{0}”没有注册 Subresource Integrity，但完整性是必需的。
 
 authmanager_usermanager_required			= 必须为 TAuthManager.UserManager 指定一个值。
 authmanager_usermanager_inexistent			= TAuthManager.UserManager“{0}”没有指向任何应用模块的 ID。
@@ -338,7 +336,6 @@ page_control_outofform						= {0}“{1}”必须包含在 TForm 之内。
 page_head_duplicated						= 一个页面最多只能包含一个 THead。
 page_head_required							= 页面模板中需要一个 THead 控件，以便在 HTML head 部分渲染 CSS 和 js。
 page_statepersister_invalid					= 页面状态持久化器必须实现 IPageStatePersister 接口。
-page_csmanagerclass_invalid					= ClientScriptManager 类“{0}”必须是 TClientScriptManager 的实例。
 
 csmanager_pradoscript_invalid				= 未知的 Prado 脚本库名称“{0}”。
 csmanager_pradostyle_invalid				= 未知的 Prado 样式库名称“{0}”。
@@ -596,6 +593,11 @@ clicompressor_command_failed				= “{0}”压缩器的命令“{1}”以代码 
 socketservermodule_endpoint_required		= TSocketServerModule 需要一个 Endpoint，或一个正的 Port 以组成 Endpoint。
 socketservermodule_serverclass_invalid		= TSocketServerModule 的 ServerClass“{0}”无效。它必须是 TSocketServer 或其子类。
 socketservermodule_scheme_not_stream		= TSocketServerModule 无法在无连接的协议“{0}”上接受连接。请使用 tcp、tls、ssl 或 unix 等流式协议。
+socketservermodule_eventloopclass_invalid	= TSocketServerModule 的 EventLoopClass“{0}”无效。它必须实现 Prado\IO\Async\IEventLoop。
+
+eventloop_delay_invalid						= 事件循环延迟“{0}”无效。它必须大于或等于零秒。
+eventloop_callback_invalid					= 事件循环回调“{0}”未知；它从未注册或已被取消。
+eventloop_signals_unsupported				= 事件循环的信号回调需要 pcntl 扩展。
 
 bitreader_invalid_bits						= 无法读取 {0} 位；位数必须在 0 和平台整数宽度之间。
 bitreader_64bit_php_required				= 读取 {0} 位需要 64 位的 PHP 构建。
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0}“{1}”不是父 TTableRow 控�
 tactivetablerow_control_outoftable			= {0}“{1}”必须包含在 TTable 控件之内。
 tactivetablerow_control_notincollection		= {0}“{1}”不是父 TTable 控件的 TTableRowCollection 的成员。
 
-juioptions_control_invalid					= 控件“{0}”必须实现 IJuiOptions。
 juioptions_option_invalid					= “{1}”不是控件“{0}”的有效选项。
 
 ratinglist_invalid_caption_id				= “{0}”不是 TRatingList“{0}”的有效标题控件。
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress 的 Max 必须大于 0；给定的是 {0}�
 
 time_invalid_datetime						= TTime 的 DateTime 必须是 DateTimeInterface、DateInterval、字符串或数值；给定的是 {0}。
 time_invalid_text_format					= TTime 的 TextFormat“{0}”不是 TTimeFormat 常量名或 ICU 日期时间模式。
+
+bdo_dir_invalid								= {0}.Dir“{1}”无效。允许的值为“ltr”和“rtl”。
+footnote_referencelist_missing				= TFootnote“{0}”没有 TReferenceList：ReferenceList“{1}”不是 TReferenceList，或者页面中没有任何 TReferenceList。
+referencelist_headerlevel_invalid			= TReferenceList 的 HeaderLevel 必须为 1 到 6；实际为 {0}。
 
 webtemplate_invalid_child					= TWebTemplate“{0}”不能包含“{1}”：活动控件、回发控件和验证器控件在惰性模板内容中无法工作。请使用带 {{...}} 占位符的纯标记，或设置 ValidateContent="false"。
 

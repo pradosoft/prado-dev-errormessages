@@ -27,17 +27,21 @@ class MessageFilesTest extends TestCase
 	public const USER_TIER_KEYS = [
 		'application_unavailable',
 		'application_service_unknown',
+		'application_service_invalid',
+		'application_service_unavailable',
 		'pagestatepersister_pagestate_corrupted',
 		'cachepagestatepersister_pagestate_corrupted',
 		'sessionpagestatepersister_pagestate_corrupted',
+		'page_csmanagerclass_invalid',
 		'page_csrf_token_invalid',
+		'juioptions_control_invalid',
 		'soapservice_request_invalid',
 		'jsonservice_provider_unknown',
 		'feedservice_feed_unknown',
 		'pageservice_page_required',
 		'pageservice_security_violation',
 		'pageservice_page_unknown',
-		'errorhandler_internal_error',
+		'pageservice_pageclass_unknown',
 	];
 
 	/**
@@ -149,25 +153,6 @@ class MessageFilesTest extends TestCase
 	}
 
 	/**
-	 * A key the audited English master defines (pradosoft/prado#1372). An installed framework
-	 * without it predates the master this package translates, so the comparisons with the
-	 * master are skipped until the framework catches up.
-	 */
-	public const AUDITED_MASTER_KEY = 'memcached_extension_required';
-
-	/**
-	 * Skips the test when the installed framework's English master is older than the one
-	 * this package translates.
-	 */
-	protected function requireAuditedMaster(): void
-	{
-		[$entries] = self::parse(self::getEnglishMasterFile());
-		if (!isset($entries[self::AUDITED_MASTER_KEY])) {
-			$this->markTestSkipped('the installed pradosoft/prado predates the audited messages.txt of pradosoft/prado#1372');
-		}
-	}
-
-	/**
 	 * @return array<string, string> the developer-tier entries of the English master.
 	 */
 	public static function englishDeveloperEntries(): array
@@ -188,7 +173,6 @@ class MessageFilesTest extends TestCase
 
 	public function testUserTierKeysAreInTheEnglishMaster(): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::getEnglishMasterFile());
 		foreach (self::USER_TIER_KEYS as $key) {
 			$this->assertArrayHasKey($key, $entries, "user-tier key '$key' is not in the English master");
@@ -220,7 +204,6 @@ class MessageFilesTest extends TestCase
 	#[DataProvider('languageProvider')]
 	public function testEveryKeyIsInTheEnglishMaster(string $lang): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::messageFile($lang));
 		[$english] = self::parse(self::getEnglishMasterFile());
 		$this->assertSame([], array_keys(array_diff_key($entries, $english)), "messages-$lang.txt has keys the English master does not define");
@@ -229,7 +212,6 @@ class MessageFilesTest extends TestCase
 	#[DataProvider('languageProvider')]
 	public function testEveryDeveloperKeyIsTranslated(string $lang): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::messageFile($lang));
 		$missing = array_keys(array_diff_key(self::englishDeveloperEntries(), $entries));
 		$this->assertSame([], $missing, "messages-$lang.txt is missing developer-tier keys of the English master");
@@ -245,7 +227,6 @@ class MessageFilesTest extends TestCase
 	#[DataProvider('languageProvider')]
 	public function testKeyOrderFollowsTheEnglishMaster(string $lang): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::messageFile($lang));
 		$this->assertSame(array_keys(self::englishDeveloperEntries()), array_keys($entries), "messages-$lang.txt is not in English master order");
 	}
@@ -253,7 +234,6 @@ class MessageFilesTest extends TestCase
 	#[DataProvider('languageProvider')]
 	public function testPlaceholdersMatchTheEnglishMaster(string $lang): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::messageFile($lang));
 		foreach (self::englishDeveloperEntries() as $key => $english) {
 			$this->assertSame(self::placeholders($english), self::placeholders($entries[$key] ?? ''), "placeholders of '$key' differ in messages-$lang.txt");
@@ -263,7 +243,6 @@ class MessageFilesTest extends TestCase
 	#[DataProvider('languageProvider')]
 	public function testValuesAreTranslated(string $lang): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::messageFile($lang));
 		$allowed = self::identicalAllowed($lang);
 		foreach (self::englishDeveloperEntries() as $key => $english) {
@@ -278,7 +257,6 @@ class MessageFilesTest extends TestCase
 	#[DataProvider('languageProvider')]
 	public function testClassAndInterfaceNamesArePreserved(string $lang): void
 	{
-		$this->requireAuditedMaster();
 		[$entries] = self::parse(self::messageFile($lang));
 		foreach (self::englishDeveloperEntries() as $key => $english) {
 			preg_match_all('/\b(?:T|I)[A-Z][a-z]\w*(?:\.[A-Za-z]\w*)?/', $english, $matches);

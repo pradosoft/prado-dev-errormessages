@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= Ominaisuutta TEventSubscription.Array ei voi 
 application_includefile_invalid				= Sovelluksen konfiguraatiota {0} ei löydy. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on ".xml" tai ".php".
 application_basepath_invalid				= Sovelluksen peruspolku '{0}' ei ole olemassa tai ei ole hakemisto.
 application_runtimepath_invalid				= Sovelluksen ajonaikainen polku '{0}' ei ole olemassa tai web-palvelimen prosessi ei voi kirjoittaa siihen.
-application_service_invalid					= Palvelun '{0}' on toteutettava rajapinta IService.
 application_service_class_not_found			= Palveluluokkaa '{0}' ei ole olemassa.
 application_service_class_not_service		= Palveluluokka '{0}' ei toteuta rajapintaa IService.
 application_service_class_required			= TApplication::registerService() vaatii luokan nimen tai palvelun konfiguraatiotaulukon palvelulle '{0}'.
 application_service_default_unregister		= Oletussivupalvelun '{0}' rekisteröintiä ei voi poistaa.
-application_service_unavailable				= Palvelu '{0}' ei ole tällä hetkellä käytettävissä.
 service_csrf_token_invalid					= Palvelu '{0}' vaatii kelvollisen CSRF-tunnuksen.
 application_moduleid_duplicated				= Sovellusmoduulin tunnus '{0}' ei ole yksilöllinen.
 application_runtimepath_failed				= Ajonaikaista polkua '{0}' ei voi luoda. Varmista, että ylähakemisto on olemassa ja että web-prosessi voi kirjoittaa siihen.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList-listaan voi 
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' on virheellinen. Varmista, että se on nimiavaruusmuodossa ja osoittaa kelvolliseen hakemistoon, joka sisältää virhemallinetiedostot.
 
-pageservice_pageclass_unknown				= Sivuluokka '{0}' on tuntematon.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ei ole kelvollinen hakemisto.
 pageservice_includefile_invalid				= Sivupalvelun konfiguraatiota {0} ei löydy. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on ".xml" tai ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= Ominaisuutta {1}.{0} ei voi muuttaa. Eheysmoduuli on jo alustettu.
 
 javascript_script_integrity_required		= Etäskriptille '{0}' ei ole rekisteröity Subresource Integrity -arvoa, mutta eheys vaaditaan.
+stylesheet_integrity_required				= Etätyylitiedostolle '{0}' ei ole rekisteröity Subresource Integrity -arvoa, mutta eheys on pakollinen.
 
 authmanager_usermanager_required			= Ominaisuudelle TAuthManager.UserManager on annettava arvo.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' ei viittaa sovellusmoduulin tunnukseen.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' on sijoitettava TForm-kontrollin sisää
 page_head_duplicated						= Sivu voi sisältää enintään yhden THead-kontrollin.
 page_head_required							= Sivumallineessa tarvitaan THead-kontrolli, jotta CSS ja js voidaan renderöidä HTML-dokumentin head-osioon.
 page_statepersister_invalid					= Sivun tilan tallentajan on toteutettava IPageStatePersister-rajapinta.
-page_csmanagerclass_invalid					= ClientScriptManager-luokan '{0}' on oltava TClientScriptManager-luokan instanssi.
 
 csmanager_pradoscript_invalid				= Tuntematon Prado-skriptikirjaston nimi '{0}'.
 csmanager_pradostyle_invalid				= Tuntematon Prado-tyylikirjaston nimi '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Pakkaajan '{0}' komento '{1}' päättyi koodil
 socketservermodule_endpoint_required		= TSocketServerModule vaatii Endpoint-arvon tai positiivisen Port-arvon sen muodostamiseksi.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' on virheellinen. Sen on oltava TSocketServer tai sen aliluokka.
 socketservermodule_scheme_not_stream		= TSocketServerModule ei voi vastaanottaa yhteyksiä yhteydettömällä skeemalla '{0}'. Käytä virtaskeemaa, kuten tcp, tls, ssl tai unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' on virheellinen. Sen on toteutettava Prado\IO\Async\IEventLoop-rajapinta.
+
+eventloop_delay_invalid						= Tapahtumasilmukan viive '{0}' on virheellinen. Sen on oltava nolla sekuntia tai enemmän.
+eventloop_callback_invalid					= Tapahtumasilmukan takaisinkutsu '{0}' on tuntematon; sitä ei ole koskaan rekisteröity tai se on jo peruttu.
+eventloop_signals_unsupported				= Tapahtumasilmukan signaalitakaisinkutsut vaativat pcntl-laajennuksen.
 
 bitreader_invalid_bits						= Ei voi lukea {0} bittiä; määrän on oltava välillä 0 ja alustan kokonaisluvun bittileveys.
 bitreader_64bit_php_required				= {0} bitin lukeminen vaatii 64-bittisen PHP-version.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' ei ole ylemmän TTableRow-k
 tactivetablerow_control_outoftable			= {0} '{1}' on sijoitettava TTable-kontrollin sisään.
 tactivetablerow_control_notincollection		= {0} '{1}' ei ole ylemmän TTable-kontrollin TTableRowCollection-kokoelman jäsen.
 
-juioptions_control_invalid					= Kontrollin '{0}' on toteutettava rajapinta IJuiOptions.
 juioptions_option_invalid					= '{1}' ei ole kelvollinen asetus kontrollille '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' ei ole kelvollinen otsikkokontrolli TRatingList-kontrollille '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max -arvon on oltava suurempi kuin 0; anne
 
 time_invalid_datetime						= TTime DateTime -arvon on oltava DateTimeInterface, DateInterval, merkkijono tai numeerinen arvo; annettu arvo on {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ei ole TTimeFormat-vakion nimi eikä ICU-päivämäärämuotokuvio.
+
+bdo_dir_invalid								= {0}.Dir '{1}' on virheellinen. Sallitut arvot ovat 'ltr' ja 'rtl'.
+footnote_referencelist_missing				= TFootnote-kontrollilla '{0}' ei ole TReferenceList-kontrollia: ReferenceList '{1}' ei ole TReferenceList, tai sivulla ei ole sellaista.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel -arvon on oltava välillä 1–6; annettu arvo on {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ei voi sisältää kohdetta '{1}': aktiiviset, postback- ja validaattorikontrollit eivät toimi passiivisen mallinesisällön sisällä. Käytä pelkkää merkkausta {{...}}-paikkamerkeillä tai aseta ValidateContent="false".
 

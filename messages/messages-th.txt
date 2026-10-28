@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array ไม่สาม�
 application_includefile_invalid				= ไม่พบไฟล์กำหนดค่าแอปพลิเคชัน {0} ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และไฟล์ลงท้ายด้วย ".xml" หรือ ".php"
 application_basepath_invalid				= พาธฐานของแอปพลิเคชัน '{0}' ไม่มีอยู่ หรือไม่ใช่ไดเรกทอรี
 application_runtimepath_invalid				= พาธรันไทม์ของแอปพลิเคชัน '{0}' ไม่มีอยู่ หรือโปรเซสของเว็บเซิร์ฟเวอร์ไม่สามารถเขียนได้
-application_service_invalid					= เซอร์วิส '{0}' ต้องอิมพลีเมนต์อินเทอร์เฟซ IService
 application_service_class_not_found			= ไม่มีคลาสเซอร์วิส '{0}'
 application_service_class_not_service		= คลาสเซอร์วิส '{0}' ไม่ได้อิมพลีเมนต์ IService
 application_service_class_required			= TApplication::registerService() ต้องการชื่อคลาสหรืออาร์เรย์การกำหนดค่าเซอร์วิสสำหรับเซอร์วิส '{0}'
 application_service_default_unregister		= ไม่สามารถยกเลิกการลงทะเบียนเซอร์วิสเพจเริ่มต้น '{0}' ได้
-application_service_unavailable				= เซอร์วิส '{0}' ไม่พร้อมใช้งานในขณะนี้
 service_csrf_token_invalid					= เซอร์วิส '{0}' ต้องการโทเค็น CSRF ที่ถูกต้อง
 application_moduleid_duplicated				= ID โมดูลของแอปพลิเคชัน '{0}' ซ้ำกัน
 application_runtimepath_failed				= ไม่สามารถสร้างพาธรันไทม์ '{0}' ได้ ตรวจสอบว่าไดเรกทอรีแม่มีอยู่ และโปรเซสของเว็บเซิร์ฟเวอร์สามารถเขียนได้
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= สามารถเพิ่ม
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' ไม่ถูกต้อง ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และชี้ไปยังไดเรกทอรีที่มีไฟล์เทมเพลตข้อผิดพลาด
 
-pageservice_pageclass_unknown				= ไม่รู้จักคลาสเพจ '{0}'
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ไม่ใช่ไดเรกทอรีที่ถูกต้อง
 pageservice_includefile_invalid				= ไม่พบไฟล์กำหนดค่าเซอร์วิสเพจ {0} ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และไฟล์ลงท้ายด้วย ".xml" หรือ ".php"
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} ไม่สามารถแก้ไขได้ เนื่องจากโมดูล integrity เริ่มต้นไปแล้ว
 
 javascript_script_integrity_required		= ไม่มีการลงทะเบียน Subresource Integrity สำหรับสคริปต์ระยะไกล '{0}' แต่จำเป็นต้องมีค่า integrity
+stylesheet_integrity_required				= ไม่มี Subresource Integrity ที่ลงทะเบียนไว้สำหรับสไตล์ชีตภายนอก '{0}' แต่จำเป็นต้องมี integrity
 
 authmanager_usermanager_required			= ต้องกำหนดค่าให้ TAuthManager.UserManager
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' ไม่ได้อ้างถึง ID ของโมดูลแอปพลิเคชัน
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' ต้องอยู่ภายใน 
 page_head_duplicated						= เพจหนึ่งมี THead ได้ไม่เกินหนึ่งตัว
 page_head_required							= ต้องมีคอนโทรล THead ในเทมเพลตเพจ เพื่อเรนเดอร์ CSS และ js ในส่วน head ของ HTML
 page_statepersister_invalid					= ตัวเก็บสถานะเพจต้องอิมพลีเมนต์อินเทอร์เฟซ IPageStatePersister
-page_csmanagerclass_invalid					= คลาส ClientScriptManager '{0}' ต้องเป็นอินสแตนซ์ของ TClientScriptManager
 
 csmanager_pradoscript_invalid				= ไม่รู้จักชื่อไลบรารีสคริปต์ Prado '{0}'
 csmanager_pradostyle_invalid				= ไม่รู้จักชื่อไลบรารีสไตล์ Prado '{0}'
@@ -596,6 +593,11 @@ clicompressor_command_failed				= คำสั่ง '{1}' ของตัวบ
 socketservermodule_endpoint_required		= TSocketServerModule ต้องมี Endpoint หรือ Port ที่เป็นค่าบวกเพื่อประกอบเป็น Endpoint
 socketservermodule_serverclass_invalid		= ServerClass '{0}' ของ TSocketServerModule ไม่ถูกต้อง ต้องเป็น TSocketServer หรือคลาสลูกของมัน
 socketservermodule_scheme_not_stream		= TSocketServerModule ไม่สามารถรับการเชื่อมต่อบน scheme แบบไม่มีการเชื่อมต่อ '{0}' ได้ ให้ใช้ scheme แบบสตรีม เช่น tcp, tls, ssl หรือ unix
+socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' ของ TSocketServerModule ไม่ถูกต้อง ต้องอิมพลีเมนต์ Prado\IO\Async\IEventLoop
+
+eventloop_delay_invalid						= ค่าหน่วงเวลาของอีเวนต์ลูป '{0}' ไม่ถูกต้อง ต้องเป็นศูนย์วินาทีหรือมากกว่า
+eventloop_callback_invalid					= คอลแบ็กของอีเวนต์ลูป '{0}' ไม่เป็นที่รู้จัก ไม่เคยถูกลงทะเบียนหรือถูกยกเลิกไปแล้ว
+eventloop_signals_unsupported				= คอลแบ็กสัญญาณของอีเวนต์ลูปต้องมีส่วนขยาย pcntl
 
 bitreader_invalid_bits						= ไม่สามารถอ่าน {0} บิตได้ จำนวนบิตต้องอยู่ระหว่าง 0 ถึงความกว้างของจำนวนเต็มบนแพลตฟอร์ม
 bitreader_64bit_php_required				= การอ่าน {0} บิตต้องใช้ PHP รุ่น 64 บิต
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' ไม่ใช่สมา
 tactivetablerow_control_outoftable			= {0} '{1}' ต้องอยู่ภายในคอนโทรล TTable
 tactivetablerow_control_notincollection		= {0} '{1}' ไม่ใช่สมาชิกของ TTableRowCollection ของคอนโทรล TTable แม่
 
-juioptions_control_invalid					= คอนโทรล '{0}' ต้องอิมพลีเมนต์ IJuiOptions
 juioptions_option_invalid					= '{1}' ไม่ใช่ตัวเลือกที่ถูกต้องสำหรับคอนโทรล '{0}'
 
 ratinglist_invalid_caption_id				= '{0}' ไม่ใช่คอนโทรลคำบรรยายที่ถูกต้องสำหรับ TRatingList '{0}'
@@ -758,6 +759,10 @@ progress_max_invalid						= Max ของ TProgress ต้องมากกว�
 
 time_invalid_datetime						= DateTime ของ TTime ต้องเป็น DateTimeInterface, DateInterval, สตริง หรือค่าตัวเลข แต่ได้รับ {0}
 time_invalid_text_format					= TextFormat '{0}' ของ TTime ไม่ใช่ชื่อค่าคงที่ของ TTimeFormat หรือแพตเทิร์นวันเวลาของ ICU
+
+bdo_dir_invalid								= {0}.Dir '{1}' ไม่ถูกต้อง ค่าที่อนุญาตคือ 'ltr' และ 'rtl'
+footnote_referencelist_missing				= TFootnote '{0}' ไม่มี TReferenceList: ReferenceList '{1}' ไม่ใช่ TReferenceList หรือเพจไม่มี TReferenceList เลย
+referencelist_headerlevel_invalid			= HeaderLevel ของ TReferenceList ต้องอยู่ระหว่าง 1 ถึง 6 แต่ได้รับ {0}
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ไม่สามารถมี '{1}' ได้: คอนโทรลแบบแอ็กทีฟ โพสต์แบ็ก และตัวตรวจสอบความถูกต้องไม่ทำงานภายในเนื้อหาเทมเพลตแบบคงที่ ให้ใช้มาร์กอัปธรรมดาพร้อมเพลซโฮลเดอร์ {{...}} หรือกำหนด ValidateContent="false"
 

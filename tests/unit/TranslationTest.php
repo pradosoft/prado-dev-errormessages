@@ -111,22 +111,10 @@ class TranslationTest extends TestCase
 		return dirname(__DIR__, 2) . '/messages/messages.txt';
 	}
 
-	/**
-	 * Skips when the installed framework reads its own message file after the added
-	 * files, which is the order before PRADO 4.4.
-	 */
-	protected function requireAddedFilePrecedence(): void
-	{
-		if (!(new \ReflectionClass(TException::class))->hasMethod('getErrorMessageFiles')) {
-			$this->markTestSkipped('needs PRADO 4.4: added message files override the framework master');
-		}
-	}
-
 	#[RunInSeparateProcess]
 	#[PreserveGlobalState(false)]
 	public function testManifestPathResolvesToTheClientLanguage(): void
 	{
-		$this->requireAddedFilePrecedence();
 		$_SERVER['HTTP_ACCEPT_LANGUAGE'] = 'de-DE,de;q=0.9,en;q=0.5';
 		[$german] = MessageFilesTest::parse(MessageFilesTest::messageFile('de'));
 

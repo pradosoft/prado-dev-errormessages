@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= لا يمكن تعيين TEventSubscription.A
 application_includefile_invalid				= تعذّر العثور على إعدادات التطبيق {0}. تأكد من أنها بصيغة نطاق الأسماء وأن الملف ينتهي بـ ".xml" أو ".php".
 application_basepath_invalid				= المسار الأساسي للتطبيق '{0}' غير موجود أو ليس دليلًا.
 application_runtimepath_invalid				= مسار وقت التشغيل للتطبيق '{0}' غير موجود أو غير قابل للكتابة من قِبل عملية خادم الويب.
-application_service_invalid					= يجب أن تنفّذ الخدمة '{0}' الواجهة IService.
 application_service_class_not_found			= صنف الخدمة '{0}' غير موجود.
 application_service_class_not_service		= صنف الخدمة '{0}' لا ينفّذ IService.
 application_service_class_required			= يتطلب TApplication::registerService() اسم صنف أو مصفوفة إعدادات خدمة للخدمة '{0}'.
 application_service_default_unregister		= لا يمكن إلغاء تسجيل خدمة الصفحات الافتراضية '{0}'.
-application_service_unavailable				= الخدمة '{0}' غير متاحة في الوقت الحالي.
 service_csrf_token_invalid					= تتطلب الخدمة '{0}' رمز CSRF صالحًا.
 application_moduleid_duplicated				= معرّف وحدة التطبيق '{0}' غير فريد.
 application_runtimepath_failed				= تعذّر إنشاء مسار وقت التشغيل '{0}'. تأكد من وجود الدليل الأب وأنه قابل للكتابة من قِبل عملية الويب.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= لا يمكن إضافة سوى �
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' غير صالح. تأكد من أنه بصيغة نطاق الأسماء ويشير إلى دليل صالح يحوي ملفات قوالب الأخطاء.
 
-pageservice_pageclass_unknown				= صنف الصفحة '{0}' غير معروف.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ليس دليلًا صالحًا.
 pageservice_includefile_invalid				= تعذّر العثور على إعدادات خدمة الصفحات {0}. تأكد من أنها بصيغة نطاق الأسماء وأن الملف ينتهي بـ ".xml" أو ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= لا يمكن تعديل {1}.{0}. تمت تهيئة وحدة السلامة بالفعل.
 
 javascript_script_integrity_required		= لا توجد سلامة موارد فرعية (Subresource Integrity) مسجّلة للسكربت البعيد '{0}'، لكن السلامة مطلوبة.
+stylesheet_integrity_required				= لم يتم تسجيل أي Subresource Integrity لورقة الأنماط البعيدة '{0}'، لكن التكامل مطلوب.
 
 authmanager_usermanager_required			= يجب تعيين قيمة لـ TAuthManager.UserManager.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' لا يشير إلى معرّف وحدة في التطبيق.
@@ -338,7 +336,6 @@ page_control_outofform						= يجب أن يكون {0} '{1}' محاطًا ضمن
 page_head_duplicated						= يمكن أن تحوي الصفحة THead واحدًا على الأكثر.
 page_head_required							= عنصر التحكم THead مطلوب في قالب الصفحة لعرض CSS و js في قسم head من HTML.
 page_statepersister_invalid					= يجب أن ينفّذ مُخزِّن حالة الصفحة الواجهة IPageStatePersister.
-page_csmanagerclass_invalid					= يجب أن يكون صنف ClientScriptManager '{0}' نسخة من TClientScriptManager.
 
 csmanager_pradoscript_invalid				= اسم مكتبة سكربت Prado غير معروف '{0}'.
 csmanager_pradostyle_invalid				= اسم مكتبة أنماط Prado غير معروف '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= انتهى أمر الضاغط '{0}' وهو '{
 socketservermodule_endpoint_required		= يتطلب TSocketServerModule قيمة Endpoint، أو قيمة Port موجبة لتكوينها.
 socketservermodule_serverclass_invalid		= ServerClass '{0}' في TSocketServerModule غير صالح. يجب أن يكون TSocketServer أو صنفًا فرعيًا منه.
 socketservermodule_scheme_not_stream		= لا يستطيع TSocketServerModule قبول الاتصالات على المخطط بلا اتصال '{0}'. استخدم مخطط دفق مثل tcp أو tls أو ssl أو unix.
+socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' في TSocketServerModule غير صالح. يجب أن ينفّذ الواجهة Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= تأخير حلقة الأحداث '{0}' غير صالح. يجب أن يكون صفرًا أو أكثر من الثواني.
+eventloop_callback_invalid					= رد نداء حلقة الأحداث '{0}' غير معروف؛ لم يُسجَّل أبدًا أو أُلغي بالفعل.
+eventloop_signals_unsupported				= تتطلب ردود نداء الإشارات في حلقة الأحداث إضافة pcntl.
 
 bitreader_invalid_bits						= لا يمكن قراءة {0} بت؛ يجب أن يكون العدد بين 0 وعرض العدد الصحيح للمنصة.
 bitreader_64bit_php_required				= تتطلب قراءة {0} بت بنية PHP بنظام 64 بت.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' ليس عضوًا في TTab
 tactivetablerow_control_outoftable			= يجب أن يكون {0} '{1}' محاطًا ضمن عنصر تحكم TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' ليس عضوًا في TTableRowCollection الخاصة بعنصر التحكم الأب TTable.
 
-juioptions_control_invalid					= يجب أن ينفّذ عنصر التحكم '{0}' الواجهة IJuiOptions.
 juioptions_option_invalid					= '{1}' ليس خيارًا صالحًا لعنصر التحكم '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' ليس عنصر تحكم تسمية توضيحية صالحًا لـ TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= يجب أن تكون Max في TProgress أكبر م�
 
 time_invalid_datetime						= يجب أن تكون DateTime في TTime من النوع DateTimeInterface أو DateInterval أو سلسلة نصية أو قيمة رقمية؛ القيمة المعطاة {0}.
 time_invalid_text_format					= TextFormat '{0}' في TTime ليس اسم ثابت في TTimeFormat ولا نمط تاريخ ووقت ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' غير صالح. القيم المسموح بها هي 'ltr' و 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' لا يملك TReferenceList: ReferenceList '{1}' ليس TReferenceList، أو لا تحتوي الصفحة على أي منها.
+referencelist_headerlevel_invalid			= يجب أن يكون TReferenceList HeaderLevel بين 1 و 6؛ القيمة المعطاة {0}.
 
 webtemplate_invalid_child					= لا يمكن أن يحوي TWebTemplate '{0}' العنصر '{1}': عناصر التحكم النشطة وعناصر إعادة الإرسال والمدقّقات لا تعمل داخل محتوى قالب ساكن. استخدم ترميزًا عاديًا مع عناصر نائبة {{...}}، أو عيّن ValidateContent="false".
 

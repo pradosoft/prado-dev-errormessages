@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array nu poate fi setat di
 application_includefile_invalid				= Nu s-a găsit configurația aplicației {0}. Asigurați-vă că este în format de spațiu de nume și că fișierul se termină cu ".xml" sau ".php".
 application_basepath_invalid				= Calea de bază a aplicației '{0}' nu există sau nu este un director.
 application_runtimepath_invalid				= Calea de rulare a aplicației '{0}' nu există sau nu poate fi scrisă de procesul serverului Web.
-application_service_invalid					= Serviciul '{0}' trebuie să implementeze interfața IService.
 application_service_class_not_found			= Clasa de serviciu '{0}' nu există.
 application_service_class_not_service		= Clasa de serviciu '{0}' nu implementează IService.
 application_service_class_required			= TApplication::registerService() necesită un nume de clasă sau un tablou de configurare a serviciului pentru serviciul '{0}'.
 application_service_default_unregister		= Serviciul de pagini implicit '{0}' nu poate fi dezînregistrat.
-application_service_unavailable				= Serviciul '{0}' nu este disponibil în acest moment.
 service_csrf_token_invalid					= Serviciul '{0}' necesită un token CSRF valid.
 application_moduleid_duplicated				= ID-ul de modul al aplicației '{0}' nu este unic.
 application_runtimepath_failed				= Nu s-a putut crea calea de rulare '{0}'. Asigurați-vă că directorul părinte există și poate fi scris de procesul Web.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Doar obiectele care implementeaz�
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' este invalid. Asigurați-vă că este în format de spațiu de nume și indică un director valid care conține fișierele șablon de eroare.
 
-pageservice_pageclass_unknown				= Clasa de pagină '{0}' este necunoscută.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nu este un director valid.
 pageservice_includefile_invalid				= Nu s-a găsit configurația serviciului de pagini {0}. Asigurați-vă că este în format de spațiu de nume și că fișierul se termină cu ".xml" sau ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} nu poate fi modificat. Modulul de integritate a fost deja inițializat.
 
 javascript_script_integrity_required		= Nu este înregistrată nicio integritate Subresource Integrity pentru scriptul remote '{0}', dar integritatea este obligatorie.
+stylesheet_integrity_required				= Nu este înregistrată nicio integritate Subresource Integrity pentru foaia de stil remote '{0}', dar integritatea este obligatorie.
 
 authmanager_usermanager_required			= TAuthManager.UserManager trebuie să primească o valoare.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' nu se referă la ID-ul unui modul al aplicației.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' trebuie să fie inclus într-un TForm.
 page_head_duplicated						= O pagină poate conține cel mult un THead.
 page_head_required							= Un control THead este necesar în șablonul paginii pentru a reda CSS și js în secțiunea head a HTML-ului.
 page_statepersister_invalid					= Persistorul stării paginii trebuie să implementeze interfața IPageStatePersister.
-page_csmanagerclass_invalid					= Clasa ClientScriptManager '{0}' trebuie să fie o instanță a TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nume de bibliotecă de scripturi Prado necunoscut '{0}'.
 csmanager_pradostyle_invalid				= Nume de bibliotecă de stiluri Prado necunoscut '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Comanda '{1}' a compresorului '{0}' s-a înche
 socketservermodule_endpoint_required		= TSocketServerModule necesită un Endpoint sau un Port pozitiv pentru a compune unul.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' este invalid. Trebuie să fie TSocketServer sau o subclasă.
 socketservermodule_scheme_not_stream		= TSocketServerModule nu poate accepta conexiuni pe schema fără conexiune '{0}'. Folosiți o schemă de flux, cum ar fi tcp, tls, ssl sau unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' este invalid. Trebuie să implementeze Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Întârzierea buclei de evenimente '{0}' este invalidă. Trebuie să fie zero sau mai multe secunde.
+eventloop_callback_invalid					= Callback-ul buclei de evenimente '{0}' este necunoscut; nu a fost niciodată înregistrat sau a fost deja anulat.
+eventloop_signals_unsupported				= Callback-urile de semnal ale buclei de evenimente necesită extensia pcntl.
 
 bitreader_invalid_bits						= Nu se pot citi {0} biți; numărul trebuie să fie între 0 și lățimea întregului pe platformă.
 bitreader_64bit_php_required				= Citirea a {0} biți necesită o versiune PHP pe 64 de biți.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' nu este membru al TTableCel
 tactivetablerow_control_outoftable			= {0} '{1}' trebuie să fie inclus într-un control TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' nu este membru al TTableRowCollection din controlul TTable părinte.
 
-juioptions_control_invalid					= Controlul '{0}' trebuie să implementeze IJuiOptions.
 juioptions_option_invalid					= '{1}' nu este o opțiune validă pentru controlul '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' nu este un control de legendă valid pentru TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max trebuie să fie mai mare decât 0; s-a
 
 time_invalid_datetime						= TTime DateTime trebuie să fie un DateTimeInterface, DateInterval, șir sau valoare numerică; s-a primit {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nu este un nume de constantă TTimeFormat sau un model de dată și oră ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' este invalid. Valorile permise sunt 'ltr' și 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' nu are TReferenceList: ReferenceList '{1}' nu este un TReferenceList sau pagina nu are niciunul.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel trebuie să fie între 1 și 6; s-a primit {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nu poate conține '{1}': controalele active, de postback și de validare nu funcționează în interiorul conținutului de șablon inert. Folosiți marcaj simplu cu substituenți {{...}} sau setați ValidateContent="false".
 

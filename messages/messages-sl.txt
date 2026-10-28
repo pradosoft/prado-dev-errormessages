@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array ni mogoče nastaviti
 application_includefile_invalid				= Konfiguracije aplikacije {0} ni mogoče najti. Prepričajte se, da je v obliki imenskega prostora in da se datoteka končuje z ".xml" ali ".php".
 application_basepath_invalid				= Osnovna pot aplikacije '{0}' ne obstaja ali ni imenik.
 application_runtimepath_invalid				= Pot aplikacije za čas izvajanja '{0}' ne obstaja ali ni zapisljiva za proces spletnega strežnika.
-application_service_invalid					= Storitev '{0}' mora implementirati vmesnik IService.
 application_service_class_not_found			= Razred storitve '{0}' ne obstaja.
 application_service_class_not_service		= Razred storitve '{0}' ne implementira IService.
 application_service_class_required			= TApplication::registerService() zahteva ime razreda ali konfiguracijsko polje storitve za storitev '{0}'.
 application_service_default_unregister		= Privzete storitve strani '{0}' ni mogoče odjaviti.
-application_service_unavailable				= Storitev '{0}' trenutno ni na voljo.
 service_csrf_token_invalid					= Storitev '{0}' zahteva veljaven žeton CSRF.
 application_moduleid_duplicated				= ID modula aplikacije '{0}' ni enoličen.
 application_runtimepath_failed				= Poti za čas izvajanja '{0}' ni mogoče ustvariti. Prepričajte se, da nadrejeni imenik obstaja in da je zapisljiv za spletni proces.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= V TCacheDependencyList je mogoče
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' ni veljaven. Prepričajte se, da je v obliki imenskega prostora in da kaže na veljaven imenik, ki vsebuje datoteke predlog napak.
 
-pageservice_pageclass_unknown				= Razred strani '{0}' ni znan.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ni veljaven imenik.
 pageservice_includefile_invalid				= Konfiguracije storitve strani {0} ni mogoče najti. Prepričajte se, da je v obliki imenskega prostora in da se datoteka končuje z ".xml" ali ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} ni mogoče spremeniti. Modul integritete je že inicializiran.
 
 javascript_script_integrity_required		= Za oddaljeni skript '{0}' ni registrirana nobena integriteta podvirov (Subresource Integrity), integriteta pa je zahtevana.
+stylesheet_integrity_required				= Za oddaljeno slogovno predlogo '{0}' ni registrirana nobena Subresource Integrity, integriteta pa je zahtevana.
 
 authmanager_usermanager_required			= TAuthManager.UserManager mora imeti dodeljeno vrednost.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' se ne nanaša na ID modula aplikacije.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' mora biti zajet znotraj TForm.
 page_head_duplicated						= Stran lahko vsebuje največ en THead.
 page_head_required							= Za upodabljanje CSS in js v razdelku HTML head je v predlogi strani potreben kontrolnik THead.
 page_statepersister_invalid					= Shranjevalnik stanja strani mora implementirati vmesnik IPageStatePersister.
-page_csmanagerclass_invalid					= Razred ClientScriptManager '{0}' mora biti primerek razreda TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Neznano ime skriptne knjižnice Prado '{0}'.
 csmanager_pradostyle_invalid				= Neznano ime slogovne knjižnice Prado '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Ukaz kompresorja '{0}' '{1}' se je končal s k
 socketservermodule_endpoint_required		= TSocketServerModule zahteva Endpoint ali pozitiven Port, iz katerega ga sestavi.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' ni veljaven. Mora biti TSocketServer ali podrazred.
 socketservermodule_scheme_not_stream		= TSocketServerModule ne more sprejemati povezav na brezpovezavni shemi '{0}'. Uporabite tokovno shemo, kot je tcp, tls, ssl ali unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' ni veljaven. Mora implementirati Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Zakasnitev dogodkovne zanke '{0}' ni veljavna. Mora biti nič ali več sekund.
+eventloop_callback_invalid					= Povratni klic dogodkovne zanke '{0}' ni znan; ni bil nikoli registriran ali pa je že preklican.
+eventloop_signals_unsupported				= Povratni klici signalov v dogodkovni zanki zahtevajo razširitev pcntl.
 
 bitreader_invalid_bits						= Ni mogoče prebrati {0} bitov; število mora biti med 0 in širino celega števila platforme.
 bitreader_64bit_php_required				= Branje {0} bitov zahteva 64-bitno gradnjo PHP.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' ni član TTableCellCollecti
 tactivetablerow_control_outoftable			= {0} '{1}' mora biti zajet znotraj kontrolnika TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' ni član TTableRowCollection nadrejenega kontrolnika TTable.
 
-juioptions_control_invalid					= Kontrolnik '{0}' mora implementirati IJuiOptions.
 juioptions_option_invalid					= '{1}' ni veljavna možnost za kontrolnik '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' ni veljaven kontrolnik napisa za TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max mora biti večji od 0; podano je {0}.
 
 time_invalid_datetime						= TTime DateTime mora biti DateTimeInterface, DateInterval, niz ali številska vrednost; podano je {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ni ime konstante TTimeFormat ali vzorec datuma in časa ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' ni veljaven. Dovoljeni vrednosti sta 'ltr' in 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' nima TReferenceList: ReferenceList '{1}' ni TReferenceList ali pa ga stran nima.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel mora biti med 1 in 6; podano je {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ne sme vsebovati '{1}': aktivni, povratni (postback) in validacijski kontrolniki ne delujejo znotraj nedejavne vsebine predloge. Uporabite navadno označevanje z ograditvami {{...}} ali nastavite ValidateContent="false".
 

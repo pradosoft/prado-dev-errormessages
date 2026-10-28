@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= לא ניתן להגדיר את TEventSubscri
 application_includefile_invalid				= לא ניתן למצוא את תצורת היישום {0}. יש לוודא שהיא בפורמט מרחב שמות ושהקובץ מסתיים ב-".xml" או ב-".php".
 application_basepath_invalid				= נתיב הבסיס של היישום '{0}' אינו קיים או אינו ספרייה.
 application_runtimepath_invalid				= נתיב זמן הריצה של היישום '{0}' אינו קיים או אינו ניתן לכתיבה על ידי תהליך שרת ה-Web.
-application_service_invalid					= השירות '{0}' חייב לממש את הממשק IService.
 application_service_class_not_found			= מחלקת השירות '{0}' אינה קיימת.
 application_service_class_not_service		= מחלקת השירות '{0}' אינה מממשת את IService.
 application_service_class_required			= TApplication::registerService() דורש שם מחלקה או מערך תצורת שירות עבור השירות '{0}'.
 application_service_default_unregister		= לא ניתן לבטל את רישום שירות העמודים המוגדר כברירת מחדל '{0}'.
-application_service_unavailable				= השירות '{0}' אינו זמין כעת.
 service_csrf_token_invalid					= השירות '{0}' דורש אסימון CSRF תקין.
 application_moduleid_duplicated				= מזהה המודול '{0}' של היישום אינו ייחודי.
 application_runtimepath_failed				= לא ניתן ליצור את נתיב זמן הריצה '{0}'. יש לוודא שספריית האב קיימת וניתנת לכתיבה על ידי תהליך ה-Web.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= ניתן להוסיף אל TCache
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' אינו תקין. יש לוודא שהוא בפורמט מרחב שמות ומצביע על ספרייה תקינה המכילה קובצי תבניות שגיאה.
 
-pageservice_pageclass_unknown				= מחלקת העמוד '{0}' אינה מוכרת.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' אינו ספרייה תקינה.
 pageservice_includefile_invalid				= לא ניתן למצוא את תצורת שירות העמודים {0}. יש לוודא שהיא בפורמט מרחב שמות ושהקובץ מסתיים ב-".xml" או ב-".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= לא ניתן לשנות את {1}.{0}. מודול השלמות כבר אותחל.
 
 javascript_script_integrity_required		= לא רשומה שלמות משאבי משנה (Subresource Integrity) עבור הסקריפט המרוחק '{0}', אך שלמות נדרשת.
+stylesheet_integrity_required				= לא נרשם Subresource Integrity עבור גיליון הסגנונות המרוחק '{0}', אך שלמות (integrity) נדרשת.
 
 authmanager_usermanager_required			= יש להקצות ערך ל-TAuthManager.UserManager.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' אינו מצביע על מזהה של מודול ביישום.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' חייב להיות מוכל בתוך TF
 page_head_duplicated						= עמוד יכול להכיל לכל היותר THead אחד.
 page_head_required							= נדרש פקד THead בתבנית העמוד כדי לרנדר CSS ו-js במקטע ה-head של ה-HTML.
 page_statepersister_invalid					= שומר מצב העמוד חייב לממש את הממשק IPageStatePersister.
-page_csmanagerclass_invalid					= מחלקת ה-ClientScriptManager '{0}' חייבת להיות מופע של TClientScriptManager.
 
 csmanager_pradoscript_invalid				= שם ספריית סקריפטים לא ידוע של Prado '{0}'.
 csmanager_pradostyle_invalid				= שם ספריית סגנונות לא ידוע של Prado '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= פקודת המדחס '{0}' '{1}' הסתיימ
 socketservermodule_endpoint_required		= TSocketServerModule דורש Endpoint, או Port חיובי ליצירת אחד.
 socketservermodule_serverclass_invalid		= ServerClass '{0}' של TSocketServerModule אינו תקין. הוא חייב להיות TSocketServer או מחלקה היורשת ממנו.
 socketservermodule_scheme_not_stream		= TSocketServerModule אינו יכול לקבל חיבורים בסכמה חסרת החיבור '{0}'. יש להשתמש בסכמת זרם כגון tcp, tls, ssl או unix.
+socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' של TSocketServerModule אינו תקין. הוא חייב לממש את Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= ההשהיה '{0}' של לולאת האירועים אינה תקינה. היא חייבת להיות אפס שניות או יותר.
+eventloop_callback_invalid					= ה-callback '{0}' של לולאת האירועים אינו מוכר; הוא מעולם לא נרשם או שכבר בוטל.
+eventloop_signals_unsupported				= callbacks של אותות בלולאת האירועים דורשים את הרחבת pcntl.
 
 bitreader_invalid_bits						= לא ניתן לקרוא {0} סיביות; המספר חייב להיות בין 0 לרוחב המספר השלם של הפלטפורמה.
 bitreader_64bit_php_required				= קריאת {0} סיביות דורשת בניית PHP של 64 סיביות.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' אינו חבר ב-TTableCe
 tactivetablerow_control_outoftable			= {0} '{1}' חייב להיות מוכל בתוך פקד TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' אינו חבר ב-TTableRowCollection של פקד ה-TTable האב.
 
-juioptions_control_invalid					= הפקד '{0}' חייב לממש את IJuiOptions.
 juioptions_option_invalid					= '{1}' אינה אפשרות תקינה עבור הפקד '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' אינו פקד כיתוב תקין עבור TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= Max של TProgress חייב להיות גדול מ-0
 
 time_invalid_datetime						= DateTime של TTime חייב להיות DateTimeInterface, DateInterval, מחרוזת או ערך מספרי; התקבל {0}.
 time_invalid_text_format					= TextFormat '{0}' של TTime אינו שם קבוע של TTimeFormat או תבנית תאריך-שעה של ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' אינו תקין. הערכים המותרים הם 'ltr' ו-'rtl'.
+footnote_referencelist_missing				= ל-TFootnote '{0}' אין TReferenceList: ReferenceList '{1}' אינו TReferenceList, או שאין כזה בעמוד.
+referencelist_headerlevel_invalid			= HeaderLevel של TReferenceList חייב להיות בין 1 ל-6; התקבל {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' אינו יכול להכיל '{1}': פקדים פעילים, פקדי postback ופקדי אימות אינם פועלים בתוך תוכן תבנית אינרטי. יש להשתמש בתגיות (markup) רגילות עם מצייני מקום {{...}}, או להגדיר ValidateContent="false".
 

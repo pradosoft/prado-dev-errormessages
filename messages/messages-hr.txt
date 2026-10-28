@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array ne može se postavit
 application_includefile_invalid				= Nije moguće pronaći konfiguraciju aplikacije {0}. Provjerite je li u formatu imenskog prostora i završava li datoteka s ".xml" ili ".php".
 application_basepath_invalid				= Osnovna putanja aplikacije '{0}' ne postoji ili nije direktorij.
 application_runtimepath_invalid				= Putanja za izvršavanje aplikacije '{0}' ne postoji ili nije zapisiva za proces web poslužitelja.
-application_service_invalid					= Servis '{0}' mora implementirati sučelje IService.
 application_service_class_not_found			= Klasa servisa '{0}' ne postoji.
 application_service_class_not_service		= Klasa servisa '{0}' ne implementira IService.
 application_service_class_required			= TApplication::registerService() zahtijeva naziv klase ili niz konfiguracije servisa za servis '{0}'.
 application_service_default_unregister		= Zadani servis stranica '{0}' ne može se odjaviti.
-application_service_unavailable				= Servis '{0}' trenutačno nije dostupan.
 service_csrf_token_invalid					= Servis '{0}' zahtijeva valjani CSRF token.
 application_moduleid_duplicated				= ID modula aplikacije '{0}' nije jedinstven.
 application_runtimepath_failed				= Nije moguće stvoriti putanju za izvršavanje '{0}'. Provjerite postoji li nadređeni direktorij i je li zapisiv za web proces.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= U TCacheDependencyList mogu se do
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' nije valjan. Provjerite je li u obliku imenskog prostora i upućuje li na valjani direktorij koji sadrži datoteke predložaka grešaka.
 
-pageservice_pageclass_unknown				= Klasa stranice '{0}' nije poznata.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nije valjan direktorij.
 pageservice_includefile_invalid				= Nije moguće pronaći konfiguraciju servisa stranica {0}. Provjerite je li u formatu imenskog prostora i završava li datoteka s ".xml" ili ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} ne može se mijenjati. Modul integriteta je već inicijaliziran.
 
 javascript_script_integrity_required		= Za udaljenu skriptu '{0}' nije registriran Subresource Integrity, a integritet je obavezan.
+stylesheet_integrity_required				= Za udaljenu stilsku tablicu '{0}' nije registriran Subresource Integrity, a integritet je obavezan.
 
 authmanager_usermanager_required			= TAuthManager.UserManager mora imati dodijeljenu vrijednost.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' ne odnosi se na ID modula aplikacije.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' mora biti unutar TForm.
 page_head_duplicated						= Stranica može sadržavati najviše jedan THead.
 page_head_required							= Kontrola THead potrebna je u predlošku stranice za prikaz CSS-a i JS-a u HTML zaglavlju (head).
 page_statepersister_invalid					= Spremnik stanja stranice mora implementirati sučelje IPageStatePersister.
-page_csmanagerclass_invalid					= Klasa ClientScriptManager '{0}' mora biti instanca klase TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nepoznat naziv Prado biblioteke skripti '{0}'.
 csmanager_pradostyle_invalid				= Nepoznat naziv Prado biblioteke stilova '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= Naredba '{1}' kompresora '{0}' završila je s 
 socketservermodule_endpoint_required		= TSocketServerModule zahtijeva Endpoint ili pozitivan Port za njegovo sastavljanje.
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' nije valjan. Mora biti TSocketServer ili potklasa.
 socketservermodule_scheme_not_stream		= TSocketServerModule ne može prihvaćati veze na shemi bez veze '{0}'. Koristite stream shemu kao što je tcp, tls, ssl ili unix.
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' nije valjan. Mora implementirati Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= Kašnjenje petlje događaja '{0}' nije valjano. Mora biti nula ili više sekundi.
+eventloop_callback_invalid					= Callback petlje događaja '{0}' nije poznat; nikada nije registriran ili je već otkazan.
+eventloop_signals_unsupported				= Callbackovi signala petlje događaja zahtijevaju PHP proširenje pcntl.
 
 bitreader_invalid_bits						= Nije moguće pročitati {0} bitova; broj mora biti između 0 i širine cijelog broja platforme.
 bitreader_64bit_php_required				= Čitanje {0} bitova zahtijeva 64-bitnu PHP verziju.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' nije član TTableCellCollec
 tactivetablerow_control_outoftable			= {0} '{1}' mora biti unutar kontrole TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' nije član TTableRowCollection nadređene kontrole TTable.
 
-juioptions_control_invalid					= Kontrola '{0}' mora implementirati IJuiOptions.
 juioptions_option_invalid					= '{1}' nije valjana opcija za kontrolu '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' nije valjana kontrola natpisa za TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max mora biti veći od 0; zadano je {0}.
 
 time_invalid_datetime						= TTime DateTime mora biti DateTimeInterface, DateInterval, string ili numerička vrijednost; zadano je {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nije naziv konstante TTimeFormat ni ICU uzorak datuma i vremena.
+
+bdo_dir_invalid								= {0}.Dir '{1}' nije valjan. Dopuštene vrijednosti su 'ltr' i 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' nema TReferenceList: ReferenceList '{1}' nije TReferenceList ili ga stranica nema.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel mora biti između 1 i 6; zadano je {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ne može sadržavati '{1}': aktivne, postback i validatorske kontrole ne funkcioniraju unutar inertnog sadržaja predloška. Koristite obične oznake s {{...}} rezerviranim mjestima ili postavite ValidateContent="false".
 

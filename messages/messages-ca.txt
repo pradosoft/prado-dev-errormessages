@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array no es pot establir d
 application_includefile_invalid				= No s'ha pogut trobar la configuració de l'aplicació {0}. Assegureu-vos que està en format d'espai de noms i que el fitxer acaba en ".xml" o ".php".
 application_basepath_invalid				= El camí base de l'aplicació '{0}' no existeix o no és un directori.
 application_runtimepath_invalid				= El camí d'execució de l'aplicació '{0}' no existeix o no té permís d'escriptura per al procés del servidor web.
-application_service_invalid					= El servei '{0}' ha d'implementar la interfície IService.
 application_service_class_not_found			= La classe de servei '{0}' no existeix.
 application_service_class_not_service		= La classe de servei '{0}' no implementa IService.
 application_service_class_required			= TApplication::registerService() requereix un nom de classe o una matriu de configuració de servei per al servei '{0}'.
 application_service_default_unregister		= El servei de pàgines per defecte '{0}' no es pot donar de baixa.
-application_service_unavailable				= El servei '{0}' no està disponible en aquest moment.
 service_csrf_token_invalid					= El servei '{0}' requereix un testimoni CSRF vàlid.
 application_moduleid_duplicated				= L'ID de mòdul de l'aplicació '{0}' no és únic.
 application_runtimepath_failed				= No s'ha pogut crear el camí d'execució '{0}'. Assegureu-vos que el directori pare existeix i que el procés web hi té permís d'escriptura.
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= Només es poden afegir a TCacheDe
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' no és vàlid. Assegureu-vos que està en format d'espai de noms i que apunta a un directori vàlid que contingui els fitxers de plantilla d'error.
 
-pageservice_pageclass_unknown				= La classe de pàgina '{0}' és desconeguda.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' no és un directori vàlid.
 pageservice_includefile_invalid				= No s'ha pogut trobar la configuració del servei de pàgines {0}. Assegureu-vos que està en format d'espai de noms i que el fitxer acaba en ".xml" o ".php".
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} no es pot modificar. El mòdul d'integritat ja s'ha inicialitzat.
 
 javascript_script_integrity_required		= No hi ha cap Subresource Integrity registrada per a l'script remot '{0}', però la integritat és obligatòria.
+stylesheet_integrity_required				= No hi ha cap Subresource Integrity registrat per al full d'estil remot '{0}', però la integritat és obligatòria.
 
 authmanager_usermanager_required			= Cal assignar un valor a TAuthManager.UserManager.
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' no fa referència a l'ID de cap mòdul de l'aplicació.
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' ha d'estar dins d'un TForm.
 page_head_duplicated						= Una pàgina pot contenir un THead com a màxim.
 page_head_required							= Cal un control THead a la plantilla de la pàgina per renderitzar el CSS i el js a la secció head de l'HTML.
 page_statepersister_invalid					= El persistidor d'estat de la pàgina ha d'implementar la interfície IPageStatePersister.
-page_csmanagerclass_invalid					= La classe ClientScriptManager '{0}' ha de ser una instància de TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nom de biblioteca d'scripts de Prado desconegut '{0}'.
 csmanager_pradostyle_invalid				= Nom de biblioteca d'estils de Prado desconegut '{0}'.
@@ -596,6 +593,11 @@ clicompressor_command_failed				= L'ordre '{1}' del compressor '{0}' ha acabat a
 socketservermodule_endpoint_required		= TSocketServerModule requereix un Endpoint, o un Port positiu per compondre'n un.
 socketservermodule_serverclass_invalid		= El ServerClass '{0}' de TSocketServerModule no és vàlid. Ha de ser TSocketServer o una subclasse.
 socketservermodule_scheme_not_stream		= TSocketServerModule no pot acceptar connexions amb l'esquema sense connexió '{0}'. Utilitzeu un esquema de flux com tcp, tls, ssl o unix.
+socketservermodule_eventloopclass_invalid	= L'EventLoopClass '{0}' de TSocketServerModule no és vàlid. Ha d'implementar Prado\IO\Async\IEventLoop.
+
+eventloop_delay_invalid						= El retard '{0}' del bucle d'esdeveniments no és vàlid. Ha de ser zero o més segons.
+eventloop_callback_invalid					= La crida de retorn '{0}' del bucle d'esdeveniments és desconeguda; no s'ha registrat mai o ja s'ha cancel·lat.
+eventloop_signals_unsupported				= Les crides de retorn de senyals del bucle d'esdeveniments requereixen l'extensió pcntl.
 
 bitreader_invalid_bits						= No es poden llegir {0} bits; el recompte ha d'estar entre 0 i l'amplada d'enter de la plataforma.
 bitreader_64bit_php_required				= Llegir {0} bits requereix una compilació de PHP de 64 bits.
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' no és membre de la TTableC
 tactivetablerow_control_outoftable			= {0} '{1}' ha d'estar dins d'un control TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' no és membre de la TTableRowCollection del control TTable pare.
 
-juioptions_control_invalid					= El control '{0}' ha d'implementar IJuiOptions.
 juioptions_option_invalid					= '{1}' no és una opció vàlida per al control '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' no és un control de llegenda vàlid per a TRatingList '{0}'.
@@ -758,6 +759,10 @@ progress_max_invalid						= El Max de TProgress ha de ser superior a 0; s'ha don
 
 time_invalid_datetime						= El DateTime de TTime ha de ser un DateTimeInterface, un DateInterval, una cadena o un valor numèric; s'ha donat {0}.
 time_invalid_text_format					= El TextFormat '{0}' de TTime no és el nom d'una constant de TTimeFormat ni un patró de data i hora ICU.
+
+bdo_dir_invalid								= {0}.Dir '{1}' no és vàlid. Els valors permesos són 'ltr' i 'rtl'.
+footnote_referencelist_missing				= TFootnote '{0}' no té cap TReferenceList: ReferenceList '{1}' no és un TReferenceList, o la pàgina no en té cap.
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel ha de ser d'1 a 6; s'ha indicat {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' no pot contenir '{1}': els controls actius, de postback i de validació no funcionen dins de contingut de plantilla inert. Utilitzeu marcatge simple amb marcadors de posició {{...}}, o establiu ValidateContent="false".
 

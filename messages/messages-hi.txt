@@ -61,12 +61,10 @@ eventsubscription_no_setarray				= TEventSubscription.Array को सीधे 
 application_includefile_invalid				= एप्लिकेशन कॉन्फ़िगरेशन {0} नहीं मिला। सुनिश्चित करें कि यह नेमस्पेस फ़ॉर्मेट में है और फ़ाइल ".xml" या ".php" पर समाप्त होती है।
 application_basepath_invalid				= एप्लिकेशन बेस पथ '{0}' मौजूद नहीं है या डायरेक्टरी नहीं है।
 application_runtimepath_invalid				= एप्लिकेशन रनटाइम पथ '{0}' मौजूद नहीं है या वेब सर्वर प्रोसेस द्वारा लिखने योग्य नहीं है।
-application_service_invalid					= सर्विस '{0}' को IService इंटरफ़ेस लागू करना चाहिए।
 application_service_class_not_found			= सर्विस क्लास '{0}' मौजूद नहीं है।
 application_service_class_not_service		= सर्विस क्लास '{0}' IService को लागू नहीं करती।
 application_service_class_required			= TApplication::registerService() को सर्विस '{0}' के लिए एक क्लास नाम या सर्विस कॉन्फ़िगरेशन ऐरे चाहिए।
 application_service_default_unregister		= डिफ़ॉल्ट पेज सर्विस '{0}' का रजिस्ट्रेशन हटाया नहीं जा सकता।
-application_service_unavailable				= सर्विस '{0}' इस समय उपलब्ध नहीं है।
 service_csrf_token_invalid					= सर्विस '{0}' को एक मान्य CSRF टोकन चाहिए।
 application_moduleid_duplicated				= एप्लिकेशन मॉड्यूल ID '{0}' अद्वितीय नहीं है।
 application_runtimepath_failed				= रनटाइम पथ '{0}' नहीं बनाया जा सका। सुनिश्चित करें कि पैरेंट डायरेक्टरी मौजूद है और वेब प्रोसेस द्वारा लिखने योग्य है।
@@ -179,7 +177,6 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList में �
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' अमान्य है। सुनिश्चित करें कि यह नेमस्पेस रूप में है और त्रुटि टेम्पलेट फ़ाइलों वाली मान्य डायरेक्टरी की ओर संकेत करता है।
 
-pageservice_pageclass_unknown				= पेज क्लास '{0}' अज्ञात है।
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' एक मान्य डायरेक्टरी नहीं है।
 pageservice_includefile_invalid				= पेज सर्विस कॉन्फ़िगरेशन {0} नहीं मिला। सुनिश्चित करें कि यह नेमस्पेस फ़ॉर्मेट में है और फ़ाइल ".xml" या ".php" पर समाप्त होती है।
 
@@ -284,6 +281,7 @@ integritymanager_integrityfile_invalid		= TIntegrityManager.IntegrityFile '{0}' 
 integritymanager_integrityfile_unchangeable	= {1}.{0} को बदला नहीं जा सकता। इंटेग्रिटी मॉड्यूल पहले ही इनिशियलाइज़ हो चुका है।
 
 javascript_script_integrity_required		= रिमोट स्क्रिप्ट '{0}' के लिए कोई Subresource Integrity रजिस्टर्ड नहीं है, लेकिन इंटेग्रिटी आवश्यक है।
+stylesheet_integrity_required				= रिमोट स्टाइलशीट '{0}' के लिए कोई Subresource Integrity रजिस्टर नहीं है, लेकिन integrity आवश्यक है।
 
 authmanager_usermanager_required			= TAuthManager.UserManager को एक मान असाइन किया जाना चाहिए।
 authmanager_usermanager_inexistent			= TAuthManager.UserManager '{0}' किसी एप्लिकेशन मॉड्यूल की ID को संदर्भित नहीं करता।
@@ -338,7 +336,6 @@ page_control_outofform						= {0} '{1}' TForm के भीतर होना �
 page_head_duplicated						= एक पेज में अधिकतम एक THead हो सकता है।
 page_head_required							= HTML head सेक्शन में CSS और js रेंडर करने के लिए पेज टेम्पलेट में एक THead कंट्रोल आवश्यक है।
 page_statepersister_invalid					= पेज स्टेट पर्सिस्टर को IPageStatePersister इंटरफ़ेस लागू करना चाहिए।
-page_csmanagerclass_invalid					= ClientScriptManager क्लास '{0}' TClientScriptManager का इंस्टेंस होना चाहिए।
 
 csmanager_pradoscript_invalid				= अज्ञात Prado स्क्रिप्ट लाइब्रेरी नाम '{0}'।
 csmanager_pradostyle_invalid				= अज्ञात Prado स्टाइल लाइब्रेरी नाम '{0}'।
@@ -596,6 +593,11 @@ clicompressor_command_failed				= '{0}' कंप्रेसर कमांड
 socketservermodule_endpoint_required		= TSocketServerModule को एक Endpoint, या उसे बनाने के लिए एक धनात्मक Port चाहिए।
 socketservermodule_serverclass_invalid		= TSocketServerModule ServerClass '{0}' अमान्य है। यह TSocketServer या उसकी सबक्लास होनी चाहिए।
 socketservermodule_scheme_not_stream		= TSocketServerModule कनेक्शन-रहित स्कीम '{0}' पर accept नहीं कर सकता। tcp, tls, ssl, या unix जैसी स्ट्रीम स्कीम का उपयोग करें।
+socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '{0}' अमान्य है। इसे Prado\IO\Async\IEventLoop लागू करना चाहिए।
+
+eventloop_delay_invalid						= इवेंट लूप विलंब '{0}' अमान्य है। यह शून्य या उससे अधिक सेकंड होना चाहिए।
+eventloop_callback_invalid					= इवेंट लूप कॉलबैक '{0}' अज्ञात है; यह कभी रजिस्टर नहीं हुआ या पहले ही रद्द कर दिया गया है।
+eventloop_signals_unsupported				= इवेंट लूप सिग्नल कॉलबैक के लिए pcntl एक्सटेंशन आवश्यक है।
 
 bitreader_invalid_bits						= {0} बिट नहीं पढ़े जा सकते; गणना 0 और प्लेटफ़ॉर्म पूर्णांक चौड़ाई के बीच होनी चाहिए।
 bitreader_64bit_php_required				= {0} बिट पढ़ने के लिए 64-बिट PHP बिल्ड आवश्यक है।
@@ -732,7 +734,6 @@ tactivetablecell_control_notincollection	= {0} '{1}' पैरेंट TTableRo
 tactivetablerow_control_outoftable			= {0} '{1}' एक TTable कंट्रोल के भीतर होना चाहिए।
 tactivetablerow_control_notincollection		= {0} '{1}' पैरेंट TTable कंट्रोल के TTableRowCollection का सदस्य नहीं है।
 
-juioptions_control_invalid					= कंट्रोल '{0}' को IJuiOptions लागू करना चाहिए।
 juioptions_option_invalid					= '{1}' कंट्रोल '{0}' के लिए मान्य विकल्प नहीं है।
 
 ratinglist_invalid_caption_id				= '{0}' TRatingList '{0}' के लिए मान्य कैप्शन कंट्रोल नहीं है।
@@ -758,6 +759,10 @@ progress_max_invalid						= TProgress Max 0 से बड़ा होना च
 
 time_invalid_datetime						= TTime DateTime एक DateTimeInterface, DateInterval, स्ट्रिंग, या संख्यात्मक मान होना चाहिए; {0} दिया गया।
 time_invalid_text_format					= TTime TextFormat '{0}' कोई TTimeFormat कॉन्स्टेंट नाम या ICU datetime पैटर्न नहीं है।
+
+bdo_dir_invalid								= {0}.Dir '{1}' अमान्य है। अनुमत मान 'ltr' और 'rtl' हैं।
+footnote_referencelist_missing				= TFootnote '{0}' के पास कोई TReferenceList नहीं है: ReferenceList '{1}' TReferenceList नहीं है, या पेज में कोई नहीं है।
+referencelist_headerlevel_invalid			= TReferenceList HeaderLevel 1 से 6 तक होना चाहिए; {0} दिया गया।
 
 webtemplate_invalid_child					= TWebTemplate '{0}' में '{1}' नहीं हो सकता: सक्रिय, पोस्टबैक और वैलिडेटर कंट्रोल निष्क्रिय टेम्पलेट सामग्री के भीतर काम नहीं करते। {{...}} प्लेसहोल्डर के साथ सादे मार्कअप का उपयोग करें, या ValidateContent="false" सेट करें।
 
