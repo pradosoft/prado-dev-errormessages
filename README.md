@@ -90,7 +90,7 @@ The tests lint each language file against the English master of the installed `p
 
 ## Release cadence
 
-The package follows PRADO releases, not PRADO `master`. The English master changes between releases as keys are added, removed, or reworded, so the files here are brought up to date in one batch just before each PRADO release and the two are tagged together. Between releases the package may lag `master`; the tests report the difference as missing or stale keys. A key missing from the package renders in English, so an application loses nothing in the meantime.
+The package version follows the PRADO release it is synced to: `master` is `4.4.x-dev` and is tagged `4.4.0` together with PRADO 4.4.0. The package follows PRADO releases, not PRADO `master`. The English master changes between releases as keys are added, removed, or reworded, so the files here are brought up to date in one batch just before each PRADO release and the two are tagged together. Between releases the package may lag `master`; the tests report the difference as missing or stale keys. A key missing from the package renders in English, so an application loses nothing in the meantime.
 
 ## Adding a language
 

@@ -4,9 +4,9 @@ All notable changes to this package are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [1.0.0] - 2026-10-28
+## [4.4.0-dev] - Unreleased
 
-First release. The French, Indonesian, and Chinese developer-facing exception messages move out of the PRADO framework (`framework/Exceptions/messages/messages-{fr,id,zh}.txt`) into this package, and 35 further languages are added. The baseline is the audited English master of PRADO `master` after pradosoft/prado#1372 (pradosoft/prado#1292): 643 keys, of which the 17 visitor-facing keys thrown as `THttpException` stay in the framework. See the [migration guide](docs/migration.md).
+Development line for PRADO 4.4.0; the package version follows the PRADO release it is synced to, and this line is tagged `4.4.0` together with PRADO 4.4.0. First release. The French, Indonesian, and Chinese developer-facing exception messages move out of the PRADO framework (`framework/Exceptions/messages/messages-{fr,id,zh}.txt`) into this package, and 35 further languages are added. The baseline is the audited English master of PRADO `master` after pradosoft/prado#1372 (pradosoft/prado#1292): 643 keys, of which the 17 visitor-facing keys thrown as `THttpException` stay in the framework. See the [migration guide](docs/migration.md).
 
 ### Added
 

@@ -59,6 +59,9 @@
 		]
 	},
 	"extra": {
+		"branch-alias": {
+			"dev-master": "4.4.x-dev"
+		},
 		"prado": {
 			"error-messages": "messages/messages.txt"
 		}

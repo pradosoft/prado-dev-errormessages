@@ -72,7 +72,7 @@ prado-dev-errormessages/
 - **File names** are `messages-<xx>.txt` with a two-letter lowercase code. `README.md` lists every language in its table; `testReadmeListsTheLanguage` checks it.
 - **Backward compatibility**: a released key keeps its meaning. Rewording is fine; removing a key is driven by the English master.
 - A new error code in the framework's English master fails `testEveryDeveloperKeyIsTranslated` for every file until each file gains the key.
-- **Release cadence**: the package is synced to PRADO in one batch just before each PRADO release and tagged with it. It is not kept in step with `master` commit by commit. A red `master` CI between releases that reports only missing or stale keys means a sync is pending, not a defect.
+- **Release cadence**: the package version follows the PRADO release it is synced to (`master` is `4.4.x-dev`, tagged `4.4.0` with PRADO 4.4.0). The package is synced to PRADO in one batch just before each PRADO release and tagged with it. It is not kept in step with `master` commit by commit. A red `master` CI between releases that reports only missing or stale keys means a sync is pending, not a defect.
 
 ## Test Bootstrap
 
