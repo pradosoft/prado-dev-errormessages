@@ -27,21 +27,17 @@ class MessageFilesTest extends TestCase
 	public const USER_TIER_KEYS = [
 		'application_unavailable',
 		'application_service_unknown',
-		'application_service_invalid',
-		'application_service_unavailable',
 		'pagestatepersister_pagestate_corrupted',
 		'cachepagestatepersister_pagestate_corrupted',
 		'sessionpagestatepersister_pagestate_corrupted',
-		'page_csmanagerclass_invalid',
 		'page_csrf_token_invalid',
-		'juioptions_control_invalid',
 		'soapservice_request_invalid',
 		'jsonservice_provider_unknown',
 		'feedservice_feed_unknown',
 		'pageservice_page_required',
 		'pageservice_security_violation',
 		'pageservice_page_unknown',
-		'pageservice_pageclass_unknown',
+		'errorhandler_internal_error',
 	];
 
 	/**

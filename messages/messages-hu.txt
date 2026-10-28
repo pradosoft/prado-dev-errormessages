@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= A TEventSubscription.Array nem állítható b
 application_includefile_invalid				= A(z) {0} alkalmazáskonfiguráció nem található. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése ".xml" vagy ".php".
 application_basepath_invalid				= A(z) '{0}' alkalmazás-alapútvonal nem létezik, vagy nem könyvtár.
 application_runtimepath_invalid				= A(z) '{0}' alkalmazás-futásidejű útvonal nem létezik, vagy a webkiszolgáló folyamata nem írhatja.
+application_service_invalid					= A(z) '{0}' szolgáltatásnak meg kell valósítania az IService interfészt.
 application_service_class_not_found			= A(z) '{0}' szolgáltatásosztály nem létezik.
 application_service_class_not_service		= A(z) '{0}' szolgáltatásosztály nem valósítja meg az IService interfészt.
 application_service_class_required			= A TApplication::registerService() osztálynevet vagy szolgáltatáskonfigurációs tömböt igényel a(z) '{0}' szolgáltatáshoz.
 application_service_default_unregister		= Az alapértelmezett '{0}' oldalszolgáltatás regisztrációja nem szüntethető meg.
+application_service_unavailable				= A(z) '{0}' szolgáltatás jelenleg nem érhető el.
 service_csrf_token_invalid					= A(z) '{0}' szolgáltatás érvényes CSRF tokent igényel.
 application_moduleid_duplicated				= A(z) '{0}' alkalmazásmodul-azonosító nem egyedi.
 application_runtimepath_failed				= A(z) '{0}' futásidejű útvonal nem hozható létre. Győződjön meg róla, hogy a szülőkönyvtár létezik, és a webfolyamat írhatja.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= A TCacheDependencyList csak az IC
 
 errorhandler_errortemplatepath_invalid		= A TErrorHandler.ErrorTemplatePath '{0}' érvénytelen. Győződjön meg róla, hogy névtérformátumban van megadva, és hibasablonfájlokat tartalmazó érvényes könyvtárra mutat.
 
+pageservice_pageclass_unknown				= A(z) '{0}' oldalosztály ismeretlen.
 pageservice_basepath_invalid				= A TPageService.BasePath '{0}' nem érvényes könyvtár.
 pageservice_includefile_invalid				= A(z) {0} oldalszolgáltatás-konfiguráció nem található. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése ".xml" vagy ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= A(z) {0} '{1}' elemnek TForm elemen belül kell le
 page_head_duplicated						= Egy oldal legfeljebb egy THead elemet tartalmazhat.
 page_head_required							= A CSS és js HTML fejrészben történő megjelenítéséhez THead vezérlő szükséges az oldalsablonban.
 page_statepersister_invalid					= Az oldalállapot-tárolónak meg kell valósítania az IPageStatePersister interfészt.
+page_csmanagerclass_invalid					= A(z) '{0}' ClientScriptManager osztálynak a TClientScriptManager egy példányának kell lennie.
 
 csmanager_pradoscript_invalid				= Ismeretlen Prado szkriptkönyvtár-név: '{0}'.
 csmanager_pradostyle_invalid				= Ismeretlen Prado stíluskönyvtár-név: '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= A(z) {0} '{1}' nem tagja a szülő TT
 tactivetablerow_control_outoftable			= A(z) {0} '{1}' elemnek TTable vezérlőn belül kell lennie.
 tactivetablerow_control_notincollection		= A(z) {0} '{1}' nem tagja a szülő TTable vezérlő TTableRowCollection gyűjteményének.
 
+juioptions_control_invalid					= A(z) '{0}' vezérlőnek meg kell valósítania az IJuiOptions interfészt.
 juioptions_option_invalid					= '{1}' nem érvényes beállítás a(z) '{0}' vezérlőhöz.
 
 ratinglist_invalid_caption_id				= '{0}' nem érvényes feliratvezérlő a(z) '{0}' TRatingList vezérlőhöz.

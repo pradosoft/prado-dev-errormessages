@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array ei saa otse määrat
 application_includefile_invalid				= Rakenduse konfiguratsiooni {0} ei leitud. Veendu, et see on nimeruumi vormingus ja faili laiend on ".xml" või ".php".
 application_basepath_invalid				= Rakenduse baastee '{0}' ei eksisteeri või ei ole kataloog.
 application_runtimepath_invalid				= Rakenduse käitusaja tee '{0}' ei eksisteeri või ei ole veebiserveri protsessile kirjutatav.
+application_service_invalid					= Teenus '{0}' peab realiseerima liidese IService.
 application_service_class_not_found			= Teenuseklass '{0}' ei eksisteeri.
 application_service_class_not_service		= Teenuseklass '{0}' ei realiseeri liidest IService.
 application_service_class_required			= TApplication::registerService() nõuab teenuse '{0}' jaoks klassinime või teenuse konfiguratsiooni massiivi.
 application_service_default_unregister		= Vaikimisi leheteenuse '{0}' registreeringut ei saa tühistada.
+application_service_unavailable				= Teenus '{0}' ei ole praegu saadaval.
 service_csrf_token_invalid					= Teenus '{0}' nõuab kehtivat CSRF-märgist.
 application_moduleid_duplicated				= Rakenduse mooduli ID '{0}' ei ole unikaalne.
 application_runtimepath_failed				= Käitusaja teed '{0}' ei õnnestu luua. Veendu, et ülemkataloog eksisteerib ja on veebiprotsessile kirjutatav.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList loendisse sa
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' on vigane. Veendu, et see on nimeruumi kujul ja viitab kehtivale kataloogile, mis sisaldab veamallide faile.
 
+pageservice_pageclass_unknown				= Leheklass '{0}' on tundmatu.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ei ole kehtiv kataloog.
 pageservice_includefile_invalid				= Leheteenuse konfiguratsiooni {0} ei leitud. Veendu, et see on nimeruumi vormingus ja faili laiend on ".xml" või ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' peab asuma TForm elemendi sees.
 page_head_duplicated						= Leht võib sisaldada ülimalt ühte THead elementi.
 page_head_required							= CSS-i ja JS-i renderdamiseks HTML-i head-sektsioonis on lehe mallis vajalik THead juhtelement.
 page_statepersister_invalid					= Lehe oleku säilitaja peab realiseerima liidese IPageStatePersister.
+page_csmanagerclass_invalid					= ClientScriptManager klass '{0}' peab olema klassi TClientScriptManager isend.
 
 csmanager_pradoscript_invalid				= Tundmatu Prado skriptiteegi nimi '{0}'.
 csmanager_pradostyle_invalid				= Tundmatu Prado stiiliteegi nimi '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' ei kuulu ülema TTableRow j
 tactivetablerow_control_outoftable			= {0} '{1}' peab asuma TTable juhtelemendi sees.
 tactivetablerow_control_notincollection		= {0} '{1}' ei kuulu ülema TTable juhtelemendi TTableRowCollection kogumisse.
 
+juioptions_control_invalid					= Juhtelement '{0}' peab realiseerima liidese IJuiOptions.
 juioptions_option_invalid					= '{1}' ei ole juhtelemendi '{0}' kehtiv valik.
 
 ratinglist_invalid_caption_id				= '{0}' ei ole TRatingList '{0}' kehtiv pealkirja juhtelement.

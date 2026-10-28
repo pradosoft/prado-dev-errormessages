@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array nu poate fi setat di
 application_includefile_invalid				= Nu s-a găsit configurația aplicației {0}. Asigurați-vă că este în format de spațiu de nume și că fișierul se termină cu ".xml" sau ".php".
 application_basepath_invalid				= Calea de bază a aplicației '{0}' nu există sau nu este un director.
 application_runtimepath_invalid				= Calea de rulare a aplicației '{0}' nu există sau nu poate fi scrisă de procesul serverului Web.
+application_service_invalid					= Serviciul '{0}' trebuie să implementeze interfața IService.
 application_service_class_not_found			= Clasa de serviciu '{0}' nu există.
 application_service_class_not_service		= Clasa de serviciu '{0}' nu implementează IService.
 application_service_class_required			= TApplication::registerService() necesită un nume de clasă sau un tablou de configurare a serviciului pentru serviciul '{0}'.
 application_service_default_unregister		= Serviciul de pagini implicit '{0}' nu poate fi dezînregistrat.
+application_service_unavailable				= Serviciul '{0}' nu este disponibil în acest moment.
 service_csrf_token_invalid					= Serviciul '{0}' necesită un token CSRF valid.
 application_moduleid_duplicated				= ID-ul de modul al aplicației '{0}' nu este unic.
 application_runtimepath_failed				= Nu s-a putut crea calea de rulare '{0}'. Asigurați-vă că directorul părinte există și poate fi scris de procesul Web.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= Doar obiectele care implementeaz�
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' este invalid. Asigurați-vă că este în format de spațiu de nume și indică un director valid care conține fișierele șablon de eroare.
 
+pageservice_pageclass_unknown				= Clasa de pagină '{0}' este necunoscută.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nu este un director valid.
 pageservice_includefile_invalid				= Nu s-a găsit configurația serviciului de pagini {0}. Asigurați-vă că este în format de spațiu de nume și că fișierul se termină cu ".xml" sau ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' trebuie să fie inclus într-un TForm.
 page_head_duplicated						= O pagină poate conține cel mult un THead.
 page_head_required							= Un control THead este necesar în șablonul paginii pentru a reda CSS și js în secțiunea head a HTML-ului.
 page_statepersister_invalid					= Persistorul stării paginii trebuie să implementeze interfața IPageStatePersister.
+page_csmanagerclass_invalid					= Clasa ClientScriptManager '{0}' trebuie să fie o instanță a TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nume de bibliotecă de scripturi Prado necunoscut '{0}'.
 csmanager_pradostyle_invalid				= Nume de bibliotecă de stiluri Prado necunoscut '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' nu este membru al TTableCel
 tactivetablerow_control_outoftable			= {0} '{1}' trebuie să fie inclus într-un control TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' nu este membru al TTableRowCollection din controlul TTable părinte.
 
+juioptions_control_invalid					= Controlul '{0}' trebuie să implementeze IJuiOptions.
 juioptions_option_invalid					= '{1}' nu este o opțiune validă pentru controlul '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' nu este un control de legendă valid pentru TRatingList '{0}'.

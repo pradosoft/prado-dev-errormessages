@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array не можна вс
 application_includefile_invalid				= Не вдалося знайти конфігурацію застосунку {0}. Переконайтеся, що вона вказана у форматі простору імен і файл закінчується на ".xml" або ".php".
 application_basepath_invalid				= Базовий шлях застосунку '{0}' не існує або не є каталогом.
 application_runtimepath_invalid				= Шлях часу виконання застосунку '{0}' не існує або недоступний для запису процесом вебсервера.
+application_service_invalid					= Сервіс '{0}' повинен реалізовувати інтерфейс IService.
 application_service_class_not_found			= Клас сервісу '{0}' не існує.
 application_service_class_not_service		= Клас сервісу '{0}' не реалізує IService.
 application_service_class_required			= TApplication::registerService() потребує ім'я класу або масив конфігурації сервісу для сервісу '{0}'.
 application_service_default_unregister		= Сервіс сторінок за замовчуванням '{0}' не можна скасувати.
+application_service_unavailable				= Сервіс '{0}' зараз недоступний.
 service_csrf_token_invalid					= Сервіс '{0}' потребує дійсного токена CSRF.
 application_moduleid_duplicated				= ID модуля застосунку '{0}' не є унікальним.
 application_runtimepath_failed				= Не вдалося створити шлях часу виконання '{0}'. Переконайтеся, що батьківський каталог існує і доступний для запису вебпроцесом.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= До TCacheDependencyList мож�
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' неприпустимий. Переконайтеся, що він у форматі простору імен і вказує на дійсний каталог із файлами шаблонів помилок.
 
+pageservice_pageclass_unknown				= Клас сторінки '{0}' невідомий.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' не є дійсним каталогом.
 pageservice_includefile_invalid				= Не вдалося знайти конфігурацію сервісу сторінок {0}. Переконайтеся, що вона вказана у форматі простору імен і файл закінчується на ".xml" або ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' повинен бути розміщен
 page_head_duplicated						= Сторінка може містити щонайбільше один THead.
 page_head_required							= Для відображення CSS і js у розділі head HTML у шаблоні сторінки потрібен елемент керування THead.
 page_statepersister_invalid					= Засіб збереження стану сторінки повинен реалізовувати інтерфейс IPageStatePersister.
+page_csmanagerclass_invalid					= Клас ClientScriptManager '{0}' повинен бути екземпляром TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Невідоме ім'я бібліотеки скриптів Prado '{0}'.
 csmanager_pradostyle_invalid				= Невідоме ім'я бібліотеки стилів Prado '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' не є членом TTable
 tactivetablerow_control_outoftable			= {0} '{1}' повинен бути розміщений усередині елемента керування TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' не є членом TTableRowCollection батьківського елемента керування TTable.
 
+juioptions_control_invalid					= Елемент керування '{0}' повинен реалізовувати IJuiOptions.
 juioptions_option_invalid					= '{1}' не є дійсним параметром для елемента керування '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' не є дійсним елементом керування підпису для TRatingList '{0}'.

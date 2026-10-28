@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array 不能被直接设�
 application_includefile_invalid				= 无法找到应用配置文件 {0}。请确认它以命名空间格式指定，并且文件以“.xml”或“.php”结尾。
 application_basepath_invalid				= 应用基础路径“{0}”不存在或不是一个目录。
 application_runtimepath_invalid				= 应用运行时路径“{0}”不存在，或 Web 服务器进程无法写入该目录。
+application_service_invalid					= 服务“{0}”必须实现 IService 接口。
 application_service_class_not_found			= 服务类“{0}”不存在。
 application_service_class_not_service		= 服务类“{0}”没有实现 IService。
 application_service_class_required			= TApplication::registerService() 需要为服务“{0}”提供类名或服务配置数组。
 application_service_default_unregister		= 默认页面服务“{0}”不能被注销。
+application_service_unavailable				= 服务“{0}”当前不可用。
 service_csrf_token_invalid					= 服务“{0}”需要一个有效的 CSRF 令牌。
 application_moduleid_duplicated				= 应用模块 ID“{0}”不唯一。
 application_runtimepath_failed				= 无法创建运行时路径“{0}”。请确认父目录存在，并且可被 Web 进程写入。
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= 只有实现 ICacheDependency 的
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath“{0}”无效。请确认它以命名空间格式指定，并且指向一个包含错误模板文件的有效目录。
 
+pageservice_pageclass_unknown				= 页面类“{0}”未知。
 pageservice_basepath_invalid				= TPageService.BasePath“{0}”不是一个有效的目录。
 pageservice_includefile_invalid				= 无法找到页面服务配置 {0}。请确认它以命名空间格式指定，并且文件以“.xml”或“.php”结尾。
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0}“{1}”必须包含在 TForm 之内。
 page_head_duplicated						= 一个页面最多只能包含一个 THead。
 page_head_required							= 页面模板中需要一个 THead 控件，以便在 HTML head 部分渲染 CSS 和 js。
 page_statepersister_invalid					= 页面状态持久化器必须实现 IPageStatePersister 接口。
+page_csmanagerclass_invalid					= ClientScriptManager 类“{0}”必须是 TClientScriptManager 的实例。
 
 csmanager_pradoscript_invalid				= 未知的 Prado 脚本库名称“{0}”。
 csmanager_pradostyle_invalid				= 未知的 Prado 样式库名称“{0}”。
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0}“{1}”不是父 TTableRow 控�
 tactivetablerow_control_outoftable			= {0}“{1}”必须包含在 TTable 控件之内。
 tactivetablerow_control_notincollection		= {0}“{1}”不是父 TTable 控件的 TTableRowCollection 的成员。
 
+juioptions_control_invalid					= 控件“{0}”必须实现 IJuiOptions。
 juioptions_option_invalid					= “{1}”不是控件“{0}”的有效选项。
 
 ratinglist_invalid_caption_id				= “{0}”不是 TRatingList“{0}”的有效标题控件。

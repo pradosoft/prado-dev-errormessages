@@ -117,7 +117,7 @@ class TranslationTest extends TestCase
 	 */
 	protected function requireAddedFilePrecedence(): void
 	{
-		if (!method_exists(TException::class, 'getErrorMessageFiles')) {
+		if (!(new \ReflectionClass(TException::class))->hasMethod('getErrorMessageFiles')) {
 			$this->markTestSkipped('needs PRADO 4.4: added message files override the framework master');
 		}
 	}

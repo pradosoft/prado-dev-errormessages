@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array は直接設定で�
 application_includefile_invalid				= アプリケーション構成 {0} が見つかりません。名前空間形式であり、ファイルの末尾が ".xml" または ".php" であることを確認してください。
 application_basepath_invalid				= アプリケーションのベースパス '{0}' は存在しないか、ディレクトリではありません。
 application_runtimepath_invalid				= アプリケーションのランタイムパス '{0}' は存在しないか、Web サーバープロセスから書き込みできません。
+application_service_invalid					= サービス '{0}' は IService インターフェースを実装する必要があります。
 application_service_class_not_found			= サービスクラス '{0}' は存在しません。
 application_service_class_not_service		= サービスクラス '{0}' は IService を実装していません。
 application_service_class_required			= TApplication::registerService() には、サービス '{0}' のクラス名またはサービス構成配列が必要です。
 application_service_default_unregister		= デフォルトのページサービス '{0}' は登録解除できません。
+application_service_unavailable				= サービス '{0}' は現在利用できません。
 service_csrf_token_invalid					= サービス '{0}' には有効な CSRF トークンが必要です。
 application_moduleid_duplicated				= アプリケーションモジュール ID '{0}' は一意ではありません。
 application_runtimepath_failed				= ランタイムパス '{0}' を作成できません。親ディレクトリが存在し、Web プロセスから書き込み可能であることを確認してください。
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList に追加で
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' は無効です。名前空間形式であり、エラーテンプレートファイルを含む有効なディレクトリを指していることを確認してください。
 
+pageservice_pageclass_unknown				= ページクラス '{0}' は不明です。
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' は有効なディレクトリではありません。
 pageservice_includefile_invalid				= ページサービス構成 {0} が見つかりません。名前空間形式であり、ファイルの末尾が ".xml" または ".php" であることを確認してください。
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' は TForm の内側に配置する必要
 page_head_duplicated						= ページに含めることができる THead は最大1つです。
 page_head_required							= HTML の head セクションに CSS と js をレンダリングするには、ページテンプレートに THead コントロールが必要です。
 page_statepersister_invalid					= ページ状態パーシスタは IPageStatePersister インターフェースを実装する必要があります。
+page_csmanagerclass_invalid					= ClientScriptManager クラス '{0}' は TClientScriptManager のインスタンスである必要があります。
 
 csmanager_pradoscript_invalid				= 不明な Prado スクリプトライブラリ名 '{0}' です。
 csmanager_pradostyle_invalid				= 不明な Prado スタイルライブラリ名 '{0}' です。
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' は親 TTableRow コント�
 tactivetablerow_control_outoftable			= {0} '{1}' は TTable コントロールの内側に配置する必要があります。
 tactivetablerow_control_notincollection		= {0} '{1}' は親 TTable コントロールの TTableRowCollection のメンバーではありません。
 
+juioptions_control_invalid					= コントロール '{0}' は IJuiOptions を実装する必要があります。
 juioptions_option_invalid					= '{1}' はコントロール '{0}' の有効なオプションではありません。
 
 ratinglist_invalid_caption_id				= '{0}' は TRatingList '{0}' の有効なキャプションコントロールではありません。

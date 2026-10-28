@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array nevar iestatīt tie�
 application_includefile_invalid				= Nevar atrast lietojumprogrammas konfigurāciju {0}. Pārliecinieties, ka tā ir nosaukumvietas formātā un fails beidzas ar ".xml" vai ".php".
 application_basepath_invalid				= Lietojumprogrammas bāzes ceļš '{0}' neeksistē vai nav direktorija.
 application_runtimepath_invalid				= Lietojumprogrammas izpildlaika ceļš '{0}' neeksistē vai tīmekļa servera procesam tajā nav rakstīšanas tiesību.
+application_service_invalid					= Pakalpojumam '{0}' jāimplementē IService interfeiss.
 application_service_class_not_found			= Pakalpojuma klase '{0}' neeksistē.
 application_service_class_not_service		= Pakalpojuma klase '{0}' neimplementē IService.
 application_service_class_required			= TApplication::registerService() pieprasa klases nosaukumu vai pakalpojuma konfigurācijas masīvu pakalpojumam '{0}'.
 application_service_default_unregister		= Noklusējuma lapu pakalpojuma '{0}' reģistrāciju nevar atcelt.
+application_service_unavailable				= Pakalpojums '{0}' šobrīd nav pieejams.
 service_csrf_token_invalid					= Pakalpojumam '{0}' ir nepieciešams derīgs CSRF marķieris.
 application_moduleid_duplicated				= Lietojumprogrammas moduļa ID '{0}' nav unikāls.
 application_runtimepath_failed				= Nevar izveidot izpildlaika ceļu '{0}'. Pārliecinieties, ka vecākdirektorija eksistē un tīmekļa procesam tajā ir rakstīšanas tiesības.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList var pievieno
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' nav derīgs. Pārliecinieties, ka tas ir nosaukumvietas formā un norāda uz derīgu direktoriju, kurā ir kļūdu veidņu faili.
 
+pageservice_pageclass_unknown				= Lapas klase '{0}' nav zināma.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nav derīga direktorija.
 pageservice_includefile_invalid				= Nevar atrast lapu pakalpojuma konfigurāciju {0}. Pārliecinieties, ka tā ir nosaukumvietas formātā un fails beidzas ar ".xml" vai ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' jābūt ietvertai TForm iekšpusē.
 page_head_duplicated						= Lapa var saturēt ne vairāk kā vienu THead.
 page_head_required							= Lai HTML head sadaļā renderētu CSS un JS, lapas veidnē nepieciešama THead vadīkla.
 page_statepersister_invalid					= Lapas stāvokļa saglabātājam jāimplementē IPageStatePersister interfeiss.
+page_csmanagerclass_invalid					= ClientScriptManager klasei '{0}' jābūt TClientScriptManager instancei.
 
 csmanager_pradoscript_invalid				= Nezināms Prado skriptu bibliotēkas nosaukums '{0}'.
 csmanager_pradostyle_invalid				= Nezināms Prado stilu bibliotēkas nosaukums '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' nav virsvadīklas TTableRow
 tactivetablerow_control_outoftable			= {0} '{1}' jābūt ietvertai TTable vadīklā.
 tactivetablerow_control_notincollection		= {0} '{1}' nav virsvadīklas TTable kolekcijas TTableRowCollection loceklis.
 
+juioptions_control_invalid					= Vadīklai '{0}' jāimplementē IJuiOptions.
 juioptions_option_invalid					= '{1}' nav derīga opcija vadīklai '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' nav derīga paraksta vadīkla TRatingList '{0}'.

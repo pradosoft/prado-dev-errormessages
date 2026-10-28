@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array negalima nustatyti t
 application_includefile_invalid				= Nepavyko rasti programos konfigūracijos {0}. Įsitikinkite, kad ji nurodyta vardų srities formatu ir failas baigiasi ".xml" arba ".php".
 application_basepath_invalid				= Programos bazinis kelias '{0}' neegzistuoja arba nėra katalogas.
 application_runtimepath_invalid				= Programos vykdymo kelias '{0}' neegzistuoja arba žiniatinklio serverio procesas negali į jį rašyti.
+application_service_invalid					= Paslauga '{0}' turi įgyvendinti IService sąsają.
 application_service_class_not_found			= Paslaugos klasė '{0}' neegzistuoja.
 application_service_class_not_service		= Paslaugos klasė '{0}' neįgyvendina IService.
 application_service_class_required			= TApplication::registerService() reikalauja klasės vardo arba paslaugos konfigūracijos masyvo paslaugai '{0}'.
 application_service_default_unregister		= Numatytosios puslapių paslaugos '{0}' negalima išregistruoti.
+application_service_unavailable				= Paslauga '{0}' šiuo metu nepasiekiama.
 service_csrf_token_invalid					= Paslauga '{0}' reikalauja galiojančio CSRF žetono.
 application_moduleid_duplicated				= Programos modulio ID '{0}' nėra unikalus.
 application_runtimepath_failed				= Nepavyko sukurti vykdymo kelio '{0}'. Įsitikinkite, kad pirminis katalogas egzistuoja ir žiniatinklio procesas gali į jį rašyti.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= Į TCacheDependencyList galima pr
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' yra netinkamas. Įsitikinkite, kad jis nurodytas vardų srities forma ir nurodo tinkamą katalogą su klaidų šablonų failais.
 
+pageservice_pageclass_unknown				= Puslapio klasė '{0}' nežinoma.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nėra tinkamas katalogas.
 pageservice_includefile_invalid				= Nepavyko rasti puslapių paslaugos konfigūracijos {0}. Įsitikinkite, kad ji nurodyta vardų srities formatu ir failas baigiasi ".xml" arba ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' turi būti TForm viduje.
 page_head_duplicated						= Puslapyje gali būti daugiausia vienas THead.
 page_head_required							= Puslapio šablone reikalingas THead valdiklis, kad CSS ir js būtų pateikti HTML head sekcijoje.
 page_statepersister_invalid					= Puslapio būsenos saugotuvas turi įgyvendinti IPageStatePersister sąsają.
+page_csmanagerclass_invalid					= ClientScriptManager klasė '{0}' turi būti TClientScriptManager egzempliorius.
 
 csmanager_pradoscript_invalid				= Nežinomas Prado skriptų bibliotekos vardas '{0}'.
 csmanager_pradostyle_invalid				= Nežinomas Prado stilių bibliotekos vardas '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' nėra tėvinio TTableRow va
 tactivetablerow_control_outoftable			= {0} '{1}' turi būti TTable valdiklio viduje.
 tactivetablerow_control_notincollection		= {0} '{1}' nėra tėvinio TTable valdiklio TTableRowCollection narys.
 
+juioptions_control_invalid					= Valdiklis '{0}' turi įgyvendinti IJuiOptions.
 juioptions_option_invalid					= '{1}' nėra tinkama valdiklio '{0}' parinktis.
 
 ratinglist_invalid_caption_id				= '{0}' nėra tinkamas antraštės valdiklis TRatingList '{0}'.

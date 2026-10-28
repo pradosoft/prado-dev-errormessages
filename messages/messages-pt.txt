@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array não pode ser defini
 application_includefile_invalid				= Não foi possível encontrar a configuração da aplicação {0}. Certifique-se de que está no formato de namespace e que o arquivo termina com ".xml" ou ".php".
 application_basepath_invalid				= O caminho base da aplicação '{0}' não existe ou não é um diretório.
 application_runtimepath_invalid				= O caminho de runtime da aplicação '{0}' não existe ou não tem permissão de escrita para o processo do servidor web.
+application_service_invalid					= O serviço '{0}' deve implementar a interface IService.
 application_service_class_not_found			= A classe de serviço '{0}' não existe.
 application_service_class_not_service		= A classe de serviço '{0}' não implementa IService.
 application_service_class_required			= TApplication::registerService() requer um nome de classe ou um array de configuração de serviço para o serviço '{0}'.
 application_service_default_unregister		= O serviço de página padrão '{0}' não pode ter seu registro removido.
+application_service_unavailable				= O serviço '{0}' não está disponível no momento.
 service_csrf_token_invalid					= O serviço '{0}' requer um token CSRF válido.
 application_moduleid_duplicated				= O ID de módulo da aplicação '{0}' não é único.
 application_runtimepath_failed				= Não foi possível criar o caminho de runtime '{0}'. Certifique-se de que o diretório pai existe e tem permissão de escrita para o processo web.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= Apenas objetos que implementam IC
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' é inválido. Certifique-se de que está no formato de namespace e aponta para um diretório válido contendo os arquivos de template de erro.
 
+pageservice_pageclass_unknown				= A classe de página '{0}' é desconhecida.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' não é um diretório válido.
 pageservice_includefile_invalid				= Não foi possível encontrar a configuração do serviço de página {0}. Certifique-se de que está no formato de namespace e que o arquivo termina com ".xml" ou ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' deve estar dentro de um TForm.
 page_head_duplicated						= Uma página pode conter no máximo um THead.
 page_head_required							= Um controle THead é necessário no template da página para renderizar CSS e js na seção head do HTML.
 page_statepersister_invalid					= O persistidor de estado da página deve implementar a interface IPageStatePersister.
+page_csmanagerclass_invalid					= A classe ClientScriptManager '{0}' deve ser uma instância de TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nome de biblioteca de script Prado desconhecido '{0}'.
 csmanager_pradostyle_invalid				= Nome de biblioteca de estilo Prado desconhecido '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' não é membro da TTableCel
 tactivetablerow_control_outoftable			= {0} '{1}' deve estar dentro de um controle TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' não é membro da TTableRowCollection do controle TTable pai.
 
+juioptions_control_invalid					= O controle '{0}' deve implementar IJuiOptions.
 juioptions_option_invalid					= '{1}' não é uma opção válida para o controle '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' não é um controle de legenda válido para a TRatingList '{0}'.

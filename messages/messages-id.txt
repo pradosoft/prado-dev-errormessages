@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array tidak bisa disetel s
 application_includefile_invalid				= Tidak bisa menemukan konfigurasi aplikasi {0}. Pastikan ia ada dalam format namespace dan file berakhir dengan ".xml" atau ".php".
 application_basepath_invalid				= Path basis aplikasi '{0}' tidak ada atau bukan sebuah direktori.
 application_runtimepath_invalid				= Path runtime aplikasi '{0}' tidak ada atau tidak bisa ditulis oleh proses server Web.
+application_service_invalid					= Layanan '{0}' harus mengimplementasikan antarmuka IService.
 application_service_class_not_found			= Kelas layanan '{0}' tidak ada.
 application_service_class_not_service		= Kelas layanan '{0}' tidak mengimplementasikan IService.
 application_service_class_required			= TApplication::registerService() memerlukan nama kelas atau array konfigurasi layanan untuk layanan '{0}'.
 application_service_default_unregister		= Layanan halaman bawaan '{0}' tidak bisa dihapus registrasinya.
+application_service_unavailable				= Layanan '{0}' tidak tersedia saat ini.
 service_csrf_token_invalid					= Layanan '{0}' memerlukan token CSRF yang valid.
 application_moduleid_duplicated				= ID modul aplikasi '{0}' tidak unik.
 application_runtimepath_failed				= Tidak bisa membuat path runtime '{0}'. Pastikan direktori leluhur ada dan bisa ditulis oleh proses Web.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= Hanya obyek yang mengimplementasi
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' tidak benar. Pastikan ia ada dalam bentuk namespace dan mengarah ke direktori yang berisi file template kesalahan.
 
+pageservice_pageclass_unknown				= Kelas halaman '{0}' tidak dikenal.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' bukan direktori yang benar.
 pageservice_includefile_invalid				= Tidak bisa menemukan konfigurasi layanan halaman {0}. Pastikan ia ada dalam format namespace dan file berakhir dengan ".xml" atau ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' harus dikurung di dalam TForm.
 page_head_duplicated						= Halaman dapat berisi paling banyak satu THead.
 page_head_required							= Kontrol THead dibutuhkan dalam template halaman untuk menyajikan CSS dan JS dalam seksi head HTML.
 page_statepersister_invalid					= Persister kondisi halaman harus mengimplementasikan antarmuka IPageStatePersister.
+page_csmanagerclass_invalid					= Kelas ClientScriptManager '{0}' harus merupakan instance dari TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nama librari naskah Prado '{0}' tidak dikenal.
 csmanager_pradostyle_invalid				= Nama librari gaya Prado '{0}' tidak dikenal.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' bukan anggota TTableCellCol
 tactivetablerow_control_outoftable			= {0} '{1}' harus dikurung di dalam kontrol TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' bukan anggota TTableRowCollection dari kontrol TTable induk.
 
+juioptions_control_invalid					= Kontrol '{0}' harus mengimplementasikan IJuiOptions.
 juioptions_option_invalid					= '{1}' bukan opsi yang valid untuk kontrol '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' bukan kontrol keterangan yang valid untuk TRatingList '{0}'.

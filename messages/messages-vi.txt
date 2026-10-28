@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array không thể đượ
 application_includefile_invalid				= Không tìm thấy cấu hình ứng dụng {0}. Hãy bảo đảm nó ở định dạng không gian tên và tệp kết thúc bằng ".xml" hoặc ".php".
 application_basepath_invalid				= Đường dẫn gốc của ứng dụng '{0}' không tồn tại hoặc không phải là thư mục.
 application_runtimepath_invalid				= Đường dẫn runtime của ứng dụng '{0}' không tồn tại hoặc tiến trình máy chủ web không có quyền ghi.
+application_service_invalid					= Dịch vụ '{0}' phải triển khai giao diện IService.
 application_service_class_not_found			= Lớp dịch vụ '{0}' không tồn tại.
 application_service_class_not_service		= Lớp dịch vụ '{0}' không triển khai IService.
 application_service_class_required			= TApplication::registerService() yêu cầu một tên lớp hoặc một mảng cấu hình dịch vụ cho dịch vụ '{0}'.
 application_service_default_unregister		= Dịch vụ trang mặc định '{0}' không thể bị hủy đăng ký.
+application_service_unavailable				= Dịch vụ '{0}' hiện không khả dụng.
 service_csrf_token_invalid					= Dịch vụ '{0}' yêu cầu một mã thông báo CSRF hợp lệ.
 application_moduleid_duplicated				= ID mô-đun ứng dụng '{0}' không phải là duy nhất.
 application_runtimepath_failed				= Không thể tạo đường dẫn runtime '{0}'. Hãy bảo đảm thư mục cha tồn tại và tiến trình web có quyền ghi.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= Chỉ các đối tượng triể
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' không hợp lệ. Hãy bảo đảm nó ở định dạng không gian tên và trỏ đến một thư mục hợp lệ chứa các tệp mẫu lỗi.
 
+pageservice_pageclass_unknown				= Lớp trang '{0}' không được nhận biết.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' không phải là thư mục hợp lệ.
 pageservice_includefile_invalid				= Không tìm thấy cấu hình dịch vụ trang {0}. Hãy bảo đảm nó ở định dạng không gian tên và tệp kết thúc bằng ".xml" hoặc ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' phải nằm trong TForm.
 page_head_duplicated						= Một trang chỉ có thể chứa tối đa một THead.
 page_head_required							= Cần có một điều khiển THead trong mẫu trang để hiển thị CSS và js trong phần head của HTML.
 page_statepersister_invalid					= Bộ lưu trạng thái trang phải triển khai giao diện IPageStatePersister.
+page_csmanagerclass_invalid					= Lớp ClientScriptManager '{0}' phải là một thể hiện của TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Tên thư viện script Prado '{0}' không xác định.
 csmanager_pradostyle_invalid				= Tên thư viện style Prado '{0}' không xác định.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' không phải là thành vi
 tactivetablerow_control_outoftable			= {0} '{1}' phải nằm trong một điều khiển TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' không phải là thành viên của TTableRowCollection thuộc điều khiển TTable cha.
 
+juioptions_control_invalid					= Điều khiển '{0}' phải triển khai IJuiOptions.
 juioptions_option_invalid					= '{1}' không phải là tùy chọn hợp lệ cho điều khiển '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' không phải là điều khiển chú thích hợp lệ cho TRatingList '{0}'.

@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= Ominaisuutta TEventSubscription.Array ei voi 
 application_includefile_invalid				= Sovelluksen konfiguraatiota {0} ei löydy. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on ".xml" tai ".php".
 application_basepath_invalid				= Sovelluksen peruspolku '{0}' ei ole olemassa tai ei ole hakemisto.
 application_runtimepath_invalid				= Sovelluksen ajonaikainen polku '{0}' ei ole olemassa tai web-palvelimen prosessi ei voi kirjoittaa siihen.
+application_service_invalid					= Palvelun '{0}' on toteutettava rajapinta IService.
 application_service_class_not_found			= Palveluluokkaa '{0}' ei ole olemassa.
 application_service_class_not_service		= Palveluluokka '{0}' ei toteuta rajapintaa IService.
 application_service_class_required			= TApplication::registerService() vaatii luokan nimen tai palvelun konfiguraatiotaulukon palvelulle '{0}'.
 application_service_default_unregister		= Oletussivupalvelun '{0}' rekisteröintiä ei voi poistaa.
+application_service_unavailable				= Palvelu '{0}' ei ole tällä hetkellä käytettävissä.
 service_csrf_token_invalid					= Palvelu '{0}' vaatii kelvollisen CSRF-tunnuksen.
 application_moduleid_duplicated				= Sovellusmoduulin tunnus '{0}' ei ole yksilöllinen.
 application_runtimepath_failed				= Ajonaikaista polkua '{0}' ei voi luoda. Varmista, että ylähakemisto on olemassa ja että web-prosessi voi kirjoittaa siihen.
@@ -177,6 +179,7 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList-listaan voi 
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' on virheellinen. Varmista, että se on nimiavaruusmuodossa ja osoittaa kelvolliseen hakemistoon, joka sisältää virhemallinetiedostot.
 
+pageservice_pageclass_unknown				= Sivuluokka '{0}' on tuntematon.
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ei ole kelvollinen hakemisto.
 pageservice_includefile_invalid				= Sivupalvelun konfiguraatiota {0} ei löydy. Varmista, että se on nimiavaruusmuodossa ja että tiedoston pääte on ".xml" tai ".php".
 
@@ -335,6 +338,7 @@ page_control_outofform						= {0} '{1}' on sijoitettava TForm-kontrollin sisää
 page_head_duplicated						= Sivu voi sisältää enintään yhden THead-kontrollin.
 page_head_required							= Sivumallineessa tarvitaan THead-kontrolli, jotta CSS ja js voidaan renderöidä HTML-dokumentin head-osioon.
 page_statepersister_invalid					= Sivun tilan tallentajan on toteutettava IPageStatePersister-rajapinta.
+page_csmanagerclass_invalid					= ClientScriptManager-luokan '{0}' on oltava TClientScriptManager-luokan instanssi.
 
 csmanager_pradoscript_invalid				= Tuntematon Prado-skriptikirjaston nimi '{0}'.
 csmanager_pradostyle_invalid				= Tuntematon Prado-tyylikirjaston nimi '{0}'.
@@ -728,6 +732,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' ei ole ylemmän TTableRow-k
 tactivetablerow_control_outoftable			= {0} '{1}' on sijoitettava TTable-kontrollin sisään.
 tactivetablerow_control_notincollection		= {0} '{1}' ei ole ylemmän TTable-kontrollin TTableRowCollection-kokoelman jäsen.
 
+juioptions_control_invalid					= Kontrollin '{0}' on toteutettava rajapinta IJuiOptions.
 juioptions_option_invalid					= '{1}' ei ole kelvollinen asetus kontrollille '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' ei ole kelvollinen otsikkokontrolli TRatingList-kontrollille '{0}'.
