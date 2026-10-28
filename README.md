@@ -19,6 +19,12 @@ Within a PRADO application:
 composer require pradosoft/prado-dev-errormessages
 ```
 
+Until PRADO 4.4.0 is released, the package has no tagged version; require the development line:
+
+```bash
+composer require pradosoft/prado-dev-errormessages:^4.4@dev
+```
+
 Nothing else is needed. PRADO reads the package's `extra.prado.error-messages` entry from Composer and registers the message files with `TException::addMessageFile()` while the application configures itself.
 
 Applications upgrading from a PRADO version that bundled French, Indonesian, and Chinese messages: see the [migration guide](docs/migration.md). Release notes are in the [changelog](CHANGELOG.md).

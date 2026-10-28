@@ -40,6 +40,7 @@ Procedure for a PRADO release sync (one batch per release):
 2. Run `composer test`. `MessageFilesTest` lists the keys missing from or stale in each file and any key whose placeholders changed.
 3. Translate the missing keys in every file, drop the stale ones, fix the placeholders, run `composer test` until green.
 4. Set the CHANGELOG heading, then tag the package together with the PRADO release.
+5. In PRADO's `composer.json`, change the `suggest` entry for this package from `^4.4@dev` to `^4.4` (release prep), and drop the `@dev` requirement from the README here.
 
 Procedure for a new language:
 
