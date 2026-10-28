@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= Prado.Application galima nustatyti tik vieną kartą.
-prado_component_unknown						= Nežinomas komponento tipas '{0}'. Priežastis gali būti ši analizės klaida {0} klasės faile: {1}
-prado_using_invalid							= '{0}' nėra tinkama naudoti vardų sritis. Įsitikinkite, kad pridėta '.*', jei norite naudoti vardų sritį, nurodančią katalogą.
 prado_alias_redefined						= Pseudonimo '{0}' negalima apibrėžti iš naujo.
 prado_alias_invalid							= Pseudonimas '{0}' nurodo netinkamą kelią '{1}'. Pseudonimus galima suteikti tik esamiems katalogams.
 prado_aliasname_invalid						= Pseudonime '{0}' yra netinkamas simbolis '.'.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= Komponentas '{0}' jau turi klasės elgseną
 component_not_a_behavior					= Komponentas '{0}', pridedamas kaip elgsena, nėra TBaseBehavior.
 object_not_a_component						= Objektas '{0}', pridedamas kaip elgsena, nėra TComponent.
 component_no_tcomponent_class_behaviors		= Prie TComponent negalima prijungti klasės elgsenų dėl rekursijos.
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors negali būti prijungti prie kelių savininkų.  Perduokite simbolių eilutę arba masyvą su IBehavior klase ir savybėmis, kad kiekvienam savininkui būtų sukurtas atskiras egzempliorius.
 
 propertyvalue_enumvalue_invalid				= Reikšmė '{0}' nėra tinkama išvardijimo reikšmė ({1}).
 propertyvalue_invalid_hex_color				= Reikšmė '{0}' nėra tinkama šešioliktainė spalvos reikšmė.  Pvz. "#112233"
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= Masyvo literalas įdėtas giliau nei {0} lygia
 eventhandler_lost_weak_ref					= TEventHandler negali iškviesti įvykio apdoroklio, nes iškviečiamo objekto WeakReference buvo prarasta.
 eventhandler_no_set_handler					= TEventHandler negali nustatyti įvykio apdoroklio, indeksas "{0}".
 eventhandler_bad_offset						= TEventHandler neturi poslinkio "{0}".
+eventhandler_not_callable					= TEventHandler reikalauja iškviečiamo (callable) apdoroklio.
 
 eventparam_readonly							= {0} yra tik skaitomas.
 eventparam_readonly_set						= {0} negali keisti ReadOnly, kai ji jau nustatyta.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= Numatytąjį prioritetą galima nustaty
 prioritytrait_no_set_precision				= Tikslumą galima nustatyti tik vieną kartą arba tik pačiam objektui.
 weak_no_set_discard_invalid					= '{0}'.DiscardInvalid galima nustatyti tik vieną kartą arba tik pačiam objektui.
 
-map_addition_disallowed						= Naujo elemento negalima pridėti į žemėlapį.
-map_item_unremovable						= Elemento negalima pašalinti iš žemėlapio.
 map_data_not_iterable						= Duomenys turi būti masyvas arba objektas, įgyvendinantis Traversable sąsają.
 map_readonly								= {0} yra tik skaitomas.
 map_readonly_set							= {0} negali keisti Read-Only, kai ji jau nustatyta.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection priima tik i�
 arraysubscription_no_change					= TArraySubscription.{0} negalima keisti po užsiprenumeravimo.
 arraysubscription_no_null_key				= TArraySubscription negali prenumeruoti null rakto ArrayAccess objekte.
 arraysubscription_index_invalid				= TArraySubscription veikia sąrašo režimu (isAssociative = false), bet raktas '{0}' netinkamas (kiekis: {1}).
-eventsubscription_no_setcollection			= TEventSubscription.Array negalima nustatyti tiesiogiai.
 eventsubscription_no_change					= TEventSubscription.{0} negalima keisti po užsiprenumeravimo.
+eventsubscription_no_setarray				= TEventSubscription.Array negalima nustatyti tiesiogiai.
 
 application_includefile_invalid				= Nepavyko rasti programos konfigūracijos {0}. Įsitikinkite, kad ji nurodyta vardų srities formatu ir failas baigiasi ".xml" arba ".php".
 application_basepath_invalid				= Programos bazinis kelias '{0}' neegzistuoja arba nėra katalogas.
 application_runtimepath_invalid				= Programos vykdymo kelias '{0}' neegzistuoja arba žiniatinklio serverio procesas negali į jį rašyti.
 application_service_class_not_found			= Paslaugos klasė '{0}' neegzistuoja.
 application_service_class_not_service		= Paslaugos klasė '{0}' neįgyvendina IService.
-application_service_class_required			= registerService reikalauja klasės vardo arba serviceConfig masyvo paslaugai '{0}'.
+application_service_class_required			= TApplication::registerService() reikalauja klasės vardo arba paslaugos konfigūracijos masyvo paslaugai '{0}'.
 application_service_default_unregister		= Numatytosios puslapių paslaugos '{0}' negalima išregistruoti.
 service_csrf_token_invalid					= Paslauga '{0}' reikalauja galiojančio CSRF žetono.
 application_moduleid_duplicated				= Programos modulio ID '{0}' nėra unikalus.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= Programos konfigūracijos <alias id="{0}"> nau
 appconfig_alias_invalid						= Programos konfigūracijos elementas <alias> turi turėti atributus "id" ir "path".
 appconfig_alias_redefined					= Programos konfigūracijos <alias id="{0}"> negalima apibrėžti iš naujo.
 appconfig_using_invalid						= Programos konfigūracijos elementas <using> turi turėti atributą "namespace".
-appconfig_moduleid_required					= Programos konfigūracijos elementas <module> turi turėti atributą "id".
 appconfig_moduletype_required				= Programos konfigūracijos <module id="{0}"> turi turėti atributą "class".
 appconfig_moduletype_inapplicable			= Programos konfigūracijos <module id="{0}"> negali turėti atributo "class".
 appconfig_serviceid_required				= Programos konfigūracijos elementas <service> turi turėti atributą "id".
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= Programos konfigūracijos <paths> negali turėti 
 appconfig_modules_invalid					= Programos konfigūracijos <modules> negali turėti elemento <{0}>.
 appconfig_services_invalid					= Programos konfigūracijos <services> negali turėti elemento <{0}>.
 appconfig_parameters_invalid				= Programos konfigūracijos <parameters> negali turėti elemento <{0}>.
-appconfig_tag_invalid						= Programos konfigūracija negali turėti elemento <{0}>.
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey negali būti tuščias.
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey negali būti tuščias.
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey negali būti tuščias.
-securitymanager_mcryptextension_required	= TSecurityManager šifravimo funkcijai reikalingas Mcrypt PHP plėtinys.
-securitymanager_mcryptextension_initfailed	= TSecurityManager nepavyko inicijuoti mcrypt modulio.
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm turi būti šifras, kurį palaiko openssl PHP plėtinys.
+securitymanager_hash_algorithm_invalid		= TSecurityManager maišos algoritmas turi būti algoritmas, kurį palaiko PHP hash plėtinys.
+securitymanager_openssl_required			= TSecurityManager šifravimui reikalingas openssl PHP plėtinys.
 
 uri_format_invalid							= '{0}' nėra tinkamas URI.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie yra false, o
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection priima tik THttpCookie objektus.
 
-httpresponse_file_inexistent				= THttpResponse negali išsiųsti failo '{0}'. Failas neegzistuoja.
 httpresponse_responsedata_method_unavailable	= THttpResponse: metodo '{0}' negalima naudoti be tinkamo jį įgyvendinančio adapterio.
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' nenurodo esamo modulio.
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' turi nurodyti modulį, paveldintį iš THttpHeadersManager.
 
 httpheadersmanager_header_required			= THttpHeadersManager gali turėti tik THttpHeader arba jos išvestines klases.
 httpheadersmanager_headerclass_missing		= THttpHeadersManager <headerclass> įrašui trūksta privalomo atributo 'name' arba 'class'.
+httpheadersmanager_header_wrong_manager		= Antraštė priklauso kitam THttpHeadersManager ir negali būti pridėta į šį tvarkytuvą.
 
 httpsession_sessionid_unchangeable			= THttpSession.SessionID negalima keisti po sesijos pradžios.
 httpsession_sessionname_unchangeable		= THttpSession.SessionName negalima keisti po sesijos pradžios.
 httpsession_sessionname_invalid				= THttpSession.SessionName gali sudaryti tik raidės ir skaitmenys.
 httpsession_savepath_unchangeable			= THttpSession.SavePath negalima keisti po sesijos pradžios.
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' yra netinkamas.
-httpsession_storage_unchangeable			= THttpSession.Storage negalima keisti po sesijos pradžios.
 httpsession_cookiemode_unchangeable			= THttpSession.CookieMode negalima keisti po sesijos pradžios.
-httpsession_autostart_unchangeable			= THttpSession.AutoStart negalima keisti po sesijos modulio inicijavimo.
 httpsession_gcprobability_unchangeable		= THttpSession.GCProbability negalima keisti po sesijos pradžios.
 httpsession_gcprobability_invalid			= THttpSession.GCProbability turi būti sveikasis skaičius nuo 0 iki 100.
 httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID negalima keisti po sesijos pradžios.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= THttpSession.Timeout negalima keisti po 
 httpsession_handler_invalid					= THttpSessionHandler konstruktoriaus parametru priima tik THttpSession objektą
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' yra netinkamas. Įsitikinkite, kad jis nurodytas vardų srities forma ir nurodo katalogą, į kurį žiniatinklio serverio procesas gali rašyti.
-assetmanager_basepath_unchangeable			= TAssetManager.BasePath negalima keisti po modulio inicijavimo.
-assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl negalima keisti po modulio inicijavimo.
 assetmanager_filepath_invalid				= TAssetManager publikuoja netinkamą failą '{0}'.
 assetmanager_tarchecksum_invalid			= TAssetManager publikuoja tar failą su netinkama kontroline suma '{0}'.
 assetmanager_tarfile_invalid				= TAssetManager publikuoja netinkamą tar failą '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager nepavyko išskleisti tar f
 assetmanager_source_directory_invalid		= TAssetManager kopijuoja netinkamą katalogą '{0}'.
 
 cache_primary_duplicated					= Leidžiamas daugiausia vienas pirminis podėlio modulis. {0} bando registruotis kaip dar vienas pirminis podėlis.
+cache_flush_unsupported						= Šis podėlio modulis nepalaiko flush().
 psrcache_backing_cache_required				= Reikalinga TPsrCache.BackingCacheId arba TPsrCache.BackingCache.
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' nenurodo programos modulio.
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' turi nurodyti modulį, įgyvendinantį Psr\SimpleCache\CacheInterface arba Psr\Cache\CacheItemPoolInterface.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} reikalauja pagrindinio podėlio. Nustaty
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' nenurodo programos modulio.
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' turi nurodyti Prado\Caching\ICache modulį.
 psrcachebacking_key_invalid					= {0} podėlio raktas turi būti netuščia simbolių eilutė be rezervuotų simbolių {}()/\@:, bet pateikta '{1}'.
-sqlitecache_extension_required				= TSqliteCache reikalauja SQLite PHP plėtinio.
-sqlitecache_dbfile_required					= TSqliteCache.DbFile yra privaloma.
-sqlitecache_connection_failed				= TSqliteCache duomenų bazės prisijungimas nepavyko. {0}.
-sqlitecache_table_creation_failed			= TSqliteCache nepavyko sukurti podėlio duomenų bazės. {0}.
-sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile negalima keisti po modulio inicijavimo.
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile yra netinkamas. Įsitikinkite, kad jis nurodytas tinkamu vardų srities formatu.
 
 dbcache_unavailable							= TDbCache reikalauja PDO PHP plėtinio.
 
 etcdcache_transport_required				= TEtcdCache reikalauja cURL PHP plėtinio arba allow_url_fopen.
 
-memcache_extension_required					= TMemCache reikalauja memcache PHP plėtinio.
 memcache_connection_failed					= TMemCache nepavyko prisijungti prie memcache serverio {0}:{1}.
 memcache_not_initialized					= TMemCache parinkčių negalima nustatyti prieš modulio inicijavimą.
+memcache_serverhost_required				= TMemCache serverio konfigūracijai reikalingas Host.
+memcache_serverport_required				= TMemCache serverio konfigūracijai reikalingas Port.
+memcache_serverport_invalid					= TMemCache serverio Port turi būti skaitinis.
+memcache_serverweight_invalid				= TMemCache serverio Weight turi būti skaitinis.
 
 apccache_extension_required					= TAPCCache reikalauja APC PHP plėtinio.
 apccache_extension_not_enabled				= TAPCCache veikimui php.ini reikia apc.enabled = 1.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= Į TCacheDependencyList galima pr
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' yra netinkamas. Įsitikinkite, kad jis nurodytas vardų srities forma ir nurodo tinkamą katalogą su klaidų šablonų failais.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nėra tinkamas katalogas.
-pageservice_defaultpage_unchangeable		= TPageService.DefaultPage negalima keisti po paslaugos inicijavimo.
-pageservice_basepath_unchangeable			= TPageService.BasePath negalima keisti po paslaugos inicijavimo.
-pageservice_pageclass_invalid				= Puslapio klasė {0} yra netinkama. Ji turi būti TPage arba paveldėti iš TPage.
 pageservice_includefile_invalid				= Nepavyko rasti puslapių paslaugos konfigūracijos {0}. Įsitikinkite, kad ji nurodyta vardų srities formatu ir failas baigiasi ".xml" arba ".php".
 
 pageserviceconf_file_invalid				= Nepavyko atverti puslapių katalogo konfigūracijos failo '{0}'.
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> naudoja netinkamą failo kelią "{1}" puslapių katalogo konfigūracijos faile '{2}'.
-pageserviceconf_alias_invalid				= Elementas <alias> turi turėti atributus "id" ir "path" puslapių katalogo konfigūracijos faile '{0}'.
-pageserviceconf_using_invalid				= Elementas <using> turi turėti atributą "namespace" puslapių katalogo konfigūracijos faile '{0}'.
-pageserviceconf_module_invalid				= Elementas <module> turi turėti atributą "id" puslapių katalogo konfigūracijos faile '{0}'.
-pageserviceconf_moduletype_required			= <module id="{0}"> turi turėti atributą "class" puslapių katalogo konfigūracijos faile '{1}'.
-pageserviceconf_parameter_invalid			= Elementas <parameter> turi turėti atributą "id" puslapių katalogo konfigūracijos faile '{0}'.
 pageserviceconf_page_invalid				= Elementas <page> turi turėti atributą "id" puslapių katalogo konfigūracijos faile '{0}'.
 pageserviceconf_includefile_required		= Puslapio konfigūracijos elementas <include> turi turėti atributą "file".
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" negali atsijungti nuo 
 callchain_bad_dynamic_event					= TCallChain.{0} buvo iškviestas, bet tikėtasi {1}.
 
 behaviormodule_behavior_as_array_required	= php <behavior> turi būti masyvas.
-behaviormodule_behaviorname_required		= <behavior> turi turėti atributą 'name' elgsenai prijungti.
-behaviormodule_behaviorclass_required		= <behavior> turi turėti atributą 'class', apibrėžiantį elgsenos klasę.
 behaviormodule_attachto_class_required		= <behavior> turi turėti atributą 'attachto' arba 'attachtoclass'.
 behaviormodule_attachto_and_class_only_one	= <behavior> turi turėti atributą 'attachto' arba 'attachtoclass', bet ne abu.
 behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' objektas nerastas.
 behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors negalima nustatyti į netinkamą tipą '{0}'
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader turi turėti elgsenos vardą (Name).
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader turi turėti elgsenos klasę (Class).
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader turi turėti atributą 'attachto' arba 'attachtoclass'.
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader turi turėti tik vieną atributą: 'attachto' arba 'attachtoclass'.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} prieš apdorojimą reikalauja in
 template_closingtag_unexpected				= Rasta netikėta uždarymo žymė '{0}'.
 template_closingtag_expected				= Tikėtasi uždarymo žymės '{0}', rasta '{1}'.
 template_directive_nonunique				= Direktyva '<%@ ... %>' turi būti šablono pradžioje ir gali pasirodyti daugiausia vieną kartą.
-template_comments_forbidden					= Šablono komentarai neleidžiami savybių žymėse.
 template_matching_unexpected				= Netikėtas atitikimas.
 template_property_unknown					= {0} neturi savybės '{1}'.
 template_event_unknown						= {0} neturi įvykio '{1}'.
@@ -279,7 +255,6 @@ template_property_duplicated				= Savybė {0} sukonfigūruota du ar daugiau kart
 template_eventhandler_invalid				= {0}.{1} priima tik statinę simbolių eilutę.
 template_controlid_invalid					= {0}.ID priima tik statinę teksto eilutę.
 template_controlskinid_invalid				= {0}.SkinID priima tik statinę teksto eilutę.
-template_content_unexpected					= Kuriant šablono egzempliorių aptiktas netikėtas turinys: {0}.
 template_include_invalid					= Netinkamas šablono įtraukimas. Įsitikinkite, kad {0} yra tinkama vardų sritis, nurodanti esamą šablono failą su plėtiniu .tpl.
 template_tag_unexpected						= Savybės {0} inicijavime yra nežinomas žymės tipas {1}.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' nėra tinkamas kelio pseudonimas. Įsitikinkite, kad šis pseudonimas apibrėžtas konfigūracijoje ir nurodo tinkamą katalogą.
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' nėra tinkamas katalogas.
-thememanager_basepath_unchangeable			= TThemeManager.BasePath negalima keisti po modulio inicijavimo.
 thememanager_theme_invalid					= TThemeManager temos vardas '{0}' turi būti vieno katalogo vardas.
+thememanager_baseurl_required				= TThemeManager.BaseUrl yra privaloma, kai BasePath yra už programos katalogo ribų.
 
-theme_baseurl_required						= TThemeManager.BasePath yra privaloma. Pagal numatytuosius nustatymus laikoma, kad tai katalogas 'themes', esantis kataloge su programos įėjimo skriptu.
 theme_path_inexistent						= Temos kelias '{0}' neegzistuoja.
 theme_control_nested						= Valdiklio tipo '{0}' skin temoje '{1}' negali būti kito skin viduje.
 theme_skinid_duplicated						= SkinID '{0}.{1}' temoje '{2}' dubliuojasi.
-theme_databind_forbidden					= Temoje '{0}' valdiklio skin '{1}.{2}' savybei '{3}' negalima naudoti duomenų susiejimo (Databind).
 theme_property_readonly						= Skin taikomas tik skaitomai valdiklio savybei '{0}.{1}'.
 theme_property_undefined					= Skin taikomas neegzistuojančiai valdiklio savybei '{0}.{1}'.
 theme_tag_unexpected						= Savybės {0} inicijavime yra nežinomas žymės tipas {1}.
@@ -364,9 +337,7 @@ page_head_required							= Puslapio šablone reikalingas THead valdiklis, kad CS
 page_statepersister_invalid					= Puslapio būsenos saugotuvas turi įgyvendinti IPageStatePersister sąsają.
 
 csmanager_pradoscript_invalid				= Nežinomas Prado skriptų bibliotekos vardas '{0}'.
-csmanager_pradoscript_notloaded				= Prado skriptų biblioteka '{0}' dar neįkelta.
 csmanager_pradostyle_invalid				= Nežinomas Prado stilių bibliotekos vardas '{0}'.
-csmanager_invalid_packages					= Nežinomi paketai '{1}' javascript paketams, apibrėžtiems '{0}'. Tinkami paketai yra '{2}'.
 
 httpclient_transport_error					= HTTP kliento transporto klaida (kodas {0}): {1}
 httpclient_http_error						= HTTP klaidos atsakas su būsena {0}.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' yra netinkamas. Tai turi b
 webcontrol_dir_invalid						= {0}.Dir '{1}' yra netinkamas. Leidžiamos reikšmės yra 'ltr', 'rtl' ir 'auto'.
 webcontrol_style_invalid					= {0}.Style priima tik simbolių eilutės reikšmę.
 
-listcontrol_selection_invalid				= {0} turi netinkamą pasirinkimą, nustatytą prieš duomenų susiejimą.
-listcontrol_selectedindex_invalid			= {0}.SelectedIndex turi netinkamą reikšmę {1}.
-listcontrol_selectedvalue_invalid			= {0}.SelectedValue turi netinkamą reikšmę '{1}'.
 listcontrol_expression_invalid				= {0} vykdo netinkamą išraišką '{1}' : {2}
 listcontrol_multiselect_unsupported			= {0} nepalaiko daugybinio pasirinkimo.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices y
 
 logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' neegzistuoja.
 logrouter_routeclass_required				= <route> konfigūracijoje privalomas atributas class.
-logrouter_routetype_required				= Žurnalo maršrutas turi būti TLogRoute arba jos išvestinės klasės egzempliorius.
+logrouter_routetype_invalid					= Žurnalo maršrutas turi būti TLogRoute arba jos išvestinės klasės egzempliorius.
 
 dblogroute_connectionid_invalid				= TDbLogRoute nepavyko sukurti duomenų bazės ryšio ID '{0}'.
 dblogroute_insert_failed					= TDbLogRoute nepavyko įterpti žurnalo įrašo į '{0}'.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= Nežinomas kartotuvo elemento tipas {0}.
 repeateritemcollection_item_invalid			= TRepeaterItemCollection priima tik objektus, kurie yra TControl arba jos išvestinės klasės egzemplioriai.
 
 datalist_template_required					= TDataList.{0} reikalauja šablono egzemplioriaus, įgyvendinančio ITemplate sąsają.
+datalist_datakeyfield_required				= TDataList.DataKeyField yra privaloma, kad būtų galima skaityti SelectedDataKey.
+datalist_itemtype_unknown					= Nežinomas TDataList elemento tipas '{0}'.
 datalistitemcollection_datalistitem_required	= TDataListItemCollection priima tik TDataListItem objektus.
 
 datagrid_template_required					= TDataGrid.{0} reikalauja šablono egzemplioriaus, įgyvendinančio ITemplate sąsają.
 templatecolumn_template_required			= TTemplateColumn.{0} reikalauja šablono egzemplioriaus, įgyvendinančio ITemplate sąsają.
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex turi būti ne mažesnis nei 0.
-datagrid_pagesize_invalid					= TDataGrid.PageSize turi būti didesnis nei 0.
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount turi būti ne mažesnis nei 0.
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection priima tik TDataGridItem objektus.
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection priima tik TDataGridColumn objektus.
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount turi būti didesnis nei 0.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection priima tik T
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection priima tik TTableColumnGroup objektus.
 tablecolumn_span_invalid					= TTableColumn Span turi būti 1 arba didesnis; pateikta {0}.
 
-tablecellcollection_tablerow_required		= TTableCellCollection priima tik TTableCell objektus.
-
 multiview_view_required						= TMultiView vaikais priima tik TView.
 multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex turi netinkamą indeksą '{0}'.
 multiview_view_inexistent					= TMultiView neranda nurodyto rodinio.
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible yra tik skaitoma. Matomumui perjungti
 
 wizard_step_invalid							= Aktyvuojamas žingsnis nerastas vediklio žingsnių kolekcijoje.
 wizard_command_invalid						= Netinkama vediklio navigacijos komanda '{0}'.
+wizard_buttontype_unknown					= Nežinomas TWizard naršymo mygtuko tipas '{0}'.
 
 table_tablesection_outoforder				= TTable lentelės sekcijos turi eiti tokia tvarka: Header, Body ir Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType yra tik ska
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection priima tik TWizardStep arba jos išvestinių klasių objektus.
 
-texthighlighter_stylesheet_invalid			= Nepavyko rasti TTextHighlighter stilių failo.
-
 hotspotcollection_hotspot_required			= THotSpotCollection priima tik THotSpot arba jos išvestinių klasių egzempliorius.
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode yra tik skaitoma.
 htmlarea_tarfile_invalid					= THtmlArea neranda TinyMCE tar failo.
 
-parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile negalima keisti, nes modulis jau inicijuotas.
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' yra netinkamas. Įsitikinkite, kad jis nurodytas vardų srities formatu ir failo plėtinys yra '.xml' arba '.php'.
 parametermodule_parameterid_required		= Elementas parameter turi turėti atributą 'id'.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} turi būti tin
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize turi būti sveikasis skaičius, ne mažesnis nei 1.
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount turi būti sveikasis skaičius, ne mažesnis nei 0.
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex yra už ribų.
 databoundcontrol_datasource_invalid			= {0}.DataSource yra netinkamas.
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' nenurodo esamo valdiklio.
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' turi nurodyti valdiklį, įgyvendinantį IDataSource.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} nepalaiko šalinimo.
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource reikalauja masyvo, IDataSource arba Traversable duomenų šaltinio.
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView reikalauja null, masyvo arba Traversable duomenų šaltinio.
 
-clientscript_invalid_file_position			= Netinkama failo pozicija '{1}' TClientScript valdikliui '{0}'; turi būti 'Head', 'Here' arba 'Begin'.
-clientscript_invalid_package_path			= Netinkamas PackagePath '{0}' TClientScript valdikliui '{1}'.
-
 tdatepicker_autopostback_unsupported		= '{0}' nepalaiko AutoPostBack.
 globalization_cache_path_failed				= Nepavyko sukurti vertimų pranešimų podėlio kelio '{0}'. Įsitikinkite, kad pirminis katalogas egzistuoja ir žiniatinklio procesas gali į jį rašyti.
 globalization_source_path_failed			= Nepavyko sukurti vertimų pranešimų kelio '{0}'. Įsitikinkite, kad pirminis katalogas egzistuoja ir žiniatinklio procesas gali į jį rašyti.
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' nenurodo tinkamo TDataSourceConfig modulio.
 messagesource_connectionid_required			= MessageSource_Database.source privalo turėti ConnectionID.
 
-callback_not_support_no_priority_state_update	= Callback užklausa nepalaiko puslapio būsenos atnaujinimo be prioriteto.
 callback_invalid_callback_options			= '{1}' nėra tinkamas TCallbackOptions valdiklis Callback valdikliui '{0}'.
-callback_invalid_clientside_options			= Callback savybė ClientSide turi būti TCallbackOptions valdiklio ID simbolių eilutė arba TCallbackClientSideOptions egzempliorius.
 callback_invalid_handler					= Netinkamas callback apdoroklis, valdiklis {0} turi įgyvendinti ICallbackEventHandler.
 callback_invalid_target						= Netinkamas callback tikslas, nėra valdiklio su ID {0}.
 
 callback_interval_be_positive				= TCallbackTimer "{0}" intervalas turi būti griežtai didesnis nei nulis sekundžių.
 callback_decay_be_not_negative				= TCallbackTimer "{0}" mažėjimo koeficientas negali būti neigiamas.
-
-callback_no_autopostback					= Valdiklis "{0}" negali įjungti AutoPostBack.
 
 xmltransform_xslextension_required			= TXmlTransform reikalauja PHP XSL plėtinio.
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' yra netinkamas.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= Duomenų bazės tvarkyklė '{0}' negali ke
 dbcommand_prepare_failed					= TDbCommand nepavyko paruošti SQL sakinio "{1}": {0}
 dbcommand_execute_failed					= TDbCommand nepavyko įvykdyti SQL sakinio "{1}": {0}
 dbcommand_query_failed						= TDbCommand nepavyko įvykdyti SQL užklausos "{1}": {0}
-dbcommand_column_empty						= TDbCommand grąžino tuščią rezultatą ir negalėjo gauti skaliaro.
 dbdatareader_rewind_invalid					= TDbDataReader yra tik į priekį skaitomas srautas. Jį galima pereiti tik vieną kartą.
 dbtransaction_transaction_inactive			= TDbTransaction yra neaktyvi.
-
-dbcommandbuilder_value_must_not_be_null		= Savybė {0} negali būti null, kaip apibrėžta lentelės '{1}' stulpelyje '{2}'.
 
 dbcommon_invalid_table_name					= Duomenų bazės lentelė '{0}' nerasta. Klaidos pranešimas: {1}.
 dbcommon_invalid_identifier_name			= Netinkamas duomenų bazės identifikatoriaus vardas '{0}', išsamiau žr. {1}.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= TLiveProcessFork duomenys priimančioje pu
 stream_open_failed							= Nepavyko atverti srauto '{0}' režimu '{1}': {2}
 binarystream_unexpected_eof					= Netikėta srauto pabaiga: reikėjo {0} baitų, bet perskaityta tik {1}.
 binarystream_short_write					= Nepilnas įrašymas: turėjo būti įrašyta {0} baitų, bet priimta tik {1}.
+binarystream_no_stream_owner				= TBinaryStreamBehavior reikalauja savininko, įgyvendinančio Psr\Http\Message\StreamInterface sąsają.
 streamresourcewrapper_unusable_stream		= Srautas nėra nei skaitomas, nei rašomas, todėl negali būti pateiktas kaip resursas.
 streamfilter_already_registered				= Srauto filtras '{0}' jau užregistruotas.
 streamfilter_registration_failed			= Nepavyko užregistruoti srauto filtro '{0}' klasei '{1}'.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' nėra tinkam
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' nenurodo tinkamo TDataSourceConfig modulio.
 dbusermanager_connectionid_required			= TDbUserManager.ConnectionID yra privalomas.
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' nenurodo tinkamo TDataSourceConfig modulio.
-dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID yra privalomas.
-
 feedservice_id_required						= TFeedService reikalauja atributo 'id' savo kanalų (feed) elementuose.
 feedservice_feedtype_invalid				= Kanalo klasė '{0}' turi įgyvendinti IFeedContentProvider sąsają.
 feedservice_class_required					= TFeedService reikalauja atributo 'class' savo kanalų (feed) elementuose.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength turi būti sveikasis
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength turi būti sveikasis skaičius nuo {0} iki {1}.
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet turi būti simbolių eilutė iš bent 2 simbolių.
 captcha_privatekey_unknown					= TCaptcha.PrivateKey nežinomas. Įsitikinkite, kad žiniatinklio serverio procesas gali rašyti į jūsų assets katalogą.
-captcha_gd2_required						= TCaptcha reikalauja PHP GD2 plėtinio.
 captcha_imagettftext_required				= TCaptcha reikalauja PHP GD2 plėtinio su TrueType šriftų palaikymu.
-captcha_imagepng_required					= TCaptcha reikalauja PHP GD2 plėtinio su PNG vaizdų formato palaikymu.
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl turi nurodyti esamą TCaptcha valdiklį.
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} turi nurodyti esamą TCaptcha valdiklį.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey nežinomas. Norint naudoti reCAPTCHA, reikia gauti API raktą.
 recaptcha_publickey_unknown					= TReCaptcha.PublicKey nežinomas. Norint naudoti reCAPTCHA, reikia gauti API raktą.
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate turi būti TReCaptcha egzempliorius.
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' gali turėti tik raides, skaitmenis, '_' ir '-'.
 proofofwork_complexity_invalid				= TProofOfWork.Complexity turi būti sveikasis skaičius nuo {0} iki {1}.
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' turi nurodyti TProofOfWork valdiklį.
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' nėra tinkama naudotojo klasė. Klasė turi paveldėti iš TSliderHandle.
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' nenurodo tinkamo podėlio modulio.
 cachepagestatepersister_cache_required		= TCachePageStatePersister reikalauja įkelto podėlio modulio.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask nerado modulio '{0}'.
 cron_usermanager_nonexistent				= TCronModule nerado UserManager vardu '{0}'.
 cron_usermanager_invalid					= TCronModule UserManager '{0}' nėra TUserManager.
 cron_task_as_array_required					= TCronModule konfigūracijos užduotis nėra masyvas.
-cron_duplicate_task_name					= TCronModule užduočių vardai turi būti unikalūs.
+cron_duplicate_task_name					= TCronModule užduočių vardai turi būti unikalūs; '{0}' apibrėžtas daugiau nei vieną kartą.
 cron_schedule_required						= Cron užduotis turi turėti tvarkaraštį.
 cron_task_required							= Cron užduotis turi turėti užduotį.
 cron_not_a_crontask							= Cron užduotis '{0}' nėra TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper turi turėti bent vieną įvesties b
 bithelper_invalid_color_out					= TBitHelper turi turėti bent vieną išvesties bitą (Out Bit). Pateikta '{0}'.
 bithelper_bad_mirror_bits					= TBitHelper negali atspindėti '{0}' bitų {1} bitų PHP aplinkoje.
 
-ar_data_invalid								= {0}.copyFrom() parametru priima tik objektą arba masyvą.
-ar_save_invalid								= {0} egzemplioriaus negalima išsaugoti, nes jis pašalintas arba nežinomos būsenos.
-ar_delete_invalid							= {0} egzemplioriaus negalima pašalinti, nes tai naujas įrašas arba jau pašalintas įrašas.
-
 dbmetadata_invalid_database_driver			= Tvarkyklė '{0}' nepalaikoma. Įdiekite jos PRADO tvarkyklę, jei tokia yra.
 dbmetadata_not_meta_data					= Tikėtasi tvarkyklės klasės {1}, bet gauta klasė {0}.
 dbmetadata_tableinfo_class_invalid			= TDbMetaData lentelės informacijos klasė '{0}' yra katalogo vardų sritis, ne klasė.
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' yra netinkamas. Įsitikinkite, kad jis nurodo tinkamą programos modulį.
-distributeddatasource_child_required		= {0} reikalauja bent vieno '{1}' vaikinio elemento.
-masterslavedbconnection_connection_exists	= {0}.{1} ryšys jau egzistuoja.
-masterslavedbconnection_interface_required	= {0}.{1} reikalauja egzemplioriaus, įgyvendinančio {2} sąsają.
-slavedbconnection_requires_master			= {0} reikalauja {1}.
+datasource_dbconnection_exists				= TDataSourceConfig.ConnectionClass negalima nustatyti į '{0}' po duomenų bazės ryšio sukūrimo.
 
 response_status_reason_missing				= HTTP 1.1 išplėstiniams būsenos kodams reikalinga priežastis
-response_status_reason_badchars				= HTTP 1.1 antraštėje būsenos priežasties žetonas negali turėti CR arba LF simbolių
 
 activefileupload_temppath_invalid			= TActiveFileUpload TempPath kelias '{0}' neegzistuoja arba žiniatinklio serverio procesas negali į jį rašyti.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' nėra tėvinio TTable valdi
 juioptions_option_invalid					= '{1}' nėra tinkama valdiklio '{0}' parinktis.
 
 ratinglist_invalid_caption_id				= '{0}' nėra tinkamas antraštės valdiklis TRatingList '{0}'.
+ratinglist_table_layout_only				= TRatingList.RepeatLayout turi būti Table.
 
 accordion_activeviewid_invalid				= TAccordion.ActiveViewID turi netinkamą ID '{0}'.
 accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex turi netinkamą indeksą '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= TDot Size turi būti teigiamas sveikasis skaičius, bet yr
 dot_bad_border_width						= TDot FlatBorderWidth turi būti skaičius su neprivalomu % arba CSS ilgio vienetu, bet yra '{0}'
 
 juidatepicker_settextmode_unsupported		= TJuiDatePicker TextMode negalima keisti.
-
-control_adapter_not_active					= BaseActiveControl savybė iškviesta neaktyviame valdiklyje.
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' turi būti tiesioginis TFigure valdiklio vaikas.
 summary_requires_details_parent				= TSummary '{0}' turi būti tiesioginis TDetails valdiklio vaikas.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' negali turėti '{1}': aktyvū
 vardumper_not_array							= __debuginfo() turi grąžinti masyvą.
 
 htmlpurifier_source_path_failed				= Nepavyko sukurti html purifier podėlio kelio '{0}'. Įsitikinkite, kad pirminis katalogas egzistuoja ir žiniatinklio procesas gali į jį rašyti.
+
+active_controls_client_side_exists			= Valdiklis '{0}' jau turi ClientSide parinktis; ClientSide savybės negalima pakeisti.
+componentreflection_class_invalid			= TComponentReflection reikalauja klasės vardo arba objekto.
+datasize_no_negative_size					= TDataSize.Size turi būti 0 arba didesnis; pateikta {0}.
+date_to_parse_must_be_string				= TSimpleDateFormatter gali analizuoti tik simbolių eilutės reikšmę.
+dbuser_dbconnection_invalid					= TDbUser reikalauja duomenų bazės ryšio. Nustatykite DbConnection arba sukurkite naudotoją per TDbUserManager modulį.
+deflatestream_init_failed					= TDeflateStream nepavyko inicijuoti deflate konteksto kodavimui '{0}'.
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' nenurodo formoje esančio valdiklio.
+inflatestream_init_failed					= TInflateStream nepavyko inicijuoti inflate konteksto kodavimui '{0}'.
+logroute_bad_level							= TLogRoute.Levels '{0}' turi neapibrėžtą žurnalo lygį.
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback turi būti iškviečiamas (callable).
+memcached_extension_required				= TMemCache reikalauja memcached PHP plėtinio.
+metatagcollection_metatag_invalid			= TMetaTagCollection priima tik TMetaTag objektus.
+numberformat_type_invalid					= TNumberFormat.Type '{0}' yra netinkamas.
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource turi būti masyvas arba objektas, įgyvendinantis Traversable sąsają.
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize turi būti didesnis nei 0.
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount turi būti 0 arba didesnis.
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex yra už ribų.
+pagedlist_pagesize_invalid					= TPagedList.PageSize turi būti didesnis nei 0.
+phpstream_no_stream_owner					= TPhpStreamBehavior reikalauja savininko, įgyvendinančio Psr\Http\Message\StreamInterface sąsają.
+pipe_popen_failed							= TPipeStream nepavyko atverti kanalo į komandą '{0}' režimu '{1}'.
+process_descriptor_unusable					= TProcess deskriptorius {0} nurodo neatvertą resursą.
+process_invalid_pipe_offset					= TProcess kanalo poslinkis '{0}' nėra kanalo numeris.
+process_open_failed							= TProcess nepavyko paleisti komandos '{0}'.
+rediscache_extension_required				= TRedisCache reikalauja redis PHP plėtinio.
+tablecellcollection_tablecell_required		= TTableCellCollection priima tik TTableCell objektus.
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection yra tik skaitoma.
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection yra tik skaitoma.

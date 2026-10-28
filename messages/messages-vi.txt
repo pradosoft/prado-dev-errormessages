@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= Prado.Application chỉ được thiết lập một lần.
-prado_component_unknown						= Kiểu thành phần '{0}' không xác định. Nguyên nhân có thể là lỗi phân tích cú pháp sau trong tệp lớp {0}: {1}
-prado_using_invalid							= '{0}' không phải là không gian tên hợp lệ để sử dụng. Hãy bảo đảm đã thêm '.*' vào cuối nếu bạn muốn dùng không gian tên tham chiếu đến một thư mục.
 prado_alias_redefined						= Bí danh '{0}' không thể được định nghĩa lại.
 prado_alias_invalid							= Bí danh '{0}' tham chiếu đến đường dẫn không hợp lệ '{1}'. Chỉ các thư mục tồn tại mới có thể được đặt bí danh.
 prado_aliasname_invalid						= Bí danh '{0}' chứa ký tự không hợp lệ '.'.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= Thành phần '{0}' đã có hành vi lớp
 component_not_a_behavior					= Thành phần '{0}' đang được thêm làm hành vi không phải là một TBaseBehavior.
 object_not_a_component						= Đối tượng '{0}' đang được thêm làm hành vi không phải là một TComponent.
 component_no_tcomponent_class_behaviors		= TComponent không thể gắn hành vi lớp vì gây đệ quy.
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors không thể gắn vào nhiều chủ sở hữu. Hãy truyền một chuỗi hoặc một mảng gồm lớp IBehavior và các thuộc tính để khởi tạo trên từng chủ sở hữu.
 
 propertyvalue_enumvalue_invalid				= Giá trị '{0}' không phải là giá trị liệt kê hợp lệ ({1}).
 propertyvalue_invalid_hex_color				= Giá trị '{0}' không phải là giá trị màu hex hợp lệ. Ví dụ: "#112233"
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= Mảng literal lồng sâu hơn {0} cấp.
 eventhandler_lost_weak_ref					= TEventHandler không thể gọi trình xử lý sự kiện vì WeakReference của đối tượng callable đã bị mất.
 eventhandler_no_set_handler					= TEventHandler không thể thiết lập trình xử lý sự kiện, chỉ mục "{0}".
 eventhandler_bad_offset						= TEventHandler không có offset "{0}".
+eventhandler_not_callable					= TEventHandler yêu cầu một trình xử lý là callable.
 
 eventparam_readonly							= {0} là chỉ đọc.
 eventparam_readonly_set						= {0} không thể thay đổi ReadOnly sau khi đã được thiết lập.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= Default Priority chỉ có thể đư�
 prioritytrait_no_set_precision				= Precision chỉ có thể được thiết lập một lần hoặc bởi chính đối tượng.
 weak_no_set_discard_invalid					= '{0}'.DiscardInvalid chỉ có thể được thiết lập một lần hoặc bởi chính đối tượng.
 
-map_addition_disallowed						= Không thể thêm mục mới vào map.
-map_item_unremovable						= Không thể xóa mục khỏi map.
 map_data_not_iterable						= Dữ liệu phải là một mảng hoặc một đối tượng triển khai giao diện Traversable.
 map_readonly								= {0} là chỉ đọc.
 map_readonly_set							= {0} không thể thay đổi Read-Only sau khi đã được thiết lập.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection chỉ chấp 
 arraysubscription_no_change					= TArraySubscription.{0} không thể thay đổi sau khi đã đăng ký.
 arraysubscription_no_null_key				= TArraySubscription không thể đăng ký khóa null trên một đối tượng ArrayAccess.
 arraysubscription_index_invalid				= TArraySubscription đang ở chế độ List (isAssociative = false) nhưng khóa '{0}' không hợp lệ (số lượng: {1}).
-eventsubscription_no_setcollection			= TEventSubscription.Array không thể được thiết lập trực tiếp.
 eventsubscription_no_change					= TEventSubscription.{0} không thể thay đổi sau khi đã đăng ký.
+eventsubscription_no_setarray				= TEventSubscription.Array không thể được thiết lập trực tiếp.
 
 application_includefile_invalid				= Không tìm thấy cấu hình ứng dụng {0}. Hãy bảo đảm nó ở định dạng không gian tên và tệp kết thúc bằng ".xml" hoặc ".php".
 application_basepath_invalid				= Đường dẫn gốc của ứng dụng '{0}' không tồn tại hoặc không phải là thư mục.
 application_runtimepath_invalid				= Đường dẫn runtime của ứng dụng '{0}' không tồn tại hoặc tiến trình máy chủ web không có quyền ghi.
 application_service_class_not_found			= Lớp dịch vụ '{0}' không tồn tại.
 application_service_class_not_service		= Lớp dịch vụ '{0}' không triển khai IService.
-application_service_class_required			= registerService yêu cầu một tên lớp hoặc một mảng serviceConfig cho dịch vụ '{0}'.
+application_service_class_required			= TApplication::registerService() yêu cầu một tên lớp hoặc một mảng cấu hình dịch vụ cho dịch vụ '{0}'.
 application_service_default_unregister		= Dịch vụ trang mặc định '{0}' không thể bị hủy đăng ký.
 service_csrf_token_invalid					= Dịch vụ '{0}' yêu cầu một mã thông báo CSRF hợp lệ.
 application_moduleid_duplicated				= ID mô-đun ứng dụng '{0}' không phải là duy nhất.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= Cấu hình ứng dụng <alias id="{0}"> sử
 appconfig_alias_invalid						= Phần tử <alias> trong cấu hình ứng dụng phải có thuộc tính "id" và thuộc tính "path".
 appconfig_alias_redefined					= Cấu hình ứng dụng <alias id="{0}"> không thể được định nghĩa lại.
 appconfig_using_invalid						= Phần tử <using> trong cấu hình ứng dụng phải có thuộc tính "namespace".
-appconfig_moduleid_required					= Phần tử <module> trong cấu hình ứng dụng phải có thuộc tính "id".
 appconfig_moduletype_required				= Cấu hình ứng dụng <module id="{0}"> phải có thuộc tính "class".
 appconfig_moduletype_inapplicable			= Cấu hình ứng dụng <module id="{0}"> không được có thuộc tính "class".
 appconfig_serviceid_required				= Phần tử <service> trong cấu hình ứng dụng phải có thuộc tính "id".
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= Cấu hình ứng dụng <paths> không được 
 appconfig_modules_invalid					= Cấu hình ứng dụng <modules> không được chứa phần tử <{0}>.
 appconfig_services_invalid					= Cấu hình ứng dụng <services> không được chứa phần tử <{0}>.
 appconfig_parameters_invalid				= Cấu hình ứng dụng <parameters> không được chứa phần tử <{0}>.
-appconfig_tag_invalid						= Cấu hình ứng dụng không được chứa phần tử <{0}>.
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey không được để trống.
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey không được để trống.
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey không được để trống.
-securitymanager_mcryptextension_required	= Cần có phần mở rộng PHP Mcrypt để sử dụng tính năng mã hóa của TSecurityManager.
-securitymanager_mcryptextension_initfailed	= TSecurityManager không thể khởi tạo mô-đun mcrypt.
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm phải là một thuật toán mã hóa được phần mở rộng PHP openssl hỗ trợ.
+securitymanager_hash_algorithm_invalid		= Thuật toán hash của TSecurityManager phải là một thuật toán được phần mở rộng PHP hash hỗ trợ.
+securitymanager_openssl_required			= Tính năng mã hóa của TSecurityManager yêu cầu phần mở rộng PHP openssl.
 
 uri_format_invalid							= '{0}' không phải là một URI hợp lệ.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie là false, �
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection chỉ chấp nhận các đối tượng THttpCookie.
 
-httpresponse_file_inexistent				= THttpResponse không thể gửi tệp '{0}'. Tệp không tồn tại.
 httpresponse_responsedata_method_unavailable	= THttpResponse: phương thức '{0}' không thể được sử dụng nếu không có adapter phù hợp triển khai nó.
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' không trỏ đến một mô-đun tồn tại.
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' phải trỏ đến một mô-đun kế thừa từ THttpHeadersManager.
 
 httpheadersmanager_header_required			= THttpHeadersManager chỉ có thể chứa THttpHeader hoặc các lớp con của nó.
 httpheadersmanager_headerclass_missing		= Mục <headerclass> của THttpHeadersManager thiếu thuộc tính bắt buộc 'name' hoặc 'class'.
+httpheadersmanager_header_wrong_manager		= Header này thuộc về một THttpHeadersManager khác và không thể được thêm vào trình quản lý này.
 
 httpsession_sessionid_unchangeable			= THttpSession.SessionID không thể thay đổi sau khi phiên đã bắt đầu.
 httpsession_sessionname_unchangeable		= THttpSession.SessionName không thể thay đổi sau khi phiên đã bắt đầu.
 httpsession_sessionname_invalid				= THttpSession.SessionName chỉ được chứa các ký tự chữ và số.
 httpsession_savepath_unchangeable			= THttpSession.SavePath không thể thay đổi sau khi phiên đã bắt đầu.
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' không hợp lệ.
-httpsession_storage_unchangeable			= THttpSession.Storage không thể thay đổi sau khi phiên đã bắt đầu.
 httpsession_cookiemode_unchangeable			= THttpSession.CookieMode không thể thay đổi sau khi phiên đã bắt đầu.
-httpsession_autostart_unchangeable			= THttpSession.AutoStart không thể thay đổi sau khi mô-đun phiên đã được khởi tạo.
 httpsession_gcprobability_unchangeable		= THttpSession.GCProbability không thể thay đổi sau khi phiên đã bắt đầu.
 httpsession_gcprobability_invalid			= THttpSession.GCProbability phải là một số nguyên từ 0 đến 100.
 httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID không thể thay đổi sau khi phiên đã bắt đầu.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= THttpSession.Timeout không thể thay �
 httpsession_handler_invalid					= THttpSessionHandler chỉ chấp nhận một đối tượng THttpSession làm tham số hàm khởi tạo
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' không hợp lệ. Hãy bảo đảm nó ở định dạng không gian tên và trỏ đến một thư mục mà tiến trình máy chủ web có quyền ghi.
-assetmanager_basepath_unchangeable			= TAssetManager.BasePath không thể thay đổi sau khi mô-đun đã được khởi tạo.
-assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl không thể thay đổi sau khi mô-đun đã được khởi tạo.
 assetmanager_filepath_invalid				= TAssetManager đang xuất bản một tệp không hợp lệ '{0}'.
 assetmanager_tarchecksum_invalid			= TAssetManager đang xuất bản một tệp tar có checksum không hợp lệ '{0}'.
 assetmanager_tarfile_invalid				= TAssetManager đang xuất bản một tệp tar không hợp lệ '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager không thể giải nén t
 assetmanager_source_directory_invalid		= TAssetManager đang sao chép một thư mục không hợp lệ '{0}'.
 
 cache_primary_duplicated					= Chỉ cho phép tối đa một mô-đun cache chính. {0} đang cố đăng ký làm một cache chính khác.
+cache_flush_unsupported						= Mô-đun cache này không hỗ trợ flush().
 psrcache_backing_cache_required				= Cần có TPsrCache.BackingCacheId hoặc TPsrCache.BackingCache.
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' không tham chiếu đến một mô-đun ứng dụng.
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' phải tham chiếu đến một mô-đun triển khai Psr\SimpleCache\CacheInterface hoặc Psr\Cache\CacheItemPoolInterface.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} yêu cầu một cache nền. Hãy thi�
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' không tham chiếu đến một mô-đun ứng dụng.
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' phải tham chiếu đến một mô-đun Prado\Caching\ICache.
 psrcachebacking_key_invalid					= Khóa cache của {0} phải là một chuỗi không rỗng và không chứa các ký tự dành riêng {}()/\@: nhưng đã nhận '{1}'.
-sqlitecache_extension_required				= TSqliteCache yêu cầu phần mở rộng PHP SQLite.
-sqlitecache_dbfile_required					= Cần có TSqliteCache.DbFile.
-sqlitecache_connection_failed				= Kết nối cơ sở dữ liệu của TSqliteCache thất bại. {0}.
-sqlitecache_table_creation_failed			= TSqliteCache không thể tạo cơ sở dữ liệu cache. {0}.
-sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile không thể thay đổi sau khi mô-đun đã được khởi tạo.
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile không hợp lệ. Hãy bảo đảm nó ở định dạng không gian tên đúng.
 
 dbcache_unavailable							= TDbCache yêu cầu phần mở rộng PHP PDO.
 
 etcdcache_transport_required				= TEtcdCache yêu cầu phần mở rộng PHP cURL hoặc allow_url_fopen.
 
-memcache_extension_required					= TMemCache yêu cầu phần mở rộng PHP memcache.
 memcache_connection_failed					= TMemCache không thể kết nối đến máy chủ memcache {0}:{1}.
 memcache_not_initialized					= Không thể thiết lập các tùy chọn trên TMemCache trước khi mô-đun được khởi tạo.
+memcache_serverhost_required				= Cấu hình máy chủ của TMemCache yêu cầu một Host.
+memcache_serverport_required				= Cấu hình máy chủ của TMemCache yêu cầu một Port.
+memcache_serverport_invalid					= Port của máy chủ TMemCache phải là số.
+memcache_serverweight_invalid				= Weight của máy chủ TMemCache phải là số.
 
 apccache_extension_required					= TAPCCache yêu cầu phần mở rộng PHP APC.
 apccache_extension_not_enabled				= TAPCCache cần apc.enabled = 1 trong php.ini để hoạt động.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= Chỉ các đối tượng triể
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' không hợp lệ. Hãy bảo đảm nó ở định dạng không gian tên và trỏ đến một thư mục hợp lệ chứa các tệp mẫu lỗi.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' không phải là thư mục hợp lệ.
-pageservice_defaultpage_unchangeable		= TPageService.DefaultPage không thể thay đổi sau khi dịch vụ đã được khởi tạo.
-pageservice_basepath_unchangeable			= TPageService.BasePath không thể thay đổi sau khi dịch vụ đã được khởi tạo.
-pageservice_pageclass_invalid				= Lớp trang {0} không hợp lệ. Nó phải là TPage hoặc kế thừa từ TPage.
 pageservice_includefile_invalid				= Không tìm thấy cấu hình dịch vụ trang {0}. Hãy bảo đảm nó ở định dạng không gian tên và tệp kết thúc bằng ".xml" hoặc ".php".
 
 pageserviceconf_file_invalid				= Không thể mở tệp cấu hình thư mục trang '{0}'.
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> sử dụng đường dẫn tệp không hợp lệ "{1}" trong tệp cấu hình thư mục trang '{2}'.
-pageserviceconf_alias_invalid				= Phần tử <alias> phải có thuộc tính "id" và thuộc tính "path" trong tệp cấu hình thư mục trang '{0}'.
-pageserviceconf_using_invalid				= Phần tử <using> phải có thuộc tính "namespace" trong tệp cấu hình thư mục trang '{0}'.
-pageserviceconf_module_invalid				= Phần tử <module> phải có thuộc tính "id" trong tệp cấu hình thư mục trang '{0}'.
-pageserviceconf_moduletype_required			= <module id="{0}"> phải có thuộc tính "class" trong tệp cấu hình thư mục trang '{1}'.
-pageserviceconf_parameter_invalid			= Phần tử <parameter> phải có thuộc tính "id" trong tệp cấu hình thư mục trang '{0}'.
 pageserviceconf_page_invalid				= Phần tử <page> phải có thuộc tính "id" trong tệp cấu hình thư mục trang '{0}'.
 pageserviceconf_includefile_required		= Phần tử <include> trong cấu hình trang phải có thuộc tính "file".
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" không thể gỡ kh�
 callchain_bad_dynamic_event					= TCallChain.{0} đã được kích hoạt nhưng mong đợi {1}.
 
 behaviormodule_behavior_as_array_required	= <behavior> dạng php phải là một mảng.
-behaviormodule_behaviorname_required		= <behavior> phải chứa thuộc tính 'name' để gắn hành vi.
-behaviormodule_behaviorclass_required		= <behavior> phải chứa thuộc tính 'class' định nghĩa lớp hành vi.
 behaviormodule_attachto_class_required		= <behavior> phải có thuộc tính 'attachto' hoặc 'attachtoclass'.
 behaviormodule_attachto_and_class_only_one	= <behavior> phải có thuộc tính 'attachto' hoặc 'attachtoclass', không được có cả hai.
 behaviormodule_behaviorowner_required		= Không tìm thấy đối tượng attachto '{0}' của <behavior>.
 behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors không thể được thiết lập với kiểu không hợp lệ '{0}'
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader phải có Behavior Name.
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader phải có Behavior Class.
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader phải có thuộc tính 'attachto' hoặc 'attachtoclass'.
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader chỉ được có một thuộc tính 'attachto' hoặc 'attachtoclass'.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} yêu cầu khởi tạo trước
 template_closingtag_unexpected				= Gặp thẻ đóng không mong đợi '{0}'.
 template_closingtag_expected				= Mong đợi thẻ đóng '{0}', nhưng gặp '{1}'.
 template_directive_nonunique				= Chỉ thị '<%@ ... %>' phải xuất hiện ở đầu mẫu và chỉ được xuất hiện tối đa một lần.
-template_comments_forbidden					= Không cho phép chú thích mẫu bên trong các thẻ thuộc tính.
 template_matching_unexpected				= Khớp không mong đợi.
 template_property_unknown					= {0} không có thuộc tính nào tên là '{1}'.
 template_event_unknown						= {0} không có sự kiện nào tên là '{1}'.
@@ -279,7 +255,6 @@ template_property_duplicated				= Thuộc tính {0} được cấu hình từ ha
 template_eventhandler_invalid				= {0}.{1} chỉ chấp nhận một chuỗi tĩnh.
 template_controlid_invalid					= {0}.ID chỉ chấp nhận một chuỗi văn bản tĩnh.
 template_controlskinid_invalid				= {0}.SkinID chỉ chấp nhận một chuỗi văn bản tĩnh.
-template_content_unexpected					= Gặp nội dung không mong đợi khi khởi tạo mẫu: {0}.
 template_include_invalid					= Bao gồm mẫu không hợp lệ. Hãy bảo đảm {0} là một không gian tên hợp lệ trỏ đến một tệp mẫu tồn tại có phần mở rộng .tpl.
 template_tag_unexpected						= Phần khởi tạo cho thuộc tính {0} chứa kiểu thẻ không xác định {1}.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' không phải là bí danh đường dẫn hợp lệ. Hãy bảo đảm bạn đã định nghĩa bí danh này trong cấu hình và nó trỏ đến một thư mục hợp lệ.
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' không phải là thư mục hợp lệ.
-thememanager_basepath_unchangeable			= TThemeManager.BasePath không thể thay đổi sau khi mô-đun đã được khởi tạo.
 thememanager_theme_invalid					= Tên chủ đề '{0}' của TThemeManager phải là tên của một thư mục đơn.
+thememanager_baseurl_required				= Cần có TThemeManager.BaseUrl khi BasePath nằm ngoài thư mục ứng dụng.
 
-theme_baseurl_required						= Cần có TThemeManager.BasePath. Theo mặc định, hệ thống giả định một thư mục tên 'themes' nằm trong thư mục chứa tập lệnh đầu vào của ứng dụng.
 theme_path_inexistent						= Đường dẫn chủ đề '{0}' không tồn tại.
 theme_control_nested						= Skin cho kiểu điều khiển '{0}' trong chủ đề '{1}' không thể nằm trong một skin khác.
 theme_skinid_duplicated						= SkinID '{0}.{1}' bị trùng lặp trong chủ đề '{2}'.
-theme_databind_forbidden					= Không thể dùng databind trong chủ đề '{0}' cho skin điều khiển '{1}.{2}' đối với thuộc tính '{3}'.
 theme_property_readonly						= Skin đang được áp dụng cho thuộc tính điều khiển chỉ đọc '{0}.{1}'.
 theme_property_undefined					= Skin đang được áp dụng cho thuộc tính điều khiển không tồn tại '{0}.{1}'.
 theme_tag_unexpected						= Phần khởi tạo cho thuộc tính {0} chứa kiểu thẻ không xác định {1}.
@@ -364,9 +337,7 @@ page_head_required							= Cần có một điều khiển THead trong mẫu tra
 page_statepersister_invalid					= Bộ lưu trạng thái trang phải triển khai giao diện IPageStatePersister.
 
 csmanager_pradoscript_invalid				= Tên thư viện script Prado '{0}' không xác định.
-csmanager_pradoscript_notloaded				= Thư viện script Prado tên '{0}' chưa được nạp.
 csmanager_pradostyle_invalid				= Tên thư viện style Prado '{0}' không xác định.
-csmanager_invalid_packages					= Các gói không xác định '{1}' đối với các gói javascript được định nghĩa trong '{0}'. Các gói hợp lệ là '{2}'.
 
 httpclient_transport_error					= Lỗi truyền tải của HTTP client (mã {0}): {1}
 httpclient_http_error						= Phản hồi lỗi HTTP với trạng thái {0}.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' không hợp lệ. Nó ph�
 webcontrol_dir_invalid						= {0}.Dir '{1}' không hợp lệ. Các giá trị cho phép là 'ltr', 'rtl' và 'auto'.
 webcontrol_style_invalid					= {0}.Style chỉ nhận giá trị chuỗi.
 
-listcontrol_selection_invalid				= {0} có một lựa chọn không hợp lệ được thiết lập trước khi thực hiện ràng buộc dữ liệu.
-listcontrol_selectedindex_invalid			= {0}.SelectedIndex có giá trị không hợp lệ {1}.
-listcontrol_selectedvalue_invalid			= {0}.SelectedValue có giá trị không hợp lệ '{1}'.
 listcontrol_expression_invalid				= {0} đang đánh giá một biểu thức không hợp lệ '{1}' : {2}
 listcontrol_multiselect_unsupported			= {0} không hỗ trợ chọn nhiều mục.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices l
 
 logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' không tồn tại.
 logrouter_routeclass_required				= Thuộc tính class là bắt buộc trong cấu hình <route>.
-logrouter_routetype_required				= Log route phải là một thể hiện của TLogRoute hoặc lớp dẫn xuất của nó.
+logrouter_routetype_invalid					= Log route phải là một thể hiện của TLogRoute hoặc lớp dẫn xuất của nó.
 
 dblogroute_connectionid_invalid				= TDbLogRoute không thể tạo Database Connection ID '{0}'.
 dblogroute_insert_failed					= TDbLogRoute không thể chèn bản ghi log vào '{0}'.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= Kiểu mục repeater {0} không xác định.
 repeateritemcollection_item_invalid			= TRepeaterItemCollection chỉ chấp nhận các đối tượng là thể hiện của TControl hoặc lớp hậu duệ của nó.
 
 datalist_template_required					= TDataList.{0} yêu cầu một thể hiện mẫu triển khai giao diện ITemplate.
+datalist_datakeyfield_required				= Cần có TDataList.DataKeyField để đọc SelectedDataKey.
+datalist_itemtype_unknown					= Kiểu mục '{0}' của TDataList không xác định.
 datalistitemcollection_datalistitem_required	= TDataListItemCollection chỉ chấp nhận các đối tượng TDataListItem.
 
 datagrid_template_required					= TDataGrid.{0} yêu cầu một thể hiện mẫu triển khai giao diện ITemplate.
 templatecolumn_template_required			= TTemplateColumn.{0} yêu cầu một thể hiện mẫu triển khai giao diện ITemplate.
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex không được nhỏ hơn 0.
-datagrid_pagesize_invalid					= TDataGrid.PageSize phải lớn hơn 0.
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount không được nhỏ hơn 0.
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection chỉ chấp nhận các đối tượng TDataGridItem.
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection chỉ chấp nhận các đối tượng TDataGridColumn.
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount phải lớn hơn 0.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection chỉ chấp
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection chỉ chấp nhận các đối tượng TTableColumnGroup.
 tablecolumn_span_invalid					= Span của TTableColumn phải từ 1 trở lên; đã nhận {0}.
 
-tablecellcollection_tablerow_required		= TTableCellCollection chỉ chấp nhận các đối tượng TTableCell.
-
 multiview_view_required						= TMultiView chỉ chấp nhận TView làm phần tử con.
 multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex có chỉ mục không hợp lệ '{0}'.
 multiview_view_inexistent					= TMultiView không tìm thấy view đã chỉ định.
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible là chỉ đọc. Hãy dùng TView.Ac
 
 wizard_step_invalid							= Không tìm thấy bước cần kích hoạt trong tập hợp các bước của wizard.
 wizard_command_invalid						= Lệnh điều hướng wizard không hợp lệ '{0}'.
+wizard_buttontype_unknown					= Kiểu nút điều hướng '{0}' của TWizard không xác định.
 
 table_tablesection_outoforder				= Các phần của bảng TTable phải theo thứ tự: Header, Body và Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType là chỉ �
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection chỉ chấp nhận các đối tượng TWizardStep hoặc lớp dẫn xuất của nó.
 
-texthighlighter_stylesheet_invalid			= Không tìm thấy tệp stylesheet cho TTextHighlighter.
-
 hotspotcollection_hotspot_required			= THotSpotCollection chỉ chấp nhận thể hiện của THotSpot hoặc lớp dẫn xuất của nó.
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode là chỉ đọc.
 htmlarea_tarfile_invalid					= THtmlArea không thể tìm thấy tệp tar TinyMCE.
 
-parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile không thể thay đổi vì mô-đun đã được khởi tạo.
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' không hợp lệ. Hãy bảo đảm nó ở định dạng không gian tên và phần mở rộng của tệp là '.xml' hoặc '.php'.
 parametermodule_parameterid_required		= Phần tử Parameter phải có thuộc tính 'id'.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} phải là đ�
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize phải là một số nguyên không nhỏ hơn 1.
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount phải là một số nguyên không nhỏ hơn 0.
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex nằm ngoài phạm vi.
 databoundcontrol_datasource_invalid			= {0}.DataSource không hợp lệ.
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' không tham chiếu đến một điều khiển tồn tại.
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' phải tham chiếu đến một điều khiển triển khai IDataSource.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} không hỗ trợ thao tác xóa.
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource yêu cầu nguồn dữ liệu là một mảng, một IDataSource, hoặc một Traversable.
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView yêu cầu nguồn dữ liệu là null, một mảng, hoặc một Traversable.
 
-clientscript_invalid_file_position			= Vị trí tệp '{1}' không hợp lệ cho điều khiển TClientScript '{0}', phải là 'Head', 'Here' hoặc 'Begin'.
-clientscript_invalid_package_path			= PackagePath '{0}' không hợp lệ cho điều khiển TClientScript '{1}'.
-
 tdatepicker_autopostback_unsupported		= '{0}' không hỗ trợ AutoPostBack.
 globalization_cache_path_failed				= Không thể tạo đường dẫn cache thông điệp dịch '{0}'. Hãy bảo đảm thư mục cha tồn tại và tiến trình web có quyền ghi.
 globalization_source_path_failed			= Không thể tạo đường dẫn thông điệp dịch '{0}'. Hãy bảo đảm thư mục cha tồn tại và tiến trình web có quyền ghi.
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' không trỏ đến một mô-đun TDataSourceConfig hợp lệ.
 messagesource_connectionid_required			= Cần có ConnectionID trong MessageSource_Database.source.
 
-callback_not_support_no_priority_state_update	= Yêu cầu callback không hỗ trợ cập nhật trạng thái trang không có ưu tiên.
 callback_invalid_callback_options			= '{1}' không phải là điều khiển TCallbackOptions hợp lệ cho điều khiển callback '{0}'.
-callback_invalid_clientside_options			= Thuộc tính ClientSide của callback phải là một chuỗi là ID của điều khiển TCallbackOptions hoặc một thể hiện của TCallbackClientSideOptions.
 callback_invalid_handler					= Trình xử lý callback không hợp lệ, điều khiển {0} phải triển khai ICallbackEventHandler.
 callback_invalid_target						= Đích callback không hợp lệ, không có điều khiển nào với ID {0}.
 
 callback_interval_be_positive				= Interval của TCallbackTimer "{0}" phải lớn hơn 0 giây.
 callback_decay_be_not_negative				= Tốc độ suy giảm (Decay) của TCallbackTimer "{0}" không được là số âm.
-
-callback_no_autopostback					= Điều khiển "{0}" không thể bật AutoPostBack.
 
 xmltransform_xslextension_required			= TXmlTransform yêu cầu phần mở rộng XSL của PHP.
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' không hợp lệ.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= Trình điều khiển cơ sở dữ liệ
 dbcommand_prepare_failed					= TDbCommand không thể chuẩn bị câu lệnh SQL "{1}": {0}
 dbcommand_execute_failed					= TDbCommand không thể thực thi câu lệnh SQL "{1}": {0}
 dbcommand_query_failed						= TDbCommand không thể thực thi truy vấn SQL "{1}": {0}
-dbcommand_column_empty						= TDbCommand trả về kết quả rỗng và không thể lấy giá trị scalar.
 dbdatareader_rewind_invalid					= TDbDataReader là một luồng chỉ đọc tiến. Nó chỉ có thể được duyệt một lần.
 dbtransaction_transaction_inactive			= TDbTransaction không hoạt động.
-
-dbcommandbuilder_value_must_not_be_null		= Thuộc tính {0} không được là null theo định nghĩa của cột '{2}' trong bảng '{1}'.
 
 dbcommon_invalid_table_name					= Không tìm thấy bảng cơ sở dữ liệu '{0}'. Thông điệp lỗi: {1}.
 dbcommon_invalid_identifier_name			= Tên định danh cơ sở dữ liệu '{0}' không hợp lệ, xem {1} để biết chi tiết.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= Dữ liệu của TLiveProcessFork là ch�
 stream_open_failed							= Không thể mở luồng '{0}' với chế độ '{1}': {2}
 binarystream_unexpected_eof					= Kết thúc luồng không mong đợi: cần {0} byte nhưng chỉ đọc được {1}.
 binarystream_short_write					= Ghi thiếu: cần ghi {0} byte nhưng chỉ {1} byte được chấp nhận.
+binarystream_no_stream_owner				= TBinaryStreamBehavior yêu cầu một chủ sở hữu triển khai Psr\Http\Message\StreamInterface.
 streamresourcewrapper_unusable_stream		= Luồng không thể đọc cũng không thể ghi và không thể được phơi bày dưới dạng resource.
 streamfilter_already_registered				= Bộ lọc luồng '{0}' đã được đăng ký.
 streamfilter_registration_failed			= Không thể đăng ký bộ lọc luồng '{0}' cho lớp '{1}'.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' không phả
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' không trỏ đến một mô-đun TDataSourceConfig hợp lệ.
 dbusermanager_connectionid_required			= Cần có TDbUserManager.ConnectionID.
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' không trỏ đến một mô-đun TDataSourceConfig hợp lệ.
-dbpluginmodule_connectionid_required		= Cần có TDbPluginModule.ConnectionID.
-
 feedservice_id_required						= TFeedService yêu cầu thuộc tính 'id' trong các phần tử feed của nó.
 feedservice_feedtype_invalid				= Lớp feed '{0}' phải triển khai giao diện IFeedContentProvider.
 feedservice_class_required					= TFeedService yêu cầu thuộc tính 'class' trong các phần tử feed của nó.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength phải là một s�
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength phải là một số nguyên từ {0} đến {1}.
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet phải là một chuỗi gồm ít nhất 2 ký tự.
 captcha_privatekey_unknown					= TCaptcha.PrivateKey không xác định. Hãy bảo đảm thư mục assets của bạn cho phép tiến trình máy chủ web ghi.
-captcha_gd2_required						= TCaptcha yêu cầu phần mở rộng PHP GD2.
 captcha_imagettftext_required				= TCaptcha yêu cầu phần mở rộng PHP GD2 có hỗ trợ phông chữ TrueType.
-captcha_imagepng_required					= TCaptcha yêu cầu phần mở rộng PHP GD2 có hỗ trợ định dạng ảnh PNG.
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl phải trỏ đến một điều khiển TCaptcha tồn tại.
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} phải trỏ đến một điều khiển TCaptcha tồn tại.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey không xác định. Để sử dụng reCAPTCHA, bạn phải có khóa API.
 recaptcha_publickey_unknown					= TReCaptcha.PublicKey không xác định. Để sử dụng reCAPTCHA, bạn phải có khóa API.
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate phải là một thể hiện của TReCaptcha.
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' chỉ được chứa chữ cái, chữ số, '_' và '-'.
 proofofwork_complexity_invalid				= TProofOfWork.Complexity phải là một số nguyên từ {0} đến {1}.
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' phải trỏ đến một điều khiển TProofOfWork.
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' không phải là lớp người dùng hợp lệ. Lớp này phải kế thừa TSliderHandle.
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' không trỏ đến một mô-đun cache hợp lệ.
 cachepagestatepersister_cache_required		= TCachePageStatePersister yêu cầu một mô-đun cache được nạp.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask không tìm thấy mô-đun '{0}'
 cron_usermanager_nonexistent				= TCronModule không tìm thấy UserManager có tên '{0}'.
 cron_usermanager_invalid					= UserManager '{0}' của TCronModule không phải là một TUserManager.
 cron_task_as_array_required					= Tác vụ trong cấu hình TCronModule không phải là một mảng.
-cron_duplicate_task_name					= Các tác vụ của TCronModule phải có tên duy nhất.
+cron_duplicate_task_name					= Tên các tác vụ của TCronModule phải là duy nhất; '{0}' được định nghĩa nhiều hơn một lần.
 cron_schedule_required						= Cron Task phải có lịch chạy.
 cron_task_required							= Cron Task phải có một tác vụ.
 cron_not_a_crontask							= Cron Task '{0}' không phải là một TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper phải có ít nhất một In Bit. 
 bithelper_invalid_color_out					= TBitHelper phải có ít nhất một Out Bit. Đã nhận '{0}'.
 bithelper_bad_mirror_bits					= TBitHelper không thể đảo ngược '{0}' bit trong môi trường PHP {1} bit.
 
-ar_data_invalid								= {0}.copyFrom() chỉ nhận một đối tượng hoặc mảng làm tham số.
-ar_save_invalid								= Thể hiện {0} không thể được lưu vì nó đã bị xóa hoặc đang ở trạng thái không xác định.
-ar_delete_invalid							= Thể hiện {0} không thể bị xóa vì nó là bản ghi mới hoặc là bản ghi đã bị xóa.
-
 dbmetadata_invalid_database_driver			= Trình điều khiển '{0}' không được hỗ trợ. Hãy cài đặt PRADO Driver tương ứng, nếu có.
 dbmetadata_not_meta_data					= Mong đợi lớp trình điều khiển {1} nhưng nhận được lớp {0}.
 dbmetadata_tableinfo_class_invalid			= Lớp thông tin bảng '{0}' của TDbMetaData là một không gian tên thư mục, không phải một lớp.
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' không hợp lệ. Hãy bảo đảm nó trỏ đến một mô-đun ứng dụng hợp lệ.
-distributeddatasource_child_required		= {0} yêu cầu tối thiểu một phần tử con '{1}'.
-masterslavedbconnection_connection_exists	= Kết nối {0}.{1} đã tồn tại.
-masterslavedbconnection_interface_required	= {0}.{1} yêu cầu một thể hiện triển khai giao diện {2}.
-slavedbconnection_requires_master			= {0} yêu cầu một {1}.
+datasource_dbconnection_exists				= TDataSourceConfig.ConnectionClass không thể được thiết lập thành '{0}' sau khi kết nối cơ sở dữ liệu đã được tạo.
 
 response_status_reason_missing				= HTTP 1.1 cần lý do (reason) cho các mã trạng thái mở rộng
-response_status_reason_badchars				= Với header HTTP 1.1, token status-reason không được chứa token CR hoặc LF
 
 activefileupload_temppath_invalid			= Đường dẫn TempPath '{0}' của TActiveFileUpload không tồn tại hoặc tiến trình máy chủ web không có quyền ghi.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' không phải là thành vi
 juioptions_option_invalid					= '{1}' không phải là tùy chọn hợp lệ cho điều khiển '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' không phải là điều khiển chú thích hợp lệ cho TRatingList '{0}'.
+ratinglist_table_layout_only				= TRatingList.RepeatLayout phải là Table.
 
 accordion_activeviewid_invalid				= TAccordion.ActiveViewID có ID không hợp lệ '{0}'.
 accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex có Index không hợp lệ '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= Size của TDot phải là một số nguyên dương như
 dot_bad_border_width						= FlatBorderWidth của TDot phải là một số có thể kèm % hoặc đơn vị độ dài CSS nhưng lại là '{0}'
 
 juidatepicker_settextmode_unsupported		= TextMode của TJuiDatePicker không thể thay đổi.
-
-control_adapter_not_active					= Thuộc tính BaseActiveControl được gọi trên một Control không phải active.
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' phải là con trực tiếp của một điều khiển TFigure.
 summary_requires_details_parent				= TSummary '{0}' phải là con trực tiếp của một điều khiển TDetails.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' không thể chứa '{1}': c�
 vardumper_not_array							= __debuginfo() phải trả về một mảng.
 
 htmlpurifier_source_path_failed				= Không thể tạo đường dẫn cache của html purifier '{0}'. Hãy bảo đảm thư mục cha tồn tại và tiến trình web có quyền ghi.
+
+active_controls_client_side_exists			= Điều khiển '{0}' đã có các tùy chọn ClientSide; thuộc tính ClientSide không thể được thay thế.
+componentreflection_class_invalid			= TComponentReflection yêu cầu một tên lớp hoặc một đối tượng.
+datasize_no_negative_size					= TDataSize.Size phải là 0 hoặc lớn hơn; đã nhận {0}.
+date_to_parse_must_be_string				= TSimpleDateFormatter chỉ có thể phân tích một giá trị chuỗi.
+dbuser_dbconnection_invalid					= TDbUser yêu cầu một kết nối cơ sở dữ liệu. Hãy thiết lập DbConnection hoặc tạo người dùng thông qua một mô-đun TDbUserManager.
+deflatestream_init_failed					= TDeflateStream không thể khởi tạo ngữ cảnh deflate cho mã hóa '{0}'.
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' không tham chiếu đến một điều khiển trong form.
+inflatestream_init_failed					= TInflateStream không thể khởi tạo ngữ cảnh inflate cho mã hóa '{0}'.
+logroute_bad_level							= TLogRoute.Levels '{0}' chứa một mức log chưa được định nghĩa.
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback phải là callable.
+memcached_extension_required				= TMemCache yêu cầu phần mở rộng PHP memcached.
+metatagcollection_metatag_invalid			= TMetaTagCollection chỉ chấp nhận các đối tượng TMetaTag.
+numberformat_type_invalid					= TNumberFormat.Type '{0}' không hợp lệ.
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource phải là một mảng hoặc một đối tượng triển khai giao diện Traversable.
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize phải lớn hơn 0.
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount phải là 0 hoặc lớn hơn.
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex nằm ngoài phạm vi.
+pagedlist_pagesize_invalid					= TPagedList.PageSize phải lớn hơn 0.
+phpstream_no_stream_owner					= TPhpStreamBehavior yêu cầu một chủ sở hữu triển khai Psr\Http\Message\StreamInterface.
+pipe_popen_failed							= TPipeStream không thể mở pipe đến lệnh '{0}' với chế độ '{1}'.
+process_descriptor_unusable					= Descriptor {0} của TProcess tham chiếu đến một resource chưa được mở.
+process_invalid_pipe_offset					= Vị trí pipe '{0}' của TProcess không phải là một số hiệu pipe.
+process_open_failed							= TProcess không thể khởi chạy lệnh '{0}'.
+rediscache_extension_required				= TRedisCache yêu cầu phần mở rộng PHP redis.
+tablecellcollection_tablecell_required		= TTableCellCollection chỉ chấp nhận các đối tượng TTableCell.
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection là chỉ đọc.
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection là chỉ đọc.

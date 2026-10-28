@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= Prado.Application ต้องถูกกำหนดค่าเพียงครั้งเดียวเท่านั้น
-prado_component_unknown						= ไม่รู้จักชนิดคอมโพเนนต์ '{0}' สาเหตุอาจมาจากข้อผิดพลาดในการแยกวิเคราะห์ไฟล์คลาส {0} ดังนี้: {1}
-prado_using_invalid							= '{0}' ไม่ใช่เนมสเปซที่ใช้ได้ หากต้องการใช้เนมสเปซที่อ้างถึงไดเรกทอรี ต้องต่อท้ายด้วย '.*'
 prado_alias_redefined						= ไม่สามารถกำหนดนามแฝง '{0}' ซ้ำได้
 prado_alias_invalid							= นามแฝง '{0}' อ้างถึงพาธ '{1}' ที่ไม่ถูกต้อง สามารถกำหนดนามแฝงให้กับไดเรกทอรีที่มีอยู่จริงเท่านั้น
 prado_aliasname_invalid						= นามแฝง '{0}' มีอักขระ '.' ซึ่งไม่อนุญาต
@@ -21,7 +19,6 @@ component_class_behavior_defined			= คอมโพเนนต์ '{0}' มี
 component_not_a_behavior					= คอมโพเนนต์ '{0}' ที่กำลังเพิ่มเป็นบีเฮฟวิเออร์ไม่ใช่ TBaseBehavior
 object_not_a_component						= อ็อบเจกต์ '{0}' ที่กำลังเพิ่มเป็นบีเฮฟวิเออร์ไม่ใช่ TComponent
 component_no_tcomponent_class_behaviors		= TComponent ไม่สามารถมีบีเฮฟวิเออร์ระดับคลาสผูกอยู่ได้ เนื่องจากจะเกิดการเรียกซ้ำ
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors ไม่สามารถผูกกับเจ้าของหลายรายได้ ให้ส่งสตริงหรืออาร์เรย์ของคลาส IBehavior และพร็อพเพอร์ตี เพื่อสร้างอินสแตนซ์แยกให้แก่เจ้าของแต่ละราย
 
 propertyvalue_enumvalue_invalid				= ค่า '{0}' ไม่ใช่ค่า enumeration ที่ถูกต้อง ({1})
 propertyvalue_invalid_hex_color				= ค่า '{0}' ไม่ใช่ค่าสีเลขฐานสิบหกที่ถูกต้อง เช่น "#112233"
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= ลิเทอรัลอาร์เรย�
 eventhandler_lost_weak_ref					= TEventHandler ไม่สามารถเรียกตัวจัดการอีเวนต์ได้ เนื่องจาก WeakReference ของอ็อบเจกต์ callable สูญหายไปแล้ว
 eventhandler_no_set_handler					= TEventHandler ไม่สามารถกำหนดตัวจัดการอีเวนต์ที่ดัชนี "{0}" ได้
 eventhandler_bad_offset						= TEventHandler ไม่มีออฟเซ็ต "{0}"
+eventhandler_not_callable					= TEventHandler ต้องมีตัวจัดการที่เป็น callable
 
 eventparam_readonly							= {0} เป็นแบบอ่านได้อย่างเดียว
 eventparam_readonly_set						= {0} ไม่สามารถเปลี่ยน ReadOnly ได้หลังจากกำหนดค่าแล้ว
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= ลำดับความสำคั
 prioritytrait_no_set_precision				= ความละเอียด (Precision) สามารถกำหนดได้เพียงครั้งเดียว หรือกำหนดโดยอ็อบเจกต์นั้นเองเท่านั้น
 weak_no_set_discard_invalid					= '{0}'.DiscardInvalid สามารถกำหนดได้เพียงครั้งเดียว หรือกำหนดโดยอ็อบเจกต์นั้นเองเท่านั้น
 
-map_addition_disallowed						= ไม่สามารถเพิ่มรายการใหม่ลงในแมปได้
-map_item_unremovable						= ไม่สามารถลบรายการนี้ออกจากแมปได้
 map_data_not_iterable						= ข้อมูลต้องเป็นอาร์เรย์หรืออ็อบเจกต์ที่อิมพลีเมนต์อินเทอร์เฟซ Traversable
 map_readonly								= {0} เป็นแบบอ่านได้อย่างเดียว
 map_readonly_set							= {0} ไม่สามารถเปลี่ยนค่า Read-Only ได้หลังจากกำหนดค่าไปแล้ว
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection รับไ�
 arraysubscription_no_change					= TArraySubscription.{0} ไม่สามารถเปลี่ยนได้หลังจากสมัครรับข้อมูล (subscribe) แล้ว
 arraysubscription_no_null_key				= TArraySubscription ไม่สามารถสมัครรับข้อมูลด้วยคีย์ null บนอ็อบเจกต์ ArrayAccess ได้
 arraysubscription_index_invalid				= TArraySubscription อยู่ในโหมดลิสต์ (isAssociative = false) แต่คีย์ '{0}' ไม่ถูกต้อง (จำนวน: {1})
-eventsubscription_no_setcollection			= TEventSubscription.Array ไม่สามารถกำหนดค่าโดยตรงได้
 eventsubscription_no_change					= TEventSubscription.{0} ไม่สามารถเปลี่ยนได้หลังจากสมัครรับข้อมูลแล้ว
+eventsubscription_no_setarray				= TEventSubscription.Array ไม่สามารถกำหนดค่าโดยตรงได้
 
 application_includefile_invalid				= ไม่พบไฟล์กำหนดค่าแอปพลิเคชัน {0} ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และไฟล์ลงท้ายด้วย ".xml" หรือ ".php"
 application_basepath_invalid				= พาธฐานของแอปพลิเคชัน '{0}' ไม่มีอยู่ หรือไม่ใช่ไดเรกทอรี
 application_runtimepath_invalid				= พาธรันไทม์ของแอปพลิเคชัน '{0}' ไม่มีอยู่ หรือโปรเซสของเว็บเซิร์ฟเวอร์ไม่สามารถเขียนได้
 application_service_class_not_found			= ไม่มีคลาสเซอร์วิส '{0}'
 application_service_class_not_service		= คลาสเซอร์วิส '{0}' ไม่ได้อิมพลีเมนต์ IService
-application_service_class_required			= registerService ต้องการชื่อคลาสหรืออาร์เรย์ serviceConfig สำหรับเซอร์วิส '{0}'
+application_service_class_required			= TApplication::registerService() ต้องการชื่อคลาสหรืออาร์เรย์การกำหนดค่าเซอร์วิสสำหรับเซอร์วิส '{0}'
 application_service_default_unregister		= ไม่สามารถยกเลิกการลงทะเบียนเซอร์วิสเพจเริ่มต้น '{0}' ได้
 service_csrf_token_invalid					= เซอร์วิส '{0}' ต้องการโทเค็น CSRF ที่ถูกต้อง
 application_moduleid_duplicated				= ID โมดูลของแอปพลิเคชัน '{0}' ซ้ำกัน
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= การกำหนดค่าแอปพ�
 appconfig_alias_invalid						= เอลิเมนต์ <alias> ในการกำหนดค่าแอปพลิเคชันต้องมีแอตทริบิวต์ "id" และ "path"
 appconfig_alias_redefined					= ไม่สามารถกำหนด <alias id="{0}"> ในการกำหนดค่าแอปพลิเคชันซ้ำได้
 appconfig_using_invalid						= เอลิเมนต์ <using> ในการกำหนดค่าแอปพลิเคชันต้องมีแอตทริบิวต์ "namespace"
-appconfig_moduleid_required					= เอลิเมนต์ <module> ในการกำหนดค่าแอปพลิเคชันต้องมีแอตทริบิวต์ "id"
 appconfig_moduletype_required				= <module id="{0}"> ในการกำหนดค่าแอปพลิเคชันต้องมีแอตทริบิวต์ "class"
 appconfig_moduletype_inapplicable			= <module id="{0}"> ในการกำหนดค่าแอปพลิเคชันต้องไม่มีแอตทริบิวต์ "class"
 appconfig_serviceid_required				= เอลิเมนต์ <service> ในการกำหนดค่าแอปพลิเคชันต้องมีแอตทริบิวต์ "id"
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= <paths> ในการกำหนดค่า�
 appconfig_modules_invalid					= <modules> ในการกำหนดค่าแอปพลิเคชันต้องไม่มีเอลิเมนต์ <{0}>
 appconfig_services_invalid					= <services> ในการกำหนดค่าแอปพลิเคชันต้องไม่มีเอลิเมนต์ <{0}>
 appconfig_parameters_invalid				= <parameters> ในการกำหนดค่าแอปพลิเคชันต้องไม่มีเอลิเมนต์ <{0}>
-appconfig_tag_invalid						= การกำหนดค่าแอปพลิเคชันต้องไม่มีเอลิเมนต์ <{0}>
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey ต้องไม่ว่างเปล่า
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey ต้องไม่ว่างเปล่า
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey ต้องไม่ว่างเปล่า
-securitymanager_mcryptextension_required	= ต้องมีส่วนขยาย PHP Mcrypt เพื่อใช้ฟีเจอร์การเข้ารหัสลับของ TSecurityManager
-securitymanager_mcryptextension_initfailed	= TSecurityManager เริ่มต้นโมดูล mcrypt ไม่สำเร็จ
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm ต้องเป็นรหัสลับ (cipher) ที่ส่วนขยาย PHP openssl รองรับ
+securitymanager_hash_algorithm_invalid		= อัลกอริทึมแฮชของ TSecurityManager ต้องเป็นอัลกอริทึมที่ส่วนขยาย PHP hash รองรับ
+securitymanager_openssl_required			= การเข้ารหัสลับของ TSecurityManager ต้องมีส่วนขยาย PHP openssl
 
 uri_format_invalid							= '{0}' ไม่ใช่ URI ที่ถูกต้อง
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie เป็น
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection รับได้เฉพาะอ็อบเจกต์ THttpCookie เท่านั้น
 
-httpresponse_file_inexistent				= THttpResponse ไม่สามารถส่งไฟล์ '{0}' ได้ เนื่องจากไม่มีไฟล์นี้อยู่
 httpresponse_responsedata_method_unavailable	= THttpResponse: ไม่สามารถใช้เมธอด '{0}' ได้หากไม่มีอะแดปเตอร์ที่อิมพลีเมนต์เมธอดนี้อย่างถูกต้อง
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' ไม่ได้ชี้ไปยังโมดูลที่มีอยู่
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' ต้องชี้ไปยังโมดูลที่สืบทอดจาก THttpHeadersManager
 
 httpheadersmanager_header_required			= THttpHeadersManager รับได้เฉพาะ THttpHeader หรือคลาสลูกของมันเท่านั้น
 httpheadersmanager_headerclass_missing		= รายการ <headerclass> ของ THttpHeadersManager ขาดแอตทริบิวต์ 'name' หรือ 'class' ที่จำเป็น
+httpheadersmanager_header_wrong_manager		= ส่วนหัวนี้เป็นของ THttpHeadersManager อื่น จึงไม่สามารถเพิ่มเข้าในตัวจัดการนี้ได้
 
 httpsession_sessionid_unchangeable			= THttpSession.SessionID ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
 httpsession_sessionname_unchangeable		= THttpSession.SessionName ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
 httpsession_sessionname_invalid				= THttpSession.SessionName ต้องมีเฉพาะอักขระตัวอักษรและตัวเลขเท่านั้น
 httpsession_savepath_unchangeable			= THttpSession.SavePath ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' ไม่ถูกต้อง
-httpsession_storage_unchangeable			= THttpSession.Storage ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
 httpsession_cookiemode_unchangeable			= THttpSession.CookieMode ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
-httpsession_autostart_unchangeable			= THttpSession.AutoStart ไม่สามารถแก้ไขได้หลังจากโมดูลเซสชันเริ่มต้นแล้ว
 httpsession_gcprobability_unchangeable		= THttpSession.GCProbability ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
 httpsession_gcprobability_invalid			= THttpSession.GCProbability ต้องเป็นจำนวนเต็มระหว่าง 0 ถึง 100
 httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID ไม่สามารถแก้ไขได้หลังจากเริ่มเซสชันแล้ว
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= THttpSession.Timeout ไม่สาม�
 httpsession_handler_invalid					= THttpSessionHandler รับได้เฉพาะอ็อบเจกต์ THttpSession เป็นพารามิเตอร์ของคอนสตรักเตอร์เท่านั้น
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' ไม่ถูกต้อง ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และชี้ไปยังไดเรกทอรีที่โปรเซสของเว็บเซิร์ฟเวอร์เขียนได้
-assetmanager_basepath_unchangeable			= TAssetManager.BasePath ไม่สามารถแก้ไขได้หลังจากโมดูลเริ่มต้นแล้ว
-assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl ไม่สามารถแก้ไขได้หลังจากโมดูลเริ่มต้นแล้ว
 assetmanager_filepath_invalid				= TAssetManager กำลังเผยแพร่ไฟล์ '{0}' ที่ไม่ถูกต้อง
 assetmanager_tarchecksum_invalid			= TAssetManager กำลังเผยแพร่ไฟล์ tar ที่มี checksum '{0}' ไม่ถูกต้อง
 assetmanager_tarfile_invalid				= TAssetManager กำลังเผยแพร่ไฟล์ tar '{0}' ที่ไม่ถูกต้อง
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager แตกไฟล์ tar 
 assetmanager_source_directory_invalid		= TAssetManager กำลังคัดลอกไดเรกทอรี '{0}' ที่ไม่ถูกต้อง
 
 cache_primary_duplicated					= อนุญาตให้มีโมดูลแคชหลักได้ไม่เกินหนึ่งโมดูล {0} กำลังพยายามลงทะเบียนเป็นแคชหลักอีกตัวหนึ่ง
+cache_flush_unsupported						= โมดูลแคชนี้ไม่รองรับ flush()
 psrcache_backing_cache_required				= ต้องระบุ TPsrCache.BackingCacheId หรือ TPsrCache.BackingCache
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' ไม่ได้อ้างถึงโมดูลของแอปพลิเคชัน
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' ต้องอ้างถึงโมดูลที่อิมพลีเมนต์ Psr\SimpleCache\CacheInterface หรือ Psr\Cache\CacheItemPoolInterface
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} ต้องมีแคชรองร�
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' ไม่ได้อ้างถึงโมดูลของแอปพลิเคชัน
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' ต้องอ้างถึงโมดูล Prado\Caching\ICache
 psrcachebacking_key_invalid					= คีย์แคชของ {0} ต้องเป็นสตริงที่ไม่ว่างเปล่าและไม่มีอักขระสงวน {}()/\@: แต่ได้รับ '{1}'
-sqlitecache_extension_required				= TSqliteCache ต้องมีส่วนขยาย PHP SQLite
-sqlitecache_dbfile_required					= ต้องระบุ TSqliteCache.DbFile
-sqlitecache_connection_failed				= การเชื่อมต่อฐานข้อมูลของ TSqliteCache ล้มเหลว {0}
-sqlitecache_table_creation_failed			= TSqliteCache สร้างฐานข้อมูลแคชไม่สำเร็จ {0}
-sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile ไม่สามารถแก้ไขได้หลังจากโมดูลเริ่มต้นแล้ว
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile ไม่ถูกต้อง ตรวจสอบว่าระบุในรูปแบบเนมสเปซที่ถูกต้อง
 
 dbcache_unavailable							= TDbCache ต้องมีส่วนขยาย PHP PDO
 
 etcdcache_transport_required				= TEtcdCache ต้องมีส่วนขยาย PHP cURL หรือเปิดใช้ allow_url_fopen
 
-memcache_extension_required					= TMemCache ต้องมีส่วนขยาย PHP memcache
 memcache_connection_failed					= TMemCache เชื่อมต่อกับเซิร์ฟเวอร์ memcache {0}:{1} ไม่สำเร็จ
 memcache_not_initialized					= ไม่สามารถกำหนดตัวเลือกให้ TMemCache ก่อนที่โมดูลจะเริ่มต้นได้
+memcache_serverhost_required				= การกำหนดค่าเซิร์ฟเวอร์ของ TMemCache ต้องมี Host
+memcache_serverport_required				= การกำหนดค่าเซิร์ฟเวอร์ของ TMemCache ต้องมี Port
+memcache_serverport_invalid					= Port ของเซิร์ฟเวอร์ TMemCache ต้องเป็นตัวเลข
+memcache_serverweight_invalid				= Weight ของเซิร์ฟเวอร์ TMemCache ต้องเป็นตัวเลข
 
 apccache_extension_required					= TAPCCache ต้องมีส่วนขยาย PHP APC
 apccache_extension_not_enabled				= TAPCCache ต้องมี apc.enabled = 1 ใน php.ini จึงจะทำงานได้
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= สามารถเพิ่ม
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' ไม่ถูกต้อง ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และชี้ไปยังไดเรกทอรีที่มีไฟล์เทมเพลตข้อผิดพลาด
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ไม่ใช่ไดเรกทอรีที่ถูกต้อง
-pageservice_defaultpage_unchangeable		= TPageService.DefaultPage ไม่สามารถแก้ไขได้หลังจากเซอร์วิสเริ่มต้นแล้ว
-pageservice_basepath_unchangeable			= TPageService.BasePath ไม่สามารถแก้ไขได้หลังจากเซอร์วิสเริ่มต้นแล้ว
-pageservice_pageclass_invalid				= คลาสเพจ {0} ไม่ถูกต้อง ต้องเป็น TPage หรือสืบทอดจาก TPage
 pageservice_includefile_invalid				= ไม่พบไฟล์กำหนดค่าเซอร์วิสเพจ {0} ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และไฟล์ลงท้ายด้วย ".xml" หรือ ".php"
 
 pageserviceconf_file_invalid				= ไม่สามารถเปิดไฟล์กำหนดค่าไดเรกทอรีเพจ '{0}' ได้
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> ใช้พาธไฟล์ "{1}" ที่ไม่ถูกต้อง ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{2}'
-pageserviceconf_alias_invalid				= เอลิเมนต์ <alias> ต้องมีแอตทริบิวต์ "id" และ "path" ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{0}'
-pageserviceconf_using_invalid				= เอลิเมนต์ <using> ต้องมีแอตทริบิวต์ "namespace" ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{0}'
-pageserviceconf_module_invalid				= เอลิเมนต์ <module> ต้องมีแอตทริบิวต์ "id" ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{0}'
-pageserviceconf_moduletype_required			= <module id="{0}"> ต้องมีแอตทริบิวต์ "class" ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{1}'
-pageserviceconf_parameter_invalid			= เอลิเมนต์ <parameter> ต้องมีแอตทริบิวต์ "id" ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{0}'
 pageserviceconf_page_invalid				= เอลิเมนต์ <page> ต้องมีแอตทริบิวต์ "id" ในไฟล์กำหนดค่าไดเรกทอรีเพจ '{0}'
 pageserviceconf_includefile_required		= เอลิเมนต์ <include> ในการกำหนดค่าเพจต้องมีแอตทริบิวต์ "file"
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" ไม่สามา�
 callchain_bad_dynamic_event					= TCallChain.{0} ถูกเรียก แต่คาดว่าจะเป็น {1}
 
 behaviormodule_behavior_as_array_required	= <behavior> แบบ php ต้องเป็นอาร์เรย์
-behaviormodule_behaviorname_required		= <behavior> ต้องมีแอตทริบิวต์ 'name' สำหรับการผูกบีเฮฟวิเออร์
-behaviormodule_behaviorclass_required		= <behavior> ต้องมีแอตทริบิวต์ 'class' ที่กำหนดคลาสของบีเฮฟวิเออร์
 behaviormodule_attachto_class_required		= <behavior> ต้องมีแอตทริบิวต์ 'attachto' หรือ 'attachtoclass'
 behaviormodule_attachto_and_class_only_one	= <behavior> ต้องมีแอตทริบิวต์ 'attachto' หรือ 'attachtoclass' เพียงอย่างใดอย่างหนึ่ง ไม่ใช่ทั้งสอง
 behaviormodule_behaviorowner_required		= ไม่พบอ็อบเจกต์ attachto '{0}' ของ <behavior>
 behaviormodule_additional_behaviors_invalid	= ไม่สามารถกำหนด TBehaviorModule.AdditionalBehaviors เป็นชนิด '{0}' ที่ไม่ถูกต้องได้
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader ต้องมี Behavior Name
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader ต้องมี Behavior Class
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader ต้องมีแอตทริบิวต์ 'attachto' หรือ 'attachtoclass'
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader ต้องมีแอตทริบิวต์ 'attachto' หรือ 'attachtoclass' เพียงอย่างใดอย่างหนึ่งเท่านั้น
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} ต้องเริ่มต�
 template_closingtag_unexpected				= พบแท็กปิด '{0}' ที่ไม่คาดคิด
 template_closingtag_expected				= คาดว่าจะพบแท็กปิด '{0}' แต่พบ '{1}'
 template_directive_nonunique				= ไดเรกทีฟ '<%@ ... %>' ต้องอยู่ที่จุดเริ่มต้นของเทมเพลต และปรากฏได้ไม่เกินหนึ่งครั้ง
-template_comments_forbidden					= ไม่อนุญาตให้ใช้คอมเมนต์ของเทมเพลตภายในแท็กพร็อพเพอร์ตี
 template_matching_unexpected				= การจับคู่ที่ไม่คาดคิด
 template_property_unknown					= {0} ไม่มีพร็อพเพอร์ตีชื่อ '{1}'
 template_event_unknown						= {0} ไม่มีอีเวนต์ชื่อ '{1}'
@@ -279,7 +255,6 @@ template_property_duplicated				= พร็อพเพอร์ตี {0} ถ�
 template_eventhandler_invalid				= {0}.{1} รับได้เฉพาะสตริงคงที่เท่านั้น
 template_controlid_invalid					= {0}.ID รับได้เฉพาะสตริงข้อความคงที่เท่านั้น
 template_controlskinid_invalid				= {0}.SkinID รับได้เฉพาะสตริงข้อความคงที่เท่านั้น
-template_content_unexpected					= พบเนื้อหาที่ไม่คาดคิดขณะสร้างอินสแตนซ์ของเทมเพลต: {0}
 template_include_invalid					= การรวมเทมเพลตไม่ถูกต้อง ตรวจสอบว่า {0} เป็นเนมสเปซที่ถูกต้องซึ่งชี้ไปยังไฟล์เทมเพลตที่มีอยู่และมีนามสกุล .tpl
 template_tag_unexpected						= การกำหนดค่าเริ่มต้นของพร็อพเพอร์ตี {0} มีชนิดแท็ก {1} ที่ไม่รู้จัก
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' ไม่ใช่นามแฝงพาธที่ถูกต้อง ตรวจสอบว่าได้กำหนดนามแฝงนี้ในการกำหนดค่าแล้ว และชี้ไปยังไดเรกทอรีที่ถูกต้อง
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' ไม่ใช่ไดเรกทอรีที่ถูกต้อง
-thememanager_basepath_unchangeable			= TThemeManager.BasePath ไม่สามารถแก้ไขได้หลังจากโมดูลเริ่มต้นแล้ว
 thememanager_theme_invalid					= ชื่อธีม '{0}' ของ TThemeManager ต้องเป็นชื่อไดเรกทอรีเดียว
+thememanager_baseurl_required				= ต้องระบุ TThemeManager.BaseUrl เมื่อ BasePath อยู่นอกไดเรกทอรีของแอปพลิเคชัน
 
-theme_baseurl_required						= ต้องระบุ TThemeManager.BasePath โดยค่าเริ่มต้นจะใช้ไดเรกทอรีชื่อ 'themes' ภายใต้ไดเรกทอรีที่มีสคริปต์เริ่มต้นของแอปพลิเคชัน
 theme_path_inexistent						= ไม่มีพาธธีม '{0}'
 theme_control_nested						= สกินสำหรับคอนโทรลชนิด '{0}' ในธีม '{1}' ไม่สามารถอยู่ภายในสกินอื่นได้
 theme_skinid_duplicated						= SkinID '{0}.{1}' ซ้ำกันในธีม '{2}'
-theme_databind_forbidden					= ไม่สามารถใช้ Databind ในธีม '{0}' สำหรับสกินคอนโทรล '{1}.{2}' ที่พร็อพเพอร์ตี '{3}' ได้
 theme_property_readonly						= สกินกำลังถูกนำไปใช้กับพร็อพเพอร์ตี '{0}.{1}' ของคอนโทรลที่เป็นแบบอ่านได้อย่างเดียว
 theme_property_undefined					= สกินกำลังถูกนำไปใช้กับพร็อพเพอร์ตี '{0}.{1}' ของคอนโทรลที่ไม่มีอยู่
 theme_tag_unexpected						= การกำหนดค่าเริ่มต้นของพร็อพเพอร์ตี {0} มีชนิดแท็ก {1} ที่ไม่รู้จัก
@@ -364,9 +337,7 @@ page_head_required							= ต้องมีคอนโทรล THead ใน�
 page_statepersister_invalid					= ตัวเก็บสถานะเพจต้องอิมพลีเมนต์อินเทอร์เฟซ IPageStatePersister
 
 csmanager_pradoscript_invalid				= ไม่รู้จักชื่อไลบรารีสคริปต์ Prado '{0}'
-csmanager_pradoscript_notloaded				= ไลบรารีสคริปต์ Prado ชื่อ '{0}' ยังไม่ได้ถูกโหลด
 csmanager_pradostyle_invalid				= ไม่รู้จักชื่อไลบรารีสไตล์ Prado '{0}'
-csmanager_invalid_packages					= ไม่รู้จักแพ็กเกจ '{1}' สำหรับแพ็กเกจ javascript ที่กำหนดใน '{0}' แพ็กเกจที่ใช้ได้คือ '{2}'
 
 httpclient_transport_error					= ข้อผิดพลาดการขนส่งของ HTTP client (รหัส {0}): {1}
 httpclient_http_error						= การตอบกลับ HTTP มีข้อผิดพลาด สถานะ {0}
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' ไม่ถูกต้�
 webcontrol_dir_invalid						= {0}.Dir '{1}' ไม่ถูกต้อง ค่าที่อนุญาตคือ 'ltr', 'rtl' และ 'auto'
 webcontrol_style_invalid					= {0}.Style รับได้เฉพาะค่าสตริงเท่านั้น
 
-listcontrol_selection_invalid				= {0} มีการเลือกที่ไม่ถูกต้อง ซึ่งถูกกำหนดก่อนทำการผูกข้อมูล
-listcontrol_selectedindex_invalid			= {0}.SelectedIndex มีค่า {1} ที่ไม่ถูกต้อง
-listcontrol_selectedvalue_invalid			= {0}.SelectedValue มีค่า '{1}' ที่ไม่ถูกต้อง
 listcontrol_expression_invalid				= {0} กำลังประเมินนิพจน์ '{1}' ที่ไม่ถูกต้อง : {2}
 listcontrol_multiselect_unsupported			= {0} ไม่รองรับการเลือกหลายรายการ
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices �
 
 logrouter_configfile_invalid				= ไม่มี TLogRouter.ConfigFile '{0}'
 logrouter_routeclass_required				= ต้องมีแอตทริบิวต์ class ในการกำหนดค่า <route>
-logrouter_routetype_required				= เส้นทางบันทึก (log route) ต้องเป็นอินสแตนซ์ของ TLogRoute หรือคลาสที่สืบทอดจากมัน
+logrouter_routetype_invalid					= เส้นทางบันทึก (log route) ต้องเป็นอินสแตนซ์ของ TLogRoute หรือคลาสที่สืบทอดจากมัน
 
 dblogroute_connectionid_invalid				= TDbLogRoute ไม่สามารถสร้างการเชื่อมต่อฐานข้อมูลจาก ID '{0}' ได้
 dblogroute_insert_failed					= TDbLogRoute ไม่สามารถแทรกบันทึกลงใน '{0}' ได้
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= ไม่รู้จักชนิดราย
 repeateritemcollection_item_invalid			= TRepeaterItemCollection รับได้เฉพาะอ็อบเจกต์ที่เป็นอินสแตนซ์ของ TControl หรือคลาสที่สืบทอดจากมันเท่านั้น
 
 datalist_template_required					= TDataList.{0} ต้องมีอินสแตนซ์เทมเพลตที่อิมพลีเมนต์อินเทอร์เฟซ ITemplate
+datalist_datakeyfield_required				= ต้องระบุ TDataList.DataKeyField เพื่ออ่าน SelectedDataKey
+datalist_itemtype_unknown					= ไม่รู้จักชนิดรายการ '{0}' ของ TDataList
 datalistitemcollection_datalistitem_required	= TDataListItemCollection รับได้เฉพาะอ็อบเจกต์ TDataListItem เท่านั้น
 
 datagrid_template_required					= TDataGrid.{0} ต้องมีอินสแตนซ์เทมเพลตที่อิมพลีเมนต์อินเทอร์เฟซ ITemplate
 templatecolumn_template_required			= TTemplateColumn.{0} ต้องมีอินสแตนซ์เทมเพลตที่อิมพลีเมนต์อินเทอร์เฟซ ITemplate
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex ต้องไม่น้อยกว่า 0
-datagrid_pagesize_invalid					= TDataGrid.PageSize ต้องมากกว่า 0
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount ต้องไม่น้อยกว่า 0
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection รับได้เฉพาะอ็อบเจกต์ TDataGridItem เท่านั้น
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection รับได้เฉพาะอ็อบเจกต์ TDataGridColumn เท่านั้น
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount ต้องมากกว่า 0
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection รับไ
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection รับได้เฉพาะอ็อบเจกต์ TTableColumnGroup เท่านั้น
 tablecolumn_span_invalid					= Span ของ TTableColumn ต้องเป็น 1 หรือมากกว่า แต่ได้รับ {0}
 
-tablecellcollection_tablerow_required		= TTableCellCollection รับได้เฉพาะอ็อบเจกต์ TTableCell เท่านั้น
-
 multiview_view_required						= TMultiView รับได้เฉพาะ TView เป็นลูกเท่านั้น
 multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex มีดัชนี '{0}' ที่ไม่ถูกต้อง
 multiview_view_inexistent					= TMultiView ไม่พบวิวที่ระบุ
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible เป็นแบบอ่านไ�
 
 wizard_step_invalid							= ไม่พบขั้นตอนที่จะเปิดใช้งานในคอลเลกชันขั้นตอนของวิซาร์ด
 wizard_command_invalid						= คำสั่งนำทางของวิซาร์ด '{0}' ไม่ถูกต้อง
+wizard_buttontype_unknown					= ไม่รู้จักชนิดปุ่มนำทาง '{0}' ของ TWizard
 
 table_tablesection_outoforder				= ส่วนของตาราง TTable ต้องเรียงตามลำดับ: Header, Body และ Footer
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType เป็�
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection รับได้เฉพาะอ็อบเจกต์ TWizardStep หรือคลาสที่สืบทอดจากมันเท่านั้น
 
-texthighlighter_stylesheet_invalid			= ไม่พบไฟล์สไตล์ชีตสำหรับ TTextHighlighter
-
 hotspotcollection_hotspot_required			= THotSpotCollection รับได้เฉพาะอินสแตนซ์ของ THotSpot หรือคลาสที่สืบทอดจากมันเท่านั้น
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode เป็นแบบอ่านได้อย่างเดียว
 htmlarea_tarfile_invalid					= THtmlArea ไม่พบไฟล์ tar ของ TinyMCE
 
-parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile ไม่สามารถเปลี่ยนได้ เนื่องจากโมดูลเริ่มต้นไปแล้ว
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' ไม่ถูกต้อง ตรวจสอบว่าระบุในรูปแบบเนมสเปซ และนามสกุลไฟล์เป็น '.xml' หรือ '.php'
 parametermodule_parameterid_required		= เอลิเมนต์ parameter ต้องมีแอตทริบิวต์ 'id'
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} ต้อง�
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize ต้องเป็นจำนวนเต็มที่ไม่น้อยกว่า 1
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount ต้องเป็นจำนวนเต็มที่ไม่น้อยกว่า 0
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex อยู่นอกช่วง
 databoundcontrol_datasource_invalid			= {0}.DataSource ไม่ถูกต้อง
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' ไม่ได้อ้างถึงคอนโทรลที่มีอยู่
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' ต้องอ้างถึงคอนโทรลที่อิมพลีเมนต์ IDataSource
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} ไม่รองรับการ�
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource ต้องการแหล่งข้อมูลที่เป็นอาร์เรย์, IDataSource หรือ Traversable
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView ต้องการแหล่งข้อมูลที่เป็น null, อาร์เรย์ หรือ Traversable
 
-clientscript_invalid_file_position			= ตำแหน่งไฟล์ '{1}' สำหรับคอนโทรล TClientScript '{0}' ไม่ถูกต้อง ต้องเป็น 'Head', 'Here' หรือ 'Begin'
-clientscript_invalid_package_path			= PackagePath '{0}' สำหรับคอนโทรล TClientScript '{1}' ไม่ถูกต้อง
-
 tdatepicker_autopostback_unsupported		= '{0}' ไม่รองรับ AutoPostBack
 globalization_cache_path_failed				= ไม่สามารถสร้างพาธแคชข้อความแปล '{0}' ได้ ตรวจสอบว่าไดเรกทอรีแม่มีอยู่ และโปรเซสของเว็บเซิร์ฟเวอร์สามารถเขียนได้
 globalization_source_path_failed			= ไม่สามารถสร้างพาธข้อความแปล '{0}' ได้ ตรวจสอบว่าไดเรกทอรีแม่มีอยู่ และโปรเซสของเว็บเซิร์ฟเวอร์สามารถเขียนได้
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' ไม่ได้ชี้ไปยังโมดูล TDataSourceConfig ที่ถูกต้อง
 messagesource_connectionid_required			= ต้องระบุ ConnectionID ใน MessageSource_Database.source
 
-callback_not_support_no_priority_state_update	= คำขอคอลแบ็กไม่รองรับการปรับปรุงสถานะเพจแบบไม่มีลำดับความสำคัญ
 callback_invalid_callback_options			= '{1}' ไม่ใช่คอนโทรล TCallbackOptions ที่ถูกต้องสำหรับคอนโทรลคอลแบ็ก '{0}'
-callback_invalid_clientside_options			= พร็อพเพอร์ตี ClientSide ของคอลแบ็กต้องเป็นสตริงที่เป็น ID ของคอนโทรล TCallbackOptions หรือเป็นอินสแตนซ์ของ TCallbackClientSideOptions
 callback_invalid_handler					= ตัวจัดการคอลแบ็กไม่ถูกต้อง คอนโทรล {0} ต้องอิมพลีเมนต์ ICallbackEventHandler
 callback_invalid_target						= เป้าหมายคอลแบ็กไม่ถูกต้อง ไม่มีคอนโทรลที่มี ID {0}
 
 callback_interval_be_positive				= Interval ของ TCallbackTimer "{0}" ต้องมากกว่าศูนย์วินาทีอย่างเคร่งครัด
 callback_decay_be_not_negative				= อัตรา Decay ของ TCallbackTimer "{0}" ต้องไม่เป็นค่าลบ
-
-callback_no_autopostback					= คอนโทรล "{0}" ไม่สามารถเปิดใช้ AutoPostBack ได้
 
 xmltransform_xslextension_required			= TXmlTransform ต้องมีส่วนขยาย XSL ของ PHP
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' ไม่ถูกต้อง
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= ไดรเวอร์ฐานข้อ
 dbcommand_prepare_failed					= TDbCommand เตรียมคำสั่ง SQL "{1}" ไม่สำเร็จ: {0}
 dbcommand_execute_failed					= TDbCommand ดำเนินการคำสั่ง SQL "{1}" ไม่สำเร็จ: {0}
 dbcommand_query_failed						= TDbCommand ดำเนินการคิวรี SQL "{1}" ไม่สำเร็จ: {0}
-dbcommand_column_empty						= TDbCommand ส่งคืนผลลัพธ์ว่าง และไม่สามารถดึงค่าสเกลาร์ได้
 dbdatareader_rewind_invalid					= TDbDataReader เป็นสตรีมแบบอ่านไปข้างหน้าเท่านั้น จึงวนอ่านได้เพียงครั้งเดียว
 dbtransaction_transaction_inactive			= TDbTransaction ไม่ได้เปิดใช้งาน
-
-dbcommandbuilder_value_must_not_be_null		= พร็อพเพอร์ตี {0} ต้องไม่เป็น null ตามที่กำหนดโดยคอลัมน์ '{2}' ในตาราง '{1}'
 
 dbcommon_invalid_table_name					= ไม่พบตารางฐานข้อมูล '{0}' ข้อความแสดงข้อผิดพลาด: {1}
 dbcommon_invalid_identifier_name			= ชื่อตัวระบุฐานข้อมูล '{0}' ไม่ถูกต้อง ดูรายละเอียดที่ {1}
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= ข้อมูลของ TLiveProcessFo
 stream_open_failed							= ไม่สามารถเปิดสตรีม '{0}' ด้วยโหมด '{1}' ได้: {2}
 binarystream_unexpected_eof					= สตรีมสิ้นสุดก่อนเวลาอันควร: ต้องการ {0} ไบต์ แต่อ่านได้เพียง {1} ไบต์
 binarystream_short_write					= เขียนได้ไม่ครบ: ต้องเขียน {0} ไบต์ แต่รับได้เพียง {1} ไบต์
+binarystream_no_stream_owner				= TBinaryStreamBehavior ต้องมีเจ้าของที่อิมพลีเมนต์ Psr\Http\Message\StreamInterface
 streamresourcewrapper_unusable_stream		= สตรีมนี้ทั้งอ่านไม่ได้และเขียนไม่ได้ จึงไม่สามารถเปิดเผยเป็นรีซอร์สได้
 streamfilter_already_registered				= ตัวกรองสตรีม '{0}' ถูกลงทะเบียนไว้แล้ว
 streamfilter_registration_failed			= ไม่สามารถลงทะเบียนตัวกรองสตรีม '{0}' สำหรับคลาส '{1}' ได้
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' ไม่ใ
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' ไม่ได้ชี้ไปยังโมดูล TDataSourceConfig ที่ถูกต้อง
 dbusermanager_connectionid_required			= ต้องระบุ TDbUserManager.ConnectionID
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' ไม่ได้ชี้ไปยังโมดูล TDataSourceConfig ที่ถูกต้อง
-dbpluginmodule_connectionid_required		= ต้องระบุ TDbPluginModule.ConnectionID
-
 feedservice_id_required						= TFeedService ต้องมีแอตทริบิวต์ 'id' ในเอลิเมนต์ feed
 feedservice_feedtype_invalid				= คลาสฟีด '{0}' ต้องอิมพลีเมนต์อินเทอร์เฟซ IFeedContentProvider
 feedservice_class_required					= TFeedService ต้องมีแอตทริบิวต์ 'class' ในเอลิเมนต์ feed
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength ต้องเป�
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength ต้องเป็นจำนวนเต็มระหว่าง {0} ถึง {1}
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet ต้องเป็นสตริงที่มีอักขระอย่างน้อย 2 ตัว
 captcha_privatekey_unknown					= ไม่ทราบค่า TCaptcha.PrivateKey ตรวจสอบว่าไดเรกทอรี assets ของคุณสามารถเขียนได้โดยโปรเซสของเว็บเซิร์ฟเวอร์
-captcha_gd2_required						= TCaptcha ต้องมีส่วนขยาย PHP GD2
 captcha_imagettftext_required				= TCaptcha ต้องมีส่วนขยาย PHP GD2 ที่รองรับฟอนต์ TrueType
-captcha_imagepng_required					= TCaptcha ต้องมีส่วนขยาย PHP GD2 ที่รองรับรูปแบบภาพ PNG
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl ต้องชี้ไปยังคอนโทรล TCaptcha ที่มีอยู่
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} ต้องชี้ไปยังคอนโทรล TCaptcha ที่มีอยู่
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= ไม่ทราบค่า TReCaptcha.PrivateKey การใช้ reCAPTCHA ต้องขอรับคีย์ API
 recaptcha_publickey_unknown					= ไม่ทราบค่า TReCaptcha.PublicKey การใช้ reCAPTCHA ต้องขอรับคีย์ API
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate ต้องเป็นอินสแตนซ์ของ TReCaptcha
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' ต้องมีเฉพาะตัวอักษร ตัวเลข '_' และ '-' เท่านั้น
 proofofwork_complexity_invalid				= TProofOfWork.Complexity ต้องเป็นจำนวนเต็มระหว่าง {0} ถึง {1}
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' ต้องชี้ไปยังคอนโทรล TProofOfWork
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' ไม่ใช่คลาสผู้ใช้ที่ถูกต้อง คลาสนี้ต้องสืบทอดจาก TSliderHandle
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' ไม่ได้ชี้ไปยังโมดูลแคชที่ถูกต้อง
 cachepagestatepersister_cache_required		= TCachePageStatePersister ต้องมีโมดูลแคชที่โหลดไว้
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask ไม่พบโมดูล '{
 cron_usermanager_nonexistent				= TCronModule ไม่พบ UserManager ชื่อ '{0}'
 cron_usermanager_invalid					= UserManager '{0}' ของ TCronModule ไม่ใช่ TUserManager
 cron_task_as_array_required					= งาน task ในการกำหนดค่า TCronModule ไม่ใช่อาร์เรย์
-cron_duplicate_task_name					= งาน task ของ TCronModule ต้องมีชื่อที่ไม่ซ้ำกัน
+cron_duplicate_task_name					= ชื่องาน task ของ TCronModule ต้องไม่ซ้ำกัน แต่ '{0}' ถูกกำหนดไว้มากกว่าหนึ่งครั้ง
 cron_schedule_required						= งาน Cron ต้องมีตารางเวลา (schedule)
 cron_task_required							= งาน Cron ต้องมี task
 cron_not_a_crontask							= งาน Cron '{0}' ไม่ใช่ TCronTask
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper ต้องมี In Bit อย่�
 bithelper_invalid_color_out					= TBitHelper ต้องมี Out Bit อย่างน้อยหนึ่งบิต แต่ได้รับ '{0}'
 bithelper_bad_mirror_bits					= TBitHelper ไม่สามารถสะท้อนกลับ '{0}' บิตในสภาพแวดล้อม PHP ขนาด {1} บิตได้
 
-ar_data_invalid								= {0}.copyFrom() รับได้เฉพาะอ็อบเจกต์หรืออาร์เรย์เป็นพารามิเตอร์เท่านั้น
-ar_save_invalid								= ไม่สามารถบันทึกอินสแตนซ์ {0} ได้ เนื่องจากถูกลบไปแล้วหรืออยู่ในสถานะที่ไม่รู้จัก
-ar_delete_invalid							= ไม่สามารถลบอินสแตนซ์ {0} ได้ เนื่องจากเป็นเรกคอร์ดใหม่หรือเป็นเรกคอร์ดที่ถูกลบไปแล้ว
-
 dbmetadata_invalid_database_driver			= ไม่รองรับไดรเวอร์ '{0}' โปรดติดตั้งไดรเวอร์ PRADO ของมันหากมี
 dbmetadata_not_meta_data					= คาดว่าจะได้คลาสไดรเวอร์ {1} แต่ได้รับคลาส {0}
 dbmetadata_tableinfo_class_invalid			= คลาสข้อมูลตาราง '{0}' ของ TDbMetaData เป็นเนมสเปซของไดเรกทอรี ไม่ใช่คลาส
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' ไม่ถูกต้อง โปรดตรวจสอบว่าชี้ไปยังโมดูลแอปพลิเคชันที่ถูกต้อง
-distributeddatasource_child_required		= {0} ต้องมีเอลิเมนต์ลูก '{1}' อย่างน้อยหนึ่งรายการ
-masterslavedbconnection_connection_exists	= การเชื่อมต่อ {0}.{1} มีอยู่แล้ว
-masterslavedbconnection_interface_required	= {0}.{1} ต้องการอินสแตนซ์ที่อิมพลีเมนต์อินเทอร์เฟซ {2}
-slavedbconnection_requires_master			= {0} ต้องมี {1}
+datasource_dbconnection_exists				= ไม่สามารถกำหนด TDataSourceConfig.ConnectionClass เป็น '{0}' หลังจากสร้างการเชื่อมต่อฐานข้อมูลแล้ว
 
 response_status_reason_missing				= HTTP 1.1 ต้องมีข้อความเหตุผล (reason) สำหรับรหัสสถานะส่วนขยาย
-response_status_reason_badchars				= สำหรับส่วนหัว HTTP 1.1 โทเค็น status-reason ต้องไม่มีอักขระ CR หรือ LF
 
 activefileupload_temppath_invalid			= พาธ TempPath '{0}' ของ TActiveFileUpload ไม่มีอยู่ หรือโปรเซสของเว็บเซิร์ฟเวอร์ไม่สามารถเขียนได้
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' ไม่ใช่สมา
 juioptions_option_invalid					= '{1}' ไม่ใช่ตัวเลือกที่ถูกต้องสำหรับคอนโทรล '{0}'
 
 ratinglist_invalid_caption_id				= '{0}' ไม่ใช่คอนโทรลคำบรรยายที่ถูกต้องสำหรับ TRatingList '{0}'
+ratinglist_table_layout_only				= TRatingList.RepeatLayout ต้องเป็น Table
 
 accordion_activeviewid_invalid				= TAccordion.ActiveViewID มี ID '{0}' ที่ไม่ถูกต้อง
 accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex มีดัชนี '{0}' ที่ไม่ถูกต้อง
@@ -804,8 +741,6 @@ dot_bad_size								= Size ของ TDot ต้องเป็นจำนว�
 dot_bad_border_width						= FlatBorderWidth ของ TDot ต้องเป็นตัวเลขที่อาจตามด้วย % หรือหน่วยความยาวของ CSS แต่เป็น '{0}'
 
 juidatepicker_settextmode_unsupported		= ไม่สามารถเปลี่ยน TextMode ของ TJuiDatePicker ได้
-
-control_adapter_not_active					= มีการเรียกพร็อพเพอร์ตีของ BaseActiveControl บนคอนโทรลที่ไม่ใช่แบบแอ็กทีฟ
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' ต้องเป็นลูกโดยตรงของคอนโทรล TFigure
 summary_requires_details_parent				= TSummary '{0}' ต้องเป็นลูกโดยตรงของคอนโทรล TDetails
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' ไม่สามารถ�
 vardumper_not_array							= __debuginfo() ต้องส่งคืนอาร์เรย์
 
 htmlpurifier_source_path_failed				= ไม่สามารถสร้างพาธแคชของ html purifier '{0}' ได้ ตรวจสอบว่าไดเรกทอรีแม่มีอยู่ และโปรเซสของเว็บเซิร์ฟเวอร์สามารถเขียนได้
+
+active_controls_client_side_exists			= คอนโทรล '{0}' มีตัวเลือก ClientSide อยู่แล้ว ไม่สามารถแทนที่พร็อพเพอร์ตี ClientSide ได้
+componentreflection_class_invalid			= TComponentReflection ต้องการชื่อคลาสหรืออ็อบเจกต์
+datasize_no_negative_size					= TDataSize.Size ต้องเป็น 0 หรือมากกว่า แต่ได้รับ {0}
+date_to_parse_must_be_string				= TSimpleDateFormatter แยกวิเคราะห์ได้เฉพาะค่าสตริงเท่านั้น
+dbuser_dbconnection_invalid					= TDbUser ต้องมีการเชื่อมต่อฐานข้อมูล ให้กำหนด DbConnection หรือสร้างผู้ใช้ผ่านโมดูล TDbUserManager
+deflatestream_init_failed					= TDeflateStream เริ่มต้นคอนเท็กซ์ deflate สำหรับการเข้ารหัส '{0}' ไม่สำเร็จ
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' ไม่ได้อ้างถึงคอนโทรลในฟอร์ม
+inflatestream_init_failed					= TInflateStream เริ่มต้นคอนเท็กซ์ inflate สำหรับการเข้ารหัส '{0}' ไม่สำเร็จ
+logroute_bad_level							= TLogRoute.Levels '{0}' มีระดับบันทึกที่ไม่ได้กำหนดไว้
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback ต้องเป็น callable
+memcached_extension_required				= TMemCache ต้องมีส่วนขยาย PHP memcached
+metatagcollection_metatag_invalid			= TMetaTagCollection รับได้เฉพาะอ็อบเจกต์ TMetaTag เท่านั้น
+numberformat_type_invalid					= TNumberFormat.Type '{0}' ไม่ถูกต้อง
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource ต้องเป็นอาร์เรย์หรืออ็อบเจกต์ที่อิมพลีเมนต์ Traversable
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize ต้องมากกว่า 0
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount ต้องเป็น 0 หรือมากกว่า
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex อยู่นอกช่วง
+pagedlist_pagesize_invalid					= TPagedList.PageSize ต้องมากกว่า 0
+phpstream_no_stream_owner					= TPhpStreamBehavior ต้องมีเจ้าของที่อิมพลีเมนต์ Psr\Http\Message\StreamInterface
+pipe_popen_failed							= TPipeStream เปิดไปป์ไปยังคำสั่ง '{0}' ในโหมด '{1}' ไม่สำเร็จ
+process_descriptor_unusable					= ดิสคริปเตอร์ {0} ของ TProcess อ้างถึงรีซอร์สที่ไม่ได้เปิดอยู่
+process_invalid_pipe_offset					= ออฟเซ็ตไปป์ '{0}' ของ TProcess ไม่ใช่หมายเลขไปป์
+process_open_failed							= TProcess เริ่มคำสั่ง '{0}' ไม่สำเร็จ
+rediscache_extension_required				= TRedisCache ต้องมีส่วนขยาย PHP redis
+tablecellcollection_tablecell_required		= TTableCellCollection รับได้เฉพาะอ็อบเจกต์ TTableCell เท่านั้น
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection เป็นแบบอ่านได้อย่างเดียว
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection เป็นแบบอ่านได้อย่างเดียว

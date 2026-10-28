@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= Prado.Application kan bare settes én gang.
-prado_component_unknown						= Ukjent komponenttype '{0}'. Dette kan skyldes følgende parsefeil i klassefilen for {0}: {1}
-prado_using_invalid							= '{0}' er ikke et gyldig navnerom å bruke. Sørg for at '.*' legges til hvis du vil bruke et navnerom som refererer til en katalog.
 prado_alias_redefined						= Aliaset '{0}' kan ikke omdefineres.
 prado_alias_invalid							= Aliaset '{0}' refererer til en ugyldig sti '{1}'. Bare eksisterende kataloger kan få alias.
 prado_aliasname_invalid						= Aliaset '{0}' inneholder det ugyldige tegnet '.'.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= Komponenten '{0}' har allerede en klasseatf
 component_not_a_behavior					= Komponenten '{0}' som legges til som atferd, er ikke en TBaseBehavior.
 object_not_a_component						= Objektet '{0}' som legges til som atferd, er ikke en TComponent.
 component_no_tcomponent_class_behaviors		= TComponent kan ikke få klasseatferder tilknyttet på grunn av rekursjon.
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors kan ikke knyttes til flere eiere. Oppgi en streng eller en matrise med IBehavior-klasse og egenskaper som instansieres på hver eier.
 
 propertyvalue_enumvalue_invalid				= Verdien '{0}' er ikke en gyldig enumerasjonsverdi ({1}).
 propertyvalue_invalid_hex_color				= Verdien '{0}' er ikke en gyldig heksadesimal fargeverdi, f.eks. "#112233".
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= Matriseliteralen er nestet dypere enn {0} niv�
 eventhandler_lost_weak_ref					= TEventHandler kan ikke kalle hendelsesbehandleren fordi WeakReference til det kallbare objektet er tapt.
 eventhandler_no_set_handler					= TEventHandler kan ikke sette hendelsesbehandleren, indeks "{0}".
 eventhandler_bad_offset						= TEventHandler har ingen posisjon "{0}".
+eventhandler_not_callable					= TEventHandler krever en kallbar hendelsesbehandler.
 
 eventparam_readonly							= {0} er skrivebeskyttet.
 eventparam_readonly_set						= {0} kan ikke endre ReadOnly etter at den er satt.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= Standardprioriteten kan bare settes én
 prioritytrait_no_set_precision				= Presisjonen kan bare settes én gang eller av objektet selv.
 weak_no_set_discard_invalid					= '{0}'.DiscardInvalid kan bare settes én gang eller av objektet selv.
 
-map_addition_disallowed						= Det nye elementet kan ikke legges til i mappingen.
-map_item_unremovable						= Elementet kan ikke fjernes fra mappingen.
 map_data_not_iterable						= Data må være enten en matrise eller et objekt som implementerer grensesnittet Traversable.
 map_readonly								= {0} er skrivebeskyttet.
 map_readonly_set							= {0} kan ikke endre Read-Only etter at den allerede er satt.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection godtar bare k
 arraysubscription_no_change					= TArraySubscription.{0} kan ikke endres etter at abonnementet er opprettet.
 arraysubscription_no_null_key				= TArraySubscription kan ikke abonnere på en null-nøkkel i et ArrayAccess-objekt.
 arraysubscription_index_invalid				= TArraySubscription er i listemodus (isAssociative = false), men nøkkelen '{0}' er ikke gyldig (antall: {1}).
-eventsubscription_no_setcollection			= TEventSubscription.Array kan ikke settes direkte.
 eventsubscription_no_change					= TEventSubscription.{0} kan ikke endres etter at abonnementet er opprettet.
+eventsubscription_no_setarray				= TEventSubscription.Array kan ikke settes direkte.
 
 application_includefile_invalid				= Finner ikke applikasjonskonfigurasjonen {0}. Sørg for at den er i navneromsformat og at filen slutter på ".xml" eller ".php".
 application_basepath_invalid				= Applikasjonens grunnsti '{0}' finnes ikke eller er ikke en katalog.
 application_runtimepath_invalid				= Applikasjonens kjøretidssti '{0}' finnes ikke eller er ikke skrivbar for webserverprosessen.
 application_service_class_not_found			= Tjenesteklassen '{0}' finnes ikke.
 application_service_class_not_service		= Tjenesteklassen '{0}' implementerer ikke IService.
-application_service_class_required			= registerService krever et klassenavn eller en serviceConfig-matrise for tjenesten '{0}'.
+application_service_class_required			= TApplication::registerService() krever et klassenavn eller en tjenestekonfigurasjonsmatrise for tjenesten '{0}'.
 application_service_default_unregister		= Standardsidetjenesten '{0}' kan ikke avregistreres.
 service_csrf_token_invalid					= Tjenesten '{0}' krever et gyldig CSRF-token.
 application_moduleid_duplicated				= Applikasjonsmodul-ID '{0}' er ikke unik.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= Applikasjonskonfigurasjonen <alias id="{0}"> b
 appconfig_alias_invalid						= Elementet <alias> i applikasjonskonfigurasjonen må ha et "id"-attributt og et "path"-attributt.
 appconfig_alias_redefined					= Applikasjonskonfigurasjonen <alias id="{0}"> kan ikke omdefineres.
 appconfig_using_invalid						= Elementet <using> i applikasjonskonfigurasjonen må ha et "namespace"-attributt.
-appconfig_moduleid_required					= Elementet <module> i applikasjonskonfigurasjonen må ha et "id"-attributt.
 appconfig_moduletype_required				= Applikasjonskonfigurasjonen <module id="{0}"> må ha et "class"-attributt.
 appconfig_moduletype_inapplicable			= Applikasjonskonfigurasjonen <module id="{0}"> kan ikke ha "class"-attributtet.
 appconfig_serviceid_required				= Elementet <service> i applikasjonskonfigurasjonen må ha et "id"-attributt.
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= <paths> i applikasjonskonfigurasjonen kan ikke in
 appconfig_modules_invalid					= <modules> i applikasjonskonfigurasjonen kan ikke inneholde elementet <{0}>.
 appconfig_services_invalid					= <services> i applikasjonskonfigurasjonen kan ikke inneholde elementet <{0}>.
 appconfig_parameters_invalid				= <parameters> i applikasjonskonfigurasjonen kan ikke inneholde elementet <{0}>.
-appconfig_tag_invalid						= Applikasjonskonfigurasjonen kan ikke inneholde elementet <{0}>.
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey kan ikke være tom.
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey kan ikke være tom.
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey kan ikke være tom.
-securitymanager_mcryptextension_required	= PHP-utvidelsen Mcrypt kreves for å bruke krypteringsfunksjonen i TSecurityManager.
-securitymanager_mcryptextension_initfailed	= TSecurityManager kunne ikke initialisere mcrypt-modulen.
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm må være et chiffer som støttes av PHP-utvidelsen openssl.
+securitymanager_hash_algorithm_invalid		= Hash-algoritmen i TSecurityManager må være en algoritme som støttes av PHP-utvidelsen hash.
+securitymanager_openssl_required			= Kryptering i TSecurityManager krever PHP-utvidelsen openssl.
 
 uri_format_invalid							= '{0}' er ikke en gyldig URI.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie er false, no
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection godtar bare THttpCookie-objekter.
 
-httpresponse_file_inexistent				= THttpResponse kan ikke sende filen '{0}'. Filen finnes ikke.
 httpresponse_responsedata_method_unavailable	= THttpResponse: metoden '{0}' kan ikke brukes uten en egnet adapter som implementerer den.
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' peker ikke til en eksisterende modul.
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' må peke til en modul som utvider THttpHeadersManager.
 
 httpheadersmanager_header_required			= THttpHeadersManager kan bare inneholde THttpHeader eller dens underklasser.
 httpheadersmanager_headerclass_missing		= Oppføringen <headerclass> i THttpHeadersManager mangler et påkrevd 'name'- eller 'class'-attributt.
+httpheadersmanager_header_wrong_manager		= Headeren tilhører en annen THttpHeadersManager og kan ikke legges til i denne manageren.
 
 httpsession_sessionid_unchangeable			= THttpSession.SessionID kan ikke endres etter at sesjonen er startet.
 httpsession_sessionname_unchangeable		= THttpSession.SessionName kan ikke endres etter at sesjonen er startet.
 httpsession_sessionname_invalid				= THttpSession.SessionName kan bare inneholde alfanumeriske tegn.
 httpsession_savepath_unchangeable			= THttpSession.SavePath kan ikke endres etter at sesjonen er startet.
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' er ugyldig.
-httpsession_storage_unchangeable			= THttpSession.Storage kan ikke endres etter at sesjonen er startet.
 httpsession_cookiemode_unchangeable			= THttpSession.CookieMode kan ikke endres etter at sesjonen er startet.
-httpsession_autostart_unchangeable			= THttpSession.AutoStart kan ikke endres etter at sesjonsmodulen er initialisert.
 httpsession_gcprobability_unchangeable		= THttpSession.GCProbability kan ikke endres etter at sesjonen er startet.
 httpsession_gcprobability_invalid			= THttpSession.GCProbability må være et heltall mellom 0 og 100.
 httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID kan ikke endres etter at sesjonen er startet.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= THttpSession.Timeout kan ikke endres ett
 httpsession_handler_invalid					= THttpSessionHandler godtar bare et THttpSession-objekt som konstruktørparameter
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' er ugyldig. Sørg for at den er i navneromsformat og peker til en katalog som er skrivbar for webserverprosessen.
-assetmanager_basepath_unchangeable			= TAssetManager.BasePath kan ikke endres etter at modulen er initialisert.
-assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl kan ikke endres etter at modulen er initialisert.
 assetmanager_filepath_invalid				= TAssetManager publiserer en ugyldig fil '{0}'.
 assetmanager_tarchecksum_invalid			= TAssetManager publiserer en tar-fil med ugyldig kontrollsum '{0}'.
 assetmanager_tarfile_invalid				= TAssetManager publiserer en ugyldig tar-fil '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager kunne ikke pakke ut tar-fi
 assetmanager_source_directory_invalid		= TAssetManager kopierer en ugyldig katalog '{0}'.
 
 cache_primary_duplicated					= Høyst én primær cache-modul er tillatt. {0} forsøker å registrere seg som enda en primær cache.
+cache_flush_unsupported						= Denne cache-modulen støtter ikke flush().
 psrcache_backing_cache_required				= TPsrCache.BackingCacheId eller TPsrCache.BackingCache er påkrevd.
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' refererer ikke til en applikasjonsmodul.
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' må referere til en modul som implementerer Psr\SimpleCache\CacheInterface eller Psr\Cache\CacheItemPoolInterface.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} krever en underliggende cache. Sett {0}.
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' refererer ikke til en applikasjonsmodul.
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' må referere til en Prado\Caching\ICache-modul.
 psrcachebacking_key_invalid					= Cache-nøkkelen for {0} må være en ikke-tom streng uten de reserverte tegnene {}()/\@: men '{1}' ble oppgitt.
-sqlitecache_extension_required				= TSqliteCache krever PHP-utvidelsen SQLite.
-sqlitecache_dbfile_required					= TSqliteCache.DbFile er påkrevd.
-sqlitecache_connection_failed				= Databasetilkoblingen for TSqliteCache mislyktes. {0}.
-sqlitecache_table_creation_failed			= TSqliteCache kunne ikke opprette cache-databasen. {0}.
-sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile kan ikke endres etter at modulen er initialisert.
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile er ugyldig. Sørg for at den er i riktig navneromsformat.
 
 dbcache_unavailable							= TDbCache krever PHP-utvidelsen PDO.
 
 etcdcache_transport_required				= TEtcdCache krever PHP-utvidelsen cURL eller allow_url_fopen.
 
-memcache_extension_required					= TMemCache krever PHP-utvidelsen memcache.
 memcache_connection_failed					= TMemCache kunne ikke koble til memcache-serveren {0}:{1}.
 memcache_not_initialized					= Alternativer kan ikke settes på TMemCache før modulen er initialisert.
+memcache_serverhost_required				= Serverkonfigurasjonen for TMemCache krever en Host.
+memcache_serverport_required				= Serverkonfigurasjonen for TMemCache krever en Port.
+memcache_serverport_invalid					= Port for TMemCache-serveren må være numerisk.
+memcache_serverweight_invalid				= Weight for TMemCache-serveren må være numerisk.
 
 apccache_extension_required					= TAPCCache krever PHP-utvidelsen APC.
 apccache_extension_not_enabled				= TAPCCache trenger apc.enabled = 1 i php.ini for å fungere.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= Bare objekter som implementerer I
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' er ugyldig. Sørg for at den er i navneromsformat og peker til en gyldig katalog som inneholder feilmalfiler.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' er ikke en gyldig katalog.
-pageservice_defaultpage_unchangeable		= TPageService.DefaultPage kan ikke endres etter at tjenesten er initialisert.
-pageservice_basepath_unchangeable			= TPageService.BasePath kan ikke endres etter at tjenesten er initialisert.
-pageservice_pageclass_invalid				= Sideklassen {0} er ugyldig. Den skal være TPage eller utvide TPage.
 pageservice_includefile_invalid				= Finner ikke sidetjenestekonfigurasjonen {0}. Sørg for at den er i navneromsformat og at filen slutter på ".xml" eller ".php".
 
 pageserviceconf_file_invalid				= Kan ikke åpne sidekatalogens konfigurasjonsfil '{0}'.
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> bruker en ugyldig filsti "{1}" i sidekatalogens konfigurasjonsfil '{2}'.
-pageserviceconf_alias_invalid				= Elementet <alias> må ha et "id"-attributt og et "path"-attributt i sidekatalogens konfigurasjonsfil '{0}'.
-pageserviceconf_using_invalid				= Elementet <using> må ha et "namespace"-attributt i sidekatalogens konfigurasjonsfil '{0}'.
-pageserviceconf_module_invalid				= Elementet <module> må ha et "id"-attributt i sidekatalogens konfigurasjonsfil '{0}'.
-pageserviceconf_moduletype_required			= <module id="{0}"> må ha et "class"-attributt i sidekatalogens konfigurasjonsfil '{1}'.
-pageserviceconf_parameter_invalid			= Elementet <parameter> må ha et "id"-attributt i sidekatalogens konfigurasjonsfil '{0}'.
 pageserviceconf_page_invalid				= Elementet <page> må ha et "id"-attributt i sidekatalogens konfigurasjonsfil '{0}'.
 pageserviceconf_includefile_required		= Elementet <include> i sidekonfigurasjonen må ha et "file"-attributt.
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" kan ikke frakobles fra
 callchain_bad_dynamic_event					= TCallChain.{0} ble utløst, men {1} var forventet.
 
 behaviormodule_behavior_as_array_required	= php <behavior> må være en matrise.
-behaviormodule_behaviorname_required		= <behavior> må inneholde et 'name'-attributt for å knytte til atferden.
-behaviormodule_behaviorclass_required		= <behavior> må inneholde et 'class'-attributt som definerer atferdsklassen.
 behaviormodule_attachto_class_required		= <behavior> må ha et 'attachto'- eller 'attachtoclass'-attributt.
 behaviormodule_attachto_and_class_only_one	= <behavior> må ha enten 'attachto'- eller 'attachtoclass'-attributtet, ikke begge.
 behaviormodule_behaviorowner_required		= Objektet for <behavior> attachto '{0}' ble ikke funnet.
 behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors kan ikke settes til den ugyldige typen '{0}'
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader må ha et Behavior Name.
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader må ha en Behavior Class.
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader må ha et 'attachto'- eller 'attachtoclass'-attributt.
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader kan bare ha ett 'attachto'- eller 'attachtoclass'-attributt.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} krever initialisering før behan
 template_closingtag_unexpected				= Uventet sluttagg '{0}' ble funnet.
 template_closingtag_expected				= Sluttagg '{0}' var forventet, men fant '{1}'.
 template_directive_nonunique				= Direktivet '<%@ ... %>' må stå i begynnelsen av malen og kan forekomme høyst én gang.
-template_comments_forbidden					= Malkommentarer er ikke tillatt inne i egenskapstagger.
 template_matching_unexpected				= Uventet samsvar.
 template_property_unknown					= {0} har ingen egenskap med navnet '{1}'.
 template_event_unknown						= {0} har ingen hendelse med navnet '{1}'.
@@ -279,7 +255,6 @@ template_property_duplicated				= Egenskapen {0} er konfigurert to eller flere g
 template_eventhandler_invalid				= {0}.{1} godtar bare en statisk streng.
 template_controlid_invalid					= {0}.ID godtar bare en statisk tekststreng.
 template_controlskinid_invalid				= {0}.SkinID godtar bare en statisk tekststreng.
-template_content_unexpected					= Uventet innhold ble funnet under instansiering av malen: {0}.
 template_include_invalid					= Ugyldig malinkludering. Sørg for at {0} er et gyldig navnerom som peker til en eksisterende malfil med filtypen .tpl.
 template_tag_unexpected						= Initialiseringen av egenskapen {0} inneholder en ukjent taggtype {1}.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' er ikke et gyldig stialias. Sørg for at du har definert dette aliaset i konfigurasjonen og at det peker til en gyldig katalog.
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' er ikke en gyldig katalog.
-thememanager_basepath_unchangeable			= TThemeManager.BasePath kan ikke endres etter at modulen er initialisert.
 thememanager_theme_invalid					= Temanavnet '{0}' i TThemeManager må være ett enkelt katalognavn.
+thememanager_baseurl_required				= TThemeManager.BaseUrl er påkrevd når BasePath ligger utenfor applikasjonskatalogen.
 
-theme_baseurl_required						= TThemeManager.BasePath er påkrevd. Som standard antas en katalog med navnet 'themes' under katalogen som inneholder applikasjonens inngangsskript.
 theme_path_inexistent						= Temastien '{0}' finnes ikke.
 theme_control_nested						= Skinnet for kontrolltypen '{0}' i temaet '{1}' kan ikke ligge inne i et annet skinn.
 theme_skinid_duplicated						= SkinID '{0}.{1}' er duplisert i temaet '{2}'.
-theme_databind_forbidden					= Databinding kan ikke brukes i temaet '{0}' for kontrollskinnet '{1}.{2}' på egenskapen '{3}'.
 theme_property_readonly						= Skinnet anvendes på en skrivebeskyttet kontrollegenskap '{0}.{1}'.
 theme_property_undefined					= Skinnet anvendes på en ikke-eksisterende kontrollegenskap '{0}.{1}'.
 theme_tag_unexpected						= Initialiseringen av egenskapen {0} inneholder en ukjent taggtype {1}.
@@ -364,9 +337,7 @@ page_head_required							= En THead-kontroll er nødvendig i sidemalen for å gj
 page_statepersister_invalid					= Sidetilstandslagreren må implementere grensesnittet IPageStatePersister.
 
 csmanager_pradoscript_invalid				= Ukjent Prado-skriptbibliotek med navnet '{0}'.
-csmanager_pradoscript_notloaded				= Prado-skriptbiblioteket med navnet '{0}' er ikke lastet ennå.
 csmanager_pradostyle_invalid				= Ukjent Prado-stilbibliotek med navnet '{0}'.
-csmanager_invalid_packages					= Ukjente pakker '{1}' for javascript-pakkene definert i '{0}'. Gyldige pakker er '{2}'.
 
 httpclient_transport_error					= Transportfeil i HTTP-klienten (kode {0}): {1}
 httpclient_http_error						= HTTP-feilrespons med status {0}.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' er ugyldig. Den må være 
 webcontrol_dir_invalid						= {0}.Dir '{1}' er ugyldig. Tillatte verdier er 'ltr', 'rtl' og 'auto'.
 webcontrol_style_invalid					= {0}.Style godtar bare en strengverdi.
 
-listcontrol_selection_invalid				= {0} har et ugyldig valg som er satt før databinding utføres.
-listcontrol_selectedindex_invalid			= {0}.SelectedIndex har en ugyldig verdi {1}.
-listcontrol_selectedvalue_invalid			= {0}.SelectedValue har en ugyldig verdi '{1}'.
 listcontrol_expression_invalid				= {0} evaluerer et ugyldig uttrykk '{1}' : {2}
 listcontrol_multiselect_unsupported			= {0} støtter ikke flervalg.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices e
 
 logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' finnes ikke.
 logrouter_routeclass_required				= Class-attributtet er påkrevd i <route>-konfigurasjonen.
-logrouter_routetype_required				= Loggruten må være en instans av TLogRoute eller en avledet klasse.
+logrouter_routetype_invalid					= Loggruten må være en instans av TLogRoute eller en avledet klasse.
 
 dblogroute_connectionid_invalid				= TDbLogRoute kan ikke opprette databasetilkoblings-ID '{0}'.
 dblogroute_insert_failed					= TDbLogRoute kan ikke sette inn loggen i '{0}'.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= Ukjent repeater-elementtype {0}.
 repeateritemcollection_item_invalid			= TRepeaterItemCollection godtar bare objekter som er instanser av TControl eller dens etterkommerklasser.
 
 datalist_template_required					= TDataList.{0} krever en malinstans som implementerer grensesnittet ITemplate.
+datalist_datakeyfield_required				= TDataList.DataKeyField er påkrevd for å lese SelectedDataKey.
+datalist_itemtype_unknown					= TDataList-elementtypen '{0}' er ukjent.
 datalistitemcollection_datalistitem_required	= TDataListItemCollection godtar bare TDataListItem-objekter.
 
 datagrid_template_required					= TDataGrid.{0} krever en malinstans som implementerer grensesnittet ITemplate.
 templatecolumn_template_required			= TTemplateColumn.{0} krever en malinstans som implementerer grensesnittet ITemplate.
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex kan ikke være mindre enn 0.
-datagrid_pagesize_invalid					= TDataGrid.PageSize må være større enn 0.
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount kan ikke være mindre enn 0.
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection godtar bare TDataGridItem-objekter.
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection godtar bare TDataGridColumn-objekter.
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount må være større enn 0.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection godtar bare 
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection godtar bare TTableColumnGroup-objekter.
 tablecolumn_span_invalid					= TTableColumn Span må være 1 eller større; {0} ble oppgitt.
 
-tablecellcollection_tablerow_required		= TTableCellCollection godtar bare TTableCell-objekter.
-
 multiview_view_required						= TMultiView godtar bare TView som barn.
 multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex har en ugyldig indeks '{0}'.
 multiview_view_inexistent					= TMultiView finner ikke den angitte visningen.
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible er skrivebeskyttet. Bruk TView.Active
 
 wizard_step_invalid							= Trinnet som skal aktiveres, finnes ikke i veiviserens trinnsamling.
 wizard_command_invalid						= Ugyldig navigasjonskommando '{0}' for veiviseren.
+wizard_buttontype_unknown					= Navigasjonsknapptypen '{0}' for TWizard er ukjent.
 
 table_tablesection_outoforder				= Tabellseksjonene i TTable må være i rekkefølgen: Header, Body og Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType er skrivebe
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection godtar bare objekter av TWizardStep eller dens avledede klasser.
 
-texthighlighter_stylesheet_invalid			= Finner ikke stilarkfilen for TTextHighlighter.
-
 hotspotcollection_hotspot_required			= THotSpotCollection godtar bare instanser av THotSpot eller dens avledede klasser.
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode er skrivebeskyttet.
 htmlarea_tarfile_invalid					= THtmlArea finner ikke tar-filen for TinyMCE.
 
-parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile kan ikke endres fordi modulen allerede er initialisert.
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' er ugyldig. Sørg for at den er i navneromsformat og at filtypen er '.xml' eller '.php'.
 parametermodule_parameterid_required		= Parameterelementet må ha et 'id'-attributt.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} må være en g
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize må være et heltall som ikke er mindre enn 1.
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount må være et heltall som ikke er mindre enn 0.
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex er utenfor rekkevidde.
 databoundcontrol_datasource_invalid			= {0}.DataSource er ikke gyldig.
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' refererer ikke til en eksisterende kontroll.
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' må referere til en kontroll som implementerer IDataSource.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} støtter ikke sletting.
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource krever en matrise, en IDataSource eller en Traversable-datakilde.
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView krever null, en matrise eller en Traversable-datakilde.
 
-clientscript_invalid_file_position			= Ugyldig filposisjon '{1}' for TClientScript-kontrollen '{0}'; den må være 'Head', 'Here' eller 'Begin'.
-clientscript_invalid_package_path			= Ugyldig PackagePath '{0}' for TClientScript-kontrollen '{1}'.
-
 tdatepicker_autopostback_unsupported		= '{0}' støtter ikke AutoPostBack.
 globalization_cache_path_failed				= Kan ikke opprette cache-stien for oversettelsesmeldinger '{0}'. Sørg for at overordnet katalog finnes og er skrivbar for webprosessen.
 globalization_source_path_failed			= Kan ikke opprette stien for oversettelsesmeldinger '{0}'. Sørg for at overordnet katalog finnes og er skrivbar for webprosessen.
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' peker ikke til en gyldig TDataSourceConfig-modul.
 messagesource_connectionid_required			= ConnectionID i MessageSource_Database.source er påkrevd.
 
-callback_not_support_no_priority_state_update	= Callback-forespørselen støtter ikke uprioritert oppdatering av sidetilstanden.
 callback_invalid_callback_options			= '{1}' er ikke en gyldig TCallbackOptions-kontroll for Callback-kontrollen '{0}'.
-callback_invalid_clientside_options			= Egenskapen ClientSide for Callback må være enten en streng som er ID-en til en TCallbackOptions-kontroll, eller en instans av TCallbackClientSideOptions.
 callback_invalid_handler					= Ugyldig callback-behandler; kontrollen {0} må implementere ICallbackEventHandler.
 callback_invalid_target						= Ugyldig callback-mål; ingen kontroll med ID {0} finnes.
 
 callback_interval_be_positive				= Intervallet for TCallbackTimer "{0}" må være strengt større enn null sekunder.
 callback_decay_be_not_negative				= Avtakingsraten for TCallbackTimer "{0}" kan ikke være negativ.
-
-callback_no_autopostback					= Kontrollen "{0}" kan ikke aktivere AutoPostBack.
 
 xmltransform_xslextension_required			= TXmlTransform krever PHP-utvidelsen XSL.
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' er ugyldig.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= Databasedriveren '{0}' kan ikke endre tegn
 dbcommand_prepare_failed					= TDbCommand kunne ikke forberede SQL-setningen "{1}": {0}
 dbcommand_execute_failed					= TDbCommand kunne ikke utføre SQL-setningen "{1}": {0}
 dbcommand_query_failed						= TDbCommand kunne ikke utføre SQL-spørringen "{1}": {0}
-dbcommand_column_empty						= TDbCommand returnerte et tomt resultat og kunne ikke hente skalarverdien.
 dbdatareader_rewind_invalid					= TDbDataReader er en strøm som bare kan leses fremover. Den kan bare traverseres én gang.
 dbtransaction_transaction_inactive			= TDbTransaction er inaktiv.
-
-dbcommandbuilder_value_must_not_be_null		= Egenskapen {0} kan ikke være null, som definert av kolonnen '{2}' i tabellen '{1}'.
 
 dbcommon_invalid_table_name					= Databasetabellen '{0}' ble ikke funnet. Feilmelding: {1}.
 dbcommon_invalid_identifier_name			= Ugyldig databaseidentifikatornavn '{0}', se {1} for detaljer.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= Dataene i TLiveProcessFork er skrivebeskyt
 stream_open_failed							= Kan ikke åpne strømmen '{0}' med modus '{1}': {2}
 binarystream_unexpected_eof					= Uventet slutt på strømmen: {0} byte var nødvendig, men bare {1} ble lest.
 binarystream_short_write					= Ufullstendig skriving: {0} byte skulle skrives, men bare {1} ble godtatt.
+binarystream_no_stream_owner				= TBinaryStreamBehavior krever en eier som implementerer Psr\Http\Message\StreamInterface.
 streamresourcewrapper_unusable_stream		= Strømmen er verken lesbar eller skrivbar og kan ikke eksponeres som en ressurs.
 streamfilter_already_registered				= Strømfilteret '{0}' er allerede registrert.
 streamfilter_registration_failed			= Kan ikke registrere strømfilteret '{0}' for klassen '{1}'.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' er ikke en g
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' peker ikke til en gyldig TDataSourceConfig-modul.
 dbusermanager_connectionid_required			= TDbUserManager.ConnectionID er påkrevd.
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' peker ikke til en gyldig TDataSourceConfig-modul.
-dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID er påkrevd.
-
 feedservice_id_required						= TFeedService krever et 'id'-attributt i feed-elementene sine.
 feedservice_feedtype_invalid				= Feed-klassen '{0}' må implementere grensesnittet IFeedContentProvider.
 feedservice_class_required					= TFeedService krever et 'class'-attributt i feed-elementene sine.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength må være et heltall
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength må være et heltall mellom {0} og {1}.
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet må være en streng som består av minst 2 tegn.
 captcha_privatekey_unknown					= TCaptcha.PrivateKey er ukjent. Sørg for at assets-katalogen er skrivbar for webserverprosessen.
-captcha_gd2_required						= TCaptcha krever PHP-utvidelsen GD2.
 captcha_imagettftext_required				= TCaptcha krever PHP-utvidelsen GD2 med støtte for TrueType-skrifter.
-captcha_imagepng_required					= TCaptcha krever PHP-utvidelsen GD2 med støtte for bildeformatet PNG.
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl må peke til en eksisterende TCaptcha-kontroll.
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} må peke til en eksisterende TCaptcha-kontroll.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey er ukjent. For å bruke reCAPTCHA må du skaffe en API-nøkkel.
 recaptcha_publickey_unknown					= TReCaptcha.PublicKey er ukjent. For å bruke reCAPTCHA må du skaffe en API-nøkkel.
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate må være en instans av TReCaptcha.
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' kan bare inneholde bokstaver, sifre, '_' og '-'.
 proofofwork_complexity_invalid				= TProofOfWork.Complexity må være et heltall mellom {0} og {1}.
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' må peke til en TProofOfWork-kontroll.
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' er ikke en gyldig brukerklasse. Klassen må utvide TSliderHandle.
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' peker ikke til en gyldig cache-modul.
 cachepagestatepersister_cache_required		= TCachePageStatePersister krever at en cache-modul er lastet.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask fant ikke modulen '{0}'.
 cron_usermanager_nonexistent				= TCronModule fant ikke UserManager med navnet '{0}'.
 cron_usermanager_invalid					= TCronModule UserManager '{0}' er ikke en TUserManager.
 cron_task_as_array_required					= Oppgavejobben i TCronModule-konfigurasjonen var ikke en matrise.
-cron_duplicate_task_name					= TCronModule må ha oppgavejobber med unike navn.
+cron_duplicate_task_name					= Oppgavenavn i TCronModule må være unike; '{0}' er definert mer enn én gang.
 cron_schedule_required						= Cron-oppgaven må ha en tidsplan.
 cron_task_required							= Cron-oppgaven må ha en oppgave.
 cron_not_a_crontask							= Cron-oppgaven '{0}' er ikke en TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper må ha minst én In Bit. '{0}' ble o
 bithelper_invalid_color_out					= TBitHelper må ha minst én Out Bit. '{0}' ble oppgitt.
 bithelper_bad_mirror_bits					= TBitHelper kan ikke speile '{0}' biter i et {1}-biters PHP-miljø.
 
-ar_data_invalid								= {0}.copyFrom() godtar bare et objekt eller en matrise som parameter.
-ar_save_invalid								= Instansen av {0} kan ikke lagres fordi den enten er slettet eller i en ukjent tilstand.
-ar_delete_invalid							= Instansen av {0} kan ikke slettes fordi den enten er en ny post eller en post som allerede er slettet.
-
 dbmetadata_invalid_database_driver			= Driveren '{0}' støttes ikke. Installer PRADO-driveren for den, hvis tilgjengelig.
 dbmetadata_not_meta_data					= Forventet driverklassen {1}, men fikk klassen {0}.
 dbmetadata_tableinfo_class_invalid			= Tabellinfoklassen '{0}' for TDbMetaData er et katalognavnerom, ikke en klasse.
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' er ugyldig. Sørg for at den peker til en gyldig applikasjonsmodul.
-distributeddatasource_child_required		= {0} krever minst ett '{1}'-barneelement.
-masterslavedbconnection_connection_exists	= Tilkoblingen {0}.{1} finnes allerede.
-masterslavedbconnection_interface_required	= {0}.{1} krever en instans som implementerer grensesnittet {2}.
-slavedbconnection_requires_master			= {0} krever en {1}.
+datasource_dbconnection_exists				= TDataSourceConfig.ConnectionClass kan ikke settes til '{0}' etter at databasetilkoblingen er opprettet.
 
 response_status_reason_missing				= HTTP 1.1 krever en begrunnelse for utvidede statuskoder
-response_status_reason_badchars				= I en HTTP 1.1-header kan tokenet status-reason ikke inneholde tokenet CR eller LF
 
 activefileupload_temppath_invalid			= TActiveFileUpload TempPath-stien '{0}' finnes ikke eller er ikke skrivbar for webserverprosessen.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' er ikke medlem av TTableRow
 juioptions_option_invalid					= '{1}' er ikke et gyldig alternativ for kontrollen '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' er ikke en gyldig tekstkontroll for TRatingList '{0}'.
+ratinglist_table_layout_only				= TRatingList.RepeatLayout må være Table.
 
 accordion_activeviewid_invalid				= TAccordion.ActiveViewID har en ugyldig ID '{0}'.
 accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex har en ugyldig indeks '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= TDot Size må være et positivt heltall, men er '{0}'
 dot_bad_border_width						= TDot FlatBorderWidth må være et tall med valgfri % eller CSS-lengdeenhet, men er '{0}'
 
 juidatepicker_settextmode_unsupported		= TextMode for TJuiDatePicker kan ikke endres.
-
-control_adapter_not_active					= En BaseActiveControl-egenskap ble kalt på en kontroll som ikke er aktiv.
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' må være et direkte barn av en TFigure-kontroll.
 summary_requires_details_parent				= TSummary '{0}' må være et direkte barn av en TDetails-kontroll.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' kan ikke inneholde '{1}': akt
 vardumper_not_array							= __debuginfo() må returnere en matrise.
 
 htmlpurifier_source_path_failed				= Kan ikke opprette cache-stien for html purifier '{0}'. Sørg for at overordnet katalog finnes og er skrivbar for webprosessen.
+
+active_controls_client_side_exists			= Kontrollen '{0}' har allerede ClientSide-alternativer; egenskapen ClientSide kan ikke erstattes.
+componentreflection_class_invalid			= TComponentReflection krever et klassenavn eller et objekt.
+datasize_no_negative_size					= TDataSize.Size må være 0 eller større; {0} ble oppgitt.
+date_to_parse_must_be_string				= TSimpleDateFormatter kan bare parse en strengverdi.
+dbuser_dbconnection_invalid					= TDbUser krever en databasetilkobling. Sett DbConnection eller opprett brukeren gjennom en TDbUserManager-modul.
+deflatestream_init_failed					= TDeflateStream kunne ikke initialisere deflate-konteksten for kodingen '{0}'.
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' refererer ikke til en kontroll i skjemaet.
+inflatestream_init_failed					= TInflateStream kunne ikke initialisere inflate-konteksten for kodingen '{0}'.
+logroute_bad_level							= TLogRoute.Levels '{0}' inneholder et udefinert loggnivå.
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback må være kallbar.
+memcached_extension_required				= TMemCache krever PHP-utvidelsen memcached.
+metatagcollection_metatag_invalid			= TMetaTagCollection godtar bare TMetaTag-objekter.
+numberformat_type_invalid					= TNumberFormat.Type '{0}' er ikke gyldig.
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource må være en matrise eller et objekt som implementerer Traversable.
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize må være større enn 0.
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount må være 0 eller større.
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex er utenfor rekkevidde.
+pagedlist_pagesize_invalid					= TPagedList.PageSize må være større enn 0.
+phpstream_no_stream_owner					= TPhpStreamBehavior krever en eier som implementerer Psr\Http\Message\StreamInterface.
+pipe_popen_failed							= TPipeStream kunne ikke åpne et rør til kommandoen '{0}' i modus '{1}'.
+process_descriptor_unusable					= TProcess-deskriptoren {0} refererer til en ressurs som ikke er åpen.
+process_invalid_pipe_offset					= TProcess-rørforskyvningen '{0}' er ikke et rørnummer.
+process_open_failed							= TProcess kunne ikke starte kommandoen '{0}'.
+rediscache_extension_required				= TRedisCache krever PHP-utvidelsen redis.
+tablecellcollection_tablecell_required		= TTableCellCollection godtar bare TTableCell-objekter.
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection er skrivebeskyttet.
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection er skrivebeskyttet.

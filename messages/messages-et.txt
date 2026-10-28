@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= Prado.Application tohib määrata ainult üks kord.
-prado_component_unknown						= Tundmatu komponenditüüp '{0}'. Põhjuseks võib olla järgmine parsimisviga klassi {0} failis: {1}
-prado_using_invalid							= '{0}' ei ole kasutamiseks kehtiv nimeruum. Kataloogile viitava nimeruumi kasutamiseks lisa lõppu '.*'.
 prado_alias_redefined						= Aliast '{0}' ei saa uuesti määratleda.
 prado_alias_invalid							= Alias '{0}' viitab vigasele teele '{1}'. Aliase saab anda ainult olemasolevatele kataloogidele.
 prado_aliasname_invalid						= Alias '{0}' sisaldab keelatud märki '.'.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= Komponendil '{0}' on juba klassikäitumine 
 component_not_a_behavior					= Komponent '{0}', mida lisatakse käitumisena, ei ole TBaseBehavior.
 object_not_a_component						= Objekt '{0}', mida lisatakse käitumisena, ei ole TComponent.
 component_no_tcomponent_class_behaviors		= TComponent külge ei saa rekursiooni tõttu klassikäitumisi siduda.
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors ei saa siduda mitme omanikuga. Anna igal omanikul eksemplari loomiseks ette sõne või massiiv IBehavior klassi ja omadustega.
 
 propertyvalue_enumvalue_invalid				= Väärtus '{0}' ei ole kehtiv loendi väärtus ({1}).
 propertyvalue_invalid_hex_color				= Väärtus '{0}' ei ole kehtiv kuueteistkümnendsüsteemis värviväärtus, nt "#112233".
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= Massiiviliteraal on pesastatud sügavamale kui
 eventhandler_lost_weak_ref					= TEventHandler ei saa sündmusekäsitlejat välja kutsuda, kuna väljakutsutava objekti WeakReference on kadunud.
 eventhandler_no_set_handler					= TEventHandler ei saa sündmusekäsitlejat määrata, indeks "{0}".
 eventhandler_bad_offset						= TEventHandler ei sisalda nihet "{0}".
+eventhandler_not_callable					= TEventHandler nõuab väljakutsutavat (callable) käsitlejat.
 
 eventparam_readonly							= {0} on kirjutuskaitstud.
 eventparam_readonly_set						= {0} ei saa ReadOnly väärtust pärast selle määramist muuta.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= Vaikeprioriteedi saab määrata ainult 
 prioritytrait_no_set_precision				= Täpsuse saab määrata ainult üks kord või objekt ise.
 weak_no_set_discard_invalid					= '{0}'.DiscardInvalid saab määrata ainult üks kord või objekt ise.
 
-map_addition_disallowed						= Uut elementi ei saa vastendusse lisada.
-map_item_unremovable						= Elementi ei saa vastendusest eemaldada.
 map_data_not_iterable						= Andmed peavad olema massiiv või objekt, mis realiseerib liidese Traversable.
 map_readonly								= {0} on kirjutuskaitstud.
 map_readonly_set							= {0} ei saa Read-Only väärtust muuta, kui see on juba määratud.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection võtab vastu 
 arraysubscription_no_change					= TArraySubscription.{0} ei saa pärast tellimist muuta.
 arraysubscription_no_null_key				= TArraySubscription ei saa tellida ArrayAccess objekti null-võtit.
 arraysubscription_index_invalid				= TArraySubscription on loendirežiimis (isAssociative = false), kuid võti '{0}' ei ole kehtiv (arv: {1}).
-eventsubscription_no_setcollection			= TEventSubscription.Array ei saa otse määrata.
 eventsubscription_no_change					= TEventSubscription.{0} ei saa pärast tellimist muuta.
+eventsubscription_no_setarray				= TEventSubscription.Array ei saa otse määrata.
 
 application_includefile_invalid				= Rakenduse konfiguratsiooni {0} ei leitud. Veendu, et see on nimeruumi vormingus ja faili laiend on ".xml" või ".php".
 application_basepath_invalid				= Rakenduse baastee '{0}' ei eksisteeri või ei ole kataloog.
 application_runtimepath_invalid				= Rakenduse käitusaja tee '{0}' ei eksisteeri või ei ole veebiserveri protsessile kirjutatav.
 application_service_class_not_found			= Teenuseklass '{0}' ei eksisteeri.
 application_service_class_not_service		= Teenuseklass '{0}' ei realiseeri liidest IService.
-application_service_class_required			= registerService nõuab teenuse '{0}' jaoks klassinime või serviceConfig massiivi.
+application_service_class_required			= TApplication::registerService() nõuab teenuse '{0}' jaoks klassinime või teenuse konfiguratsiooni massiivi.
 application_service_default_unregister		= Vaikimisi leheteenuse '{0}' registreeringut ei saa tühistada.
 service_csrf_token_invalid					= Teenus '{0}' nõuab kehtivat CSRF-märgist.
 application_moduleid_duplicated				= Rakenduse mooduli ID '{0}' ei ole unikaalne.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= Rakenduse konfiguratsiooni <alias id="{0}"> ka
 appconfig_alias_invalid						= Rakenduse konfiguratsiooni elemendil <alias> peavad olema atribuudid "id" ja "path".
 appconfig_alias_redefined					= Rakenduse konfiguratsiooni <alias id="{0}"> ei saa uuesti määratleda.
 appconfig_using_invalid						= Rakenduse konfiguratsiooni elemendil <using> peab olema atribuut "namespace".
-appconfig_moduleid_required					= Rakenduse konfiguratsiooni elemendil <module> peab olema atribuut "id".
 appconfig_moduletype_required				= Rakenduse konfiguratsiooni elemendil <module id="{0}"> peab olema atribuut "class".
 appconfig_moduletype_inapplicable			= Rakenduse konfiguratsiooni elemendil <module id="{0}"> ei tohi olla atribuuti "class".
 appconfig_serviceid_required				= Rakenduse konfiguratsiooni elemendil <service> peab olema atribuut "id".
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= Rakenduse konfiguratsiooni element <paths> ei toh
 appconfig_modules_invalid					= Rakenduse konfiguratsiooni element <modules> ei tohi sisaldada elementi <{0}>.
 appconfig_services_invalid					= Rakenduse konfiguratsiooni element <services> ei tohi sisaldada elementi <{0}>.
 appconfig_parameters_invalid				= Rakenduse konfiguratsiooni element <parameters> ei tohi sisaldada elementi <{0}>.
-appconfig_tag_invalid						= Rakenduse konfiguratsioon ei tohi sisaldada elementi <{0}>.
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey ei tohi olla tühi.
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey ei tohi olla tühi.
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey ei tohi olla tühi.
-securitymanager_mcryptextension_required	= TSecurityManager krüpteerimisfunktsiooni kasutamiseks on vajalik PHP laiendus Mcrypt.
-securitymanager_mcryptextension_initfailed	= TSecurityManager ei suutnud mcrypt moodulit lähtestada.
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm peab olema šiffer, mida PHP laiendus openssl toetab.
+securitymanager_hash_algorithm_invalid		= TSecurityManager räsialgoritm peab olema algoritm, mida PHP laiendus hash toetab.
+securitymanager_openssl_required			= TSecurityManager krüpteerimine nõuab PHP laiendust openssl.
 
 uri_format_invalid							= '{0}' ei ole kehtiv URI.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie on false, mi
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection võtab vastu ainult THttpCookie objekte.
 
-httpresponse_file_inexistent				= THttpResponse ei saa faili '{0}' saata. Faili ei eksisteeri.
 httpresponse_responsedata_method_unavailable	= THttpResponse: meetodit '{0}' ei saa kasutada ilma sobiva adapterita, mis selle realiseerib.
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' ei viita olemasolevale moodulile.
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' peab viitama moodulile, mis laiendab klassi THttpHeadersManager.
 
 httpheadersmanager_header_required			= THttpHeadersManager võib sisaldada ainult THttpHeader või selle alamklasside objekte.
 httpheadersmanager_headerclass_missing		= THttpHeadersManager kirjel <headerclass> puudub nõutav atribuut 'name' või 'class'.
+httpheadersmanager_header_wrong_manager		= Päis kuulub teisele THttpHeadersManager objektile ja seda ei saa sellesse haldurisse lisada.
 
 httpsession_sessionid_unchangeable			= THttpSession.SessionID ei saa pärast seansi käivitamist muuta.
 httpsession_sessionname_unchangeable		= THttpSession.SessionName ei saa pärast seansi käivitamist muuta.
 httpsession_sessionname_invalid				= THttpSession.SessionName võib sisaldada ainult tähti ja numbreid.
 httpsession_savepath_unchangeable			= THttpSession.SavePath ei saa pärast seansi käivitamist muuta.
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' on vigane.
-httpsession_storage_unchangeable			= THttpSession.Storage ei saa pärast seansi käivitamist muuta.
 httpsession_cookiemode_unchangeable			= THttpSession.CookieMode ei saa pärast seansi käivitamist muuta.
-httpsession_autostart_unchangeable			= THttpSession.AutoStart ei saa pärast seansimooduli lähtestamist muuta.
 httpsession_gcprobability_unchangeable		= THttpSession.GCProbability ei saa pärast seansi käivitamist muuta.
 httpsession_gcprobability_invalid			= THttpSession.GCProbability peab olema täisarv vahemikus 0 kuni 100.
 httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID ei saa pärast seansi käivitamist muuta.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= THttpSession.Timeout ei saa pärast sean
 httpsession_handler_invalid					= THttpSessionHandler võtab konstruktori parameetrina vastu ainult THttpSession objekti
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' on vigane. Veendu, et see on nimeruumi kujul ja viitab veebiserveri protsessile kirjutatavale kataloogile.
-assetmanager_basepath_unchangeable			= TAssetManager.BasePath ei saa pärast mooduli lähtestamist muuta.
-assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl ei saa pärast mooduli lähtestamist muuta.
 assetmanager_filepath_invalid				= TAssetManager avaldab vigast faili '{0}'.
 assetmanager_tarchecksum_invalid			= TAssetManager avaldab tar-faili vigase kontrollsummaga '{0}'.
 assetmanager_tarfile_invalid				= TAssetManager avaldab vigast tar-faili '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager ei suutnud tar-faili '{0}'
 assetmanager_source_directory_invalid		= TAssetManager kopeerib vigast kataloogi '{0}'.
 
 cache_primary_duplicated					= Lubatud on ülimalt üks primaarne vahemälumoodul. {0} üritab registreeruda teise primaarse vahemäluna.
+cache_flush_unsupported						= See vahemälumoodul ei toeta funktsiooni flush().
 psrcache_backing_cache_required				= Nõutav on TPsrCache.BackingCacheId või TPsrCache.BackingCache.
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' ei viita rakenduse moodulile.
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' peab viitama moodulile, mis realiseerib liidese Psr\SimpleCache\CacheInterface või Psr\Cache\CacheItemPoolInterface.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} nõuab tagavahemälu. Määra {0}.Backin
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' ei viita rakenduse moodulile.
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' peab viitama Prado\Caching\ICache moodulile.
 psrcachebacking_key_invalid					= {0} vahemälu võti peab olema mittetühi sõne, mis ei sisalda reserveeritud märke {}()/\@:, kuid anti '{1}'.
-sqlitecache_extension_required				= TSqliteCache nõuab PHP laiendust SQLite.
-sqlitecache_dbfile_required					= TSqliteCache.DbFile on nõutav.
-sqlitecache_connection_failed				= TSqliteCache andmebaasiühendus nurjus. {0}.
-sqlitecache_table_creation_failed			= TSqliteCache ei suutnud vahemälu andmebaasi luua. {0}.
-sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile ei saa pärast mooduli lähtestamist muuta.
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile on vigane. Veendu, et see on korrektses nimeruumi vormingus.
 
 dbcache_unavailable							= TDbCache nõuab PHP laiendust PDO.
 
 etcdcache_transport_required				= TEtcdCache nõuab PHP laiendust cURL või lubatud allow_url_fopen seadet.
 
-memcache_extension_required					= TMemCache nõuab PHP laiendust memcache.
 memcache_connection_failed					= TMemCache ei suutnud ühenduda memcache serveriga {0}:{1}.
 memcache_not_initialized					= TMemCache valikuid ei saa määrata enne mooduli lähtestamist.
+memcache_serverhost_required				= TMemCache serveri konfiguratsioon nõuab väärtust Host.
+memcache_serverport_required				= TMemCache serveri konfiguratsioon nõuab väärtust Port.
+memcache_serverport_invalid					= TMemCache serveri Port peab olema arvuline.
+memcache_serverweight_invalid				= TMemCache serveri Weight peab olema arvuline.
 
 apccache_extension_required					= TAPCCache nõuab PHP laiendust APC.
 apccache_extension_not_enabled				= TAPCCache töötamiseks peab php.ini failis olema apc.enabled = 1.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= TCacheDependencyList loendisse sa
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' on vigane. Veendu, et see on nimeruumi kujul ja viitab kehtivale kataloogile, mis sisaldab veamallide faile.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ei ole kehtiv kataloog.
-pageservice_defaultpage_unchangeable		= TPageService.DefaultPage ei saa pärast teenuse lähtestamist muuta.
-pageservice_basepath_unchangeable			= TPageService.BasePath ei saa pärast teenuse lähtestamist muuta.
-pageservice_pageclass_invalid				= Leheklass {0} on vigane. See peab olema TPage või laiendama klassi TPage.
 pageservice_includefile_invalid				= Leheteenuse konfiguratsiooni {0} ei leitud. Veendu, et see on nimeruumi vormingus ja faili laiend on ".xml" või ".php".
 
 pageserviceconf_file_invalid				= Lehekataloogi konfiguratsioonifaili '{0}' ei saa avada.
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> kasutab vigast failiteed "{1}" lehekataloogi konfiguratsioonifailis '{2}'.
-pageserviceconf_alias_invalid				= Elemendil <alias> peavad olema atribuudid "id" ja "path" lehekataloogi konfiguratsioonifailis '{0}'.
-pageserviceconf_using_invalid				= Elemendil <using> peab olema atribuut "namespace" lehekataloogi konfiguratsioonifailis '{0}'.
-pageserviceconf_module_invalid				= Elemendil <module> peab olema atribuut "id" lehekataloogi konfiguratsioonifailis '{0}'.
-pageserviceconf_moduletype_required			= Elemendil <module id="{0}"> peab olema atribuut "class" lehekataloogi konfiguratsioonifailis '{1}'.
-pageserviceconf_parameter_invalid			= Elemendil <parameter> peab olema atribuut "id" lehekataloogi konfiguratsioonifailis '{0}'.
 pageserviceconf_page_invalid				= Elemendil <page> peab olema atribuut "id" lehekataloogi konfiguratsioonifailis '{0}'.
 pageserviceconf_includefile_required		= Lehe konfiguratsiooni elemendil <include> peab olema atribuut "file".
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" ei saa lahutada objekt
 callchain_bad_dynamic_event					= TCallChain.{0} tõstatati, kuid oodati {1}.
 
 behaviormodule_behavior_as_array_required	= php <behavior> peab olema massiiv.
-behaviormodule_behaviorname_required		= <behavior> peab käitumise sidumiseks sisaldama atribuuti 'name'.
-behaviormodule_behaviorclass_required		= <behavior> peab sisaldama atribuuti 'class', mis määrab käitumise klassi.
 behaviormodule_attachto_class_required		= <behavior> peab omama atribuuti 'attachto' või 'attachtoclass'.
 behaviormodule_attachto_and_class_only_one	= <behavior> peab omama kas atribuuti 'attachto' või 'attachtoclass', mitte mõlemat.
 behaviormodule_behaviorowner_required		= <behavior> attachto '{0}' objekti ei leitud.
 behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors ei saa määrata vigast tüüpi '{0}'
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader peab omama käitumise nime (Behavior Name).
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader peab omama käitumise klassi (Behavior Class).
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader peab omama atribuuti 'attachto' või 'attachtoclass'.
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader võib omada ainult ühte atribuuti 'attachto' või 'attachtoclass'.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} nõuab enne töötlemist lähtes
 template_closingtag_unexpected				= Leiti ootamatu sulgev märgend '{0}'.
 template_closingtag_expected				= Oodati sulgevat märgendit '{0}', leiti '{1}'.
 template_directive_nonunique				= Direktiiv '<%@ ... %>' peab asuma malli alguses ja võib esineda ülimalt üks kord.
-template_comments_forbidden					= Mallikommentaarid ei ole omaduste märgendite sees lubatud.
 template_matching_unexpected				= Ootamatu vaste.
 template_property_unknown					= {0} ei oma omadust nimega '{1}'.
 template_event_unknown						= {0} ei oma sündmust nimega '{1}'.
@@ -279,7 +255,6 @@ template_property_duplicated				= Omadus {0} on seadistatud kaks või enam korda
 template_eventhandler_invalid				= {0}.{1} võtab vastu ainult staatilise sõne.
 template_controlid_invalid					= {0}.ID võtab vastu ainult staatilise tekstisõne.
 template_controlskinid_invalid				= {0}.SkinID võtab vastu ainult staatilise tekstisõne.
-template_content_unexpected					= Malli instantsimisel leiti ootamatu sisu: {0}.
 template_include_invalid					= Vigane malli kaasamine. Veendu, et {0} on kehtiv nimeruum, mis viitab olemasolevale mallifailile laiendiga .tpl.
 template_tag_unexpected						= Omaduse {0} lähtestus sisaldab tundmatut märgenditüüpi {1}.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' ei ole kehtiv tee alias. Veendu, et see alias on konfiguratsioonis määratletud ja viitab kehtivale kataloogile.
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' ei ole kehtiv kataloog.
-thememanager_basepath_unchangeable			= TThemeManager.BasePath ei saa pärast mooduli lähtestamist muuta.
 thememanager_theme_invalid					= TThemeManager teema nimi '{0}' peab olema üksik kataloogi nimi.
+thememanager_baseurl_required				= TThemeManager.BaseUrl on nõutav, kui BasePath asub väljaspool rakenduse kataloogi.
 
-theme_baseurl_required						= TThemeManager.BasePath on nõutav. Vaikimisi eeldatakse kataloogi nimega 'themes' rakenduse sisendskripti kataloogis.
 theme_path_inexistent						= Teema teed '{0}' ei eksisteeri.
 theme_control_nested						= Juhtelemendi tüübi '{0}' kujundus (skin) teemas '{1}' ei saa asuda teise kujunduse sees.
 theme_skinid_duplicated						= SkinID '{0}.{1}' on teemas '{2}' dubleeritud.
-theme_databind_forbidden					= Andmesidumist ei saa kasutada teemas '{0}' juhtelemendi kujunduses '{1}.{2}' omaduse '{3}' jaoks.
 theme_property_readonly						= Kujundust rakendatakse kirjutuskaitstud juhtelemendi omadusele '{0}.{1}'.
 theme_property_undefined					= Kujundust rakendatakse olematule juhtelemendi omadusele '{0}.{1}'.
 theme_tag_unexpected						= Omaduse {0} lähtestus sisaldab tundmatut märgenditüüpi {1}.
@@ -364,9 +337,7 @@ page_head_required							= CSS-i ja JS-i renderdamiseks HTML-i head-sektsioonis 
 page_statepersister_invalid					= Lehe oleku säilitaja peab realiseerima liidese IPageStatePersister.
 
 csmanager_pradoscript_invalid				= Tundmatu Prado skriptiteegi nimi '{0}'.
-csmanager_pradoscript_notloaded				= Prado skriptiteeki nimega '{0}' ei ole veel laaditud.
 csmanager_pradostyle_invalid				= Tundmatu Prado stiiliteegi nimi '{0}'.
-csmanager_invalid_packages					= Tundmatud paketid '{1}' failis '{0}' määratletud javascript-pakettide jaoks. Kehtivad paketid on '{2}'.
 
 httpclient_transport_error					= HTTP-kliendi transpordiviga (kood {0}): {1}
 httpclient_http_error						= HTTP veavastus olekuga {0}.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' on vigane. See peab olema 
 webcontrol_dir_invalid						= {0}.Dir '{1}' on vigane. Lubatud väärtused on 'ltr', 'rtl' ja 'auto'.
 webcontrol_style_invalid					= {0}.Style võtab vastu ainult sõne väärtuse.
 
-listcontrol_selection_invalid				= {0} omab vigast valikut, mis on määratud enne andmesidumist.
-listcontrol_selectedindex_invalid			= {0}.SelectedIndex omab vigast väärtust {1}.
-listcontrol_selectedvalue_invalid			= {0}.SelectedValue omab vigast väärtust '{1}'.
 listcontrol_expression_invalid				= {0} väärtustab vigast avaldist '{1}' : {2}
 listcontrol_multiselect_unsupported			= {0} ei toeta mitmikvalikut.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices o
 
 logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' ei eksisteeri.
 logrouter_routeclass_required				= <route> konfiguratsioonis on atribuut class nõutav.
-logrouter_routetype_required				= Logimarsruut peab olema TLogRoute või selle alamklassi eksemplar.
+logrouter_routetype_invalid					= Logimarsruut peab olema TLogRoute või selle alamklassi eksemplar.
 
 dblogroute_connectionid_invalid				= TDbLogRoute ei suuda luua andmebaasiühendust ID-ga '{0}'.
 dblogroute_insert_failed					= TDbLogRoute ei suuda logi tabelisse '{0}' lisada.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= Tundmatu kordaja elemendi tüüp {0}.
 repeateritemcollection_item_invalid			= TRepeaterItemCollection võtab vastu ainult objekte, mis on TControl või selle alamklassi eksemplarid.
 
 datalist_template_required					= TDataList.{0} nõuab malli eksemplari, mis realiseerib liidese ITemplate.
+datalist_datakeyfield_required				= TDataList.DataKeyField on nõutav SelectedDataKey lugemiseks.
+datalist_itemtype_unknown					= TDataList elemendi tüüp '{0}' on tundmatu.
 datalistitemcollection_datalistitem_required	= TDataListItemCollection võtab vastu ainult TDataListItem objekte.
 
 datagrid_template_required					= TDataGrid.{0} nõuab malli eksemplari, mis realiseerib liidese ITemplate.
 templatecolumn_template_required			= TTemplateColumn.{0} nõuab malli eksemplari, mis realiseerib liidese ITemplate.
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex ei tohi olla väiksem kui 0.
-datagrid_pagesize_invalid					= TDataGrid.PageSize peab olema suurem kui 0.
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount ei tohi olla väiksem kui 0.
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection võtab vastu ainult TDataGridItem objekte.
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection võtab vastu ainult TDataGridColumn objekte.
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount peab olema suurem kui 0.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection võtab vastu
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection võtab vastu ainult TTableColumnGroup objekte.
 tablecolumn_span_invalid					= TTableColumn Span peab olema 1 või suurem; anti {0}.
 
-tablecellcollection_tablerow_required		= TTableCellCollection võtab vastu ainult TTableCell objekte.
-
 multiview_view_required						= TMultiView võtab alamelemendina vastu ainult TView.
 multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex omab vigast indeksit '{0}'.
 multiview_view_inexistent					= TMultiView ei leia määratud vaadet.
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible on kirjutuskaitstud. Nähtavuse lüli
 
 wizard_step_invalid							= Aktiveeritavat sammu ei leitud viisardi sammude kogumist.
 wizard_command_invalid						= Vigane viisardi navigeerimiskäsk '{0}'.
+wizard_buttontype_unknown					= TWizard navigeerimisnupu tüüp '{0}' on tundmatu.
 
 table_tablesection_outoforder				= TTable tabeli sektsioonid peavad olema järjekorras: Header, Body ja Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType on kirjutus
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection võtab vastu ainult TWizardStep või selle alamklasside objekte.
 
-texthighlighter_stylesheet_invalid			= TTextHighlighter laadilehe faili ei leitud.
-
 hotspotcollection_hotspot_required			= THotSpotCollection võtab vastu ainult THotSpot või selle alamklasside eksemplare.
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode on kirjutuskaitstud.
 htmlarea_tarfile_invalid					= THtmlArea ei leia TinyMCE tar-faili.
 
-parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile ei saa muuta, kuna moodul on juba lähtestatud.
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' on vigane. Veendu, et see on nimeruumi vormingus ja faili laiend on '.xml' või '.php'.
 parametermodule_parameterid_required		= Parameter elemendil peab olema atribuut 'id'.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} peab olema keh
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize peab olema täisarv, mis ei ole väiksem kui 1.
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount peab olema täisarv, mis ei ole väiksem kui 0.
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex on väljaspool vahemikku.
 databoundcontrol_datasource_invalid			= {0}.DataSource ei ole kehtiv.
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' ei viita olemasolevale juhtelemendile.
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' peab viitama juhtelemendile, mis realiseerib liidese IDataSource.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} ei toeta kustutamist.
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource nõuab andmeallikaks massiivi, IDataSource või Traversable objekti.
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView nõuab andmeallikaks null, massiivi või Traversable objekti.
 
-clientscript_invalid_file_position			= Vigane faili asukoht '{1}' TClientScript juhtelemendil '{0}', peab olema 'Head', 'Here' või 'Begin'.
-clientscript_invalid_package_path			= Vigane PackagePath '{0}' TClientScript juhtelemendil '{1}'.
-
 tdatepicker_autopostback_unsupported		= '{0}' ei toeta AutoPostBack omadust.
 globalization_cache_path_failed				= Tõlkesõnumite vahemälu teed '{0}' ei õnnestu luua. Veendu, et ülemkataloog eksisteerib ja on veebiprotsessile kirjutatav.
 globalization_source_path_failed			= Tõlkesõnumite teed '{0}' ei õnnestu luua. Veendu, et ülemkataloog eksisteerib ja on veebiprotsessile kirjutatav.
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' ei viita kehtivale TDataSourceConfig moodulile.
 messagesource_connectionid_required			= MessageSource_Database.source väärtuses on ConnectionID nõutav.
 
-callback_not_support_no_priority_state_update	= Tagasikutse päring ei toeta prioriteedita leheoleku uuendamist.
 callback_invalid_callback_options			= '{1}' ei ole kehtiv TCallbackOptions juhtelement tagasikutse juhtelemendi '{0}' jaoks.
-callback_invalid_clientside_options			= Tagasikutse ClientSide omadus peab olema kas sõne, mis on TCallbackOptions juhtelemendi ID, või TCallbackClientSideOptions eksemplar.
 callback_invalid_handler					= Vigane tagasikutse käsitleja, juhtelement {0} peab realiseerima liidese ICallbackEventHandler.
 callback_invalid_target						= Vigane tagasikutse sihtmärk, juhtelementi ID-ga {0} ei eksisteeri.
 
 callback_interval_be_positive				= TCallbackTimer "{0}" intervall peab olema rangelt suurem kui null sekundit.
 callback_decay_be_not_negative				= TCallbackTimer "{0}" vähenemiskiirus ei tohi olla negatiivne.
-
-callback_no_autopostback					= Juhtelement "{0}" ei saa AutoPostBack omadust sisse lülitada.
 
 xmltransform_xslextension_required			= TXmlTransform nõuab PHP laiendust XSL.
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' on vigane.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= Andmebaasidraiver '{0}' ei saa märgistikk
 dbcommand_prepare_failed					= TDbCommand ei suutnud SQL-lauset "{1}" ette valmistada: {0}
 dbcommand_execute_failed					= TDbCommand ei suutnud SQL-lauset "{1}" täita: {0}
 dbcommand_query_failed						= TDbCommand ei suutnud SQL-päringut "{1}" täita: {0}
-dbcommand_column_empty						= TDbCommand tagastas tühja tulemuse ja ei saanud skalaari hankida.
 dbdatareader_rewind_invalid					= TDbDataReader on ainult edasisuunaline voog. Seda saab läbida ainult üks kord.
 dbtransaction_transaction_inactive			= TDbTransaction ei ole aktiivne.
-
-dbcommandbuilder_value_must_not_be_null		= Omadus {0} ei tohi olla null, nagu määrab veerg '{2}' tabelis '{1}'.
 
 dbcommon_invalid_table_name					= Andmebaasi tabelit '{0}' ei leitud. Veateade: {1}.
 dbcommon_invalid_identifier_name			= Vigane andmebaasi identifikaatori nimi '{0}', üksikasju vaata {1}.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= TLiveProcessFork andmed on vastuvõtval po
 stream_open_failed							= Voogu '{0}' ei õnnestu režiimis '{1}' avada: {2}
 binarystream_unexpected_eof					= Ootamatu voo lõpp: vaja oli {0} baiti, kuid loeti ainult {1}.
 binarystream_short_write					= Poolik kirjutamine: kirjutada tuli {0} baiti, kuid vastu võeti ainult {1}.
+binarystream_no_stream_owner				= TBinaryStreamBehavior nõuab omanikku, mis realiseerib liidese Psr\Http\Message\StreamInterface.
 streamresourcewrapper_unusable_stream		= Voog ei ole loetav ega kirjutatav ning seda ei saa ressursina avaldada.
 streamfilter_already_registered				= Voofilter '{0}' on juba registreeritud.
 streamfilter_registration_failed			= Voofiltrit '{0}' ei õnnestu klassi '{1}' jaoks registreerida.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' ei ole kehti
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' ei viita kehtivale TDataSourceConfig moodulile.
 dbusermanager_connectionid_required			= TDbUserManager.ConnectionID on nõutav.
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' ei viita kehtivale TDataSourceConfig moodulile.
-dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID on nõutav.
-
 feedservice_id_required						= TFeedService nõuab oma uudisvoo elementides atribuuti 'id'.
 feedservice_feedtype_invalid				= Uudisvoo klass '{0}' peab realiseerima liidese IFeedContentProvider.
 feedservice_class_required					= TFeedService nõuab oma uudisvoo elementides atribuuti 'class'.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength peab olema täisarv 
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength peab olema täisarv vahemikus {0} kuni {1}.
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet peab olema vähemalt 2 märgist koosnev sõne.
 captcha_privatekey_unknown					= TCaptcha.PrivateKey on tundmatu. Veendu, et varade (assets) kataloog on veebiserveri protsessile kirjutatav.
-captcha_gd2_required						= TCaptcha nõuab PHP laiendust GD2.
 captcha_imagettftext_required				= TCaptcha nõuab PHP laiendust GD2 koos TrueType fontide toega.
-captcha_imagepng_required					= TCaptcha nõuab PHP laiendust GD2 koos PNG pildivormingu toega.
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl peab viitama olemasolevale TCaptcha juhtelemendile.
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} peab viitama olemasolevale TCaptcha juhtelemendile.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey on tundmatu. reCAPTCHA kasutamiseks pead hankima API võtme.
 recaptcha_publickey_unknown					= TReCaptcha.PublicKey on tundmatu. reCAPTCHA kasutamiseks pead hankima API võtme.
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate peab olema TReCaptcha eksemplar.
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' võib sisaldada ainult tähti, numbreid ning märke '_' ja '-'.
 proofofwork_complexity_invalid				= TProofOfWork.Complexity peab olema täisarv vahemikus {0} kuni {1}.
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' peab viitama TProofOfWork juhtelemendile.
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' ei ole kehtiv kasutajaklass. Klass peab laiendama klassi TSliderHandle.
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' ei viita kehtivale vahemälumoodulile.
 cachepagestatepersister_cache_required		= TCachePageStatePersister nõuab laaditud vahemälumoodulit.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask ei leidnud moodulit '{0}'.
 cron_usermanager_nonexistent				= TCronModule ei leidnud UserManager moodulit nimega '{0}'.
 cron_usermanager_invalid					= TCronModule UserManager '{0}' ei ole TUserManager.
 cron_task_as_array_required					= TCronModule konfiguratsiooni ülesanne ei olnud massiiv.
-cron_duplicate_task_name					= TCronModule ülesannetel peavad olema unikaalsed nimed.
+cron_duplicate_task_name					= TCronModule ülesannetel peavad olema unikaalsed nimed; '{0}' on defineeritud rohkem kui üks kord.
 cron_schedule_required						= Cron-ülesandel peab olema ajakava.
 cron_task_required							= Cron-ülesandel peab olema ülesanne.
 cron_not_a_crontask							= Cron-ülesanne '{0}' ei ole TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper peab omama vähemalt ühte sisendbit
 bithelper_invalid_color_out					= TBitHelper peab omama vähemalt ühte väljundbitti (Out Bit). Anti '{0}'.
 bithelper_bad_mirror_bits					= TBitHelper ei saa peegeldada '{0}' bitti {1}-bitises PHP keskkonnas.
 
-ar_data_invalid								= {0}.copyFrom() võtab parameetrina vastu ainult objekti või massiivi.
-ar_save_invalid								= {0} eksemplari ei saa salvestada, kuna see on kas kustutatud või tundmatus olekus.
-ar_delete_invalid							= {0} eksemplari ei saa kustutada, kuna see on kas uus kirje või juba kustutatud kirje.
-
 dbmetadata_invalid_database_driver			= Draiver '{0}' ei ole toetatud. Installi selle PRADO draiver, kui see on saadaval.
 dbmetadata_not_meta_data					= Oodati draiveriklassi {1}, kuid saadi klass {0}.
 dbmetadata_tableinfo_class_invalid			= TDbMetaData tabeliinfo klass '{0}' on kataloogi nimeruum, mitte klass.
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' on vigane. Veendu, et see viitab kehtivale rakenduse moodulile.
-distributeddatasource_child_required		= {0} nõuab vähemalt ühte alamelementi '{1}'.
-masterslavedbconnection_connection_exists	= {0}.{1} ühendus on juba olemas.
-masterslavedbconnection_interface_required	= {0}.{1} nõuab eksemplari, mis realiseerib liidese {2}.
-slavedbconnection_requires_master			= {0} nõuab {1} objekti.
+datasource_dbconnection_exists				= TDataSourceConfig.ConnectionClass ei saa pärast andmebaasiühenduse loomist määrata väärtuseks '{0}'.
 
 response_status_reason_missing				= HTTP 1.1 nõuab laiendatud olekukoodide jaoks põhjendust
-response_status_reason_badchars				= HTTP 1.1 päises ei tohi olekupõhjenduse märgend sisaldada märke CR ega LF
 
 activefileupload_temppath_invalid			= TActiveFileUpload TempPath tee '{0}' ei eksisteeri või ei ole veebiserveri protsessile kirjutatav.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' ei kuulu ülema TTable juht
 juioptions_option_invalid					= '{1}' ei ole juhtelemendi '{0}' kehtiv valik.
 
 ratinglist_invalid_caption_id				= '{0}' ei ole TRatingList '{0}' kehtiv pealkirja juhtelement.
+ratinglist_table_layout_only				= TRatingList.RepeatLayout peab olema Table.
 
 accordion_activeviewid_invalid				= TAccordion.ActiveViewID omab vigast ID-d '{0}'.
 accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex omab vigast indeksit '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= TDot Size peab olema positiivne täisarv, kuid on '{0}'
 dot_bad_border_width						= TDot FlatBorderWidth peab olema arv koos valikulise % või CSS pikkusühikuga, kuid on '{0}'
 
 juidatepicker_settextmode_unsupported		= TJuiDatePicker TextMode omadust ei saa muuta.
-
-control_adapter_not_active					= BaseActiveControl omadust kutsuti mitteaktiivsel juhtelemendil.
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' peab olema TFigure juhtelemendi otsene alam.
 summary_requires_details_parent				= TSummary '{0}' peab olema TDetails juhtelemendi otsene alam.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' ei saa sisaldada elementi '{1
 vardumper_not_array							= __debuginfo() peab tagastama massiivi.
 
 htmlpurifier_source_path_failed				= HTML-i puhastaja vahemälu teed '{0}' ei õnnestu luua. Veendu, et ülemkataloog eksisteerib ja on veebiprotsessile kirjutatav.
+
+active_controls_client_side_exists			= Juhtelemendil '{0}' on juba ClientSide valikud; ClientSide omadust ei saa asendada.
+componentreflection_class_invalid			= TComponentReflection nõuab klassinime või objekti.
+datasize_no_negative_size					= TDataSize.Size peab olema 0 või suurem; anti {0}.
+date_to_parse_must_be_string				= TSimpleDateFormatter saab parsida ainult sõne väärtust.
+dbuser_dbconnection_invalid					= TDbUser nõuab andmebaasiühendust. Määra DbConnection või loo kasutaja TDbUserManager mooduli kaudu.
+deflatestream_init_failed					= TDeflateStream ei suutnud lähtestada deflate-konteksti kodeeringu '{0}' jaoks.
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' ei viita vormis olevale juhtelemendile.
+inflatestream_init_failed					= TInflateStream ei suutnud lähtestada inflate-konteksti kodeeringu '{0}' jaoks.
+logroute_bad_level							= TLogRoute.Levels '{0}' sisaldab määratlemata logitaset.
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback peab olema väljakutsutav (callable).
+memcached_extension_required				= TMemCache nõuab PHP laiendust memcached.
+metatagcollection_metatag_invalid			= TMetaTagCollection võtab vastu ainult TMetaTag objekte.
+numberformat_type_invalid					= TNumberFormat.Type '{0}' ei ole kehtiv.
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource peab olema massiiv või objekt, mis realiseerib liidese Traversable.
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize peab olema suurem kui 0.
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount peab olema 0 või suurem.
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex on väljaspool vahemikku.
+pagedlist_pagesize_invalid					= TPagedList.PageSize peab olema suurem kui 0.
+phpstream_no_stream_owner					= TPhpStreamBehavior nõuab omanikku, mis realiseerib liidese Psr\Http\Message\StreamInterface.
+pipe_popen_failed							= TPipeStream ei suutnud avada toru käsule '{0}' režiimis '{1}'.
+process_descriptor_unusable					= TProcess deskriptor {0} viitab ressursile, mis ei ole avatud.
+process_invalid_pipe_offset					= TProcess toru nihe '{0}' ei ole toru number.
+process_open_failed							= TProcess ei suutnud käsku '{0}' käivitada.
+rediscache_extension_required				= TRedisCache nõuab PHP laiendust redis.
+tablecellcollection_tablecell_required		= TTableCellCollection võtab vastu ainult TTableCell objekte.
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection on kirjutuskaitstud.
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection on kirjutuskaitstud.

@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= ניתן להגדיר את Prado.Application פעם אחת בלבד.
-prado_component_unknown						= סוג רכיב לא ידוע '{0}'. ייתכן שהסיבה היא שגיאת הניתוח הבאה בקובץ המחלקה {0}: {1}
-prado_using_invalid							= '{0}' אינו מרחב שמות תקין לשימוש. יש לוודא ש-'.*' מצורף בסוף כאשר מרחב השמות מצביע על ספרייה.
 prado_alias_redefined						= לא ניתן להגדיר מחדש את הכינוי '{0}'.
 prado_alias_invalid							= הכינוי '{0}' מצביע על נתיב לא תקין '{1}'. ניתן להגדיר כינוי רק לספריות קיימות.
 prado_aliasname_invalid						= הכינוי '{0}' מכיל את התו הלא חוקי '.'.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= לרכיב '{0}' כבר יש התנהגות
 component_not_a_behavior					= הרכיב '{0}' שנוסף כהתנהגות אינו TBaseBehavior.
 object_not_a_component						= האובייקט '{0}' שנוסף כהתנהגות אינו TComponent.
 component_no_tcomponent_class_behaviors		= לא ניתן לצרף התנהגויות מחלקה אל TComponent בגלל רקורסיה.
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors אינם יכולים להתחבר למספר בעלים. יש להעביר מחרוזת או מערך של מחלקת IBehavior ומאפיינים ליצירת מופע על כל בעלים.
 
 propertyvalue_enumvalue_invalid				= הערך '{0}' אינו ערך מנייה (enumeration) תקין ({1}).
 propertyvalue_invalid_hex_color				= הערך '{0}' אינו ערך צבע הקסדצימלי תקין. לדוגמה: "#112233"
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= ליטרל המערך מקונן לעומק ש
 eventhandler_lost_weak_ref					= TEventHandler אינו יכול להפעיל את מטפל האירועים מכיוון שה-WeakReference לאובייקט ה-callable אבד.
 eventhandler_no_set_handler					= TEventHandler אינו יכול להגדיר את מטפל האירועים, אינדקס "{0}".
 eventhandler_bad_offset						= ל-TEventHandler אין היסט "{0}".
+eventhandler_not_callable					= TEventHandler דורש מטפל אירועים מסוג callable.
 
 eventparam_readonly							= {0} הוא לקריאה בלבד.
 eventparam_readonly_set						= {0} אינו יכול לשנות את ReadOnly לאחר שהוגדר.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= ניתן להגדיר את עדיפות
 prioritytrait_no_set_precision				= ניתן להגדיר את Precision פעם אחת בלבד או על ידי האובייקט עצמו.
 weak_no_set_discard_invalid					= ניתן להגדיר את '{0}'.DiscardInvalid פעם אחת בלבד או על ידי האובייקט עצמו.
 
-map_addition_disallowed						= לא ניתן להוסיף את הפריט החדש למפה.
-map_item_unremovable						= לא ניתן להסיר את הפריט מהמפה.
 map_data_not_iterable						= הנתונים חייבים להיות מערך או אובייקט המממש את הממשק Traversable.
 map_readonly								= {0} הוא לקריאה בלבד.
 map_readonly_set							= {0} אינו יכול לשנות את Read-Only לאחר שכבר הוגדר.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection מקבל ער
 arraysubscription_no_change					= לא ניתן לשנות את TArraySubscription.{0} לאחר הרישום (subscribe).
 arraysubscription_no_null_key				= TArraySubscription אינו יכול להירשם למפתח null באובייקט ArrayAccess.
 arraysubscription_index_invalid				= TArraySubscription נמצא במצב רשימה (isAssociative = false) אך המפתח '{0}' אינו תקין (count: {1}).
-eventsubscription_no_setcollection			= לא ניתן להגדיר את TEventSubscription.Array באופן ישיר.
 eventsubscription_no_change					= לא ניתן לשנות את TEventSubscription.{0} לאחר הרישום.
+eventsubscription_no_setarray				= לא ניתן להגדיר את TEventSubscription.Array באופן ישיר.
 
 application_includefile_invalid				= לא ניתן למצוא את תצורת היישום {0}. יש לוודא שהיא בפורמט מרחב שמות ושהקובץ מסתיים ב-".xml" או ב-".php".
 application_basepath_invalid				= נתיב הבסיס של היישום '{0}' אינו קיים או אינו ספרייה.
 application_runtimepath_invalid				= נתיב זמן הריצה של היישום '{0}' אינו קיים או אינו ניתן לכתיבה על ידי תהליך שרת ה-Web.
 application_service_class_not_found			= מחלקת השירות '{0}' אינה קיימת.
 application_service_class_not_service		= מחלקת השירות '{0}' אינה מממשת את IService.
-application_service_class_required			= registerService דורש שם מחלקה או מערך serviceConfig עבור השירות '{0}'.
+application_service_class_required			= TApplication::registerService() דורש שם מחלקה או מערך תצורת שירות עבור השירות '{0}'.
 application_service_default_unregister		= לא ניתן לבטל את רישום שירות העמודים המוגדר כברירת מחדל '{0}'.
 service_csrf_token_invalid					= השירות '{0}' דורש אסימון CSRF תקין.
 application_moduleid_duplicated				= מזהה המודול '{0}' של היישום אינו ייחודי.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= תצורת היישום <alias id="{0}"> מש�
 appconfig_alias_invalid						= האלמנט <alias> בתצורת היישום חייב לכלול תכונה "id" ותכונה "path".
 appconfig_alias_redefined					= לא ניתן להגדיר מחדש את <alias id="{0}"> בתצורת היישום.
 appconfig_using_invalid						= האלמנט <using> בתצורת היישום חייב לכלול תכונה "namespace".
-appconfig_moduleid_required					= האלמנט <module> בתצורת היישום חייב לכלול תכונה "id".
 appconfig_moduletype_required				= <module id="{0}"> בתצורת היישום חייב לכלול תכונה "class".
 appconfig_moduletype_inapplicable			= <module id="{0}"> בתצורת היישום אינו יכול לכלול את התכונה "class".
 appconfig_serviceid_required				= האלמנט <service> בתצורת היישום חייב לכלול תכונה "id".
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= <paths> בתצורת היישום אינו יכו
 appconfig_modules_invalid					= <modules> בתצורת היישום אינו יכול להכיל את האלמנט <{0}>.
 appconfig_services_invalid					= <services> בתצורת היישום אינו יכול להכיל את האלמנט <{0}>.
 appconfig_parameters_invalid				= <parameters> בתצורת היישום אינו יכול להכיל את האלמנט <{0}>.
-appconfig_tag_invalid						= תצורת היישום אינה יכולה להכיל את האלמנט <{0}>.
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey אינו יכול להיות ריק.
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey אינו יכול להיות ריק.
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey אינו יכול להיות ריק.
-securitymanager_mcryptextension_required	= הרחבת ה-PHP Mcrypt נדרשת לשימוש ביכולת ההצפנה של TSecurityManager.
-securitymanager_mcryptextension_initfailed	= TSecurityManager נכשל באתחול מודול ה-mcrypt.
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm חייב להיות צופן (cipher) הנתמך על ידי הרחבת ה-PHP openssl.
+securitymanager_hash_algorithm_invalid		= אלגוריתם הגיבוב (hash) של TSecurityManager חייב להיות אלגוריתם הנתמך על ידי הרחבת ה-PHP hash.
+securitymanager_openssl_required			= ההצפנה של TSecurityManager דורשת את הרחבת ה-PHP openssl.
 
 uri_format_invalid							= '{0}' אינו URI תקין.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie הוא false
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection מקבל אובייקטי THttpCookie בלבד.
 
-httpresponse_file_inexistent				= THttpResponse אינו יכול לשלוח את הקובץ '{0}'. הקובץ אינו קיים.
 httpresponse_responsedata_method_unavailable	= THttpResponse: לא ניתן להשתמש במתודה '{0}' ללא מתאם (adapter) מתאים המממש אותה.
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' אינו מצביע על מודול קיים.
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' חייב להצביע על מודול היורש מ-THttpHeadersManager.
 
 httpheadersmanager_header_required			= THttpHeadersManager יכול להכיל רק THttpHeader או מחלקות היורשות ממנו.
 httpheadersmanager_headerclass_missing		= ברשומת <headerclass> של THttpHeadersManager חסרה תכונה נדרשת 'name' או 'class'.
+httpheadersmanager_header_wrong_manager		= הכותרת שייכת ל-THttpHeadersManager אחר ולא ניתן להוסיף אותה למנהל זה.
 
 httpsession_sessionid_unchangeable			= לא ניתן לשנות את THttpSession.SessionID לאחר שהסשן התחיל.
 httpsession_sessionname_unchangeable		= לא ניתן לשנות את THttpSession.SessionName לאחר שהסשן התחיל.
 httpsession_sessionname_invalid				= THttpSession.SessionName חייב להכיל תווים אלפאנומריים בלבד.
 httpsession_savepath_unchangeable			= לא ניתן לשנות את THttpSession.SavePath לאחר שהסשן התחיל.
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' אינו תקין.
-httpsession_storage_unchangeable			= לא ניתן לשנות את THttpSession.Storage לאחר שהסשן התחיל.
 httpsession_cookiemode_unchangeable			= לא ניתן לשנות את THttpSession.CookieMode לאחר שהסשן התחיל.
-httpsession_autostart_unchangeable			= לא ניתן לשנות את THttpSession.AutoStart לאחר שמודול הסשן אותחל.
 httpsession_gcprobability_unchangeable		= לא ניתן לשנות את THttpSession.GCProbability לאחר שהסשן התחיל.
 httpsession_gcprobability_invalid			= THttpSession.GCProbability חייב להיות מספר שלם בין 0 ל-100.
 httpsession_transid_unchangeable			= לא ניתן לשנות את THttpSession.UseTransparentSessionID לאחר שהסשן התחיל.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= לא ניתן לשנות את THttpSessi
 httpsession_handler_invalid					= THttpSessionHandler מקבל כפרמטר בנאי אובייקט THttpSession בלבד
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' אינו תקין. יש לוודא שהוא בפורמט מרחב שמות ומצביע על ספרייה הניתנת לכתיבה על ידי תהליך שרת ה-Web.
-assetmanager_basepath_unchangeable			= לא ניתן לשנות את TAssetManager.BasePath לאחר שהמודול אותחל.
-assetmanager_baseurl_unchangeable			= לא ניתן לשנות את TAssetManager.BaseUrl לאחר שהמודול אותחל.
 assetmanager_filepath_invalid				= TAssetManager מפרסם קובץ לא תקין '{0}'.
 assetmanager_tarchecksum_invalid			= TAssetManager מפרסם קובץ tar עם סכום ביקורת לא תקין '{0}'.
 assetmanager_tarfile_invalid				= TAssetManager מפרסם קובץ tar לא תקין '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager נכשל בחילוץ קו
 assetmanager_source_directory_invalid		= TAssetManager מעתיק ספרייה לא תקינה '{0}'.
 
 cache_primary_duplicated					= מותר לכל היותר מודול מטמון ראשי אחד. {0} מנסה להירשם כמטמון ראשי נוסף.
+cache_flush_unsupported						= מודול מטמון זה אינו תומך ב-flush().
 psrcache_backing_cache_required				= נדרש TPsrCache.BackingCacheId או TPsrCache.BackingCache.
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' אינו מצביע על מודול של היישום.
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' חייב להצביע על מודול המממש את Psr\SimpleCache\CacheInterface או את Psr\Cache\CacheItemPoolInterface.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} דורש מטמון תומך (backing ca
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' אינו מצביע על מודול של היישום.
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' חייב להצביע על מודול Prado\Caching\ICache.
 psrcachebacking_key_invalid					= מפתח המטמון של {0} חייב להיות מחרוזת לא ריקה ללא התווים השמורים {}()/\@: אך התקבל '{1}'.
-sqlitecache_extension_required				= TSqliteCache דורש את הרחבת ה-PHP SQLite.
-sqlitecache_dbfile_required					= TSqliteCache.DbFile נדרש.
-sqlitecache_connection_failed				= החיבור למסד הנתונים של TSqliteCache נכשל. {0}.
-sqlitecache_table_creation_failed			= TSqliteCache נכשל ביצירת מסד הנתונים של המטמון. {0}.
-sqlitecache_dbfile_unchangeable				= לא ניתן לשנות את TSqliteCache.DbFile לאחר שהמודול אותחל.
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile אינו תקין. יש לוודא שהוא בפורמט מרחב שמות תקין.
 
 dbcache_unavailable							= TDbCache דורש את הרחבת ה-PHP PDO.
 
 etcdcache_transport_required				= TEtcdCache דורש את הרחבת ה-PHP cURL או את allow_url_fopen.
 
-memcache_extension_required					= TMemCache דורש את הרחבת ה-PHP memcache.
 memcache_connection_failed					= TMemCache נכשל בהתחברות לשרת memcache {0}:{1}.
 memcache_not_initialized					= לא ניתן להגדיר אפשרויות ב-TMemCache לפני שהמודול אותחל.
+memcache_serverhost_required				= תצורת השרת של TMemCache דורשת Host.
+memcache_serverport_required				= תצורת השרת של TMemCache דורשת Port.
+memcache_serverport_invalid					= ה-Port של שרת TMemCache חייב להיות מספרי.
+memcache_serverweight_invalid				= ה-Weight של שרת TMemCache חייב להיות מספרי.
 
 apccache_extension_required					= TAPCCache דורש את הרחבת ה-PHP APC.
 apccache_extension_not_enabled				= TAPCCache דורש apc.enabled = 1 ב-php.ini כדי לפעול.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= ניתן להוסיף אל TCache
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' אינו תקין. יש לוודא שהוא בפורמט מרחב שמות ומצביע על ספרייה תקינה המכילה קובצי תבניות שגיאה.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' אינו ספרייה תקינה.
-pageservice_defaultpage_unchangeable		= לא ניתן לשנות את TPageService.DefaultPage לאחר שהשירות אותחל.
-pageservice_basepath_unchangeable			= לא ניתן לשנות את TPageService.BasePath לאחר שהשירות אותחל.
-pageservice_pageclass_invalid				= מחלקת העמוד {0} אינה תקינה. היא חייבת להיות TPage או לרשת מ-TPage.
 pageservice_includefile_invalid				= לא ניתן למצוא את תצורת שירות העמודים {0}. יש לוודא שהיא בפורמט מרחב שמות ושהקובץ מסתיים ב-".xml" או ב-".php".
 
 pageserviceconf_file_invalid				= לא ניתן לפתוח את קובץ תצורת ספריית העמודים '{0}'.
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> משתמש בנתיב קובץ לא תקין "{1}" בקובץ תצורת ספריית העמודים '{2}'.
-pageserviceconf_alias_invalid				= האלמנט <alias> חייב לכלול תכונה "id" ותכונה "path" בקובץ תצורת ספריית העמודים '{0}'.
-pageserviceconf_using_invalid				= האלמנט <using> חייב לכלול תכונה "namespace" בקובץ תצורת ספריית העמודים '{0}'.
-pageserviceconf_module_invalid				= האלמנט <module> חייב לכלול תכונה "id" בקובץ תצורת ספריית העמודים '{0}'.
-pageserviceconf_moduletype_required			= <module id="{0}"> חייב לכלול תכונה "class" בקובץ תצורת ספריית העמודים '{1}'.
-pageserviceconf_parameter_invalid			= האלמנט <parameter> חייב לכלול תכונה "id" בקובץ תצורת ספריית העמודים '{0}'.
 pageserviceconf_page_invalid				= האלמנט <page> חייב לכלול תכונה "id" בקובץ תצורת ספריית העמודים '{0}'.
 pageserviceconf_includefile_required		= האלמנט <include> בתצורת העמוד חייב לכלול תכונה "file".
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" אינו יכול לה
 callchain_bad_dynamic_event					= TCallChain.{0} הופעל אך {1} היה צפוי.
 
 behaviormodule_behavior_as_array_required	= <behavior> של php חייב להיות מערך.
-behaviormodule_behaviorname_required		= <behavior> חייב להכיל תכונה 'name' לצירוף ההתנהגות.
-behaviormodule_behaviorclass_required		= <behavior> חייב להכיל תכונה 'class' המגדירה את מחלקת ההתנהגות.
 behaviormodule_attachto_class_required		= <behavior> חייב לכלול תכונה 'attachto' או 'attachtoclass'.
 behaviormodule_attachto_and_class_only_one	= <behavior> חייב לכלול תכונה 'attachto' או 'attachtoclass', לא את שתיהן.
 behaviormodule_behaviorowner_required		= אובייקט ה-attachto '{0}' של <behavior> לא נמצא.
 behaviormodule_additional_behaviors_invalid	= לא ניתן להגדיר את TBehaviorModule.AdditionalBehaviors לסוג לא תקין '{0}'
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader חייב לכלול שם התנהגות (Behavior Name).
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader חייב לכלול מחלקת התנהגות (Behavior Class).
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader חייב לכלול תכונה 'attachto' או 'attachtoclass'.
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader חייב לכלול רק אחת מהתכונות 'attachto' או 'attachtoclass'.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} דורש אתחול לפני ה�
 template_closingtag_unexpected				= נמצא תג סוגר לא צפוי '{0}'.
 template_closingtag_expected				= צפוי תג סוגר '{0}', נמצא '{1}'.
 template_directive_nonunique				= ההנחיה '<%@ ... %>' חייבת להופיע בתחילת התבנית ויכולה להופיע פעם אחת לכל היותר.
-template_comments_forbidden					= הערות תבנית אינן מותרות בתוך תגי מאפיינים.
 template_matching_unexpected				= התאמה לא צפויה.
 template_property_unknown					= ל-{0} אין מאפיין בשם '{1}'.
 template_event_unknown						= ל-{0} אין אירוע בשם '{1}'.
@@ -279,7 +255,6 @@ template_property_duplicated				= המאפיין {0} מוגדר פעמיים א�
 template_eventhandler_invalid				= {0}.{1} מקבל מחרוזת סטטית בלבד.
 template_controlid_invalid					= {0}.ID מקבל מחרוזת טקסט סטטית בלבד.
 template_controlskinid_invalid				= {0}.SkinID מקבל מחרוזת טקסט סטטית בלבד.
-template_content_unexpected					= נמצא תוכן לא צפוי בעת יצירת מופע של התבנית: {0}.
 template_include_invalid					= הכללת תבנית לא תקינה. יש לוודא ש-{0} הוא מרחב שמות תקין המצביע על קובץ תבנית קיים עם הסיומת .tpl.
 template_tag_unexpected						= האתחול של המאפיין {0} מכיל סוג תג לא ידוע {1}.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' אינו כינוי נתיב תקין. יש לוודא שהכינוי מוגדר בתצורה ומצביע על ספרייה תקינה.
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' אינו ספרייה תקינה.
-thememanager_basepath_unchangeable			= לא ניתן לשנות את TThemeManager.BasePath לאחר שהמודול אותחל.
 thememanager_theme_invalid					= שם ערכת הנושא '{0}' של TThemeManager חייב להיות שם ספרייה יחיד.
+thememanager_baseurl_required				= TThemeManager.BaseUrl נדרש כאשר BasePath נמצא מחוץ לספריית היישום.
 
-theme_baseurl_required						= TThemeManager.BasePath נדרש. כברירת מחדל, מניחים ספרייה בשם 'themes' תחת הספרייה המכילה את סקריפט הכניסה של היישום.
 theme_path_inexistent						= נתיב ערכת הנושא '{0}' אינו קיים.
 theme_control_nested						= סקין עבור סוג הפקד '{0}' בערכת הנושא '{1}' אינו יכול להיות בתוך סקין אחר.
 theme_skinid_duplicated						= SkinID '{0}.{1}' מופיע פעמיים בערכת הנושא '{2}'.
-theme_databind_forbidden					= לא ניתן להשתמש ב-Databind בערכת הנושא '{0}' עבור סקין הפקד '{1}.{2}' במאפיין '{3}'.
 theme_property_readonly						= סקין מוחל על מאפיין פקד לקריאה בלבד '{0}.{1}'.
 theme_property_undefined					= סקין מוחל על מאפיין פקד שאינו קיים '{0}.{1}'.
 theme_tag_unexpected						= האתחול של המאפיין {0} מכיל סוג תג לא ידוע {1}.
@@ -364,9 +337,7 @@ page_head_required							= נדרש פקד THead בתבנית העמוד כדי 
 page_statepersister_invalid					= שומר מצב העמוד חייב לממש את הממשק IPageStatePersister.
 
 csmanager_pradoscript_invalid				= שם ספריית סקריפטים לא ידוע של Prado '{0}'.
-csmanager_pradoscript_notloaded				= ספריית הסקריפטים של Prado בשם '{0}' עדיין לא נטענה.
 csmanager_pradostyle_invalid				= שם ספריית סגנונות לא ידוע של Prado '{0}'.
-csmanager_invalid_packages					= חבילות לא ידועות '{1}' עבור חבילות javascript המוגדרות ב-'{0}'. החבילות התקינות הן '{2}'.
 
 httpclient_transport_error					= שגיאת תעבורה של לקוח HTTP (קוד {0}): {1}
 httpclient_http_error						= תגובת שגיאת HTTP עם סטטוס {0}.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' אינו תקין. הוא 
 webcontrol_dir_invalid						= {0}.Dir '{1}' אינו תקין. הערכים המותרים הם 'ltr', 'rtl' ו-'auto'.
 webcontrol_style_invalid					= {0}.Style מקבל ערך מחרוזת בלבד.
 
-listcontrol_selection_invalid				= ל-{0} יש בחירה לא תקינה שהוגדרה לפני ביצוע קישור הנתונים (databinding).
-listcontrol_selectedindex_invalid			= ל-{0}.SelectedIndex יש ערך לא תקין {1}.
-listcontrol_selectedvalue_invalid			= ל-{0}.SelectedValue יש ערך לא תקין '{1}'.
 listcontrol_expression_invalid				= {0} מחשב ביטוי לא תקין '{1}' : {2}
 listcontrol_multiselect_unsupported			= {0} אינו תומך בבחירה מרובה.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices �
 
 logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' אינו קיים.
 logrouter_routeclass_required				= התכונה Class נדרשת בתצורת <route>.
-logrouter_routetype_required				= נתיב הלוג חייב להיות מופע של TLogRoute או של מחלקה היורשת ממנו.
+logrouter_routetype_invalid					= נתיב הלוג חייב להיות מופע של TLogRoute או של מחלקה היורשת ממנו.
 
 dblogroute_connectionid_invalid				= TDbLogRoute אינו יכול ליצור את חיבור מסד הנתונים עם המזהה '{0}'.
 dblogroute_insert_failed					= TDbLogRoute אינו יכול להוסיף את הלוג אל '{0}'.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= סוג פריט repeater לא ידוע {0}.
 repeateritemcollection_item_invalid			= TRepeaterItemCollection מקבל רק אובייקטים שהם מופע של TControl או של מחלקה היורשת ממנו.
 
 datalist_template_required					= TDataList.{0} דורש מופע תבנית המממש את הממשק ITemplate.
+datalist_datakeyfield_required				= TDataList.DataKeyField נדרש לקריאת SelectedDataKey.
+datalist_itemtype_unknown					= סוג הפריט '{0}' של TDataList אינו ידוע.
 datalistitemcollection_datalistitem_required	= TDataListItemCollection מקבל אובייקטי TDataListItem בלבד.
 
 datagrid_template_required					= TDataGrid.{0} דורש מופע תבנית המממש את הממשק ITemplate.
 templatecolumn_template_required			= TTemplateColumn.{0} דורש מופע תבנית המממש את הממשק ITemplate.
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex אינו יכול להיות קטן מ-0.
-datagrid_pagesize_invalid					= TDataGrid.PageSize חייב להיות גדול מ-0.
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount אינו יכול להיות קטן מ-0.
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection מקבל אובייקטי TDataGridItem בלבד.
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection מקבל אובייקטי TDataGridColumn בלבד.
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount חייב להיות גדול מ-0.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection מקבל א�
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection מקבל אובייקטי TTableColumnGroup בלבד.
 tablecolumn_span_invalid					= Span של TTableColumn חייב להיות 1 או יותר; התקבל {0}.
 
-tablecellcollection_tablerow_required		= TTableCellCollection מקבל אובייקטי TTableCell בלבד.
-
 multiview_view_required						= TMultiView מקבל כצאצא TView בלבד.
 multiview_activeviewindex_invalid			= ל-TMultiView.ActiveViewIndex יש אינדקס לא תקין '{0}'.
 multiview_view_inexistent					= TMultiView אינו מוצא את התצוגה המצוינת.
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible הוא לקריאה בלבד. יש ל
 
 wizard_step_invalid							= השלב שיש להפעיל לא נמצא באוסף שלבי האשף.
 wizard_command_invalid						= פקודת ניווט אשף לא תקינה '{0}'.
+wizard_buttontype_unknown					= סוג כפתור הניווט '{0}' של TWizard אינו ידוע.
 
 table_tablesection_outoforder				= מקטעי הטבלה של TTable חייבים להיות בסדר הבא: Header, Body ו-Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType הוא לק
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection מקבל רק אובייקטים של TWizardStep או של מחלקות היורשות ממנו.
 
-texthighlighter_stylesheet_invalid			= לא ניתן למצוא את קובץ גיליון הסגנונות עבור TTextHighlighter.
-
 hotspotcollection_hotspot_required			= THotSpotCollection מקבל רק מופע של THotSpot או של מחלקות היורשות ממנו.
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode הוא לקריאה בלבד.
 htmlarea_tarfile_invalid					= THtmlArea אינו יכול למצוא את קובץ ה-tar של TinyMCE.
 
-parametermodule_parameterfile_unchangeable	= לא ניתן לשנות את TParameterModule.ParameterFile מכיוון שהמודול כבר אותחל.
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' אינו תקין. יש לוודא שהוא בפורמט מרחב שמות ושסיומת הקובץ היא '.xml' או '.php'.
 parametermodule_parameterid_required		= אלמנט הפרמטר חייב לכלול תכונה 'id'.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} חייב לה�
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize חייב להיות מספר שלם שאינו קטן מ-1.
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount חייב להיות מספר שלם שאינו קטן מ-0.
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex מחוץ לטווח.
 databoundcontrol_datasource_invalid			= {0}.DataSource אינו תקין.
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' אינו מצביע על פקד קיים.
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' חייב להצביע על פקד המממש את IDataSource.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} אינו תומך במחיקה (delete
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource דורש מקור נתונים שהוא מערך, IDataSource או Traversable.
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView דורש מקור נתונים שהוא null, מערך או Traversable.
 
-clientscript_invalid_file_position			= מיקום קובץ לא תקין '{1}' עבור פקד TClientScript '{0}', חייב להיות 'Head', 'Here' או 'Begin'.
-clientscript_invalid_package_path			= PackagePath לא תקין '{0}' עבור פקד TClientScript '{1}'.
-
 tdatepicker_autopostback_unsupported		= '{0}' אינו תומך ב-AutoPostBack.
 globalization_cache_path_failed				= לא ניתן ליצור את נתיב מטמון הודעות התרגום '{0}'. יש לוודא שספריית האב קיימת וניתנת לכתיבה על ידי תהליך ה-Web.
 globalization_source_path_failed			= לא ניתן ליצור את נתיב הודעות התרגום '{0}'. יש לוודא שספריית האב קיימת וניתנת לכתיבה על ידי תהליך ה-Web.
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' אינו מצביע על מודול TDataSourceConfig תקין.
 messagesource_connectionid_required			= ConnectionID ב-MessageSource_Database.source נדרש.
 
-callback_not_support_no_priority_state_update	= בקשת callback אינה תומכת בעדכון מצב עמוד (pagestate) ללא עדיפות.
 callback_invalid_callback_options			= '{1}' אינו פקד TCallbackOptions תקין עבור פקד ה-callback '{0}'.
-callback_invalid_clientside_options			= המאפיין ClientSide של callback חייב להיות מחרוזת שהיא ה-ID של פקד TCallbackOptions או מופע של TCallbackClientSideOptions.
 callback_invalid_handler					= מטפל callback לא תקין, הפקד {0} חייב לממש את ICallbackEventHandler.
 callback_invalid_target						= יעד callback לא תקין, אין פקד עם ה-ID {0}.
 
 callback_interval_be_positive				= Interval עבור TCallbackTimer "{0}" חייב להיות גדול ממש מאפס שניות.
 callback_decay_be_not_negative				= קצב הדעיכה (Decay) עבור TCallbackTimer "{0}" אינו יכול להיות שלילי.
-
-callback_no_autopostback					= הפקד "{0}" אינו יכול להפעיל AutoPostBack.
 
 xmltransform_xslextension_required			= TXmlTransform דורש את הרחבת ה-XSL של PHP.
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' אינו תקין.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= דרייבר מסד הנתונים '{0}' �
 dbcommand_prepare_failed					= TDbCommand נכשל בהכנת משפט ה-SQL "{1}": {0}
 dbcommand_execute_failed					= TDbCommand נכשל בביצוע משפט ה-SQL "{1}": {0}
 dbcommand_query_failed						= TDbCommand נכשל בביצוע שאילתת ה-SQL "{1}": {0}
-dbcommand_column_empty						= TDbCommand החזיר תוצאה ריקה ולא יכול היה לקבל את הערך הסקלרי.
 dbdatareader_rewind_invalid					= TDbDataReader הוא זרם קדימה בלבד. ניתן לעבור עליו פעם אחת בלבד.
 dbtransaction_transaction_inactive			= TDbTransaction אינו פעיל.
-
-dbcommandbuilder_value_must_not_be_null		= המאפיין {0} אינו יכול להיות null כפי שמוגדר על ידי העמודה '{2}' בטבלה '{1}'.
 
 dbcommon_invalid_table_name					= טבלת מסד הנתונים '{0}' לא נמצאה. הודעת שגיאה: {1}.
 dbcommon_invalid_identifier_name			= שם מזהה מסד נתונים לא תקין '{0}', לפרטים ראו {1}.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= נתוני TLiveProcessFork הם לקרי�
 stream_open_failed							= לא ניתן לפתוח את הזרם '{0}' במצב '{1}': {2}
 binarystream_unexpected_eof					= סוף זרם לא צפוי: נדרשו {0} בתים אך נקראו רק {1}.
 binarystream_short_write					= כתיבה חלקית: {0} בתים היו אמורים להיכתב אך רק {1} התקבלו.
+binarystream_no_stream_owner				= TBinaryStreamBehavior דורש בעלים המממש את Psr\Http\Message\StreamInterface.
 streamresourcewrapper_unusable_stream		= הזרם אינו ניתן לקריאה ואינו ניתן לכתיבה ולא ניתן לחשוף אותו כמשאב.
 streamfilter_already_registered				= מסנן הזרם '{0}' כבר רשום.
 streamfilter_registration_failed			= לא ניתן לרשום את מסנן הזרם '{0}' עבור המחלקה '{1}'.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' אינו מ�
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' אינו מצביע על מודול TDataSourceConfig תקין.
 dbusermanager_connectionid_required			= TDbUserManager.ConnectionID נדרש.
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' אינו מצביע על מודול TDataSourceConfig תקין.
-dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID נדרש.
-
 feedservice_id_required						= TFeedService דורש תכונה 'id' באלמנטי ה-feed שלו.
 feedservice_feedtype_invalid				= מחלקת ה-feed '{0}' חייבת לממש את הממשק IFeedContentProvider.
 feedservice_class_required					= TFeedService דורש תכונה 'class' באלמנטי ה-feed שלו.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength חייב להיות 
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength חייב להיות מספר שלם בין {0} ל-{1}.
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet חייב להיות מחרוזת המכילה לפחות 2 תווים.
 captcha_privatekey_unknown					= TCaptcha.PrivateKey אינו ידוע. יש לוודא שספריית ה-assets ניתנת לכתיבה על ידי תהליך שרת ה-Web.
-captcha_gd2_required						= TCaptcha דורש את הרחבת ה-PHP GD2.
 captcha_imagettftext_required				= TCaptcha דורש את הרחבת ה-PHP GD2 עם תמיכה בגופני TrueType.
-captcha_imagepng_required					= TCaptcha דורש את הרחבת ה-PHP GD2 עם תמיכה בפורמט התמונה PNG.
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl חייב להצביע על פקד TCaptcha קיים.
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} חייב להצביע על פקד TCaptcha קיים.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey אינו ידוע. לשימוש ב-reCAPTCHA יש לקבל מפתח API.
 recaptcha_publickey_unknown					= TReCaptcha.PublicKey אינו ידוע. לשימוש ב-reCAPTCHA יש לקבל מפתח API.
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate חייב להיות מופע של TReCaptcha.
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' חייב להכיל אותיות, ספרות, '_' ו-'-' בלבד.
 proofofwork_complexity_invalid				= TProofOfWork.Complexity חייב להיות מספר שלם בין {0} ל-{1}.
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' חייב להצביע על פקד TProofOfWork.
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' אינו מחלקת משתמש תקינה. המחלקה חייבת לרשת מ-TSliderHandle.
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' אינו מצביע על מודול מטמון תקין.
 cachepagestatepersister_cache_required		= TCachePageStatePersister דורש שמודול מטמון יהיה טעון.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask לא מצא את המודול '{0
 cron_usermanager_nonexistent				= TCronModule לא מצא את ה-UserManager בשם '{0}'.
 cron_usermanager_invalid					= ה-UserManager '{0}' של TCronModule אינו TUserManager.
 cron_task_as_array_required					= משימת ה-cron בתצורת TCronModule אינה מערך.
-cron_duplicate_task_name					= TCronModule חייב לכלול משימות cron בעלות שמות ייחודיים.
+cron_duplicate_task_name					= שמות המשימות של TCronModule חייבים להיות ייחודיים; '{0}' מוגדר יותר מפעם אחת.
 cron_schedule_required						= משימת Cron חייבת לכלול לוח זמנים (schedule).
 cron_task_required							= משימת Cron חייבת לכלול משימה (task).
 cron_not_a_crontask							= משימת ה-Cron '{0}' אינה TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper חייב לכלול לפחות סי�
 bithelper_invalid_color_out					= TBitHelper חייב לכלול לפחות סיבית פלט (Out Bit) אחת. התקבל '{0}'.
 bithelper_bad_mirror_bits					= TBitHelper אינו יכול לשקף '{0}' סיביות בסביבת PHP של {1} סיביות.
 
-ar_data_invalid								= {0}.copyFrom() מקבל כפרמטר אובייקט או מערך בלבד.
-ar_save_invalid								= לא ניתן לשמור את המופע של {0} מכיוון שהוא נמחק או נמצא במצב לא ידוע.
-ar_delete_invalid							= לא ניתן למחוק את המופע של {0} מכיוון שהוא רשומה חדשה או רשומה שכבר נמחקה.
-
 dbmetadata_invalid_database_driver			= הדרייבר '{0}' אינו נתמך. יש להתקין את דרייבר ה-PRADO שלו, אם קיים.
 dbmetadata_not_meta_data					= צפויה מחלקת דרייבר {1} אך התקבלה המחלקה {0}.
 dbmetadata_tableinfo_class_invalid			= מחלקת פרטי הטבלה '{0}' של TDbMetaData היא מרחב שמות של ספרייה, לא מחלקה.
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' אינו תקין. יש לוודא שהוא מצביע על מודול תקין ביישום.
-distributeddatasource_child_required		= {0} דורש לפחות אלמנט צאצא '{1}' אחד.
-masterslavedbconnection_connection_exists	= החיבור {0}.{1} כבר קיים.
-masterslavedbconnection_interface_required	= {0}.{1} דורש מופע המממש את הממשק {2}.
-slavedbconnection_requires_master			= {0} דורש {1}.
+datasource_dbconnection_exists				= לא ניתן להגדיר את TDataSourceConfig.ConnectionClass ל-'{0}' לאחר שהחיבור למסד הנתונים נוצר.
 
 response_status_reason_missing				= HTTP 1.1 דורש סיבה (reason) עבור קודי סטטוס מורחבים
-response_status_reason_badchars				= בכותרת HTTP 1.1, האסימון status-reason אינו יכול להכיל את התווים CR או LF
 
 activefileupload_temppath_invalid			= נתיב ה-TempPath '{0}' של TActiveFileUpload אינו קיים או אינו ניתן לכתיבה על ידי תהליך שרת ה-Web.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' אינו חבר ב-TTableRo
 juioptions_option_invalid					= '{1}' אינה אפשרות תקינה עבור הפקד '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' אינו פקד כיתוב תקין עבור TRatingList '{0}'.
+ratinglist_table_layout_only				= TRatingList.RepeatLayout חייב להיות Table.
 
 accordion_activeviewid_invalid				= ל-TAccordion.ActiveViewID יש ID לא תקין '{0}'.
 accordion_activeviewindex_invalid			= ל-TAccordion.ActiveViewIndex יש אינדקס לא תקין '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= Size של TDot חייב להיות מספר שלם חיו�
 dot_bad_border_width						= FlatBorderWidth של TDot חייב להיות מספר עם % או יחידת אורך CSS אופציונליים אך הוא '{0}'
 
 juidatepicker_settextmode_unsupported		= לא ניתן לשנות את TextMode של TJuiDatePicker.
-
-control_adapter_not_active					= מאפיין של BaseActiveControl נקרא על פקד שאינו פעיל.
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' חייב להיות צאצא ישיר של פקד TFigure.
 summary_requires_details_parent				= TSummary '{0}' חייב להיות צאצא ישיר של פקד TDetails.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' אינו יכול להכיל 
 vardumper_not_array							= __debuginfo() חייב להחזיר מערך.
 
 htmlpurifier_source_path_failed				= לא ניתן ליצור את נתיב המטמון של html purifier '{0}'. יש לוודא שספריית האב קיימת וניתנת לכתיבה על ידי תהליך ה-Web.
+
+active_controls_client_side_exists			= לפקד '{0}' כבר יש אפשרויות ClientSide; לא ניתן להחליף את המאפיין ClientSide.
+componentreflection_class_invalid			= TComponentReflection דורש שם מחלקה או אובייקט.
+datasize_no_negative_size					= TDataSize.Size חייב להיות 0 או גדול יותר; התקבל {0}.
+date_to_parse_must_be_string				= TSimpleDateFormatter יכול לנתח ערך מחרוזת בלבד.
+dbuser_dbconnection_invalid					= TDbUser דורש חיבור למסד נתונים. יש להגדיר את DbConnection או ליצור את המשתמש דרך מודול TDbUserManager.
+deflatestream_init_failed					= TDeflateStream נכשל באתחול הקשר ה-deflate עבור הקידוד '{0}'.
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' אינו מצביע על פקד בטופס.
+inflatestream_init_failed					= TInflateStream נכשל באתחול הקשר ה-inflate עבור הקידוד '{0}'.
+logroute_bad_level							= TLogRoute.Levels '{0}' מכיל רמת לוג שאינה מוגדרת.
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback חייב להיות callable.
+memcached_extension_required				= TMemCache דורש את הרחבת ה-PHP memcached.
+metatagcollection_metatag_invalid			= TMetaTagCollection מקבל אובייקטי TMetaTag בלבד.
+numberformat_type_invalid					= TNumberFormat.Type '{0}' אינו תקין.
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource חייב להיות מערך או אובייקט המממש את הממשק Traversable.
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize חייב להיות גדול מ-0.
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount חייב להיות 0 או גדול יותר.
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex מחוץ לטווח.
+pagedlist_pagesize_invalid					= TPagedList.PageSize חייב להיות גדול מ-0.
+phpstream_no_stream_owner					= TPhpStreamBehavior דורש בעלים המממש את Psr\Http\Message\StreamInterface.
+pipe_popen_failed							= TPipeStream נכשל בפתיחת pipe לפקודה '{0}' במצב '{1}'.
+process_descriptor_unusable					= המתאר (descriptor) {0} של TProcess מצביע על משאב שאינו פתוח.
+process_invalid_pipe_offset					= היסט ה-pipe '{0}' של TProcess אינו מספר pipe.
+process_open_failed							= TProcess נכשל בהפעלת הפקודה '{0}'.
+rediscache_extension_required				= TRedisCache דורש את הרחבת ה-PHP redis.
+tablecellcollection_tablecell_required		= TTableCellCollection מקבל אובייקטי TTableCell בלבד.
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection הוא לקריאה בלבד.
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection הוא לקריאה בלבד.

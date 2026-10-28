@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= Prado.Application lze nastavit pouze jednou.
-prado_component_unknown						= Neznámý typ komponenty '{0}'. Příčinou může být následující chyba parsování v souboru třídy {0}: {1}
-prado_using_invalid							= '{0}' není platný jmenný prostor k použití. Pokud chcete použít jmenný prostor odkazující na adresář, ujistěte se, že je připojeno '.*'.
 prado_alias_redefined						= Alias '{0}' nelze předefinovat.
 prado_alias_invalid							= Alias '{0}' odkazuje na neplatnou cestu '{1}'. Alias lze vytvořit pouze pro existující adresáře.
 prado_aliasname_invalid						= Alias '{0}' obsahuje neplatný znak '.'.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= Komponenta '{0}' již má chování třídy
 component_not_a_behavior					= Komponenta '{0}' přidávaná jako chování není TBaseBehavior.
 object_not_a_component						= Objekt '{0}' přidávaný jako chování není TComponent.
 component_no_tcomponent_class_behaviors		= K TComponent nelze připojit chování třídy kvůli rekurzi.
-component_tbehavior_cannot_attach_as_class_behavior	= IBehaviors se nemohou připojit k více vlastníkům. Předejte řetězec nebo pole s třídou IBehavior a vlastnostmi, které se instancují pro každého vlastníka.
 
 propertyvalue_enumvalue_invalid				= Hodnota '{0}' není platnou hodnotou výčtu ({1}).
 propertyvalue_invalid_hex_color				= Hodnota '{0}' není platnou hexadecimální hodnotou barvy, např. "#112233".
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= Literál pole je vnořen hlouběji než {0} ú
 eventhandler_lost_weak_ref					= TEventHandler nemůže vyvolat obsluhu události, protože WeakReference na volatelný objekt byla ztracena.
 eventhandler_no_set_handler					= TEventHandler nemůže nastavit obsluhu události, index "{0}".
 eventhandler_bad_offset						= TEventHandler nemá offset "{0}".
+eventhandler_not_callable					= TEventHandler vyžaduje volatelnou obsluhu události (callable).
 
 eventparam_readonly							= {0} je pouze pro čtení.
 eventparam_readonly_set						= {0} nemůže změnit ReadOnly, jakmile byl nastaven.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= Výchozí prioritu lze nastavit pouze j
 prioritytrait_no_set_precision				= Přesnost lze nastavit pouze jednou nebo samotným objektem.
 weak_no_set_discard_invalid					= '{0}'.DiscardInvalid lze nastavit pouze jednou nebo samotným objektem.
 
-map_addition_disallowed						= Novou položku nelze do mapy přidat.
-map_item_unremovable						= Položku nelze z mapy odebrat.
 map_data_not_iterable						= Data musí být buď pole, nebo objekt implementující rozhraní Traversable.
 map_readonly								= {0} je pouze pro čtení.
 map_readonly_set							= {0} nemůže změnit Read-Only, jakmile je již nastaveno.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= TWeakCallableCollection přijímá po
 arraysubscription_no_change					= TArraySubscription.{0} nelze změnit po navázání odběru.
 arraysubscription_no_null_key				= TArraySubscription nemůže odebírat klíč null na objektu ArrayAccess.
 arraysubscription_index_invalid				= TArraySubscription je v režimu seznamu (isAssociative = false), ale klíč '{0}' není platný (počet: {1}).
-eventsubscription_no_setcollection			= TEventSubscription.Array nelze nastavit přímo.
 eventsubscription_no_change					= TEventSubscription.{0} nelze změnit po navázání odběru.
+eventsubscription_no_setarray				= TEventSubscription.Array nelze nastavit přímo.
 
 application_includefile_invalid				= Konfiguraci aplikace {0} nelze najít. Ujistěte se, že je ve formátu jmenného prostoru a soubor končí na ".xml" nebo ".php".
 application_basepath_invalid				= Základní cesta aplikace '{0}' neexistuje nebo není adresářem.
 application_runtimepath_invalid				= Běhová cesta aplikace '{0}' neexistuje nebo do ní proces webového serveru nemůže zapisovat.
 application_service_class_not_found			= Třída služby '{0}' neexistuje.
 application_service_class_not_service		= Třída služby '{0}' neimplementuje IService.
-application_service_class_required			= registerService vyžaduje název třídy nebo pole serviceConfig pro službu '{0}'.
+application_service_class_required			= TApplication::registerService() vyžaduje název třídy nebo pole s konfigurací služby pro službu '{0}'.
 application_service_default_unregister		= Výchozí službu stránek '{0}' nelze odregistrovat.
 service_csrf_token_invalid					= Služba '{0}' vyžaduje platný CSRF token.
 application_moduleid_duplicated				= ID modulu aplikace '{0}' není jedinečné.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= Konfigurace aplikace <alias id="{0}"> použív
 appconfig_alias_invalid						= Element <alias> konfigurace aplikace musí mít atribut "id" a atribut "path".
 appconfig_alias_redefined					= <alias id="{0}"> v konfiguraci aplikace nelze předefinovat.
 appconfig_using_invalid						= Element <using> konfigurace aplikace musí mít atribut "namespace".
-appconfig_moduleid_required					= Element <module> konfigurace aplikace musí mít atribut "id".
 appconfig_moduletype_required				= <module id="{0}"> v konfiguraci aplikace musí mít atribut "class".
 appconfig_moduletype_inapplicable			= <module id="{0}"> v konfiguraci aplikace nemůže mít atribut "class".
 appconfig_serviceid_required				= Element <service> konfigurace aplikace musí mít atribut "id".
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= <paths> v konfiguraci aplikace nemůže obsahovat
 appconfig_modules_invalid					= <modules> v konfiguraci aplikace nemůže obsahovat element <{0}>.
 appconfig_services_invalid					= <services> v konfiguraci aplikace nemůže obsahovat element <{0}>.
 appconfig_parameters_invalid				= <parameters> v konfiguraci aplikace nemůže obsahovat element <{0}>.
-appconfig_tag_invalid						= Konfigurace aplikace nemůže obsahovat element <{0}>.
 
 securitymanager_validationkey_invalid		= TSecurityManager.ValidationKey nesmí být prázdný.
 securitymanager_cookievalidationkey_invalid	= TSecurityManager.CookieValidationKey nesmí být prázdný.
 securitymanager_encryptionkey_invalid		= TSecurityManager.EncryptionKey nesmí být prázdný.
-securitymanager_mcryptextension_required	= Pro použití šifrovací funkce TSecurityManager je vyžadováno PHP rozšíření Mcrypt.
-securitymanager_mcryptextension_initfailed	= TSecurityManager se nepodařilo inicializovat modul mcrypt.
+securitymanager_crypt_algorithm_invalid		= TSecurityManager.CryptAlgorithm musí být šifra podporovaná PHP rozšířením openssl.
+securitymanager_hash_algorithm_invalid		= Hashovací algoritmus TSecurityManager musí být algoritmus podporovaný PHP rozšířením hash.
+securitymanager_openssl_required			= Šifrování TSecurityManager vyžaduje PHP rozšíření openssl.
 
 uri_format_invalid							= '{0}' není platné URI.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= THttpRequest.EnableCsrfCookie je false, co
 
 httpcookiecollection_httpcookie_required	= THttpCookieCollection přijímá pouze objekty THttpCookie.
 
-httpresponse_file_inexistent				= THttpResponse nemůže odeslat soubor '{0}'. Soubor neexistuje.
 httpresponse_responsedata_method_unavailable	= THttpResponse: metodu '{0}' nelze použít bez vhodného adaptéru, který ji implementuje.
 httpresponse_headersmanager_inexist			= THttpResponse.HeadersManager '{0}' neodkazuje na existující modul.
 httpresponse_headersmanager_invalid			= THttpResponse.HeadersManager '{0}' musí odkazovat na modul rozšiřující THttpHeadersManager.
 
 httpheadersmanager_header_required			= THttpHeadersManager může obsahovat pouze THttpHeader nebo jeho odvozené třídy.
 httpheadersmanager_headerclass_missing		= Položce <headerclass> v THttpHeadersManager chybí povinný atribut 'name' nebo 'class'.
+httpheadersmanager_header_wrong_manager		= Hlavička patří jinému THttpHeadersManager a nelze ji do tohoto správce přidat.
 
 httpsession_sessionid_unchangeable			= THttpSession.SessionID nelze změnit po spuštění relace.
 httpsession_sessionname_unchangeable		= THttpSession.SessionName nelze změnit po spuštění relace.
 httpsession_sessionname_invalid				= THttpSession.SessionName musí obsahovat pouze alfanumerické znaky.
 httpsession_savepath_unchangeable			= THttpSession.SavePath nelze změnit po spuštění relace.
 httpsession_savepath_invalid				= THttpSession.SavePath '{0}' je neplatná.
-httpsession_storage_unchangeable			= THttpSession.Storage nelze změnit po spuštění relace.
 httpsession_cookiemode_unchangeable			= THttpSession.CookieMode nelze změnit po spuštění relace.
-httpsession_autostart_unchangeable			= THttpSession.AutoStart nelze změnit po inicializaci modulu relace.
 httpsession_gcprobability_unchangeable		= THttpSession.GCProbability nelze změnit po spuštění relace.
 httpsession_gcprobability_invalid			= THttpSession.GCProbability musí být celé číslo mezi 0 a 100.
 httpsession_transid_unchangeable			= THttpSession.UseTransparentSessionID nelze změnit po spuštění relace.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= THttpSession.Timeout nelze změnit po sp
 httpsession_handler_invalid					= THttpSessionHandler přijímá jako parametr konstruktoru pouze objekt THttpSession
 
 assetmanager_basepath_invalid				= TAssetManager.BasePath '{0}' je neplatná. Ujistěte se, že je ve formátu jmenného prostoru a odkazuje na adresář, do kterého může proces webového serveru zapisovat.
-assetmanager_basepath_unchangeable			= TAssetManager.BasePath nelze změnit po inicializaci modulu.
-assetmanager_baseurl_unchangeable			= TAssetManager.BaseUrl nelze změnit po inicializaci modulu.
 assetmanager_filepath_invalid				= TAssetManager publikuje neplatný soubor '{0}'.
 assetmanager_tarchecksum_invalid			= TAssetManager publikuje tar soubor s neplatným kontrolním součtem '{0}'.
 assetmanager_tarfile_invalid				= TAssetManager publikuje neplatný tar soubor '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= TAssetManager se nepodařilo rozbalit ta
 assetmanager_source_directory_invalid		= TAssetManager kopíruje neplatný adresář '{0}'.
 
 cache_primary_duplicated					= Je povolen nejvýše jeden primární modul cache. {0} se pokouší registrovat jako další primární cache.
+cache_flush_unsupported						= Tento modul cache nepodporuje flush().
 psrcache_backing_cache_required				= Je vyžadováno TPsrCache.BackingCacheId nebo TPsrCache.BackingCache.
 psrcache_backing_cache_not_found			= TPsrCache.BackingCacheId '{0}' neodkazuje na modul aplikace.
 psrcache_invalid_backing_cache_type			= TPsrCache.BackingCacheId '{0}' musí odkazovat na modul implementující Psr\SimpleCache\CacheInterface nebo Psr\Cache\CacheItemPoolInterface.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= {0} vyžaduje podkladovou cache. Nastavte {0
 psrcachebacking_cache_not_found				= {0}.BackingCacheId '{1}' neodkazuje na modul aplikace.
 psrcachebacking_invalid_cache_type			= {0}.BackingCacheId '{1}' musí odkazovat na modul Prado\Caching\ICache.
 psrcachebacking_key_invalid					= Klíč cache {0} musí být neprázdný řetězec bez vyhrazených znaků {}()/\@:, ale byl zadán '{1}'.
-sqlitecache_extension_required				= TSqliteCache vyžaduje PHP rozšíření SQLite.
-sqlitecache_dbfile_required					= TSqliteCache.DbFile je povinný.
-sqlitecache_connection_failed				= Připojení k databázi TSqliteCache se nezdařilo. {0}.
-sqlitecache_table_creation_failed			= TSqliteCache se nepodařilo vytvořit databázi cache. {0}.
-sqlitecache_dbfile_unchangeable				= TSqliteCache.DbFile nelze změnit po inicializaci modulu.
-sqlitecache_dbfile_invalid					= TSqliteCache.DbFile je neplatný. Ujistěte se, že je ve správném formátu jmenného prostoru.
 
 dbcache_unavailable							= TDbCache vyžaduje PHP rozšíření PDO.
 
 etcdcache_transport_required				= TEtcdCache vyžaduje PHP rozšíření cURL nebo allow_url_fopen.
 
-memcache_extension_required					= TMemCache vyžaduje PHP rozšíření memcache.
 memcache_connection_failed					= TMemCache se nepodařilo připojit k serveru memcache {0}:{1}.
 memcache_not_initialized					= Volby TMemCache nelze nastavit před inicializací modulu.
+memcache_serverhost_required				= Konfigurace serveru TMemCache vyžaduje Host.
+memcache_serverport_required				= Konfigurace serveru TMemCache vyžaduje Port.
+memcache_serverport_invalid					= Port serveru TMemCache musí být číselný.
+memcache_serverweight_invalid				= Weight serveru TMemCache musí být číselná.
 
 apccache_extension_required					= TAPCCache vyžaduje PHP rozšíření APC.
 apccache_extension_not_enabled				= TAPCCache ke své funkci potřebuje apc.enabled = 1 v php.ini.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= Do TCacheDependencyList lze přid
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' je neplatná. Ujistěte se, že je ve formátu jmenného prostoru a odkazuje na platný adresář obsahující soubory chybových šablon.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' není platný adresář.
-pageservice_defaultpage_unchangeable		= TPageService.DefaultPage nelze změnit po inicializaci služby.
-pageservice_basepath_unchangeable			= TPageService.BasePath nelze změnit po inicializaci služby.
-pageservice_pageclass_invalid				= Třída stránky {0} je neplatná. Musí to být TPage nebo třída z TPage odvozená.
 pageservice_includefile_invalid				= Konfiguraci služby stránek {0} nelze najít. Ujistěte se, že je ve formátu jmenného prostoru a soubor končí na ".xml" nebo ".php".
 
 pageserviceconf_file_invalid				= Konfigurační soubor adresáře stránek '{0}' nelze otevřít.
-pageserviceconf_aliaspath_invalid			= <alias id="{0}"> používá neplatnou cestu k souboru "{1}" v konfiguračním souboru adresáře stránek '{2}'.
-pageserviceconf_alias_invalid				= Element <alias> musí mít atribut "id" a atribut "path" v konfiguračním souboru adresáře stránek '{0}'.
-pageserviceconf_using_invalid				= Element <using> musí mít atribut "namespace" v konfiguračním souboru adresáře stránek '{0}'.
-pageserviceconf_module_invalid				= Element <module> musí mít atribut "id" v konfiguračním souboru adresáře stránek '{0}'.
-pageserviceconf_moduletype_required			= <module id="{0}"> musí mít atribut "class" v konfiguračním souboru adresáře stránek '{1}'.
-pageserviceconf_parameter_invalid			= Element <parameter> musí mít atribut "id" v konfiguračním souboru adresáře stránek '{0}'.
 pageserviceconf_page_invalid				= Element <page> musí mít atribut "id" v konfiguračním souboru adresáře stránek '{0}'.
 pageserviceconf_includefile_required		= Element <include> konfigurace stránky musí mít atribut "file".
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= TClassBehavior "{0}" se nemůže odpojit od
 callchain_bad_dynamic_event					= Byla vyvolána TCallChain.{0}, ale očekávána byla {1}.
 
 behaviormodule_behavior_as_array_required	= php <behavior> musí být pole.
-behaviormodule_behaviorname_required		= <behavior> musí obsahovat atribut 'name' pro připojení chování.
-behaviormodule_behaviorclass_required		= <behavior> musí obsahovat atribut 'class' definující třídu chování.
 behaviormodule_attachto_class_required		= <behavior> musí mít atribut 'attachto' nebo 'attachtoclass'.
 behaviormodule_attachto_and_class_only_one	= <behavior> musí mít buď atribut 'attachto', nebo 'attachtoclass', nikoli oba.
 behaviormodule_behaviorowner_required		= Objekt <behavior> attachto '{0}' nebyl nalezen.
 behaviormodule_additional_behaviors_invalid	= TBehaviorModule.AdditionalBehaviors nelze nastavit na neplatný typ '{0}'
 
-behaviorparameterloader_no_behavior_name	= TBehaviorParameterLoader musí mít název chování (Behavior Name).
 behaviorparameterloader_no_behavior_class	= TBehaviorParameterLoader musí mít třídu chování (Behavior Class).
 behaviorparameterloader_attachto_class_required	= TBehaviorParameterLoader musí mít atribut 'attachto' nebo 'attachtoclass'.
 behaviorparameterloader_attachto_and_class_only_one	= TBehaviorParameterLoader musí mít pouze jeden z atributů 'attachto' nebo 'attachtoclass'.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= {1}.{0} vyžaduje před zpracováním in
 template_closingtag_unexpected				= Nalezena neočekávaná uzavírací značka '{0}'.
 template_closingtag_expected				= Očekávána uzavírací značka '{0}', nalezena '{1}'.
 template_directive_nonunique				= Direktiva '<%@ ... %>' musí být na začátku šablony a může se vyskytnout nejvýše jednou.
-template_comments_forbidden					= Komentáře šablony nejsou uvnitř značek vlastností povoleny.
 template_matching_unexpected				= Neočekávaná shoda.
 template_property_unknown					= {0} nemá vlastnost s názvem '{1}'.
 template_event_unknown						= {0} nemá událost s názvem '{1}'.
@@ -279,7 +255,6 @@ template_property_duplicated				= Vlastnost {0} je nakonfigurována dvakrát neb
 template_eventhandler_invalid				= {0}.{1} přijímá pouze statický řetězec.
 template_controlid_invalid					= {0}.ID přijímá pouze statický textový řetězec.
 template_controlskinid_invalid				= {0}.SkinID přijímá pouze statický textový řetězec.
-template_content_unexpected					= Při instancování šablony byl nalezen neočekávaný obsah: {0}.
 template_include_invalid					= Neplatné vložení šablony. Ujistěte se, že {0} je platný jmenný prostor odkazující na existující soubor šablony s příponou .tpl.
 template_tag_unexpected						= Inicializace vlastnosti {0} obsahuje neznámý typ značky {1}.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= TPermissionsManager.PermissionFile '{0}' 
 
 thememanager_basepath_invalid				= TThemeManager.BasePath '{0}' není platný alias cesty. Ujistěte se, že jste tento alias definovali v konfiguraci a že odkazuje na platný adresář.
 thememanager_basepath_invalid2				= TThemeManager.BasePath '{0}' není platný adresář.
-thememanager_basepath_unchangeable			= TThemeManager.BasePath nelze změnit po inicializaci modulu.
 thememanager_theme_invalid					= Název tématu TThemeManager '{0}' musí být název jediného adresáře.
+thememanager_baseurl_required				= TThemeManager.BaseUrl je povinné, pokud je BasePath mimo adresář aplikace.
 
-theme_baseurl_required						= TThemeManager.BasePath je povinná. Ve výchozím nastavení se předpokládá adresář s názvem 'themes' v adresáři obsahujícím vstupní skript aplikace.
 theme_path_inexistent						= Cesta k tématu '{0}' neexistuje.
 theme_control_nested						= Skin pro typ prvku '{0}' v tématu '{1}' nemůže být uvnitř jiného skinu.
 theme_skinid_duplicated						= SkinID '{0}.{1}' je v tématu '{2}' duplicitní.
-theme_databind_forbidden					= Databind nelze použít v tématu '{0}' pro skin prvku '{1}.{2}' u vlastnosti '{3}'.
 theme_property_readonly						= Skin se aplikuje na vlastnost prvku '{0}.{1}', která je pouze pro čtení.
 theme_property_undefined					= Skin se aplikuje na neexistující vlastnost prvku '{0}.{1}'.
 theme_tag_unexpected						= Inicializace vlastnosti {0} obsahuje neznámý typ značky {1}.
@@ -364,9 +337,7 @@ page_head_required							= Pro vykreslení CSS a js v sekci head HTML je v šabl
 page_statepersister_invalid					= Persister stavu stránky musí implementovat rozhraní IPageStatePersister.
 
 csmanager_pradoscript_invalid				= Neznámý název knihovny skriptů Prado '{0}'.
-csmanager_pradoscript_notloaded				= Knihovna skriptů Prado '{0}' dosud nebyla načtena.
 csmanager_pradostyle_invalid				= Neznámý název knihovny stylů Prado '{0}'.
-csmanager_invalid_packages					= Neznámé balíčky '{1}' pro javascriptové balíčky definované v '{0}'. Platné balíčky jsou '{2}'.
 
 httpclient_transport_error					= Chyba transportu HTTP klienta (kód {0}): {1}
 httpclient_http_error						= Chybová HTTP odpověď se stavem {0}.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= {0}.AccessKey '{1}' je neplatný. Musí to bý
 webcontrol_dir_invalid						= {0}.Dir '{1}' je neplatný. Povolené hodnoty jsou 'ltr', 'rtl' a 'auto'.
 webcontrol_style_invalid					= {0}.Style přijímá pouze řetězcovou hodnotu.
 
-listcontrol_selection_invalid				= {0} má neplatný výběr nastavený před provedením datové vazby.
-listcontrol_selectedindex_invalid			= {0}.SelectedIndex má neplatnou hodnotu {1}.
-listcontrol_selectedvalue_invalid			= {0}.SelectedValue má neplatnou hodnotu '{1}'.
 listcontrol_expression_invalid				= {0} vyhodnocuje neplatný výraz '{1}' : {2}
 listcontrol_multiselect_unsupported			= {0} nepodporuje vícenásobný výběr.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= TRadioButtonList.SelectedIndices j
 
 logrouter_configfile_invalid				= TLogRouter.ConfigFile '{0}' neexistuje.
 logrouter_routeclass_required				= V konfiguraci <route> je vyžadován atribut class.
-logrouter_routetype_required				= Trasa logování musí být instancí TLogRoute nebo jeho odvozené třídy.
+logrouter_routetype_invalid					= Trasa logování musí být instancí TLogRoute nebo jeho odvozené třídy.
 
 dblogroute_connectionid_invalid				= TDbLogRoute nemůže vytvořit databázové připojení s ID '{0}'.
 dblogroute_insert_failed					= TDbLogRoute nemůže vložit záznam logu do '{0}'.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= Neznámý typ položky repeateru {0}.
 repeateritemcollection_item_invalid			= TRepeaterItemCollection přijímá pouze objekty, které jsou instancí TControl nebo jeho odvozené třídy.
 
 datalist_template_required					= TDataList.{0} vyžaduje instanci šablony implementující rozhraní ITemplate.
+datalist_datakeyfield_required				= TDataList.DataKeyField je povinné pro čtení SelectedDataKey.
+datalist_itemtype_unknown					= Typ položky TDataList '{0}' je neznámý.
 datalistitemcollection_datalistitem_required	= TDataListItemCollection přijímá pouze objekty TDataListItem.
 
 datagrid_template_required					= TDataGrid.{0} vyžaduje instanci šablony implementující rozhraní ITemplate.
 templatecolumn_template_required			= TTemplateColumn.{0} vyžaduje instanci šablony implementující rozhraní ITemplate.
-datagrid_currentpageindex_invalid			= TDataGrid.CurrentPageIndex nesmí být menší než 0.
-datagrid_pagesize_invalid					= TDataGrid.PageSize musí být větší než 0.
-datagrid_virtualitemcount_invalid			= TDataGrid.VirtualItemCount nesmí být menší než 0.
 datagriditemcollection_datagriditem_required	= TDataGridItemCollection přijímá pouze objekty TDataGridItem.
 datagridcolumncollection_datagridcolumn_required	= TDataGridColumnCollection přijímá pouze objekty TDataGridColumn.
 datagridpagerstyle_pagebuttoncount_invalid	= TDataGridPagerStyle.PageButtonCount musí být větší než 0.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= TTableColumnCollection přijímá p
 tablecolumngroupcollection_group_required	= TTableColumnGroupCollection přijímá pouze objekty TTableColumnGroup.
 tablecolumn_span_invalid					= TTableColumn Span musí být 1 nebo větší; zadáno {0}.
 
-tablecellcollection_tablerow_required		= TTableCellCollection přijímá pouze objekty TTableCell.
-
 multiview_view_required						= TMultiView přijímá jako potomka pouze TView.
 multiview_activeviewindex_invalid			= TMultiView.ActiveViewIndex má neplatný index '{0}'.
 multiview_view_inexistent					= TMultiView nemůže najít zadaný pohled.
@@ -498,6 +463,7 @@ view_visible_readonly						= TView.Visible je pouze pro čtení. K přepínání
 
 wizard_step_invalid							= Krok, který má být aktivován, nelze v kolekci kroků průvodce najít.
 wizard_command_invalid						= Neplatný navigační příkaz průvodce '{0}'.
+wizard_buttontype_unknown					= Typ navigačního tlačítka TWizard '{0}' je neznámý.
 
 table_tablesection_outoforder				= Sekce tabulky TTable musí být v pořadí: Header, Body a Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= TCompleteWizardStep.StepType je pouze pr
 
 wizardstepcollection_wizardstep_required	= TWizardStepCollection přijímá pouze objekty TWizardStep nebo jeho odvozených tříd.
 
-texthighlighter_stylesheet_invalid			= Soubor stylů pro TTextHighlighter nelze najít.
-
 hotspotcollection_hotspot_required			= THotSpotCollection přijímá pouze instance THotSpot nebo jeho odvozených tříd.
 
 htmlarea_textmode_readonly					= THtmlArea.TextMode je pouze pro čtení.
 htmlarea_tarfile_invalid					= THtmlArea nemůže najít tar soubor TinyMCE.
 
-parametermodule_parameterfile_unchangeable	= TParameterModule.ParameterFile nelze změnit, protože modul je již inicializován.
 parametermodule_parameterfile_invalid		= TParameterModule.ParameterFile '{0}' je neplatný. Ujistěte se, že je ve formátu jmenného prostoru a soubor má příponu '.xml' nebo '.php'.
 parametermodule_parameterid_required		= Element parametru musí mít atribut 'id'.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= TPager.ControlToPaginate {0} musí být pla
 
 databoundcontrol_pagesize_invalid			= {0}.PageSize musí být celé číslo nejméně 1.
 databoundcontrol_virtualitemcount_invalid	= {0}.VirtualItemCount musí být celé číslo nejméně 0.
-databoundcontrol_currentpageindex_invalid	= {0}.CurrentPageIndex je mimo rozsah.
 databoundcontrol_datasource_invalid			= {0}.DataSource není platný.
 databoundcontrol_datasourceid_inexistent	= DataSourceID '{0}' neodkazuje na existující prvek.
 databoundcontrol_datasourceid_invalid		= DataSourceID '{0}' musí odkazovat na prvek implementující IDataSource.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= {0} nepodporuje mazání (delete).
 readonlydatasource_datasource_invalid		= TReadOnlyDataSource vyžaduje jako zdroj dat pole, IDataSource nebo Traversable.
 readonlydatasourceview_datasource_invalid	= TReadOnlyDataSourceView vyžaduje jako zdroj dat null, pole nebo Traversable.
 
-clientscript_invalid_file_position			= Neplatná pozice souboru '{1}' pro prvek TClientScript '{0}', musí být 'Head', 'Here' nebo 'Begin'.
-clientscript_invalid_package_path			= Neplatná PackagePath '{0}' pro prvek TClientScript '{1}'.
-
 tdatepicker_autopostback_unsupported		= '{0}' nepodporuje AutoPostBack.
 globalization_cache_path_failed				= Nelze vytvořit cestu cache překladových zpráv '{0}'. Ujistěte se, že nadřazený adresář existuje a webový proces do něj může zapisovat.
 globalization_source_path_failed			= Nelze vytvořit cestu překladových zpráv '{0}'. Ujistěte se, že nadřazený adresář existuje a webový proces do něj může zapisovat.
 messagesource_connectionid_invalid			= MessageSource_Database.source '{0}' neodkazuje na platný modul TDataSourceConfig.
 messagesource_connectionid_required			= ConnectionID v MessageSource_Database.source je povinné.
 
-callback_not_support_no_priority_state_update	= Požadavek callbacku nepodporuje aktualizaci stavu stránky bez priority.
 callback_invalid_callback_options			= '{1}' není platný prvek TCallbackOptions pro callback prvek '{0}'.
-callback_invalid_clientside_options			= Vlastnost ClientSide callbacku musí být buď řetězec s ID prvku TCallbackOptions, nebo instance TCallbackClientSideOptions.
 callback_invalid_handler					= Neplatná obsluha callbacku, prvek {0} musí implementovat ICallbackEventHandler.
 callback_invalid_target						= Neplatný cíl callbacku, prvek s ID {0} neexistuje.
 
 callback_interval_be_positive				= Interval pro TCallbackTimer "{0}" musí být striktně větší než nula sekund.
 callback_decay_be_not_negative				= Míra útlumu (Decay) pro TCallbackTimer "{0}" nesmí být záporná.
-
-callback_no_autopostback					= Prvek "{0}" nemůže povolit AutoPostBack.
 
 xmltransform_xslextension_required			= TXmlTransform vyžaduje PHP rozšíření XSL.
 xmltransform_transformpath_invalid			= TXmlTransform.TransformPath '{0}' je neplatná.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= Databázový ovladač '{0}' nemůže změn
 dbcommand_prepare_failed					= TDbCommand se nepodařilo připravit SQL příkaz "{1}": {0}
 dbcommand_execute_failed					= TDbCommand se nepodařilo provést SQL příkaz "{1}": {0}
 dbcommand_query_failed						= TDbCommand se nepodařilo provést SQL dotaz "{1}": {0}
-dbcommand_column_empty						= TDbCommand vrátil prázdný výsledek a nemohl získat skalární hodnotu.
 dbdatareader_rewind_invalid					= TDbDataReader je stream pouze pro čtení vpřed. Lze jej projít pouze jednou.
 dbtransaction_transaction_inactive			= TDbTransaction není aktivní.
-
-dbcommandbuilder_value_must_not_be_null		= Vlastnost {0} nesmí být null, jak je definováno sloupcem '{2}' v tabulce '{1}'.
 
 dbcommon_invalid_table_name					= Databázová tabulka '{0}' nebyla nalezena. Chybová zpráva: {1}.
 dbcommon_invalid_identifier_name			= Neplatný název databázového identifikátoru '{0}', podrobnosti viz {1}.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= Data TLiveProcessFork jsou na přijímají
 stream_open_failed							= Stream '{0}' nelze otevřít v režimu '{1}': {2}
 binarystream_unexpected_eof					= Neočekávaný konec streamu: bylo potřeba {0} bajtů, ale přečteno bylo pouze {1}.
 binarystream_short_write					= Neúplný zápis: mělo být zapsáno {0} bajtů, ale přijato bylo pouze {1}.
+binarystream_no_stream_owner				= TBinaryStreamBehavior vyžaduje vlastníka implementujícího Psr\Http\Message\StreamInterface.
 streamresourcewrapper_unusable_stream		= Stream není čitelný ani zapisovatelný a nelze jej vystavit jako resource.
 streamfilter_already_registered				= Filtr streamu '{0}' je již registrován.
 streamfilter_registration_failed			= Filtr streamu '{0}' pro třídu '{1}' nelze registrovat.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= TDbUserManager.UserClass '{0}' není platn�
 dbusermanager_connectionid_invalid			= TDbUserManager.ConnectionID '{0}' neodkazuje na platný modul TDataSourceConfig.
 dbusermanager_connectionid_required			= TDbUserManager.ConnectionID je povinné.
 
-dbpluginmodule_connectionid_invalid			= TDbPluginModule.ConnectionID '{0}' neodkazuje na platný modul TDataSourceConfig.
-dbpluginmodule_connectionid_required		= TDbPluginModule.ConnectionID je povinné.
-
 feedservice_id_required						= TFeedService vyžaduje ve svých elementech feed atribut 'id'.
 feedservice_feedtype_invalid				= Třída feedu '{0}' musí implementovat rozhraní IFeedContentProvider.
 feedservice_class_required					= TFeedService vyžaduje ve svých elementech feed atribut 'class'.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= TCaptcha.MinTokenLength musí být celé č�
 captcha_maxtokenlength_invalid				= TCaptcha.MaxTokenLength musí být celé číslo mezi {0} a {1}.
 captcha_tokenalphabet_invalid				= TCaptcha.TokenAlphabet musí být řetězec o délce alespoň 2 znaků.
 captcha_privatekey_unknown					= TCaptcha.PrivateKey není znám. Ujistěte se, že proces webového serveru může zapisovat do adresáře assetů.
-captcha_gd2_required						= TCaptcha vyžaduje PHP rozšíření GD2.
 captcha_imagettftext_required				= TCaptcha vyžaduje PHP rozšíření GD2 s podporou písem TrueType.
-captcha_imagepng_required					= TCaptcha vyžaduje PHP rozšíření GD2 s podporou obrazového formátu PNG.
 
 captchavalidator_captchacontrol_required	= TCaptchaValidator.CaptchaControl musí odkazovat na existující prvek TCaptcha.
 captchavalidator_captchacontrol_inexistent	= TCaptchaValidator.CaptchaControl {0} musí odkazovat na existující prvek TCaptcha.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= TCaptchaValidator.CaptchaControl {0} 
 recaptcha_privatekey_unknown				= TReCaptcha.PrivateKey není znám. Pro použití reCAPTCHA musíte získat API klíč.
 recaptcha_publickey_unknown					= TReCaptcha.PublicKey není znám. Pro použití reCAPTCHA musíte získat API klíč.
 
-recaptchavalidator_captchacontrol_invalid	= TReCaptchaValidator.ControlToValidate musí být instance TReCaptcha.
-
 formguard_honeypotname_invalid				= TFormGuard.HoneypotName '{0}' může obsahovat pouze písmena, číslice, '_' a '-'.
 proofofwork_complexity_invalid				= TProofOfWork.Complexity musí být celé číslo mezi {0} a {1}.
 proofofworkvalidator_control_invalid		= TProofOfWorkValidator.ControlToValidate '{0}' musí odkazovat na prvek TProofOfWork.
-
-slider_handle_class_invalid					= TSlider.HandleClass '{0}' není platná uživatelská třída. Třída musí rozšiřovat TSliderHandle.
 
 cachepagestatepersister_cachemoduleid_invalid	= TCachePageStatePersister.CacheModuleID '{0}' neodkazuje na platný modul cache.
 cachepagestatepersister_cache_required		= TCachePageStatePersister vyžaduje načtený modul cache.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= TCronMethodTask nemohl najít modul '{0}'.
 cron_usermanager_nonexistent				= TCronModule nemohl najít UserManager s názvem '{0}'.
 cron_usermanager_invalid					= UserManager TCronModule '{0}' není TUserManager.
 cron_task_as_array_required					= Úloha v konfiguraci TCronModule nebyla pole.
-cron_duplicate_task_name					= Úlohy TCronModule musí mít jedinečné názvy.
+cron_duplicate_task_name					= Úlohy TCronModule musí mít jedinečné názvy; '{0}' je definována více než jednou.
 cron_schedule_required						= Úloha cronu musí mít plán.
 cron_task_required							= Úloha cronu musí mít zadaný task.
 cron_not_a_crontask							= Úloha cronu '{0}' není TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= TBitHelper musí mít alespoň jeden vstupní b
 bithelper_invalid_color_out					= TBitHelper musí mít alespoň jeden výstupní bit (Out Bit). Zadáno bylo '{0}'.
 bithelper_bad_mirror_bits					= TBitHelper nemůže zrcadlit '{0}' bitů v {1}bitovém prostředí PHP.
 
-ar_data_invalid								= {0}.copyFrom() přijímá jako parametr pouze objekt nebo pole.
-ar_save_invalid								= Instanci {0} nelze uložit, protože je buď smazána, nebo v neznámém stavu.
-ar_delete_invalid							= Instanci {0} nelze smazat, protože je buď novým záznamem, nebo již smazaným záznamem.
-
 dbmetadata_invalid_database_driver			= Ovladač '{0}' není podporován. Nainstalujte jeho PRADO ovladač, pokud je k dispozici.
 dbmetadata_not_meta_data					= Očekávána třída ovladače {1}, ale získána třída {0}.
 dbmetadata_tableinfo_class_invalid			= Třída informací o tabulce TDbMetaData '{0}' je jmenný prostor adresáře, nikoli třída.
 
 datasource_dbconnection_invalid				= TDataSourceConfig.DbConnection '{0}' je neplatné. Ujistěte se, že odkazuje na platný modul aplikace.
-distributeddatasource_child_required		= {0} vyžaduje alespoň jeden podřízený element '{1}'.
-masterslavedbconnection_connection_exists	= Připojení {0}.{1} již existuje.
-masterslavedbconnection_interface_required	= {0}.{1} vyžaduje instanci implementující rozhraní {2}.
-slavedbconnection_requires_master			= {0} vyžaduje {1}.
+datasource_dbconnection_exists				= TDataSourceConfig.ConnectionClass nelze nastavit na '{0}' po vytvoření databázového připojení.
 
 response_status_reason_missing				= HTTP 1.1 vyžaduje pro rozšířené stavové kódy důvod (reason)
-response_status_reason_badchars				= V hlavičce HTTP 1.1 nesmí token status-reason obsahovat znaky CR ani LF
 
 activefileupload_temppath_invalid			= TActiveFileUpload TempPath cesta '{0}' neexistuje nebo do ní proces webového serveru nemůže zapisovat.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= {0} '{1}' není členem TTableRowColl
 juioptions_option_invalid					= '{1}' není platná volba pro prvek '{0}'.
 
 ratinglist_invalid_caption_id				= '{0}' není platný prvek titulku pro TRatingList '{0}'.
+ratinglist_table_layout_only				= TRatingList.RepeatLayout musí být Table.
 
 accordion_activeviewid_invalid				= TAccordion.ActiveViewID má neplatné ID '{0}'.
 accordion_activeviewindex_invalid			= TAccordion.ActiveViewIndex má neplatný index '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= TDot Size musí být kladné celé číslo, ale je '{0}'
 dot_bad_border_width						= TDot FlatBorderWidth musí být číslo s volitelným % nebo CSS jednotkou délky, ale je '{0}'
 
 juidatepicker_settextmode_unsupported		= TextMode prvku TJuiDatePicker nelze změnit.
-
-control_adapter_not_active					= Vlastnost BaseActiveControl byla volána na neaktivním prvku (Control).
 
 figcaption_requires_figure_parent			= TFigureCaption '{0}' musí být přímým potomkem prvku TFigure.
 summary_requires_details_parent				= TSummary '{0}' musí být přímým potomkem prvku TDetails.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= TWebTemplate '{0}' nemůže obsahovat '{1}': akt
 vardumper_not_array							= __debuginfo() musí vracet pole.
 
 htmlpurifier_source_path_failed				= Nelze vytvořit cestu cache HTML purifieru '{0}'. Ujistěte se, že nadřazený adresář existuje a webový proces do něj může zapisovat.
+
+active_controls_client_side_exists			= Ovládací prvek '{0}' již má volby ClientSide; vlastnost ClientSide nelze nahradit.
+componentreflection_class_invalid			= TComponentReflection vyžaduje název třídy nebo objekt.
+datasize_no_negative_size					= TDataSize.Size musí být 0 nebo větší; zadáno {0}.
+date_to_parse_must_be_string				= TSimpleDateFormatter může parsovat pouze řetězcovou hodnotu.
+dbuser_dbconnection_invalid					= TDbUser vyžaduje databázové připojení. Nastavte DbConnection nebo vytvořte uživatele prostřednictvím modulu TDbUserManager.
+deflatestream_init_failed					= TDeflateStream se nepodařilo inicializovat kontext deflate pro kódování '{0}'.
+form_defaultbutton_invalid					= TForm.DefaultButton '{0}' neodkazuje na ovládací prvek ve formuláři.
+inflatestream_init_failed					= TInflateStream se nepodařilo inicializovat kontext inflate pro kódování '{0}'.
+logroute_bad_level							= TLogRoute.Levels '{0}' obsahuje nedefinovanou úroveň logování.
+logroute_bad_prefix_callback				= TLogRoute.PrefixCallback musí být volatelný (callable).
+memcached_extension_required				= TMemCache vyžaduje PHP rozšíření memcached.
+metatagcollection_metatag_invalid			= TMetaTagCollection přijímá pouze objekty TMetaTag.
+numberformat_type_invalid					= TNumberFormat.Type '{0}' není platný.
+pageddatasource_datasource_invalid			= TPagedDataSource.DataSource musí být pole nebo objekt implementující rozhraní Traversable.
+pageddatasource_pagesize_invalid			= TPagedDataSource.PageSize musí být větší než 0.
+pageddatasource_virtualitemcount_invalid	= TPagedDataSource.VirtualItemCount musí být 0 nebo větší.
+pagedlist_currentpageindex_invalid			= TPagedList.CurrentPageIndex je mimo rozsah.
+pagedlist_pagesize_invalid					= TPagedList.PageSize musí být větší než 0.
+phpstream_no_stream_owner					= TPhpStreamBehavior vyžaduje vlastníka implementujícího Psr\Http\Message\StreamInterface.
+pipe_popen_failed							= TPipeStream se nepodařilo otevřít rouru k příkazu '{0}' v režimu '{1}'.
+process_descriptor_unusable					= Deskriptor TProcess {0} odkazuje na prostředek, který není otevřený.
+process_invalid_pipe_offset					= Offset roury TProcess '{0}' není číslo roury.
+process_open_failed							= TProcess se nepodařilo spustit příkaz '{0}'.
+rediscache_extension_required				= TRedisCache vyžaduje PHP rozšíření redis.
+tablecellcollection_tablecell_required		= TTableCellCollection přijímá pouze objekty TTableCell.
+tablefooterrow_tablesection_readonly		= TTableFooterRow.TableSection je pouze pro čtení.
+tableheaderrow_tablesection_readonly		= TTableHeaderRow.TableSection je pouze pro čtení.

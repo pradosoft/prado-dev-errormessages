@@ -4,8 +4,6 @@
 # Format: key = message. {0}, {1}, ... are replaced by the exception arguments.
 
 prado_application_singleton_required		= A Prado.Application csak egyszer állítható be.
-prado_component_unknown						= Ismeretlen komponenstípus: '{0}'. Ezt a {0} osztályfájl következő feldolgozási hibája okozhatja: {1}
-prado_using_invalid							= '{0}' nem érvényes használható névtér. Ha könyvtárra hivatkozó névteret kíván használni, győződjön meg róla, hogy a '.*' hozzá van fűzve.
 prado_alias_redefined						= A(z) '{0}' alias nem definiálható újra.
 prado_alias_invalid							= A(z) '{0}' alias érvénytelen elérési útra hivatkozik: '{1}'. Csak létező könyvtárakhoz rendelhető alias.
 prado_aliasname_invalid						= A(z) '{0}' alias érvénytelen karaktert ('.') tartalmaz.
@@ -21,7 +19,6 @@ component_class_behavior_defined			= A(z) '{0}' komponensnek már van '{1}' oszt
 component_not_a_behavior					= A viselkedésként hozzáadott '{0}' komponens nem TBaseBehavior.
 object_not_a_component						= A viselkedésként hozzáadott '{0}' objektum nem TComponent.
 component_no_tcomponent_class_behaviors		= A TComponent osztályhoz rekurzió miatt nem csatolható osztályviselkedés.
-component_tbehavior_cannot_attach_as_class_behavior	= Az IBehaviors nem csatolhatók több tulajdonoshoz. Adjon meg egy karakterláncot vagy egy IBehavior osztályt és tulajdonságokat tartalmazó tömböt, amely minden tulajdonosnál példányosul.
 
 propertyvalue_enumvalue_invalid				= A(z) '{0}' érték nem érvényes felsorolási érték ({1}).
 propertyvalue_invalid_hex_color				= A(z) '{0}' érték nem érvényes hexadecimális színérték, pl. "#112233".
@@ -31,6 +28,7 @@ propertyvalue_array_too_deep				= A tömbliterál {0} szintnél mélyebben ágya
 eventhandler_lost_weak_ref					= A TEventHandler nem tudja meghívni az eseménykezelőt, mert a hívható objektum WeakReference hivatkozása elveszett.
 eventhandler_no_set_handler					= A TEventHandler nem tudja beállítani az eseménykezelőt a(z) "{0}" indexen.
 eventhandler_bad_offset						= A(z) "{0}" offset nem létezik a TEventHandler objektumban.
+eventhandler_not_callable					= A TEventHandler hívható (callable) kezelőt igényel.
 
 eventparam_readonly							= {0} csak olvasható.
 eventparam_readonly_set						= A(z) {0} ReadOnly értéke a beállítása után nem módosítható.
@@ -46,8 +44,6 @@ prioritytrait_no_set_default_priority		= Az alapértelmezett prioritás csak egy
 prioritytrait_no_set_precision				= A pontosság csak egyszer vagy csak maga az objektum által állítható be.
 weak_no_set_discard_invalid					= A(z) '{0}'.DiscardInvalid csak egyszer vagy csak maga az objektum által állítható be.
 
-map_addition_disallowed						= Az új elem nem adható hozzá a leképezéshez.
-map_item_unremovable						= Az elem nem távolítható el a leképezésből.
 map_data_not_iterable						= Az adat tömb vagy a Traversable interfészt megvalósító objektum lehet.
 map_readonly								= {0} csak olvasható.
 map_readonly_set							= A(z) {0} Read-Only értéke a beállítása után nem módosítható.
@@ -59,15 +55,15 @@ weakcallablecollection_callable_required	= A TWeakCallableCollection csak hívha
 arraysubscription_no_change					= A TArraySubscription.{0} a feliratkozás után nem módosítható.
 arraysubscription_no_null_key				= A TArraySubscription nem tud null kulcsra feliratkozni ArrayAccess objektumon.
 arraysubscription_index_invalid				= A TArraySubscription listamódban van (isAssociative = false), de a(z) '{0}' kulcs nem érvényes (elemszám: {1}).
-eventsubscription_no_setcollection			= A TEventSubscription.Array nem állítható be közvetlenül.
 eventsubscription_no_change					= A TEventSubscription.{0} a feliratkozás után nem módosítható.
+eventsubscription_no_setarray				= A TEventSubscription.Array nem állítható be közvetlenül.
 
 application_includefile_invalid				= A(z) {0} alkalmazáskonfiguráció nem található. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése ".xml" vagy ".php".
 application_basepath_invalid				= A(z) '{0}' alkalmazás-alapútvonal nem létezik, vagy nem könyvtár.
 application_runtimepath_invalid				= A(z) '{0}' alkalmazás-futásidejű útvonal nem létezik, vagy a webkiszolgáló folyamata nem írhatja.
 application_service_class_not_found			= A(z) '{0}' szolgáltatásosztály nem létezik.
 application_service_class_not_service		= A(z) '{0}' szolgáltatásosztály nem valósítja meg az IService interfészt.
-application_service_class_required			= A registerService osztálynevet vagy serviceConfig tömböt igényel a(z) '{0}' szolgáltatáshoz.
+application_service_class_required			= A TApplication::registerService() osztálynevet vagy szolgáltatáskonfigurációs tömböt igényel a(z) '{0}' szolgáltatáshoz.
 application_service_default_unregister		= Az alapértelmezett '{0}' oldalszolgáltatás regisztrációja nem szüntethető meg.
 service_csrf_token_invalid					= A(z) '{0}' szolgáltatás érvényes CSRF tokent igényel.
 application_moduleid_duplicated				= A(z) '{0}' alkalmazásmodul-azonosító nem egyedi.
@@ -80,7 +76,6 @@ appconfig_aliaspath_invalid					= Az alkalmazáskonfiguráció <alias id="{0}"> 
 appconfig_alias_invalid						= Az alkalmazáskonfiguráció <alias> elemének rendelkeznie kell "id" és "path" attribútummal.
 appconfig_alias_redefined					= Az alkalmazáskonfiguráció <alias id="{0}"> eleme nem definiálható újra.
 appconfig_using_invalid						= Az alkalmazáskonfiguráció <using> elemének rendelkeznie kell "namespace" attribútummal.
-appconfig_moduleid_required					= Az alkalmazáskonfiguráció <module> elemének rendelkeznie kell "id" attribútummal.
 appconfig_moduletype_required				= Az alkalmazáskonfiguráció <module id="{0}"> elemének rendelkeznie kell "class" attribútummal.
 appconfig_moduletype_inapplicable			= Az alkalmazáskonfiguráció <module id="{0}"> eleme nem rendelkezhet "class" attribútummal.
 appconfig_serviceid_required				= Az alkalmazáskonfiguráció <service> elemének rendelkeznie kell "id" attribútummal.
@@ -91,13 +86,13 @@ appconfig_paths_invalid						= Az alkalmazáskonfiguráció <paths> eleme nem ta
 appconfig_modules_invalid					= Az alkalmazáskonfiguráció <modules> eleme nem tartalmazhat <{0}> elemet.
 appconfig_services_invalid					= Az alkalmazáskonfiguráció <services> eleme nem tartalmazhat <{0}> elemet.
 appconfig_parameters_invalid				= Az alkalmazáskonfiguráció <parameters> eleme nem tartalmazhat <{0}> elemet.
-appconfig_tag_invalid						= Az alkalmazáskonfiguráció nem tartalmazhat <{0}> elemet.
 
 securitymanager_validationkey_invalid		= A TSecurityManager.ValidationKey nem lehet üres.
 securitymanager_cookievalidationkey_invalid	= A TSecurityManager.CookieValidationKey nem lehet üres.
 securitymanager_encryptionkey_invalid		= A TSecurityManager.EncryptionKey nem lehet üres.
-securitymanager_mcryptextension_required	= A TSecurityManager titkosítási funkciójának használatához a Mcrypt PHP kiterjesztés szükséges.
-securitymanager_mcryptextension_initfailed	= A TSecurityManager nem tudta inicializálni az mcrypt modult.
+securitymanager_crypt_algorithm_invalid		= A TSecurityManager.CryptAlgorithm értékének az openssl PHP kiterjesztés által támogatott rejtjelezőnek kell lennie.
+securitymanager_hash_algorithm_invalid		= A TSecurityManager hash algoritmusának a PHP hash kiterjesztés által támogatott algoritmusnak kell lennie.
+securitymanager_openssl_required			= A TSecurityManager titkosításához az openssl PHP kiterjesztés szükséges.
 
 uri_format_invalid							= '{0}' nem érvényes URI.
 
@@ -109,22 +104,20 @@ httprequest_csrf_session_required			= A THttpRequest.EnableCsrfCookie értéke f
 
 httpcookiecollection_httpcookie_required	= A THttpCookieCollection csak THttpCookie objektumokat fogad el.
 
-httpresponse_file_inexistent				= A THttpResponse nem tudja elküldeni a(z) '{0}' fájlt. A fájl nem létezik.
 httpresponse_responsedata_method_unavailable	= THttpResponse: a(z) '{0}' metódus nem használható azt megvalósító megfelelő adapter nélkül.
 httpresponse_headersmanager_inexist			= A THttpResponse.HeadersManager '{0}' nem létező modulra mutat.
 httpresponse_headersmanager_invalid			= A THttpResponse.HeadersManager '{0}' értékének THttpHeadersManager osztályból származó modulra kell mutatnia.
 
 httpheadersmanager_header_required			= A THttpHeadersManager csak THttpHeader vagy abból származó osztályú elemeket tartalmazhat.
 httpheadersmanager_headerclass_missing		= A THttpHeadersManager <headerclass> bejegyzéséből hiányzik a kötelező 'name' vagy 'class' attribútum.
+httpheadersmanager_header_wrong_manager		= A fejléc egy másik THttpHeadersManager objektumhoz tartozik, és nem adható hozzá ehhez a kezelőhöz.
 
 httpsession_sessionid_unchangeable			= A THttpSession.SessionID a munkamenet indítása után nem módosítható.
 httpsession_sessionname_unchangeable		= A THttpSession.SessionName a munkamenet indítása után nem módosítható.
 httpsession_sessionname_invalid				= A THttpSession.SessionName csak alfanumerikus karaktereket tartalmazhat.
 httpsession_savepath_unchangeable			= A THttpSession.SavePath a munkamenet indítása után nem módosítható.
 httpsession_savepath_invalid				= A THttpSession.SavePath '{0}' érvénytelen.
-httpsession_storage_unchangeable			= A THttpSession.Storage a munkamenet indítása után nem módosítható.
 httpsession_cookiemode_unchangeable			= A THttpSession.CookieMode a munkamenet indítása után nem módosítható.
-httpsession_autostart_unchangeable			= A THttpSession.AutoStart a munkamenetmodul inicializálása után nem módosítható.
 httpsession_gcprobability_unchangeable		= A THttpSession.GCProbability a munkamenet indítása után nem módosítható.
 httpsession_gcprobability_invalid			= A THttpSession.GCProbability értéke 0 és 100 közötti egész szám lehet.
 httpsession_transid_unchangeable			= A THttpSession.UseTransparentSessionID a munkamenet indítása után nem módosítható.
@@ -133,8 +126,6 @@ httpsession_maxlifetime_unchangeable		= A THttpSession.Timeout a munkamenet ind�
 httpsession_handler_invalid					= A THttpSessionHandler konstruktorparaméterként csak THttpSession objektumot fogad el
 
 assetmanager_basepath_invalid				= A TAssetManager.BasePath '{0}' érvénytelen. Győződjön meg róla, hogy névtérformátumban van megadva, és a webkiszolgáló folyamata által írható könyvtárra mutat.
-assetmanager_basepath_unchangeable			= A TAssetManager.BasePath a modul inicializálása után nem módosítható.
-assetmanager_baseurl_unchangeable			= A TAssetManager.BaseUrl a modul inicializálása után nem módosítható.
 assetmanager_filepath_invalid				= A TAssetManager érvénytelen fájlt publikál: '{0}'.
 assetmanager_tarchecksum_invalid			= A TAssetManager érvénytelen ellenőrzőösszegű tar fájlt publikál: '{0}'.
 assetmanager_tarfile_invalid				= A TAssetManager érvénytelen tar fájlt publikál: '{0}'.
@@ -142,6 +133,7 @@ assetmanager_tarfile_extract_failed			= A TAssetManager nem tudta kibontani a(z)
 assetmanager_source_directory_invalid		= A TAssetManager érvénytelen könyvtárat másol: '{0}'.
 
 cache_primary_duplicated					= Legfeljebb egy elsődleges gyorsítótármodul engedélyezett. A(z) {0} további elsődleges gyorsítótárként próbál regisztrálni.
+cache_flush_unsupported						= Ez a gyorsítótármodul nem támogatja a flush() műveletet.
 psrcache_backing_cache_required				= A TPsrCache.BackingCacheId vagy a TPsrCache.BackingCache megadása kötelező.
 psrcache_backing_cache_not_found			= A TPsrCache.BackingCacheId '{0}' nem alkalmazásmodulra hivatkozik.
 psrcache_invalid_backing_cache_type			= A TPsrCache.BackingCacheId '{0}' értékének Psr\SimpleCache\CacheInterface vagy Psr\Cache\CacheItemPoolInterface interfészt megvalósító modulra kell hivatkoznia.
@@ -150,20 +142,17 @@ psrcachebacking_cache_required				= A(z) {0} háttér-gyorsítótárat igényel.
 psrcachebacking_cache_not_found				= A(z) {0}.BackingCacheId '{1}' nem alkalmazásmodulra hivatkozik.
 psrcachebacking_invalid_cache_type			= A(z) {0}.BackingCacheId '{1}' értékének Prado\Caching\ICache modulra kell hivatkoznia.
 psrcachebacking_key_invalid					= A(z) {0} gyorsítótárkulcsa nem üres karakterlánc kell legyen a fenntartott {}()/\@: karakterek nélkül, de '{1}' lett megadva.
-sqlitecache_extension_required				= A TSqliteCache használatához az SQLite PHP kiterjesztés szükséges.
-sqlitecache_dbfile_required					= A TSqliteCache.DbFile megadása kötelező.
-sqlitecache_connection_failed				= A TSqliteCache adatbázis-kapcsolata nem jött létre. {0}.
-sqlitecache_table_creation_failed			= A TSqliteCache nem tudta létrehozni a gyorsítótár-adatbázist. {0}.
-sqlitecache_dbfile_unchangeable				= A TSqliteCache.DbFile a modul inicializálása után nem módosítható.
-sqlitecache_dbfile_invalid					= A TSqliteCache.DbFile érvénytelen. Győződjön meg róla, hogy megfelelő névtérformátumban van megadva.
 
 dbcache_unavailable							= A TDbCache használatához a PDO PHP kiterjesztés szükséges.
 
 etcdcache_transport_required				= A TEtcdCache használatához a cURL PHP kiterjesztés vagy az allow_url_fopen szükséges.
 
-memcache_extension_required					= A TMemCache használatához a memcache PHP kiterjesztés szükséges.
 memcache_connection_failed					= A TMemCache nem tudott csatlakozni a(z) {0}:{1} memcache kiszolgálóhoz.
 memcache_not_initialized					= A TMemCache beállításai nem adhatók meg a modul inicializálása előtt.
+memcache_serverhost_required				= A TMemCache kiszolgáló-konfigurációjában a Host megadása kötelező.
+memcache_serverport_required				= A TMemCache kiszolgáló-konfigurációjában a Port megadása kötelező.
+memcache_serverport_invalid					= A TMemCache kiszolgáló Port értékének numerikusnak kell lennie.
+memcache_serverweight_invalid				= A TMemCache kiszolgáló Weight értékének numerikusnak kell lennie.
 
 apccache_extension_required					= A TAPCCache használatához az APC PHP kiterjesztés szükséges.
 apccache_extension_not_enabled				= A TAPCCache működéséhez a php.ini fájlban apc.enabled = 1 beállítás szükséges.
@@ -189,18 +178,9 @@ cachedependencylist_cachedependency_required	= A TCacheDependencyList csak az IC
 errorhandler_errortemplatepath_invalid		= A TErrorHandler.ErrorTemplatePath '{0}' érvénytelen. Győződjön meg róla, hogy névtérformátumban van megadva, és hibasablonfájlokat tartalmazó érvényes könyvtárra mutat.
 
 pageservice_basepath_invalid				= A TPageService.BasePath '{0}' nem érvényes könyvtár.
-pageservice_defaultpage_unchangeable		= A TPageService.DefaultPage a szolgáltatás inicializálása után nem módosítható.
-pageservice_basepath_unchangeable			= A TPageService.BasePath a szolgáltatás inicializálása után nem módosítható.
-pageservice_pageclass_invalid				= A(z) {0} oldalosztály érvénytelen. TPage osztálynak vagy TPage leszármazottjának kell lennie.
 pageservice_includefile_invalid				= A(z) {0} oldalszolgáltatás-konfiguráció nem található. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése ".xml" vagy ".php".
 
 pageserviceconf_file_invalid				= A(z) '{0}' oldalkönyvtár-konfigurációs fájl nem nyitható meg.
-pageserviceconf_aliaspath_invalid			= Az <alias id="{0}"> elem érvénytelen fájlútvonalat ("{1}") használ a(z) '{2}' oldalkönyvtár-konfigurációs fájlban.
-pageserviceconf_alias_invalid				= Az <alias> elemnek rendelkeznie kell "id" és "path" attribútummal a(z) '{0}' oldalkönyvtár-konfigurációs fájlban.
-pageserviceconf_using_invalid				= A <using> elemnek rendelkeznie kell "namespace" attribútummal a(z) '{0}' oldalkönyvtár-konfigurációs fájlban.
-pageserviceconf_module_invalid				= A <module> elemnek rendelkeznie kell "id" attribútummal a(z) '{0}' oldalkönyvtár-konfigurációs fájlban.
-pageserviceconf_moduletype_required			= A <module id="{0}"> elemnek rendelkeznie kell "class" attribútummal a(z) '{1}' oldalkönyvtár-konfigurációs fájlban.
-pageserviceconf_parameter_invalid			= A <parameter> elemnek rendelkeznie kell "id" attribútummal a(z) '{0}' oldalkönyvtár-konfigurációs fájlban.
 pageserviceconf_page_invalid				= A <page> elemnek rendelkeznie kell "id" attribútummal a(z) '{0}' oldalkönyvtár-konfigurációs fájlban.
 pageserviceconf_includefile_required		= Az oldalkonfiguráció <include> elemének rendelkeznie kell "file" attribútummal.
 
@@ -221,14 +201,11 @@ classbehavior_detach_wrong_owner			= A(z) "{0}" TClassBehavior nem választható
 callchain_bad_dynamic_event					= A TCallChain.{0} lett kiváltva, de {1} volt a várt.
 
 behaviormodule_behavior_as_array_required	= A php <behavior> elemnek tömbnek kell lennie.
-behaviormodule_behaviorname_required		= A <behavior> elemnek a viselkedés csatolásához 'name' attribútumot kell tartalmaznia.
-behaviormodule_behaviorclass_required		= A <behavior> elemnek a viselkedés osztályát megadó 'class' attribútumot kell tartalmaznia.
 behaviormodule_attachto_class_required		= A <behavior> elemnek rendelkeznie kell 'attachto' vagy 'attachtoclass' attribútummal.
 behaviormodule_attachto_and_class_only_one	= A <behavior> elemnek vagy 'attachto', vagy 'attachtoclass' attribútummal kell rendelkeznie, nem mindkettővel.
 behaviormodule_behaviorowner_required		= A <behavior> attachto '{0}' objektuma nem található.
 behaviormodule_additional_behaviors_invalid	= A TBehaviorModule.AdditionalBehaviors nem állítható be érvénytelen '{0}' típusra
 
-behaviorparameterloader_no_behavior_name	= A TBehaviorParameterLoader esetében a Behavior Name megadása kötelező.
 behaviorparameterloader_no_behavior_class	= A TBehaviorParameterLoader esetében a Behavior Class megadása kötelező.
 behaviorparameterloader_attachto_class_required	= A TBehaviorParameterLoader esetében 'attachto' vagy 'attachtoclass' attribútum megadása kötelező.
 behaviorparameterloader_attachto_and_class_only_one	= A TBehaviorParameterLoader csak egy 'attachto' vagy 'attachtoclass' attribútummal rendelkezhet.
@@ -266,7 +243,6 @@ initialized_requires_initialization			= A(z) {1}.{0} feldolgozás előtt inicial
 template_closingtag_unexpected				= Váratlan '{0}' záró címke található.
 template_closingtag_expected				= A várt záró címke '{0}', de '{1}' található.
 template_directive_nonunique				= A '<%@ ... %>' direktívának a sablon elején kell állnia, és legfeljebb egyszer fordulhat elő.
-template_comments_forbidden					= Tulajdonságcímkéken belül nem engedélyezettek a sablonkommentek.
 template_matching_unexpected				= Váratlan illeszkedés.
 template_property_unknown					= A(z) {0} nem rendelkezik '{1}' nevű tulajdonsággal.
 template_event_unknown						= A(z) {0} nem rendelkezik '{1}' nevű eseménnyel.
@@ -279,7 +255,6 @@ template_property_duplicated				= A(z) {0} tulajdonság kétszer vagy többször
 template_eventhandler_invalid				= A(z) {0}.{1} csak statikus karakterláncot fogad el.
 template_controlid_invalid					= A(z) {0}.ID csak statikus szöveges karakterláncot fogad el.
 template_controlskinid_invalid				= A(z) {0}.SkinID csak statikus szöveges karakterláncot fogad el.
-template_content_unexpected					= Váratlan tartalom a sablon példányosítása közben: {0}.
 template_include_invalid					= Érvénytelen sablonbeillesztés. Győződjön meg róla, hogy a(z) {0} érvényes névtér, amely létező, .tpl kiterjesztésű sablonfájlra mutat.
 template_tag_unexpected						= A(z) {0} tulajdonság inicializálása ismeretlen {1} címketípust tartalmaz.
 
@@ -328,14 +303,12 @@ permissions_permissionfile_invalid			= A TPermissionsManager.PermissionFile '{0}
 
 thememanager_basepath_invalid				= A TThemeManager.BasePath '{0}' nem érvényes útvonalalias. Győződjön meg róla, hogy ez az alias definiálva van a konfigurációban, és érvényes könyvtárra mutat.
 thememanager_basepath_invalid2				= A TThemeManager.BasePath '{0}' nem érvényes könyvtár.
-thememanager_basepath_unchangeable			= A TThemeManager.BasePath a modul inicializálása után nem módosítható.
 thememanager_theme_invalid					= A TThemeManager '{0}' témanevének egyetlen könyvtárnévnek kell lennie.
+thememanager_baseurl_required				= A TThemeManager.BaseUrl megadása kötelező, ha a BasePath az alkalmazáskönyvtáron kívül van.
 
-theme_baseurl_required						= A TThemeManager.BasePath megadása kötelező. Alapértelmezés szerint az alkalmazás belépési szkriptjét tartalmazó könyvtár alatti 'themes' nevű könyvtár a feltételezett.
 theme_path_inexistent						= A(z) '{0}' témaútvonal nem létezik.
 theme_control_nested						= A(z) '{1}' témában a(z) '{0}' vezérlőtípus skinje nem lehet egy másik skinen belül.
 theme_skinid_duplicated						= A(z) '{0}.{1}' SkinID ismétlődik a(z) '{2}' témában.
-theme_databind_forbidden					= A(z) '{0}' témában a(z) '{1}.{2}' vezérlőskin '{3}' tulajdonságánál nem használható adatkötés.
 theme_property_readonly						= A skin csak olvasható '{0}.{1}' vezérlőtulajdonságra kerül alkalmazásra.
 theme_property_undefined					= A skin nem létező '{0}.{1}' vezérlőtulajdonságra kerül alkalmazásra.
 theme_tag_unexpected						= A(z) {0} tulajdonság inicializálása ismeretlen {1} címketípust tartalmaz.
@@ -364,9 +337,7 @@ page_head_required							= A CSS és js HTML fejrészben történő megjelenít�
 page_statepersister_invalid					= Az oldalállapot-tárolónak meg kell valósítania az IPageStatePersister interfészt.
 
 csmanager_pradoscript_invalid				= Ismeretlen Prado szkriptkönyvtár-név: '{0}'.
-csmanager_pradoscript_notloaded				= A(z) '{0}' Prado szkriptkönyvtár még nincs betöltve.
 csmanager_pradostyle_invalid				= Ismeretlen Prado stíluskönyvtár-név: '{0}'.
-csmanager_invalid_packages					= Ismeretlen '{1}' csomagok a(z) '{0}' fájlban definiált javascript csomagok között. Érvényes csomagok: '{2}'.
 
 httpclient_transport_error					= HTTP kliens átviteli hiba (kód: {0}): {1}
 httpclient_http_error						= HTTP hibaválasz {0} állapotkóddal.
@@ -385,9 +356,6 @@ webcontrol_accesskey_invalid				= A(z) {0}.AccessKey '{1}' érvénytelen. Csak e
 webcontrol_dir_invalid						= A(z) {0}.Dir '{1}' érvénytelen. Engedélyezett értékek: 'ltr', 'rtl' és 'auto'.
 webcontrol_style_invalid					= A(z) {0}.Style csak karakterlánc értéket fogadhat el.
 
-listcontrol_selection_invalid				= A(z) {0} érvénytelen kijelöléssel rendelkezik, amely az adatkötés végrehajtása előtt lett beállítva.
-listcontrol_selectedindex_invalid			= A(z) {0}.SelectedIndex értéke érvénytelen: {1}.
-listcontrol_selectedvalue_invalid			= A(z) {0}.SelectedValue értéke érvénytelen: '{1}'.
 listcontrol_expression_invalid				= A(z) {0} érvénytelen kifejezést értékel ki ('{1}'): {2}
 listcontrol_multiselect_unsupported			= A(z) {0} nem támogatja a többszörös kijelölést.
 
@@ -426,7 +394,7 @@ radiobuttonlist_selectedindices_unsupported	= A TRadioButtonList.SelectedIndices
 
 logrouter_configfile_invalid				= A TLogRouter.ConfigFile '{0}' nem létezik.
 logrouter_routeclass_required				= A <route> konfigurációban a class attribútum megadása kötelező.
-logrouter_routetype_required				= A naplóútvonalnak TLogRoute vagy abból származó osztály példányának kell lennie.
+logrouter_routetype_invalid					= A naplóútvonalnak TLogRoute vagy abból származó osztály példányának kell lennie.
 
 dblogroute_connectionid_invalid				= A TDbLogRoute nem tudja létrehozni az adatbázis-kapcsolatot a(z) '{0}' azonosítóval.
 dblogroute_insert_failed					= A TDbLogRoute nem tudja beszúrni a naplót a(z) '{0}' táblába.
@@ -466,13 +434,12 @@ repeater_itemtype_unknown					= Ismeretlen ismétlőelem-típus: {0}.
 repeateritemcollection_item_invalid			= A TRepeaterItemCollection csak TControl vagy abból származó osztály példányait fogadja el.
 
 datalist_template_required					= A TDataList.{0} az ITemplate interfészt megvalósító sablonpéldányt igényel.
+datalist_datakeyfield_required				= A TDataList.DataKeyField megadása kötelező a SelectedDataKey olvasásához.
+datalist_itemtype_unknown					= A TDataList '{0}' elemtípusa ismeretlen.
 datalistitemcollection_datalistitem_required	= A TDataListItemCollection csak TDataListItem objektumokat fogad el.
 
 datagrid_template_required					= A TDataGrid.{0} az ITemplate interfészt megvalósító sablonpéldányt igényel.
 templatecolumn_template_required			= A TTemplateColumn.{0} az ITemplate interfészt megvalósító sablonpéldányt igényel.
-datagrid_currentpageindex_invalid			= A TDataGrid.CurrentPageIndex értéke nem lehet 0-nál kisebb.
-datagrid_pagesize_invalid					= A TDataGrid.PageSize értéke 0-nál nagyobb kell legyen.
-datagrid_virtualitemcount_invalid			= A TDataGrid.VirtualItemCount értéke nem lehet 0-nál kisebb.
 datagriditemcollection_datagriditem_required	= A TDataGridItemCollection csak TDataGridItem objektumokat fogad el.
 datagridcolumncollection_datagridcolumn_required	= A TDataGridColumnCollection csak TDataGridColumn objektumokat fogad el.
 datagridpagerstyle_pagebuttoncount_invalid	= A TDataGridPagerStyle.PageButtonCount értéke 0-nál nagyobb kell legyen.
@@ -485,8 +452,6 @@ tablecolumncollection_tablecolumn_required	= A TTableColumnCollection csak TTabl
 tablecolumngroupcollection_group_required	= A TTableColumnGroupCollection csak TTableColumnGroup objektumokat fogad el.
 tablecolumn_span_invalid					= A TTableColumn Span értéke 1 vagy nagyobb kell legyen; {0} lett megadva.
 
-tablecellcollection_tablerow_required		= A TTableCellCollection csak TTableCell objektumokat fogad el.
-
 multiview_view_required						= A TMultiView gyermekként csak TView elemet fogad el.
 multiview_activeviewindex_invalid			= A TMultiView.ActiveViewIndex indexe érvénytelen: '{0}'.
 multiview_view_inexistent					= A TMultiView nem találja a megadott nézetet.
@@ -498,6 +463,7 @@ view_visible_readonly						= A TView.Visible csak olvasható. A láthatóság v�
 
 wizard_step_invalid							= Az aktiválandó lépés nem található a varázsló lépésgyűjteményében.
 wizard_command_invalid						= Érvénytelen varázsló-navigációs parancs: '{0}'.
+wizard_buttontype_unknown					= A TWizard '{0}' navigációs gombtípusa ismeretlen.
 
 table_tablesection_outoforder				= A TTable táblaszakaszainak sorrendje: Header, Body és Footer.
 
@@ -505,14 +471,11 @@ completewizardstep_steptype_readonly		= A TCompleteWizardStep.StepType csak olva
 
 wizardstepcollection_wizardstep_required	= A TWizardStepCollection csak TWizardStep vagy abból származó osztályú objektumokat fogad el.
 
-texthighlighter_stylesheet_invalid			= A TTextHighlighter stíluslapfájlja nem található.
-
 hotspotcollection_hotspot_required			= A THotSpotCollection csak THotSpot vagy abból származó osztály példányait fogadja el.
 
 htmlarea_textmode_readonly					= A THtmlArea.TextMode csak olvasható.
 htmlarea_tarfile_invalid					= A THtmlArea nem találja a TinyMCE tar fájlt.
 
-parametermodule_parameterfile_unchangeable	= A TParameterModule.ParameterFile nem módosítható, mert a modul már inicializálva van.
 parametermodule_parameterfile_invalid		= A TParameterModule.ParameterFile '{0}' érvénytelen. Győződjön meg róla, hogy névtérformátumban van megadva, és a fájl kiterjesztése '.xml' vagy '.php'.
 parametermodule_parameterid_required		= A paraméterelemnek rendelkeznie kell 'id' attribútummal.
 
@@ -535,7 +498,6 @@ pager_controltopaginate_invalid				= A TPager.ControlToPaginate {0} értékének
 
 databoundcontrol_pagesize_invalid			= A(z) {0}.PageSize értéke 1-nél nem kisebb egész szám lehet.
 databoundcontrol_virtualitemcount_invalid	= A(z) {0}.VirtualItemCount értéke 0-nál nem kisebb egész szám lehet.
-databoundcontrol_currentpageindex_invalid	= A(z) {0}.CurrentPageIndex a tartományon kívül esik.
 databoundcontrol_datasource_invalid			= A(z) {0}.DataSource nem érvényes.
 databoundcontrol_datasourceid_inexistent	= A(z) '{0}' DataSourceID nem létező vezérlőre hivatkozik.
 databoundcontrol_datasourceid_invalid		= A(z) '{0}' DataSourceID értékének az IDataSource interfészt megvalósító vezérlőre kell hivatkoznia.
@@ -551,25 +513,18 @@ datasourceview_delete_unsupported			= A(z) {0} nem támogatja a törlést.
 readonlydatasource_datasource_invalid		= A TReadOnlyDataSource tömb, IDataSource vagy Traversable adatforrást igényel.
 readonlydatasourceview_datasource_invalid	= A TReadOnlyDataSourceView null, tömb vagy Traversable adatforrást igényel.
 
-clientscript_invalid_file_position			= Érvénytelen '{1}' fájlpozíció a(z) '{0}' TClientScript vezérlőnél; 'Head', 'Here' vagy 'Begin' lehet.
-clientscript_invalid_package_path			= Érvénytelen '{0}' PackagePath a(z) '{1}' TClientScript vezérlőnél.
-
 tdatepicker_autopostback_unsupported		= '{0}' nem támogatja az AutoPostBack tulajdonságot.
 globalization_cache_path_failed				= A(z) '{0}' fordításiüzenet-gyorsítótár útvonala nem hozható létre. Győződjön meg róla, hogy a szülőkönyvtár létezik, és a webfolyamat írhatja.
 globalization_source_path_failed			= A(z) '{0}' fordításiüzenet-útvonal nem hozható létre. Győződjön meg róla, hogy a szülőkönyvtár létezik, és a webfolyamat írhatja.
 messagesource_connectionid_invalid			= A MessageSource_Database.source '{0}' nem érvényes TDataSourceConfig modulra mutat.
 messagesource_connectionid_required			= A MessageSource_Database.source ConnectionID értékének megadása kötelező.
 
-callback_not_support_no_priority_state_update	= A callback kérés nem támogatja a prioritás nélküli oldalállapot-frissítést.
 callback_invalid_callback_options			= '{1}' nem érvényes TCallbackOptions vezérlő a(z) '{0}' callback vezérlőhöz.
-callback_invalid_clientside_options			= A callback ClientSide tulajdonsága vagy egy TCallbackOptions vezérlő azonosítóját tartalmazó karakterlánc, vagy TCallbackClientSideOptions példány lehet.
 callback_invalid_handler					= Érvénytelen callback kezelő: a(z) {0} vezérlőnek meg kell valósítania az ICallbackEventHandler interfészt.
 callback_invalid_target						= Érvénytelen callback cél: nincs {0} azonosítójú vezérlő.
 
 callback_interval_be_positive				= A(z) "{0}" TCallbackTimer Interval értéke szigorúan nagyobb kell legyen nulla másodpercnél.
 callback_decay_be_not_negative				= A(z) "{0}" TCallbackTimer Decay értéke nem lehet negatív.
-
-callback_no_autopostback					= A(z) "{0}" vezérlőn nem engedélyezhető az AutoPostBack.
 
 xmltransform_xslextension_required			= A TXmlTransform használatához a PHP XSL kiterjesztése szükséges.
 xmltransform_transformpath_invalid			= A TXmlTransform.TransformPath '{0}' érvénytelen.
@@ -591,11 +546,8 @@ dbconnection_charset_unchangeable			= A(z) '{0}' adatbázis-illesztőprogram a m
 dbcommand_prepare_failed					= A TDbCommand nem tudta előkészíteni a(z) "{1}" SQL utasítást: {0}
 dbcommand_execute_failed					= A TDbCommand nem tudta végrehajtani a(z) "{1}" SQL utasítást: {0}
 dbcommand_query_failed						= A TDbCommand nem tudta végrehajtani a(z) "{1}" SQL lekérdezést: {0}
-dbcommand_column_empty						= A TDbCommand üres eredményt adott vissza, és nem tudta lekérni a skalárértéket.
 dbdatareader_rewind_invalid					= A TDbDataReader csak előre haladó adatfolyam. Csak egyszer járható be.
 dbtransaction_transaction_inactive			= A TDbTransaction inaktív.
-
-dbcommandbuilder_value_must_not_be_null		= A(z) {0} tulajdonság nem lehet null a(z) '{1}' tábla '{2}' oszlopának definíciója szerint.
 
 dbcommon_invalid_table_name					= A(z) '{0}' adatbázistábla nem található. Hibaüzenet: {1}.
 dbcommon_invalid_identifier_name			= Érvénytelen adatbázis-azonosító név: '{0}'; részletekért lásd: {1}.
@@ -617,6 +569,7 @@ liveprocessfork_readonly_receiver			= A TLiveProcessFork adatai a fogadó oldalo
 stream_open_failed							= A(z) '{0}' adatfolyam nem nyitható meg '{1}' módban: {2}
 binarystream_unexpected_eof					= Váratlan adatfolyamvég: {0} bájt volt szükséges, de csak {1} lett beolvasva.
 binarystream_short_write					= Hiányos írás: {0} bájt írása volt esedékes, de csak {1} lett elfogadva.
+binarystream_no_stream_owner				= A TBinaryStreamBehavior a Psr\Http\Message\StreamInterface interfészt megvalósító tulajdonost igényel.
 streamresourcewrapper_unusable_stream		= Az adatfolyam nem olvasható és nem írható, így nem tehető elérhetővé erőforrásként.
 streamfilter_already_registered				= A(z) '{0}' adatfolyamszűrő már regisztrálva van.
 streamfilter_registration_failed			= A(z) '{0}' adatfolyamszűrő nem regisztrálható a(z) '{1}' osztályhoz.
@@ -666,9 +619,6 @@ dbusermanager_userclass_invalid				= A TDbUserManager.UserClass '{0}' nem érvé
 dbusermanager_connectionid_invalid			= A TDbUserManager.ConnectionID '{0}' nem érvényes TDataSourceConfig modulra mutat.
 dbusermanager_connectionid_required			= A TDbUserManager.ConnectionID megadása kötelező.
 
-dbpluginmodule_connectionid_invalid			= A TDbPluginModule.ConnectionID '{0}' nem érvényes TDataSourceConfig modulra mutat.
-dbpluginmodule_connectionid_required		= A TDbPluginModule.ConnectionID megadása kötelező.
-
 feedservice_id_required						= A TFeedService feed elemeiben az 'id' attribútum megadása kötelező.
 feedservice_feedtype_invalid				= A(z) '{0}' feed osztálynak meg kell valósítania az IFeedContentProvider interfészt.
 feedservice_class_required					= A TFeedService feed elemeiben a 'class' attribútum megadása kötelező.
@@ -698,9 +648,7 @@ captcha_mintokenlength_invalid				= A TCaptcha.MinTokenLength értéke {0} és {
 captcha_maxtokenlength_invalid				= A TCaptcha.MaxTokenLength értéke {0} és {1} közötti egész szám lehet.
 captcha_tokenalphabet_invalid				= A TCaptcha.TokenAlphabet legalább 2 karakterből álló karakterlánc kell legyen.
 captcha_privatekey_unknown					= A TCaptcha.PrivateKey ismeretlen. Győződjön meg róla, hogy az assets könyvtárat a webkiszolgáló folyamata írhatja.
-captcha_gd2_required						= A TCaptcha használatához a PHP GD2 kiterjesztés szükséges.
 captcha_imagettftext_required				= A TCaptcha használatához TrueType betűtípus-támogatással rendelkező PHP GD2 kiterjesztés szükséges.
-captcha_imagepng_required					= A TCaptcha használatához PNG képformátum-támogatással rendelkező PHP GD2 kiterjesztés szükséges.
 
 captchavalidator_captchacontrol_required	= A TCaptchaValidator.CaptchaControl értékének létező TCaptcha vezérlőre kell mutatnia.
 captchavalidator_captchacontrol_inexistent	= A TCaptchaValidator.CaptchaControl {0} értékének létező TCaptcha vezérlőre kell mutatnia.
@@ -709,13 +657,9 @@ captchavalidator_captchacontrol_invalid		= A TCaptchaValidator.CaptchaControl {0
 recaptcha_privatekey_unknown				= A TReCaptcha.PrivateKey ismeretlen. A reCAPTCHA használatához API kulcsot kell beszerezni.
 recaptcha_publickey_unknown					= A TReCaptcha.PublicKey ismeretlen. A reCAPTCHA használatához API kulcsot kell beszerezni.
 
-recaptchavalidator_captchacontrol_invalid	= A TReCaptchaValidator.ControlToValidate TReCaptcha példány kell legyen.
-
 formguard_honeypotname_invalid				= A TFormGuard.HoneypotName '{0}' csak betűket, számjegyeket, '_' és '-' karaktereket tartalmazhat.
 proofofwork_complexity_invalid				= A TProofOfWork.Complexity értéke {0} és {1} közötti egész szám lehet.
 proofofworkvalidator_control_invalid		= A TProofOfWorkValidator.ControlToValidate '{0}' értékének TProofOfWork vezérlőre kell mutatnia.
-
-slider_handle_class_invalid					= A TSlider.HandleClass '{0}' nem érvényes felhasználói osztály. Az osztálynak a TSliderHandle osztályból kell származnia.
 
 cachepagestatepersister_cachemoduleid_invalid	= A TCachePageStatePersister.CacheModuleID '{0}' nem érvényes gyorsítótármodulra mutat.
 cachepagestatepersister_cache_required		= A TCachePageStatePersister betöltött gyorsítótármodult igényel.
@@ -745,7 +689,7 @@ cronmethodtask_no_module					= A TCronMethodTask nem találta a(z) '{0}' modult.
 cron_usermanager_nonexistent				= A TCronModule nem találta a(z) '{0}' nevű UserManager modult.
 cron_usermanager_invalid					= A TCronModule '{0}' UserManager értéke nem TUserManager.
 cron_task_as_array_required					= A TCronModule konfigurációjában a feladat (task job) nem tömb.
-cron_duplicate_task_name					= A TCronModule feladatainak egyedi névvel kell rendelkezniük.
+cron_duplicate_task_name					= A TCronModule feladatneveinek egyedinek kell lenniük; a(z) '{0}' többször is definiálva van.
 cron_schedule_required						= A cron feladatnak rendelkeznie kell ütemezéssel.
 cron_task_required							= A cron feladatnak rendelkeznie kell feladattal (task).
 cron_not_a_crontask							= A(z) '{0}' cron feladat nem TCronTask.
@@ -767,22 +711,14 @@ bithelper_invalid_color_in					= A TBitHelper legalább egy bemeneti bitet (In B
 bithelper_invalid_color_out					= A TBitHelper legalább egy kimeneti bitet (Out Bit) igényel. '{0}' lett megadva.
 bithelper_bad_mirror_bits					= A TBitHelper nem tud '{0}' bitet tükrözni {1} bites PHP környezetben.
 
-ar_data_invalid								= A(z) {0}.copyFrom() paraméterként csak objektumot vagy tömböt fogad el.
-ar_save_invalid								= A(z) {0} példány nem menthető, mert törölt vagy ismeretlen állapotú.
-ar_delete_invalid							= A(z) {0} példány nem törölhető, mert új rekord vagy már törölt rekord.
-
 dbmetadata_invalid_database_driver			= A(z) '{0}' illesztőprogram nem támogatott. Telepítse a hozzá tartozó PRADO illesztőprogramot, ha elérhető.
 dbmetadata_not_meta_data					= A várt illesztőprogram-osztály {1}, de {0} osztály érkezett.
 dbmetadata_tableinfo_class_invalid			= A TDbMetaData '{0}' táblainformáció-osztálya könyvtárnévtér, nem osztály.
 
 datasource_dbconnection_invalid				= A TDataSourceConfig.DbConnection '{0}' érvénytelen. Győződjön meg róla, hogy érvényes alkalmazásmodulra mutat.
-distributeddatasource_child_required		= A(z) {0} legalább egy '{1}' gyermekelemet igényel.
-masterslavedbconnection_connection_exists	= A(z) {0}.{1} kapcsolat már létezik.
-masterslavedbconnection_interface_required	= A(z) {0}.{1} a(z) {2} interfészt megvalósító példányt igényel.
-slavedbconnection_requires_master			= A(z) {0} {1} példányt igényel.
+datasource_dbconnection_exists				= A TDataSourceConfig.ConnectionClass az adatbázis-kapcsolat létrehozása után nem állítható '{0}' értékre.
 
 response_status_reason_missing				= A HTTP 1.1 kiterjesztett állapotkódokhoz indoklás (reason) szükséges
-response_status_reason_badchars				= HTTP 1.1 fejlécben a status-reason token nem tartalmazhat CR vagy LF tokent
 
 activefileupload_temppath_invalid			= A TActiveFileUpload TempPath '{0}' útvonala nem létezik, vagy a webkiszolgáló folyamata nem írhatja.
 
@@ -795,6 +731,7 @@ tactivetablerow_control_notincollection		= A(z) {0} '{1}' nem tagja a szülő TT
 juioptions_option_invalid					= '{1}' nem érvényes beállítás a(z) '{0}' vezérlőhöz.
 
 ratinglist_invalid_caption_id				= '{0}' nem érvényes feliratvezérlő a(z) '{0}' TRatingList vezérlőhöz.
+ratinglist_table_layout_only				= A TRatingList.RepeatLayout értéke csak Table lehet.
 
 accordion_activeviewid_invalid				= A TAccordion.ActiveViewID azonosítója érvénytelen: '{0}'.
 accordion_activeviewindex_invalid			= A TAccordion.ActiveViewIndex indexe érvénytelen: '{0}'.
@@ -804,8 +741,6 @@ dot_bad_size								= A TDot Size értéke pozitív egész szám kell legyen, de
 dot_bad_border_width						= A TDot FlatBorderWidth értéke szám kell legyen opcionális % jellel vagy CSS hosszegységgel, de '{0}'
 
 juidatepicker_settextmode_unsupported		= A TJuiDatePicker TextMode tulajdonsága nem módosítható.
-
-control_adapter_not_active					= BaseActiveControl tulajdonság lett meghívva nem aktív vezérlőn.
 
 figcaption_requires_figure_parent			= A(z) '{0}' TFigureCaption elemnek TFigure vezérlő közvetlen gyermekének kell lennie.
 summary_requires_details_parent				= A(z) '{0}' TSummary elemnek TDetails vezérlő közvetlen gyermekének kell lennie.
@@ -824,3 +759,31 @@ webtemplate_invalid_child					= A(z) '{0}' TWebTemplate nem tartalmazhat '{1}' e
 vardumper_not_array							= A __debuginfo() metódusnak tömböt kell visszaadnia.
 
 htmlpurifier_source_path_failed				= A(z) '{0}' html purifier gyorsítótár-útvonal nem hozható létre. Győződjön meg róla, hogy a szülőkönyvtár létezik, és a webfolyamat írhatja.
+
+active_controls_client_side_exists			= A(z) '{0}' vezérlő már rendelkezik ClientSide beállításokkal; a ClientSide tulajdonság nem cserélhető le.
+componentreflection_class_invalid			= A TComponentReflection osztálynevet vagy objektumot igényel.
+datasize_no_negative_size					= A TDataSize.Size értéke 0 vagy annál nagyobb kell legyen; {0} lett megadva.
+date_to_parse_must_be_string				= A TSimpleDateFormatter csak karakterlánc értéket tud elemezni.
+dbuser_dbconnection_invalid					= A TDbUser adatbázis-kapcsolatot igényel. Állítsa be a DbConnection tulajdonságot, vagy hozza létre a felhasználót egy TDbUserManager modulon keresztül.
+deflatestream_init_failed					= A TDeflateStream nem tudta inicializálni a deflate kontextust a(z) '{0}' kódoláshoz.
+form_defaultbutton_invalid					= A TForm.DefaultButton '{0}' nem az űrlapon belüli vezérlőre hivatkozik.
+inflatestream_init_failed					= A TInflateStream nem tudta inicializálni az inflate kontextust a(z) '{0}' kódoláshoz.
+logroute_bad_level							= A TLogRoute.Levels '{0}' nem definiált naplózási szintet tartalmaz.
+logroute_bad_prefix_callback				= A TLogRoute.PrefixCallback hívható (callable) kell legyen.
+memcached_extension_required				= A TMemCache használatához a memcached PHP kiterjesztés szükséges.
+metatagcollection_metatag_invalid			= A TMetaTagCollection csak TMetaTag objektumokat fogad el.
+numberformat_type_invalid					= A TNumberFormat.Type '{0}' nem érvényes.
+pageddatasource_datasource_invalid			= A TPagedDataSource.DataSource tömb vagy a Traversable interfészt megvalósító objektum kell legyen.
+pageddatasource_pagesize_invalid			= A TPagedDataSource.PageSize értéke 0-nál nagyobb kell legyen.
+pageddatasource_virtualitemcount_invalid	= A TPagedDataSource.VirtualItemCount értéke 0 vagy annál nagyobb kell legyen.
+pagedlist_currentpageindex_invalid			= A TPagedList.CurrentPageIndex a tartományon kívül esik.
+pagedlist_pagesize_invalid					= A TPagedList.PageSize értéke 0-nál nagyobb kell legyen.
+phpstream_no_stream_owner					= A TPhpStreamBehavior a Psr\Http\Message\StreamInterface interfészt megvalósító tulajdonost igényel.
+pipe_popen_failed							= A TPipeStream nem tudott csővezetéket (pipe) nyitni a(z) '{0}' parancshoz '{1}' módban.
+process_descriptor_unusable					= A TProcess {0} leírója nem megnyitott erőforrásra hivatkozik.
+process_invalid_pipe_offset					= A TProcess '{0}' csővezeték-offsetje nem csővezetékszám.
+process_open_failed							= A TProcess nem tudta elindítani a(z) '{0}' parancsot.
+rediscache_extension_required				= A TRedisCache használatához a redis PHP kiterjesztés szükséges.
+tablecellcollection_tablecell_required		= A TTableCellCollection csak TTableCell objektumokat fogad el.
+tablefooterrow_tablesection_readonly		= A TTableFooterRow.TableSection csak olvasható.
+tableheaderrow_tablesection_readonly		= A TTableHeaderRow.TableSection csak olvasható.
