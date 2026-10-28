@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' ของ TSock
 eventloop_delay_invalid						= ค่าหน่วงเวลาของอีเวนต์ลูป '{0}' ไม่ถูกต้อง ต้องเป็นศูนย์วินาทีหรือมากกว่า
 eventloop_callback_invalid					= คอลแบ็กของอีเวนต์ลูป '{0}' ไม่เป็นที่รู้จัก ไม่เคยถูกลงทะเบียนหรือถูกยกเลิกไปแล้ว
 eventloop_signals_unsupported				= คอลแบ็กสัญญาณของอีเวนต์ลูปต้องมีส่วนขยาย pcntl
+async_cancelled							= การดำเนินการถูกยกเลิก
+async_timeout							= การดำเนินการหมดเวลาหลังจาก {0} วินาที
+async_any_empty							= TAsync::any() ไม่ได้รับ future ใด ๆ
+async_deferred_complete					= TDeferred เสร็จสมบูรณ์แล้ว future จะถูกแก้ไขหรือปฏิเสธได้เพียงครั้งเดียว
 
 bitreader_invalid_bits						= ไม่สามารถอ่าน {0} บิตได้ จำนวนบิตต้องอยู่ระหว่าง 0 ถึงความกว้างของจำนวนเต็มบนแพลตฟอร์ม
 bitreader_64bit_php_required				= การอ่าน {0} บิตต้องใช้ PHP รุ่น 64 บิต
@@ -760,9 +764,16 @@ progress_max_invalid						= Max ของ TProgress ต้องมากกว�
 time_invalid_datetime						= DateTime ของ TTime ต้องเป็น DateTimeInterface, DateInterval, สตริง หรือค่าตัวเลข แต่ได้รับ {0}
 time_invalid_text_format					= TextFormat '{0}' ของ TTime ไม่ใช่ชื่อค่าคงที่ของ TTimeFormat หรือแพตเทิร์นวันเวลาของ ICU
 
+svgdocument_invalid						= มาร์กอัป SVG ไม่ใช่ XML ที่มีรูปแบบถูกต้อง
+svgdocument_entity_invalid				= มาร์กอัป SVG ประกาศเอนทิตี ซึ่งไม่ได้รับอนุญาต
+svgdocument_root_invalid				= เอลิเมนต์รากของมาร์กอัป SVG ไม่ใช่ <svg>
+svgdocument_file_invalid				= ไม่สามารถอ่านไฟล์ SVG '{0}' ได้
+
 bdo_dir_invalid								= {0}.Dir '{1}' ไม่ถูกต้อง ค่าที่อนุญาตคือ 'ltr' และ 'rtl'
 footnote_referencelist_missing				= TFootnote '{0}' ไม่มี TReferenceList: ReferenceList '{1}' ไม่ใช่ TReferenceList หรือเพจไม่มี TReferenceList เลย
 referencelist_headerlevel_invalid			= HeaderLevel ของ TReferenceList ต้องอยู่ระหว่าง 1 ถึง 6 แต่ได้รับ {0}
+
+hgroup_headerlevel_invalid				= HeaderLevel ของ THGroup ต้องอยู่ระหว่าง 1 ถึง 6 แต่ได้รับ {0}
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ไม่สามารถมี '{1}' ได้: คอนโทรลแบบแอ็กทีฟ โพสต์แบ็ก และตัวตรวจสอบความถูกต้องไม่ทำงานภายในเนื้อหาเทมเพลตแบบคงที่ ให้ใช้มาร์กอัปธรรมดาพร้อมเพลซโฮลเดอร์ {{...}} หรือกำหนด ValidateContent="false"
 

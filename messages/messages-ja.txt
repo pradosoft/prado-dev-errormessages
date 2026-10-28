@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule の EventLoopCla
 eventloop_delay_invalid						= イベントループの遅延 '{0}' は無効です。0 秒以上でなければなりません。
 eventloop_callback_invalid					= イベントループのコールバック '{0}' は不明です。登録されていないか、既にキャンセルされています。
 eventloop_signals_unsupported				= イベントループのシグナルコールバックには pcntl 拡張モジュールが必要です。
+async_cancelled							= 操作はキャンセルされました。
+async_timeout							= 操作は {0} 秒後にタイムアウトしました。
+async_any_empty							= TAsync::any() に future が渡されませんでした。
+async_deferred_complete					= TDeferred は既に完了しています。future の解決または拒否は一度だけです。
 
 bitreader_invalid_bits						= {0} ビットを読み取ることはできません。ビット数は 0 からプラットフォームの整数幅までの範囲でなければなりません。
 bitreader_64bit_php_required				= {0} ビットの読み取りには 64 ビット版の PHP が必要です。
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress の Max は 0 より大きくなければ�
 time_invalid_datetime						= TTime の DateTime は DateTimeInterface、DateInterval、文字列、または数値でなければなりません。{0} が指定されました。
 time_invalid_text_format					= TTime の TextFormat '{0}' は TTimeFormat の定数名でも ICU の日時パターンでもありません。
 
+svgdocument_invalid						= SVG マークアップは整形式の XML ではありません。
+svgdocument_entity_invalid				= SVG マークアップはエンティティを宣言していますが、これは許可されていません。
+svgdocument_root_invalid				= SVG マークアップのルート要素が <svg> ではありません。
+svgdocument_file_invalid				= SVG ファイル '{0}' を読み込めません。
+
 bdo_dir_invalid								= {0}.Dir '{1}' は無効です。許可される値は 'ltr' と 'rtl' です。
 footnote_referencelist_missing				= TFootnote '{0}' に TReferenceList がありません。ReferenceList '{1}' が TReferenceList ではないか、ページに存在しません。
 referencelist_headerlevel_invalid			= TReferenceList の HeaderLevel は 1 から 6 まででなければなりません。{0} が指定されました。
+
+hgroup_headerlevel_invalid				= THGroup の HeaderLevel は 1 から 6 まででなければなりません。{0} が指定されました。
 
 webtemplate_invalid_child					= TWebTemplate '{0}' に '{1}' を含めることはできません。アクティブコントロール、ポストバックコントロール、バリデータコントロールは不活性なテンプレートコンテンツ内では機能しません。{{...}} プレースホルダーを使用したプレーンマークアップを使用するか、ValidateContent="false" を設定してください。
 

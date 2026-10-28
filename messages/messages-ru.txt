@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' у TSocketServe
 eventloop_delay_invalid						= Задержка цикла событий '{0}' недопустима. Она должна быть равна нулю или более секунд.
 eventloop_callback_invalid					= Callback цикла событий '{0}' неизвестен: он не был зарегистрирован или уже отменён.
 eventloop_signals_unsupported				= Для callback-обработчиков сигналов цикла событий требуется расширение pcntl.
+async_cancelled							= Операция была отменена.
+async_timeout							= Время ожидания операции истекло через {0} секунд.
+async_any_empty							= TAsync::any() не получил ни одного future.
+async_deferred_complete					= TDeferred уже завершён; future разрешается или отклоняется только один раз.
 
 bitreader_invalid_bits						= Невозможно прочитать {0} бит; количество должно быть от 0 до разрядности целого числа платформы.
 bitreader_64bit_php_required				= Для чтения {0} бит требуется 64-битная сборка PHP.
@@ -760,9 +764,16 @@ progress_max_invalid						= Max у TProgress должно быть больше 
 time_invalid_datetime						= DateTime у TTime должно быть DateTimeInterface, DateInterval, строкой или числовым значением; передано {0}.
 time_invalid_text_format					= TextFormat у TTime '{0}' не является именем константы TTimeFormat или шаблоном даты и времени ICU.
 
+svgdocument_invalid						= SVG-разметка не является корректно сформированным XML.
+svgdocument_entity_invalid				= SVG-разметка объявляет сущности, что не допускается.
+svgdocument_root_invalid				= Корневой элемент SVG-разметки не является <svg>.
+svgdocument_file_invalid				= Не удаётся прочитать SVG-файл '{0}'.
+
 bdo_dir_invalid								= {0}.Dir '{1}' недопустимо. Допустимые значения: 'ltr' и 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' не имеет TReferenceList: ReferenceList '{1}' не является TReferenceList, либо на странице его нет.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel должен быть от 1 до 6; передано {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel должен быть от 1 до 6; передано {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' не может содержать '{1}': активные, postback- и валидирующие элементы управления не работают внутри инертного содержимого шаблона. Используйте обычную разметку с плейсхолдерами {{...}} или установите ValidateContent="false".
 

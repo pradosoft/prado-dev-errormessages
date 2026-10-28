@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Händelseloopens fördröjning '{0}' är ogiltig. Den måste vara noll eller fler sekunder.
 eventloop_callback_invalid					= Händelseloopens callback '{0}' är okänd; den registrerades aldrig eller har redan avbrutits.
 eventloop_signals_unsupported				= Signal-callbacks i händelseloopen kräver tillägget pcntl.
+async_cancelled							= Åtgärden avbröts.
+async_timeout							= Åtgärden fick timeout efter {0} sekunder.
+async_any_empty							= TAsync::any() tog inte emot några futures.
+async_deferred_complete					= TDeferred är redan slutförd; en future löses eller avvisas bara en gång.
 
 bitreader_invalid_bits						= Det går inte att läsa {0} bitar; antalet måste ligga mellan 0 och plattformens heltalsbredd.
 bitreader_64bit_php_required				= Att läsa {0} bitar kräver en 64-bitars PHP-version.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max måste vara större än 0; {0} angavs.
 time_invalid_datetime						= TTime DateTime måste vara ett DateTimeInterface, DateInterval, en sträng eller ett numeriskt värde; {0} angavs.
 time_invalid_text_format					= TTime TextFormat '{0}' är inte ett TTimeFormat-konstantnamn eller ett ICU-datum-/tidsmönster.
 
+svgdocument_invalid						= SVG-markupen är inte välformad XML.
+svgdocument_entity_invalid				= SVG-markupen deklarerar entiteter, vilket inte är tillåtet.
+svgdocument_root_invalid				= Rotelementet i SVG-markupen är inte <svg>.
+svgdocument_file_invalid				= SVG-filen '{0}' kan inte läsas.
+
 bdo_dir_invalid								= {0}.Dir '{1}' är ogiltig. Tillåtna värden är 'ltr' och 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' har ingen TReferenceList: ReferenceList '{1}' är inte en TReferenceList, eller så har sidan ingen.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel måste vara 1 till 6; {0} angavs.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel måste vara 1 till 6; {0} angavs.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' kan inte innehålla '{1}': aktiva kontroller, postback-kontroller och valideringskontroller fungerar inte inuti inert mallinnehåll. Använd vanlig markup med {{...}}-platshållare, eller sätt ValidateContent="false".
 

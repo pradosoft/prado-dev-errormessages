@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Sündmustsükli viivitus '{0}' on vigane. See peab olema null või enam sekundit.
 eventloop_callback_invalid					= Sündmustsükli tagasikutse '{0}' on tundmatu; seda ei ole kunagi registreeritud või see on juba tühistatud.
 eventloop_signals_unsupported				= Sündmustsükli signaalide tagasikutsed nõuavad laiendust pcntl.
+async_cancelled							= Toiming tühistati.
+async_timeout							= Toiming aegus pärast {0} sekundit.
+async_any_empty							= TAsync::any() ei saanud ühtegi future'it.
+async_deferred_complete					= TDeferred on juba lõpetatud; future lahendatakse või lükatakse tagasi ainult üks kord.
 
 bitreader_invalid_bits						= {0} bitti ei saa lugeda; arv peab olema vahemikus 0 kuni platvormi täisarvu laius.
 bitreader_64bit_php_required				= {0} biti lugemine nõuab 64-bitist PHP ehitust.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max peab olema suurem kui 0; anti {0}.
 time_invalid_datetime						= TTime DateTime peab olema DateTimeInterface, DateInterval, sõne või arvväärtus; anti {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ei ole TTimeFormat konstandi nimi ega ICU kuupäeva-aja muster.
 
+svgdocument_invalid						= SVG märgistus ei ole korrektselt vormistatud XML.
+svgdocument_entity_invalid				= SVG märgistus deklareerib olemeid, mis ei ole lubatud.
+svgdocument_root_invalid				= SVG märgistuse juurelement ei ole <svg>.
+svgdocument_file_invalid				= SVG-faili '{0}' ei saa lugeda.
+
 bdo_dir_invalid								= {0}.Dir '{1}' on vigane. Lubatud väärtused on 'ltr' ja 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' juurde ei kuulu TReferenceList: ReferenceList '{1}' ei ole TReferenceList või lehel pole ühtegi.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel peab olema 1 kuni 6; anti {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel peab olema 1 kuni 6; anti {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ei saa sisaldada elementi '{1}': aktiivsed, postback- ja valideerimisjuhtelemendid ei toimi inertse mallisisu sees. Kasuta tavalist märgendust koos {{...}} kohatäidetega või määra ValidateContent="false".
 

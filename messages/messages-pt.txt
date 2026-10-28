@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= O EventLoopClass '{0}' de TSocketSer
 eventloop_delay_invalid						= O atraso do event loop '{0}' é inválido. Deve ser zero ou mais segundos.
 eventloop_callback_invalid					= O callback do event loop '{0}' é desconhecido; nunca foi registrado ou já foi cancelado.
 eventloop_signals_unsupported				= Callbacks de sinal do event loop requerem a extensão pcntl.
+async_cancelled							= A operação foi cancelada.
+async_timeout							= A operação expirou após {0} segundos.
+async_any_empty							= TAsync::any() não recebeu nenhum future.
+async_deferred_complete					= O TDeferred já está completo; um future é resolvido ou rejeitado apenas uma vez.
 
 bitreader_invalid_bits						= Não é possível ler {0} bits; a contagem deve estar entre 0 e a largura de inteiro da plataforma.
 bitreader_64bit_php_required				= Ler {0} bits requer uma build de PHP de 64 bits.
@@ -760,9 +764,16 @@ progress_max_invalid						= O Max de TProgress deve ser maior que 0; {0} foi for
 time_invalid_datetime						= O DateTime de TTime deve ser um DateTimeInterface, DateInterval, string ou valor numérico; {0} foi fornecido.
 time_invalid_text_format					= O TextFormat '{0}' de TTime não é um nome de constante de TTimeFormat nem um padrão de data e hora ICU.
 
+svgdocument_invalid						= A marcação SVG não é XML bem formado.
+svgdocument_entity_invalid				= A marcação SVG declara entidades, o que não é permitido.
+svgdocument_root_invalid				= O elemento raiz da marcação SVG não é <svg>.
+svgdocument_file_invalid				= O arquivo SVG '{0}' não pode ser lido.
+
 bdo_dir_invalid								= {0}.Dir '{1}' é inválido. Os valores permitidos são 'ltr' e 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' não tem TReferenceList: ReferenceList '{1}' não é um TReferenceList, ou a página não tem nenhum.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel deve ser de 1 a 6; {0} informado.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel deve ser de 1 a 6; {0} informado.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' não pode conter '{1}': controles ativos, de postback e validadores não funcionam dentro de conteúdo de template inerte. Use marcação simples com placeholders {{...}} ou defina ValidateContent="false".
 

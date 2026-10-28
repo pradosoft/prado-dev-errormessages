@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule 的 EventLoopCla
 eventloop_delay_invalid						= 事件循环延迟“{0}”无效。它必须大于或等于零秒。
 eventloop_callback_invalid					= 事件循环回调“{0}”未知；它从未注册或已被取消。
 eventloop_signals_unsupported				= 事件循环的信号回调需要 pcntl 扩展。
+async_cancelled							= 操作已被取消。
+async_timeout							= 操作在 {0} 秒后超时。
+async_any_empty							= TAsync::any() 未收到任何 future。
+async_deferred_complete					= TDeferred 已经完成；future 只能被解决或拒绝一次。
 
 bitreader_invalid_bits						= 无法读取 {0} 位；位数必须在 0 和平台整数宽度之间。
 bitreader_64bit_php_required				= 读取 {0} 位需要 64 位的 PHP 构建。
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress 的 Max 必须大于 0；给定的是 {0}�
 time_invalid_datetime						= TTime 的 DateTime 必须是 DateTimeInterface、DateInterval、字符串或数值；给定的是 {0}。
 time_invalid_text_format					= TTime 的 TextFormat“{0}”不是 TTimeFormat 常量名或 ICU 日期时间模式。
 
+svgdocument_invalid						= SVG 标记不是格式良好的 XML。
+svgdocument_entity_invalid				= SVG 标记声明了实体，这是不允许的。
+svgdocument_root_invalid				= SVG 标记的根元素不是 <svg>。
+svgdocument_file_invalid				= 无法读取 SVG 文件“{0}”。
+
 bdo_dir_invalid								= {0}.Dir“{1}”无效。允许的值为“ltr”和“rtl”。
 footnote_referencelist_missing				= TFootnote“{0}”没有 TReferenceList：ReferenceList“{1}”不是 TReferenceList，或者页面中没有任何 TReferenceList。
 referencelist_headerlevel_invalid			= TReferenceList 的 HeaderLevel 必须为 1 到 6；实际为 {0}。
+
+hgroup_headerlevel_invalid				= THGroup 的 HeaderLevel 必须为 1 到 6；实际为 {0}。
 
 webtemplate_invalid_child					= TWebTemplate“{0}”不能包含“{1}”：活动控件、回发控件和验证器控件在惰性模板内容中无法工作。请使用带 {{...}} 占位符的纯标记，或设置 ValidateContent="false"。
 

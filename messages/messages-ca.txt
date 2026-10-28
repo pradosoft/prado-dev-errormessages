@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= L'EventLoopClass '{0}' de TSocketSer
 eventloop_delay_invalid						= El retard '{0}' del bucle d'esdeveniments no és vàlid. Ha de ser zero o més segons.
 eventloop_callback_invalid					= La crida de retorn '{0}' del bucle d'esdeveniments és desconeguda; no s'ha registrat mai o ja s'ha cancel·lat.
 eventloop_signals_unsupported				= Les crides de retorn de senyals del bucle d'esdeveniments requereixen l'extensió pcntl.
+async_cancelled							= L'operació s'ha cancel·lat.
+async_timeout							= L'operació ha excedit el temps d'espera després de {0} segons.
+async_any_empty							= TAsync::any() no ha rebut cap future.
+async_deferred_complete					= El TDeferred ja està complet; un future es resol o es rebutja una sola vegada.
 
 bitreader_invalid_bits						= No es poden llegir {0} bits; el recompte ha d'estar entre 0 i l'amplada d'enter de la plataforma.
 bitreader_64bit_php_required				= Llegir {0} bits requereix una compilació de PHP de 64 bits.
@@ -760,9 +764,16 @@ progress_max_invalid						= El Max de TProgress ha de ser superior a 0; s'ha don
 time_invalid_datetime						= El DateTime de TTime ha de ser un DateTimeInterface, un DateInterval, una cadena o un valor numèric; s'ha donat {0}.
 time_invalid_text_format					= El TextFormat '{0}' de TTime no és el nom d'una constant de TTimeFormat ni un patró de data i hora ICU.
 
+svgdocument_invalid						= El marcatge SVG no és XML ben format.
+svgdocument_entity_invalid				= El marcatge SVG declara entitats, cosa que no està permesa.
+svgdocument_root_invalid				= L'element arrel del marcatge SVG no és <svg>.
+svgdocument_file_invalid				= No es pot llegir el fitxer SVG '{0}'.
+
 bdo_dir_invalid								= {0}.Dir '{1}' no és vàlid. Els valors permesos són 'ltr' i 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' no té cap TReferenceList: ReferenceList '{1}' no és un TReferenceList, o la pàgina no en té cap.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel ha de ser d'1 a 6; s'ha indicat {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel ha de ser d'1 a 6; s'ha indicat {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' no pot contenir '{1}': els controls actius, de postback i de validació no funcionen dins de contingut de plantilla inert. Utilitzeu marcatge simple amb marcadors de posició {{...}}, o establiu ValidateContent="false".
 

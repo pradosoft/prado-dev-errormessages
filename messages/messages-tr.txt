@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Olay döngüsü gecikmesi '{0}' geçersiz. Sıfır ya da daha fazla saniye olmalıdır.
 eventloop_callback_invalid					= Olay döngüsü geri çağrısı '{0}' bilinmiyor; hiç kaydedilmemiş ya da zaten iptal edilmiş.
 eventloop_signals_unsupported				= Olay döngüsü sinyal geri çağrıları pcntl eklentisini gerektirir.
+async_cancelled							= İşlem iptal edildi.
+async_timeout							= İşlem {0} saniye sonra zaman aşımına uğradı.
+async_any_empty							= TAsync::any() hiçbir future almadı.
+async_deferred_complete					= TDeferred zaten tamamlanmış; bir future yalnızca bir kez çözülür ya da reddedilir.
 
 bitreader_invalid_bits						= {0} bit okunamıyor; sayı 0 ile platform tamsayı genişliği arasında olmalıdır.
 bitreader_64bit_php_required				= {0} bit okumak 64 bit bir PHP derlemesi gerektirir.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max 0'dan büyük olmalıdır; {0} verildi
 time_invalid_datetime						= TTime DateTime bir DateTimeInterface, DateInterval, dize ya da sayısal değer olmalıdır; {0} verildi.
 time_invalid_text_format					= TTime TextFormat '{0}' bir TTimeFormat sabit adı ya da ICU tarih-saat deseni değil.
 
+svgdocument_invalid						= SVG işaretlemesi iyi biçimlendirilmiş XML değil.
+svgdocument_entity_invalid				= SVG işaretlemesi varlık bildiriyor; buna izin verilmez.
+svgdocument_root_invalid				= SVG işaretlemesinin kök öğesi <svg> değil.
+svgdocument_file_invalid				= SVG dosyası '{0}' okunamıyor.
+
 bdo_dir_invalid								= {0}.Dir '{1}' geçersiz. İzin verilen değerler 'ltr' ve 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' için TReferenceList yok: ReferenceList '{1}' bir TReferenceList değil ya da sayfada hiç yok.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel 1 ile 6 arasında olmalıdır; {0} verildi.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel 1 ile 6 arasında olmalıdır; {0} verildi.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' '{1}' içeremez: etkin, geri gönderim ve doğrulayıcı denetimleri durağan şablon içeriğinde çalışmaz. {{...}} yer tutucularıyla düz işaretleme kullanın ya da ValidateContent="false" ayarlayın.
 

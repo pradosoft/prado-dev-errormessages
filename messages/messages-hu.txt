@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= A TSocketServerModule EventLoopClass
 eventloop_delay_invalid						= Az eseményciklus '{0}' késleltetése érvénytelen. Nulla vagy több másodperc kell legyen.
 eventloop_callback_invalid					= Az eseményciklus '{0}' callbackje ismeretlen; sosem lett regisztrálva, vagy már visszavonták.
 eventloop_signals_unsupported				= Az eseményciklus szignál-callbackjeihez a pcntl kiterjesztés szükséges.
+async_cancelled							= A művelet meg lett szakítva.
+async_timeout							= A művelet {0} másodperc után túllépte az időkorlátot.
+async_any_empty							= A TAsync::any() nem kapott egyetlen future-t sem.
+async_deferred_complete					= A TDeferred már befejeződött; egy future csak egyszer oldható fel vagy utasítható el.
 
 bitreader_invalid_bits						= {0} bit nem olvasható; a számnak 0 és a platform egészszám-szélessége közé kell esnie.
 bitreader_64bit_php_required				= {0} bit olvasása 64 bites PHP buildet igényel.
@@ -760,9 +764,16 @@ progress_max_invalid						= A TProgress Max értéke 0-nál nagyobb kell legyen;
 time_invalid_datetime						= A TTime DateTime értéke DateTimeInterface, DateInterval, karakterlánc vagy numerikus érték lehet; {0} lett megadva.
 time_invalid_text_format					= A TTime TextFormat '{0}' nem TTimeFormat konstansnév és nem ICU dátum-idő minta.
 
+svgdocument_invalid						= Az SVG jelölés nem jól formázott XML.
+svgdocument_entity_invalid				= Az SVG jelölés entitásokat deklarál, ami nem megengedett.
+svgdocument_root_invalid				= Az SVG jelölés gyökéreleme nem <svg>.
+svgdocument_file_invalid				= A(z) '{0}' SVG fájl nem olvasható.
+
 bdo_dir_invalid								= A(z) {0}.Dir '{1}' érvénytelen. A megengedett értékek: 'ltr' és 'rtl'.
 footnote_referencelist_missing				= A(z) '{0}' TFootnote vezérlőnek nincs TReferenceList vezérlője: a(z) '{1}' ReferenceList nem TReferenceList, vagy az oldalon nincs ilyen.
 referencelist_headerlevel_invalid			= A TReferenceList HeaderLevel értéke 1 és 6 között kell legyen; {0} lett megadva.
+
+hgroup_headerlevel_invalid				= A THGroup HeaderLevel értéke 1 és 6 között kell legyen; {0} lett megadva.
 
 webtemplate_invalid_child					= A(z) '{0}' TWebTemplate nem tartalmazhat '{1}' elemet: az aktív, visszaküldő (postback) és ellenőrző vezérlők nem működnek inert sablontartalomban. Használjon egyszerű jelölést {{...}} helyőrzőkkel, vagy állítsa be a ValidateContent="false" értéket.
 

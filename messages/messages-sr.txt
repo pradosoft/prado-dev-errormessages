@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Кашњење петље догађаја '{0}' није важеће. Мора бити нула или више секунди.
 eventloop_callback_invalid					= Callback петље догађаја '{0}' није познат; никада није регистрован или је већ отказан.
 eventloop_signals_unsupported				= Сигнални callback-ови петље догађаја захтевају проширење pcntl.
+async_cancelled							= Операција је отказана.
+async_timeout							= Операција је истекла након {0} секунди.
+async_any_empty							= TAsync::any() није примио ниједан future.
+async_deferred_complete					= TDeferred је већ довршен; future се разрешава или одбија само једном.
 
 bitreader_invalid_bits						= Није могуће прочитати {0} бита; број мора бити између 0 и ширине целог броја платформе.
 bitreader_64bit_php_required				= Читање {0} бита захтева 64-битну PHP верзију.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max мора бити већи од 0; д�
 time_invalid_datetime						= TTime DateTime мора бити DateTimeInterface, DateInterval, стринг или нумеричка вредност; дато је {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' није назив TTimeFormat константе ни ICU образац датума и времена.
 
+svgdocument_invalid						= SVG ознаке нису добро обликован XML.
+svgdocument_entity_invalid				= SVG ознаке декларишу ентитете, што није дозвољено.
+svgdocument_root_invalid				= Коренски елемент SVG ознака није <svg>.
+svgdocument_file_invalid				= SVG датотека '{0}' не може да се прочита.
+
 bdo_dir_invalid								= {0}.Dir '{1}' није важећи. Дозвољене вредности су 'ltr' и 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' нема TReferenceList: ReferenceList '{1}' није TReferenceList, или га страница нема.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel мора бити од 1 до 6; дато је {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel мора бити од 1 до 6; дато је {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' не може садржати '{1}': активне, postback и валидаторске контроле не функционишу унутар инертног садржаја шаблона. Користите обичан markup са {{...}} чуварима места или поставите ValidateContent="false".
 

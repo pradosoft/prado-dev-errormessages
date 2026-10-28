@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Întârzierea buclei de evenimente '{0}' este invalidă. Trebuie să fie zero sau mai multe secunde.
 eventloop_callback_invalid					= Callback-ul buclei de evenimente '{0}' este necunoscut; nu a fost niciodată înregistrat sau a fost deja anulat.
 eventloop_signals_unsupported				= Callback-urile de semnal ale buclei de evenimente necesită extensia pcntl.
+async_cancelled							= Operația a fost anulată.
+async_timeout							= Operația a expirat după {0} secunde.
+async_any_empty							= TAsync::any() nu a primit niciun future.
+async_deferred_complete					= TDeferred este deja finalizat; un future este rezolvat sau respins o singură dată.
 
 bitreader_invalid_bits						= Nu se pot citi {0} biți; numărul trebuie să fie între 0 și lățimea întregului pe platformă.
 bitreader_64bit_php_required				= Citirea a {0} biți necesită o versiune PHP pe 64 de biți.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max trebuie să fie mai mare decât 0; s-a
 time_invalid_datetime						= TTime DateTime trebuie să fie un DateTimeInterface, DateInterval, șir sau valoare numerică; s-a primit {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nu este un nume de constantă TTimeFormat sau un model de dată și oră ICU.
 
+svgdocument_invalid						= Marcajul SVG nu este XML bine format.
+svgdocument_entity_invalid				= Marcajul SVG declară entități, ceea ce nu este permis.
+svgdocument_root_invalid				= Elementul rădăcină al marcajului SVG nu este <svg>.
+svgdocument_file_invalid				= Fișierul SVG '{0}' nu poate fi citit.
+
 bdo_dir_invalid								= {0}.Dir '{1}' este invalid. Valorile permise sunt 'ltr' și 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' nu are TReferenceList: ReferenceList '{1}' nu este un TReferenceList sau pagina nu are niciunul.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel trebuie să fie între 1 și 6; s-a primit {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel trebuie să fie între 1 și 6; s-a primit {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nu poate conține '{1}': controalele active, de postback și de validare nu funcționează în interiorul conținutului de șablon inert. Folosiți marcaj simplu cu substituenți {{...}} sau setați ValidateContent="false".
 

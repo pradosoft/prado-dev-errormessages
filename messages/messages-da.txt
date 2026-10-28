@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Hændelsesløkkens forsinkelse '{0}' er ugyldig. Den skal være nul eller flere sekunder.
 eventloop_callback_invalid					= Hændelsesløkkens callback '{0}' er ukendt; den er aldrig blevet registreret eller er allerede annulleret.
 eventloop_signals_unsupported				= Hændelsesløkkens signal-callbacks kræver pcntl-udvidelsen.
+async_cancelled							= Operationen blev annulleret.
+async_timeout							= Operationen fik timeout efter {0} sekunder.
+async_any_empty							= TAsync::any() modtog ingen futures.
+async_deferred_complete					= TDeferred er allerede fuldført; en future afgøres eller afvises kun én gang.
 
 bitreader_invalid_bits						= Kan ikke læse {0} bits; antallet skal være mellem 0 og platformens heltalsbredde.
 bitreader_64bit_php_required				= Læsning af {0} bits kræver en 64-bit PHP-build.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max skal være større end 0; {0} angivet.
 time_invalid_datetime						= TTime DateTime skal være en DateTimeInterface, DateInterval, streng eller numerisk værdi; {0} angivet.
 time_invalid_text_format					= TTime TextFormat '{0}' er ikke et TTimeFormat-konstantnavn eller et ICU-datetime-mønster.
 
+svgdocument_invalid						= SVG-markupen er ikke velformet XML.
+svgdocument_entity_invalid				= SVG-markupen erklærer entiteter, hvilket ikke er tilladt.
+svgdocument_root_invalid				= Rodelementet i SVG-markupen er ikke <svg>.
+svgdocument_file_invalid				= SVG-filen '{0}' kan ikke læses.
+
 bdo_dir_invalid								= {0}.Dir '{1}' er ugyldig. De tilladte værdier er 'ltr' og 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' har ingen TReferenceList: ReferenceList '{1}' er ikke en TReferenceList, eller siden har ingen.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel skal være 1 til 6; {0} blev angivet.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel skal være 1 til 6; {0} blev angivet.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' kan ikke indeholde '{1}': aktive, postback- og validatorkontroller fungerer ikke inden i inert skabelonindhold. Brug almindelig markup med {{...}}-pladsholdere, eller sæt ValidateContent="false".
 

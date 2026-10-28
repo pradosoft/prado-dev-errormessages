@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Zpoždění smyčky událostí '{0}' je neplatné. Musí to být nula nebo více sekund.
 eventloop_callback_invalid					= Callback smyčky událostí '{0}' je neznámý; nikdy nebyl registrován nebo je již zrušen.
 eventloop_signals_unsupported				= Signálové callbacky smyčky událostí vyžadují rozšíření pcntl.
+async_cancelled							= Operace byla zrušena.
+async_timeout							= Operace vypršela po {0} sekundách.
+async_any_empty							= TAsync::any() neobdržel žádné futures.
+async_deferred_complete					= TDeferred je již dokončen; future se vyřeší nebo zamítne pouze jednou.
 
 bitreader_invalid_bits						= Nelze číst {0} bitů; počet musí být mezi 0 a šířkou celého čísla platformy.
 bitreader_64bit_php_required				= Čtení {0} bitů vyžaduje 64bitové sestavení PHP.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max musí být větší než 0; zadáno {0
 time_invalid_datetime						= TTime DateTime musí být DateTimeInterface, DateInterval, řetězec nebo číselná hodnota; zadáno {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' není název konstanty TTimeFormat ani ICU vzor data a času.
 
+svgdocument_invalid						= Značkování SVG není správně utvořené XML.
+svgdocument_entity_invalid				= Značkování SVG deklaruje entity, což není povoleno.
+svgdocument_root_invalid				= Kořenový element značkování SVG není <svg>.
+svgdocument_file_invalid				= Soubor SVG '{0}' nelze přečíst.
+
 bdo_dir_invalid								= {0}.Dir '{1}' je neplatné. Povolené hodnoty jsou 'ltr' a 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' nemá žádný TReferenceList: ReferenceList '{1}' není TReferenceList, nebo stránka žádný neobsahuje.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel musí být 1 až 6; zadáno {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel musí být 1 až 6; zadáno {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nemůže obsahovat '{1}': aktivní, postbackové a validační prvky uvnitř neaktivního obsahu šablony nefungují. Použijte prostý markup se zástupnými symboly {{...}}, nebo nastavte ValidateContent="false".
 

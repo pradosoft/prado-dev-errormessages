@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Įvykių ciklo delsa '{0}' yra netinkama. Ji turi būti nulis arba daugiau sekundžių.
 eventloop_callback_invalid					= Įvykių ciklo callback '{0}' nežinomas; jis niekada nebuvo užregistruotas arba jau atšauktas.
 eventloop_signals_unsupported				= Įvykių ciklo signalų callback funkcijoms reikalingas pcntl plėtinys.
+async_cancelled							= Operacija buvo atšaukta.
+async_timeout							= Operacijai skirtas laikas baigėsi po {0} sekundžių.
+async_any_empty							= TAsync::any() negavo nė vieno future.
+async_deferred_complete					= TDeferred jau užbaigtas; future išsprendžiamas arba atmetamas tik vieną kartą.
 
 bitreader_invalid_bits						= Negalima nuskaityti {0} bitų; kiekis turi būti nuo 0 iki platformos sveikojo skaičiaus pločio.
 bitreader_64bit_php_required				= {0} bitų skaitymui reikalinga 64 bitų PHP versija.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max turi būti didesnė nei 0; pateikta {0
 time_invalid_datetime						= TTime DateTime turi būti DateTimeInterface, DateInterval, simbolių eilutė arba skaitinė reikšmė; pateikta {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nėra TTimeFormat konstantos vardas arba ICU datos ir laiko šablonas.
 
+svgdocument_invalid						= SVG žymėjimas nėra taisyklingai suformuotas XML.
+svgdocument_entity_invalid				= SVG žymėjimas deklaruoja esybes, o tai neleidžiama.
+svgdocument_root_invalid				= SVG žymėjimo šakninis elementas nėra <svg>.
+svgdocument_file_invalid				= Nepavyksta perskaityti SVG failo '{0}'.
+
 bdo_dir_invalid								= {0}.Dir '{1}' yra netinkama. Leidžiamos reikšmės yra 'ltr' ir 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' neturi TReferenceList: ReferenceList '{1}' nėra TReferenceList arba puslapis jo neturi.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel turi būti nuo 1 iki 6; nurodyta {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel turi būti nuo 1 iki 6; nurodyta {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' negali turėti '{1}': aktyvūs, postback ir validatorių valdikliai neveikia neaktyviame šablono turinyje. Naudokite paprastą žymėjimą su {{...}} vietaženkliais arba nustatykite ValidateContent="false".
 

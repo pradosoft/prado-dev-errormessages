@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= De event-loop-vertraging '{0}' is ongeldig. Deze moet nul of meer seconden zijn.
 eventloop_callback_invalid					= De event-loop-callback '{0}' is onbekend; deze is nooit geregistreerd of is al geannuleerd.
 eventloop_signals_unsupported				= Signaal-callbacks van de event loop vereisen de extensie pcntl.
+async_cancelled							= De bewerking is geannuleerd.
+async_timeout							= De bewerking is na {0} seconden verlopen.
+async_any_empty							= TAsync::any() heeft geen futures ontvangen.
+async_deferred_complete					= De TDeferred is al voltooid; een future wordt slechts één keer opgelost of afgewezen.
 
 bitreader_invalid_bits						= Kan {0} bits niet lezen; het aantal moet tussen 0 en de integerbreedte van het platform liggen.
 bitreader_64bit_php_required				= Het lezen van {0} bits vereist een 64-bits PHP-build.
@@ -760,9 +764,16 @@ progress_max_invalid						= De Max van TProgress moet groter dan 0 zijn; {0} opg
 time_invalid_datetime						= De DateTime van TTime moet een DateTimeInterface, DateInterval, string of numerieke waarde zijn; {0} opgegeven.
 time_invalid_text_format					= De TextFormat '{0}' van TTime is geen constantenaam van TTimeFormat en geen ICU-datum-tijdpatroon.
 
+svgdocument_invalid						= De SVG-markup is geen welgevormde XML.
+svgdocument_entity_invalid				= De SVG-markup declareert entiteiten, wat niet is toegestaan.
+svgdocument_root_invalid				= Het rootelement van de SVG-markup is niet <svg>.
+svgdocument_file_invalid				= Het SVG-bestand '{0}' kan niet worden gelezen.
+
 bdo_dir_invalid								= {0}.Dir '{1}' is ongeldig. Toegestane waarden zijn 'ltr' en 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' heeft geen TReferenceList: ReferenceList '{1}' is geen TReferenceList, of de pagina heeft er geen.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel moet 1 tot en met 6 zijn; {0} opgegeven.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel moet 1 tot en met 6 zijn; {0} opgegeven.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' kan '{1}' niet bevatten: active, postback- en validator-controls werken niet binnen inerte sjablooninhoud. Gebruik gewone markup met {{...}}-placeholders of stel ValidateContent="false" in.
 

@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Tapahtumasilmukan viive '{0}' on virheellinen. Sen on oltava nolla sekuntia tai enemmän.
 eventloop_callback_invalid					= Tapahtumasilmukan takaisinkutsu '{0}' on tuntematon; sitä ei ole koskaan rekisteröity tai se on jo peruttu.
 eventloop_signals_unsupported				= Tapahtumasilmukan signaalitakaisinkutsut vaativat pcntl-laajennuksen.
+async_cancelled							= Toiminto peruttiin.
+async_timeout							= Toiminto aikakatkaistiin {0} sekunnin jälkeen.
+async_any_empty							= TAsync::any() ei saanut yhtään futurea.
+async_deferred_complete					= TDeferred on jo valmis; future ratkaistaan tai hylätään vain kerran.
 
 bitreader_invalid_bits						= Ei voi lukea {0} bittiä; määrän on oltava välillä 0 ja alustan kokonaisluvun bittileveys.
 bitreader_64bit_php_required				= {0} bitin lukeminen vaatii 64-bittisen PHP-version.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max -arvon on oltava suurempi kuin 0; anne
 time_invalid_datetime						= TTime DateTime -arvon on oltava DateTimeInterface, DateInterval, merkkijono tai numeerinen arvo; annettu arvo on {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ei ole TTimeFormat-vakion nimi eikä ICU-päivämäärämuotokuvio.
 
+svgdocument_invalid						= SVG-merkintä ei ole hyvin muodostettua XML:ää.
+svgdocument_entity_invalid				= SVG-merkintä määrittelee entiteettejä, mikä ei ole sallittua.
+svgdocument_root_invalid				= SVG-merkinnän juurielementti ei ole <svg>.
+svgdocument_file_invalid				= SVG-tiedostoa '{0}' ei voi lukea.
+
 bdo_dir_invalid								= {0}.Dir '{1}' on virheellinen. Sallitut arvot ovat 'ltr' ja 'rtl'.
 footnote_referencelist_missing				= TFootnote-kontrollilla '{0}' ei ole TReferenceList-kontrollia: ReferenceList '{1}' ei ole TReferenceList, tai sivulla ei ole sellaista.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel -arvon on oltava välillä 1–6; annettu arvo on {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel -arvon on oltava välillä 1–6; annettu arvo on {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ei voi sisältää kohdetta '{1}': aktiiviset, postback- ja validaattorikontrollit eivät toimi passiivisen mallinesisällön sisällä. Käytä pelkkää merkkausta {{...}}-paikkamerkeillä tai aseta ValidateContent="false".
 

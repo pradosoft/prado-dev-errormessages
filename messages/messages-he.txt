@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' של TSocketSer
 eventloop_delay_invalid						= ההשהיה '{0}' של לולאת האירועים אינה תקינה. היא חייבת להיות אפס שניות או יותר.
 eventloop_callback_invalid					= ה-callback '{0}' של לולאת האירועים אינו מוכר; הוא מעולם לא נרשם או שכבר בוטל.
 eventloop_signals_unsupported				= callbacks של אותות בלולאת האירועים דורשים את הרחבת pcntl.
+async_cancelled							= הפעולה בוטלה.
+async_timeout							= תם הזמן הקצוב לפעולה לאחר {0} שניות.
+async_any_empty							= TAsync::any() לא קיבל אף future.
+async_deferred_complete					= ה-TDeferred כבר הושלם; future נפתר או נדחה פעם אחת בלבד.
 
 bitreader_invalid_bits						= לא ניתן לקרוא {0} סיביות; המספר חייב להיות בין 0 לרוחב המספר השלם של הפלטפורמה.
 bitreader_64bit_php_required				= קריאת {0} סיביות דורשת בניית PHP של 64 סיביות.
@@ -760,9 +764,16 @@ progress_max_invalid						= Max של TProgress חייב להיות גדול מ-0
 time_invalid_datetime						= DateTime של TTime חייב להיות DateTimeInterface, DateInterval, מחרוזת או ערך מספרי; התקבל {0}.
 time_invalid_text_format					= TextFormat '{0}' של TTime אינו שם קבוע של TTimeFormat או תבנית תאריך-שעה של ICU.
 
+svgdocument_invalid						= תגי ה-SVG אינם XML תקין מבחינה מבנית.
+svgdocument_entity_invalid				= תגי ה-SVG מצהירים על ישויות, דבר שאינו מותר.
+svgdocument_root_invalid				= אלמנט השורש של תגי ה-SVG אינו <svg>.
+svgdocument_file_invalid				= לא ניתן לקרוא את קובץ ה-SVG '{0}'.
+
 bdo_dir_invalid								= {0}.Dir '{1}' אינו תקין. הערכים המותרים הם 'ltr' ו-'rtl'.
 footnote_referencelist_missing				= ל-TFootnote '{0}' אין TReferenceList: ReferenceList '{1}' אינו TReferenceList, או שאין כזה בעמוד.
 referencelist_headerlevel_invalid			= HeaderLevel של TReferenceList חייב להיות בין 1 ל-6; התקבל {0}.
+
+hgroup_headerlevel_invalid				= HeaderLevel של THGroup חייב להיות בין 1 ל-6; התקבל {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' אינו יכול להכיל '{1}': פקדים פעילים, פקדי postback ופקדי אימות אינם פועלים בתוך תוכן תבנית אינרטי. יש להשתמש בתגיות (markup) רגילות עם מצייני מקום {{...}}, או להגדיר ValidateContent="false".
 

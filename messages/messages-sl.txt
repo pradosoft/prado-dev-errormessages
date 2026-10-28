@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Zakasnitev dogodkovne zanke '{0}' ni veljavna. Mora biti nič ali več sekund.
 eventloop_callback_invalid					= Povratni klic dogodkovne zanke '{0}' ni znan; ni bil nikoli registriran ali pa je že preklican.
 eventloop_signals_unsupported				= Povratni klici signalov v dogodkovni zanki zahtevajo razširitev pcntl.
+async_cancelled							= Operacija je bila preklicana.
+async_timeout							= Operacija je potekla po {0} sekundah.
+async_any_empty							= TAsync::any() ni prejel nobenega future.
+async_deferred_complete					= TDeferred je že zaključen; future se razreši ali zavrne samo enkrat.
 
 bitreader_invalid_bits						= Ni mogoče prebrati {0} bitov; število mora biti med 0 in širino celega števila platforme.
 bitreader_64bit_php_required				= Branje {0} bitov zahteva 64-bitno gradnjo PHP.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max mora biti večji od 0; podano je {0}.
 time_invalid_datetime						= TTime DateTime mora biti DateTimeInterface, DateInterval, niz ali številska vrednost; podano je {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' ni ime konstante TTimeFormat ali vzorec datuma in časa ICU.
 
+svgdocument_invalid						= Oznake SVG niso dobro oblikovan XML.
+svgdocument_entity_invalid				= Oznake SVG deklarirajo entitete, kar ni dovoljeno.
+svgdocument_root_invalid				= Korenski element oznak SVG ni <svg>.
+svgdocument_file_invalid				= Datoteke SVG '{0}' ni mogoče prebrati.
+
 bdo_dir_invalid								= {0}.Dir '{1}' ni veljaven. Dovoljeni vrednosti sta 'ltr' in 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' nima TReferenceList: ReferenceList '{1}' ni TReferenceList ali pa ga stran nima.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel mora biti med 1 in 6; podano je {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel mora biti med 1 in 6; podano je {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ne sme vsebovati '{1}': aktivni, povratni (postback) in validacijski kontrolniki ne delujejo znotraj nedejavne vsebine predloge. Uporabite navadno označevanje z ograditvami {{...}} ali nastavite ValidateContent="false".
 

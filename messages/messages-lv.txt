@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Notikumu cikla aizkave '{0}' nav derīga. Tai jābūt nullei vai vairāk sekundēm.
 eventloop_callback_invalid					= Notikumu cikla atzvans '{0}' nav zināms; tas nekad nav reģistrēts vai ir jau atcelts.
 eventloop_signals_unsupported				= Notikumu cikla signālu atzvaniem nepieciešams pcntl paplašinājums.
+async_cancelled							= Darbība tika atcelta.
+async_timeout							= Darbības noildze iestājās pēc {0} sekundēm.
+async_any_empty							= TAsync::any() nesaņēma nevienu future.
+async_deferred_complete					= TDeferred jau ir pabeigts; future tiek atrisināts vai noraidīts tikai vienu reizi.
 
 bitreader_invalid_bits						= Nevar nolasīt {0} bitus; skaitam jābūt no 0 līdz platformas veselā skaitļa platumam.
 bitreader_64bit_php_required				= {0} bitu nolasīšanai nepieciešams 64 bitu PHP būvējums.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max jābūt lielākam par 0; norādīts {0
 time_invalid_datetime						= TTime DateTime jābūt DateTimeInterface, DateInterval, virknei vai skaitliskai vērtībai; norādīts {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nav TTimeFormat konstantes nosaukums vai ICU datuma un laika paraugs.
 
+svgdocument_invalid						= SVG marķējums nav labi formēts XML.
+svgdocument_entity_invalid				= SVG marķējums deklarē entītijas, kas nav atļauts.
+svgdocument_root_invalid				= SVG marķējuma saknes elements nav <svg>.
+svgdocument_file_invalid				= SVG failu '{0}' nevar nolasīt.
+
 bdo_dir_invalid								= {0}.Dir '{1}' nav derīga. Atļautās vērtības ir 'ltr' un 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' nav TReferenceList: ReferenceList '{1}' nav TReferenceList, vai lapai tā nav.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel jābūt no 1 līdz 6; norādīts {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel jābūt no 1 līdz 6; norādīts {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nevar saturēt '{1}': aktīvās, postback un validatora vadīklas nedarbojas neaktīvā veidnes saturā. Lietojiet vienkāršu iezīmējumu ar {{...}} vietturiem vai iestatiet ValidateContent="false".
 

@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' در TSocketSer
 eventloop_delay_invalid						= تأخیر حلقه رویداد '{0}' نامعتبر است. باید صفر ثانیه یا بیشتر باشد.
 eventloop_callback_invalid					= callback حلقه رویداد '{0}' ناشناخته است؛ هرگز ثبت نشده یا قبلاً لغو شده است.
 eventloop_signals_unsupported				= callbackهای سیگنال حلقه رویداد به افزونه pcntl نیاز دارند.
+async_cancelled							= عملیات لغو شد.
+async_timeout							= مهلت عملیات پس از {0} ثانیه به پایان رسید.
+async_any_empty							= TAsync::any() هیچ future دریافت نکرد.
+async_deferred_complete					= TDeferred از قبل کامل شده است؛ یک future فقط یک بار حل یا رد می‌شود.
 
 bitreader_invalid_bits						= خواندن {0} بیت ممکن نیست؛ تعداد باید بین 0 و پهنای عدد صحیح پلتفرم باشد.
 bitreader_64bit_php_required				= خواندن {0} بیت به یک نسخه 64 بیتی PHP نیاز دارد.
@@ -760,9 +764,16 @@ progress_max_invalid						= Max در TProgress باید بزرگ‌تر از 0 �
 time_invalid_datetime						= DateTime در TTime باید یک DateTimeInterface، DateInterval، رشته یا مقدار عددی باشد؛ {0} داده شده است.
 time_invalid_text_format					= TextFormat '{0}' در TTime نام یک ثابت TTimeFormat یا یک الگوی تاریخ‌وزمان ICU نیست.
 
+svgdocument_invalid						= نشانه‌گذاری SVG یک XML خوش‌ساخت نیست.
+svgdocument_entity_invalid				= نشانه‌گذاری SVG موجودیت‌هایی را اعلام می‌کند که مجاز نیستند.
+svgdocument_root_invalid				= عنصر ریشه نشانه‌گذاری SVG <svg> نیست.
+svgdocument_file_invalid				= فایل SVG '{0}' قابل خواندن نیست.
+
 bdo_dir_invalid								= {0}.Dir '{1}' نامعتبر است. مقادیر مجاز 'ltr' و 'rtl' هستند.
 footnote_referencelist_missing				= TFootnote '{0}' هیچ TReferenceList ندارد: ReferenceList '{1}' یک TReferenceList نیست، یا صفحه هیچ‌کدام را ندارد.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel باید بین 1 تا 6 باشد؛ {0} داده شده است.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel باید بین 1 تا 6 باشد؛ {0} داده شده است.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' نمی‌تواند '{1}' را شامل شود: کنترل‌های active، postback و validator درون محتوای قالب غیرفعال کار نمی‌کنند. از نشانه‌گذاری ساده با جانگهدارهای {{...}} استفاده کنید، یا ValidateContent="false" را تنظیم کنید.
 

@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' для TSocketS
 eventloop_delay_invalid						= Затримка циклу подій '{0}' неприпустима. Вона має становити нуль або більше секунд.
 eventloop_callback_invalid					= Зворотний виклик циклу подій '{0}' невідомий; його ніколи не реєстрували або вже скасовано.
 eventloop_signals_unsupported				= Зворотні виклики сигналів у циклі подій потребують розширення pcntl.
+async_cancelled							= Операцію скасовано.
+async_timeout							= Час очікування операції минув через {0} секунд.
+async_any_empty							= TAsync::any() не отримав жодного future.
+async_deferred_complete					= TDeferred уже завершено; future розв'язується або відхиляється лише один раз.
 
 bitreader_invalid_bits						= Не можна прочитати {0} біт; кількість має бути від 0 до ширини цілого числа платформи.
 bitreader_64bit_php_required				= Читання {0} біт потребує 64-бітної збірки PHP.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max повинен бути більшим
 time_invalid_datetime						= TTime DateTime повинен бути DateTimeInterface, DateInterval, рядком або числовим значенням; передано {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' не є ім'ям константи TTimeFormat або шаблоном дати й часу ICU.
 
+svgdocument_invalid						= SVG-розмітка не є коректно сформованим XML.
+svgdocument_entity_invalid				= SVG-розмітка оголошує сутності, що не дозволено.
+svgdocument_root_invalid				= Кореневий елемент SVG-розмітки не є <svg>.
+svgdocument_file_invalid				= Не вдається прочитати SVG-файл '{0}'.
+
 bdo_dir_invalid								= {0}.Dir '{1}' неприпустимий. Дозволені значення: 'ltr' і 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' не має TReferenceList: ReferenceList '{1}' не є TReferenceList, або на сторінці його немає.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel має бути від 1 до 6; передано {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel має бути від 1 до 6; передано {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' не може містити '{1}': активні елементи керування, елементи зворотного надсилання та валідатори не працюють усередині інертного вмісту шаблону. Використовуйте звичайну розмітку із заповнювачами {{...}} або встановіть ValidateContent="false".
 

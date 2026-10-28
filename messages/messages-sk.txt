@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Oneskorenie slučky udalostí '{0}' je neplatné. Musí byť nula alebo viac sekúnd.
 eventloop_callback_invalid					= Callback slučky udalostí '{0}' je neznámy; nikdy nebol zaregistrovaný alebo už bol zrušený.
 eventloop_signals_unsupported				= Callbacky signálov slučky udalostí vyžadujú rozšírenie pcntl.
+async_cancelled							= Operácia bola zrušená.
+async_timeout							= Operácia vypršala po {0} sekundách.
+async_any_empty							= TAsync::any() nedostal žiadne futures.
+async_deferred_complete					= TDeferred je už dokončený; future sa vyrieši alebo zamietne iba raz.
 
 bitreader_invalid_bits						= Nie je možné čítať {0} bitov; počet musí byť medzi 0 a šírkou celého čísla platformy.
 bitreader_64bit_php_required				= Čítanie {0} bitov vyžaduje 64-bitový build PHP.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max musí byť väčšie ako 0; zadané {0
 time_invalid_datetime						= TTime DateTime musí byť DateTimeInterface, DateInterval, reťazec alebo číselná hodnota; zadané {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nie je názov konštanty TTimeFormat ani ICU vzor dátumu a času.
 
+svgdocument_invalid						= Značkovanie SVG nie je správne utvorené XML.
+svgdocument_entity_invalid				= Značkovanie SVG deklaruje entity, čo nie je povolené.
+svgdocument_root_invalid				= Koreňový element značkovania SVG nie je <svg>.
+svgdocument_file_invalid				= Súbor SVG '{0}' nie je možné prečítať.
+
 bdo_dir_invalid								= {0}.Dir '{1}' je neplatné. Povolené hodnoty sú 'ltr' a 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' nemá TReferenceList: ReferenceList '{1}' nie je TReferenceList alebo stránka žiadny nemá.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel musí byť od 1 do 6; zadané {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel musí byť od 1 do 6; zadané {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' nemôže obsahovať '{1}': aktívne, postback a validačné ovládacie prvky nefungujú vnútri inertného obsahu šablóny. Použite obyčajné značky so zástupnými symbolmi {{...}} alebo nastavte ValidateContent="false".
 

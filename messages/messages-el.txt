@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= Το EventLoopClass '{0}' του TSo
 eventloop_delay_invalid						= Η καθυστέρηση '{0}' του βρόχου συμβάντων δεν είναι έγκυρη. Πρέπει να είναι μηδέν ή περισσότερα δευτερόλεπτα.
 eventloop_callback_invalid					= Η επανάκληση '{0}' του βρόχου συμβάντων είναι άγνωστη· δεν καταχωρίστηκε ποτέ ή έχει ήδη ακυρωθεί.
 eventloop_signals_unsupported				= Οι επανακλήσεις σημάτων του βρόχου συμβάντων απαιτούν την επέκταση pcntl.
+async_cancelled							= Η λειτουργία ακυρώθηκε.
+async_timeout							= Η λειτουργία έληξε μετά από {0} δευτερόλεπτα.
+async_any_empty							= Το TAsync::any() δεν έλαβε κανένα future.
+async_deferred_complete					= Το TDeferred έχει ήδη ολοκληρωθεί· ένα future επιλύεται ή απορρίπτεται μόνο μία φορά.
 
 bitreader_invalid_bits						= Δεν είναι δυνατή η ανάγνωση {0} bit· το πλήθος πρέπει να είναι μεταξύ 0 και του πλάτους ακεραίου της πλατφόρμας.
 bitreader_64bit_php_required				= Η ανάγνωση {0} bit απαιτεί έκδοση PHP 64-bit.
@@ -760,9 +764,16 @@ progress_max_invalid						= Το Max του TProgress πρέπει να είνα
 time_invalid_datetime						= Το DateTime του TTime πρέπει να είναι DateTimeInterface, DateInterval, συμβολοσειρά ή αριθμητική τιμή· δόθηκε {0}.
 time_invalid_text_format					= Το TextFormat '{0}' του TTime δεν είναι όνομα σταθεράς TTimeFormat ούτε μοτίβο ημερομηνίας/ώρας ICU.
 
+svgdocument_invalid						= Η σήμανση SVG δεν είναι καλοσχηματισμένο XML.
+svgdocument_entity_invalid				= Η σήμανση SVG δηλώνει οντότητες, κάτι που δεν επιτρέπεται.
+svgdocument_root_invalid				= Το ριζικό στοιχείο της σήμανσης SVG δεν είναι <svg>.
+svgdocument_file_invalid				= Το αρχείο SVG '{0}' δεν μπορεί να διαβαστεί.
+
 bdo_dir_invalid								= Το {0}.Dir '{1}' δεν είναι έγκυρο. Οι επιτρεπόμενες τιμές είναι 'ltr' και 'rtl'.
 footnote_referencelist_missing				= Το TFootnote '{0}' δεν έχει TReferenceList: το ReferenceList '{1}' δεν είναι TReferenceList, ή η σελίδα δεν έχει κανένα.
 referencelist_headerlevel_invalid			= Το TReferenceList HeaderLevel πρέπει να είναι από 1 έως 6· δόθηκε {0}.
+
+hgroup_headerlevel_invalid				= Το THGroup HeaderLevel πρέπει να είναι από 1 έως 6· δόθηκε {0}.
 
 webtemplate_invalid_child					= Το TWebTemplate '{0}' δεν μπορεί να περιέχει '{1}': τα active, postback και validator στοιχεία ελέγχου δεν λειτουργούν μέσα σε αδρανές περιεχόμενο προτύπου. Χρησιμοποιήστε απλή σήμανση με σύμβολα κράτησης θέσης {{...}}, ή ορίστε ValidateContent="false".
 

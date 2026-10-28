@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= इवेंट लूप विलंब '{0}' अमान्य है। यह शून्य या उससे अधिक सेकंड होना चाहिए।
 eventloop_callback_invalid					= इवेंट लूप कॉलबैक '{0}' अज्ञात है; यह कभी रजिस्टर नहीं हुआ या पहले ही रद्द कर दिया गया है।
 eventloop_signals_unsupported				= इवेंट लूप सिग्नल कॉलबैक के लिए pcntl एक्सटेंशन आवश्यक है।
+async_cancelled							= ऑपरेशन रद्द कर दिया गया।
+async_timeout							= ऑपरेशन {0} सेकंड के बाद टाइम आउट हो गया।
+async_any_empty							= TAsync::any() को कोई future नहीं मिला।
+async_deferred_complete					= TDeferred पहले ही पूर्ण हो चुका है; एक future केवल एक बार resolve या reject होता है।
 
 bitreader_invalid_bits						= {0} बिट नहीं पढ़े जा सकते; गणना 0 और प्लेटफ़ॉर्म पूर्णांक चौड़ाई के बीच होनी चाहिए।
 bitreader_64bit_php_required				= {0} बिट पढ़ने के लिए 64-बिट PHP बिल्ड आवश्यक है।
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max 0 से बड़ा होना च
 time_invalid_datetime						= TTime DateTime एक DateTimeInterface, DateInterval, स्ट्रिंग, या संख्यात्मक मान होना चाहिए; {0} दिया गया।
 time_invalid_text_format					= TTime TextFormat '{0}' कोई TTimeFormat कॉन्स्टेंट नाम या ICU datetime पैटर्न नहीं है।
 
+svgdocument_invalid						= SVG मार्कअप सुगठित XML नहीं है।
+svgdocument_entity_invalid				= SVG मार्कअप एंटिटी घोषित करता है, जिसकी अनुमति नहीं है।
+svgdocument_root_invalid				= SVG मार्कअप का रूट एलिमेंट <svg> नहीं है।
+svgdocument_file_invalid				= SVG फ़ाइल '{0}' पढ़ी नहीं जा सकती।
+
 bdo_dir_invalid								= {0}.Dir '{1}' अमान्य है। अनुमत मान 'ltr' और 'rtl' हैं।
 footnote_referencelist_missing				= TFootnote '{0}' के पास कोई TReferenceList नहीं है: ReferenceList '{1}' TReferenceList नहीं है, या पेज में कोई नहीं है।
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel 1 से 6 तक होना चाहिए; {0} दिया गया।
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel 1 से 6 तक होना चाहिए; {0} दिया गया।
 
 webtemplate_invalid_child					= TWebTemplate '{0}' में '{1}' नहीं हो सकता: सक्रिय, पोस्टबैक और वैलिडेटर कंट्रोल निष्क्रिय टेम्पलेट सामग्री के भीतर काम नहीं करते। {{...}} प्लेसहोल्डर के साथ सादे मार्कअप का उपयोग करें, या ValidateContent="false" सेट करें।
 

@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass TSocketServerModule '
 eventloop_delay_invalid						= Tundaan event loop '{0}' tidak valid. Ia harus nol detik atau lebih.
 eventloop_callback_invalid					= Callback event loop '{0}' tidak dikenal; ia tidak pernah didaftarkan atau sudah dibatalkan.
 eventloop_signals_unsupported				= Callback sinyal event loop memerlukan ekstensi pcntl.
+async_cancelled							= Operasi dibatalkan.
+async_timeout							= Operasi melebihi batas waktu setelah {0} detik.
+async_any_empty							= TAsync::any() tidak menerima future apa pun.
+async_deferred_complete					= TDeferred sudah selesai; sebuah future hanya diselesaikan atau ditolak satu kali.
 
 bitreader_invalid_bits						= Tidak bisa membaca {0} bit; jumlahnya harus antara 0 dan lebar integer platform.
 bitreader_64bit_php_required				= Membaca {0} bit memerlukan build PHP 64-bit.
@@ -760,9 +764,16 @@ progress_max_invalid						= Max TProgress harus lebih besar dari 0; {0} diberika
 time_invalid_datetime						= DateTime TTime harus berupa DateTimeInterface, DateInterval, string, atau nilai numerik; {0} diberikan.
 time_invalid_text_format					= TextFormat TTime '{0}' bukan nama konstanta TTimeFormat atau pola datetime ICU.
 
+svgdocument_invalid						= Markup SVG bukan XML yang well-formed.
+svgdocument_entity_invalid				= Markup SVG mendeklarasikan entitas, yang tidak diperbolehkan.
+svgdocument_root_invalid				= Elemen akar markup SVG bukan <svg>.
+svgdocument_file_invalid				= File SVG '{0}' tidak bisa dibaca.
+
 bdo_dir_invalid								= {0}.Dir '{1}' tidak valid. Nilai yang diizinkan adalah 'ltr' dan 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' tidak memiliki TReferenceList: ReferenceList '{1}' bukan TReferenceList, atau halaman tidak memilikinya.
 referencelist_headerlevel_invalid			= HeaderLevel TReferenceList harus 1 sampai 6; {0} diberikan.
+
+hgroup_headerlevel_invalid				= HeaderLevel THGroup harus 1 sampai 6; {0} diberikan.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' tidak boleh berisi '{1}': kontrol aktif, postback, dan validator tidak berfungsi di dalam konten template inert. Gunakan markup biasa dengan placeholder {{...}}, atau setel ValidateContent="false".
 

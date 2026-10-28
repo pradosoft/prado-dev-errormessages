@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass TSocketServerModule '
 eventloop_delay_invalid						= Lengah gelung peristiwa '{0}' tidak sah. Ia mestilah sifar saat atau lebih.
 eventloop_callback_invalid					= Callback gelung peristiwa '{0}' tidak dikenali; ia tidak pernah didaftarkan atau sudah dibatalkan.
 eventloop_signals_unsupported				= Callback isyarat gelung peristiwa memerlukan sambungan pcntl.
+async_cancelled							= Operasi telah dibatalkan.
+async_timeout							= Operasi tamat masa selepas {0} saat.
+async_any_empty							= TAsync::any() tidak menerima sebarang future.
+async_deferred_complete					= TDeferred sudah selesai; sesuatu future hanya diselesaikan atau ditolak sekali sahaja.
 
 bitreader_invalid_bits						= Tidak dapat membaca {0} bit; bilangan mestilah antara 0 dan lebar integer platform.
 bitreader_64bit_php_required				= Membaca {0} bit memerlukan binaan PHP 64-bit.
@@ -760,9 +764,16 @@ progress_max_invalid						= Max TProgress mesti lebih besar daripada 0; {0} dibe
 time_invalid_datetime						= DateTime TTime mestilah DateTimeInterface, DateInterval, rentetan, atau nilai berangka; {0} diberikan.
 time_invalid_text_format					= TextFormat TTime '{0}' bukan nama pemalar TTimeFormat atau corak tarikh-masa ICU.
 
+svgdocument_invalid						= Penanda SVG bukan XML yang terbentuk dengan baik.
+svgdocument_entity_invalid				= Penanda SVG mengisytiharkan entiti, yang tidak dibenarkan.
+svgdocument_root_invalid				= Elemen akar penanda SVG bukan <svg>.
+svgdocument_file_invalid				= Fail SVG '{0}' tidak dapat dibaca.
+
 bdo_dir_invalid								= {0}.Dir '{1}' tidak sah. Nilai yang dibenarkan ialah 'ltr' dan 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' tidak mempunyai TReferenceList: ReferenceList '{1}' bukan TReferenceList, atau halaman tidak mempunyainya.
 referencelist_headerlevel_invalid			= HeaderLevel TReferenceList mestilah 1 hingga 6; {0} diberikan.
+
+hgroup_headerlevel_invalid				= HeaderLevel THGroup mestilah 1 hingga 6; {0} diberikan.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' tidak boleh mengandungi '{1}': kawalan aktif, postback, dan pengesah tidak berfungsi di dalam kandungan templat lengai. Gunakan penanda biasa dengan ruang letak {{...}}, atau tetapkan ValidateContent="false".
 

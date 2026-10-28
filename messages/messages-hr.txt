@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= TSocketServerModule EventLoopClass '
 eventloop_delay_invalid						= Kašnjenje petlje događaja '{0}' nije valjano. Mora biti nula ili više sekundi.
 eventloop_callback_invalid					= Callback petlje događaja '{0}' nije poznat; nikada nije registriran ili je već otkazan.
 eventloop_signals_unsupported				= Callbackovi signala petlje događaja zahtijevaju PHP proširenje pcntl.
+async_cancelled							= Operacija je otkazana.
+async_timeout							= Operacija je istekla nakon {0} sekundi.
+async_any_empty							= TAsync::any() nije primio nijedan future.
+async_deferred_complete					= TDeferred je već dovršen; future se razrješava ili odbija samo jednom.
 
 bitreader_invalid_bits						= Nije moguće pročitati {0} bitova; broj mora biti između 0 i širine cijelog broja platforme.
 bitreader_64bit_php_required				= Čitanje {0} bitova zahtijeva 64-bitnu PHP verziju.
@@ -760,9 +764,16 @@ progress_max_invalid						= TProgress Max mora biti veći od 0; zadano je {0}.
 time_invalid_datetime						= TTime DateTime mora biti DateTimeInterface, DateInterval, string ili numerička vrijednost; zadano je {0}.
 time_invalid_text_format					= TTime TextFormat '{0}' nije naziv konstante TTimeFormat ni ICU uzorak datuma i vremena.
 
+svgdocument_invalid						= SVG oznake nisu dobro oblikovani XML.
+svgdocument_entity_invalid				= SVG oznake deklariraju entitete, što nije dopušteno.
+svgdocument_root_invalid				= Korijenski element SVG oznaka nije <svg>.
+svgdocument_file_invalid				= SVG datoteku '{0}' nije moguće pročitati.
+
 bdo_dir_invalid								= {0}.Dir '{1}' nije valjan. Dopuštene vrijednosti su 'ltr' i 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' nema TReferenceList: ReferenceList '{1}' nije TReferenceList ili ga stranica nema.
 referencelist_headerlevel_invalid			= TReferenceList HeaderLevel mora biti između 1 i 6; zadano je {0}.
+
+hgroup_headerlevel_invalid				= THGroup HeaderLevel mora biti između 1 i 6; zadano je {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' ne može sadržavati '{1}': aktivne, postback i validatorske kontrole ne funkcioniraju unutar inertnog sadržaja predloška. Koristite obične oznake s {{...}} rezerviranim mjestima ili postavite ValidateContent="false".
 

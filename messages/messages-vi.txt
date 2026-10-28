@@ -598,6 +598,10 @@ socketservermodule_eventloopclass_invalid	= EventLoopClass '{0}' của TSocketSe
 eventloop_delay_invalid						= Độ trễ của vòng lặp sự kiện '{0}' không hợp lệ. Nó phải từ không giây trở lên.
 eventloop_callback_invalid					= Callback của vòng lặp sự kiện '{0}' không được biết đến; nó chưa từng được đăng ký hoặc đã bị hủy.
 eventloop_signals_unsupported				= Các callback tín hiệu của vòng lặp sự kiện yêu cầu phần mở rộng pcntl.
+async_cancelled							= Thao tác đã bị hủy.
+async_timeout							= Thao tác đã hết thời gian chờ sau {0} giây.
+async_any_empty							= TAsync::any() không nhận được future nào.
+async_deferred_complete					= TDeferred đã hoàn tất; một future chỉ được giải quyết hoặc từ chối một lần.
 
 bitreader_invalid_bits						= Không thể đọc {0} bit; số lượng phải nằm trong khoảng từ 0 đến độ rộng số nguyên của nền tảng.
 bitreader_64bit_php_required				= Đọc {0} bit yêu cầu bản dựng PHP 64-bit.
@@ -760,9 +764,16 @@ progress_max_invalid						= Max của TProgress phải lớn hơn 0; đã nhận
 time_invalid_datetime						= DateTime của TTime phải là DateTimeInterface, DateInterval, chuỗi, hoặc giá trị số; đã nhận {0}.
 time_invalid_text_format					= TextFormat '{0}' của TTime không phải là tên hằng của TTimeFormat hoặc mẫu datetime ICU.
 
+svgdocument_invalid						= Mã đánh dấu SVG không phải là XML đúng định dạng.
+svgdocument_entity_invalid				= Mã đánh dấu SVG khai báo các thực thể, điều này không được phép.
+svgdocument_root_invalid				= Phần tử gốc của mã đánh dấu SVG không phải là <svg>.
+svgdocument_file_invalid				= Không thể đọc tệp SVG '{0}'.
+
 bdo_dir_invalid								= {0}.Dir '{1}' không hợp lệ. Các giá trị cho phép là 'ltr' và 'rtl'.
 footnote_referencelist_missing				= TFootnote '{0}' không có TReferenceList: ReferenceList '{1}' không phải là một TReferenceList, hoặc trang không có TReferenceList nào.
 referencelist_headerlevel_invalid			= HeaderLevel của TReferenceList phải từ 1 đến 6; đã nhận {0}.
+
+hgroup_headerlevel_invalid				= HeaderLevel của THGroup phải từ 1 đến 6; đã nhận {0}.
 
 webtemplate_invalid_child					= TWebTemplate '{0}' không thể chứa '{1}': các điều khiển active, postback và validator không hoạt động bên trong nội dung mẫu tĩnh. Hãy dùng markup thuần với các placeholder {{...}}, hoặc đặt ValidateContent="false".
 
