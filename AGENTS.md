@@ -34,6 +34,8 @@ Procedure for a new or updated key:
 3. Keep `{n}` placeholders, class and interface names (`TPage`, `IService`, `TPageService.BasePath`), quoted literals (`'auto'`, `'.xml'`), and acronyms (PHP, SQL, HTTP, JSON, XML, CSRF) unchanged.
 4. Run `composer test`. `MessageFilesTest` names each file and key that is missing, misplaced, untranslated, or loses a placeholder or identifier.
 
+All developer-message translation work is batched: the package is brought up to date in one pass before each PRADO tag and release. Changes to error codes happen in the PRADO English master only and are not mirrored here per change.
+
 Procedure for a PRADO release sync (one batch per release):
 
 1. `composer update pradosoft/prado` to the release candidate.
