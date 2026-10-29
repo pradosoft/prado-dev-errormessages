@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array no puede establecers
 application_includefile_invalid				= No se encuentra la configuración de la aplicación {0}. Asegúrese de que esté en formato de espacio de nombres y que el archivo termine en ".xml" o ".php".
 application_basepath_invalid				= La ruta base de la aplicación '{0}' no existe o no es un directorio.
 application_runtimepath_invalid				= La ruta de ejecución de la aplicación '{0}' no existe o no tiene permisos de escritura para el proceso del servidor web.
+application_service_invalid					= El servicio '{0}' debe implementar la interfaz IService.
 application_service_class_not_found			= La clase de servicio '{0}' no existe.
 application_service_class_not_service		= La clase de servicio '{0}' no implementa IService.
 application_service_class_required			= TApplication::registerService() requiere un nombre de clase o un arreglo de configuración de servicio para el servicio '{0}'.
 application_service_default_unregister		= El servicio de páginas predeterminado '{0}' no puede darse de baja.
+application_service_unavailable				= El servicio '{0}' no está disponible en este momento.
 service_csrf_token_invalid					= El servicio '{0}' requiere un token CSRF válido.
 application_moduleid_duplicated				= El ID de módulo de aplicación '{0}' no es único.
 application_runtimepath_failed				= No se puede crear la ruta de ejecución '{0}'. Asegúrese de que el directorio padre exista y tenga permisos de escritura para el proceso web.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Solo pueden añadirse a TCacheDependencyList objetos que implementen ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' no es válido. Asegúrese de que esté en formato de espacio de nombres y apunte a un directorio válido que contenga los archivos de plantilla de error.
+pageservice_pageclass_unknown				= La clase de página '{0}' es desconocida.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' no es un directorio válido.
 pageservice_includefile_invalid				= No se encuentra la configuración del servicio de páginas {0}. Asegúrese de que esté en formato de espacio de nombres y que el archivo termine en ".xml" o ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' debe estar dentro de un TForm.
 page_head_duplicated						= Una página puede contener como máximo un THead.
 page_head_required							= Se necesita un control THead en la plantilla de la página para renderizar CSS y js en la sección head del HTML.
 page_statepersister_invalid					= El persistidor de estado de página debe implementar la interfaz IPageStatePersister.
+page_csmanagerclass_invalid					= La clase ClientScriptManager '{0}' debe ser una instancia de TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nombre de biblioteca de scripts de Prado desconocido '{0}'.
 csmanager_pradostyle_invalid				= Nombre de biblioteca de estilos de Prado desconocido '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= La operación fue cancelada.
 async_timeout							= La operación agotó el tiempo de espera tras {0} segundos.
 async_any_empty							= TAsync::any() no recibió ningún future.
 async_deferred_complete					= El TDeferred ya está completo; un future se resuelve o se rechaza una sola vez.
+asyncstream_no_resource						= TAsyncStream no puede esperar la disponibilidad; el flujo interno no tiene ningún recurso de flujo PHP abierto.
 
 bitreader_invalid_bits						= No se pueden leer {0} bits; la cantidad debe estar entre 0 y el ancho de entero de la plataforma.
 bitreader_64bit_php_required				= Leer {0} bits requiere una compilación de PHP de 64 bits.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' no es miembro de la TTableC
 
 tactivetablerow_control_outoftable			= {0} '{1}' debe estar dentro de un control TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' no es miembro de la TTableRowCollection del control TTable padre.
+juioptions_control_invalid					= El control '{0}' debe implementar IJuiOptions.
 
 juioptions_option_invalid					= '{1}' no es una opción válida para el control '{0}'.
 

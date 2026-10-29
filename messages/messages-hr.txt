@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array ne može se postavit
 application_includefile_invalid				= Nije moguće pronaći konfiguraciju aplikacije {0}. Provjerite je li u formatu imenskog prostora i završava li datoteka s ".xml" ili ".php".
 application_basepath_invalid				= Osnovna putanja aplikacije '{0}' ne postoji ili nije direktorij.
 application_runtimepath_invalid				= Putanja za izvršavanje aplikacije '{0}' ne postoji ili nije zapisiva za proces web poslužitelja.
+application_service_invalid					= Servis '{0}' mora implementirati sučelje IService.
 application_service_class_not_found			= Klasa servisa '{0}' ne postoji.
 application_service_class_not_service		= Klasa servisa '{0}' ne implementira IService.
 application_service_class_required			= TApplication::registerService() zahtijeva naziv klase ili niz konfiguracije servisa za servis '{0}'.
 application_service_default_unregister		= Zadani servis stranica '{0}' ne može se odjaviti.
+application_service_unavailable				= Servis '{0}' trenutačno nije dostupan.
 service_csrf_token_invalid					= Servis '{0}' zahtijeva valjani CSRF token.
 application_moduleid_duplicated				= ID modula aplikacije '{0}' nije jedinstven.
 application_runtimepath_failed				= Nije moguće stvoriti putanju za izvršavanje '{0}'. Provjerite postoji li nadređeni direktorij i je li zapisiv za web proces.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= U TCacheDependencyList mogu se dodati samo objekti koji implementiraju ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' nije valjan. Provjerite je li u obliku imenskog prostora i upućuje li na valjani direktorij koji sadrži datoteke predložaka grešaka.
+pageservice_pageclass_unknown				= Klasa stranice '{0}' nije poznata.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nije valjan direktorij.
 pageservice_includefile_invalid				= Nije moguće pronaći konfiguraciju servisa stranica {0}. Provjerite je li u formatu imenskog prostora i završava li datoteka s ".xml" ili ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' mora biti unutar TForm.
 page_head_duplicated						= Stranica može sadržavati najviše jedan THead.
 page_head_required							= Kontrola THead potrebna je u predlošku stranice za prikaz CSS-a i JS-a u HTML zaglavlju (head).
 page_statepersister_invalid					= Spremnik stanja stranice mora implementirati sučelje IPageStatePersister.
+page_csmanagerclass_invalid					= Klasa ClientScriptManager '{0}' mora biti instanca klase TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nepoznat naziv Prado biblioteke skripti '{0}'.
 csmanager_pradostyle_invalid				= Nepoznat naziv Prado biblioteke stilova '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Operacija je otkazana.
 async_timeout							= Operacija je istekla nakon {0} sekundi.
 async_any_empty							= TAsync::any() nije primio nijedan future.
 async_deferred_complete					= TDeferred je već dovršen; future se razrješava ili odbija samo jednom.
+asyncstream_no_resource						= TAsyncStream ne može čekati na spremnost; unutarnji tok nema otvoreni PHP resurs toka.
 
 bitreader_invalid_bits						= Nije moguće pročitati {0} bitova; broj mora biti između 0 i širine cijelog broja platforme.
 bitreader_64bit_php_required				= Čitanje {0} bitova zahtijeva 64-bitnu PHP verziju.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' nije član TTableCellCollec
 
 tactivetablerow_control_outoftable			= {0} '{1}' mora biti unutar kontrole TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' nije član TTableRowCollection nadređene kontrole TTable.
+juioptions_control_invalid					= Kontrola '{0}' mora implementirati IJuiOptions.
 
 juioptions_option_invalid					= '{1}' nije valjana opcija za kontrolu '{0}'.
 

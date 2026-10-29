@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array nie może być ustaw
 application_includefile_invalid				= Nie można znaleźć konfiguracji aplikacji {0}. Upewnij się, że jest podana w formacie przestrzeni nazw, a plik ma rozszerzenie ".xml" lub ".php".
 application_basepath_invalid				= Ścieżka bazowa aplikacji '{0}' nie istnieje lub nie jest katalogiem.
 application_runtimepath_invalid				= Ścieżka środowiska uruchomieniowego aplikacji '{0}' nie istnieje lub nie jest zapisywalna dla procesu serwera WWW.
+application_service_invalid					= Usługa '{0}' musi implementować interfejs IService.
 application_service_class_not_found			= Klasa usługi '{0}' nie istnieje.
 application_service_class_not_service		= Klasa usługi '{0}' nie implementuje IService.
 application_service_class_required			= TApplication::registerService() wymaga nazwy klasy lub tablicy konfiguracji usługi dla usługi '{0}'.
 application_service_default_unregister		= Domyślna usługa stron '{0}' nie może zostać wyrejestrowana.
+application_service_unavailable				= Usługa '{0}' jest obecnie niedostępna.
 service_csrf_token_invalid					= Usługa '{0}' wymaga prawidłowego tokenu CSRF.
 application_moduleid_duplicated				= Identyfikator modułu aplikacji '{0}' nie jest unikalny.
 application_runtimepath_failed				= Nie można utworzyć ścieżki środowiska uruchomieniowego '{0}'. Upewnij się, że katalog nadrzędny istnieje i jest zapisywalny dla procesu serwera WWW.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Do TCacheDependencyList można dodawać wyłącznie obiekty implementujące ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' jest nieprawidłowe. Upewnij się, że jest w formacie przestrzeni nazw i wskazuje prawidłowy katalog zawierający pliki szablonów błędów.
+pageservice_pageclass_unknown				= Klasa strony '{0}' jest nieznana.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' nie jest prawidłowym katalogiem.
 pageservice_includefile_invalid				= Nie można znaleźć konfiguracji usługi stron {0}. Upewnij się, że jest podana w formacie przestrzeni nazw, a plik ma rozszerzenie ".xml" lub ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' musi znajdować się wewnątrz TForm.
 page_head_duplicated						= Strona może zawierać co najwyżej jeden THead.
 page_head_required							= Kontrolka THead jest wymagana w szablonie strony, aby renderować CSS i js w sekcji head dokumentu HTML.
 page_statepersister_invalid					= Mechanizm utrwalania stanu strony musi implementować interfejs IPageStatePersister.
+page_csmanagerclass_invalid					= Klasa ClientScriptManager '{0}' musi być instancją TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nieznana nazwa biblioteki skryptów Prado '{0}'.
 csmanager_pradostyle_invalid				= Nieznana nazwa biblioteki stylów Prado '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Operacja została anulowana.
 async_timeout							= Operacja przekroczyła limit czasu po {0} sekundach.
 async_any_empty							= TAsync::any() nie otrzymał żadnych future.
 async_deferred_complete					= TDeferred jest już zakończony; future jest rozwiązywany lub odrzucany tylko raz.
+asyncstream_no_resource						= TAsyncStream nie może czekać na gotowość; wewnętrzny strumień nie ma otwartego zasobu strumienia PHP.
 
 bitreader_invalid_bits						= Nie można odczytać {0} bitów; liczba musi mieścić się między 0 a szerokością liczby całkowitej platformy.
 bitreader_64bit_php_required				= Odczyt {0} bitów wymaga 64-bitowej kompilacji PHP.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' nie jest elementem TTableCe
 
 tactivetablerow_control_outoftable			= {0} '{1}' musi znajdować się wewnątrz kontrolki TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' nie jest elementem TTableRowCollection nadrzędnej kontrolki TTable.
+juioptions_control_invalid					= Kontrolka '{0}' musi implementować IJuiOptions.
 
 juioptions_option_invalid					= '{1}' nie jest prawidłową opcją dla kontrolki '{0}'.
 

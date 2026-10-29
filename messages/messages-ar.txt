@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= لا يمكن تعيين TEventSubscription.A
 application_includefile_invalid				= تعذّر العثور على إعدادات التطبيق {0}. تأكد من أنها بصيغة نطاق الأسماء وأن الملف ينتهي بـ ".xml" أو ".php".
 application_basepath_invalid				= المسار الأساسي للتطبيق '{0}' غير موجود أو ليس دليلًا.
 application_runtimepath_invalid				= مسار وقت التشغيل للتطبيق '{0}' غير موجود أو غير قابل للكتابة من قِبل عملية خادم الويب.
+application_service_invalid					= يجب أن تنفّذ الخدمة '{0}' الواجهة IService.
 application_service_class_not_found			= صنف الخدمة '{0}' غير موجود.
 application_service_class_not_service		= صنف الخدمة '{0}' لا ينفّذ IService.
 application_service_class_required			= يتطلب TApplication::registerService() اسم صنف أو مصفوفة إعدادات خدمة للخدمة '{0}'.
 application_service_default_unregister		= لا يمكن إلغاء تسجيل خدمة الصفحات الافتراضية '{0}'.
+application_service_unavailable				= الخدمة '{0}' غير متاحة في الوقت الحالي.
 service_csrf_token_invalid					= تتطلب الخدمة '{0}' رمز CSRF صالحًا.
 application_moduleid_duplicated				= معرّف وحدة التطبيق '{0}' غير فريد.
 application_runtimepath_failed				= تعذّر إنشاء مسار وقت التشغيل '{0}'. تأكد من وجود الدليل الأب وأنه قابل للكتابة من قِبل عملية الويب.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= لا يمكن إضافة سوى الكائنات التي تنفّذ ICacheDependency إلى TCacheDependencyList.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' غير صالح. تأكد من أنه بصيغة نطاق الأسماء ويشير إلى دليل صالح يحوي ملفات قوالب الأخطاء.
+pageservice_pageclass_unknown				= صنف الصفحة '{0}' غير معروف.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' ليس دليلًا صالحًا.
 pageservice_includefile_invalid				= تعذّر العثور على إعدادات خدمة الصفحات {0}. تأكد من أنها بصيغة نطاق الأسماء وأن الملف ينتهي بـ ".xml" أو ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= يجب أن يكون {0} '{1}' محاطًا ضمن
 page_head_duplicated						= يمكن أن تحوي الصفحة THead واحدًا على الأكثر.
 page_head_required							= عنصر التحكم THead مطلوب في قالب الصفحة لعرض CSS و js في قسم head من HTML.
 page_statepersister_invalid					= يجب أن ينفّذ مُخزِّن حالة الصفحة الواجهة IPageStatePersister.
+page_csmanagerclass_invalid					= يجب أن يكون صنف ClientScriptManager '{0}' نسخة من TClientScriptManager.
 
 csmanager_pradoscript_invalid				= اسم مكتبة سكربت Prado غير معروف '{0}'.
 csmanager_pradostyle_invalid				= اسم مكتبة أنماط Prado غير معروف '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= تم إلغاء العملية.
 async_timeout							= انتهت مهلة العملية بعد {0} ثانية.
 async_any_empty							= لم يتلقَّ TAsync::any() أي futures.
 async_deferred_complete					= اكتمل TDeferred بالفعل؛ يُحلّ future أو يُرفض مرة واحدة فقط.
+asyncstream_no_resource						= لا يستطيع TAsyncStream انتظار الجاهزية؛ لا يحتوي الدفق الداخلي على مورد دفق PHP مفتوح.
 
 bitreader_invalid_bits						= لا يمكن قراءة {0} بت؛ يجب أن يكون العدد بين 0 وعرض العدد الصحيح للمنصة.
 bitreader_64bit_php_required				= تتطلب قراءة {0} بت بنية PHP بنظام 64 بت.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' ليس عضوًا في TTab
 
 tactivetablerow_control_outoftable			= يجب أن يكون {0} '{1}' محاطًا ضمن عنصر تحكم TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' ليس عضوًا في TTableRowCollection الخاصة بعنصر التحكم الأب TTable.
+juioptions_control_invalid					= يجب أن ينفّذ عنصر التحكم '{0}' الواجهة IJuiOptions.
 
 juioptions_option_invalid					= '{1}' ليس خيارًا صالحًا لعنصر التحكم '{0}'.
 

@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array tidak boleh ditetapk
 application_includefile_invalid				= Konfigurasi aplikasi {0} tidak dapat ditemui. Pastikan ia dalam format ruang nama dan fail berakhir dengan ".xml" atau ".php".
 application_basepath_invalid				= Laluan asas aplikasi '{0}' tidak wujud atau bukan direktori.
 application_runtimepath_invalid				= Laluan masa jalan aplikasi '{0}' tidak wujud atau tidak boleh ditulis oleh proses pelayan Web.
+application_service_invalid					= Perkhidmatan '{0}' mesti melaksanakan antara muka IService.
 application_service_class_not_found			= Kelas perkhidmatan '{0}' tidak wujud.
 application_service_class_not_service		= Kelas perkhidmatan '{0}' tidak melaksanakan IService.
 application_service_class_required			= TApplication::registerService() memerlukan nama kelas atau tatasusunan konfigurasi perkhidmatan untuk perkhidmatan '{0}'.
 application_service_default_unregister		= Perkhidmatan halaman lalai '{0}' tidak boleh dinyahdaftarkan.
+application_service_unavailable				= Perkhidmatan '{0}' tidak tersedia pada masa ini.
 service_csrf_token_invalid					= Perkhidmatan '{0}' memerlukan token CSRF yang sah.
 application_moduleid_duplicated				= ID modul aplikasi '{0}' tidak unik.
 application_runtimepath_failed				= Laluan masa jalan '{0}' tidak dapat dicipta. Pastikan direktori induk wujud dan boleh ditulis oleh proses Web.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Hanya objek yang melaksanakan ICacheDependency boleh ditambah ke dalam TCacheDependencyList.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' tidak sah. Pastikan ia dalam bentuk ruang nama dan menunjuk kepada direktori sah yang mengandungi fail templat ralat.
+pageservice_pageclass_unknown				= Kelas halaman '{0}' tidak dikenali.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' bukan direktori yang sah.
 pageservice_includefile_invalid				= Konfigurasi perkhidmatan halaman {0} tidak dapat ditemui. Pastikan ia dalam format ruang nama dan fail berakhir dengan ".xml" atau ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' mesti berada di dalam TForm.
 page_head_duplicated						= Halaman hanya boleh mengandungi paling banyak satu THead.
 page_head_required							= Kawalan THead diperlukan dalam templat halaman untuk memaparkan CSS dan js dalam bahagian head HTML.
 page_statepersister_invalid					= Pengekal keadaan halaman mesti melaksanakan antara muka IPageStatePersister.
+page_csmanagerclass_invalid					= Kelas ClientScriptManager '{0}' mesti merupakan tika TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nama pustaka skrip Prado '{0}' tidak dikenali.
 csmanager_pradostyle_invalid				= Nama pustaka gaya Prado '{0}' tidak dikenali.
@@ -602,6 +606,7 @@ async_cancelled							= Operasi telah dibatalkan.
 async_timeout							= Operasi tamat masa selepas {0} saat.
 async_any_empty							= TAsync::any() tidak menerima sebarang future.
 async_deferred_complete					= TDeferred sudah selesai; sesuatu future hanya diselesaikan atau ditolak sekali sahaja.
+asyncstream_no_resource						= TAsyncStream tidak dapat menunggu kesediaan; strim dalaman tidak mempunyai sumber strim PHP yang terbuka.
 
 bitreader_invalid_bits						= Tidak dapat membaca {0} bit; bilangan mestilah antara 0 dan lebar integer platform.
 bitreader_64bit_php_required				= Membaca {0} bit memerlukan binaan PHP 64-bit.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' bukan ahli TTableCellCollec
 
 tactivetablerow_control_outoftable			= {0} '{1}' mesti berada di dalam kawalan TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' bukan ahli TTableRowCollection bagi kawalan TTable induk.
+juioptions_control_invalid					= Kawalan '{0}' mesti melaksanakan IJuiOptions.
 
 juioptions_option_invalid					= '{1}' bukan pilihan yang sah untuk kawalan '{0}'.
 

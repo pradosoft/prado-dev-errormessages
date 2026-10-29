@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array не може да �
 application_includefile_invalid				= Конфигурацията на приложението {0} не може да бъде намерена. Уверете се, че е във формат на пространство от имена и че файлът завършва на ".xml" или ".php".
 application_basepath_invalid				= Базовият път на приложението '{0}' не съществува или не е директория.
 application_runtimepath_invalid				= Пътят за изпълнение на приложението '{0}' не съществува или не е достъпен за запис от процеса на уеб сървъра.
+application_service_invalid					= Услугата '{0}' трябва да имплементира интерфейса IService.
 application_service_class_not_found			= Класът на услугата '{0}' не съществува.
 application_service_class_not_service		= Класът на услугата '{0}' не имплементира IService.
 application_service_class_required			= TApplication::registerService() изисква име на клас или масив с конфигурация на услугата за услугата '{0}'.
 application_service_default_unregister		= Услугата за страници по подразбиране '{0}' не може да бъде отрегистрирана.
+application_service_unavailable				= Услугата '{0}' не е достъпна в момента.
 service_csrf_token_invalid					= Услугата '{0}' изисква валиден CSRF токен.
 application_moduleid_duplicated				= ID на модула на приложението '{0}' не е уникален.
 application_runtimepath_failed				= Пътят за изпълнение '{0}' не може да бъде създаден. Уверете се, че родителската директория съществува и е достъпна за запис от уеб процеса.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Към TCacheDependencyList могат да се добавят само обекти, имплементиращи ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' е невалидно. Уверете се, че е във формат на пространство от имена и сочи към валидна директория, съдържаща файлове с шаблони за грешки.
+pageservice_pageclass_unknown				= Класът на страницата '{0}' е неизвестен.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' не е валидна директория.
 pageservice_includefile_invalid				= Конфигурацията на услугата за страници {0} не може да бъде намерена. Уверете се, че е във формат на пространство от имена и че файлът завършва на ".xml" или ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' трябва да бъде вложен 
 page_head_duplicated						= Една страница може да съдържа най-много един THead.
 page_head_required							= В шаблона на страницата е необходима контрола THead, за да се рендират CSS и js в секцията head на HTML.
 page_statepersister_invalid					= Класът за запазване на състоянието на страницата трябва да имплементира интерфейса IPageStatePersister.
+page_csmanagerclass_invalid					= Класът ClientScriptManager '{0}' трябва да бъде инстанция на TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Неизвестно име на скриптова библиотека на Prado '{0}'.
 csmanager_pradostyle_invalid				= Неизвестно име на библиотека със стилове на Prado '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Операцията беше отменена.
 async_timeout							= Операцията изтече след {0} секунди.
 async_any_empty							= TAsync::any() не получи futures.
 async_deferred_complete					= TDeferred вече е завършен; future се разрешава или отхвърля само веднъж.
+asyncstream_no_resource						= TAsyncStream не може да изчака готовност; вътрешният поток няма отворен ресурс на PHP поток.
 
 bitreader_invalid_bits						= Не могат да бъдат прочетени {0} бита; броят трябва да бъде между 0 и ширината на цялото число на платформата.
 bitreader_64bit_php_required				= Четенето на {0} бита изисква 64-битова PHP компилация.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' не е член на TTabl
 
 tactivetablerow_control_outoftable			= {0} '{1}' трябва да бъде вложен в контрола TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' не е член на TTableRowCollection на родителската контрола TTable.
+juioptions_control_invalid					= Контролата '{0}' трябва да имплементира IJuiOptions.
 
 juioptions_option_invalid					= '{1}' не е валидна опция за контролата '{0}'.
 

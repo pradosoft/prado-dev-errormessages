@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array doğrudan ayarlanama
 application_includefile_invalid				= {0} uygulama yapılandırması bulunamadı. Ad alanı biçiminde olduğundan ve dosyanın ".xml" ya da ".php" ile bittiğinden emin olun.
 application_basepath_invalid				= '{0}' uygulama temel yolu yok ya da bir dizin değil.
 application_runtimepath_invalid				= '{0}' uygulama çalışma zamanı yolu yok ya da web sunucusu süreci tarafından yazılabilir değil.
+application_service_invalid					= '{0}' hizmeti IService arayüzünü uygulamalıdır.
 application_service_class_not_found			= '{0}' hizmet sınıfı yok.
 application_service_class_not_service		= '{0}' hizmet sınıfı IService arayüzünü uygulamıyor.
 application_service_class_required			= TApplication::registerService(), '{0}' hizmeti için bir sınıf adı ya da bir hizmet yapılandırma dizisi gerektirir.
 application_service_default_unregister		= Varsayılan sayfa hizmeti '{0}' kayıttan kaldırılamaz.
+application_service_unavailable				= '{0}' hizmeti şu anda kullanılamıyor.
 service_csrf_token_invalid					= '{0}' hizmeti geçerli bir CSRF belirteci gerektirir.
 application_moduleid_duplicated				= '{0}' uygulama modülü kimliği benzersiz değil.
 application_runtimepath_failed				= '{0}' çalışma zamanı yolu oluşturulamadı. Üst dizinin var olduğundan ve web süreci tarafından yazılabilir olduğundan emin olun.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= TCacheDependencyList içine yalnızca ICacheDependency arayüzünü uygulayan nesneler eklenebilir.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' geçersiz. Ad alanı biçiminde olduğundan ve hata şablonu dosyalarını içeren geçerli bir dizine işaret ettiğinden emin olun.
+pageservice_pageclass_unknown				= '{0}' sayfa sınıfı bilinmiyor.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' geçerli bir dizin değil.
 pageservice_includefile_invalid				= {0} sayfa hizmeti yapılandırması bulunamadı. Ad alanı biçiminde olduğundan ve dosyanın ".xml" ya da ".php" ile bittiğinden emin olun.
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' bir TForm içinde yer almalıdır.
 page_head_duplicated						= Bir sayfa en fazla bir THead içerebilir.
 page_head_required							= CSS ve js dosyalarının HTML head bölümünde işlenebilmesi için sayfa şablonunda bir THead denetimi gerekir.
 page_statepersister_invalid					= Sayfa durumu kalıcılaştırıcısı IPageStatePersister arayüzünü uygulamalıdır.
+page_csmanagerclass_invalid					= '{0}' ClientScriptManager sınıfı bir TClientScriptManager örneği olmalıdır.
 
 csmanager_pradoscript_invalid				= Bilinmeyen Prado betik kitaplığı adı '{0}'.
 csmanager_pradostyle_invalid				= Bilinmeyen Prado stil kitaplığı adı '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= İşlem iptal edildi.
 async_timeout							= İşlem {0} saniye sonra zaman aşımına uğradı.
 async_any_empty							= TAsync::any() hiçbir future almadı.
 async_deferred_complete					= TDeferred zaten tamamlanmış; bir future yalnızca bir kez çözülür ya da reddedilir.
+asyncstream_no_resource						= TAsyncStream hazır olmayı bekleyemez; iç akışın açık bir PHP akış kaynağı yok.
 
 bitreader_invalid_bits						= {0} bit okunamıyor; sayı 0 ile platform tamsayı genişliği arasında olmalıdır.
 bitreader_64bit_php_required				= {0} bit okumak 64 bit bir PHP derlemesi gerektirir.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' üst TTableRow denetiminin 
 
 tactivetablerow_control_outoftable			= {0} '{1}' bir TTable denetimi içinde yer almalıdır.
 tactivetablerow_control_notincollection		= {0} '{1}' üst TTable denetiminin TTableRowCollection koleksiyonunun üyesi değil.
+juioptions_control_invalid					= '{0}' denetimi IJuiOptions arayüzünü uygulamalıdır.
 
 juioptions_option_invalid					= '{1}', '{0}' denetimi için geçerli bir seçenek değil.
 

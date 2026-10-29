@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= Το TEventSubscription.Array δεν μπορ
 application_includefile_invalid				= Δεν είναι δυνατή η εύρεση της διαμόρφωσης εφαρμογής {0}. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και ότι το αρχείο τελειώνει σε ".xml" ή ".php".
 application_basepath_invalid				= Η βασική διαδρομή της εφαρμογής '{0}' δεν υπάρχει ή δεν είναι κατάλογος.
 application_runtimepath_invalid				= Η διαδρομή χρόνου εκτέλεσης της εφαρμογής '{0}' δεν υπάρχει ή δεν είναι εγγράψιμη από τη διεργασία του διακομιστή Web.
+application_service_invalid					= Η υπηρεσία '{0}' πρέπει να υλοποιεί τη διεπαφή IService.
 application_service_class_not_found			= Η κλάση υπηρεσίας '{0}' δεν υπάρχει.
 application_service_class_not_service		= Η κλάση υπηρεσίας '{0}' δεν υλοποιεί το IService.
 application_service_class_required			= Η TApplication::registerService() απαιτεί όνομα κλάσης ή πίνακα διαμόρφωσης υπηρεσίας για την υπηρεσία '{0}'.
 application_service_default_unregister		= Η προεπιλεγμένη υπηρεσία σελίδας '{0}' δεν μπορεί να απεγγραφεί.
+application_service_unavailable				= Η υπηρεσία '{0}' δεν είναι διαθέσιμη αυτή τη στιγμή.
 service_csrf_token_invalid					= Η υπηρεσία '{0}' απαιτεί έγκυρο διακριτικό CSRF.
 application_moduleid_duplicated				= Το ID αρθρώματος εφαρμογής '{0}' δεν είναι μοναδικό.
 application_runtimepath_failed				= Δεν είναι δυνατή η δημιουργία της διαδρομής χρόνου εκτέλεσης '{0}'. Βεβαιωθείτε ότι ο γονικός κατάλογος υπάρχει και είναι εγγράψιμος από τη διεργασία Web.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= Το TDirectoryCacheDependency.Dire
 cachedependencylist_cachedependency_required	= Μόνο αντικείμενα που υλοποιούν το ICacheDependency μπορούν να προστεθούν στο TCacheDependencyList.
 
 errorhandler_errortemplatepath_invalid		= Το TErrorHandler.ErrorTemplatePath '{0}' δεν είναι έγκυρο. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και δείχνει σε έγκυρο κατάλογο που περιέχει αρχεία προτύπων σφαλμάτων.
+pageservice_pageclass_unknown				= Η κλάση σελίδας '{0}' είναι άγνωστη.
 
 pageservice_basepath_invalid				= Το TPageService.BasePath '{0}' δεν είναι έγκυρος κατάλογος.
 pageservice_includefile_invalid				= Δεν είναι δυνατή η εύρεση της διαμόρφωσης υπηρεσίας σελίδας {0}. Βεβαιωθείτε ότι είναι σε μορφή χώρου ονομάτων και ότι το αρχείο τελειώνει σε ".xml" ή ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= Το {0} '{1}' πρέπει να περικλεί�
 page_head_duplicated						= Μια σελίδα μπορεί να περιέχει το πολύ ένα THead.
 page_head_required							= Απαιτείται στοιχείο ελέγχου THead στο πρότυπο της σελίδας για την απόδοση CSS και js στην ενότητα head της HTML.
 page_statepersister_invalid					= Ο διατηρητής κατάστασης σελίδας πρέπει να υλοποιεί τη διεπαφή IPageStatePersister.
+page_csmanagerclass_invalid					= Η κλάση ClientScriptManager '{0}' πρέπει να είναι στιγμιότυπο της TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Άγνωστο όνομα βιβλιοθήκης script του Prado '{0}'.
 csmanager_pradostyle_invalid				= Άγνωστο όνομα βιβλιοθήκης στυλ του Prado '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Η λειτουργία ακυρώθηκε.
 async_timeout							= Η λειτουργία έληξε μετά από {0} δευτερόλεπτα.
 async_any_empty							= Το TAsync::any() δεν έλαβε κανένα future.
 async_deferred_complete					= Το TDeferred έχει ήδη ολοκληρωθεί· ένα future επιλύεται ή απορρίπτεται μόνο μία φορά.
+asyncstream_no_resource						= Το TAsyncStream δεν μπορεί να περιμένει την ετοιμότητα· η εσωτερική ροή δεν έχει ανοιχτό πόρο ροής PHP.
 
 bitreader_invalid_bits						= Δεν είναι δυνατή η ανάγνωση {0} bit· το πλήθος πρέπει να είναι μεταξύ 0 και του πλάτους ακεραίου της πλατφόρμας.
 bitreader_64bit_php_required				= Η ανάγνωση {0} bit απαιτεί έκδοση PHP 64-bit.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= Το {0} '{1}' δεν είναι μέ
 
 tactivetablerow_control_outoftable			= Το {0} '{1}' πρέπει να περικλείεται σε στοιχείο ελέγχου TTable.
 tactivetablerow_control_notincollection		= Το {0} '{1}' δεν είναι μέλος της TTableRowCollection του γονικού στοιχείου ελέγχου TTable.
+juioptions_control_invalid					= Το στοιχείο ελέγχου '{0}' πρέπει να υλοποιεί το IJuiOptions.
 
 juioptions_option_invalid					= Το '{1}' δεν είναι έγκυρη επιλογή για το στοιχείο ελέγχου '{0}'.
 

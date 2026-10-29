@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array nelze nastavit pří
 application_includefile_invalid				= Konfiguraci aplikace {0} nelze najít. Ujistěte se, že je ve formátu jmenného prostoru a soubor končí na ".xml" nebo ".php".
 application_basepath_invalid				= Základní cesta aplikace '{0}' neexistuje nebo není adresářem.
 application_runtimepath_invalid				= Běhová cesta aplikace '{0}' neexistuje nebo do ní proces webového serveru nemůže zapisovat.
+application_service_invalid					= Služba '{0}' musí implementovat rozhraní IService.
 application_service_class_not_found			= Třída služby '{0}' neexistuje.
 application_service_class_not_service		= Třída služby '{0}' neimplementuje IService.
 application_service_class_required			= TApplication::registerService() vyžaduje název třídy nebo pole s konfigurací služby pro službu '{0}'.
 application_service_default_unregister		= Výchozí službu stránek '{0}' nelze odregistrovat.
+application_service_unavailable				= Služba '{0}' není v tuto chvíli dostupná.
 service_csrf_token_invalid					= Služba '{0}' vyžaduje platný CSRF token.
 application_moduleid_duplicated				= ID modulu aplikace '{0}' není jedinečné.
 application_runtimepath_failed				= Běhovou cestu '{0}' nelze vytvořit. Ujistěte se, že nadřazený adresář existuje a webový proces do něj může zapisovat.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Do TCacheDependencyList lze přidávat pouze objekty implementující ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' je neplatná. Ujistěte se, že je ve formátu jmenného prostoru a odkazuje na platný adresář obsahující soubory chybových šablon.
+pageservice_pageclass_unknown				= Třída stránky '{0}' není známa.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' není platný adresář.
 pageservice_includefile_invalid				= Konfiguraci služby stránek {0} nelze najít. Ujistěte se, že je ve formátu jmenného prostoru a soubor končí na ".xml" nebo ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' musí být uzavřen v TForm.
 page_head_duplicated						= Stránka může obsahovat nejvýše jeden THead.
 page_head_required							= Pro vykreslení CSS a js v sekci head HTML je v šabloně stránky vyžadován prvek THead.
 page_statepersister_invalid					= Persister stavu stránky musí implementovat rozhraní IPageStatePersister.
+page_csmanagerclass_invalid					= Třída ClientScriptManager '{0}' musí být instancí TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Neznámý název knihovny skriptů Prado '{0}'.
 csmanager_pradostyle_invalid				= Neznámý název knihovny stylů Prado '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Operace byla zrušena.
 async_timeout							= Operace vypršela po {0} sekundách.
 async_any_empty							= TAsync::any() neobdržel žádné futures.
 async_deferred_complete					= TDeferred je již dokončen; future se vyřeší nebo zamítne pouze jednou.
+asyncstream_no_resource						= TAsyncStream nemůže čekat na připravenost; vnitřní stream nemá otevřený PHP stream resource.
 
 bitreader_invalid_bits						= Nelze číst {0} bitů; počet musí být mezi 0 a šířkou celého čísla platformy.
 bitreader_64bit_php_required				= Čtení {0} bitů vyžaduje 64bitové sestavení PHP.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' není členem TTableCellCol
 
 tactivetablerow_control_outoftable			= {0} '{1}' musí být uzavřen v prvku TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' není členem TTableRowCollection nadřazeného prvku TTable.
+juioptions_control_invalid					= Prvek '{0}' musí implementovat IJuiOptions.
 
 juioptions_option_invalid					= '{1}' není platná volba pro prvek '{0}'.
 

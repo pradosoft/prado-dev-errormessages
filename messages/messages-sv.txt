@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array kan inte sättas dir
 application_includefile_invalid				= Det går inte att hitta applikationskonfigurationen {0}. Se till att den anges i namnrymdsformat och att filen slutar med ".xml" eller ".php".
 application_basepath_invalid				= Applikationens bassökväg '{0}' finns inte eller är inte en katalog.
 application_runtimepath_invalid				= Applikationens körtidssökväg '{0}' finns inte eller är inte skrivbar för webbserverprocessen.
+application_service_invalid					= Tjänsten '{0}' måste implementera gränssnittet IService.
 application_service_class_not_found			= Tjänsteklassen '{0}' finns inte.
 application_service_class_not_service		= Tjänsteklassen '{0}' implementerar inte IService.
 application_service_class_required			= TApplication::registerService() kräver ett klassnamn eller en tjänstekonfigurationsarray för tjänsten '{0}'.
 application_service_default_unregister		= Standardsidtjänsten '{0}' kan inte avregistreras.
+application_service_unavailable				= Tjänsten '{0}' är inte tillgänglig just nu.
 service_csrf_token_invalid					= Tjänsten '{0}' kräver en giltig CSRF-token.
 application_moduleid_duplicated				= Applikationens modul-ID '{0}' är inte unikt.
 application_runtimepath_failed				= Det går inte att skapa körtidssökvägen '{0}'. Se till att den överordnade katalogen finns och är skrivbar för webbprocessen.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Endast objekt som implementerar ICacheDependency kan läggas till i TCacheDependencyList.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' är ogiltig. Se till att den anges i namnrymdsform och pekar på en giltig katalog som innehåller felmallfiler.
+pageservice_pageclass_unknown				= Sidklassen '{0}' är okänd.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' är inte en giltig katalog.
 pageservice_includefile_invalid				= Det går inte att hitta sidtjänstkonfigurationen {0}. Se till att den anges i namnrymdsformat och att filen slutar med ".xml" eller ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' måste omslutas av en TForm.
 page_head_duplicated						= En sida kan innehålla högst en THead.
 page_head_required							= En THead-kontroll krävs i sidmallen för att rendera CSS och js i HTML-dokumentets head-sektion.
 page_statepersister_invalid					= Sidtillståndets persister måste implementera gränssnittet IPageStatePersister.
+page_csmanagerclass_invalid					= ClientScriptManager-klassen '{0}' måste vara en instans av TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Okänt namn på Prado-skriptbibliotek '{0}'.
 csmanager_pradostyle_invalid				= Okänt namn på Prado-stilbibliotek '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Åtgärden avbröts.
 async_timeout							= Åtgärden fick timeout efter {0} sekunder.
 async_any_empty							= TAsync::any() tog inte emot några futures.
 async_deferred_complete					= TDeferred är redan slutförd; en future löses eller avvisas bara en gång.
+asyncstream_no_resource						= TAsyncStream kan inte vänta på beredskap; den inre strömmen har ingen öppen PHP-strömresurs.
 
 bitreader_invalid_bits						= Det går inte att läsa {0} bitar; antalet måste ligga mellan 0 och plattformens heltalsbredd.
 bitreader_64bit_php_required				= Att läsa {0} bitar kräver en 64-bitars PHP-version.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' är inte medlem i TTableCel
 
 tactivetablerow_control_outoftable			= {0} '{1}' måste omslutas av en TTable-kontroll.
 tactivetablerow_control_notincollection		= {0} '{1}' är inte medlem i TTableRowCollection för den överordnade TTable-kontrollen.
+juioptions_control_invalid					= Kontrollen '{0}' måste implementera IJuiOptions.
 
 juioptions_option_invalid					= '{1}' är inte ett giltigt alternativ för kontrollen '{0}'.
 

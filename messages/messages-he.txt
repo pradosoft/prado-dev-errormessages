@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= לא ניתן להגדיר את TEventSubscri
 application_includefile_invalid				= לא ניתן למצוא את תצורת היישום {0}. יש לוודא שהיא בפורמט מרחב שמות ושהקובץ מסתיים ב-".xml" או ב-".php".
 application_basepath_invalid				= נתיב הבסיס של היישום '{0}' אינו קיים או אינו ספרייה.
 application_runtimepath_invalid				= נתיב זמן הריצה של היישום '{0}' אינו קיים או אינו ניתן לכתיבה על ידי תהליך שרת ה-Web.
+application_service_invalid					= השירות '{0}' חייב לממש את הממשק IService.
 application_service_class_not_found			= מחלקת השירות '{0}' אינה קיימת.
 application_service_class_not_service		= מחלקת השירות '{0}' אינה מממשת את IService.
 application_service_class_required			= TApplication::registerService() דורש שם מחלקה או מערך תצורת שירות עבור השירות '{0}'.
 application_service_default_unregister		= לא ניתן לבטל את רישום שירות העמודים המוגדר כברירת מחדל '{0}'.
+application_service_unavailable				= השירות '{0}' אינו זמין כעת.
 service_csrf_token_invalid					= השירות '{0}' דורש אסימון CSRF תקין.
 application_moduleid_duplicated				= מזהה המודול '{0}' של היישום אינו ייחודי.
 application_runtimepath_failed				= לא ניתן ליצור את נתיב זמן הריצה '{0}'. יש לוודא שספריית האב קיימת וניתנת לכתיבה על ידי תהליך ה-Web.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= ניתן להוסיף אל TCacheDependencyList רק אובייקטים המממשים את ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' אינו תקין. יש לוודא שהוא בפורמט מרחב שמות ומצביע על ספרייה תקינה המכילה קובצי תבניות שגיאה.
+pageservice_pageclass_unknown				= מחלקת העמוד '{0}' אינה מוכרת.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' אינו ספרייה תקינה.
 pageservice_includefile_invalid				= לא ניתן למצוא את תצורת שירות העמודים {0}. יש לוודא שהיא בפורמט מרחב שמות ושהקובץ מסתיים ב-".xml" או ב-".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' חייב להיות מוכל בתוך TF
 page_head_duplicated						= עמוד יכול להכיל לכל היותר THead אחד.
 page_head_required							= נדרש פקד THead בתבנית העמוד כדי לרנדר CSS ו-js במקטע ה-head של ה-HTML.
 page_statepersister_invalid					= שומר מצב העמוד חייב לממש את הממשק IPageStatePersister.
+page_csmanagerclass_invalid					= מחלקת ה-ClientScriptManager '{0}' חייבת להיות מופע של TClientScriptManager.
 
 csmanager_pradoscript_invalid				= שם ספריית סקריפטים לא ידוע של Prado '{0}'.
 csmanager_pradostyle_invalid				= שם ספריית סגנונות לא ידוע של Prado '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= הפעולה בוטלה.
 async_timeout							= תם הזמן הקצוב לפעולה לאחר {0} שניות.
 async_any_empty							= TAsync::any() לא קיבל אף future.
 async_deferred_complete					= ה-TDeferred כבר הושלם; future נפתר או נדחה פעם אחת בלבד.
+asyncstream_no_resource						= TAsyncStream אינו יכול לחכות למוכנות; לזרם הפנימי אין משאב זרם PHP פתוח.
 
 bitreader_invalid_bits						= לא ניתן לקרוא {0} סיביות; המספר חייב להיות בין 0 לרוחב המספר השלם של הפלטפורמה.
 bitreader_64bit_php_required				= קריאת {0} סיביות דורשת בניית PHP של 64 סיביות.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' אינו חבר ב-TTableCe
 
 tactivetablerow_control_outoftable			= {0} '{1}' חייב להיות מוכל בתוך פקד TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' אינו חבר ב-TTableRowCollection של פקד ה-TTable האב.
+juioptions_control_invalid					= הפקד '{0}' חייב לממש את IJuiOptions.
 
 juioptions_option_invalid					= '{1}' אינה אפשרות תקינה עבור הפקד '{0}'.
 

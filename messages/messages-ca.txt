@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array no es pot establir d
 application_includefile_invalid				= No s'ha pogut trobar la configuració de l'aplicació {0}. Assegureu-vos que està en format d'espai de noms i que el fitxer acaba en ".xml" o ".php".
 application_basepath_invalid				= El camí base de l'aplicació '{0}' no existeix o no és un directori.
 application_runtimepath_invalid				= El camí d'execució de l'aplicació '{0}' no existeix o no té permís d'escriptura per al procés del servidor web.
+application_service_invalid					= El servei '{0}' ha d'implementar la interfície IService.
 application_service_class_not_found			= La classe de servei '{0}' no existeix.
 application_service_class_not_service		= La classe de servei '{0}' no implementa IService.
 application_service_class_required			= TApplication::registerService() requereix un nom de classe o una matriu de configuració de servei per al servei '{0}'.
 application_service_default_unregister		= El servei de pàgines per defecte '{0}' no es pot donar de baixa.
+application_service_unavailable				= El servei '{0}' no està disponible en aquest moment.
 service_csrf_token_invalid					= El servei '{0}' requereix un testimoni CSRF vàlid.
 application_moduleid_duplicated				= L'ID de mòdul de l'aplicació '{0}' no és únic.
 application_runtimepath_failed				= No s'ha pogut crear el camí d'execució '{0}'. Assegureu-vos que el directori pare existeix i que el procés web hi té permís d'escriptura.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Només es poden afegir a TCacheDependencyList objectes que implementin ICacheDependency.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' no és vàlid. Assegureu-vos que està en format d'espai de noms i que apunta a un directori vàlid que contingui els fitxers de plantilla d'error.
+pageservice_pageclass_unknown				= La classe de pàgina '{0}' és desconeguda.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' no és un directori vàlid.
 pageservice_includefile_invalid				= No s'ha pogut trobar la configuració del servei de pàgines {0}. Assegureu-vos que està en format d'espai de noms i que el fitxer acaba en ".xml" o ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' ha d'estar dins d'un TForm.
 page_head_duplicated						= Una pàgina pot contenir un THead com a màxim.
 page_head_required							= Cal un control THead a la plantilla de la pàgina per renderitzar el CSS i el js a la secció head de l'HTML.
 page_statepersister_invalid					= El persistidor d'estat de la pàgina ha d'implementar la interfície IPageStatePersister.
+page_csmanagerclass_invalid					= La classe ClientScriptManager '{0}' ha de ser una instància de TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Nom de biblioteca d'scripts de Prado desconegut '{0}'.
 csmanager_pradostyle_invalid				= Nom de biblioteca d'estils de Prado desconegut '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= L'operació s'ha cancel·lat.
 async_timeout							= L'operació ha excedit el temps d'espera després de {0} segons.
 async_any_empty							= TAsync::any() no ha rebut cap future.
 async_deferred_complete					= El TDeferred ja està complet; un future es resol o es rebutja una sola vegada.
+asyncstream_no_resource						= TAsyncStream no pot esperar la disponibilitat; el flux intern no té cap recurs de flux PHP obert.
 
 bitreader_invalid_bits						= No es poden llegir {0} bits; el recompte ha d'estar entre 0 i l'amplada d'enter de la plataforma.
 bitreader_64bit_php_required				= Llegir {0} bits requereix una compilació de PHP de 64 bits.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' no és membre de la TTableC
 
 tactivetablerow_control_outoftable			= {0} '{1}' ha d'estar dins d'un control TTable.
 tactivetablerow_control_notincollection		= {0} '{1}' no és membre de la TTableRowCollection del control TTable pare.
+juioptions_control_invalid					= El control '{0}' ha d'implementar IJuiOptions.
 
 juioptions_option_invalid					= '{1}' no és una opció vàlida per al control '{0}'.
 

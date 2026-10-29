@@ -61,10 +61,12 @@ eventsubscription_no_setarray				= TEventSubscription.Array kan ikke settes dire
 application_includefile_invalid				= Finner ikke applikasjonskonfigurasjonen {0}. Sørg for at den er i navneromsformat og at filen slutter på ".xml" eller ".php".
 application_basepath_invalid				= Applikasjonens grunnsti '{0}' finnes ikke eller er ikke en katalog.
 application_runtimepath_invalid				= Applikasjonens kjøretidssti '{0}' finnes ikke eller er ikke skrivbar for webserverprosessen.
+application_service_invalid					= Tjenesten '{0}' må implementere grensesnittet IService.
 application_service_class_not_found			= Tjenesteklassen '{0}' finnes ikke.
 application_service_class_not_service		= Tjenesteklassen '{0}' implementerer ikke IService.
 application_service_class_required			= TApplication::registerService() krever et klassenavn eller en tjenestekonfigurasjonsmatrise for tjenesten '{0}'.
 application_service_default_unregister		= Standardsidetjenesten '{0}' kan ikke avregistreres.
+application_service_unavailable				= Tjenesten '{0}' er ikke tilgjengelig for øyeblikket.
 service_csrf_token_invalid					= Tjenesten '{0}' krever et gyldig CSRF-token.
 application_moduleid_duplicated				= Applikasjonsmodul-ID '{0}' er ikke unik.
 application_runtimepath_failed				= Kan ikke opprette kjøretidsstien '{0}'. Sørg for at overordnet katalog finnes og er skrivbar for webprosessen.
@@ -176,6 +178,7 @@ directorycachedependency_directory_invalid	= TDirectoryCacheDependency.Directory
 cachedependencylist_cachedependency_required	= Bare objekter som implementerer ICacheDependency kan legges til i TCacheDependencyList.
 
 errorhandler_errortemplatepath_invalid		= TErrorHandler.ErrorTemplatePath '{0}' er ugyldig. Sørg for at den er i navneromsformat og peker til en gyldig katalog som inneholder feilmalfiler.
+pageservice_pageclass_unknown				= Sideklassen '{0}' er ukjent.
 
 pageservice_basepath_invalid				= TPageService.BasePath '{0}' er ikke en gyldig katalog.
 pageservice_includefile_invalid				= Finner ikke sidetjenestekonfigurasjonen {0}. Sørg for at den er i navneromsformat og at filen slutter på ".xml" eller ".php".
@@ -336,6 +339,7 @@ page_control_outofform						= {0} '{1}' må ligge inne i en TForm.
 page_head_duplicated						= En side kan inneholde høyst én THead.
 page_head_required							= En THead-kontroll er nødvendig i sidemalen for å gjengi CSS og js i HTML-head-seksjonen.
 page_statepersister_invalid					= Sidetilstandslagreren må implementere grensesnittet IPageStatePersister.
+page_csmanagerclass_invalid					= ClientScriptManager-klassen '{0}' må være en instans av TClientScriptManager.
 
 csmanager_pradoscript_invalid				= Ukjent Prado-skriptbibliotek med navnet '{0}'.
 csmanager_pradostyle_invalid				= Ukjent Prado-stilbibliotek med navnet '{0}'.
@@ -602,6 +606,7 @@ async_cancelled							= Operasjonen ble avbrutt.
 async_timeout							= Operasjonen fikk tidsavbrudd etter {0} sekunder.
 async_any_empty							= TAsync::any() mottok ingen futures.
 async_deferred_complete					= TDeferred er allerede fullført; en future løses eller avvises bare én gang.
+asyncstream_no_resource						= TAsyncStream kan ikke vente på at strømmen blir klar; den indre strømmen har ingen åpen PHP-strømressurs.
 
 bitreader_invalid_bits						= Kan ikke lese {0} biter; antallet må være mellom 0 og plattformens heltallsbredde.
 bitreader_64bit_php_required				= Lesing av {0} biter krever en 64-biters PHP-bygg.
@@ -737,6 +742,7 @@ tactivetablecell_control_notincollection	= {0} '{1}' er ikke medlem av TTableCel
 
 tactivetablerow_control_outoftable			= {0} '{1}' må ligge inne i en TTable-kontroll.
 tactivetablerow_control_notincollection		= {0} '{1}' er ikke medlem av TTableRowCollection i den overordnede TTable-kontrollen.
+juioptions_control_invalid					= Kontrollen '{0}' må implementere IJuiOptions.
 
 juioptions_option_invalid					= '{1}' er ikke et gyldig alternativ for kontrollen '{0}'.
 
